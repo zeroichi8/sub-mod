@@ -1,0 +1,2944 @@
+global-client-fingerprint: "chrome"
+keep-alive-interval: 5
+keep-alive-idle: 10
+disable-keep-alive: false
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: "always"
+ipv6: false
+log-level: "info"
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+dns:
+  enable: true
+  ipv6: false
+  prefer-h3: false
+  cache-algorithm: "arc"
+  use-system-hosts: true
+  use-host: true
+  listen: "0.0.0.0:53"
+  enhanced-mode: "fake-ip"
+  fake-ip-filter-mode: "blacklist"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - "time.*.com"
+    - "ntp.*.com"
+    - "*.ir"
+  default-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+  nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.8.8"
+    - "tcp://8.8.4.4"
+    - "tcp://9.9.9.9"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.222"
+  fallback:
+    - "tcp://76.76.19.19"
+    - "tcp://76.223.122.150"
+    - "tcp://185.228.168.9"
+    - "tcp://185.228.169.9"
+    - "tcp://8.26.56.26"
+    - "tcp://8.20.247.20"
+    - "tcp://76.76.2.11"
+    - "tcp://76.76.10.11"
+    - "tcp://84.200.69.80"
+    - "tcp://84.200.70.40"
+    - "tcp://45.33.97.5"
+    - "tcp://37.235.1.177"
+    - "tcp://209.244.0.3"
+    - "tcp://209.244.0.4"
+    - "tcp://156.154.70.5"
+    - "tcp://156.154.71.5"
+    - "tcp://103.86.96.100"
+    - "tcp://103.86.99.100"
+    - "tcp://199.85.126.10"
+    - "tcp://199.85.127.10"
+    - "tcp://129.250.35.250"
+    - "tcp://129.250.35.251"
+    - "tcp://94.16.114.254"
+    - "tcp://94.247.43.254"
+    - "tcp://208.67.222.20"
+    - "tcp://195.46.39.39"
+    - "tcp://195.46.39.40"
+    - "tcp://204.117.214.10"
+    - "tcp://199.2.252.10"
+    - "tcp://194.169.169.169"
+    - "tcp://156.154.70.1"
+    - "tcp://156.154.71.1"
+    - "tcp://91.239.100.100"
+    - "tcp://89.233.43.71"
+    - "tcp://64.6.64.6"
+    - "tcp://64.6.65.6"
+    - "tcp://77.88.8.8"
+    - "tcp://77.88.8.1"
+  fallback-filter:
+    geoip: true
+    geoip-code: "IR"
+    geosite:
+      - "gfw"
+    ipcidr:
+      - "240.0.0.0/4"
+    domain:
+      - "+.google.com"
+      - "+.facebook.com"
+      - "+.youtube.com"
+  proxy-server-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+  direct-nameserver:
+    - "78.157.42.100"
+    - "78.157.42.101"
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - 8080
+        - 8880
+        - 2052
+        - 2082
+        - 2086
+        - 2095
+    TLS:
+      ports:
+        - 443
+        - 8443
+        - 2053
+        - 2083
+        - 2087
+        - 2096
+tun:
+  enable: true
+  stack: "mixed"
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+rule-providers:
+  category_public_tracker:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml"
+    interval: 86400
+    path: "./ruleset/category_public_tracker.yaml"
+  iran_ads:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/iran_ads.yaml"
+  PersianBlocker:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/PersianBlocker.yaml"
+  youtube:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml"
+    interval: 86400
+    path: "./ruleset/youtube.yaml"
+  telegram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml"
+    interval: 86400
+    path: "./ruleset/telegram.yaml"
+  twitch:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml"
+    interval: 86400
+    path: "./ruleset/twitch.yaml"
+  censor:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml"
+    interval: 86400
+    path: "./ruleset/censor.yaml"
+  local_ips:
+    type: "http"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml"
+    interval: 86400
+    path: "./ruleset/local_ips.yaml"
+  private:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml"
+    interval: 86400
+    path: "./ruleset/private.yaml"
+  category_ir:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml"
+    interval: 86400
+    path: "./ruleset/category_ir.yaml"
+  iran:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml"
+    interval: 86400
+    path: "./ruleset/iran.yaml"
+  steam:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml"
+    interval: 86400
+    path: "./ruleset/steam.yaml"
+  game:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml"
+    interval: 86400
+    path: "./ruleset/game.yaml"
+  category-games:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml"
+    interval: 86400
+    path: "./ruleset/category-games.yaml"
+  ir:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    interval: 86400
+    path: "./ruleset/ir.yaml"
+  apps:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    interval: 86400
+    path: "./ruleset/apps.yaml"
+  ircidr:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    interval: 86400
+    path: "./ruleset/ircidr.yaml"
+  irasn:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    interval: 86400
+    path: "./ruleset/irasn.yaml"
+  arvancloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    interval: 86400
+    path: "./ruleset/arvancloud.yaml"
+  derakcloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    interval: 86400
+    path: "./ruleset/derakcloud.yaml"
+  iranserver:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    interval: 86400
+    path: "./ruleset/iranserver.yaml"
+  parspack:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    interval: 86400
+    path: "./ruleset/parspack.yaml"
+  malware:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml"
+    interval: 86400
+    path: "./ruleset/malware.yaml"
+  phishing:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml"
+    interval: 86400
+    path: "./ruleset/phishing.yaml"
+  cryptominers:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml"
+    interval: 86400
+    path: "./ruleset/cryptominers.yaml"
+  ads:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/Chocolate4U/Iran-clash-rules/releases/download/202606060815/category-ads-all.yaml"
+    interval: 86400
+    path: "./ruleset/ads.yaml"
+  DownloadManagers:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml"
+    interval: 86400
+    path: "./ruleset/DownloadManagers.yaml"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanProgramAD.yaml"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanAD.yaml"
+  PrivateTracker:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml"
+    interval: 86400
+    path: "./ruleset/PrivateTracker.yaml"
+  BanEasyList:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml"
+    interval: 86400
+    path: "./ruleset/BanEasyList.yaml"
+  Download:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml"
+    interval: 86400
+    path: "./ruleset/Download.yaml"
+  GameDownload:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml"
+    interval: 86400
+    path: "./ruleset/GameDownload.yaml"
+  SteamRegionCheck:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml"
+    interval: 86400
+    path: "./ruleset/SteamRegionCheck.yaml"
+  Xbox:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml"
+    interval: 86400
+    path: "./ruleset/Xbox.yaml"
+  YouTubeMusic:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml"
+    interval: 86400
+    path: "./ruleset/YouTubeMusic.yaml"
+  YouTube:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml"
+    interval: 86400
+    path: "./ruleset/YouTube.yaml"
+  Ponzi:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml"
+    interval: 86400
+    path: "./ruleset/Ponzi.yaml"
+  warninglist:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml"
+    interval: 86400
+    path: "./ruleset/warninglist.yaml"
+  google:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml"
+    interval: 86400
+    path: "./ruleset/google.yaml"
+  google-play:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml"
+    interval: 86400
+    path: "./ruleset/google-play.yaml"
+  xiaomi_block_list:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_block_list.yaml"
+  xiaomi_white_list:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_white_list.yaml"
+  cloudflare:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml"
+    interval: 86400
+    path: "./ruleset/cloudflare.yaml"
+  github:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml"
+    interval: 86400
+    path: "./ruleset/xgithub.yaml"
+  whatsapp:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml"
+    interval: 86400
+    path: "./ruleset/whatsapp.yaml"
+  LiteAds:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml"
+    interval: 86400
+    path: "./ruleset/LiteAds.yaml"
+  discord:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml"
+    interval: 86400
+    path: "./ruleset/discord.yaml"
+  instagram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml"
+    interval: 86400
+    path: "./ruleset/instagram.yaml"
+  category-ai:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml"
+    interval: 86400
+    path: "./ruleset/category-ai.yaml"
+  stremio:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml"
+    interval: 86400
+    path: "./ruleset/stremio.yaml"
+  windows:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml"
+    interval: 86400
+    path: "./ruleset/windows.yaml"
+  Chotwitter:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Chotwitter.yaml"
+  mihTwitter:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml"
+    interval: 86400
+    path: "./ruleset/mihTwitter.yaml"
+  Domtwitter:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Domtwitter.yaml"
+  DomainSpotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml"
+    interval: 86400
+    path: "./ruleset/DomainSpotify.yaml"
+  mihspotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml"
+    interval: 86400
+    path: "./ruleset/mihSpotify.yaml"
+proxies:
+  - name: "🇩🇪828Mb | GSL Networks Pty LTD"
+    type: "vless"
+    server: "78.159.250.32"
+    port: 1111
+    uuid: "9d748910-8306-411a-9b2e-11f0a2a4486f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-maps.yandex.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA"
+  - name: "🇱🇹804Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.60"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇩🇪719Mb | Senko Digital"
+    type: "vless"
+    server: "31.77.161.2"
+    port: 8443
+    uuid: "a6704fb4-4874-4e6b-98f4-571b048e3d90"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "prod.de-node-01.security-sbrf.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "4XxjInQuDp4SqaYF03yQ1VY61exkKi9e0RS5-kgyxAE"
+      short-id: "db04ce8bdb8900f1"
+  - name: "🌐653Mb | TCP, Яндекс V.O.I.D"
+    type: "vless"
+    server: "45.194.10.216"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹630Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.115"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇫🇮624Mb | Aeza Group"
+    type: "vless"
+    server: "104.238.29.241"
+    port: 443
+    uuid: "1f4c983e-382c-d2fa-b2dc-7981f02b34de"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "helsinki.fi"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "uHgXn92PmJ1ilszzwK2LHKvoC5dwhqYVhfKT_JW7JHM"
+      short-id: "40a5eaec20abf1"
+  - name: "🇫🇮619Mb | Baykov Ilya Sergeevich"
+    type: "vless"
+    server: "193.68.88.192"
+    port: 30904
+    uuid: "7272d1d6-9bdb-4d0f-8e42-d326008674bf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vk.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "G8lsgZQLC1cydeTSGFcugL-Zwxq-yIoaLONODkMuQA4"
+      short-id: "566130c391356a"
+  - name: "🌐614Mb | 368ms Литва LT 🇱🇹 @vlesstrojan"
+    type: "vless"
+    server: "45.194.10.80"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹586Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.35"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇬🇧563Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "83.97.78.13"
+    port: 443
+    uuid: "612c872d-1370-4109-8644-f0755f97e33f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs"
+      short-id: "1680"
+  - name: "🇱🇹552Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.102"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹546Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.96"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹540Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.9"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹535Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.38"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🌐531Mb | 🇳🇱 101 - NL - VLESS/REALITY/PB"
+    type: "vless"
+    server: "nl.go-vpn.club"
+    port: 443
+    uuid: "40de6299-d792-4868-8a82-411ead0aa943"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gateway.icloud.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
+      short-id: "ed7b9bdfedb9b8e5"
+  - name: "🇱🇹524Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.73"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹508Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.111"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹490Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.79"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹489Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.95"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹488Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.66"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🌐487Mb | @DeltaKroneckerGithub"
+    type: "vless"
+    server: "5.255.105.59"
+    port: 8443
+    uuid: "ed4bafcf-f822-4309-94b3-aa7be5807275"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.google.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "uGYj7gkQdNaabDVQZdbHeSVizGPrzj8YD5jdYm7stG0"
+      short-id: "6ba85179e30d4fc2"
+  - name: "🇱🇹485Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.97"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹482Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.80"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹475Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.50"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹474Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.43"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹459Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.56"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹454Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.250"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹453Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.109"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇫🇮452Mb | Baykov Ilya Sergeevich"
+    type: "vless"
+    server: "fi.kuda-idem-nvrsk.ru"
+    port: 30904
+    uuid: "7272d1d6-9bdb-4d0f-8e42-d326008674bf"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vk.ru"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "G8lsgZQLC1cydeTSGFcugL-Zwxq-yIoaLONODkMuQA4"
+      short-id: "566130c391356a"
+  - name: "🇱🇹450Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.98"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇬🇧445Mb | Packet Star Networks Limited"
+    type: "vless"
+    server: "62.152.59.10"
+    port: 443
+    uuid: "8bf9956e-fd14-4ea1-92fa-2a9beab6d8fc"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-maps.yandex.ru"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk"
+      short-id: "a9c4f17e3b62d8"
+  - name: "🇱🇹445Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.157"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹443Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.59"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹441Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.240"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹438Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.45"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹433Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.181"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹422Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.134"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹422Mb | UAB Cherry Servers-1"
+    type: "vless"
+    server: "45.194.10.64"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹418Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.128"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🌐415Mb | 🇸🇨🚀 Сейшелы 🔐 🏳️LTE  🥭🔥"
+    type: "vless"
+    server: "45.194.10.8"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹396Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.117"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🌐395Mb | 0558  🌐 Unknown  VLESS  TG: @Y"
+    type: "vless"
+    server: "swe.fast-cone.com"
+    port: 443
+    uuid: "cf30deec-917f-4b1a-bb01-c48527cbc83a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swe.fast-cone.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "GmtqiNIkjg_TAy3_kOHSt2XbPV4w85ckf5l9kcIoI2A"
+      short-id: "44"
+  - name: "🇱🇹390Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.241"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹381Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.54"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹377Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.78"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹365Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.37"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇳🇱350Mb | Play2go International Limited"
+    type: "vless"
+    server: "ya-84.herego.site"
+    port: 443
+    uuid: "7da86056-e88b-493a-8f5c-2b113ef2d117"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI"
+  - name: "🇱🇹339Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.226"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇳🇱335Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "nl-ams-1.blook.network"
+    port: 443
+    uuid: "063e5d19-84f6-4132-bc36-b81522382bd5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-ams-1.blook.network"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FSqk2zhXivwuJ-lGC7QqilbMXj1bzbNjjBmFurysvUU"
+      short-id: "b3c7678b"
+  - name: "🇫🇷330Mb | Hostkey Bv"
+    type: "vless"
+    server: "194.164.217.139"
+    port: 448
+    uuid: "d61b4e1b-4745-484f-8362-18537825a7af"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "fjPED4_A_EQrL8PAuBUi9ChoNbY2OC4mUl7r8zaLoxo"
+      short-id: "05fdaa8a05be46a9"
+  - name: "🇬🇧315Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "83.97.78.13"
+    port: 443
+    uuid: "612c872d-1370-4109-8644-f0755f97e33f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs"
+      short-id: "16"
+  - name: "🇳🇱307Mb | Servers Tech Fzco"
+    type: "vless"
+    server: "5.35.34.181"
+    port: 443
+    uuid: "96e86354-c333-47b8-9bc7-271bba70df1d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "music.yandex.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "rAMn0lQ0hcsZ0ZnUWwe022bU8pMXYWViV_XSpQ1NKXU"
+      short-id: "48a458b7e7cb52ae"
+  - name: "🇮🇷304Mb | NetCrafters OU"
+    type: "vless"
+    server: "62.60.155.0"
+    port: 443
+    uuid: "1f4c983e-382c-d2fa-b2dc-7981f02b34de"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "telegraph.co.uk"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "YD3G553bQP0uWuyYDY9ZvhLCmfF9tmKUo8MRuALEFUw"
+      short-id: "deee73"
+  - name: "🇩🇪300Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "84.32.223.22"
+    port: 443
+    uuid: "63d34c62-c655-498f-81e1-1bdd964a2611"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cherry-de1.t1n2.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "A0oiMHyUXzvKw3vlEtfUulJ3ba8fjOKbSXg8PoRCgG8"
+      short-id: "ecf7a3c57ca42895"
+  - name: "🌐288Mb | EPODONIOS"
+    type: "vless"
+    server: "45.194.10.44"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇰🇿284Mb | Newserverlife"
+    type: "vless"
+    server: "213.226.112.113"
+    port: 443
+    uuid: "fcc38fdc-ef0a-46f3-a30a-cd3de28d3aee"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rutube.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "l0R5_L16z0BMq5HhYvA538EJd3ztzHgIOtysCl6Q60U"
+      short-id: "e78c4073"
+  - name: "🇫🇷280Mb | Aeza Group"
+    type: "vless"
+    server: "89.208.113.157"
+    port: 443
+    uuid: "1f4c983e-382c-d2fa-b2dc-7981f02b34de"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "parisjetaime.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2dgS9vJTywAfGZmlkuzDIIXLUR-E1A-0na8_W--ruUc"
+      short-id: "5be8210215"
+  - name: "🇬🇧277Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "83.97.78.13"
+    port: 443
+    uuid: "612c872d-1370-4109-8644-f0755f97e33f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    alpn:
+      - "networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-"
+    reality-opts:
+      public-key: "GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs"
+      short-id: "16"
+  - name: "🇳🇱261Mb | Servers Tech Fzco"
+    type: "vless"
+    server: "89.124.64.16"
+    port: 443
+    uuid: "fd5f3dfa-bba9-4205-b95f-ac37b8587cda"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.sony.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "UGKx4Kydrtu6oCJJPXOtR57bzIUIPK9meIy5ubEDHQM"
+      short-id: "94"
+  - name: "🌐253Mb | 🇬🇧🚀 Великобритания 🔐 🏳️LTE  🥭🔥"
+    type: "vless"
+    server: "62.60.155.0"
+    port: 443
+    uuid: "1f4c983e-382c-d2fa-b2dc-7981f02b34de"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "telegraph.co.uk"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "YD3G553bQP0uWuyYDY9ZvhLCmfF9tmKUo8MRuALEFUw"
+      short-id: "deee73"
+  - name: "🌐240Mb | IT   VLESS-TCP-RLT - Hostkey B"
+    type: "vless"
+    server: "5.180.173.222"
+    port: 448
+    uuid: "626b07bd-81c4-4212-be7a-27442a579620"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.googletagmanager.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "y4_NnPQc2X8Bj97LpUL9r9xuK-R2pLwjd5cZbBw2HSo"
+      short-id: "15052edc8120b63d"
+  - name: "🇳🇱233Mb | Play2go International Limited"
+    type: "vless"
+    server: "ya-84.herego.site"
+    port: 443
+    uuid: "7da86056-e88b-493a-8f5c-2b113ef2d117"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI"
+  - name: "🇳🇱213Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "89.23.107.137"
+    port: 443
+    uuid: "612c872d-1370-4109-8644-f0755f97e33f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs"
+      short-id: "1680"
+  - name: "🇳🇱213Mb | Senko Digital"
+    type: "vless"
+    server: "nl-root.sworkingvpn.com"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇳🇱212Mb | Servers Tech Fzco"
+    type: "vless"
+    server: "nl.go-vpn.club"
+    port: 443
+    uuid: "40de6299-d792-4868-8a82-411ead0aa943"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "gateway.icloud.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww"
+      short-id: "ed7b9bdfedb9b8e5"
+  - name: "🇫🇮211Mb | Aeza Group"
+    type: "vless"
+    server: "109.120.185.230"
+    port: 443
+    uuid: "3559f1f7-7d70-46c9-82db-d2b46269300b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dipvpn.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1BdgrQ_esOEya01sDCBYK4MGpJgaUhssHQG-aWJkyFQ"
+  - name: "🇫🇮209Mb | Oc Networks Limited"
+    type: "vless"
+    server: "64.188.80.250"
+    port: 443
+    uuid: "a34b5e88-cf0d-4c01-8199-2d1002d3c787"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.wikihow.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U"
+  - name: "🇳🇱209Mb | Senko Digital"
+    type: "vless"
+    server: "144.31.123.247"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇺🇸204Mb | NetCrafters OU"
+    type: "vless"
+    server: "95.181.173.239"
+    port: 443
+    uuid: "34d0e726-b740-4ce5-8faa-e4aa2c498ace"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amd.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "vCy4GoFZo4J55DYiNgkYWXSSkz2_v1tU-duQcnNt4zs"
+      short-id: "a9a250"
+  - name: "🌐201Mb | 2344ms JP JP  @vlesstrojan"
+    type: "vless"
+    server: "172.207.210.238"
+    port: 443
+    uuid: "39d1c043-7bc5-4876-9d07-58574c023850"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Oua7ls5NZ2sxxFSyccAHZCMrCjW34WPEsHbaIpWmxX8"
+      short-id: "ac78f53d"
+  - name: "🇳🇱196Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "89.23.107.137"
+    port: 443
+    uuid: "612c872d-1370-4109-8644-f0755f97e33f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs"
+      short-id: "16"
+  - name: "🇺🇸194Mb | NetCrafters OU"
+    type: "vless"
+    server: "77.110.119.9"
+    port: 8443
+    uuid: "d7774e0e-4cca-4b35-b688-0f3c60a01087"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nerr6yxly3lz35bf.m3mer.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "sxNSufdbvrQupIjBvcDQlYlBkZ0FT4Yu8Y6KZovOE3I"
+      short-id: "2f57e13d256ef891"
+  - name: "🇫🇮177Mb | Senko Digital"
+    type: "vless"
+    server: "144.31.232.189"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇳🇱175Mb | Senko Digital"
+    type: "vless"
+    server: "144.31.123.248"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇩🇪173Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "cherry-de1.t1n2.com"
+    port: 443
+    uuid: "63d34c62-c655-498f-81e1-1bdd964a2611"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cherry-de1.t1n2.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "A0oiMHyUXzvKw3vlEtfUulJ3ba8fjOKbSXg8PoRCgG8"
+      short-id: "ecf7a3c57ca42895"
+  - name: "🇫🇮172Mb | Play2go International Limited"
+    type: "vless"
+    server: "83.143.112.143"
+    port: 610
+    uuid: "16e7c88d-3967-484a-ba2a-1c5ba1d74f62"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇸🇪171Mb | No ACK Group Holding AB"
+    type: "vless"
+    server: "176.109.88.225"
+    port: 8443
+    uuid: "89db0319-9651-0009-b599-770e18cab892"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rutube.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc"
+      short-id: "43dcff53849b81e6"
+  - name: "🇩🇪156Mb | Play2go International Limited"
+    type: "vless"
+    server: "31.76.28.90"
+    port: 610
+    uuid: "16e7c88d-3967-484a-ba2a-1c5ba1d74f62"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇪🇸154Mb | Hostkey Bv"
+    type: "vless"
+    server: "5.180.173.222"
+    port: 448
+    uuid: "626b07bd-81c4-4212-be7a-27442a579620"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.googletagmanager.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "y4_NnPQc2X8Bj97LpUL9r9xuK-R2pLwjd5cZbBw2HSo"
+      short-id: "15052edc8120b63d"
+  - name: "🇫🇮141Mb | Senko Digital"
+    type: "vless"
+    server: "64.188.74.228"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇱🇹139Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.51"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇱🇹138Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.141"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇸🇬135Mb | DigitalOcean"
+    type: "vless"
+    server: "support.zoom.us"
+    port: 80
+    uuid: "cac6ec8f-99f0-44c5-814f-2f3f65e4db74"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/dula"
+      headers:
+        Host: "speed.dulacloud.store"
+  - name: "🇱🇹133Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.90"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇺🇸119Mb | AWS"
+    type: "vless"
+    server: "107.21.69.199"
+    port: 2053
+    uuid: "f188ec3b-e055-4eed-ae62-97403931d4e2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.intel.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "L0bhr3K-aQCLq4aVrDTBQa6N62T7XbCsFhWnbStdWyc"
+      short-id: "835db5c67c00"
+  - name: "🇯🇵117Mb | Azure"
+    type: "vless"
+    server: "172.207.210.238"
+    port: 443
+    uuid: "39d1c043-7bc5-4876-9d07-58574c023850"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Oua7ls5NZ2sxxFSyccAHZCMrCjW34WPEsHbaIpWmxX8"
+      short-id: "ac78f53d"
+  - name: "🇱🇹114Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.218"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇺🇸110Mb | AWS"
+    type: "vless"
+    server: "52.73.150.215"
+    port: 2053
+    uuid: "ea9b76e2-3b93-4f6f-9fd5-441082de0a1c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.intel.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "dV6O_qJsz93umq7BzAqvlnM8rEwaCFBrPlYSSkmCwQk"
+      short-id: "2bfc17da341dcf"
+  - name: "🇱🇹108Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.228"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇬🇧107Mb | Packet Star Networks Limited"
+    type: "vless"
+    server: "62.152.59.10"
+    port: 443
+    uuid: "24ab7d27-7d1b-4251-9c4b-333111d721c7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-maps.yandex.ru"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk"
+      short-id: "a9c4f17e3b62d8"
+  - name: "🇺🇸106Mb | Servhost Group"
+    type: "vless"
+    server: "185.229.9.229"
+    port: 443
+    uuid: "47c2465f-e966-4930-b0a0-0ae7e53db7f3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-maps.yandex.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zMyJW8uYeZwurz4xCcnnPjYlCVP0nI5BDHp_0ZrxPjk"
+  - name: "🇱🇹105Mb | UAB Cherry Servers"
+    type: "vless"
+    server: "45.194.10.113"
+    port: 8443
+    uuid: "3e7cede4-721a-4807-b0a2-5fe6586af907"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "L3X1eh1Jq_6PKJ6LlwjgiWq0XNaDOqCVKgIElJ5nkVA"
+      short-id: "2cfb5a0ae8ab0cb0"
+  - name: "🇸🇬104Mb | DigitalOcean"
+    type: "vless"
+    server: "170.114.45.6"
+    port: 80
+    uuid: "cac6ec8f-99f0-44c5-814f-2f3f65e4db74"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/dula"
+      headers:
+        Host: "speed.dulacloud.store"
+  - name: "🇺🇸102Mb | Railway"
+    type: "vless"
+    server: "hayabusa.proxy.rlwy.net"
+    port: 15914
+    uuid: "9309cd35-bf84-4d34-beca-99d6ca129dfd"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "is1-ssl.mzstatic.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "tSITUlx-kFC5Tb1NKUWivuQNdvzhY6s_s4P2X96vqns"
+      short-id: "80b6"
+  - name: "🇩🇪99Mb | Senko Digital"
+    type: "vless"
+    server: "94.139.251.7"
+    port: 3087
+    uuid: "e4cd624c-18d6-415e-8cde-0a800e06ce31"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dzen.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "efO4FU4XI20hptm8R_6awJ-UmyHI_5zNaBhQEyBBLVU"
+      short-id: "abcd1234"
+  - name: "🇺🇸95Mb | AWS"
+    type: "vless"
+    server: "us001.459292.xyz"
+    port: 8443
+    uuid: "6b5a9259-c7de-45f0-b4de-e89db7850d0c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.python.org"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE"
+      short-id: "04d59340"
+  - name: "🇺🇸90Mb | AWS"
+    type: "vless"
+    server: "us002.459292.xyz"
+    port: 8443
+    uuid: "6b5a9259-c7de-45f0-b4de-e89db7850d0c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.python.org"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE"
+      short-id: "04d59340"
+  - name: "🇳🇱88Mb | Pfcloud UG haftungsbeschrankt"
+    type: "vless"
+    server: "node-pfcloud-nl-1.m3mer.com"
+    port: 8443
+    uuid: "d7774e0e-4cca-4b35-b688-0f3c60a01087"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "node-pfcloud-nl-1.m3mer.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "sxNSufdbvrQupIjBvcDQlYlBkZ0FT4Yu8Y6KZovOE3I"
+      short-id: "2f57e13d256ef891"
+  - name: "🇦🇱85Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "78.159.131.79"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇳🇱85Mb | Servers Tech Fzco"
+    type: "vless"
+    server: "nl1.orpheous.ru"
+    port: 443
+    uuid: "1c5ed2e1-56da-41ab-9a78-159d9892ec17"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl1.orpheous.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q"
+      short-id: "725247f5bf7fe3fe"
+  - name: "🇸🇬84Mb | AWS"
+    type: "vless"
+    server: "1sg001.344211.cc"
+    port: 8443
+    uuid: "6b5a9259-c7de-45f0-b4de-e89db7850d0c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.python.org"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE"
+      short-id: "04d59340"
+  - name: "🇫🇮82Mb | Senko Digital"
+    type: "vless"
+    server: "fl-root.sworkingvpn.com"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇵🇱81Mb | H2nexus"
+    type: "vless"
+    server: "51.250.87.30"
+    port: 443
+    uuid: "3283529b-3bc4-4e15-803a-7d5751a3df07"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MofBU4YalVzrV7O_T5OmaUA5BmkITNw8qbkVSeOMvTE"
+      short-id: "33ebf55b473ae1dd"
+  - name: "🇬🇧80Mb | Packet Star Networks Limited"
+    type: "vless"
+    server: "62.152.59.10"
+    port: 443
+    uuid: "24ab7d27-7d1b-4251-9c4b-333111d721c7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "m.vk.com"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk"
+      short-id: "a9c4f17e3b62d8"
+  - name: "🌐75Mb | OpenRay 🇬🇧 GB-2024"
+    type: "vless"
+    server: "67.159.56.57"
+    port: 443
+    uuid: "52b71b75-4b77-4cec-990b-046ec1938e1f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "uk.bvps.cloud"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "j5qmR8E9er-0n5zZbK6s_SdvYm-tYlraXVYm49ArWS8"
+      short-id: "60debb3ab744d8ce"
+  - name: "🌐75Mb | 🇳🇱 vl-re-ra 260702-132246.497"
+    type: "vless"
+    server: "138.124.67.165"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-root.sworkingvpn.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇵🇱74Mb | H2nexus"
+    type: "vless"
+    server: "144.31.3.23"
+    port: 443
+    uuid: "baeb9020-8fcd-0018-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl-root.sworkingvpn.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇦🇺72Mb | 2e Telekomunikasyon  Sti"
+    type: "vless"
+    server: "45.38.149.63"
+    port: 50001
+    uuid: "65c56e1f-5c41-40bc-b0b5-9346772476ca"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "s0.awsstatic.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Ce2lAEqTi8rzssWrJshYik13BgBYrO1VUxmrbDWdtSY"
+      short-id: "fc4e3743"
+  - name: "🇷🇺71Mb | JSC IOT"
+    type: "vless"
+    server: "62.109.21.190"
+    port: 443
+    uuid: "7c4977b0-e0f5-49a1-9998-349c9cbfa48f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "jobinvest.ru"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🌐70Mb | 🇳🇱openproxylist.com vless-NL"
+    type: "vless"
+    server: "85.234.65.130"
+    port: 6000
+    uuid: "f75566a5-4744-4806-ac2e-ccaefe1b1080"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "telekom.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "F6D_xS9iNp_eeQsHkFpUiLgFsGOH62Q1RFrY4qo5_X4"
+      short-id: "bc03731d6e4c2f7f"
+  - name: "🇸🇪70Mb | Oc Networks Limited"
+    type: "vless"
+    server: "62.152.58.128"
+    port: 443
+    uuid: "47c2465f-e966-4930-b0a0-0ae7e53db7f3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-maps.yandex.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zMyJW8uYeZwurz4xCcnnPjYlCVP0nI5BDHp_0ZrxPjk"
+  - name: "🇵🇱70Mb | H2nexus"
+    type: "vless"
+    server: "144.31.3.23"
+    port: 443
+    uuid: "baeb9020-8fcd-0018-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇳🇱69Mb | NovoServe BV"
+    type: "vless"
+    server: "144.31.190.191"
+    port: 8443
+    uuid: "91d0fa43-e557-43e7-a731-f0c3d1fb306a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ozon.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0"
+      short-id: "4326"
+  - name: "🇳🇱68Mb | NovoServe BV"
+    type: "vless"
+    server: "144.31.190.191"
+    port: 8443
+    uuid: "91d0fa43-e557-43e7-a731-f0c3d1fb306a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ozon.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0"
+      short-id: "4326"
+  - name: "🌐68Mb | 🇷🇺 Russia  БЕЛЫЙ IP  @RaViraNe"
+    type: "vless"
+    server: "78.159.250.32"
+    port: 1111
+    uuid: "9d748910-8306-411a-9b2e-11f0a2a4486f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "api-maps.yandex.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA"
+  - name: "🇨🇭67Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "138.124.67.158"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇹🇼61Mb | Data Communication Business Group"
+    type: "vless"
+    server: "tw06.459292.xyz"
+    port: 8443
+    uuid: "6b5a9259-c7de-45f0-b4de-e89db7850d0c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.python.org"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE"
+      short-id: "04d59340"
+  - name: "🇫🇮60Mb | Play2go International Limited"
+    type: "vless"
+    server: "fin31.official-happ.ru"
+    port: 25031
+    uuid: "33eefed9-7bd8-4944-8de9-388469eb60d9"
+    udp: true
+    tls: false
+    network: "xhttp"
+  - name: "🇳🇱60Mb | Pfcloud UG haftungsbeschrankt"
+    type: "vless"
+    server: "176.65.148.206"
+    port: 8443
+    uuid: "d7774e0e-4cca-4b35-b688-0f3c60a01087"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "node-pfcloud-nl-1.m3mer.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "sxNSufdbvrQupIjBvcDQlYlBkZ0FT4Yu8Y6KZovOE3I"
+      short-id: "2f57e13d256ef891"
+  - name: "🇨🇭59Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "138.124.67.165"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇸🇬58Mb | DigitalOcean"
+    type: "vless"
+    server: "170.114.46.6"
+    port: 80
+    uuid: "cac6ec8f-99f0-44c5-814f-2f3f65e4db74"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/dula"
+      headers:
+        Host: "speed.dulacloud.store"
+  - name: "🇨🇭58Mb | Global Connectivity Solutions Llp"
+    type: "vless"
+    server: "138.124.67.161"
+    port: 443
+    uuid: "baeb9020-8fcd-444c-b95d-f76507816e6d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nl-root.sworkingvpn.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI"
+      short-id: "15bcc0a77c3cacdf"
+  - name: "🇺🇸57Mb | Railway"
+    type: "vless"
+    server: "hayabusa.proxy.rlwy.net"
+    port: 15914
+    uuid: "9309cd35-bf84-4d34-beca-99d6ca129dfd"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "is1-ssl.mzstatic.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "tSITUlx-kFC5Tb1NKUWivuQNdvzhY6s_s4P2X96vqns"
+      short-id: "80b6"
+  - name: "🇷🇺56Mb | JSC IOT"
+    type: "vless"
+    server: "62.109.21.190"
+    port: 443
+    uuid: "2907f1a4-d55c-457e-934c-cfdb4132fe38"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "jobinvest.ru"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+proxy-groups:
+  - name: "نوع انتخاب پروکسی 🔀"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/412721/choose.svg"
+    proxies:
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "توزیع بار چرخشی ⚖️"
+      - "قطع اینترنت ⛔"
+      - "بدون فیلترشکن 🛡️"
+  - name: "دستی 🤏🏻"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
+    proxies:
+      - "🇩🇪828Mb | GSL Networks Pty LTD"
+      - "🇱🇹804Mb | UAB Cherry Servers"
+      - "🇩🇪719Mb | Senko Digital"
+      - "🌐653Mb | TCP, Яндекс V.O.I.D"
+      - "🇱🇹630Mb | UAB Cherry Servers"
+      - "🇫🇮624Mb | Aeza Group"
+      - "🇫🇮619Mb | Baykov Ilya Sergeevich"
+      - "🌐614Mb | 368ms Литва LT 🇱🇹 @vlesstrojan"
+      - "🇱🇹586Mb | UAB Cherry Servers"
+      - "🇬🇧563Mb | Global Connectivity Solutions Llp"
+      - "🇱🇹552Mb | UAB Cherry Servers"
+      - "🇱🇹546Mb | UAB Cherry Servers"
+      - "🇱🇹540Mb | UAB Cherry Servers"
+      - "🇱🇹535Mb | UAB Cherry Servers"
+      - "🌐531Mb | 🇳🇱 101 - NL - VLESS/REALITY/PB"
+      - "🇱🇹524Mb | UAB Cherry Servers"
+      - "🇱🇹508Mb | UAB Cherry Servers"
+      - "🇱🇹490Mb | UAB Cherry Servers"
+      - "🇱🇹489Mb | UAB Cherry Servers"
+      - "🇱🇹488Mb | UAB Cherry Servers"
+      - "🌐487Mb | @DeltaKroneckerGithub"
+      - "🇱🇹485Mb | UAB Cherry Servers"
+      - "🇱🇹482Mb | UAB Cherry Servers"
+      - "🇱🇹475Mb | UAB Cherry Servers"
+      - "🇱🇹474Mb | UAB Cherry Servers"
+      - "🇱🇹459Mb | UAB Cherry Servers"
+      - "🇱🇹454Mb | UAB Cherry Servers"
+      - "🇱🇹453Mb | UAB Cherry Servers"
+      - "🇫🇮452Mb | Baykov Ilya Sergeevich"
+      - "🇱🇹450Mb | UAB Cherry Servers"
+      - "🇬🇧445Mb | Packet Star Networks Limited"
+      - "🇱🇹445Mb | UAB Cherry Servers"
+      - "🇱🇹443Mb | UAB Cherry Servers"
+      - "🇱🇹441Mb | UAB Cherry Servers"
+      - "🇱🇹438Mb | UAB Cherry Servers"
+      - "🇱🇹433Mb | UAB Cherry Servers"
+      - "🇱🇹422Mb | UAB Cherry Servers"
+      - "🇱🇹422Mb | UAB Cherry Servers-1"
+      - "🇱🇹418Mb | UAB Cherry Servers"
+      - "🌐415Mb | 🇸🇨🚀 Сейшелы 🔐 🏳️LTE  🥭🔥"
+      - "🇱🇹396Mb | UAB Cherry Servers"
+      - "🌐395Mb | 0558  🌐 Unknown  VLESS  TG: @Y"
+      - "🇱🇹390Mb | UAB Cherry Servers"
+      - "🇱🇹381Mb | UAB Cherry Servers"
+      - "🇱🇹377Mb | UAB Cherry Servers"
+      - "🇱🇹365Mb | UAB Cherry Servers"
+      - "🇳🇱350Mb | Play2go International Limited"
+      - "🇱🇹339Mb | UAB Cherry Servers"
+      - "🇳🇱335Mb | UAB Cherry Servers"
+      - "🇫🇷330Mb | Hostkey Bv"
+      - "🇬🇧315Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱307Mb | Servers Tech Fzco"
+      - "🇮🇷304Mb | NetCrafters OU"
+      - "🇩🇪300Mb | UAB Cherry Servers"
+      - "🌐288Mb | EPODONIOS"
+      - "🇰🇿284Mb | Newserverlife"
+      - "🇫🇷280Mb | Aeza Group"
+      - "🇬🇧277Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱261Mb | Servers Tech Fzco"
+      - "🌐253Mb | 🇬🇧🚀 Великобритания 🔐 🏳️LTE  🥭🔥"
+      - "🌐240Mb | IT   VLESS-TCP-RLT - Hostkey B"
+      - "🇳🇱233Mb | Play2go International Limited"
+      - "🇳🇱213Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱213Mb | Senko Digital"
+      - "🇳🇱212Mb | Servers Tech Fzco"
+      - "🇫🇮211Mb | Aeza Group"
+      - "🇫🇮209Mb | Oc Networks Limited"
+      - "🇳🇱209Mb | Senko Digital"
+      - "🇺🇸204Mb | NetCrafters OU"
+      - "🌐201Mb | 2344ms JP JP  @vlesstrojan"
+      - "🇳🇱196Mb | Global Connectivity Solutions Llp"
+      - "🇺🇸194Mb | NetCrafters OU"
+      - "🇫🇮177Mb | Senko Digital"
+      - "🇳🇱175Mb | Senko Digital"
+      - "🇩🇪173Mb | UAB Cherry Servers"
+      - "🇫🇮172Mb | Play2go International Limited"
+      - "🇸🇪171Mb | No ACK Group Holding AB"
+      - "🇩🇪156Mb | Play2go International Limited"
+      - "🇪🇸154Mb | Hostkey Bv"
+      - "🇫🇮141Mb | Senko Digital"
+      - "🇱🇹139Mb | UAB Cherry Servers"
+      - "🇱🇹138Mb | UAB Cherry Servers"
+      - "🇸🇬135Mb | DigitalOcean"
+      - "🇱🇹133Mb | UAB Cherry Servers"
+      - "🇺🇸119Mb | AWS"
+      - "🇯🇵117Mb | Azure"
+      - "🇱🇹114Mb | UAB Cherry Servers"
+      - "🇺🇸110Mb | AWS"
+      - "🇱🇹108Mb | UAB Cherry Servers"
+      - "🇬🇧107Mb | Packet Star Networks Limited"
+      - "🇺🇸106Mb | Servhost Group"
+      - "🇱🇹105Mb | UAB Cherry Servers"
+      - "🇸🇬104Mb | DigitalOcean"
+      - "🇺🇸102Mb | Railway"
+      - "🇩🇪99Mb | Senko Digital"
+      - "🇺🇸95Mb | AWS"
+      - "🇺🇸90Mb | AWS"
+      - "🇳🇱88Mb | Pfcloud UG haftungsbeschrankt"
+      - "🇦🇱85Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱85Mb | Servers Tech Fzco"
+      - "🇸🇬84Mb | AWS"
+      - "🇫🇮82Mb | Senko Digital"
+      - "🇵🇱81Mb | H2nexus"
+      - "🇬🇧80Mb | Packet Star Networks Limited"
+      - "🌐75Mb | OpenRay 🇬🇧 GB-2024"
+      - "🌐75Mb | 🇳🇱 vl-re-ra 260702-132246.497"
+      - "🇵🇱74Mb | H2nexus"
+      - "🇦🇺72Mb | 2e Telekomunikasyon  Sti"
+      - "🇷🇺71Mb | JSC IOT"
+      - "🌐70Mb | 🇳🇱openproxylist.com vless-NL"
+      - "🇸🇪70Mb | Oc Networks Limited"
+      - "🇵🇱70Mb | H2nexus"
+      - "🇳🇱69Mb | NovoServe BV"
+      - "🇳🇱68Mb | NovoServe BV"
+      - "🌐68Mb | 🇷🇺 Russia  БЕЛЫЙ IP  @RaViraNe"
+      - "🇨🇭67Mb | Global Connectivity Solutions Llp"
+      - "🇹🇼61Mb | Data Communication Business Group"
+      - "🇫🇮60Mb | Play2go International Limited"
+      - "🇳🇱60Mb | Pfcloud UG haftungsbeschrankt"
+      - "🇨🇭59Mb | Global Connectivity Solutions Llp"
+      - "🇸🇬58Mb | DigitalOcean"
+      - "🇨🇭58Mb | Global Connectivity Solutions Llp"
+      - "🇺🇸57Mb | Railway"
+      - "🇷🇺56Mb | JSC IOT"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: "url-test"
+    icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 600
+    tolerance: 50
+    timeout: 3200
+    lazy: false
+    max-failed-times: 2
+    proxies:
+      - "🇩🇪828Mb | GSL Networks Pty LTD"
+      - "🇱🇹804Mb | UAB Cherry Servers"
+      - "🇩🇪719Mb | Senko Digital"
+      - "🌐653Mb | TCP, Яндекс V.O.I.D"
+      - "🇱🇹630Mb | UAB Cherry Servers"
+      - "🇫🇮624Mb | Aeza Group"
+      - "🇫🇮619Mb | Baykov Ilya Sergeevich"
+      - "🌐614Mb | 368ms Литва LT 🇱🇹 @vlesstrojan"
+      - "🇱🇹586Mb | UAB Cherry Servers"
+      - "🇬🇧563Mb | Global Connectivity Solutions Llp"
+      - "🇱🇹552Mb | UAB Cherry Servers"
+      - "🇱🇹546Mb | UAB Cherry Servers"
+      - "🇱🇹540Mb | UAB Cherry Servers"
+      - "🇱🇹535Mb | UAB Cherry Servers"
+      - "🌐531Mb | 🇳🇱 101 - NL - VLESS/REALITY/PB"
+      - "🇱🇹524Mb | UAB Cherry Servers"
+      - "🇱🇹508Mb | UAB Cherry Servers"
+      - "🇱🇹490Mb | UAB Cherry Servers"
+      - "🇱🇹489Mb | UAB Cherry Servers"
+      - "🇱🇹488Mb | UAB Cherry Servers"
+      - "🌐487Mb | @DeltaKroneckerGithub"
+      - "🇱🇹485Mb | UAB Cherry Servers"
+      - "🇱🇹482Mb | UAB Cherry Servers"
+      - "🇱🇹475Mb | UAB Cherry Servers"
+      - "🇱🇹474Mb | UAB Cherry Servers"
+      - "🇱🇹459Mb | UAB Cherry Servers"
+      - "🇱🇹454Mb | UAB Cherry Servers"
+      - "🇱🇹453Mb | UAB Cherry Servers"
+      - "🇫🇮452Mb | Baykov Ilya Sergeevich"
+      - "🇱🇹450Mb | UAB Cherry Servers"
+      - "🇬🇧445Mb | Packet Star Networks Limited"
+      - "🇱🇹445Mb | UAB Cherry Servers"
+      - "🇱🇹443Mb | UAB Cherry Servers"
+      - "🇱🇹441Mb | UAB Cherry Servers"
+      - "🇱🇹438Mb | UAB Cherry Servers"
+      - "🇱🇹433Mb | UAB Cherry Servers"
+      - "🇱🇹422Mb | UAB Cherry Servers"
+      - "🇱🇹422Mb | UAB Cherry Servers-1"
+      - "🇱🇹418Mb | UAB Cherry Servers"
+      - "🌐415Mb | 🇸🇨🚀 Сейшелы 🔐 🏳️LTE  🥭🔥"
+      - "🇱🇹396Mb | UAB Cherry Servers"
+      - "🌐395Mb | 0558  🌐 Unknown  VLESS  TG: @Y"
+      - "🇱🇹390Mb | UAB Cherry Servers"
+      - "🇱🇹381Mb | UAB Cherry Servers"
+      - "🇱🇹377Mb | UAB Cherry Servers"
+      - "🇱🇹365Mb | UAB Cherry Servers"
+      - "🇳🇱350Mb | Play2go International Limited"
+      - "🇱🇹339Mb | UAB Cherry Servers"
+      - "🇳🇱335Mb | UAB Cherry Servers"
+      - "🇫🇷330Mb | Hostkey Bv"
+      - "🇬🇧315Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱307Mb | Servers Tech Fzco"
+      - "🇮🇷304Mb | NetCrafters OU"
+      - "🇩🇪300Mb | UAB Cherry Servers"
+      - "🌐288Mb | EPODONIOS"
+      - "🇰🇿284Mb | Newserverlife"
+      - "🇫🇷280Mb | Aeza Group"
+      - "🇬🇧277Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱261Mb | Servers Tech Fzco"
+      - "🌐253Mb | 🇬🇧🚀 Великобритания 🔐 🏳️LTE  🥭🔥"
+      - "🌐240Mb | IT   VLESS-TCP-RLT - Hostkey B"
+      - "🇳🇱233Mb | Play2go International Limited"
+      - "🇳🇱213Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱213Mb | Senko Digital"
+      - "🇳🇱212Mb | Servers Tech Fzco"
+      - "🇫🇮211Mb | Aeza Group"
+      - "🇫🇮209Mb | Oc Networks Limited"
+      - "🇳🇱209Mb | Senko Digital"
+      - "🇺🇸204Mb | NetCrafters OU"
+      - "🌐201Mb | 2344ms JP JP  @vlesstrojan"
+      - "🇳🇱196Mb | Global Connectivity Solutions Llp"
+      - "🇺🇸194Mb | NetCrafters OU"
+      - "🇫🇮177Mb | Senko Digital"
+      - "🇳🇱175Mb | Senko Digital"
+      - "🇩🇪173Mb | UAB Cherry Servers"
+      - "🇫🇮172Mb | Play2go International Limited"
+      - "🇸🇪171Mb | No ACK Group Holding AB"
+      - "🇩🇪156Mb | Play2go International Limited"
+      - "🇪🇸154Mb | Hostkey Bv"
+      - "🇫🇮141Mb | Senko Digital"
+      - "🇱🇹139Mb | UAB Cherry Servers"
+      - "🇱🇹138Mb | UAB Cherry Servers"
+      - "🇸🇬135Mb | DigitalOcean"
+      - "🇱🇹133Mb | UAB Cherry Servers"
+      - "🇺🇸119Mb | AWS"
+      - "🇯🇵117Mb | Azure"
+      - "🇱🇹114Mb | UAB Cherry Servers"
+      - "🇺🇸110Mb | AWS"
+      - "🇱🇹108Mb | UAB Cherry Servers"
+      - "🇬🇧107Mb | Packet Star Networks Limited"
+      - "🇺🇸106Mb | Servhost Group"
+      - "🇱🇹105Mb | UAB Cherry Servers"
+      - "🇸🇬104Mb | DigitalOcean"
+      - "🇺🇸102Mb | Railway"
+      - "🇩🇪99Mb | Senko Digital"
+      - "🇺🇸95Mb | AWS"
+      - "🇺🇸90Mb | AWS"
+      - "🇳🇱88Mb | Pfcloud UG haftungsbeschrankt"
+      - "🇦🇱85Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱85Mb | Servers Tech Fzco"
+      - "🇸🇬84Mb | AWS"
+      - "🇫🇮82Mb | Senko Digital"
+      - "🇵🇱81Mb | H2nexus"
+      - "🇬🇧80Mb | Packet Star Networks Limited"
+      - "🌐75Mb | OpenRay 🇬🇧 GB-2024"
+      - "🌐75Mb | 🇳🇱 vl-re-ra 260702-132246.497"
+      - "🇵🇱74Mb | H2nexus"
+      - "🇦🇺72Mb | 2e Telekomunikasyon  Sti"
+      - "🇷🇺71Mb | JSC IOT"
+      - "🌐70Mb | 🇳🇱openproxylist.com vless-NL"
+      - "🇸🇪70Mb | Oc Networks Limited"
+      - "🇵🇱70Mb | H2nexus"
+      - "🇳🇱69Mb | NovoServe BV"
+      - "🇳🇱68Mb | NovoServe BV"
+      - "🌐68Mb | 🇷🇺 Russia  БЕЛЫЙ IP  @RaViraNe"
+      - "🇨🇭67Mb | Global Connectivity Solutions Llp"
+      - "🇹🇼61Mb | Data Communication Business Group"
+      - "🇫🇮60Mb | Play2go International Limited"
+      - "🇳🇱60Mb | Pfcloud UG haftungsbeschrankt"
+      - "🇨🇭59Mb | Global Connectivity Solutions Llp"
+      - "🇸🇬58Mb | DigitalOcean"
+      - "🇨🇭58Mb | Global Connectivity Solutions Llp"
+      - "🇺🇸57Mb | Railway"
+      - "🇷🇺56Mb | JSC IOT"
+  - name: "توزیع بار چرخشی ⚖️"
+    type: "load-balance"
+    icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
+    strategy: "round-robin"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    timeout: 1500
+    lazy: false
+    proxies:
+      - "🇩🇪828Mb | GSL Networks Pty LTD"
+      - "🇱🇹804Mb | UAB Cherry Servers"
+      - "🇩🇪719Mb | Senko Digital"
+      - "🌐653Mb | TCP, Яндекс V.O.I.D"
+      - "🇱🇹630Mb | UAB Cherry Servers"
+      - "🇫🇮624Mb | Aeza Group"
+      - "🇫🇮619Mb | Baykov Ilya Sergeevich"
+      - "🌐614Mb | 368ms Литва LT 🇱🇹 @vlesstrojan"
+      - "🇱🇹586Mb | UAB Cherry Servers"
+      - "🇬🇧563Mb | Global Connectivity Solutions Llp"
+      - "🇱🇹552Mb | UAB Cherry Servers"
+      - "🇱🇹546Mb | UAB Cherry Servers"
+      - "🇱🇹540Mb | UAB Cherry Servers"
+      - "🇱🇹535Mb | UAB Cherry Servers"
+      - "🌐531Mb | 🇳🇱 101 - NL - VLESS/REALITY/PB"
+      - "🇱🇹524Mb | UAB Cherry Servers"
+      - "🇱🇹508Mb | UAB Cherry Servers"
+      - "🇱🇹490Mb | UAB Cherry Servers"
+      - "🇱🇹489Mb | UAB Cherry Servers"
+      - "🇱🇹488Mb | UAB Cherry Servers"
+      - "🌐487Mb | @DeltaKroneckerGithub"
+      - "🇱🇹485Mb | UAB Cherry Servers"
+      - "🇱🇹482Mb | UAB Cherry Servers"
+      - "🇱🇹475Mb | UAB Cherry Servers"
+      - "🇱🇹474Mb | UAB Cherry Servers"
+      - "🇱🇹459Mb | UAB Cherry Servers"
+      - "🇱🇹454Mb | UAB Cherry Servers"
+      - "🇱🇹453Mb | UAB Cherry Servers"
+      - "🇫🇮452Mb | Baykov Ilya Sergeevich"
+      - "🇱🇹450Mb | UAB Cherry Servers"
+      - "🇬🇧445Mb | Packet Star Networks Limited"
+      - "🇱🇹445Mb | UAB Cherry Servers"
+      - "🇱🇹443Mb | UAB Cherry Servers"
+      - "🇱🇹441Mb | UAB Cherry Servers"
+      - "🇱🇹438Mb | UAB Cherry Servers"
+      - "🇱🇹433Mb | UAB Cherry Servers"
+      - "🇱🇹422Mb | UAB Cherry Servers"
+      - "🇱🇹422Mb | UAB Cherry Servers-1"
+      - "🇱🇹418Mb | UAB Cherry Servers"
+      - "🌐415Mb | 🇸🇨🚀 Сейшелы 🔐 🏳️LTE  🥭🔥"
+      - "🇱🇹396Mb | UAB Cherry Servers"
+      - "🌐395Mb | 0558  🌐 Unknown  VLESS  TG: @Y"
+      - "🇱🇹390Mb | UAB Cherry Servers"
+      - "🇱🇹381Mb | UAB Cherry Servers"
+      - "🇱🇹377Mb | UAB Cherry Servers"
+      - "🇱🇹365Mb | UAB Cherry Servers"
+      - "🇳🇱350Mb | Play2go International Limited"
+      - "🇱🇹339Mb | UAB Cherry Servers"
+      - "🇳🇱335Mb | UAB Cherry Servers"
+      - "🇫🇷330Mb | Hostkey Bv"
+      - "🇬🇧315Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱307Mb | Servers Tech Fzco"
+      - "🇮🇷304Mb | NetCrafters OU"
+      - "🇩🇪300Mb | UAB Cherry Servers"
+      - "🌐288Mb | EPODONIOS"
+      - "🇰🇿284Mb | Newserverlife"
+      - "🇫🇷280Mb | Aeza Group"
+      - "🇬🇧277Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱261Mb | Servers Tech Fzco"
+      - "🌐253Mb | 🇬🇧🚀 Великобритания 🔐 🏳️LTE  🥭🔥"
+      - "🌐240Mb | IT   VLESS-TCP-RLT - Hostkey B"
+      - "🇳🇱233Mb | Play2go International Limited"
+      - "🇳🇱213Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱213Mb | Senko Digital"
+      - "🇳🇱212Mb | Servers Tech Fzco"
+      - "🇫🇮211Mb | Aeza Group"
+      - "🇫🇮209Mb | Oc Networks Limited"
+      - "🇳🇱209Mb | Senko Digital"
+      - "🇺🇸204Mb | NetCrafters OU"
+      - "🌐201Mb | 2344ms JP JP  @vlesstrojan"
+      - "🇳🇱196Mb | Global Connectivity Solutions Llp"
+      - "🇺🇸194Mb | NetCrafters OU"
+      - "🇫🇮177Mb | Senko Digital"
+      - "🇳🇱175Mb | Senko Digital"
+      - "🇩🇪173Mb | UAB Cherry Servers"
+      - "🇫🇮172Mb | Play2go International Limited"
+      - "🇸🇪171Mb | No ACK Group Holding AB"
+      - "🇩🇪156Mb | Play2go International Limited"
+      - "🇪🇸154Mb | Hostkey Bv"
+      - "🇫🇮141Mb | Senko Digital"
+      - "🇱🇹139Mb | UAB Cherry Servers"
+      - "🇱🇹138Mb | UAB Cherry Servers"
+      - "🇸🇬135Mb | DigitalOcean"
+      - "🇱🇹133Mb | UAB Cherry Servers"
+      - "🇺🇸119Mb | AWS"
+      - "🇯🇵117Mb | Azure"
+      - "🇱🇹114Mb | UAB Cherry Servers"
+      - "🇺🇸110Mb | AWS"
+      - "🇱🇹108Mb | UAB Cherry Servers"
+      - "🇬🇧107Mb | Packet Star Networks Limited"
+      - "🇺🇸106Mb | Servhost Group"
+      - "🇱🇹105Mb | UAB Cherry Servers"
+      - "🇸🇬104Mb | DigitalOcean"
+      - "🇺🇸102Mb | Railway"
+      - "🇩🇪99Mb | Senko Digital"
+      - "🇺🇸95Mb | AWS"
+      - "🇺🇸90Mb | AWS"
+      - "🇳🇱88Mb | Pfcloud UG haftungsbeschrankt"
+      - "🇦🇱85Mb | Global Connectivity Solutions Llp"
+      - "🇳🇱85Mb | Servers Tech Fzco"
+      - "🇸🇬84Mb | AWS"
+      - "🇫🇮82Mb | Senko Digital"
+      - "🇵🇱81Mb | H2nexus"
+      - "🇬🇧80Mb | Packet Star Networks Limited"
+      - "🌐75Mb | OpenRay 🇬🇧 GB-2024"
+      - "🌐75Mb | 🇳🇱 vl-re-ra 260702-132246.497"
+      - "🇵🇱74Mb | H2nexus"
+      - "🇦🇺72Mb | 2e Telekomunikasyon  Sti"
+      - "🇷🇺71Mb | JSC IOT"
+      - "🌐70Mb | 🇳🇱openproxylist.com vless-NL"
+      - "🇸🇪70Mb | Oc Networks Limited"
+      - "🇵🇱70Mb | H2nexus"
+      - "🇳🇱69Mb | NovoServe BV"
+      - "🇳🇱68Mb | NovoServe BV"
+      - "🌐68Mb | 🇷🇺 Russia  БЕЛЫЙ IP  @RaViraNe"
+      - "🇨🇭67Mb | Global Connectivity Solutions Llp"
+      - "🇹🇼61Mb | Data Communication Business Group"
+      - "🇫🇮60Mb | Play2go International Limited"
+      - "🇳🇱60Mb | Pfcloud UG haftungsbeschrankt"
+      - "🇨🇭59Mb | Global Connectivity Solutions Llp"
+      - "🇸🇬58Mb | DigitalOcean"
+      - "🇨🇭58Mb | Global Connectivity Solutions Llp"
+      - "🇺🇸57Mb | Railway"
+      - "🇷🇺56Mb | JSC IOT"
+  - name: "المنت 💬"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "تیماسپیک 🎧"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/331567/teamspeak.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "دلتاچت ✉️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/373771/mail.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "دانلود منیجر 📥"
+    type: "select"
+    icon: "https://www.sadeemrdp.com/fonts/apps/IDM-Logo.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "تلگرام 💬"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/354443/telegram.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "یوتیوب ▶️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/475700/youtube-color.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+  - name: "گوگل 🌍"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/475656/google-color.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "واتس آپ 🟢"
+    type: "select"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/WhatsApp_Logo_green.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+  - name: "هوش مصنوعی 🤖"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/306500/openai.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "توییتر 🐦"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/475689/twitter-color.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "اسپاتیفای 🎵"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/475684/spotify-color.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "اینستاگرام 📸"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/452229/instagram-1.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+  - name: "تبلیغات 🆎"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/336358/ad.svg"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "تبلیغات اپ ها 🍃"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/12172/smartphone-ad.svg"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "رهگیری جهانی 🛑"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/298725/tracking-track.svg"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "سایتای مخرب ⚠️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/381135/cyber-crime-cyber-phishing-fraud-hack-money.svg"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "استیم 🖥️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/452107/steam.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "گیم 🎮"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/167729/game-controller.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "توییچ 📡"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/343527/twitch-network-communication-interaction-connection.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "سایتای ایرانی 🇮🇷"
+    type: "select"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "ویندوز 🧊"
+    type: "select"
+    icon: "https://icon.icepanel.io/Technology/svg/Windows-11.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "اجازه ندادن 🚫"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+  - name: "کلودفلر ☁️"
+    type: "select"
+    icon: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "گیتهاب 🐙"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/355033/github.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "دیسکورد 🗣️"
+    type: "select"
+    icon: "https://automatorplugin.com/wp-content/uploads/2024/10/discord-icon.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "استریمیو 🎬"
+    type: "select"
+    icon: "https://stremio.github.io/stremio-addon-guide/img/stremio.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "انیدسک 🔴"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/331289/anydesk.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "سایتای سانسوری 🤬"
+    type: "select"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Censorship.svg/300px-Censorship.svg.png"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "بدون فیلترشکن 🛡️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/6318/connection.svg"
+    proxies:
+      - "DIRECT"
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/305372/wifi-off.svg"
+    proxies:
+      - "REJECT"
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/444307/gui-ban.svg"
+    proxies:
+      - "REJECT"
+    hidden: true
+rules:
+  - "RULE-SET,DownloadManagers,دانلود منیجر 📥"
+  - "RULE-SET,Download,دانلود منیجر 📥"
+  - "RULE-SET,stremio,استریمیو 🎬"
+  - "PROCESS-NAME,im.vector.app,المنت 💬"
+  - "PROCESS-NAME,io.element.android.x,المنت 💬"
+  - "PROCESS-NAME,Element.exe,المنت 💬"
+  - "DOMAIN-SUFFIX,aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,site.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,rainbuwu.ir,المنت 💬"
+  - "DOMAIN-SUFFIX,cinny.rainbuwu.ir,المنت 💬"
+  - "PROCESS-NAME,chat.delta,دلتاچت ✉️"
+  - "PROCESS-NAME,DeltaChat.exe,دلتاچت ✉️"
+  - "DOMAIN-SUFFIX,arsalandalvand.ir,دلتاچت ✉️"
+  - "DST-PORT,993,دلتاچت ✉️"
+  - "DST-PORT,465,دلتاچت ✉️"
+  - "DST-PORT,587,دلتاچت ✉️"
+  - "PROCESS-NAME,com.teamspeak.ts3client,تیماسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win64.exe,تیماسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win32.exe,تیماسپیک 🎧"
+  - "DOMAIN-SUFFIX,ag.tssq.ir,تیماسپیک 🎧"
+  - "DST-PORT,9987,تیماسپیک 🎧"
+  - "RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃"
+  - "RULE-SET,BanAD,رهگیری جهانی 🛑"
+  - "RULE-SET,PrivateTracker,رهگیری جهانی 🛑"
+  - "RULE-SET,category_public_tracker,رهگیری جهانی 🛑"
+  - "RULE-SET,malware,سایتای مخرب ⚠️"
+  - "RULE-SET,phishing,سایتای مخرب ⚠️"
+  - "RULE-SET,cryptominers,سایتای مخرب ⚠️"
+  - "RULE-SET,warninglist,سایتای مخرب ⚠️"
+  - "RULE-SET,Ponzi,سایتای مخرب ⚠️"
+  - "RULE-SET,LiteAds,تبلیغات 🆎"
+  - "RULE-SET,iran_ads,تبلیغات 🆎"
+  - "RULE-SET,PersianBlocker,تبلیغات 🆎"
+  - "RULE-SET,ads,تبلیغات 🆎"
+  - "RULE-SET,BanEasyList,تبلیغات 🆎"
+  - "RULE-SET,twitch,توییچ 📡"
+  - "PROCESS-NAME,Telegram.exe,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬"
+  - "RULE-SET,telegram,تلگرام 💬"
+  - "RULE-SET,YouTube,یوتیوب ▶️"
+  - "RULE-SET,youtube,یوتیوب ▶️"
+  - "RULE-SET,YouTubeMusic,یوتیوب ▶️"
+  - "PROCESS-NAME,com.anydesk.anydeskandroid,انیدسک 🔴"
+  - "PROCESS-NAME,AnyDesk.exe,انیدسک 🔴"
+  - "DOMAIN-SUFFIX,anydesk.com,انیدسک 🔴"
+  - "PROCESS-NAME,Twitter.exe,توییتر 🐦"
+  - "PROCESS-NAME,com.twitter.android,توییتر 🐦"
+  - "RULE-SET,Chotwitter,توییتر 🐦"
+  - "RULE-SET,mihTwitter,توییتر 🐦"
+  - "RULE-SET,Domtwitter,توییتر 🐦"
+  - "PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵"
+  - "PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵"
+  - "RULE-SET,DomainSpotify,اسپاتیفای 🎵"
+  - "RULE-SET,mihspotify,اسپاتیفای 🎵"
+  - "PROCESS-NAME,com.instagram.android,اینستاگرام 📸"
+  - "RULE-SET,instagram,اینستاگرام 📸"
+  - "DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖"
+  - "DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖"
+  - "RULE-SET,category-ai,هوش مصنوعی 🤖"
+  - "RULE-SET,censor,سایتای سانسوری 🤬"
+  - "RULE-SET,apps,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iran,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,arvancloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,derakcloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iranserver,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,parspack,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,irasn,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ircidr,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ir,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,category_ir,سایتای ایرانی 🇮🇷"
+  - "DOMAIN-SUFFIX,unimics.com,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,whatsapp,واتس آپ 🟢"
+  - "RULE-SET,steam,استیم 🖥️"
+  - "RULE-SET,SteamRegionCheck,استیم 🖥️"
+  - "RULE-SET,game,گیم 🎮"
+  - "RULE-SET,GameDownload,گیم 🎮"
+  - "RULE-SET,category-games,گیم 🎮"
+  - "RULE-SET,Xbox,گیم 🎮"
+  - "RULE-SET,discord,دیسکورد 🗣️"
+  - "RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃"
+  - "RULE-SET,windows,ویندوز 🧊"
+  - "RULE-SET,cloudflare,کلودفلر ☁️"
+  - "RULE-SET,github,گیتهاب 🐙"
+  - "PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀"
+  - "PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google-play,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google,گوگل 🌍"
+  - "IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,local_ips,بدون فیلترشکن 🛡️"
+  - "RULE-SET,private,بدون فیلترشکن 🛡️"
+  - "MATCH,نوع انتخاب پروکسی 🔀"
