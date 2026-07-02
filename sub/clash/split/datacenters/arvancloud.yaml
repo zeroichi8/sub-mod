@@ -1,0 +1,3817 @@
+global-client-fingerprint: "chrome"
+keep-alive-interval: 5
+keep-alive-idle: 10
+disable-keep-alive: false
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: "always"
+ipv6: false
+log-level: "info"
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+dns:
+  enable: true
+  ipv6: false
+  prefer-h3: false
+  cache-algorithm: "arc"
+  use-system-hosts: true
+  use-host: true
+  listen: "0.0.0.0:53"
+  enhanced-mode: "fake-ip"
+  fake-ip-filter-mode: "blacklist"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - "time.*.com"
+    - "ntp.*.com"
+    - "*.ir"
+  default-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "9.9.9.9"
+  nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://1.0.0.1"
+    - "tcp://8.8.8.8"
+    - "tcp://8.8.4.4"
+    - "tcp://9.9.9.9"
+    - "tcp://149.112.112.112"
+    - "tcp://208.67.222.222"
+    - "tcp://208.67.220.222"
+  fallback:
+    - "tcp://76.76.19.19"
+    - "tcp://76.223.122.150"
+    - "tcp://185.228.168.9"
+    - "tcp://185.228.169.9"
+    - "tcp://8.26.56.26"
+    - "tcp://8.20.247.20"
+    - "tcp://76.76.2.11"
+    - "tcp://76.76.10.11"
+    - "tcp://84.200.69.80"
+    - "tcp://84.200.70.40"
+    - "tcp://45.33.97.5"
+    - "tcp://37.235.1.177"
+    - "tcp://209.244.0.3"
+    - "tcp://209.244.0.4"
+    - "tcp://156.154.70.5"
+    - "tcp://156.154.71.5"
+    - "tcp://103.86.96.100"
+    - "tcp://103.86.99.100"
+    - "tcp://199.85.126.10"
+    - "tcp://199.85.127.10"
+    - "tcp://129.250.35.250"
+    - "tcp://129.250.35.251"
+    - "tcp://94.16.114.254"
+    - "tcp://94.247.43.254"
+    - "tcp://208.67.222.20"
+    - "tcp://195.46.39.39"
+    - "tcp://195.46.39.40"
+    - "tcp://204.117.214.10"
+    - "tcp://199.2.252.10"
+    - "tcp://194.169.169.169"
+    - "tcp://156.154.70.1"
+    - "tcp://156.154.71.1"
+    - "tcp://91.239.100.100"
+    - "tcp://89.233.43.71"
+    - "tcp://64.6.64.6"
+    - "tcp://64.6.65.6"
+    - "tcp://77.88.8.8"
+    - "tcp://77.88.8.1"
+  fallback-filter:
+    geoip: true
+    geoip-code: "IR"
+    geosite:
+      - "gfw"
+    ipcidr:
+      - "240.0.0.0/4"
+    domain:
+      - "+.google.com"
+      - "+.facebook.com"
+      - "+.youtube.com"
+  proxy-server-nameserver:
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+  direct-nameserver:
+    - "78.157.42.100"
+    - "78.157.42.101"
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - 8080
+        - 8880
+        - 2052
+        - 2082
+        - 2086
+        - 2095
+    TLS:
+      ports:
+        - 443
+        - 8443
+        - 2053
+        - 2083
+        - 2087
+        - 2096
+tun:
+  enable: true
+  stack: "mixed"
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+rule-providers:
+  category_public_tracker:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml"
+    interval: 86400
+    path: "./ruleset/category_public_tracker.yaml"
+  iran_ads:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/iran_ads.yaml"
+  PersianBlocker:
+    type: "http"
+    behavior: "domain"
+    url: "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml"
+    interval: 86400
+    path: "./ruleset/PersianBlocker.yaml"
+  youtube:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml"
+    interval: 86400
+    path: "./ruleset/youtube.yaml"
+  telegram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml"
+    interval: 86400
+    path: "./ruleset/telegram.yaml"
+  twitch:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml"
+    interval: 86400
+    path: "./ruleset/twitch.yaml"
+  censor:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml"
+    interval: 86400
+    path: "./ruleset/censor.yaml"
+  local_ips:
+    type: "http"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml"
+    interval: 86400
+    path: "./ruleset/local_ips.yaml"
+  private:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml"
+    interval: 86400
+    path: "./ruleset/private.yaml"
+  category_ir:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml"
+    interval: 86400
+    path: "./ruleset/category_ir.yaml"
+  iran:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml"
+    interval: 86400
+    path: "./ruleset/iran.yaml"
+  steam:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml"
+    interval: 86400
+    path: "./ruleset/steam.yaml"
+  game:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml"
+    interval: 86400
+    path: "./ruleset/game.yaml"
+  category-games:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml"
+    interval: 86400
+    path: "./ruleset/category-games.yaml"
+  ir:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    interval: 86400
+    path: "./ruleset/ir.yaml"
+  apps:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    interval: 86400
+    path: "./ruleset/apps.yaml"
+  ircidr:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    interval: 86400
+    path: "./ruleset/ircidr.yaml"
+  irasn:
+    type: "http"
+    format: "yaml"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    interval: 86400
+    path: "./ruleset/irasn.yaml"
+  arvancloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    interval: 86400
+    path: "./ruleset/arvancloud.yaml"
+  derakcloud:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    interval: 86400
+    path: "./ruleset/derakcloud.yaml"
+  iranserver:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    interval: 86400
+    path: "./ruleset/iranserver.yaml"
+  parspack:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    interval: 86400
+    path: "./ruleset/parspack.yaml"
+  malware:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml"
+    interval: 86400
+    path: "./ruleset/malware.yaml"
+  phishing:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml"
+    interval: 86400
+    path: "./ruleset/phishing.yaml"
+  cryptominers:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml"
+    interval: 86400
+    path: "./ruleset/cryptominers.yaml"
+  ads:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://github.com/Chocolate4U/Iran-clash-rules/releases/download/202606060815/category-ads-all.yaml"
+    interval: 86400
+    path: "./ruleset/ads.yaml"
+  DownloadManagers:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml"
+    interval: 86400
+    path: "./ruleset/DownloadManagers.yaml"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanProgramAD.yaml"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml"
+    interval: 86400
+    path: "./ruleset/BanAD.yaml"
+  PrivateTracker:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml"
+    interval: 86400
+    path: "./ruleset/PrivateTracker.yaml"
+  BanEasyList:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml"
+    interval: 86400
+    path: "./ruleset/BanEasyList.yaml"
+  Download:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml"
+    interval: 86400
+    path: "./ruleset/Download.yaml"
+  GameDownload:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml"
+    interval: 86400
+    path: "./ruleset/GameDownload.yaml"
+  SteamRegionCheck:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml"
+    interval: 86400
+    path: "./ruleset/SteamRegionCheck.yaml"
+  Xbox:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml"
+    interval: 86400
+    path: "./ruleset/Xbox.yaml"
+  YouTubeMusic:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml"
+    interval: 86400
+    path: "./ruleset/YouTubeMusic.yaml"
+  YouTube:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml"
+    interval: 86400
+    path: "./ruleset/YouTube.yaml"
+  Ponzi:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml"
+    interval: 86400
+    path: "./ruleset/Ponzi.yaml"
+  warninglist:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml"
+    interval: 86400
+    path: "./ruleset/warninglist.yaml"
+  google:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml"
+    interval: 86400
+    path: "./ruleset/google.yaml"
+  google-play:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml"
+    interval: 86400
+    path: "./ruleset/google-play.yaml"
+  xiaomi_block_list:
+    type: "http"
+    format: "yaml"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_block_list.yaml"
+  xiaomi_white_list:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml"
+    interval: 86400
+    path: "./ruleset/xiaomi_white_list.yaml"
+  cloudflare:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml"
+    interval: 86400
+    path: "./ruleset/cloudflare.yaml"
+  github:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml"
+    interval: 86400
+    path: "./ruleset/xgithub.yaml"
+  whatsapp:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml"
+    interval: 86400
+    path: "./ruleset/whatsapp.yaml"
+  LiteAds:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml"
+    interval: 86400
+    path: "./ruleset/LiteAds.yaml"
+  discord:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml"
+    interval: 86400
+    path: "./ruleset/discord.yaml"
+  instagram:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml"
+    interval: 86400
+    path: "./ruleset/instagram.yaml"
+  category-ai:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml"
+    interval: 86400
+    path: "./ruleset/category-ai.yaml"
+  stremio:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml"
+    interval: 86400
+    path: "./ruleset/stremio.yaml"
+  windows:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml"
+    interval: 86400
+    path: "./ruleset/windows.yaml"
+  Chotwitter:
+    type: "http"
+    format: "yaml"
+    behavior: "ipcidr"
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Chotwitter.yaml"
+  mihTwitter:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml"
+    interval: 86400
+    path: "./ruleset/mihTwitter.yaml"
+  Domtwitter:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Domtwitter.yaml"
+  DomainSpotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml"
+    interval: 86400
+    path: "./ruleset/DomainSpotify.yaml"
+  mihspotify:
+    type: "http"
+    behavior: "domain"
+    url: "https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml"
+    interval: 86400
+    path: "./ruleset/mihSpotify.yaml"
+proxies:
+  - name: "🇮🇷 IR🇮🇷 | vip.melotus.ir-8080 | 577.1ms"
+    type: "vless"
+    server: "www.arvancloud.ir"
+    port: 8080
+    uuid: "f7c14958-063c-4f74-91ad-8c3e3dbfe911"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/wss"
+      headers:
+        Host: "vip.melotus.ir"
+  - name: "🇮🇷 IR🇮🇷 | vip.manemiyayim.ir-8880 | 5437.93ms"
+    type: "vless"
+    server: "snapp.ir"
+    port: 8880
+    uuid: "dc70db91-8d2b-4ba2-8f0a-752de478406b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/v3/api/downloadFile"
+      headers:
+        Host: "vip.manemiyayim.ir"
+  - name: "🇮🇷 IR🇮🇷 | cdn.qorilo.ir-2087 | 5299.07ms"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2087
+    uuid: "b311f4fb-8e83-40d7-0b91-ff94e5156e41"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.qorilo.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/BetForward"
+      headers:
+        Host: "cdn.qorilo.ir"
+  - name: "🇮🇷 IR🇮🇷 | s1.mobilesall.top-2082 | 609.68ms"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2082
+    uuid: "a8a56a8f-dc34-4f35-b663-babdbd1ceb8e"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "s1.mobilesall.top"
+  - name: "🇮🇷 IR🇮🇷 | ns.vaslpro.com-443 | 565.28ms"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 443
+    uuid: "a0d65477-2965-4969-a174-bb8390064734"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ns.vaslpro.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/api/v3/s3"
+      headers:
+        Host: "ns.vaslpro.com"
+  - name: "🇮🇷 IR🇮🇷 | api.s3g1.paxevps.ir-2095 | 752.79ms"
+    type: "vless"
+    server: "185.143.235.140"
+    port: 2095
+    uuid: "837c510c-f56c-4e88-a4ad-522b3d762ee0"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "api.s3g1.paxevps.ir"
+  - name: "🇮🇷 IR🇮🇷 | neth.ketabkhan24.ir-80 | 912.5ms"
+    type: "vless"
+    server: "185.143.233.5"
+    port: 80
+    uuid: "6c85a400-eb83-485d-82e9-b60daffd5155"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "neth.ketabkhan24.ir"
+  - name: "🇮🇷 IR🇮🇷 | vip.melotus.ir-8080 | 809.47ms"
+    type: "vless"
+    server: "www.arvancloud.ir"
+    port: 8080
+    uuid: "662cfcf9-56b3-437b-a4cc-db3b2ff43244"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/wss"
+      headers:
+        Host: "vip.melotus.ir"
+  - name: "🇮🇷 IR🇮🇷 | k1.1414team2.ir-80 | 893.95ms"
+    type: "vless"
+    server: "anten.ir"
+    port: 80
+    uuid: "5b347c25-4be7-4ee8-aba5-18d60d8d8501"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "k1.1414team2.ir"
+  - name: "🇮🇷 TR🇹🇷 | turk.villy-tun.ir-443 | 781.14ms"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 443
+    uuid: "4ce5fb6e-8245-4af7-8041-8e2964fc8577"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "turk.villy-tun.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/H?ed=2560"
+      headers:
+        Host: "turk.villy-tun.ir"
+  - name: "🇮🇷 IR🇮🇷 | aiomovie.ir-443 | 795.89ms"
+    type: "vless"
+    server: "185.143.234.200"
+    port: 443
+    uuid: "46aea670-5e6c-40af-9b99-95585dd71cc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "aiomovie.ir"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/?ed=443"
+      headers:
+        Host: "aiomovie.ir.wnticaceninl10.mahanmapcdn.com"
+  - name: "🇮🇷 IR🇮🇷 | vikimovie.ir-443 | 917.59ms"
+    type: "vless"
+    server: "185.143.234.120"
+    port: 443
+    uuid: "46aea670-5e6c-40af-9b99-95585dd71cc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vikimovie.ir"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/?ed=443"
+      headers:
+        Host: "vikimovie.ir.uiblapridayavl.iranaircdn.com"
+  - name: "🇮🇷 IR🇮🇷 | irancellapp.ir-443 | 727.07ms"
+    type: "vless"
+    server: "185.143.234.120"
+    port: 443
+    uuid: "46aea670-5e6c-40af-9b99-95585dd71cc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "irancellapp.ir"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/?ed=443"
+      headers:
+        Host: "irancellapp.ir.turcancowntiv.airasiadl.com"
+  - name: "🇮🇷 IR🇮🇷 | 1001cns.com-443 | 843.53ms"
+    type: "vless"
+    server: "185.143.233.5"
+    port: 443
+    uuid: "46aea670-5e6c-40af-9b99-95585dd71cc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "1001cns.com"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/?ed=443"
+      headers:
+        Host: "1001cns.com.wnticacenidk1.abrmahanair.com"
+  - name: "🇮🇷 IR🇮🇷 | mehrnews.com-443 | 852.62ms"
+    type: "vless"
+    server: "185.143.233.200"
+    port: 443
+    uuid: "46aea670-5e6c-40af-9b99-95585dd71cc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "mehrnews.com"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/?ed=443"
+      headers:
+        Host: "mehrnews.com.oadeflantrogmtr3.abrirmahan.com"
+  - name: "🇮🇷 IR🇮🇷 | dash.mobilevenus.top-2082 | 511.81ms"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2082
+    uuid: "3922a11f-9e68-4a79-9a76-c37ea7acaef1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "dash.mobilevenus.top"
+  - name: "🇮🇷 IR🇮🇷 | dns.darafiq.ir-2087 | 751.83ms"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2087
+    uuid: "200f0eb5-e480-4fe5-1a80-aa39a05a93a7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dns.darafiq.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/BetForward"
+      headers:
+        Host: "dns.darafiq.ir"
+  - name: "🇮🇷 IR🇮🇷 | veryfast2.ir-80 | 1005.86ms"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "1c111ccf-bc41-4f4e-a641-ebefe04e6306"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "veryfast2.ir"
+  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | 131"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 443
+    uuid: "5eed5e7c-8719-4262-ab67-6524ab6f3cfa"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "test-hamidreza8327v.mc.filimo.cam"
+    client-fingerprint: "random"
+    alpn:
+      - "h3"
+    ws-opts:
+      path: "/c08431ca7ffde3ee"
+      headers:
+        Host: "test-hamidreza8327v.mc.filimo.cam"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 925"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2087
+    uuid: "050af581-d35f-495e-e28b-2d562764d01c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.daraflo.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/BetForward"
+      headers:
+        Host: "cdn.daraflo.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 940"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2095
+    uuid: "06e849ce-7bbc-4859-8be3-07c9e1ed63ae"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/sw"
+      headers:
+        Host: "uia.trexnetlns.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 942"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "07d9731e-353c-40f4-86ae-4d71c534cf34"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/api/live/v3"
+      headers:
+        Host: "dev.delitech.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 943"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2095
+    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "api.aramonlineshop.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 963"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 443
+    uuid: "09a964f1-fa5f-4fef-8127-3eea26048867"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "test-hamidreza6776v.mc.filimo.cam"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+    ws-opts:
+      path: "/1ebd212c69b2ceec"
+      headers:
+        Host: "test-hamidreza6776v.mc.filimo.cam"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 973"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2087
+    uuid: "0c053692-b013-42d1-3953-984dd6a0d386"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.daraflo.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/BetForward"
+      headers:
+        Host: "cdn.daraflo.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1031"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2082
+    uuid: "15d05a66-e5cd-4173-8bac-185c74aa5267"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/path"
+      headers:
+        Host: "cdn.linoxa.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1051"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "186eb0b0-d18c-4f77-b4de-3a2d72582c6d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "mhi.mgshoponline.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1093"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "1ecfc07d-5ab5-46cd-8438-02ff221b1881"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "kabotar.garfar.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1135"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2087
+    uuid: "2402a18b-77f3-4346-db46-4284cb037bb3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.xelira.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/BetForward"
+      headers:
+        Host: "cdn.xelira.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1242"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "3765d716-1846-4433-b6b0-534dd02bd476"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/api/live/v3"
+      headers:
+        Host: "dev.delitech.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1293"
+    type: "vless"
+    server: "185.143.233.68"
+    port: 443
+    uuid: "3e40c799-dc8f-4155-a1bc-6a515f7cd0c2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "backend.parhamm2.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "backend.parhamm2.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1320"
+    type: "vless"
+    server: "snappfood.ir"
+    port: 443
+    uuid: "421e0bf7-fecd-4983-911e-9b41159389fc"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vaslbashi.tooorkshop.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/bspath"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1407"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2087
+    uuid: "4d61cd0f-04aa-40f0-e603-d2dbeb4b28d7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.xelira.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/BetForward"
+      headers:
+        Host: "cdn.xelira.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1436"
+    type: "vless"
+    server: "bmi.ir"
+    port: 80
+    uuid: "526be552-290f-47b1-9a61-a13da8a0a43b"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1440"
+    type: "vless"
+    server: "anten.ir"
+    port: 8880
+    uuid: "528defd1-2a24-43bd-b45d-874367c6f4f5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "iran.shopdn.ir"
+  - name: "🇮🇷 DE 🇩🇪 | @Raydikalx | 1446"
+    type: "vless"
+    server: "tun.bytodev.ir"
+    port: 80
+    uuid: "53478ba3-11be-4846-a3f2-59cf513f52cc"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/ws"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1504"
+    type: "vless"
+    server: "varzesh3.com"
+    port: 80
+    uuid: "5f1eb446-5104-41cb-a3e2-27a1f9e7f060"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "sajjad.panivo.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1650"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2052
+    uuid: "7b81a350-89c3-47da-a3a9-5f2b65313d03"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | 1676"
+    type: "vless"
+    server: "cdn-de.alobaleping.top"
+    port: 2095
+    uuid: "80c72c9e-ea8f-4116-ad32-a394f4701c4b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/cdn-de.alobaleping.top"
+      headers:
+        Host: "cdn-de.alobaleping.top"
+  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | 1677"
+    type: "vless"
+    server: "cdn-fi.alobaleping.top"
+    port: 2052
+    uuid: "80c72c9e-ea8f-4116-ad32-a394f4701c4b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/cdn-fi.alobaleping.top"
+      headers:
+        Host: "cdn-fi.alobaleping.top"
+  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | 1849"
+    type: "vless"
+    server: "varzesh3.com"
+    port: 2052
+    uuid: "949139db-dcd3-4da9-a510-6bf22d1f5cb6"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "sajjad.panivo.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 1868"
+    type: "vless"
+    server: "185.143.235.201"
+    port: 80
+    uuid: "95d2b722-ed38-402a-b340-8ec52f76a5c3"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "t1i6.niropardaz.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2038"
+    type: "vless"
+    server: "anten.ir"
+    port: 2086
+    uuid: "a6346e46-f69d-4f8e-995b-6a24ae64b053"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hap.kalaleh24.ir"
+  - name: "🇮🇷 DE 🇩🇪 | @Raydikalx | 2045"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2046"
+    type: "vless"
+    server: "arvancloud.ir"
+    port: 80
+    uuid: "a89159ad-c590-451c-99cb-42b5ecf938c2"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "t1.tunnellinuweb.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2053"
+    type: "vless"
+    server: "tamin.ir"
+    port: 80
+    uuid: "aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2083"
+    type: "vless"
+    server: "anten.ir"
+    port: 8880
+    uuid: "ae18c4e2-4348-428d-8fed-1eb6096891c3"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "iran.shopdn.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2084"
+    type: "vless"
+    server: "bitpin.ir"
+    port: 80
+    uuid: "ae31f4e8-cf79-4a6d-a238-4c610448ec8a"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "break.ghabahani.com"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2120"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 8080
+    uuid: "b72bae22-90e8-4e4d-937d-5d8ab27b91be"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "?ed=2560"
+      headers:
+        Host: "f2.neuralix.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2163"
+    type: "vless"
+    server: "varzesh3.com"
+    port: 2096
+    uuid: "c09795c8-ee61-4c2a-980b-5946d66c80ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "Sha.artarona.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "Sha.artarona.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2164"
+    type: "vless"
+    server: "varzesh3.com"
+    port: 2096
+    uuid: "c09795c8-ee61-4c2a-980b-5946d66c80ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "lol6.artarona.ir"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "lol6.artarona.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2200"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "c9c7a2b1-caf7-4adb-a184-1f55573ecba0"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "cactos.cactuscloud.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2246"
+    type: "vless"
+    server: "varzesh3.com"
+    port: 80
+    uuid: "d27d0ec3-81b7-4f09-ba3d-788e27100b00"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "sajjad.panivo.ir"
+  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | 2285"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "da75ecc3-2c6f-490d-96a7-74a272456c0d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/api/live/v3"
+      headers:
+        Host: "dev.delitech.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2289"
+    type: "vless"
+    server: "snapp.ir"
+    port: 2052
+    uuid: "dae2ddc6-a892-495f-a001-181cec56ad12"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "p1.razstar.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2300"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "dcb2544a-b257-4267-9200-4b522f0001e6"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "worldt.wawariweb.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2440"
+    type: "vless"
+    server: "185.143.233.5"
+    port: 443
+    uuid: "f435d785-e3cf-4292-be45-3ef223f6a889"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "alaedin9.8lack.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/@alaedin?ed=128"
+      headers:
+        Host: "alaedin9.8lack.ir"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2443"
+    type: "vless"
+    server: "www.tgju.org"
+    port: 443
+    uuid: "f4e1ae51-3b3d-48b5-ae26-dd71bd4af38a"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "1Z6i1nhm.85858569.Xyz"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+  - name: "🇮🇷 Global 🌐 | @Raydikalx | 2475"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 8880
+    uuid: "f9aeba2c-4c68-11f1-8d30-2ddfba49052f"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "sv-1.jservices.ir"
+  - name: "🇮🇷 🌱 - Tel:  @Hddify - 1"
+    type: "vless"
+    server: "tamin.ir"
+    port: 2052
+    uuid: "ff1fc547-524d-47c7-a348-c2d8808b7eb1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "big1.sedighi0915.ir"
+  - name: "🇮🇷 RELAY🚩 | nasnet-571296497.iranpress.co-8080 | 15.62ms"
+    type: "vmess"
+    server: "tgju.org"
+    port: 8080
+    uuid: "e8b1500b-e9e8-5492-8312-f4eadf7d0767"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2095"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 2095
+    uuid: "eab915bc-d2df-73d1-47d0-6eb240497055"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        Host: "tot.joinhere.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2052"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 2052
+    uuid: "949139db-dcd3-4da9-a510-6bf22d1f5cb6"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sajjad.panivo.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "sajjad.panivo.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:2095"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 2095
+    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "api.aramonlineshop.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "api.aramonlineshop.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:2095"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 2095
+    uuid: "2bf331f1-0f8c-477c-abfa-90a3fa624648"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "s2.onlyted.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:2082"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 2082
+    uuid: "6f4478b4-a854-4b08-bfc8-fb750010bfa8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ps3.dservice.ir"
+    ws-opts:
+      path: "/DL?ed=2053"
+      headers:
+        Host: "ps3.dservice.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 8080
+    uuid: "202faa29-6450-4415-9e1f-0a5ad08fc538"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/ray"
+      headers:
+        Host: "dwn.budgetnet.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8880"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 8880
+    uuid: "177e5166-dccd-41a9-8b3c-86c6f1000fb2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vip2.mmdelm.sbs"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vip2.mmdelm.sbs"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 443
+    uuid: "e8f4480b-fe3f-4c89-bfd9-90711716529f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ah3.mc.telewebion.top"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ah3.mc.telewebion.top"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:80"
+    type: "vless"
+    server: "185.143.235.253"
+    port: 80
+    uuid: "5b347c25-4be7-4ee8-aba5-18d60d8d8501"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "k1.1414team2.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "k1.1414team2.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8880"
+    type: "vless"
+    server: "185.143.232.253"
+    port: 8880
+    uuid: "528defd1-2a24-43bd-b45d-874367c6f4f5"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "iran.shopdn.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "iran.shopdn.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:80"
+    type: "vless"
+    server: "185.143.233.200"
+    port: 80
+    uuid: "a89159ad-c590-451c-99cb-42b5ecf938c2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "t1.tunnellinuweb.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "t1.tunnellinuweb.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 443
+    uuid: "f82ba62c-16f7-44b6-b959-745651896e93"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "turk.villy-tun.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/H?ed=2560"
+      headers:
+        Host: "turk.villy-tun.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8080"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 8080
+    uuid: "b72bae22-90e8-4e4d-937d-5d8ab27b91be"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "f2.neuralix.ir"
+    ws-opts:
+      path: "?ed=2560"
+      headers:
+        Host: "f2.neuralix.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 80
+    uuid: "104f1dd2-dc7d-4b15-d42c-566b4e93de62"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de.channel.digicyber.click"
+    ws-opts:
+      path: "/olem/ws?ed=1024"
+      headers:
+        Host: "de.channel.digicyber.click"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2052"
+    type: "vless"
+    server: "185.143.235.201"
+    port: 2052
+    uuid: "949139db-dcd3-4da9-a510-6bf22d1f5cb6"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sajjad.panivo.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "sajjad.panivo.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2096"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 2096
+    uuid: "c09795c8-ee61-4c2a-980b-5946d66c80ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "Sha.artarona.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "Sha.artarona.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:80"
+    type: "vless"
+    server: "185.143.232.200"
+    port: 80
+    uuid: "a89159ad-c590-451c-99cb-42b5ecf938c2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "t1.tunnellinuweb.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "t1.tunnellinuweb.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8080"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 8080
+    uuid: "eec45cd4-2f91-4df8-8f59-6e2447a17ff8"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "game.nexoshopp.help"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:80"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 80
+    uuid: "190e14f6-5f31-4587-a0ff-90ca493e303a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "janamfadayerahbaram.panahgahh.ir"
+    ws-opts:
+      path: "/Rahbaram"
+      headers:
+        Host: "janamfadayerahbaram.panahgahh.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.200:80"
+    type: "vless"
+    server: "185.143.235.200"
+    port: 80
+    uuid: "290a1fba-93a3-4004-bd56-0565a956a209"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/arvancloud.ir"
+      headers:
+        Host: "taraneh.pointspeed.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443-1"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:8880"
+    type: "vless"
+    server: "185.143.235.253"
+    port: 8880
+    uuid: "528defd1-2a24-43bd-b45d-874367c6f4f5"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "iran.shopdn.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "iran.shopdn.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:80"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 80
+    uuid: "87a09075-f5f0-4ff9-80df-3e81fcdfd10d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "d.nsa03.com"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:80"
+    type: "vless"
+    server: "185.143.235.200"
+    port: 80
+    uuid: "a89159ad-c590-451c-99cb-42b5ecf938c2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "t1.tunnellinuweb.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "t1.tunnellinuweb.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2082"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 2082
+    uuid: "a8a56a8f-dc34-4f35-b663-babdbd1ceb8e"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "s1.mobilesall.top"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8080"
+    type: "vless"
+    server: "185.143.235.200"
+    port: 8080
+    uuid: "4cec4337-3e11-41e1-b513-7d451a2bbda1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 8080
+    uuid: "f9aeba2c-4c68-11f1-8d30-2ddfba49052f"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "sv-1.jservices.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.222:8080"
+    type: "vless"
+    server: "185.143.233.222"
+    port: 8080
+    uuid: "de8f907c-53cc-40da-b9eb-87775b31258e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "free.tradepal.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "free.tradepal.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:8443"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2095"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 2095
+    uuid: "eab915bc-d2df-73d1-47d0-6eb240497055"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/DL?ed=2053"
+      headers:
+        Host: "ps2.dservice.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.5:2052"
+    type: "vless"
+    server: "185.143.233.5"
+    port: 2052
+    uuid: "982ae5d2-12a6-45a8-b0a2-19302336ea21"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "cd2.sesrsa.com"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.201:80"
+    type: "vless"
+    server: "185.143.235.201"
+    port: 80
+    uuid: "7521b247-9b73-46ab-8bae-341ee17f2efc"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "t1i6.niropardaz.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:2052"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 2052
+    uuid: "b3475937-0e8f-4f3c-83e9-5e85e02668f7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "gatway.miox-132m.houselife.ir"
+    ws-opts:
+      path: "/video"
+      headers:
+        Host: "gatway.miox-132m.houselife.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 8443
+    uuid: "565b72fb-659d-4f87-941f-cd1b643949c6"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "iran.irannet.shop"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/as21SFAfw214fdnsa"
+      headers:
+        Host: "iran.irannet.shop"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:2082"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 2082
+    uuid: "6f4478b4-a854-4b08-bfc8-fb750010bfa8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ps3.dservice.ir"
+    ws-opts:
+      path: "/DL?ed=2053"
+      headers:
+        Host: "ps3.dservice.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.21:80"
+    type: "vless"
+    server: "185.143.233.21"
+    port: 80
+    uuid: "a65d1c85-7ade-4525-81a9-807d30fd8080"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ferdowsi.nroza.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ferdowsi.nroza.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8080"
+    type: "vless"
+    server: "185.143.232.200"
+    port: 8080
+    uuid: "58ee7d14-2c95-4e8b-b2c9-1598a860d593"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:8880"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 8880
+    uuid: "f9aeba2c-4c68-11f1-8d30-2ddfba49052f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sv-1.jservices.ir"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "sv-1.jservices.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:8080"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 8080
+    uuid: "f7a50ed6-ad61-4d74-8da3-e18bfde52056"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subiranlink.pro"
+    ws-opts:
+      path: "/nigger"
+      headers:
+        Host: "subiranlink.pro"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8080-1"
+    type: "vless"
+    server: "185.143.235.200"
+    port: 8080
+    uuid: "58ee7d14-2c95-4e8b-b2c9-1598a860d593"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:8880"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 8880
+    uuid: "662f3d60-5a99-4a4f-8d9b-70fb6cd4f5d8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "pnl08.mizbanserv.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "pnl08.mizbanserv.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.43:8880"
+    type: "vless"
+    server: "185.143.233.43"
+    port: 8880
+    uuid: "0053c51b-b1f6-4d11-a087-ad795f65bec1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "motabarim3.service-panelbaz.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8080"
+    type: "vless"
+    server: "185.143.233.200"
+    port: 8080
+    uuid: "58ee7d14-2c95-4e8b-b2c9-1598a860d593"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8880"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 8880
+    uuid: "177e5166-dccd-41a9-8b3c-86c6f1000fb2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vip2.mmdelm.sbs"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vip2.mmdelm.sbs"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.234:2052"
+    type: "vless"
+    server: "185.143.234.234"
+    port: 2052
+    uuid: "12cccaae-65c0-4ed5-91bf-b7c993446d20"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/assets/js/app.js"
+      headers:
+        Host: "maziard2.site"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:80"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 80
+    uuid: "5f1eb446-5104-41cb-a3e2-27a1f9e7f060"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sajjad.panivo.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "sajjad.panivo.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.200:8080"
+    type: "vless"
+    server: "185.143.234.200"
+    port: 8080
+    uuid: "662cfcf9-56b3-437b-a4cc-db3b2ff43244"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/wss"
+      headers:
+        Host: "vip.melotus.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:80"
+    type: "vless"
+    server: "185.143.233.200"
+    port: 80
+    uuid: "0b6705dc-157e-46a1-8872-2fa6923e8d83"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2080"
+      headers:
+        Host: "final.idbedam.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080-1"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 8080
+    uuid: "6275cd85-2c04-4eef-8cdc-72886b43a8cc"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "arvan1.snllshop.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:443"
+    type: "vless"
+    server: "185.143.233.234"
+    port: 443
+    uuid: "bcbb541b-6e85-4115-a26a-8cf67eca09cf"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "s1.pishparda.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/voip"
+      headers:
+        Host: "s1.pishparda.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 80
+    uuid: "07d9731e-353c-40f4-86ae-4d71c534cf34"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/api/live/v3"
+      headers:
+        Host: "dev.delitech.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:8443"
+    type: "vless"
+    server: "185.143.233.234"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:80-1"
+    type: "vless"
+    server: "185.143.235.200"
+    port: 80
+    uuid: "290a1fba-93a3-4004-bd56-0565a956a209"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "taraneh.pointspeed.ir"
+    ws-opts:
+      path: "/arvancloud.ir"
+      headers:
+        Host: "taraneh.pointspeed.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8443"
+    type: "vless"
+    server: "185.143.232.253"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:2087"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 2087
+    uuid: "9b139bbb-264e-4369-1120-7dd3f71fa93c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dns.rorian.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/BetForward"
+      headers:
+        Host: "dns.rorian.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.200:8080"
+    type: "vless"
+    server: "185.143.233.200"
+    port: 8080
+    uuid: "662cfcf9-56b3-437b-a4cc-db3b2ff43244"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/wss"
+      headers:
+        Host: "vip.melotus.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:8880"
+    type: "vless"
+    server: "185.143.235.201"
+    port: 8880
+    uuid: "662f3d60-5a99-4a4f-8d9b-70fb6cd4f5d8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "pnl08.mizbanserv.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "pnl08.mizbanserv.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:80"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 80
+    uuid: "661f5954-7f13-4c5f-add8-a7c0b250aabd"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "gre.greentab.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8443-1"
+    type: "vless"
+    server: "185.143.232.253"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:8443"
+    type: "vless"
+    server: "185.143.235.253"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:80"
+    type: "vless"
+    server: "185.143.232.253"
+    port: 80
+    uuid: "5b347c25-4be7-4ee8-aba5-18d60d8d8501"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "k1.1414team2.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "k1.1414team2.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:2086"
+    type: "vless"
+    server: "185.143.232.253"
+    port: 2086
+    uuid: "a6346e46-f69d-4f8e-995b-6a24ae64b053"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "hap.kalaleh24.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hap.kalaleh24.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.232.200:8080"
+    type: "vless"
+    server: "185.143.232.200"
+    port: 8080
+    uuid: "662cfcf9-56b3-437b-a4cc-db3b2ff43244"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/wss"
+      headers:
+        Host: "vip.melotus.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8080-1"
+    type: "vless"
+    server: "185.143.233.200"
+    port: 8080
+    uuid: "4cec4337-3e11-41e1-b513-7d451a2bbda1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:2087"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 2087
+    uuid: "9b139bbb-264e-4369-1120-7dd3f71fa93c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "dns.rorian.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/BetForward"
+      headers:
+        Host: "dns.rorian.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 80
+    uuid: "104f1dd2-dc7d-4b15-d42c-566b4e93de62"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de.channel.digicyber.click"
+    ws-opts:
+      path: "/olem/ws?ed=1024"
+      headers:
+        Host: "de.channel.digicyber.click"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:2052"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 2052
+    uuid: "b3475937-0e8f-4f3c-83e9-5e85e02668f7"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "gatway.miox-132m.houselife.ir"
+    ws-opts:
+      path: "/video"
+      headers:
+        Host: "gatway.miox-132m.houselife.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 8080
+    uuid: "6275cd85-2c04-4eef-8cdc-72886b43a8cc"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "arvan1.snllshop.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8880"
+    type: "vless"
+    server: "185.143.232.200"
+    port: 8880
+    uuid: "58ee7d14-2c95-4e8b-b2c9-1598a860d593"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80-1"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 80
+    uuid: "dae7d6e9-b2f9-5ee5-9433-b77865ef607c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "snapp.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "snapp.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8880"
+    type: "vless"
+    server: "185.143.235.200"
+    port: 8880
+    uuid: "58ee7d14-2c95-4e8b-b2c9-1598a860d593"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:80"
+    type: "vless"
+    server: "185.143.235.201"
+    port: 80
+    uuid: "7521b247-9b73-46ab-8bae-341ee17f2efc"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "t1i6.niropardaz.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "t1i6.niropardaz.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.200:8080"
+    type: "vless"
+    server: "185.143.235.200"
+    port: 8080
+    uuid: "662cfcf9-56b3-437b-a4cc-db3b2ff43244"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/wss"
+      headers:
+        Host: "vip.melotus.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8080-1"
+    type: "vless"
+    server: "185.143.232.200"
+    port: 8080
+    uuid: "4cec4337-3e11-41e1-b513-7d451a2bbda1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8880"
+    type: "vless"
+    server: "185.143.234.200"
+    port: 8880
+    uuid: "58ee7d14-2c95-4e8b-b2c9-1598a860d593"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:2082"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 2082
+    uuid: "a8a56a8f-dc34-4f35-b663-babdbd1ceb8e"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "s1.mobilesall.top"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8080"
+    type: "vless"
+    server: "185.143.234.200"
+    port: 8080
+    uuid: "4cec4337-3e11-41e1-b513-7d451a2bbda1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 80
+    uuid: "ffa37367-6313-4cc5-86bd-3d8dc879c24e"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ar.liarashop.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80-1"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 80
+    uuid: "ae31f4e8-cf79-4a6d-a238-4c610448ec8a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "break.ghabahani.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "break.ghabahani.com"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:80"
+    type: "vless"
+    server: "185.143.233.5"
+    port: 80
+    uuid: "6c85a400-eb83-485d-82e9-b60daffd5155"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ger2h2.ketabkhan24.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ger2h2.ketabkhan24.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443-1"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:8443-1"
+    type: "vless"
+    server: "185.143.233.234"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080-1"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 8080
+    uuid: "eec45cd4-2f91-4df8-8f59-6e2447a17ff8"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "game.nexoshopp.help"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80-1"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 80
+    uuid: "ffa37367-6313-4cc5-86bd-3d8dc879c24e"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ar.liarashop.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:8080"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 8080
+    uuid: "f7a50ed6-ad61-4d74-8da3-e18bfde52056"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subiranlink.pro"
+    ws-opts:
+      path: "/nigger"
+      headers:
+        Host: "subiranlink.pro"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 2052
+    uuid: "dc30f0fb-1d94-4940-b287-8dc5d0d1278d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "passfin01.electrodragon.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:80"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 80
+    uuid: "190e14f6-5f31-4587-a0ff-90ca493e303a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "janamfadayerahbaram.panahgahh.ir"
+    ws-opts:
+      path: "/Rahbaram"
+      headers:
+        Host: "janamfadayerahbaram.panahgahh.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2082"
+    type: "vless"
+    server: "185.143.235.201"
+    port: 2082
+    uuid: "ec842736-5142-4244-b21a-6167736e8466"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "panel.rsacloud.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "panel.rsacloud.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.233:443"
+    type: "vless"
+    server: "185.143.233.233"
+    port: 443
+    uuid: "bcbb541b-6e85-4115-a26a-8cf67eca09cf"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "pishparda.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/voip"
+      headers:
+        Host: "pishparda.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2095-1"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 2095
+    uuid: "eab915bc-d2df-73d1-47d0-6eb240497055"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/DL?ed=2053"
+      headers:
+        Host: "ps2.dservice.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8880"
+    type: "vless"
+    server: "185.143.233.200"
+    port: 8880
+    uuid: "58ee7d14-2c95-4e8b-b2c9-1598a860d593"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:80"
+    type: "vless"
+    server: "185.143.234.200"
+    port: 80
+    uuid: "a89159ad-c590-451c-99cb-42b5ecf938c2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "t1.tunnellinuweb.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "t1.tunnellinuweb.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2082"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 2082
+    uuid: "ec842736-5142-4244-b21a-6167736e8466"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "panel.rsacloud.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "panel.rsacloud.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080-1"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 8080
+    uuid: "202faa29-6450-4415-9e1f-0a5ad08fc538"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/ray"
+      headers:
+        Host: "dwn.budgetnet.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8080-1"
+    type: "vless"
+    server: "185.143.234.200"
+    port: 8080
+    uuid: "58ee7d14-2c95-4e8b-b2c9-1598a860d593"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "xcdn.lucsent.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2095-1"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 2095
+    uuid: "eab915bc-d2df-73d1-47d0-6eb240497055"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        Host: "tot.joinhere.ir"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80-1"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 80
+    uuid: "07d9731e-353c-40f4-86ae-4d71c534cf34"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/api/live/v3"
+      headers:
+        Host: "dev.delitech.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80-2"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 80
+    uuid: "dae7d6e9-b2f9-5ee5-9433-b77865ef607c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "snapp.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "snapp.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:80-1"
+    type: "vless"
+    server: "185.143.235.201"
+    port: 80
+    uuid: "5f1eb446-5104-41cb-a3e2-27a1f9e7f060"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sajjad.panivo.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "sajjad.panivo.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443-2"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
+    type: "vless"
+    server: "185.143.234.5"
+    port: 443
+    uuid: "46aea670-5e6c-40af-9b99-95585dd71cc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "alef.ir"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/?ed=443"
+      headers:
+        Host: "alef.ir.oadeflantrogm.mahanmapcdn.com"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:2095"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 2095
+    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "api.aramonlineshop.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "api.aramonlineshop.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443-1"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 443
+    uuid: "e8f4480b-fe3f-4c89-bfd9-90711716529f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ah3.mc.telewebion.top"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ah3.mc.telewebion.top"
+  - name: "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 2052
+    uuid: "dc30f0fb-1d94-4940-b287-8dc5d0d1278d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "passfin01.electrodragon.ir"
+  - name: "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:2095"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 2095
+    uuid: "2bf331f1-0f8c-477c-abfa-90a3fa624648"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "s2.onlyted.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80-2"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 80
+    uuid: "ae31f4e8-cf79-4a6d-a238-4c610448ec8a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "break.ghabahani.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "break.ghabahani.com"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2096"
+    type: "vless"
+    server: "185.143.235.201"
+    port: 2096
+    uuid: "c09795c8-ee61-4c2a-980b-5946d66c80ec"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "Sha.artarona.ir"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "Sha.artarona.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:2082"
+    type: "vless"
+    server: "185.143.233.5"
+    port: 2082
+    uuid: "a3087447-269f-43c5-a5f9-d5686f452612"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn.mizbanertebatfarda.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "cdn.mizbanertebatfarda.ir"
+  - name: "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:2086"
+    type: "vless"
+    server: "185.143.235.253"
+    port: 2086
+    uuid: "a6346e46-f69d-4f8e-995b-6a24ae64b053"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "hap.kalaleh24.ir"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hap.kalaleh24.ir"
+  - name: "🇮🇷 @erfanandroid"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 443
+    uuid: "5eed5e7c-8719-4262-ab67-6524ab6f3cfa"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "test-hamidreza8327v.mc.filimo.cam"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+    ws-opts:
+      path: "/c08431ca7ffde3ee"
+      headers:
+        Host: "test-hamidreza8327v.mc.filimo.cam"
+  - name: "🇮🇷 🇩🇪@V2rayng_Fast"
+    type: "vless"
+    server: "snapp.ir"
+    port: 8443
+    uuid: "a8609a02-b76d-4cc8-a8d5-496088b20ff1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "sinavm.sinavm.sinavm.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM"
+      headers:
+        Host: "sinavm.sinavm.sinavm.ir"
+  - name: "🇮🇷 088-ws-tls ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "cdn.halazzon.ir"
+    port: 2053
+    uuid: "c659ce22-0a02-4d75-8c89-58d99916b846"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ir6.hnbyme.online"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ir6.hnbyme.online"
+  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.235:443"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 443
+    uuid: "f4e1ae51-3b3d-48b5-ae26-dd71bd4af38a"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "1Z6i1nhm.85858569.Xyz"
+    client-fingerprint: "chrome"
+  - name: "🇮🇷 ARISTA"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "ffa37367-6313-4cc5-86bd-3d8dc879c24e"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ar.liarashop.ir"
+  - name: "🇮🇷 ARISTA-1"
+    type: "vless"
+    server: "dalton.makanyab.app"
+    port: 443
+    uuid: "a4cb769e-78ee-483f-8a9f-42e768ea1f1d"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇮🇷 ARISTA-2"
+    type: "vless"
+    server: "snapp.ir"
+    port: 8080
+    uuid: "f6c0d4ff-dc4a-43d8-8479-b87e76b17e75"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "arvan1.snllshop.ir"
+  - name: "🇮🇷 ARISTA-3"
+    type: "vless"
+    server: "snapp.ir"
+    port: 80
+    uuid: "8f67eced-52fc-483b-b471-681378824a60"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "tr.razmjou.com"
+  - name: "🇮🇷 ARISTA-4"
+    type: "trojan"
+    server: "piohosting.ir"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "PioHosting.ir"
+    ws-opts:
+      path: "/MiTiVPN=fL"
+  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-185.143.234.235:443"
+    type: "vless"
+    server: "185.143.234.235"
+    port: 443
+    uuid: "a4cb769e-78ee-483f-8a9f-42e768ea1f1d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dalton.makanyab.app"
+  - name: "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.235:443"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 443
+    uuid: "f4e1ae51-3b3d-48b5-ae26-dd71bd4af38a"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "1Z6i1nhm.85858569.Xyz"
+    client-fingerprint: "chrome"
+  - name: "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-185.143.233.235:443"
+    type: "vless"
+    server: "185.143.233.235"
+    port: 443
+    uuid: "a4cb769e-78ee-483f-8a9f-42e768ea1f1d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dalton.makanyab.app"
+  - name: "🇮🇷 🇮🇷 💥Config_jo-162"
+    type: "vless"
+    server: "185.143.232.201"
+    port: 443
+    uuid: "09a964f1-fa5f-4fef-8127-3eea26048867"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "test-hamidreza6776v.mc.filimo.cam"
+    client-fingerprint: "random"
+    alpn:
+      - "h3"
+    ws-opts:
+      path: "/1ebd212c69b2ceec"
+      headers:
+        Host: "test-hamidreza6776v.mc.filimo.cam"
+  - name: "🇮🇷 🍄 - Tel:  @Hddify - 9"
+    type: "vless"
+    server: "snapp.ir"
+    port: 8080
+    uuid: "dd7de766-3399-479e-8167-536cd74260b5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/voip"
+      headers:
+        Host: "x.dject.ir"
+proxy-groups:
+  - name: "نوع انتخاب پروکسی 🔀"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/412721/choose.svg"
+    proxies:
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "توزیع بار چرخشی ⚖️"
+      - "قطع اینترنت ⛔"
+      - "بدون فیلترشکن 🛡️"
+  - name: "دستی 🤏🏻"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
+    proxies:
+      - "🇮🇷 IR🇮🇷 | vip.melotus.ir-8080 | 577.1ms"
+      - "🇮🇷 IR🇮🇷 | vip.manemiyayim.ir-8880 | 5437.93ms"
+      - "🇮🇷 IR🇮🇷 | cdn.qorilo.ir-2087 | 5299.07ms"
+      - "🇮🇷 IR🇮🇷 | s1.mobilesall.top-2082 | 609.68ms"
+      - "🇮🇷 IR🇮🇷 | ns.vaslpro.com-443 | 565.28ms"
+      - "🇮🇷 IR🇮🇷 | api.s3g1.paxevps.ir-2095 | 752.79ms"
+      - "🇮🇷 IR🇮🇷 | neth.ketabkhan24.ir-80 | 912.5ms"
+      - "🇮🇷 IR🇮🇷 | vip.melotus.ir-8080 | 809.47ms"
+      - "🇮🇷 IR🇮🇷 | k1.1414team2.ir-80 | 893.95ms"
+      - "🇮🇷 TR🇹🇷 | turk.villy-tun.ir-443 | 781.14ms"
+      - "🇮🇷 IR🇮🇷 | aiomovie.ir-443 | 795.89ms"
+      - "🇮🇷 IR🇮🇷 | vikimovie.ir-443 | 917.59ms"
+      - "🇮🇷 IR🇮🇷 | irancellapp.ir-443 | 727.07ms"
+      - "🇮🇷 IR🇮🇷 | 1001cns.com-443 | 843.53ms"
+      - "🇮🇷 IR🇮🇷 | mehrnews.com-443 | 852.62ms"
+      - "🇮🇷 IR🇮🇷 | dash.mobilevenus.top-2082 | 511.81ms"
+      - "🇮🇷 IR🇮🇷 | dns.darafiq.ir-2087 | 751.83ms"
+      - "🇮🇷 IR🇮🇷 | veryfast2.ir-80 | 1005.86ms"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 131"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 925"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 940"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 942"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 943"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 963"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 973"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1031"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1051"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1093"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1135"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1242"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1293"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1320"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1407"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1436"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1440"
+      - "🇮🇷 DE 🇩🇪 | @Raydikalx | 1446"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1504"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1650"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1676"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1677"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1849"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1868"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2038"
+      - "🇮🇷 DE 🇩🇪 | @Raydikalx | 2045"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2046"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2053"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2083"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2084"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2120"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2163"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2164"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2200"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2246"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 2285"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2289"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2300"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2440"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2443"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2475"
+      - "🇮🇷 🌱 - Tel:  @Hddify - 1"
+      - "🇮🇷 RELAY🚩 | nasnet-571296497.iranpress.co-8080 | 15.62ms"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:2095"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2096"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.222:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:8443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2095"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.5:2052"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.201:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.21:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.43:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.234:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:2087"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:2086"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.232.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:2087"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:2052"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:8443-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.233:443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2095-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2095-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2096"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:2086"
+      - "🇮🇷 @erfanandroid"
+      - "🇮🇷 🇩🇪@V2rayng_Fast"
+      - "🇮🇷 088-ws-tls ✂️@GheychiAmoozesh"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.235:443"
+      - "🇮🇷 ARISTA"
+      - "🇮🇷 ARISTA-1"
+      - "🇮🇷 ARISTA-2"
+      - "🇮🇷 ARISTA-3"
+      - "🇮🇷 ARISTA-4"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-185.143.234.235:443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.235:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-185.143.233.235:443"
+      - "🇮🇷 🇮🇷 💥Config_jo-162"
+      - "🇮🇷 🍄 - Tel:  @Hddify - 9"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: "url-test"
+    icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 600
+    tolerance: 50
+    timeout: 3200
+    lazy: false
+    max-failed-times: 2
+    proxies:
+      - "🇮🇷 IR🇮🇷 | vip.melotus.ir-8080 | 577.1ms"
+      - "🇮🇷 IR🇮🇷 | vip.manemiyayim.ir-8880 | 5437.93ms"
+      - "🇮🇷 IR🇮🇷 | cdn.qorilo.ir-2087 | 5299.07ms"
+      - "🇮🇷 IR🇮🇷 | s1.mobilesall.top-2082 | 609.68ms"
+      - "🇮🇷 IR🇮🇷 | ns.vaslpro.com-443 | 565.28ms"
+      - "🇮🇷 IR🇮🇷 | api.s3g1.paxevps.ir-2095 | 752.79ms"
+      - "🇮🇷 IR🇮🇷 | neth.ketabkhan24.ir-80 | 912.5ms"
+      - "🇮🇷 IR🇮🇷 | vip.melotus.ir-8080 | 809.47ms"
+      - "🇮🇷 IR🇮🇷 | k1.1414team2.ir-80 | 893.95ms"
+      - "🇮🇷 TR🇹🇷 | turk.villy-tun.ir-443 | 781.14ms"
+      - "🇮🇷 IR🇮🇷 | aiomovie.ir-443 | 795.89ms"
+      - "🇮🇷 IR🇮🇷 | vikimovie.ir-443 | 917.59ms"
+      - "🇮🇷 IR🇮🇷 | irancellapp.ir-443 | 727.07ms"
+      - "🇮🇷 IR🇮🇷 | 1001cns.com-443 | 843.53ms"
+      - "🇮🇷 IR🇮🇷 | mehrnews.com-443 | 852.62ms"
+      - "🇮🇷 IR🇮🇷 | dash.mobilevenus.top-2082 | 511.81ms"
+      - "🇮🇷 IR🇮🇷 | dns.darafiq.ir-2087 | 751.83ms"
+      - "🇮🇷 IR🇮🇷 | veryfast2.ir-80 | 1005.86ms"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 131"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 925"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 940"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 942"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 943"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 963"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 973"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1031"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1051"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1093"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1135"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1242"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1293"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1320"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1407"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1436"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1440"
+      - "🇮🇷 DE 🇩🇪 | @Raydikalx | 1446"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1504"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1650"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1676"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1677"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1849"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1868"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2038"
+      - "🇮🇷 DE 🇩🇪 | @Raydikalx | 2045"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2046"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2053"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2083"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2084"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2120"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2163"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2164"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2200"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2246"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 2285"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2289"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2300"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2440"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2443"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2475"
+      - "🇮🇷 🌱 - Tel:  @Hddify - 1"
+      - "🇮🇷 RELAY🚩 | nasnet-571296497.iranpress.co-8080 | 15.62ms"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:2095"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2096"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.222:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:8443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2095"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.5:2052"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.201:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.21:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.43:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.234:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:2087"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:2086"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.232.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:2087"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:2052"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:8443-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.233:443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2095-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2095-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2096"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:2086"
+      - "🇮🇷 @erfanandroid"
+      - "🇮🇷 🇩🇪@V2rayng_Fast"
+      - "🇮🇷 088-ws-tls ✂️@GheychiAmoozesh"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.235:443"
+      - "🇮🇷 ARISTA"
+      - "🇮🇷 ARISTA-1"
+      - "🇮🇷 ARISTA-2"
+      - "🇮🇷 ARISTA-3"
+      - "🇮🇷 ARISTA-4"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-185.143.234.235:443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.235:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-185.143.233.235:443"
+      - "🇮🇷 🇮🇷 💥Config_jo-162"
+      - "🇮🇷 🍄 - Tel:  @Hddify - 9"
+  - name: "توزیع بار چرخشی ⚖️"
+    type: "load-balance"
+    icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
+    strategy: "round-robin"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 30
+    timeout: 1500
+    lazy: false
+    proxies:
+      - "🇮🇷 IR🇮🇷 | vip.melotus.ir-8080 | 577.1ms"
+      - "🇮🇷 IR🇮🇷 | vip.manemiyayim.ir-8880 | 5437.93ms"
+      - "🇮🇷 IR🇮🇷 | cdn.qorilo.ir-2087 | 5299.07ms"
+      - "🇮🇷 IR🇮🇷 | s1.mobilesall.top-2082 | 609.68ms"
+      - "🇮🇷 IR🇮🇷 | ns.vaslpro.com-443 | 565.28ms"
+      - "🇮🇷 IR🇮🇷 | api.s3g1.paxevps.ir-2095 | 752.79ms"
+      - "🇮🇷 IR🇮🇷 | neth.ketabkhan24.ir-80 | 912.5ms"
+      - "🇮🇷 IR🇮🇷 | vip.melotus.ir-8080 | 809.47ms"
+      - "🇮🇷 IR🇮🇷 | k1.1414team2.ir-80 | 893.95ms"
+      - "🇮🇷 TR🇹🇷 | turk.villy-tun.ir-443 | 781.14ms"
+      - "🇮🇷 IR🇮🇷 | aiomovie.ir-443 | 795.89ms"
+      - "🇮🇷 IR🇮🇷 | vikimovie.ir-443 | 917.59ms"
+      - "🇮🇷 IR🇮🇷 | irancellapp.ir-443 | 727.07ms"
+      - "🇮🇷 IR🇮🇷 | 1001cns.com-443 | 843.53ms"
+      - "🇮🇷 IR🇮🇷 | mehrnews.com-443 | 852.62ms"
+      - "🇮🇷 IR🇮🇷 | dash.mobilevenus.top-2082 | 511.81ms"
+      - "🇮🇷 IR🇮🇷 | dns.darafiq.ir-2087 | 751.83ms"
+      - "🇮🇷 IR🇮🇷 | veryfast2.ir-80 | 1005.86ms"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 131"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 925"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 940"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 942"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 943"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 963"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 973"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1031"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1051"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1093"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1135"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1242"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1293"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1320"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1407"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1436"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1440"
+      - "🇮🇷 DE 🇩🇪 | @Raydikalx | 1446"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1504"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1650"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1676"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1677"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 1849"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 1868"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2038"
+      - "🇮🇷 DE 🇩🇪 | @Raydikalx | 2045"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2046"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2053"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2083"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2084"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2120"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2163"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2164"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2200"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2246"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 2285"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2289"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2300"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2440"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2443"
+      - "🇮🇷 Global 🌐 | @Raydikalx | 2475"
+      - "🇮🇷 🌱 - Tel:  @Hddify - 1"
+      - "🇮🇷 RELAY🚩 | nasnet-571296497.iranpress.co-8080 | 15.62ms"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:2095"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2096"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.222:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:8443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2095"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.5:2052"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.201:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.21:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.43:8880"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.234:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:80"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:2087"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.200:8080"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:8443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.253:2086"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.232.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:2087"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:2052"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:80"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.235.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8880"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.234:8443-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:8080"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.233:443"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2095-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:8880"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:80"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:2082"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:8080-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2095-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:80-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:80-1"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443-1"
+      - "🇮🇷 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052"
+      - "🇮🇷 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:2095"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:80-2"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:2096"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:2082"
+      - "🇮🇷 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.253:2086"
+      - "🇮🇷 @erfanandroid"
+      - "🇮🇷 🇩🇪@V2rayng_Fast"
+      - "🇮🇷 088-ws-tls ✂️@GheychiAmoozesh"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.235:443"
+      - "🇮🇷 ARISTA"
+      - "🇮🇷 ARISTA-1"
+      - "🇮🇷 ARISTA-2"
+      - "🇮🇷 ARISTA-3"
+      - "🇮🇷 ARISTA-4"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-185.143.234.235:443"
+      - "🇮🇷 🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.235:443"
+      - "🇮🇷 🔒 VL-TCP-TLS 🇮🇷 IR-185.143.233.235:443"
+      - "🇮🇷 🇮🇷 💥Config_jo-162"
+      - "🇮🇷 🍄 - Tel:  @Hddify - 9"
+  - name: "المنت 💬"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "تیماسپیک 🎧"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/331567/teamspeak.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "دلتاچت ✉️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/373771/mail.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "دانلود منیجر 📥"
+    type: "select"
+    icon: "https://www.sadeemrdp.com/fonts/apps/IDM-Logo.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "تلگرام 💬"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/354443/telegram.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "یوتیوب ▶️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/475700/youtube-color.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+  - name: "گوگل 🌍"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/475656/google-color.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "واتس آپ 🟢"
+    type: "select"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/WhatsApp_Logo_green.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+  - name: "هوش مصنوعی 🤖"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/306500/openai.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "توییتر 🐦"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/475689/twitter-color.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "اسپاتیفای 🎵"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/475684/spotify-color.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "اینستاگرام 📸"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/452229/instagram-1.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+      - "بدون فیلترشکن 🛡️"
+  - name: "تبلیغات 🆎"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/336358/ad.svg"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "تبلیغات اپ ها 🍃"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/12172/smartphone-ad.svg"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "رهگیری جهانی 🛑"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/298725/tracking-track.svg"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "سایتای مخرب ⚠️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/381135/cyber-crime-cyber-phishing-fraud-hack-money.svg"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "استیم 🖥️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/452107/steam.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "گیم 🎮"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/167729/game-controller.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "توییچ 📡"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/343527/twitch-network-communication-interaction-connection.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "سایتای ایرانی 🇮🇷"
+    type: "select"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "ویندوز 🧊"
+    type: "select"
+    icon: "https://icon.icepanel.io/Technology/svg/Windows-11.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "اجازه ندادن 🚫"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+  - name: "کلودفلر ☁️"
+    type: "select"
+    icon: "https://icon.icepanel.io/Technology/svg/Cloudflare.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "گیتهاب 🐙"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/355033/github.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "دیسکورد 🗣️"
+    type: "select"
+    icon: "https://automatorplugin.com/wp-content/uploads/2024/10/discord-icon.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "استریمیو 🎬"
+    type: "select"
+    icon: "https://stremio.github.io/stremio-addon-guide/img/stremio.svg"
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "انیدسک 🔴"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/331289/anydesk.svg"
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "سایتای سانسوری 🤬"
+    type: "select"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Censorship.svg/300px-Censorship.svg.png"
+    proxies:
+      - "اجازه ندادن 🚫"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+  - name: "بدون فیلترشکن 🛡️"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/6318/connection.svg"
+    proxies:
+      - "DIRECT"
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/305372/wifi-off.svg"
+    proxies:
+      - "REJECT"
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: "select"
+    icon: "https://www.svgrepo.com/show/444307/gui-ban.svg"
+    proxies:
+      - "REJECT"
+    hidden: true
+rules:
+  - "RULE-SET,DownloadManagers,دانلود منیجر 📥"
+  - "RULE-SET,Download,دانلود منیجر 📥"
+  - "RULE-SET,stremio,استریمیو 🎬"
+  - "PROCESS-NAME,im.vector.app,المنت 💬"
+  - "PROCESS-NAME,io.element.android.x,المنت 💬"
+  - "PROCESS-NAME,Element.exe,المنت 💬"
+  - "DOMAIN-SUFFIX,aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,site.aklispro.sbs,المنت 💬"
+  - "DOMAIN-SUFFIX,electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,chat.electonet.xyz,المنت 💬"
+  - "DOMAIN-SUFFIX,rainbuwu.ir,المنت 💬"
+  - "DOMAIN-SUFFIX,cinny.rainbuwu.ir,المنت 💬"
+  - "PROCESS-NAME,chat.delta,دلتاچت ✉️"
+  - "PROCESS-NAME,DeltaChat.exe,دلتاچت ✉️"
+  - "DOMAIN-SUFFIX,arsalandalvand.ir,دلتاچت ✉️"
+  - "DST-PORT,993,دلتاچت ✉️"
+  - "DST-PORT,465,دلتاچت ✉️"
+  - "DST-PORT,587,دلتاچت ✉️"
+  - "PROCESS-NAME,com.teamspeak.ts3client,تیماسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win64.exe,تیماسپیک 🎧"
+  - "PROCESS-NAME,ts3client_win32.exe,تیماسپیک 🎧"
+  - "DOMAIN-SUFFIX,ag.tssq.ir,تیماسپیک 🎧"
+  - "DST-PORT,9987,تیماسپیک 🎧"
+  - "RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃"
+  - "RULE-SET,BanAD,رهگیری جهانی 🛑"
+  - "RULE-SET,PrivateTracker,رهگیری جهانی 🛑"
+  - "RULE-SET,category_public_tracker,رهگیری جهانی 🛑"
+  - "RULE-SET,malware,سایتای مخرب ⚠️"
+  - "RULE-SET,phishing,سایتای مخرب ⚠️"
+  - "RULE-SET,cryptominers,سایتای مخرب ⚠️"
+  - "RULE-SET,warninglist,سایتای مخرب ⚠️"
+  - "RULE-SET,Ponzi,سایتای مخرب ⚠️"
+  - "RULE-SET,LiteAds,تبلیغات 🆎"
+  - "RULE-SET,iran_ads,تبلیغات 🆎"
+  - "RULE-SET,PersianBlocker,تبلیغات 🆎"
+  - "RULE-SET,ads,تبلیغات 🆎"
+  - "RULE-SET,BanEasyList,تبلیغات 🆎"
+  - "RULE-SET,twitch,توییچ 📡"
+  - "PROCESS-NAME,Telegram.exe,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger,تلگرام 💬"
+  - "PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬"
+  - "RULE-SET,telegram,تلگرام 💬"
+  - "RULE-SET,YouTube,یوتیوب ▶️"
+  - "RULE-SET,youtube,یوتیوب ▶️"
+  - "RULE-SET,YouTubeMusic,یوتیوب ▶️"
+  - "PROCESS-NAME,com.anydesk.anydeskandroid,انیدسک 🔴"
+  - "PROCESS-NAME,AnyDesk.exe,انیدسک 🔴"
+  - "DOMAIN-SUFFIX,anydesk.com,انیدسک 🔴"
+  - "PROCESS-NAME,Twitter.exe,توییتر 🐦"
+  - "PROCESS-NAME,com.twitter.android,توییتر 🐦"
+  - "RULE-SET,Chotwitter,توییتر 🐦"
+  - "RULE-SET,mihTwitter,توییتر 🐦"
+  - "RULE-SET,Domtwitter,توییتر 🐦"
+  - "PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵"
+  - "PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵"
+  - "RULE-SET,DomainSpotify,اسپاتیفای 🎵"
+  - "RULE-SET,mihspotify,اسپاتیفای 🎵"
+  - "PROCESS-NAME,com.instagram.android,اینستاگرام 📸"
+  - "RULE-SET,instagram,اینستاگرام 📸"
+  - "DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖"
+  - "DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖"
+  - "RULE-SET,category-ai,هوش مصنوعی 🤖"
+  - "RULE-SET,censor,سایتای سانسوری 🤬"
+  - "RULE-SET,apps,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iran,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,arvancloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,derakcloud,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,iranserver,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,parspack,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,irasn,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ircidr,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,ir,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,category_ir,سایتای ایرانی 🇮🇷"
+  - "DOMAIN-SUFFIX,unimics.com,سایتای ایرانی 🇮🇷"
+  - "RULE-SET,whatsapp,واتس آپ 🟢"
+  - "RULE-SET,steam,استیم 🖥️"
+  - "RULE-SET,SteamRegionCheck,استیم 🖥️"
+  - "RULE-SET,game,گیم 🎮"
+  - "RULE-SET,GameDownload,گیم 🎮"
+  - "RULE-SET,category-games,گیم 🎮"
+  - "RULE-SET,Xbox,گیم 🎮"
+  - "RULE-SET,discord,دیسکورد 🗣️"
+  - "RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃"
+  - "RULE-SET,windows,ویندوز 🧊"
+  - "RULE-SET,cloudflare,کلودفلر ☁️"
+  - "RULE-SET,github,گیتهاب 🐙"
+  - "PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀"
+  - "PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google-play,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,google,گوگل 🌍"
+  - "IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀"
+  - "RULE-SET,local_ips,بدون فیلترشکن 🛡️"
+  - "RULE-SET,private,بدون فیلترشکن 🛡️"
+  - "MATCH,نوع انتخاب پروکسی 🔀"
