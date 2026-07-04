@@ -499,14 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇻🇬 Global 🌐 | @Raydikalx | 2583"
-    type: "vmess"
-    server: "185.174.138.34"
-    port: 2082
-    uuid: "6066abf1-cdb1-4818-d35a-7c8e0ee90320"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇻🇬 🔒 VL-WS-TLS 🇻🇬 VG-203.32.121.53:80"
     type: "vless"
     server: "203.32.121.53"
@@ -520,6 +512,20 @@ proxies:
       path: "/nexus"
       headers:
         Host: "your.nexuschat.fun"
+  - name: "🇻🇬 🇷🇺  Russia  [10]  MIFA"
+    type: "vless"
+    server: "185.17.0.39"
+    port: 9443
+    uuid: "42387f58-fc1c-45dc-b224-b1c086e0bf64"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.tesla.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6RnCVPCohP4zBcbSmEJD9RRia8gERSV3Q0IaZec4El0"
+      short-id: "be0191cc"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -534,8 +540,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇻🇬 Global 🌐 | @Raydikalx | 2583"
       - "🇻🇬 🔒 VL-WS-TLS 🇻🇬 VG-203.32.121.53:80"
+      - "🇻🇬 🇷🇺  Russia  [10]  MIFA"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -546,8 +552,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇻🇬 Global 🌐 | @Raydikalx | 2583"
       - "🇻🇬 🔒 VL-WS-TLS 🇻🇬 VG-203.32.121.53:80"
+      - "🇻🇬 🇷🇺  Russia  [10]  MIFA"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -557,8 +563,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇻🇬 Global 🌐 | @Raydikalx | 2583"
       - "🇻🇬 🔒 VL-WS-TLS 🇻🇬 VG-203.32.121.53:80"
+      - "🇻🇬 🇷🇺  Russia  [10]  MIFA"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

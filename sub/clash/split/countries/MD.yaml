@@ -499,28 +499,22 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 2.69ms"
+  - name: "🇲🇩 REALITY|MD🇲🇩 | ru.connectv.net-443 | 242.65ms"
     type: "vless"
-    server: "89.221.224.166"
+    server: "ru.connectv.net"
     port: 443
-    uuid: "347b41ac-a0ad-4b39-a335-ca42b624ba9c"
+    uuid: "ea808221-bb62-4a92-a6a9-f1941fe5d2d1"
     udp: true
     tls: true
     network: "tcp"
-    servername: "sourceforge.net"
+    servername: "ru.connectv.net"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
-  - name: "🇲🇩 Global 🌐 | @Raydikalx | 2641"
-    type: "vmess"
-    server: "94.131.108.36"
-    port: 443
-    uuid: "9855f1f0-a800-40d4-8b38-c7d3eb79302d"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-144.31.131.228:23335"
+    reality-opts:
+      public-key: "vegx20Xc9XIkr8nfdEB7LZnficXNURVnDbB8_ND97Dw"
+  - name: "🇲🇩 REALITY|MD🇲🇩 | 1.cdnconn.com-23335 | 175.14ms"
     type: "vless"
-    server: "144.31.131.228"
+    server: "1.cdnconn.com"
     port: 23335
     uuid: "e384913f-8863-47b4-8858-a84b68abb4a6"
     udp: true
@@ -532,19 +526,25 @@ proxies:
     reality-opts:
       public-key: "7Gi8eiUU9TIVbGuvSU16gl5-Aqt7tcCSB9x6CSxyvik"
       short-id: "67b1e94e4dd1ef90"
-  - name: "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-85.120.81.220:1030"
+  - name: "🇲🇩 RELAY🚩 | sourceforge.net-443 | 13ms"
     type: "vless"
-    server: "85.120.81.220"
-    port: 1030
-    uuid: "c7ae13c4-eaf8-4512-b16d-4f79485c8d36"
+    server: "89.221.224.166"
+    port: 443
+    uuid: "347b41ac-a0ad-4b39-a335-ca42b624ba9c"
     udp: true
     tls: true
     network: "tcp"
-    servername: "yahoo.com"
+    servername: "sourceforge.net"
     client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8"
-      short-id: "9b60d3"
+    flow: "xtls-rprx-vision"
+  - name: "🇲🇩 MD 🇲🇩 | @Raydikalx | 2860"
+    type: "vmess"
+    server: "94.131.108.36"
+    port: 443
+    uuid: "9855f1f0-a800-40d4-8b38-c7d3eb79302d"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇲🇩 👽 - Tel:  @Hddify - 10"
     type: "ss"
     server: "s55.hide-internet.ru"
@@ -552,6 +552,19 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "61sdOoBr2LeFCOasRjD9Lj"
     udp: true
+  - name: "🇲🇩 英国/United Kingdom"
+    type: "vless"
+    server: "176.120.72.63"
+    port: 38339
+    uuid: "481c5606-b586-44d7-bc2e-d8ef30d67f62"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dl.google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "o0MFuznHh_Wztg0FTAMhFXm3hjAqOJAJIIVNn-_A9WA"
+      short-id: "e16883e511"
   - name: "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
     type: "vless"
     server: "91.225.217.94"
@@ -580,11 +593,12 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 2.69ms"
-      - "🇲🇩 Global 🌐 | @Raydikalx | 2641"
-      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-144.31.131.228:23335"
-      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-85.120.81.220:1030"
+      - "🇲🇩 REALITY|MD🇲🇩 | ru.connectv.net-443 | 242.65ms"
+      - "🇲🇩 REALITY|MD🇲🇩 | 1.cdnconn.com-23335 | 175.14ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 13ms"
+      - "🇲🇩 MD 🇲🇩 | @Raydikalx | 2860"
       - "🇲🇩 👽 - Tel:  @Hddify - 10"
+      - "🇲🇩 英国/United Kingdom"
       - "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -596,11 +610,12 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 2.69ms"
-      - "🇲🇩 Global 🌐 | @Raydikalx | 2641"
-      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-144.31.131.228:23335"
-      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-85.120.81.220:1030"
+      - "🇲🇩 REALITY|MD🇲🇩 | ru.connectv.net-443 | 242.65ms"
+      - "🇲🇩 REALITY|MD🇲🇩 | 1.cdnconn.com-23335 | 175.14ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 13ms"
+      - "🇲🇩 MD 🇲🇩 | @Raydikalx | 2860"
       - "🇲🇩 👽 - Tel:  @Hddify - 10"
+      - "🇲🇩 英国/United Kingdom"
       - "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -611,11 +626,12 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 2.69ms"
-      - "🇲🇩 Global 🌐 | @Raydikalx | 2641"
-      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-144.31.131.228:23335"
-      - "🇲🇩 🔒 VL-TCP-RLT 🇲🇩 MD-85.120.81.220:1030"
+      - "🇲🇩 REALITY|MD🇲🇩 | ru.connectv.net-443 | 242.65ms"
+      - "🇲🇩 REALITY|MD🇲🇩 | 1.cdnconn.com-23335 | 175.14ms"
+      - "🇲🇩 RELAY🚩 | sourceforge.net-443 | 13ms"
+      - "🇲🇩 MD 🇲🇩 | @Raydikalx | 2860"
       - "🇲🇩 👽 - Tel:  @Hddify - 10"
+      - "🇲🇩 英国/United Kingdom"
       - "🇲🇩 Misha Lan VPN White list ┃ ✅ SNI: api-maps.yandex.ru ┃ 🇩🇪 Германия"
   - name: "المنت 💬"
     type: "select"
