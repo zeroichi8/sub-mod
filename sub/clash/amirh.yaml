@@ -499,36 +499,49 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇳🇱 Netherlands1"
+  - name: "🇳🇱 Netherlands | 🆘 SOS"
     type: "vless"
-    server: "cdn-fastly.cdn365.xyz"
+    server: "sos.helvuno.ir"
     port: 443
     uuid: "aaebb05a-19da-b7d0-b4d1-5c4236394585"
     udp: true
     tls: true
     network: "ws"
-    servername: "global.fastly.com"
+    servername: "ssl.fastly.com"
     client-fingerprint: "chrome"
     alpn:
-      - "h3"
       - "h2"
       - "http/1.1"
     ws-opts:
       path: "/?ed=2560"
       headers:
         Host: "cdn-1.global.ssl.fastly.net"
-  - name: "🇳🇱 Netherlands2"
+  - name: "🇳🇱 Netherlands1"
     type: "vless"
-    server: "cdn-fastly.cdn365.xyz"
-    port: 80
+    server: "iran.gametvr.ir"
+    port: 2053
     uuid: "aaebb05a-19da-b7d0-b4d1-5c4236394585"
     udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/?ed=2560"
-      headers:
-        Host: "cdn-1.global.ssl.fastly.net"
+    tls: true
+    network: "xhttp"
+    servername: "apple-support-nl.helvuno.ir"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇳🇱 Netherlands2"
+    type: "vless"
+    server: "cof.gametvr.ir"
+    port: 2083
+    uuid: "aaebb05a-19da-b7d0-b4d1-5c4236394585"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "apple-support-nl2.helvuno.ir"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
   - name: "🇹🇷 Turkey1"
     type: "vless"
     server: "iran.gametvr.ir"
@@ -537,7 +550,7 @@ proxies:
     udp: true
     tls: true
     network: "xhttp"
-    servername: "apple-id-turk.cdn365.xyz."
+    servername: "apple-support-tr.helvuno.ir"
     client-fingerprint: "firefox"
     alpn:
       - "h2"
@@ -550,7 +563,33 @@ proxies:
     udp: true
     tls: true
     network: "xhttp"
-    servername: "apple-account-turk.cdn365.xyz."
+    servername: "apple-support-tr2.helvuno.ir"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇩🇪 Germany1"
+    type: "vless"
+    server: "iran.gametvr.ir"
+    port: 2053
+    uuid: "aaebb05a-19da-b7d0-b4d1-5c4236394585"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "apple-support-de.helvuno.ir"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇩🇪 Germany2"
+    type: "vless"
+    server: "cof.gametvr.ir"
+    port: 2083
+    uuid: "aaebb05a-19da-b7d0-b4d1-5c4236394585"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "apple-support-de2.helvuno.ir"
     client-fingerprint: "firefox"
     alpn:
       - "h2"
@@ -569,10 +608,13 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇳🇱 Netherlands | 🆘 SOS"
       - "🇳🇱 Netherlands1"
       - "🇳🇱 Netherlands2"
       - "🇹🇷 Turkey1"
       - "🇹🇷 Turkey2"
+      - "🇩🇪 Germany1"
+      - "🇩🇪 Germany2"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -583,10 +625,13 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇳🇱 Netherlands | 🆘 SOS"
       - "🇳🇱 Netherlands1"
       - "🇳🇱 Netherlands2"
       - "🇹🇷 Turkey1"
       - "🇹🇷 Turkey2"
+      - "🇩🇪 Germany1"
+      - "🇩🇪 Germany2"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -596,10 +641,13 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇳🇱 Netherlands | 🆘 SOS"
       - "🇳🇱 Netherlands1"
       - "🇳🇱 Netherlands2"
       - "🇹🇷 Turkey1"
       - "🇹🇷 Turkey2"
+      - "🇩🇪 Germany1"
+      - "🇩🇪 Germany2"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
