@@ -499,31 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇦🇲 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 200.24ms"
-    type: "vless"
-    server: "77.91.68.70"
-    port: 55983
-    uuid: "f667a096-5231-4cfb-8759-92bb32473139"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg"
-      short-id: "0e"
-  - name: "🇦🇲 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 202.1ms"
-    type: "vless"
-    server: "77.91.68.70"
-    port: 55983
-    uuid: "f667a096-5231-4cfb-8759-92bb32473139"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    reality-opts:
-      public-key: "nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg"
-      short-id: "0e"
   - name: "🇦🇲 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
     type: "vless"
     server: "188.164.159.61"
@@ -538,6 +513,18 @@ proxies:
       path: "/snippets"
       headers:
         Host: "vless.hubp.de"
+  - name: "🇦🇲 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
+    type: "vless"
+    server: "77.91.68.70"
+    port: 55983
+    uuid: "f667a096-5231-4cfb-8759-92bb32473139"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    reality-opts:
+      public-key: "nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg"
+      short-id: "0e"
   - name: "🇦🇲 🇦🇲 | 𝐀𝐑𝐌𝐄𝐍𝐈𝐀"
     type: "vless"
     server: "ar2s.jojerangi.tr"
@@ -552,15 +539,6 @@ proxies:
     reality-opts:
       public-key: "oWh0oee2k_PnDXSz87YjCoguptwPF1Z47_4O3wZgLT0"
       short-id: "b73cff"
-  - name: "🇦🇲 🔒 TR-TCP-REALITY 🇦🇲 AM-93.115.240.146:2095"
-    type: "trojan"
-    server: "93.115.240.146"
-    port: 2095
-    password: "_Q0DYrO6Z8PO1ZyUWApoUCPBKWq-aSs_"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.yahoo.com"
   - name: "🇦🇲 🇦🇺 Misha Lan VPN"
     type: "trojan"
     server: "2.56.204.246"
@@ -588,11 +566,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇦🇲 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 200.24ms"
-      - "🇦🇲 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 202.1ms"
       - "🇦🇲 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
+      - "🇦🇲 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
       - "🇦🇲 🇦🇲 | 𝐀𝐑𝐌𝐄𝐍𝐈𝐀"
-      - "🇦🇲 🔒 TR-TCP-REALITY 🇦🇲 AM-93.115.240.146:2095"
       - "🇦🇲 🇦🇺 Misha Lan VPN"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -604,11 +580,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇦🇲 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 200.24ms"
-      - "🇦🇲 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 202.1ms"
       - "🇦🇲 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
+      - "🇦🇲 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
       - "🇦🇲 🇦🇲 | 𝐀𝐑𝐌𝐄𝐍𝐈𝐀"
-      - "🇦🇲 🔒 TR-TCP-REALITY 🇦🇲 AM-93.115.240.146:2095"
       - "🇦🇲 🇦🇺 Misha Lan VPN"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -619,11 +593,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇦🇲 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 200.24ms"
-      - "🇦🇲 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 202.1ms"
       - "🇦🇲 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
+      - "🇦🇲 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
       - "🇦🇲 🇦🇲 | 𝐀𝐑𝐌𝐄𝐍𝐈𝐀"
-      - "🇦🇲 🔒 TR-TCP-REALITY 🇦🇲 AM-93.115.240.146:2095"
       - "🇦🇲 🇦🇺 Misha Lan VPN"
   - name: "المنت 💬"
     type: "select"
