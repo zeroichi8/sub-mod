@@ -499,14 +499,55 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇱 IL🇮🇱+|+103.240.147.113-14605+|+167.79ms"
+  - name: "🇮🇱 REALITY|IL🇮🇱 | 64.176.166.143-443 | 120.08ms"
+    type: "vless"
+    server: "64.176.166.143"
+    port: 443
+    uuid: "43488128-319e-f480-64ea-0acdc712e2a8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "store.steampowered.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "tboI265nKvT77HoZPyA6bgZNuLap_Jy-XvAx2-4Rcwk"
+      short-id: "0c1553316a645758"
+  - name: "🇮🇱 IT 🇮🇹 | @Raydikalx | 3238"
     type: "ss"
     server: "103.240.147.113"
     port: 14605
     cipher: "chacha20-ietf-poly1305"
     password: "Uk8lfmvhYnx5rJvXxKrRqGRynd9gIpJ.iY"
     udp: true
-  - name: "🇮🇱 Arista🇺🇸"
+  - name: "🇮🇱 Global 🌐 | @Raydikalx | 3310"
+    type: "vless"
+    server: "193.182.144.98"
+    port: 8443
+    uuid: "497631c4-a1a4-003e-a86a-f42873473bb6"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "auto.quattro-tech.ru"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc"
+      short-id: "43dcff53849b81e6"
+  - name: "🇮🇱 1539. 🇮🇱 Israel"
+    type: "vless"
+    server: "193.182.144.98"
+    port: 8443
+    uuid: "497631c4-a1a4-003e-a86a-f42873473bb6"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "auto.quattro-tech.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc"
+      short-id: "43dcff53849b81e6"
+  - name: "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-64.176.166.143:443"
     type: "vless"
     server: "64.176.166.143"
     port: 443
@@ -533,6 +574,21 @@ proxies:
     reality-opts:
       public-key: "_XwzsH6EuV-UnQbXblD4XK46wxaWQcF-0GQ-nAkj3Xo"
       short-id: "8735"
+  - name: "🇺🇸 🇺🇸 США / @Misha Lan VPN 09"
+    type: "vless"
+    server: "l6.l-itx.info"
+    port: 7443
+    uuid: "ca428a2e-7f82-4030-851b-cab731a5645a"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "colorlib.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA"
+      short-id: "6ba85179e30d4fc3"
+    grpc-opts:
+      grpc-service-name: "xyz"
   - name: "🇮🇱 🇮🇱 Израиль | @Misha Lan VPN 16"
     type: "vless"
     server: "195.211.24.49"
@@ -546,7 +602,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "roCvVZ0atQ-_68OSDPuknzHchm6djGzQB4Ydl5n31Fg"
-  - name: "🇺🇸 🇺🇸 США | @Misha Lan VPN 138"
+  - name: "🇮🇱 🇺🇸 США | @Misha Lan VPN 138"
     type: "vless"
     server: "l6.l-itx.info"
     port: 2053
@@ -560,6 +616,18 @@ proxies:
       path: "/ws"
       headers:
         Host: "itx-server.digital"
+  - name: "🇮🇱 БС [@Misha Lan VPN] 🏳️ 17"
+    type: "vless"
+    server: "l6.l-itx.info"
+    port: 443
+    uuid: "ca428a2e-7f82-4030-851b-cab731a5645a"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "yandex.by"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -574,11 +642,16 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇱 IL🇮🇱+|+103.240.147.113-14605+|+167.79ms"
-      - "🇮🇱 Arista🇺🇸"
+      - "🇮🇱 REALITY|IL🇮🇱 | 64.176.166.143-443 | 120.08ms"
+      - "🇮🇱 IT 🇮🇹 | @Raydikalx | 3238"
+      - "🇮🇱 Global 🌐 | @Raydikalx | 3310"
+      - "🇮🇱 1539. 🇮🇱 Israel"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-64.176.166.143:443"
       - "🇮🇱 🇧🇪 Misha Lan VPN"
+      - "🇺🇸 🇺🇸 США / @Misha Lan VPN 09"
       - "🇮🇱 🇮🇱 Израиль | @Misha Lan VPN 16"
-      - "🇺🇸 🇺🇸 США | @Misha Lan VPN 138"
+      - "🇮🇱 🇺🇸 США | @Misha Lan VPN 138"
+      - "🇮🇱 БС [@Misha Lan VPN] 🏳️ 17"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -589,11 +662,16 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇱 IL🇮🇱+|+103.240.147.113-14605+|+167.79ms"
-      - "🇮🇱 Arista🇺🇸"
+      - "🇮🇱 REALITY|IL🇮🇱 | 64.176.166.143-443 | 120.08ms"
+      - "🇮🇱 IT 🇮🇹 | @Raydikalx | 3238"
+      - "🇮🇱 Global 🌐 | @Raydikalx | 3310"
+      - "🇮🇱 1539. 🇮🇱 Israel"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-64.176.166.143:443"
       - "🇮🇱 🇧🇪 Misha Lan VPN"
+      - "🇺🇸 🇺🇸 США / @Misha Lan VPN 09"
       - "🇮🇱 🇮🇱 Израиль | @Misha Lan VPN 16"
-      - "🇺🇸 🇺🇸 США | @Misha Lan VPN 138"
+      - "🇮🇱 🇺🇸 США | @Misha Lan VPN 138"
+      - "🇮🇱 БС [@Misha Lan VPN] 🏳️ 17"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -603,11 +681,16 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇱 IL🇮🇱+|+103.240.147.113-14605+|+167.79ms"
-      - "🇮🇱 Arista🇺🇸"
+      - "🇮🇱 REALITY|IL🇮🇱 | 64.176.166.143-443 | 120.08ms"
+      - "🇮🇱 IT 🇮🇹 | @Raydikalx | 3238"
+      - "🇮🇱 Global 🌐 | @Raydikalx | 3310"
+      - "🇮🇱 1539. 🇮🇱 Israel"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-64.176.166.143:443"
       - "🇮🇱 🇧🇪 Misha Lan VPN"
+      - "🇺🇸 🇺🇸 США / @Misha Lan VPN 09"
       - "🇮🇱 🇮🇱 Израиль | @Misha Lan VPN 16"
-      - "🇺🇸 🇺🇸 США | @Misha Lan VPN 138"
+      - "🇮🇱 🇺🇸 США | @Misha Lan VPN 138"
+      - "🇮🇱 БС [@Misha Lan VPN] 🏳️ 17"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

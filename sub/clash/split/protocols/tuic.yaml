@@ -499,6 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇫🇷 Global 🌐 | @Raydikalx | 1088"
+    type: "tuic"
+    server: "62.210.24.143"
+    port: 33888
+    uuid: "9adb384a-0f16-4501-a8f3-b6b2556fce87"
+    password: "dongtaiwang.com"
+    disable-sni: true
+    reduce-rtt: true
+    udp-relay-mode: "native"
+    sni: "bing.com"
+    alpn:
+      - "h3"
+    congestion-controller: "cubic"
   - name: "🇩🇪 🇩🇪DE  ROSE—12"
     type: "tuic"
     server: "5.178.101.117"
@@ -509,6 +522,18 @@ proxies:
     reduce-rtt: true
     udp-relay-mode: "native"
     sni: "www.microsoft.com"
+    alpn:
+      - "h3"
+    congestion-controller: "bbr"
+  - name: "🇺🇸 013-🇺🇸 US ✂️@GheychiAmoozesh"
+    type: "tuic"
+    server: "107.173.7.186"
+    port: 11393
+    uuid: "383737a2-a196-44b6-a9ac-4f8cc23c9637"
+    password: "383737a2-a196-44b6-a9ac-4f8cc23c9637"
+    disable-sni: true
+    reduce-rtt: true
+    udp-relay-mode: "native"
     alpn:
       - "h3"
     congestion-controller: "bbr"
@@ -538,7 +563,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇫🇷 Global 🌐 | @Raydikalx | 1088"
       - "🇩🇪 🇩🇪DE  ROSE—12"
+      - "🇺🇸 013-🇺🇸 US ✂️@GheychiAmoozesh"
       - "🇫🇷 法国/巴黎/France/Paris"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -550,7 +577,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇫🇷 Global 🌐 | @Raydikalx | 1088"
       - "🇩🇪 🇩🇪DE  ROSE—12"
+      - "🇺🇸 013-🇺🇸 US ✂️@GheychiAmoozesh"
       - "🇫🇷 法国/巴黎/France/Paris"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -561,7 +590,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇫🇷 Global 🌐 | @Raydikalx | 1088"
       - "🇩🇪 🇩🇪DE  ROSE—12"
+      - "🇺🇸 013-🇺🇸 US ✂️@GheychiAmoozesh"
       - "🇫🇷 法国/巴黎/France/Paris"
   - name: "المنت 💬"
     type: "select"
