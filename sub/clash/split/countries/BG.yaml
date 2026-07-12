@@ -499,7 +499,30 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.78ms"
+  - name: "🇧🇬 RELAY🚩 | sourceforge.net-443 | 25.68ms"
+    type: "vless"
+    server: "95.164.36.59"
+    port: 443
+    uuid: "ecf605cd-bddf-45db-a3d4-a254c776ef52"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "sourceforge.net"
+    client-fingerprint: "chrome"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.25ms"
+    type: "vless"
+    server: "95.164.36.59"
+    port: 443
+    uuid: "a6b5e86d-248d-4313-bc1f-716baf350ef8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sourceforge.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+  - name: "🇧🇬 RELAY🚩 | sourceforge.net-443 | 60.74ms"
     type: "vless"
     server: "95.164.68.37"
     port: 443
@@ -511,25 +534,26 @@ proxies:
     client-fingerprint: "chrome"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇧🇬 RELAY🚩 | sourceforge.net-443 | 2.67ms"
+  - name: "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.01ms"
     type: "vless"
     server: "95.164.68.37"
     port: 443
     uuid: "303050c3-cd8a-408b-a438-e6a3cfaa0b48"
     udp: true
     tls: true
-    network: "tcp"
+    network: "grpc"
     servername: "sourceforge.net"
     client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-  - name: "🇧🇬 BG 🇧🇬 | @Raydikalx | 503"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇧🇬 Global 🌐 | @Raydikalx | 798"
     type: "ss"
     server: "38.244.132.14"
     port: 5499
     cipher: "aes-256-gcm"
     password: "lGqs95QkFHo2NV"
     udp: true
-  - name: "🇧🇬 Global 🌐 | @Raydikalx | 2646"
+  - name: "🇧🇬 Global 🌐 | @Raydikalx | 2584"
     type: "vless"
     server: "185.246.131.170"
     port: 2044
@@ -537,7 +561,7 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇧🇬 Global 🌐 | @Raydikalx | 2647"
+  - name: "🇧🇬 Global 🌐 | @Raydikalx | 2585"
     type: "vless"
     server: "server.xv98.ir"
     port: 2044
@@ -545,27 +569,6 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-2.27.105.16:443"
-    type: "vless"
-    server: "2.27.105.16"
-    port: 443
-    uuid: "76713d07-5a6b-49c2-abd8-bc450a2fa7fc"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "bo.spectrum.vu"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Ia9JdXTzAzoqPEkarBg6HFdXrSKYcUh_dt59tyMjukk"
-      short-id: "5f7a9b1c3d0e"
-  - name: "🇧🇬 Bulgaria"
-    type: "ss"
-    server: "89.44.197.181"
-    port: 31348
-    cipher: "chacha20-ietf-poly1305"
-    password: "zDLmeWRsfcFdKT1Tpy02xodEToqCldTxvZcRoPIZZtBdnIEL"
-    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -580,13 +583,13 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.78ms"
-      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 2.67ms"
-      - "🇧🇬 BG 🇧🇬 | @Raydikalx | 503"
-      - "🇧🇬 Global 🌐 | @Raydikalx | 2646"
-      - "🇧🇬 Global 🌐 | @Raydikalx | 2647"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-2.27.105.16:443"
-      - "🇧🇬 Bulgaria"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 25.68ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.25ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 60.74ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.01ms"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 798"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 2584"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 2585"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -597,13 +600,13 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.78ms"
-      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 2.67ms"
-      - "🇧🇬 BG 🇧🇬 | @Raydikalx | 503"
-      - "🇧🇬 Global 🌐 | @Raydikalx | 2646"
-      - "🇧🇬 Global 🌐 | @Raydikalx | 2647"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-2.27.105.16:443"
-      - "🇧🇬 Bulgaria"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 25.68ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.25ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 60.74ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.01ms"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 798"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 2584"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 2585"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -613,13 +616,13 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.78ms"
-      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 2.67ms"
-      - "🇧🇬 BG 🇧🇬 | @Raydikalx | 503"
-      - "🇧🇬 Global 🌐 | @Raydikalx | 2646"
-      - "🇧🇬 Global 🌐 | @Raydikalx | 2647"
-      - "🇧🇬 🔒 VL-TCP-RLT 🇧🇬 BG-2.27.105.16:443"
-      - "🇧🇬 Bulgaria"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 25.68ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.25ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 60.74ms"
+      - "🇧🇬 RELAY🚩 | sourceforge.net-443 | 3.01ms"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 798"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 2584"
+      - "🇧🇬 Global 🌐 | @Raydikalx | 2585"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

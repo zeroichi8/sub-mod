@@ -499,15 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇪 RELAY🚩 | lpoz.worldcups.mom-2082 | 28.39ms"
+  - name: "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 7.84ms"
     type: "vless"
-    server: "cdn1.portalcode.ir"
-    port: 2082
-    uuid: "15f15332-b3a6-424c-a7de-0452ca8c80e8"
+    server: "151.101.9.80"
+    port: 80
+    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
     udp: true
     tls: false
-    network: "httpupgrade"
-  - name: "🇧🇪 FR 🇫🇷 | @Raydikalx | 1453"
+    network: "ws"
+    ws-opts:
+      path: "/?ed=1049"
+      headers:
+        Host: "adspeedx23.global.ssl.fastly.net"
+  - name: "🇧🇪 RELAY🚩 | kio.rainzone.ir-8443 | 351.53ms"
     type: "vless"
     server: "cdn1.portalcode.ir"
     port: 8443
@@ -520,6 +524,53 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
+  - name: "🇧🇪 Global 🌐 | @Raydikalx | 1445"
+    type: "vless"
+    server: "128.127.181.15"
+    port: 443
+    uuid: "497631c4-a1a4-45ff-a86a-f42873473bb6"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "be.quattro-tech.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc"
+      short-id: "43dcff53849b81e6"
+  - name: "🇧🇪 Global 🌐 | @Raydikalx | 1639"
+    type: "vless"
+    server: "digital.try-me.store"
+    port: 443
+    uuid: "6a467642-9488-405a-96d5-c43dff70d35b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "digital.try-me.store"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "08u-fNMdTjjUwYv4GPbG7VK1ep2vh4Fv-puMcmFzhz0"
+  - name: "🇧🇪 Global 🌐 | @Raydikalx | 1964"
+    type: "vless"
+    server: "cdn1.portalcode.ir"
+    port: 8443
+    uuid: "9a794b73-d16d-4d20-8dfa-14985c8b97be"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "frser1.rainzone.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+  - name: "🇧🇪 Global 🌐 | @Raydikalx | 2338"
+    type: "vless"
+    server: "151.101.9.81"
+    port: 80
+    uuid: "cf25f9d0-408f-1142-30aa-01ead41c420d"
+    udp: true
+    tls: false
+    network: "xhttp"
   - name: "🇧🇪 🔒 VL-WS-NONE 🇧🇪 BE-151.101.8.151:80"
     type: "vless"
     server: "151.101.8.151"
@@ -546,30 +597,14 @@ proxies:
       path: "/"
       headers:
         Host: "max-gb1.global.ssl.fastly.net"
-  - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
+  - name: "🇧🇪 @v2rayconfigamir 4031"
     type: "vless"
-    server: "151.101.9.80"
+    server: "fsv22.v2bit.com"
     port: 80
-    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
+    uuid: "939e56c2-7584-4b6c-8a78-f6f2fd4f0486"
     udp: true
     tls: false
-    network: "ws"
-    ws-opts:
-      path: "/?ed=1049"
-      headers:
-        Host: "adspeedx23.global.ssl.fastly.net"
-  - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.217:8443"
-    type: "vless"
-    server: "109.69.218.217"
-    port: 8443
-    uuid: "7d14f1cf-3740-4fbd-a31c-6f7d078f97d7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.engage.edgedoor.ink"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_BMcBaQjBV5AXRtl7yWxV6vYR8Jm7nfwXY6VhltMtBo"
+    network: "xhttp"
   - name: "🇧🇪 🔒 VL-XHTTP-TLS 🇧🇪 BE-188.95.12.226:8443"
     type: "vless"
     server: "188.95.12.226"
@@ -583,14 +618,6 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇧🇪 🔒 VL-HTTPUPGRADE-NONE 🇧🇪 BE-188.95.12.226:2095"
-    type: "vless"
-    server: "188.95.12.226"
-    port: 2095
-    uuid: "67536d90-ead9-440a-9e6d-d5775631b9e2"
-    udp: true
-    tls: false
-    network: "httpupgrade"
   - name: "🇧🇪 🔒 VL-HTTPUPGRADE-NONE 🇧🇪 BE-188.95.12.226:2082"
     type: "vless"
     server: "188.95.12.226"
@@ -613,14 +640,16 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇪 RELAY🚩 | lpoz.worldcups.mom-2082 | 28.39ms"
-      - "🇧🇪 FR 🇫🇷 | @Raydikalx | 1453"
+      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 7.84ms"
+      - "🇧🇪 RELAY🚩 | kio.rainzone.ir-8443 | 351.53ms"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1445"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1639"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1964"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 2338"
       - "🇧🇪 🔒 VL-WS-NONE 🇧🇪 BE-151.101.8.151:80"
       - "🇧🇪 🔒 VL-WS-NONE 🇧🇪 BE-151.101.9.151:80"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.217:8443"
+      - "🇧🇪 @v2rayconfigamir 4031"
       - "🇧🇪 🔒 VL-XHTTP-TLS 🇧🇪 BE-188.95.12.226:8443"
-      - "🇧🇪 🔒 VL-HTTPUPGRADE-NONE 🇧🇪 BE-188.95.12.226:2095"
       - "🇧🇪 🔒 VL-HTTPUPGRADE-NONE 🇧🇪 BE-188.95.12.226:2082"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -632,14 +661,16 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇪 RELAY🚩 | lpoz.worldcups.mom-2082 | 28.39ms"
-      - "🇧🇪 FR 🇫🇷 | @Raydikalx | 1453"
+      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 7.84ms"
+      - "🇧🇪 RELAY🚩 | kio.rainzone.ir-8443 | 351.53ms"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1445"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1639"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1964"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 2338"
       - "🇧🇪 🔒 VL-WS-NONE 🇧🇪 BE-151.101.8.151:80"
       - "🇧🇪 🔒 VL-WS-NONE 🇧🇪 BE-151.101.9.151:80"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.217:8443"
+      - "🇧🇪 @v2rayconfigamir 4031"
       - "🇧🇪 🔒 VL-XHTTP-TLS 🇧🇪 BE-188.95.12.226:8443"
-      - "🇧🇪 🔒 VL-HTTPUPGRADE-NONE 🇧🇪 BE-188.95.12.226:2095"
       - "🇧🇪 🔒 VL-HTTPUPGRADE-NONE 🇧🇪 BE-188.95.12.226:2082"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -650,14 +681,16 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇪 RELAY🚩 | lpoz.worldcups.mom-2082 | 28.39ms"
-      - "🇧🇪 FR 🇫🇷 | @Raydikalx | 1453"
+      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 7.84ms"
+      - "🇧🇪 RELAY🚩 | kio.rainzone.ir-8443 | 351.53ms"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1445"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1639"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 1964"
+      - "🇧🇪 Global 🌐 | @Raydikalx | 2338"
       - "🇧🇪 🔒 VL-WS-NONE 🇧🇪 BE-151.101.8.151:80"
       - "🇧🇪 🔒 VL-WS-NONE 🇧🇪 BE-151.101.9.151:80"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.217:8443"
+      - "🇧🇪 @v2rayconfigamir 4031"
       - "🇧🇪 🔒 VL-XHTTP-TLS 🇧🇪 BE-188.95.12.226:8443"
-      - "🇧🇪 🔒 VL-HTTPUPGRADE-NONE 🇧🇪 BE-188.95.12.226:2095"
       - "🇧🇪 🔒 VL-HTTPUPGRADE-NONE 🇧🇪 BE-188.95.12.226:2082"
   - name: "المنت 💬"
     type: "select"

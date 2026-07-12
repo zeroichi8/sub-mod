@@ -499,28 +499,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇻🇳 Global 🌐 | @Raydikalx | 1414"
-    type: "vless"
-    server: "160.191.164.164"
-    port: 8443
-    uuid: "497631c4-a1a4-0030-a86a-f42873473bb6"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "auto.quattro-tech.ru"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc"
-      short-id: "43dcff53849b81e6"
-  - name: "🇻🇳 VN 🇻🇳 | @Raydikalx | 2919"
-    type: "vmess"
-    server: "103.90.220.27"
-    port: 80
-    uuid: "d97ee737-7bc0-4dca-acf1-85135ed4d97e"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇻🇳 🇻🇳  Vietnam  [01]  MIFA"
+  - name: "🇻🇳 🔒 TR-TCP-TLS 🇻🇳 VN-38.60.252.118:443"
     type: "trojan"
     server: "38.60.252.118"
     port: 443
@@ -529,14 +508,19 @@ proxies:
     tls: true
     network: "tcp"
     servername: "38.60.252.118"
-  - name: "🇻🇳 ARISTA"
+  - name: "🇻🇳 🔒 VL-XHTTP-TLS 🇻🇳 VN-160.25.74.91:443"
     type: "vless"
-    server: "103.153.254.178"
-    port: 40007
-    uuid: "ca5e03e1-6805-4531-a7e5-a775c94b6771"
+    server: "160.25.74.91"
+    port: 443
+    uuid: "9794d18f-9280-3553-a7a5-a23da75aca76"
     udp: true
-    tls: false
-    network: "tcp"
+    tls: true
+    network: "xhttp"
+    servername: "u691611us784.csgfw.top"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
   - name: "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
     type: "vless"
     server: "103.173.155.212"
@@ -551,19 +535,20 @@ proxies:
       - "h2"
       - "http/1.1"
     flow: "xtls-rprx-vision"
-  - name: "🇻🇳 🔒 VL-XHTTP-TLS 🇻🇳 VN-160.25.74.91:443"
+  - name: "🇻🇳 EPODONIOS"
     type: "vless"
-    server: "160.25.74.91"
-    port: 443
-    uuid: "9794d18f-9280-3553-a7a5-a23da75aca76"
+    server: "160.191.164.164"
+    port: 8443
+    uuid: "497631c4-a1a4-0030-a86a-f42873473bb6"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "u691611us784.csgfw.top"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
+    network: "tcp"
+    servername: "auto.quattro-tech.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc"
+      short-id: "43dcff53849b81e6"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -578,12 +563,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇻🇳 Global 🌐 | @Raydikalx | 1414"
-      - "🇻🇳 VN 🇻🇳 | @Raydikalx | 2919"
-      - "🇻🇳 🇻🇳  Vietnam  [01]  MIFA"
-      - "🇻🇳 ARISTA"
-      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
+      - "🇻🇳 🔒 TR-TCP-TLS 🇻🇳 VN-38.60.252.118:443"
       - "🇻🇳 🔒 VL-XHTTP-TLS 🇻🇳 VN-160.25.74.91:443"
+      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
+      - "🇻🇳 EPODONIOS"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -594,12 +577,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇻🇳 Global 🌐 | @Raydikalx | 1414"
-      - "🇻🇳 VN 🇻🇳 | @Raydikalx | 2919"
-      - "🇻🇳 🇻🇳  Vietnam  [01]  MIFA"
-      - "🇻🇳 ARISTA"
-      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
+      - "🇻🇳 🔒 TR-TCP-TLS 🇻🇳 VN-38.60.252.118:443"
       - "🇻🇳 🔒 VL-XHTTP-TLS 🇻🇳 VN-160.25.74.91:443"
+      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
+      - "🇻🇳 EPODONIOS"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -609,12 +590,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇻🇳 Global 🌐 | @Raydikalx | 1414"
-      - "🇻🇳 VN 🇻🇳 | @Raydikalx | 2919"
-      - "🇻🇳 🇻🇳  Vietnam  [01]  MIFA"
-      - "🇻🇳 ARISTA"
-      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
+      - "🇻🇳 🔒 TR-TCP-TLS 🇻🇳 VN-38.60.252.118:443"
       - "🇻🇳 🔒 VL-XHTTP-TLS 🇻🇳 VN-160.25.74.91:443"
+      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
+      - "🇻🇳 EPODONIOS"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
