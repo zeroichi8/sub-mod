@@ -499,13 +499,41 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇳🇴 NO 🇳🇴 | @Raydikalx | 2856"
+  - name: "🇳🇴 NO 🇳🇴 | @Raydikalx | 2005"
+    type: "vless"
+    server: "144.31.128.199"
+    port: 443
+    uuid: "8f0560ec-ba22-4431-a6a7-318dc59d5233"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "stashfuro-eweqee.ru"
+    reality-opts:
+      public-key: "qmQgs_yOloyjj9xqDjbaUqGlhWwp6ReBpBB99Qfi2CU"
+      short-id: "0bc73dd1f045"
+    grpc-opts:
+      grpc-service-name: "nexusGrpc"
+  - name: "🇳🇴 NO 🇳🇴 | @Raydikalx | 3052"
     type: "ss"
     server: "185.213.23.63"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
+  - name: "🇳🇴 NO 🇳🇴 | @Raydikalx | 3430"
+    type: "vless"
+    server: "no.cache-4d8a.com"
+    port: 443
+    uuid: "bbae962a-b6e9-46e6-990c-6abf13e6b075"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "no.cache-4d8a.com"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "7wLv5M4GZGhqMAGVj9zdHyW-RrSRdrYAu1Aaqa8N1nY"
+      short-id: "9d84de9d9f7b85e9"
   - name: "🇳🇴 🔒 VL-WS-NONE 🇳🇴 NO-151.101.239.151:80"
     type: "vless"
     server: "151.101.239.151"
@@ -519,18 +547,21 @@ proxies:
       path: "/"
       headers:
         Host: "max-gb1.global.ssl.fastly.net"
-  - name: "🇳🇴 🔒 VL-WS-NONE 🇳🇴 NO-151.101.236.11:80"
+  - name: "🇳🇴 @DeltaKroneckerGithub"
     type: "vless"
-    server: "151.101.236.11"
-    port: 80
-    uuid: "3b940e86-7b0d-40da-acf1-12d334e41023"
+    server: "87.120.104.85"
+    port: 444
+    uuid: "0b9bcbc1-b289-4a64-86fa-a5b731b65384"
     udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "Fastapi.Org"
+    tls: true
+    network: "grpc"
+    servername: "web.max.ru"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "wZWnCuxyYwvyL-HJX40XqpJ8NAVTMYz5WLN9qpA_MyI"
+      short-id: "8321476719abcdef"
+    grpc-opts:
+      grpc-service-name: "web.max.ru"
   - name: "🇳🇴 🇳🇴  Norway  [01]  MIFA"
     type: "vless"
     server: "144.31.128.199"
@@ -546,6 +577,18 @@ proxies:
       short-id: "0bc73dd1f045"
     grpc-opts:
       grpc-service-name: "nexusGrpc"
+  - name: "🇳🇴 Norway"
+    type: "vless"
+    server: "151.101.236.11"
+    port: 80
+    uuid: "3b940e86-7b0d-40da-acf1-12d334e41023"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "Fastapi.Org"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -560,10 +603,13 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 2856"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 2005"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 3052"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 3430"
       - "🇳🇴 🔒 VL-WS-NONE 🇳🇴 NO-151.101.239.151:80"
-      - "🇳🇴 🔒 VL-WS-NONE 🇳🇴 NO-151.101.236.11:80"
+      - "🇳🇴 @DeltaKroneckerGithub"
       - "🇳🇴 🇳🇴  Norway  [01]  MIFA"
+      - "🇳🇴 Norway"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -574,10 +620,13 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 2856"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 2005"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 3052"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 3430"
       - "🇳🇴 🔒 VL-WS-NONE 🇳🇴 NO-151.101.239.151:80"
-      - "🇳🇴 🔒 VL-WS-NONE 🇳🇴 NO-151.101.236.11:80"
+      - "🇳🇴 @DeltaKroneckerGithub"
       - "🇳🇴 🇳🇴  Norway  [01]  MIFA"
+      - "🇳🇴 Norway"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -587,10 +636,13 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 2856"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 2005"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 3052"
+      - "🇳🇴 NO 🇳🇴 | @Raydikalx | 3430"
       - "🇳🇴 🔒 VL-WS-NONE 🇳🇴 NO-151.101.239.151:80"
-      - "🇳🇴 🔒 VL-WS-NONE 🇳🇴 NO-151.101.236.11:80"
+      - "🇳🇴 @DeltaKroneckerGithub"
       - "🇳🇴 🇳🇴  Norway  [01]  MIFA"
+      - "🇳🇴 Norway"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
