@@ -501,18 +501,24 @@ rule-providers:
 proxies:
   - name: "🇳🇱 Netherlands | 🆘 SOS"
     type: "vless"
-    server: "sos.helvuno.ir"
-    port: 443
+    server: "speedtest.net"
+    port: 80
     uuid: "aaebb05a-19da-b7d0-b4d1-5c4236394585"
     udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "ssl.fastly.com"
-    client-fingerprint: "chrome"
     ws-opts:
       path: "/?ed=2560"
       headers:
         Host: "cdn-1.global.ssl.fastly.net"
+  - name: "🇩🇪 Germany | 🆘 SOS"
+    type: "vless"
+    server: "ip-deram.helvuno.ir"
+    port: 220
+    uuid: "aaebb05a-19da-b7d0-b4d1-5c4236394585"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇳🇱 Netherlands1"
     type: "vless"
     server: "iran.gametvr.ir"
@@ -591,14 +597,6 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇩🇪 Germany | 🆘 SOS"
-    type: "vless"
-    server: "ip-deram.helvuno.ir"
-    port: 110
-    uuid: "aaebb05a-19da-b7d0-b4d1-5c4236394585"
-    udp: true
-    tls: false
-    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -614,13 +612,13 @@ proxy-groups:
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
       - "🇳🇱 Netherlands | 🆘 SOS"
+      - "🇩🇪 Germany | 🆘 SOS"
       - "🇳🇱 Netherlands1"
       - "🇳🇱 Netherlands2"
       - "🇹🇷 Turkey1"
       - "🇹🇷 Turkey2"
       - "🇩🇪 Germany1"
       - "🇩🇪 Germany2"
-      - "🇩🇪 Germany | 🆘 SOS"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -632,13 +630,13 @@ proxy-groups:
     max-failed-times: 2
     proxies:
       - "🇳🇱 Netherlands | 🆘 SOS"
+      - "🇩🇪 Germany | 🆘 SOS"
       - "🇳🇱 Netherlands1"
       - "🇳🇱 Netherlands2"
       - "🇹🇷 Turkey1"
       - "🇹🇷 Turkey2"
       - "🇩🇪 Germany1"
       - "🇩🇪 Germany2"
-      - "🇩🇪 Germany | 🆘 SOS"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -649,13 +647,13 @@ proxy-groups:
     lazy: false
     proxies:
       - "🇳🇱 Netherlands | 🆘 SOS"
+      - "🇩🇪 Germany | 🆘 SOS"
       - "🇳🇱 Netherlands1"
       - "🇳🇱 Netherlands2"
       - "🇹🇷 Turkey1"
       - "🇹🇷 Turkey2"
       - "🇩🇪 Germany1"
       - "🇩🇪 Germany2"
-      - "🇩🇪 Germany | 🆘 SOS"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
