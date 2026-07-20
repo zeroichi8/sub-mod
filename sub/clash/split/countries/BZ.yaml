@@ -499,19 +499,60 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇿 Global 🌐 | @Raydikalx | 3776"
+  - name: "🇧🇿 🏁RELAY-203.30.190.191-0302"
+    type: "vmess"
+    server: "203.30.190.191"
+    port: 443
+    uuid: "56a2188b-2ab7-402c-b9b8-34847fdf0958"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇧🇿 🏁RELAY-203.30.189.191-0303"
+    type: "vmess"
+    server: "203.30.189.191"
+    port: 443
+    uuid: "17b2a313-37a0-4945-a8e4-e63375506b4a"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.123:443"
     type: "vless"
-    server: "45.135.235.232"
-    port: 8080
-    uuid: "ba33c8f1-d3c0-4b04-9e9f-b7990c528d4d"
+    server: "45.135.235.123"
+    port: 443
+    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "notls.lukongtou.eu.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Telegram-WangCai2🇨🇳"
+      headers:
+        Host: "notls.lukongtou.eu.org"
+  - name: "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
+    type: "vless"
+    server: "45.135.235.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
-      path: "/Telegram:@vmessorg-Telegram:@vmessorg-Telegram:@vmessorg?ed=8080"
       headers:
-        Host: "join-to.vmessorg.Community."
+        Host: "vms.lifetime07.workers.dev"
   - name: "🇧🇿 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "45.135.235.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime07.workers.dev"
+  - name: "🇧🇿 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "45.135.235.123"
     port: 443
@@ -524,18 +565,6 @@ proxies:
       path: "Telegram-WangCai2"
       headers:
         Host: "notls.lukongtou.eu.org"
-  - name: "🇧🇿 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "45.135.235.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime07.workers.dev"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -550,7 +579,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇿 Global 🌐 | @Raydikalx | 3776"
+      - "🇧🇿 🏁RELAY-203.30.190.191-0302"
+      - "🇧🇿 🏁RELAY-203.30.189.191-0303"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.123:443"
+      - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
       - "🇧🇿 @DeltaKroneckerGithub"
       - "🇧🇿 @DeltaKroneckerGithub-1"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -563,7 +595,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇿 Global 🌐 | @Raydikalx | 3776"
+      - "🇧🇿 🏁RELAY-203.30.190.191-0302"
+      - "🇧🇿 🏁RELAY-203.30.189.191-0303"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.123:443"
+      - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
       - "🇧🇿 @DeltaKroneckerGithub"
       - "🇧🇿 @DeltaKroneckerGithub-1"
   - name: "توزیع بار چرخشی ⚖️"
@@ -575,7 +610,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇿 Global 🌐 | @Raydikalx | 3776"
+      - "🇧🇿 🏁RELAY-203.30.190.191-0302"
+      - "🇧🇿 🏁RELAY-203.30.189.191-0303"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.123:443"
+      - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
       - "🇧🇿 @DeltaKroneckerGithub"
       - "🇧🇿 @DeltaKroneckerGithub-1"
   - name: "المنت 💬"
