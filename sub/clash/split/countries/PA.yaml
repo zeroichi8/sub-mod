@@ -499,6 +499,50 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇵🇦 @filembad"
+    type: "vless"
+    server: "nl.sorat-fazaei.ir"
+    port: 443
+    uuid: "44aed101-147c-4f97-bd46-7e4c301595fa"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "status.play.google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5CsPMPcBVY7XINQ-lmaHwOr7WpkQlqXC3z7O8_RT_kk"
+      short-id: "8af451f40ad9c2c3"
+  - name: "🇵🇦 @filembad-1"
+    type: "vless"
+    server: "pro.service-vip.ir"
+    port: 3319
+    uuid: "44aed101-147c-4f97-bd46-7e4c301595fa"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "status.play.google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "L4xqosIPXFYId3c6t7Z20F47eYcvYmJEvAM03tNnqQ4"
+      short-id: "dcf26154067848e8"
+    grpc-opts:
+      grpc-service-name: "gaming"
+  - name: "🇵🇦 🇵🇦 💥Config_jo-219"
+    type: "vless"
+    server: "pro.service-vip.ir"
+    port: 3319
+    uuid: "44aed101-147c-4f97-bd46-7e4c301595fa"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "status.play.google.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "L4xqosIPXFYId3c6t7Z20F47eYcvYmJEvAM03tNnqQ4"
+      short-id: "dcf26154067848e8"
+    grpc-opts:
+      grpc-service-name: "gaming"
   - name: "🇵🇦 🔒 SS-TCP-NA 🇵🇦 PA-138.186.142.80:990"
     type: "ss"
     server: "138.186.142.80"
@@ -520,6 +564,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇵🇦 @filembad"
+      - "🇵🇦 @filembad-1"
+      - "🇵🇦 🇵🇦 💥Config_jo-219"
       - "🇵🇦 🔒 SS-TCP-NA 🇵🇦 PA-138.186.142.80:990"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -531,6 +578,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇵🇦 @filembad"
+      - "🇵🇦 @filembad-1"
+      - "🇵🇦 🇵🇦 💥Config_jo-219"
       - "🇵🇦 🔒 SS-TCP-NA 🇵🇦 PA-138.186.142.80:990"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -541,6 +591,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇵🇦 @filembad"
+      - "🇵🇦 @filembad-1"
+      - "🇵🇦 🇵🇦 💥Config_jo-219"
       - "🇵🇦 🔒 SS-TCP-NA 🇵🇦 PA-138.186.142.80:990"
   - name: "المنت 💬"
     type: "select"

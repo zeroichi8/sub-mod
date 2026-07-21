@@ -499,16 +499,29 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.150.157:990"
+  - name: "🇴🇲 filembad-410"
+    type: "vless"
+    server: "oman1.auranetir.com"
+    port: 2026
+    uuid: "d63a9365-41a4-4228-91dd-88c25dfc3411"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "speedtest.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "y0SLcx3lbQgHd8AB5yyGbzOz8yRRVaNJP8viG77ulAw"
+      short-id: "4b740a5973235cec"
+  - name: "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.146.153:990"
     type: "ss"
-    server: "154.205.150.157"
+    server: "154.205.146.153"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-  - name: "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.146.153:990"
+  - name: "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.150.157:990"
     type: "ss"
-    server: "154.205.146.153"
+    server: "154.205.150.157"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
@@ -527,8 +540,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.150.157:990"
+      - "🇴🇲 filembad-410"
       - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.146.153:990"
+      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.150.157:990"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -539,8 +553,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.150.157:990"
+      - "🇴🇲 filembad-410"
       - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.146.153:990"
+      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.150.157:990"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -550,8 +565,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.150.157:990"
+      - "🇴🇲 filembad-410"
       - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.146.153:990"
+      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-154.205.150.157:990"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
