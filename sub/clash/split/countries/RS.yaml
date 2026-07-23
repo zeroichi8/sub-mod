@@ -499,14 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇷🇸 🔒 VL-TCP-NONE 🇷🇸 RS-195.133.18.161:30153"
-    type: "vless"
-    server: "195.133.18.161"
-    port: 30153
-    uuid: "da97d2d7-d255-4efd-8398-7101d698768e"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇷🇸 @v2ray_configs_pools"
     type: "ss"
     server: "194.71.126.31"
@@ -514,6 +506,14 @@ proxies:
     cipher: "aes-256-cfb"
     password: "f8f7aCzcPKbsF8p3"
     udp: true
+  - name: "🇷🇸 @Begoo_VPN ²²⁴"
+    type: "vless"
+    server: "195.133.18.161"
+    port: 30153
+    uuid: "da97d2d7-d255-4efd-8398-7101d698768e"
+    udp: true
+    tls: false
+    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -528,8 +528,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇷🇸 🔒 VL-TCP-NONE 🇷🇸 RS-195.133.18.161:30153"
       - "🇷🇸 @v2ray_configs_pools"
+      - "🇷🇸 @Begoo_VPN ²²⁴"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -540,8 +540,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇷🇸 🔒 VL-TCP-NONE 🇷🇸 RS-195.133.18.161:30153"
       - "🇷🇸 @v2ray_configs_pools"
+      - "🇷🇸 @Begoo_VPN ²²⁴"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -551,8 +551,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇷🇸 🔒 VL-TCP-NONE 🇷🇸 RS-195.133.18.161:30153"
       - "🇷🇸 @v2ray_configs_pools"
+      - "🇷🇸 @Begoo_VPN ²²⁴"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
