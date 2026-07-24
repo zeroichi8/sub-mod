@@ -499,19 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇬🇪 @filembad"
-    type: "vless"
-    server: "tu2.petshopcloud.ir"
-    port: 44217
-    uuid: "0c5853e1-a606-4aa2-bbfa-86a7b58d43b1"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "a1VvM3k8ETY4UZVL_eUbKwFwpVveNqD0ObMZ1dtwLj0"
-      short-id: "2adcb0c184d15c1a"
   - name: "🇬🇪 🇹🇷 Turkey 3"
     type: "vless"
     server: "mknr.cclodapp.com"
@@ -533,6 +520,32 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇬🇪 TR 🇹🇷 | @Raydikalx | 1426"
+    type: "vless"
+    server: "tu2.petshopcloud.ir"
+    port: 44217
+    uuid: "0c5853e1-a606-4aa2-bbfa-86a7b58d43b1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "a1VvM3k8ETY4UZVL_eUbKwFwpVveNqD0ObMZ1dtwLj0"
+      short-id: "2adcb0c184d15c1a"
+  - name: "🇬🇪 🔒 VL-TCP-RLT 🇬🇪 GE-217.11.164.87:44217"
+    type: "vless"
+    server: "217.11.164.87"
+    port: 44217
+    uuid: "0c5853e1-a606-4aa2-bbfa-86a7b58d43b1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "a1VvM3k8ETY4UZVL_eUbKwFwpVveNqD0ObMZ1dtwLj0"
+      short-id: "2adcb0c184d15c1a"
   - name: "🇬🇪 🔒 VL-GRPC-RLT 🇬🇪 GE-2.27.26.197:443"
     type: "vless"
     server: "2.27.26.197"
@@ -545,6 +558,20 @@ proxies:
     reality-opts:
       public-key: "WRCMuTlpVmthJnyP3LK0sL-u5WlN15GVJpD8F37ZjD0"
       short-id: "5e3ab3ab228625"
+    grpc-opts:
+      grpc-service-name: "nexusGrpc"
+  - name: "🇬🇪 REALITY|GE🇬🇪 | 2.27.26.197-443 | 162.14ms"
+    type: "vless"
+    server: "2.27.26.197"
+    port: 443
+    uuid: "8f0560ec-ba22-4431-a6a7-318dc59d5233"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "kotiki-katakbasio-rossiiiii.ru"
+    reality-opts:
+      public-key: "WRCMuTlpVmthJnyP3LK0sL-u5WlN15GVJpD8F37ZjD0"
+      short-id: "0bc73dd1f045"
     grpc-opts:
       grpc-service-name: "nexusGrpc"
 proxy-groups:
@@ -561,10 +588,12 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇬🇪 @filembad"
       - "🇬🇪 🇹🇷 Turkey 3"
       - "🇬🇪 🇹🇷 Turkey 3 - TCP"
+      - "🇬🇪 TR 🇹🇷 | @Raydikalx | 1426"
+      - "🇬🇪 🔒 VL-TCP-RLT 🇬🇪 GE-217.11.164.87:44217"
       - "🇬🇪 🔒 VL-GRPC-RLT 🇬🇪 GE-2.27.26.197:443"
+      - "🇬🇪 REALITY|GE🇬🇪 | 2.27.26.197-443 | 162.14ms"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -575,10 +604,12 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇬🇪 @filembad"
       - "🇬🇪 🇹🇷 Turkey 3"
       - "🇬🇪 🇹🇷 Turkey 3 - TCP"
+      - "🇬🇪 TR 🇹🇷 | @Raydikalx | 1426"
+      - "🇬🇪 🔒 VL-TCP-RLT 🇬🇪 GE-217.11.164.87:44217"
       - "🇬🇪 🔒 VL-GRPC-RLT 🇬🇪 GE-2.27.26.197:443"
+      - "🇬🇪 REALITY|GE🇬🇪 | 2.27.26.197-443 | 162.14ms"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -588,10 +619,12 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇬🇪 @filembad"
       - "🇬🇪 🇹🇷 Turkey 3"
       - "🇬🇪 🇹🇷 Turkey 3 - TCP"
+      - "🇬🇪 TR 🇹🇷 | @Raydikalx | 1426"
+      - "🇬🇪 🔒 VL-TCP-RLT 🇬🇪 GE-217.11.164.87:44217"
       - "🇬🇪 🔒 VL-GRPC-RLT 🇬🇪 GE-2.27.26.197:443"
+      - "🇬🇪 REALITY|GE🇬🇪 | 2.27.26.197-443 | 162.14ms"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
