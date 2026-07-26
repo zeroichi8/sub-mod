@@ -499,7 +499,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇾 REALITY|BY🇧🇾 | 144.31.129.9-443 | 115ms"
+  - name: "🇧🇾 REALITY|BY🇧🇾 | 144.31.129.9-443 | 110.88ms"
     type: "vless"
     server: "144.31.129.9"
     port: 443
@@ -512,6 +512,19 @@ proxies:
     reality-opts:
       public-key: "gF0oeN2ndJ1hDZynSUu504hiXzUI6oioEerdyG7yMVQ"
       short-id: "0bc73dd1f045"
+  - name: "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-87.252.237.219:8443"
+    type: "vless"
+    server: "87.252.237.219"
+    port: 8443
+    uuid: "c50680f6-8dc9-44cc-a8fe-72cab1f7f51b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tradingview.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "VE6aUAkSRew5ySZw80myEtL1LOWwDo7BuYyuIKaYPUI"
   - name: "🇧🇾 @hopev2ray❣️"
     type: "vless"
     server: "185.66.68.72"
@@ -538,7 +551,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇾 REALITY|BY🇧🇾 | 144.31.129.9-443 | 115ms"
+      - "🇧🇾 REALITY|BY🇧🇾 | 144.31.129.9-443 | 110.88ms"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-87.252.237.219:8443"
       - "🇧🇾 @hopev2ray❣️"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -550,7 +564,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇾 REALITY|BY🇧🇾 | 144.31.129.9-443 | 115ms"
+      - "🇧🇾 REALITY|BY🇧🇾 | 144.31.129.9-443 | 110.88ms"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-87.252.237.219:8443"
       - "🇧🇾 @hopev2ray❣️"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -561,7 +576,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇾 REALITY|BY🇧🇾 | 144.31.129.9-443 | 115ms"
+      - "🇧🇾 REALITY|BY🇧🇾 | 144.31.129.9-443 | 110.88ms"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-87.252.237.219:8443"
       - "🇧🇾 @hopev2ray❣️"
   - name: "المنت 💬"
     type: "select"
