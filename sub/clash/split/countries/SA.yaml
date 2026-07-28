@@ -499,15 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇸🇦 SA🇸🇦 | 149.104.104.58-443 | 280.29ms"
-    type: "trojan"
-    server: "149.104.104.58"
-    port: 443
-    password: "S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "149.104.104.58"
   - name: "🇸🇦 🇸🇦 S-Arabia"
     type: "vless"
     server: "asi.ccloudtvapp.com"
@@ -516,7 +507,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "yahoo.com"
+    servername: "www.yahoo.com"
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -529,6 +520,15 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇸🇦 🔒 TR-TCP-TLS 🇸🇦 SA-149.104.104.58:443"
+    type: "trojan"
+    server: "149.104.104.58"
+    port: 443
+    password: "S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "149.104.104.58"
   - name: "🇸🇦 United+Kingdom"
     type: "vless"
     server: "81.208.170.142"
@@ -542,14 +542,6 @@ proxies:
     reality-opts:
       public-key: "VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE"
       short-id: "775eb6408888248e"
-  - name: "🇸🇦 1873. 🇵🇰 Pakistan"
-    type: "trojan"
-    server: "149.104.104.58"
-    port: 443
-    password: "S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix"
-    udp: true
-    tls: true
-    network: "tcp"
   - name: "🇸🇦 🇸🇦"
     type: "vless"
     server: "81.208.170.142"
@@ -577,11 +569,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇸🇦 SA🇸🇦 | 149.104.104.58-443 | 280.29ms"
       - "🇸🇦 🇸🇦 S-Arabia"
       - "🇸🇦 🇸🇦 S-Arabia - TCP"
+      - "🇸🇦 🔒 TR-TCP-TLS 🇸🇦 SA-149.104.104.58:443"
       - "🇸🇦 United+Kingdom"
-      - "🇸🇦 1873. 🇵🇰 Pakistan"
       - "🇸🇦 🇸🇦"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -593,11 +584,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇸🇦 SA🇸🇦 | 149.104.104.58-443 | 280.29ms"
       - "🇸🇦 🇸🇦 S-Arabia"
       - "🇸🇦 🇸🇦 S-Arabia - TCP"
+      - "🇸🇦 🔒 TR-TCP-TLS 🇸🇦 SA-149.104.104.58:443"
       - "🇸🇦 United+Kingdom"
-      - "🇸🇦 1873. 🇵🇰 Pakistan"
       - "🇸🇦 🇸🇦"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -608,11 +598,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇸🇦 SA🇸🇦 | 149.104.104.58-443 | 280.29ms"
       - "🇸🇦 🇸🇦 S-Arabia"
       - "🇸🇦 🇸🇦 S-Arabia - TCP"
+      - "🇸🇦 🔒 TR-TCP-TLS 🇸🇦 SA-149.104.104.58:443"
       - "🇸🇦 United+Kingdom"
-      - "🇸🇦 1873. 🇵🇰 Pakistan"
       - "🇸🇦 🇸🇦"
   - name: "المنت 💬"
     type: "select"
