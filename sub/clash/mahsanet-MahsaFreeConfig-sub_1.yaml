@@ -499,6 +499,14 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "Channel : @proxy_kafee"
+    type: "vless"
+    server: "dl2dl2dl2.lornavps.ir"
+    port: 8855
+    uuid: "a2292e36-fafb-6634-051d-1d99f45503c7"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "V2rayng_Fast"
     type: "ss"
     server: "82.38.31.204"
@@ -512,6 +520,13 @@ proxies:
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "t.me/OutlineVpnOfficial | Free | 3242 | United Kingdom"
+    type: "ss"
+    server: "141.98.101.179"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
     udp: true
   - name: "United+Kingdom"
     type: "ss"
@@ -534,8 +549,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "Channel : @proxy_kafee"
       - "V2rayng_Fast"
       - "v2ray_dalghak"
+      - "t.me/OutlineVpnOfficial | Free | 3242 | United Kingdom"
       - "United+Kingdom"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -547,8 +564,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "Channel : @proxy_kafee"
       - "V2rayng_Fast"
       - "v2ray_dalghak"
+      - "t.me/OutlineVpnOfficial | Free | 3242 | United Kingdom"
       - "United+Kingdom"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -559,8 +578,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "Channel : @proxy_kafee"
       - "V2rayng_Fast"
       - "v2ray_dalghak"
+      - "t.me/OutlineVpnOfficial | Free | 3242 | United Kingdom"
       - "United+Kingdom"
   - name: "المنت 💬"
     type: "select"
