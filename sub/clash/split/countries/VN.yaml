@@ -499,6 +499,15 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇻🇳 VN🇻🇳 | 103.195.236.24-443 | 244.26ms"
+    type: "trojan"
+    server: "103.195.236.24"
+    port: 443
+    password: "52171d41-9367-429f-baa6-43660a6c84e4"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "103.195.236.24"
   - name: "🇻🇳 🇻🇳 Vietnam"
     type: "vless"
     server: "upli.ccloudtvapp.com"
@@ -520,33 +529,7 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇻🇳 🔒 TR-TCP-TLS 🇻🇳 VN-103.195.236.24:443"
-    type: "trojan"
-    server: "103.195.236.24"
-    port: 443
-    password: "52171d41-9367-429f-baa6-43660a6c84e4"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "103.195.236.24"
   - name: "🇻🇳 🇻🇳"
-    type: "trojan"
-    server: "160.30.160.134"
-    port: 443
-    password: "25a0ffa0-725c-4d6f-b0d5-c74579753075"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cmc5.5gsieuvip.vn"
-  - name: "🇻🇳 🇻🇳-1"
-    type: "trojan"
-    server: "36.50.134.29"
-    port: 443
-    password: "94d219c9-1afc-4d42-b090-8b3794764380"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇻🇳 @DeltaKroneckerGithub"
     type: "trojan"
     server: "103.72.96.55"
     port: 443
@@ -555,6 +538,37 @@ proxies:
     tls: true
     network: "tcp"
     servername: "hanoiidc2.5gsieutocdo.com"
+  - name: "🇻🇳 🇻🇳-1"
+    type: "trojan"
+    server: "160.30.160.134"
+    port: 443
+    password: "25a0ffa0-725c-4d6f-b0d5-c74579753075"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cmc5.5gsieuvip.vn"
+  - name: "🇻🇳 🇻🇳-2"
+    type: "trojan"
+    server: "36.50.134.29"
+    port: 443
+    password: "94d219c9-1afc-4d42-b090-8b3794764380"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
+    type: "vless"
+    server: "103.173.155.212"
+    port: 443
+    uuid: "5d02517f-63d5-3e9f-b467-1bcf4d4e25d3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "u695099ub67c99c6s591.csgfw.top"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
   - name: "🇻🇳 🇻🇳  Vietnam  [01]  MIFA"
     type: "vless"
     server: "hia.waols.click"
@@ -582,12 +596,13 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇻🇳 VN🇻🇳 | 103.195.236.24-443 | 244.26ms"
       - "🇻🇳 🇻🇳 Vietnam"
       - "🇻🇳 🇻🇳 Vietnam - TCP"
-      - "🇻🇳 🔒 TR-TCP-TLS 🇻🇳 VN-103.195.236.24:443"
       - "🇻🇳 🇻🇳"
       - "🇻🇳 🇻🇳-1"
-      - "🇻🇳 @DeltaKroneckerGithub"
+      - "🇻🇳 🇻🇳-2"
+      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
       - "🇻🇳 🇻🇳  Vietnam  [01]  MIFA"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -599,12 +614,13 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇻🇳 VN🇻🇳 | 103.195.236.24-443 | 244.26ms"
       - "🇻🇳 🇻🇳 Vietnam"
       - "🇻🇳 🇻🇳 Vietnam - TCP"
-      - "🇻🇳 🔒 TR-TCP-TLS 🇻🇳 VN-103.195.236.24:443"
       - "🇻🇳 🇻🇳"
       - "🇻🇳 🇻🇳-1"
-      - "🇻🇳 @DeltaKroneckerGithub"
+      - "🇻🇳 🇻🇳-2"
+      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
       - "🇻🇳 🇻🇳  Vietnam  [01]  MIFA"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -615,12 +631,13 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇻🇳 VN🇻🇳 | 103.195.236.24-443 | 244.26ms"
       - "🇻🇳 🇻🇳 Vietnam"
       - "🇻🇳 🇻🇳 Vietnam - TCP"
-      - "🇻🇳 🔒 TR-TCP-TLS 🇻🇳 VN-103.195.236.24:443"
       - "🇻🇳 🇻🇳"
       - "🇻🇳 🇻🇳-1"
-      - "🇻🇳 @DeltaKroneckerGithub"
+      - "🇻🇳 🇻🇳-2"
+      - "🇻🇳 🔒 VL-TCP-TLS 🇻🇳 VN-103.173.155.212:443"
       - "🇻🇳 🇻🇳  Vietnam  [01]  MIFA"
   - name: "المنت 💬"
     type: "select"
