@@ -499,17 +499,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇲🇴 Global 🌐 | @Raydikalx | 36"
-    type: "vless"
-    server: "45.207.34.239"
-    port: 10086
-    uuid: "11e5e68c-355a-415c-8024-3bf12637e220"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
-  - name: "🇲🇴 Global 🌐 | @Raydikalx | 3459"
+  - name: "🇲🇴 1340. 🇲🇴 Macao"
     type: "vless"
     server: "45.207.34.239"
     port: 10086
@@ -522,6 +512,59 @@ proxies:
       path: "/vless"
       headers:
         Host: "45.207.34.239"
+  - name: "🇲🇴 1344. 🇲🇴 Macao"
+    type: "vless"
+    server: "45.207.34.239"
+    port: 10086
+    uuid: "11e5e68c-355a-415c-8024-3bf12637e220"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+  - name: "🇲🇴 MO 🇲🇴 | @Raydikalx | 8AADE6"
+    type: "trojan"
+    server: "45.64.22.55"
+    port: 443
+    password: "F3CSSRxD8uljgF73IAn34C3aE9wSqAzZDp5ZOCpxDBRacNYelOYayKTe826Xy0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "stutter.freetrade.link"
+  - name: "🇲🇴 MO 🇲🇴 | @Raydikalx | F8EBC7"
+    type: "trojan"
+    server: "45.64.22.55"
+    port: 443
+    password: "xSYy8KOpEyOjgaNFCeC3a72DS6wBAcz90pDZRRSXnxquIFZlT5433ClYD38aeA"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yokoha.freetrade.link"
+  - name: "🇲🇴 MO 🇲🇴 | @Raydikalx | FAA387"
+    type: "trojan"
+    server: "45.64.22.23"
+    port: 443
+    password: "Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "reooec.freetrade.link"
+  - name: "🇲🇴 MO 🇲🇴 | @Raydikalx | 3F9E47"
+    type: "vmess"
+    server: "45.64.22.22"
+    port: 443
+    uuid: "e55ed7b2-ed4f-480c-8b99-08482da1e4c7"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇲🇴 MO 🇲🇴 | @Raydikalx | 4BE7FC"
+    type: "vmess"
+    server: "45.64.22.6"
+    port: 443
+    uuid: "ffffffff-ffff-ffff-ffff-ffffffffffff"
+    alterId: 0
+    cipher: "auto"
+    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -536,8 +579,13 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇲🇴 Global 🌐 | @Raydikalx | 36"
-      - "🇲🇴 Global 🌐 | @Raydikalx | 3459"
+      - "🇲🇴 1340. 🇲🇴 Macao"
+      - "🇲🇴 1344. 🇲🇴 Macao"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 8AADE6"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | F8EBC7"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | FAA387"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 3F9E47"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 4BE7FC"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -548,8 +596,13 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇲🇴 Global 🌐 | @Raydikalx | 36"
-      - "🇲🇴 Global 🌐 | @Raydikalx | 3459"
+      - "🇲🇴 1340. 🇲🇴 Macao"
+      - "🇲🇴 1344. 🇲🇴 Macao"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 8AADE6"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | F8EBC7"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | FAA387"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 3F9E47"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 4BE7FC"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -559,8 +612,13 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇲🇴 Global 🌐 | @Raydikalx | 36"
-      - "🇲🇴 Global 🌐 | @Raydikalx | 3459"
+      - "🇲🇴 1340. 🇲🇴 Macao"
+      - "🇲🇴 1344. 🇲🇴 Macao"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 8AADE6"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | F8EBC7"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | FAA387"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 3F9E47"
+      - "🇲🇴 MO 🇲🇴 | @Raydikalx | 4BE7FC"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
