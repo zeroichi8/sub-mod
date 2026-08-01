@@ -499,326 +499,736 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇭🇰  Hong Kong  -  MIFA"
-    type: "vmess"
-    server: "47.86.167.194"
-    port: 800
-    uuid: "f2c67cae-c09d-4739-947d-f5302d87a3c0"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-1"
-    type: "vmess"
-    server: "43.198.204.35"
+  - name: "🇦🇪  United Arab Emirates  [01]  MIFA"
+    type: "vless"
+    server: "217.60.99.35"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "d2e3768f-cb23-4cfc-a884-dbd6813cb70b"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-2"
-    type: "vmess"
-    server: "8.210.189.158"
+    tls: true
+    network: "grpc"
+    servername: "www.heise.de"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "8AZoFfMp425yqVBGmLoaxst5pptxsg1NLZwC4anzVlI"
+      short-id: "b7dba2b039d17f7c"
+    grpc-opts:
+      grpc-service-name: "at21735grpc"
+  - name: "🇦🇫  Afghanistan  [01]  MIFA"
+    type: "vless"
+    server: "103.161.237.54"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "e911c552-3a98-41e0-b5fb-0dd3879887b7"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-3"
-    type: "vmess"
-    server: "47.242.79.198"
+    tls: true
+    network: "ws"
+    servername: "vod.ensf.top"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/api/v1/irc"
+      headers:
+        Host: "vod.ensf.top"
+  - name: "🇨🇭  Switzerland  [01]  MIFA"
+    type: "vless"
+    server: "83.228.246.208"
+    port: 50170
+    uuid: "ee6950b1-5a5a-4bb6-ae54-814070840281"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sweic.lodkirmm.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "7U__DL9_dFdZ2rMLH8TRPEOY24EJfg7ESXslAdujgzk"
+      short-id: "dc36bfb153f31f9a"
+  - name: "🇨🇭  Switzerland  [02]  MIFA"
+    type: "vless"
+    server: "sweic.lodkirmm.ru"
+    port: 50170
+    uuid: "ee6950b1-5a5a-4bb6-ae54-814070840281"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sweic.lodkirmm.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "7U__DL9_dFdZ2rMLH8TRPEOY24EJfg7ESXslAdujgzk"
+      short-id: "dc36bfb153f31f9a"
+  - name: "🇨🇴  Colombia  [01]  MIFA"
+    type: "vless"
+    server: "157.137.228.255"
+    port: 62145
+    uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇨🇿  Czech Republic  [01]  MIFA"
+    type: "vless"
+    server: "2.26.160.121"
+    port: 55256
+    uuid: "334a7b29-8289-4d92-978b-73597062c9cb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amd.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "fskGEVlsRytBg5WBgJtJb7NWR1LUzf9sFIz5-m1u9DY"
+      short-id: "c689fb969b"
+  - name: "🇨🇿  Czech Republic  [02]  MIFA"
+    type: "vless"
+    server: "slotvpngames.online"
+    port: 55256
+    uuid: "334a7b29-8289-4d92-978b-73597062c9cb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amd.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "fskGEVlsRytBg5WBgJtJb7NWR1LUzf9sFIz5-m1u9DY"
+      short-id: "c689fb969b"
+  - name: "🇩🇪  Germany  [01]  MIFA"
+    type: "vless"
+    server: "45.133.209.203"
+    port: 52315
+    uuid: "29498268-55f3-4b51-ba1a-1eba23f4ab63"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+  - name: "🇩🇪  Germany  [02]  MIFA"
+    type: "vless"
+    server: "104.167.24.49"
+    port: 18443
+    uuid: "9910e6e4-e540-4233-b88e-b1465434ad05"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "gp1.steptofsvo.com"
+    reality-opts:
+      public-key: "QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0"
+      short-id: "5c766813929a1fdd"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇩🇪  Germany  [03]  MIFA"
+    type: "vless"
+    server: "gp1.steptofsvo.com"
+    port: 18443
+    uuid: "9910e6e4-e540-4233-b88e-b1465434ad05"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "gp1.steptofsvo.com"
+    reality-opts:
+      public-key: "QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0"
+      short-id: "5c766813929a1fdd"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇩🇰  Denmark  [01]  MIFA"
+    type: "vless"
+    server: "dania.lodkirmm.ru"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "ee6950b1-5a5a-4bb6-ae54-814070840281"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-4"
-    type: "vmess"
-    server: "47.86.107.119"
+    tls: true
+    network: "tcp"
+    servername: "dania.lodkirmm.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6fwpt8WW46VND7VgVV5lQSteCUgJsZbRR092VDZ2nFs"
+  - name: "🇪🇪  Estonia  [01]  MIFA"
+    type: "vless"
+    server: "est.lodkirmm.ru"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "ee6950b1-5a5a-4bb6-ae54-814070840281"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-5"
-    type: "vmess"
-    server: "8.210.108.58"
+    tls: true
+    network: "tcp"
+    servername: "est.lodkirmm.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6fwpt8WW46VND7VgVV5lQSteCUgJsZbRR092VDZ2nFs"
+  - name: "🇪🇸  Spain  [01]  MIFA"
+    type: "vless"
+    server: "free06.tunnely.ru"
+    port: 2096
+    uuid: "ce26ce33-53cb-4c75-80cf-598704c1a28b"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "free06.tunnely.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "mChFHtaRmeuO2aDuDPqZvBFaCz6f34sVJIKuJcAR130"
+      short-id: "2e40144ddc07e8e1"
+    grpc-opts:
+      grpc-service-name: "grpc"
+  - name: "🇫🇮  Finland  [01]  MIFA"
+    type: "vless"
+    server: "fin1.panel11.ru"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "a449b942-e70d-4124-96c1-a489e701d7ee"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-6"
-    type: "vmess"
-    server: "ce0gedpxwou6cqon.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "fin1.panel11.ru"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "lQ8pnlOU0kqS77TA7Fftl8nSzktXLzFpOLGqCZEAhjg"
+      short-id: "aaec521b22bbe6cb"
+  - name: "🇫🇮  Finland  [02]  MIFA"
+    type: "vless"
+    server: "2.27.13.24"
+    port: 56861
+    uuid: "daf31d2f-b40e-40da-a1a2-3322170dfece"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vk.ru"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "YWRpCG-QBHvth-MAgBugRzHVBYwp6qDjmNSuNoOr620"
+      short-id: "f8b73a3f13"
+  - name: "🇫🇷  France  [01]  MIFA"
+    type: "vless"
+    server: "89.208.113.16"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "adce7c2a-3191-49ae-b61c-9b8258ea1b0e"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-7"
-    type: "vmess"
-    server: "lcv8v9l7oyamxxfz.v.3dns.vip"
+    tls: false
+    network: "tcp"
+  - name: "🇫🇷  France  [02]  MIFA"
+    type: "vless"
+    server: "pro.tunnelpoint.space"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-8"
-    type: "vmess"
-    server: "m01c7b2z26dtqgee.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "pro.tunnelpoint.space"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
+      short-id: "fdda9806fe5d8584"
+  - name: "🇫🇷  France  [03]  MIFA"
+    type: "vless"
+    server: "france.lodkirmm.ru"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "ee6950b1-5a5a-4bb6-ae54-814070840281"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-9"
-    type: "vmess"
-    server: "6jdvarazgu3qqr6q.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "france.lodkirmm.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6fwpt8WW46VND7VgVV5lQSteCUgJsZbRR092VDZ2nFs"
+  - name: "🇫🇷  France  [04]  MIFA"
+    type: "vless"
+    server: "15.224.27.66"
+    port: 22223
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇬🇧  Great Britain  [01]  MIFA"
+    type: "vless"
+    server: "82.39.171.148"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-10"
-    type: "vmess"
-    server: "mh7r5ardl0z5jtgy.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "🇭🇰  Hong Kong  [01]  MIFA"
+    type: "vless"
+    server: "47.240.80.220"
+    port: 5100
+    uuid: "71a7db14-1b6f-5aec-9e5d-9bd5f8beabab"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇭🇺  Hungary  [01]  MIFA"
+    type: "vless"
+    server: "141.11.202.29"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "073d1d50-8478-47bf-a828-7a1b381931d5"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-11"
-    type: "vmess"
-    server: "47.83.19.148"
+    tls: true
+    network: "ws"
+    servername: "octopusss.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel"
+    ws-opts:
+      path: "/odiyfws"
+      headers:
+        Host: "octopusss.net"
+  - name: "🇮🇷  Iran  [01]  MIFA"
+    type: "vless"
+    server: "p01.parsi.sbs"
+    port: 2086
+    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "parsi.parsi.sbs"
+  - name: "🇮🇷  Iran  [02]  MIFA"
+    type: "vless"
+    server: "185.143.234.238"
+    port: 2086
+    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "parsi.parsi.sbs"
+  - name: "🇮🇷  Iran  [03]  MIFA"
+    type: "vless"
+    server: "185.143.233.238"
+    port: 2086
+    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "parsi.parsi.sbs"
+  - name: "🇱🇹  Lithuania  [01]  MIFA"
+    type: "vless"
+    server: "lao10.enterquality.online"
+    port: 2443
+    uuid: "76927dd3-74d5-4567-bb0b-35bae5a028e2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "lao10.enterquality.online"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🇱🇹  Lithuania  [02]  MIFA"
+    type: "vless"
+    server: "93.115.25.139"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "3ad1d277-5715-4ca1-84db-5baea72f822d"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-12"
-    type: "vmess"
-    server: "qtkdr8jxe3wefxjm.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "ddc-chr2.astralweb.tech"
+    client-fingerprint: "firefox"
+  - name: "🇳🇱  Netherlands  [01]  MIFA"
+    type: "vless"
+    server: "109.71.240.178"
+    port: 777
+    uuid: "01421c5e-f85f-4d68-ae22-b32968115682"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "yahoo.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "8x4ChRC0AIoNe0nW5CHEm5ve8lJK8akzGg4uO60dBXk"
+      short-id: "2f1541"
+  - name: "🇳🇱  Netherlands  [02]  MIFA"
+    type: "vless"
+    server: "147.45.136.218"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "276ae18f-8eea-4e45-ae5c-285690305d48"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-13"
-    type: "vmess"
-    server: "drbkg16egf3fzlm3.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "euronode.click"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1En4-0B5KMRfcxvuDxKtGTqS-X4pGtj_efA7SNZdAh0"
+  - name: "🇳🇱  Netherlands  [03]  MIFA"
+    type: "vless"
+    server: "203.159.90.65"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "32c0cedd-6d9c-4668-bb2e-d379f380037c"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-14"
-    type: "vmess"
-    server: "ex1ogt73nzpqkac2.v.3dns.vip"
+    tls: true
+    network: "xhttp"
+    servername: "www.google.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "sJTPQLMDCyPAbRcaJM-P8Y3_xRVpEEGrvv-kkIuIuQE"
+  - name: "🇳🇱  Netherlands  [04]  MIFA"
+    type: "vless"
+    server: "89.124.64.16"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "87c74f51-2261-4c10-9207-56fde3cd99d3"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-15"
-    type: "vmess"
-    server: "wwafj5lhl6bi8au9.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "www.sony.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "UGKx4Kydrtu6oCJJPXOtR57bzIUIPK9meIy5ubEDHQM"
+      short-id: "94"
+  - name: "🇳🇱  Netherlands  [05]  MIFA"
+    type: "vless"
+    server: "89.124.116.234"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "4d5fea10-c669-4cb9-91b2-9d179b844520"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-16"
-    type: "vmess"
-    server: "7timuei1uufoixbf.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "www.googletagmanager.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8EPzwlenieiAy21ktdbQITnHJHA_biE4TVbN6OcDSSY"
+      short-id: "4e40ed8b114da1ae"
+  - name: "🇳🇱  Netherlands  [06]  MIFA"
+    type: "vless"
+    server: "45.143.167.154"
+    port: 8443
+    uuid: "f374a660-2dc5-11f1-9ec5-baabcd4be2cd"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc"
+      short-id: "deadbeef42"
+  - name: "🇵🇱  Poland  [01]  MIFA"
+    type: "vless"
+    server: "144.31.0.34"
+    port: 7443
+    uuid: "1fef5248-fdd2-40d6-b3b9-6c33d4e74724"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "_custom_"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc"
+      short-id: "e8ca5079a5e91481"
+  - name: "🇷🇺  Russia  [01]  MIFA"
+    type: "vless"
+    server: "94.139.251.19"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "a8f84171-5f96-4547-b621-59758fe668c8"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-17"
-    type: "vmess"
-    server: "93ucrn4i0pffuabk.v.3dns.vip"
+    tls: true
+    network: "tcp"
+    servername: "www.eni.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw"
+      short-id: "7a5b89ecdb01f781"
+  - name: "🇷🇺  Russia  [02]  MIFA"
+    type: "vless"
+    server: "78.159.245.32"
+    port: 28474
+    uuid: "2c634977-584e-4e1f-b501-1b70c77a6743"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "secure.furrycdn.net"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺  Russia  [03]  MIFA"
+    type: "vless"
+    server: "obhod3-1a18c1.vpn.partners"
+    port: 8443
+    uuid: "3f4af350-f639-4c67-9191-a9cdd5e59e22"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "obhod3-1a18c1.vpn.partners"
+    alpn:
+      - "h2"
+    flow: "xtls-rprx-vision"
+  - name: "🇷🇺  Russia  [04]  MIFA"
+    type: "vless"
+    server: "flight.oaklandjoseph.top"
     port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    uuid: "db2072f3-728b-4381-a9ec-51629decc2b8"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-18"
-    type: "vmess"
-    server: "vah4urdzl3jdx5r2.v.3dns.vip"
-    port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
+    tls: true
+    network: "xhttp"
+    servername: "flight.oaklandjoseph.top"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+  - name: "🇸🇬  Singapore  [01]  MIFA"
+    type: "vless"
+    server: "1sg001.344211.cc"
+    port: 8443
+    uuid: "6b5a9259-c7de-45f0-b4de-e89db7850d0c"
     udp: true
-  - name: "🇭🇰  Hong Kong  -  MIFA-19"
-    type: "vmess"
-    server: "47.76.197.72"
-    port: 443
-    uuid: "f23bb427c1f94373876c2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇯🇵  Japan  -  MIFA"
-    type: "vmess"
-    server: "103.127.243.55"
-    port: 58051
-    uuid: "8e5b521a-4a56-4bd7-baf1-bfcdf55d6cf1"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇯🇵  Japan  -  MIFA-1"
-    type: "vmess"
-    server: "168.138.43.75"
+    tls: true
+    network: "tcp"
+    servername: "www.python.org"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE"
+      short-id: "04d59340"
+  - name: "🇹🇭  Thailand  [01]  MIFA"
+    type: "vless"
+    server: "dtac.exp.dog"
     port: 80
-    uuid: "11c3627f-31e8-4695-dfbd-34076e2f1f5d"
-    alterId: 0
-    cipher: "auto"
+    uuid: "19668b6f-e215-41e6-8102-b8d29fb5b8ae"
     udp: true
-  - name: "🇰🇷  South Korea  -  MIFA"
-    type: "vmess"
-    server: "132.145.80.230"
-    port: 80
-    uuid: "5155860e-d07d-46c3-9128-3afbd84626c7"
-    alterId: 0
-    cipher: "auto"
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/fnet50"
+      headers:
+        Host: "duatoup3wk8q2.cloudfront.net"
+  - name: "🇹🇷  Turkey  [01]  MIFA"
+    type: "vless"
+    server: "snapp.api.torexa.ir"
+    port: 6110
+    uuid: "eb3e31c5-d423-4bf1-b104-4f6d3fe94a8a"
     udp: true
-  - name: "🇰🇷  South Korea  -  MIFA-1"
-    type: "vmess"
-    server: "152.67.218.38"
-    port: 443
-    uuid: "b5e9480a-b7aa-40a4-f9a7-5299b5e363b4"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇲🇾  Malaysia  -  MIFA"
-    type: "vmess"
-    server: "47.250.135.244"
+    tls: false
+    network: "xhttp"
+  - name: "🇹🇼  Taiwan  [01]  MIFA"
+    type: "vless"
+    server: "60.249.101.14"
     port: 10000
-    uuid: "aedc66b8-99d7-4a21-8310-61870e7f870d"
-    alterId: 0
-    cipher: "auto"
+    uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
     udp: true
-  - name: "🇳🇱  Netherlands  -  MIFA"
-    type: "vmess"
-    server: "apjhdggyx.com"
+    tls: false
+    network: "tcp"
+  - name: "🇺🇸  USA  [01]  MIFA"
+    type: "vless"
+    server: "ad-013.pixel9xdmq.info"
+    port: 8443
+    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-013.pixel9xdmq.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-013.pixel9xdmq.info"
+  - name: "🇺🇸  USA  [02]  MIFA"
+    type: "vless"
+    server: "172.67.188.128"
+    port: 8443
+    uuid: "1ad37675-b4cf-42fa-9dc5-83fd35cd63cb"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-020.limaklhc6.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-020.limaklhc6.info"
+  - name: "🇺🇸  USA  [03]  MIFA"
+    type: "vless"
+    server: "172.67.145.169"
+    port: 8443
+    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-013.pixel9xdmq.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "🇺🇸  USA  [04]  MIFA"
+    type: "vless"
+    server: "ad-013.milo1fmyz.info"
+    port: 8443
+    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-013.milo1fmyz.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-013.milo1fmyz.info"
+  - name: "🇺🇸  USA  [05]  MIFA"
+    type: "vless"
+    server: "172.67.206.114"
+    port: 8443
+    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-013.fluxmxd18.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-013.fluxmxd18.info"
+  - name: "🇺🇸  USA  [06]  MIFA"
+    type: "vless"
+    server: "ad-013.fluxmxd18.info"
+    port: 8443
+    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-013.fluxmxd18.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-013.fluxmxd18.info"
+  - name: "🇺🇸  USA  [07]  MIFA"
+    type: "vless"
+    server: "172.67.169.146"
+    port: 8443
+    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-013.milo1fmyz.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-013.milo1fmyz.info"
+  - name: "🇺🇸  USA  [08]  MIFA"
+    type: "vless"
+    server: "ad-013.zen2bswa.info"
+    port: 8443
+    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-013.zen2bswa.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-013.zen2bswa.info"
+  - name: "🇺🇸  USA  [09]  MIFA"
+    type: "vless"
+    server: "199.232.78.159"
     port: 443
-    uuid: "5f72f180-b21b-4b7a-8484-240759012604"
-    alterId: 0
-    cipher: "auto"
+    uuid: "6e2e03e2-4f66-479a-a186-a34d66ca8c91"
     udp: true
-  - name: "🇵🇭  Philippines  -  MIFA"
-    type: "vmess"
-    server: "61.245.11.60"
-    port: 80
-    uuid: "a3e3a710-79f8-4ae0-b83c-607aab40d197"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇸🇬  Singapore  -  MIFA"
-    type: "vmess"
-    server: "129.226.157.220"
-    port: 59121
-    uuid: "d9865d63-d95c-454b-ba07-8e88b838a801"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇹🇼  Taiwan  -  MIFA"
-    type: "vmess"
-    server: "165.154.195.38"
-    port: 35034
-    uuid: "959a8caf-4cea-43d0-a548-3628e7ddfafc"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇸  USA  -  MIFA"
-    type: "vmess"
-    server: "165.140.216.141"
-    port: 443
-    uuid: "e7d72a8d-26f2-4b54-b366-0c43e0bcba7d"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇸  USA  -  MIFA-1"
-    type: "vmess"
-    server: "165.140.216.142"
-    port: 443
-    uuid: "b65a2d69-5634-42a2-e4be-54e8a6176900"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇸  USA  -  MIFA-2"
-    type: "vmess"
-    server: "guanwang.awsno.com"
-    port: 443
-    uuid: "6a89a215-22bf-4bd7-9642-b95b2e09583a"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇸  USA  -  MIFA-3"
-    type: "vmess"
-    server: "69.63.204.31"
-    port: 2082
-    uuid: "542bd1db-f5e7-4c81-a08a-d95da62a914b"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇸  USA  -  MIFA-4"
-    type: "vmess"
-    server: "104.17.77.77"
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed"
+      headers:
+        Host: "pan11.global.ssl.fastly.net"
+  - name: "🇺🇸  USA  [10]  MIFA"
+    type: "vless"
+    server: "ad-013.limaklhc6.info"
     port: 8443
-    uuid: "60441548-b68e-43b2-8191-e3b884be4b3c"
-    alterId: 0
-    cipher: "auto"
+    uuid: "304a1e62-eb26-4b44-994e-b96a70fff9b4"
     udp: true
-  - name: "🇺🇸  USA  -  MIFA-5"
-    type: "vmess"
-    server: "64.186.253.113"
-    port: 2095
-    uuid: "3df54c90-5cc4-4a70-98f7-52245f25230b"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇸  USA  -  MIFA-6"
-    type: "vmess"
-    server: "www.nextkyc.com"
+    tls: true
+    network: "ws"
+    servername: "ad-013.limaklhc6.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-013.limaklhc6.info"
+  - name: "🇺🇸  USA  [11]  MIFA"
+    type: "vless"
+    server: "ad-004.zenkk0cd.info"
     port: 8443
-    uuid: "60441548-b68e-43b2-8191-e3b884be4b3c"
-    alterId: 0
-    cipher: "auto"
+    uuid: "901fc0c9-ae4c-4d06-9fed-253b25b68a0e"
     udp: true
-  - name: "🇺🇸  USA  -  MIFA-7"
-    type: "vmess"
-    server: "chatgpt.com"
+    tls: true
+    network: "ws"
+    servername: "ad-004.zenkk0cd.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-004.zenkk0cd.info"
+  - name: "🇺🇸  USA  [12]  MIFA"
+    type: "vless"
+    server: "ad-010.atlast9hdp.info"
     port: 8443
-    uuid: "60441548-b68e-43b2-8191-e3b884be4b3c"
-    alterId: 0
-    cipher: "auto"
+    uuid: "9047efd2-5aa4-4c9c-a58f-a5791b06c79e"
     udp: true
-  - name: "🇺🇸  USA  -  MIFA-8"
-    type: "vmess"
-    server: "172.64.80.1"
+    tls: true
+    network: "ws"
+    servername: "ad-010.atlast9hdp.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-010.atlast9hdp.info"
+  - name: "🇺🇸  USA  [13]  MIFA"
+    type: "vless"
+    server: "ad-010.flux3ni5o.info"
     port: 8443
-    uuid: "60441548-b68e-43b2-8191-e3b884be4b3c"
-    alterId: 0
-    cipher: "auto"
+    uuid: "9047efd2-5aa4-4c9c-a58f-a5791b06c79e"
     udp: true
-  - name: "🇺🇸  USA  -  MIFA-9"
-    type: "vmess"
-    server: "104.21.57.84"
+    tls: true
+    network: "ws"
+    servername: "ad-010.flux3ni5o.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-010.flux3ni5o.info"
+  - name: "🇺🇸  USA  [14]  MIFA"
+    type: "vless"
+    server: "104.21.56.8"
     port: 8443
-    uuid: "60441548-b68e-43b2-8191-e3b884be4b3c"
-    alterId: 0
-    cipher: "auto"
+    uuid: "5d3abfa9-bdf5-4334-8383-dcf92df802a5"
     udp: true
-  - name: "🇺🇸  USA  -  MIFA-10"
-    type: "vmess"
-    server: "195.133.193.18"
-    port: 27726
-    uuid: "98e2be3c-8f84-4b85-996b-b68dcc2fbcb6"
-    alterId: 0
-    cipher: "chacha20-poly1305"
+    tls: true
+    network: "ws"
+    servername: "ad-018.cloud25075.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-018.cloud25075.info"
+  - name: "🇺🇸  USA  [15]  MIFA"
+    type: "vless"
+    server: "ad-004.zen2bswa.info"
+    port: 8443
+    uuid: "901fc0c9-ae4c-4d06-9fed-253b25b68a0e"
     udp: true
+    tls: true
+    network: "ws"
+    servername: "ad-004.zen2bswa.info"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ad-004.zen2bswa.info"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -833,46 +1243,63 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇭🇰  Hong Kong  -  MIFA"
-      - "🇭🇰  Hong Kong  -  MIFA-1"
-      - "🇭🇰  Hong Kong  -  MIFA-2"
-      - "🇭🇰  Hong Kong  -  MIFA-3"
-      - "🇭🇰  Hong Kong  -  MIFA-4"
-      - "🇭🇰  Hong Kong  -  MIFA-5"
-      - "🇭🇰  Hong Kong  -  MIFA-6"
-      - "🇭🇰  Hong Kong  -  MIFA-7"
-      - "🇭🇰  Hong Kong  -  MIFA-8"
-      - "🇭🇰  Hong Kong  -  MIFA-9"
-      - "🇭🇰  Hong Kong  -  MIFA-10"
-      - "🇭🇰  Hong Kong  -  MIFA-11"
-      - "🇭🇰  Hong Kong  -  MIFA-12"
-      - "🇭🇰  Hong Kong  -  MIFA-13"
-      - "🇭🇰  Hong Kong  -  MIFA-14"
-      - "🇭🇰  Hong Kong  -  MIFA-15"
-      - "🇭🇰  Hong Kong  -  MIFA-16"
-      - "🇭🇰  Hong Kong  -  MIFA-17"
-      - "🇭🇰  Hong Kong  -  MIFA-18"
-      - "🇭🇰  Hong Kong  -  MIFA-19"
-      - "🇯🇵  Japan  -  MIFA"
-      - "🇯🇵  Japan  -  MIFA-1"
-      - "🇰🇷  South Korea  -  MIFA"
-      - "🇰🇷  South Korea  -  MIFA-1"
-      - "🇲🇾  Malaysia  -  MIFA"
-      - "🇳🇱  Netherlands  -  MIFA"
-      - "🇵🇭  Philippines  -  MIFA"
-      - "🇸🇬  Singapore  -  MIFA"
-      - "🇹🇼  Taiwan  -  MIFA"
-      - "🇺🇸  USA  -  MIFA"
-      - "🇺🇸  USA  -  MIFA-1"
-      - "🇺🇸  USA  -  MIFA-2"
-      - "🇺🇸  USA  -  MIFA-3"
-      - "🇺🇸  USA  -  MIFA-4"
-      - "🇺🇸  USA  -  MIFA-5"
-      - "🇺🇸  USA  -  MIFA-6"
-      - "🇺🇸  USA  -  MIFA-7"
-      - "🇺🇸  USA  -  MIFA-8"
-      - "🇺🇸  USA  -  MIFA-9"
-      - "🇺🇸  USA  -  MIFA-10"
+      - "🇦🇪  United Arab Emirates  [01]  MIFA"
+      - "🇦🇫  Afghanistan  [01]  MIFA"
+      - "🇨🇭  Switzerland  [01]  MIFA"
+      - "🇨🇭  Switzerland  [02]  MIFA"
+      - "🇨🇴  Colombia  [01]  MIFA"
+      - "🇨🇿  Czech Republic  [01]  MIFA"
+      - "🇨🇿  Czech Republic  [02]  MIFA"
+      - "🇩🇪  Germany  [01]  MIFA"
+      - "🇩🇪  Germany  [02]  MIFA"
+      - "🇩🇪  Germany  [03]  MIFA"
+      - "🇩🇰  Denmark  [01]  MIFA"
+      - "🇪🇪  Estonia  [01]  MIFA"
+      - "🇪🇸  Spain  [01]  MIFA"
+      - "🇫🇮  Finland  [01]  MIFA"
+      - "🇫🇮  Finland  [02]  MIFA"
+      - "🇫🇷  France  [01]  MIFA"
+      - "🇫🇷  France  [02]  MIFA"
+      - "🇫🇷  France  [03]  MIFA"
+      - "🇫🇷  France  [04]  MIFA"
+      - "🇬🇧  Great Britain  [01]  MIFA"
+      - "🇭🇰  Hong Kong  [01]  MIFA"
+      - "🇭🇺  Hungary  [01]  MIFA"
+      - "🇮🇷  Iran  [01]  MIFA"
+      - "🇮🇷  Iran  [02]  MIFA"
+      - "🇮🇷  Iran  [03]  MIFA"
+      - "🇱🇹  Lithuania  [01]  MIFA"
+      - "🇱🇹  Lithuania  [02]  MIFA"
+      - "🇳🇱  Netherlands  [01]  MIFA"
+      - "🇳🇱  Netherlands  [02]  MIFA"
+      - "🇳🇱  Netherlands  [03]  MIFA"
+      - "🇳🇱  Netherlands  [04]  MIFA"
+      - "🇳🇱  Netherlands  [05]  MIFA"
+      - "🇳🇱  Netherlands  [06]  MIFA"
+      - "🇵🇱  Poland  [01]  MIFA"
+      - "🇷🇺  Russia  [01]  MIFA"
+      - "🇷🇺  Russia  [02]  MIFA"
+      - "🇷🇺  Russia  [03]  MIFA"
+      - "🇷🇺  Russia  [04]  MIFA"
+      - "🇸🇬  Singapore  [01]  MIFA"
+      - "🇹🇭  Thailand  [01]  MIFA"
+      - "🇹🇷  Turkey  [01]  MIFA"
+      - "🇹🇼  Taiwan  [01]  MIFA"
+      - "🇺🇸  USA  [01]  MIFA"
+      - "🇺🇸  USA  [02]  MIFA"
+      - "🇺🇸  USA  [03]  MIFA"
+      - "🇺🇸  USA  [04]  MIFA"
+      - "🇺🇸  USA  [05]  MIFA"
+      - "🇺🇸  USA  [06]  MIFA"
+      - "🇺🇸  USA  [07]  MIFA"
+      - "🇺🇸  USA  [08]  MIFA"
+      - "🇺🇸  USA  [09]  MIFA"
+      - "🇺🇸  USA  [10]  MIFA"
+      - "🇺🇸  USA  [11]  MIFA"
+      - "🇺🇸  USA  [12]  MIFA"
+      - "🇺🇸  USA  [13]  MIFA"
+      - "🇺🇸  USA  [14]  MIFA"
+      - "🇺🇸  USA  [15]  MIFA"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -883,46 +1310,63 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇭🇰  Hong Kong  -  MIFA"
-      - "🇭🇰  Hong Kong  -  MIFA-1"
-      - "🇭🇰  Hong Kong  -  MIFA-2"
-      - "🇭🇰  Hong Kong  -  MIFA-3"
-      - "🇭🇰  Hong Kong  -  MIFA-4"
-      - "🇭🇰  Hong Kong  -  MIFA-5"
-      - "🇭🇰  Hong Kong  -  MIFA-6"
-      - "🇭🇰  Hong Kong  -  MIFA-7"
-      - "🇭🇰  Hong Kong  -  MIFA-8"
-      - "🇭🇰  Hong Kong  -  MIFA-9"
-      - "🇭🇰  Hong Kong  -  MIFA-10"
-      - "🇭🇰  Hong Kong  -  MIFA-11"
-      - "🇭🇰  Hong Kong  -  MIFA-12"
-      - "🇭🇰  Hong Kong  -  MIFA-13"
-      - "🇭🇰  Hong Kong  -  MIFA-14"
-      - "🇭🇰  Hong Kong  -  MIFA-15"
-      - "🇭🇰  Hong Kong  -  MIFA-16"
-      - "🇭🇰  Hong Kong  -  MIFA-17"
-      - "🇭🇰  Hong Kong  -  MIFA-18"
-      - "🇭🇰  Hong Kong  -  MIFA-19"
-      - "🇯🇵  Japan  -  MIFA"
-      - "🇯🇵  Japan  -  MIFA-1"
-      - "🇰🇷  South Korea  -  MIFA"
-      - "🇰🇷  South Korea  -  MIFA-1"
-      - "🇲🇾  Malaysia  -  MIFA"
-      - "🇳🇱  Netherlands  -  MIFA"
-      - "🇵🇭  Philippines  -  MIFA"
-      - "🇸🇬  Singapore  -  MIFA"
-      - "🇹🇼  Taiwan  -  MIFA"
-      - "🇺🇸  USA  -  MIFA"
-      - "🇺🇸  USA  -  MIFA-1"
-      - "🇺🇸  USA  -  MIFA-2"
-      - "🇺🇸  USA  -  MIFA-3"
-      - "🇺🇸  USA  -  MIFA-4"
-      - "🇺🇸  USA  -  MIFA-5"
-      - "🇺🇸  USA  -  MIFA-6"
-      - "🇺🇸  USA  -  MIFA-7"
-      - "🇺🇸  USA  -  MIFA-8"
-      - "🇺🇸  USA  -  MIFA-9"
-      - "🇺🇸  USA  -  MIFA-10"
+      - "🇦🇪  United Arab Emirates  [01]  MIFA"
+      - "🇦🇫  Afghanistan  [01]  MIFA"
+      - "🇨🇭  Switzerland  [01]  MIFA"
+      - "🇨🇭  Switzerland  [02]  MIFA"
+      - "🇨🇴  Colombia  [01]  MIFA"
+      - "🇨🇿  Czech Republic  [01]  MIFA"
+      - "🇨🇿  Czech Republic  [02]  MIFA"
+      - "🇩🇪  Germany  [01]  MIFA"
+      - "🇩🇪  Germany  [02]  MIFA"
+      - "🇩🇪  Germany  [03]  MIFA"
+      - "🇩🇰  Denmark  [01]  MIFA"
+      - "🇪🇪  Estonia  [01]  MIFA"
+      - "🇪🇸  Spain  [01]  MIFA"
+      - "🇫🇮  Finland  [01]  MIFA"
+      - "🇫🇮  Finland  [02]  MIFA"
+      - "🇫🇷  France  [01]  MIFA"
+      - "🇫🇷  France  [02]  MIFA"
+      - "🇫🇷  France  [03]  MIFA"
+      - "🇫🇷  France  [04]  MIFA"
+      - "🇬🇧  Great Britain  [01]  MIFA"
+      - "🇭🇰  Hong Kong  [01]  MIFA"
+      - "🇭🇺  Hungary  [01]  MIFA"
+      - "🇮🇷  Iran  [01]  MIFA"
+      - "🇮🇷  Iran  [02]  MIFA"
+      - "🇮🇷  Iran  [03]  MIFA"
+      - "🇱🇹  Lithuania  [01]  MIFA"
+      - "🇱🇹  Lithuania  [02]  MIFA"
+      - "🇳🇱  Netherlands  [01]  MIFA"
+      - "🇳🇱  Netherlands  [02]  MIFA"
+      - "🇳🇱  Netherlands  [03]  MIFA"
+      - "🇳🇱  Netherlands  [04]  MIFA"
+      - "🇳🇱  Netherlands  [05]  MIFA"
+      - "🇳🇱  Netherlands  [06]  MIFA"
+      - "🇵🇱  Poland  [01]  MIFA"
+      - "🇷🇺  Russia  [01]  MIFA"
+      - "🇷🇺  Russia  [02]  MIFA"
+      - "🇷🇺  Russia  [03]  MIFA"
+      - "🇷🇺  Russia  [04]  MIFA"
+      - "🇸🇬  Singapore  [01]  MIFA"
+      - "🇹🇭  Thailand  [01]  MIFA"
+      - "🇹🇷  Turkey  [01]  MIFA"
+      - "🇹🇼  Taiwan  [01]  MIFA"
+      - "🇺🇸  USA  [01]  MIFA"
+      - "🇺🇸  USA  [02]  MIFA"
+      - "🇺🇸  USA  [03]  MIFA"
+      - "🇺🇸  USA  [04]  MIFA"
+      - "🇺🇸  USA  [05]  MIFA"
+      - "🇺🇸  USA  [06]  MIFA"
+      - "🇺🇸  USA  [07]  MIFA"
+      - "🇺🇸  USA  [08]  MIFA"
+      - "🇺🇸  USA  [09]  MIFA"
+      - "🇺🇸  USA  [10]  MIFA"
+      - "🇺🇸  USA  [11]  MIFA"
+      - "🇺🇸  USA  [12]  MIFA"
+      - "🇺🇸  USA  [13]  MIFA"
+      - "🇺🇸  USA  [14]  MIFA"
+      - "🇺🇸  USA  [15]  MIFA"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -932,46 +1376,63 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇭🇰  Hong Kong  -  MIFA"
-      - "🇭🇰  Hong Kong  -  MIFA-1"
-      - "🇭🇰  Hong Kong  -  MIFA-2"
-      - "🇭🇰  Hong Kong  -  MIFA-3"
-      - "🇭🇰  Hong Kong  -  MIFA-4"
-      - "🇭🇰  Hong Kong  -  MIFA-5"
-      - "🇭🇰  Hong Kong  -  MIFA-6"
-      - "🇭🇰  Hong Kong  -  MIFA-7"
-      - "🇭🇰  Hong Kong  -  MIFA-8"
-      - "🇭🇰  Hong Kong  -  MIFA-9"
-      - "🇭🇰  Hong Kong  -  MIFA-10"
-      - "🇭🇰  Hong Kong  -  MIFA-11"
-      - "🇭🇰  Hong Kong  -  MIFA-12"
-      - "🇭🇰  Hong Kong  -  MIFA-13"
-      - "🇭🇰  Hong Kong  -  MIFA-14"
-      - "🇭🇰  Hong Kong  -  MIFA-15"
-      - "🇭🇰  Hong Kong  -  MIFA-16"
-      - "🇭🇰  Hong Kong  -  MIFA-17"
-      - "🇭🇰  Hong Kong  -  MIFA-18"
-      - "🇭🇰  Hong Kong  -  MIFA-19"
-      - "🇯🇵  Japan  -  MIFA"
-      - "🇯🇵  Japan  -  MIFA-1"
-      - "🇰🇷  South Korea  -  MIFA"
-      - "🇰🇷  South Korea  -  MIFA-1"
-      - "🇲🇾  Malaysia  -  MIFA"
-      - "🇳🇱  Netherlands  -  MIFA"
-      - "🇵🇭  Philippines  -  MIFA"
-      - "🇸🇬  Singapore  -  MIFA"
-      - "🇹🇼  Taiwan  -  MIFA"
-      - "🇺🇸  USA  -  MIFA"
-      - "🇺🇸  USA  -  MIFA-1"
-      - "🇺🇸  USA  -  MIFA-2"
-      - "🇺🇸  USA  -  MIFA-3"
-      - "🇺🇸  USA  -  MIFA-4"
-      - "🇺🇸  USA  -  MIFA-5"
-      - "🇺🇸  USA  -  MIFA-6"
-      - "🇺🇸  USA  -  MIFA-7"
-      - "🇺🇸  USA  -  MIFA-8"
-      - "🇺🇸  USA  -  MIFA-9"
-      - "🇺🇸  USA  -  MIFA-10"
+      - "🇦🇪  United Arab Emirates  [01]  MIFA"
+      - "🇦🇫  Afghanistan  [01]  MIFA"
+      - "🇨🇭  Switzerland  [01]  MIFA"
+      - "🇨🇭  Switzerland  [02]  MIFA"
+      - "🇨🇴  Colombia  [01]  MIFA"
+      - "🇨🇿  Czech Republic  [01]  MIFA"
+      - "🇨🇿  Czech Republic  [02]  MIFA"
+      - "🇩🇪  Germany  [01]  MIFA"
+      - "🇩🇪  Germany  [02]  MIFA"
+      - "🇩🇪  Germany  [03]  MIFA"
+      - "🇩🇰  Denmark  [01]  MIFA"
+      - "🇪🇪  Estonia  [01]  MIFA"
+      - "🇪🇸  Spain  [01]  MIFA"
+      - "🇫🇮  Finland  [01]  MIFA"
+      - "🇫🇮  Finland  [02]  MIFA"
+      - "🇫🇷  France  [01]  MIFA"
+      - "🇫🇷  France  [02]  MIFA"
+      - "🇫🇷  France  [03]  MIFA"
+      - "🇫🇷  France  [04]  MIFA"
+      - "🇬🇧  Great Britain  [01]  MIFA"
+      - "🇭🇰  Hong Kong  [01]  MIFA"
+      - "🇭🇺  Hungary  [01]  MIFA"
+      - "🇮🇷  Iran  [01]  MIFA"
+      - "🇮🇷  Iran  [02]  MIFA"
+      - "🇮🇷  Iran  [03]  MIFA"
+      - "🇱🇹  Lithuania  [01]  MIFA"
+      - "🇱🇹  Lithuania  [02]  MIFA"
+      - "🇳🇱  Netherlands  [01]  MIFA"
+      - "🇳🇱  Netherlands  [02]  MIFA"
+      - "🇳🇱  Netherlands  [03]  MIFA"
+      - "🇳🇱  Netherlands  [04]  MIFA"
+      - "🇳🇱  Netherlands  [05]  MIFA"
+      - "🇳🇱  Netherlands  [06]  MIFA"
+      - "🇵🇱  Poland  [01]  MIFA"
+      - "🇷🇺  Russia  [01]  MIFA"
+      - "🇷🇺  Russia  [02]  MIFA"
+      - "🇷🇺  Russia  [03]  MIFA"
+      - "🇷🇺  Russia  [04]  MIFA"
+      - "🇸🇬  Singapore  [01]  MIFA"
+      - "🇹🇭  Thailand  [01]  MIFA"
+      - "🇹🇷  Turkey  [01]  MIFA"
+      - "🇹🇼  Taiwan  [01]  MIFA"
+      - "🇺🇸  USA  [01]  MIFA"
+      - "🇺🇸  USA  [02]  MIFA"
+      - "🇺🇸  USA  [03]  MIFA"
+      - "🇺🇸  USA  [04]  MIFA"
+      - "🇺🇸  USA  [05]  MIFA"
+      - "🇺🇸  USA  [06]  MIFA"
+      - "🇺🇸  USA  [07]  MIFA"
+      - "🇺🇸  USA  [08]  MIFA"
+      - "🇺🇸  USA  [09]  MIFA"
+      - "🇺🇸  USA  [10]  MIFA"
+      - "🇺🇸  USA  [11]  MIFA"
+      - "🇺🇸  USA  [12]  MIFA"
+      - "🇺🇸  USA  [13]  MIFA"
+      - "🇺🇸  USA  [14]  MIFA"
+      - "🇺🇸  USA  [15]  MIFA"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
