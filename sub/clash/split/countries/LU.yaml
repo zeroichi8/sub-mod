@@ -499,7 +499,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇱🇺 REALITY|LU🇱🇺 | lx.goofymoofy.com-1152 | 293.18ms"
+  - name: "🇱🇺 REALITY|LU🇱🇺 | lx.goofymoofy.com-1152 | 119.81ms"
     type: "vless"
     server: "lx.goofymoofy.com"
     port: 1152
@@ -513,7 +513,19 @@ proxies:
     reality-opts:
       public-key: "5PcB9IBiBhvzFS2SPqz4Ja1mSPpzYzANItM-ax4JFDo"
       short-id: "70df0101ca6c8c22"
-  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+  - name: "🇱🇺 RELAY🚩 | lu.rebata.ir-2053 | 351.69ms"
+    type: "vless"
+    server: "188.42.88.24"
+    port: 2053
+    uuid: "a962e5f4-4bb7-4cf9-b32a-8d4e4f2aa805"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "lu.rebata.ir"
+    ws-opts:
+      headers:
+        Host: "lu.rebata.ir"
+  - name: "🇱🇺 RELAY🚩 | de.rebata.ir-2053 | 339.66ms"
     type: "vless"
     server: "188.42.88.24"
     port: 2053
@@ -526,6 +538,20 @@ proxies:
     ws-opts:
       headers:
         Host: "de.rebata.ir"
+  - name: "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-80.240.97.27:1152"
+    type: "vless"
+    server: "80.240.97.27"
+    port: 1152
+    uuid: "debf45d5-8eba-4fa0-afaa-f033d609d1f5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5PcB9IBiBhvzFS2SPqz4Ja1mSPpzYzANItM-ax4JFDo"
+      short-id: "70df0101ca6c8c22"
   - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
     type: "ss"
     server: "92.38.163.53"
@@ -617,19 +643,6 @@ proxies:
     alterId: 64
     cipher: "auto"
     udp: true
-  - name: "🇱🇺 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "188.42.145.123"
-    port: 443
-    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "notls.lukongtou.eu.org"
-    ws-opts:
-      path: "Telegram-WangCai2🇨🇳"
-      headers:
-        Host: "notls.lukongtou.eu.org"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -644,8 +657,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇱🇺 REALITY|LU🇱🇺 | lx.goofymoofy.com-1152 | 293.18ms"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 REALITY|LU🇱🇺 | lx.goofymoofy.com-1152 | 119.81ms"
+      - "🇱🇺 RELAY🚩 | lu.rebata.ir-2053 | 351.69ms"
+      - "🇱🇺 RELAY🚩 | de.rebata.ir-2053 | 339.66ms"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-80.240.97.27:1152"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -655,7 +670,6 @@ proxy-groups:
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
-      - "🇱🇺 @DeltaKroneckerGithub"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -666,8 +680,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇱🇺 REALITY|LU🇱🇺 | lx.goofymoofy.com-1152 | 293.18ms"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 REALITY|LU🇱🇺 | lx.goofymoofy.com-1152 | 119.81ms"
+      - "🇱🇺 RELAY🚩 | lu.rebata.ir-2053 | 351.69ms"
+      - "🇱🇺 RELAY🚩 | de.rebata.ir-2053 | 339.66ms"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-80.240.97.27:1152"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -677,7 +693,6 @@ proxy-groups:
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
-      - "🇱🇺 @DeltaKroneckerGithub"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -687,8 +702,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇱🇺 REALITY|LU🇱🇺 | lx.goofymoofy.com-1152 | 293.18ms"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 REALITY|LU🇱🇺 | lx.goofymoofy.com-1152 | 119.81ms"
+      - "🇱🇺 RELAY🚩 | lu.rebata.ir-2053 | 351.69ms"
+      - "🇱🇺 RELAY🚩 | de.rebata.ir-2053 | 339.66ms"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-80.240.97.27:1152"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -698,7 +715,6 @@ proxy-groups:
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
-      - "🇱🇺 @DeltaKroneckerGithub"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
