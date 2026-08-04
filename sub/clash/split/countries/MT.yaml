@@ -499,6 +499,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇲🇹 RELAY🚩 | mmdv2.pages.dev-443 | 3ms"
+    type: "vless"
+    server: "172.64.204.110"
+    port: 443
+    uuid: "d9eb0df3-3190-4447-86b6-656fe5ff1119"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "mmdv2.pages.dev"
+    ws-opts:
+      headers:
+        Host: "mmdv2.pages.dev"
   - name: "🇲🇹 🔒 SS-TCP-NA 🇲🇹 MT-171.22.254.129:990"
     type: "ss"
     server: "171.22.254.129"
@@ -506,6 +518,22 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
+  - name: "🇲🇹 NL 🇳🇱 | @Raydikalx | C8469E"
+    type: "vless"
+    server: "193.227.99.54"
+    port: 2082
+    uuid: "d06911e3-e8a8-4f70-83e8-8f0311cdc3cf"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🇲🇹 NL 🇳🇱 | @Raydikalx | AAF7D8"
+    type: "vless"
+    server: "193.227.99.54"
+    port: 8880
+    uuid: "d06911e3-e8a8-4f70-83e8-8f0311cdc3cf"
+    udp: true
+    tls: false
+    network: "httpupgrade"
   - name: "🇲🇹 NL 🇳🇱 | @Raydikalx | F6EC9A"
     type: "vless"
     server: "193.227.99.249"
@@ -533,7 +561,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇲🇹 RELAY🚩 | mmdv2.pages.dev-443 | 3ms"
       - "🇲🇹 🔒 SS-TCP-NA 🇲🇹 MT-171.22.254.129:990"
+      - "🇲🇹 NL 🇳🇱 | @Raydikalx | C8469E"
+      - "🇲🇹 NL 🇳🇱 | @Raydikalx | AAF7D8"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | F6EC9A"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -545,7 +576,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇲🇹 RELAY🚩 | mmdv2.pages.dev-443 | 3ms"
       - "🇲🇹 🔒 SS-TCP-NA 🇲🇹 MT-171.22.254.129:990"
+      - "🇲🇹 NL 🇳🇱 | @Raydikalx | C8469E"
+      - "🇲🇹 NL 🇳🇱 | @Raydikalx | AAF7D8"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | F6EC9A"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -556,7 +590,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇲🇹 RELAY🚩 | mmdv2.pages.dev-443 | 3ms"
       - "🇲🇹 🔒 SS-TCP-NA 🇲🇹 MT-171.22.254.129:990"
+      - "🇲🇹 NL 🇳🇱 | @Raydikalx | C8469E"
+      - "🇲🇹 NL 🇳🇱 | @Raydikalx | AAF7D8"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | F6EC9A"
   - name: "المنت 💬"
     type: "select"
