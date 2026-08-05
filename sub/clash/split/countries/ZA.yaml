@@ -501,19 +501,31 @@ rule-providers:
 proxies:
   - name: "🇿🇦 South+Africa"
     type: "ss"
-    server: "102.133.165.160"
-    port: 16233
-    cipher: "chacha20-ietf-poly1305"
-    password: "Xsy8Ox4yOV3xLlpxtjzs3X"
-    udp: true
-  - name: "🇿🇦 South+Africa-1"
-    type: "ss"
     server: "102.37.156.224"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "aduB9HGxQHjA2SBMRjkHX6"
     udp: true
-  - name: "🇿🇦 https://t.me/ForceRunVPN-🇦🇿-Baku-451ms-Telkom Internet LTD"
+  - name: "🇿🇦 South+Africa-1"
+    type: "ss"
+    server: "102.133.165.160"
+    port: 16233
+    cipher: "chacha20-ietf-poly1305"
+    password: "Xsy8Ox4yOV3xLlpxtjzs3X"
+    udp: true
+  - name: "🇿🇦 Latvia"
+    type: "vless"
+    server: "102.177.189.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime29.workers.dev"
+  - name: "🇿🇦 🔒 VL-TCP-RLT 🇿🇦 ZA-31.43.191.39:443"
     type: "vless"
     server: "31.43.191.39"
     port: 443
@@ -526,6 +538,17 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "SHDdd617KLHHb0qlQFOHepeHFl_Ch2i-K7o891uyo2M"
+  - name: "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.213:443"
+    type: "vless"
+    server: "160.123.255.213"
+    port: 443
+    uuid: "a13df940-020c-465f-bc89-ee5279b5cd6a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "jpe.ylks01.eu.org"
+    ws-opts:
+      path: "/blue"
   - name: "🇿🇦 🇿🇦ZA Dìa—327"
     type: "ss"
     server: "20.87.212.8"
@@ -548,9 +571,9 @@ proxies:
     udp: true
     tls: false
     network: "grpc"
-  - name: "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.189.30:8880"
+  - name: "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.176.30:8880"
     type: "vless"
-    server: "102.177.189.30"
+    server: "102.177.176.30"
     port: 8880
     uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
     udp: true
@@ -559,7 +582,7 @@ proxies:
     ws-opts:
       path: "/"
       headers:
-        Host: "vms.lifetime29.workers.dev"
+        Host: "vms.lifetime28.workers.dev"
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
     type: "ss"
     server: "156.38.168.58"
@@ -622,18 +645,6 @@ proxies:
     alterId: 64
     cipher: "auto"
     udp: true
-  - name: "🇿🇦 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "102.177.176.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime28.workers.dev"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -650,11 +661,13 @@ proxy-groups:
     proxies:
       - "🇿🇦 South+Africa"
       - "🇿🇦 South+Africa-1"
-      - "🇿🇦 https://t.me/ForceRunVPN-🇦🇿-Baku-451ms-Telkom Internet LTD"
+      - "🇿🇦 Latvia"
+      - "🇿🇦 🔒 VL-TCP-RLT 🇿🇦 ZA-31.43.191.39:443"
+      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.213:443"
       - "🇿🇦 🇿🇦ZA Dìa—327"
       - "🇿🇦 🦉@FreeConfigForYou"
       - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.189.30:8880"
+      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.176.30:8880"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | F279DC"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 789817"
@@ -663,7 +676,6 @@ proxy-groups:
       - "🇿🇦 GB 🇬🇧 | @Raydikalx | 16E1D9"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 90F795"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | CA8494"
-      - "🇿🇦 @DeltaKroneckerGithub"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -676,11 +688,13 @@ proxy-groups:
     proxies:
       - "🇿🇦 South+Africa"
       - "🇿🇦 South+Africa-1"
-      - "🇿🇦 https://t.me/ForceRunVPN-🇦🇿-Baku-451ms-Telkom Internet LTD"
+      - "🇿🇦 Latvia"
+      - "🇿🇦 🔒 VL-TCP-RLT 🇿🇦 ZA-31.43.191.39:443"
+      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.213:443"
       - "🇿🇦 🇿🇦ZA Dìa—327"
       - "🇿🇦 🦉@FreeConfigForYou"
       - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.189.30:8880"
+      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.176.30:8880"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | F279DC"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 789817"
@@ -689,7 +703,6 @@ proxy-groups:
       - "🇿🇦 GB 🇬🇧 | @Raydikalx | 16E1D9"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 90F795"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | CA8494"
-      - "🇿🇦 @DeltaKroneckerGithub"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -701,11 +714,13 @@ proxy-groups:
     proxies:
       - "🇿🇦 South+Africa"
       - "🇿🇦 South+Africa-1"
-      - "🇿🇦 https://t.me/ForceRunVPN-🇦🇿-Baku-451ms-Telkom Internet LTD"
+      - "🇿🇦 Latvia"
+      - "🇿🇦 🔒 VL-TCP-RLT 🇿🇦 ZA-31.43.191.39:443"
+      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.213:443"
       - "🇿🇦 🇿🇦ZA Dìa—327"
       - "🇿🇦 🦉@FreeConfigForYou"
       - "🇿🇦 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
-      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.189.30:8880"
+      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.176.30:8880"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | F279DC"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 789817"
@@ -714,7 +729,6 @@ proxy-groups:
       - "🇿🇦 GB 🇬🇧 | @Raydikalx | 16E1D9"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 90F795"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | CA8494"
-      - "🇿🇦 @DeltaKroneckerGithub"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
