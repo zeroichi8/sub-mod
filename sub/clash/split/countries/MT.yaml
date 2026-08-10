@@ -499,46 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇲🇹 TR🇹🇷 | F.jorzel.ir-2086 | 395.09ms"
-    type: "vless"
-    server: "193.227.99.54"
-    port: 2086
-    uuid: "59948428-5eb6-492a-9795-1ba4d03dc6a1"
-    udp: true
-    tls: false
-    network: "httpupgrade"
-  - name: "🇲🇹 FR🇫🇷 | F.jorzel.ir-2082 | 320.78ms"
-    type: "vless"
-    server: "193.227.99.54"
-    port: 2082
-    uuid: "59948428-5eb6-492a-9795-1ba4d03dc6a1"
-    udp: true
-    tls: false
-    network: "httpupgrade"
-  - name: "🇲🇹 FR🇫🇷 | sss.jorzel.ir-2082 | 169.75ms"
-    type: "vless"
-    server: "193.227.99.54"
-    port: 2082
-    uuid: "1633b472-dfce-48e7-a89d-de502494f9f3"
-    udp: true
-    tls: false
-    network: "httpupgrade"
-  - name: "🇲🇹 CH🇨🇭 | cdn.jorzel.ir-2086 | 311.71ms"
-    type: "vless"
-    server: "193.227.99.54"
-    port: 2086
-    uuid: "11f62a8b-762d-4595-aa54-75ecb6977400"
-    udp: true
-    tls: false
-    network: "httpupgrade"
-  - name: "🇲🇹 FR🇫🇷 | cdn.jorzel.ir-2082 | 148.32ms"
-    type: "vless"
-    server: "193.227.99.54"
-    port: 2082
-    uuid: "11f62a8b-762d-4595-aa54-75ecb6977400"
-    udp: true
-    tls: false
-    network: "httpupgrade"
   - name: "🇲🇹 🔒 SS-TCP-NA 🇲🇹 MT-171.22.254.129:990"
     type: "ss"
     server: "171.22.254.129"
@@ -546,11 +506,19 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-  - name: "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:8880"
+  - name: "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:2086"
     type: "vless"
     server: "193.227.99.54"
-    port: 8880
-    uuid: "4e028ad2-eb80-4bba-9eb6-b2190f0a9e04"
+    port: 2086
+    uuid: "11f62a8b-762d-4595-aa54-75ecb6977400"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:2082"
+    type: "vless"
+    server: "193.227.99.54"
+    port: 2082
+    uuid: "11f62a8b-762d-4595-aa54-75ecb6977400"
     udp: true
     tls: false
     network: "httpupgrade"
@@ -597,13 +565,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇲🇹 TR🇹🇷 | F.jorzel.ir-2086 | 395.09ms"
-      - "🇲🇹 FR🇫🇷 | F.jorzel.ir-2082 | 320.78ms"
-      - "🇲🇹 FR🇫🇷 | sss.jorzel.ir-2082 | 169.75ms"
-      - "🇲🇹 CH🇨🇭 | cdn.jorzel.ir-2086 | 311.71ms"
-      - "🇲🇹 FR🇫🇷 | cdn.jorzel.ir-2082 | 148.32ms"
       - "🇲🇹 🔒 SS-TCP-NA 🇲🇹 MT-171.22.254.129:990"
-      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:8880"
+      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:2086"
+      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:2082"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | 4D1B63"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | F6EC9A"
       - "🇲🇹 🇩🇪DE_3|1.2MB/s|GPT⁺|YT-US"
@@ -617,13 +581,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇲🇹 TR🇹🇷 | F.jorzel.ir-2086 | 395.09ms"
-      - "🇲🇹 FR🇫🇷 | F.jorzel.ir-2082 | 320.78ms"
-      - "🇲🇹 FR🇫🇷 | sss.jorzel.ir-2082 | 169.75ms"
-      - "🇲🇹 CH🇨🇭 | cdn.jorzel.ir-2086 | 311.71ms"
-      - "🇲🇹 FR🇫🇷 | cdn.jorzel.ir-2082 | 148.32ms"
       - "🇲🇹 🔒 SS-TCP-NA 🇲🇹 MT-171.22.254.129:990"
-      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:8880"
+      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:2086"
+      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:2082"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | 4D1B63"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | F6EC9A"
       - "🇲🇹 🇩🇪DE_3|1.2MB/s|GPT⁺|YT-US"
@@ -636,13 +596,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇲🇹 TR🇹🇷 | F.jorzel.ir-2086 | 395.09ms"
-      - "🇲🇹 FR🇫🇷 | F.jorzel.ir-2082 | 320.78ms"
-      - "🇲🇹 FR🇫🇷 | sss.jorzel.ir-2082 | 169.75ms"
-      - "🇲🇹 CH🇨🇭 | cdn.jorzel.ir-2086 | 311.71ms"
-      - "🇲🇹 FR🇫🇷 | cdn.jorzel.ir-2082 | 148.32ms"
       - "🇲🇹 🔒 SS-TCP-NA 🇲🇹 MT-171.22.254.129:990"
-      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:8880"
+      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:2086"
+      - "🇲🇹 🔒 VL-HTTPUPGRADE-NONE 🇲🇹 MT-193.227.99.54:2082"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | 4D1B63"
       - "🇲🇹 NL 🇳🇱 | @Raydikalx | F6EC9A"
       - "🇲🇹 🇩🇪DE_3|1.2MB/s|GPT⁺|YT-US"
