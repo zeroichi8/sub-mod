@@ -499,7 +499,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 194.22ms"
+  - name: "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
     type: "vless"
     server: "92.53.188.36"
     port: 443
@@ -512,17 +512,20 @@ proxies:
       - "h3"
       - "h2"
       - "http/1.1"
-  - name: "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
+  - name: "🇸🇮 🔒 VL-WS-TLS 🇸🇮 SI-92.53.191.8:443"
     type: "vless"
-    server: "92.53.188.36"
+    server: "92.53.191.8"
     port: 443
-    uuid: "401374e6-df77-41fb-f638-dad8184f175b"
+    uuid: "47fcef29-ab4e-4aa6-932b-d95a18f28a4e"
     udp: true
     tls: true
-    network: "grpc"
-    servername: "pqh23v4.hiddendom.shop"
-    alpn:
-      - "h2"
+    network: "ws"
+    servername: "gj2rf.mlrb.tyr.hh.vavava.kdns.fr"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "gj2rf.mlrb.tyr.hh.vavava.kdns.fr"
   - name: "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
     type: "vless"
     server: "92.53.189.40"
@@ -587,8 +590,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 194.22ms"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
+      - "🇸🇮 🔒 VL-WS-TLS 🇸🇮 SI-92.53.191.8:443"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 @DeltaKroneckerGithub"
@@ -603,8 +606,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 194.22ms"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
+      - "🇸🇮 🔒 VL-WS-TLS 🇸🇮 SI-92.53.191.8:443"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 @DeltaKroneckerGithub"
@@ -618,8 +621,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 194.22ms"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
+      - "🇸🇮 🔒 VL-WS-TLS 🇸🇮 SI-92.53.191.8:443"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 @DeltaKroneckerGithub"

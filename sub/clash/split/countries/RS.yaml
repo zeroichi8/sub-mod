@@ -499,20 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇷🇸 🔒 VL-TCP-RLT 🇷🇸 RS-38.180.17.232:443"
-    type: "vless"
-    server: "38.180.17.232"
-    port: 443
-    uuid: "96eb0aac-b747-4f3c-8c30-d2ff7ec7415c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "google.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "h_qOyi3Y79o7yw9WaMZY1CxtDlu4f6F1bIxqYTH11R4"
-      short-id: "3e"
   - name: "🇷🇸 🔒 SS-TCP-NA 🇷🇸 RS-146.70.221.238:1080"
     type: "ss"
     server: "146.70.221.238"
@@ -527,14 +513,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "f8f7aCzcPKbsF8p3"
     udp: true
-  - name: "🇷🇸 RS 🇷🇸 | @Raydikalx | CB1870"
-    type: "vless"
-    server: "195.133.18.161"
-    port: 30153
-    uuid: "da97d2d7-d255-4efd-8398-7101d698768e"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇷🇸 RS 🇷🇸 | @Raydikalx | 3359CC"
     type: "vmess"
     server: "152.89.160.10"
@@ -557,10 +535,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇷🇸 🔒 VL-TCP-RLT 🇷🇸 RS-38.180.17.232:443"
       - "🇷🇸 🔒 SS-TCP-NA 🇷🇸 RS-146.70.221.238:1080"
       - "🇷🇸 RS 🇷🇸 | @Raydikalx | D73FBE"
-      - "🇷🇸 RS 🇷🇸 | @Raydikalx | CB1870"
       - "🇷🇸 RS 🇷🇸 | @Raydikalx | 3359CC"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -572,10 +548,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇷🇸 🔒 VL-TCP-RLT 🇷🇸 RS-38.180.17.232:443"
       - "🇷🇸 🔒 SS-TCP-NA 🇷🇸 RS-146.70.221.238:1080"
       - "🇷🇸 RS 🇷🇸 | @Raydikalx | D73FBE"
-      - "🇷🇸 RS 🇷🇸 | @Raydikalx | CB1870"
       - "🇷🇸 RS 🇷🇸 | @Raydikalx | 3359CC"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -586,10 +560,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇷🇸 🔒 VL-TCP-RLT 🇷🇸 RS-38.180.17.232:443"
       - "🇷🇸 🔒 SS-TCP-NA 🇷🇸 RS-146.70.221.238:1080"
       - "🇷🇸 RS 🇷🇸 | @Raydikalx | D73FBE"
-      - "🇷🇸 RS 🇷🇸 | @Raydikalx | CB1870"
       - "🇷🇸 RS 🇷🇸 | @Raydikalx | 3359CC"
   - name: "المنت 💬"
     type: "select"
