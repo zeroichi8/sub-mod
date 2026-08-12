@@ -499,62 +499,45 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "3. 🇫🇮 Finland"
+  - name: "1. 🇷🇺 Russia"
     type: "vless"
-    server: "159.194.226.13"
-    port: 443
-    uuid: "b6c29ae7-4748-4049-b642-b695c0d2c776"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "vk.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "fk_aUHA_JijqIiSXZH61Ur6WSfPQ-Ke7J1IGgEZAh0I"
-  - name: "4. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.53.140"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "6. 🇧🇷 Brazil"
-    type: "vless"
-    server: "201.51.5.253"
-    port: 2200
-    uuid: "ed1cd50f-ead9-4e01-b5ae-b7d2dfb532fc"
+    server: "5.129.194.34"
+    port: 4100
+    uuid: "af325624-e28d-44fd-a8a7-058a439d128f"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/v1"
-  - name: "7. 🇸🇪 Sweden"
+      headers:
+        Host: "live.ok.ru"
+  - name: "2. 🇳🇱 The Netherlands"
     type: "vless"
-    server: "172.67.165.120"
-    port: 443
-    uuid: "f6a92fa2-5685-3c70-16d5-ba38b388dbbf"
+    server: "api.kinomir.fun"
+    port: 40443
+    uuid: "598b823c-d3fc-4013-aae5-837f10080f7a"
     udp: true
     tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8"
+      short-id: "33e48a03db900ff3"
+  - name: "3. 🇷🇺 Russia"
+    type: "vless"
+    server: "212.193.26.170"
+    port: 4100
+    uuid: "d3984ebd-b876-4a38-be7d-90299feafc81"
+    udp: true
+    tls: false
     network: "ws"
-    servername: "empty-water-a05b.gfbghfbfngbdgbghngf.workers.dev"
-    client-fingerprint: "firefox"
     ws-opts:
-      path: "/"
-  - name: "8. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.52.175"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "10. 🇫🇷 France"
+      path: "/v1"
+      headers:
+        Host: "live.ok.ru"
+  - name: "4. 🇫🇷 France"
     type: "vless"
     server: "nasnet-162191099-direct.mbghalibaf.com"
     port: 443
@@ -563,58 +546,210 @@ proxies:
     tls: true
     network: "tcp"
     servername: "nasnet-162191099-direct.mbghalibaf.com"
+    flow: "xtls-rprx-vision"
+  - name: "5. 🇷🇺 Russia"
+    type: "vless"
+    server: "162.159.140.78"
+    port: 8880
+    uuid: "363202dd-0521-46b4-b4e2-443dfbaa2ce1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
+      headers:
+        Host: "flat-heart-b60a.401-306.workers.dev"
+  - name: "6. 🇸🇪 Sweden"
+    type: "vless"
+    server: "www.speedtest.net"
+    port: 443
+    uuid: "0432902e-6604-40cd-bbd0-57ab4e5d909f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "bPB-4dc4958B.hXjkcgHcHv.woRkeRs.deV"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/eyJqdW5rIjoiOENNZnB6WTgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119"
+      headers:
+        Host: "bPB-4dc4958B.hXjkcgHcHv.woRkeRs.deV"
+  - name: "7. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "skk.moe"
+    port: 8880
+    uuid: "d8a7b463-dc98-474d-a87e-8781476aef32"
+    udp: true
+    tls: false
+    network: "ws"
     client-fingerprint: "chrome"
     alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "11. 🇺🇸 United States"
+      - "http/1.1"
+    ws-opts:
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
+      headers:
+        Host: "ancient-tree-7dc9.336-5f9.workers.dev"
+  - name: "9. 🇭🇰 Hong Kong"
     type: "vless"
-    server: "144.31.54.85"
+    server: "cloudflare-ech.com"
+    port: 8880
+    uuid: "2d212f81-7ea2-4d0b-884c-a6497ab41143"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      headers:
+        Host: "hidden-union-a4b2.436.workers.dev"
+  - name: "10. 🇸🇪 Sweden"
+    type: "vless"
+    server: "www.speedtest.net"
     port: 443
-    uuid: "06ee3130-cb1e-4d66-b61c-d221eec984ed"
+    uuid: "2db92da9-8ffb-491b-81d6-6e8d50876020"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "bpB-01c11365.HJdBcvDbKV.WORKErS.dEV"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0"
+      headers:
+        Host: "bpb-01c11365.hjdbcvdbkv.workers.dev"
+  - name: "11. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "www.baipiao.eu.org"
+    port: 8880
+    uuid: "631ddfb7-2f6b-4ecb-8c07-47062fff7ccb"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      headers:
+        Host: "morning-cell-6297.66-b87.workers.dev"
+  - name: "12. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "cloudflare-ech.com"
+    port: 8880
+    uuid: "e7ca2c1c-9b47-4ef0-9d5e-2be26a86ffc1"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      headers:
+        Host: "nameless-disk-194d.485.workers.dev"
+  - name: "13. 🇸🇪 Sweden"
+    type: "vless"
+    server: "172.67.174.37"
+    port: 8880
+    uuid: "160ca353-676d-4b7f-a041-0289e388b865"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "skk.moe"
+    ws-opts:
+      headers:
+        Host: "proud-cloud-7bdd.208-a52.workers.dev"
+  - name: "14. 🇫🇷 France"
+    type: "vless"
+    server: "45.192.2.42"
+    port: 443
+    uuid: "d2042070-c247-4226-a3ac-15337923e00d"
     udp: true
     tls: true
     network: "tcp"
-    servername: "serv.host"
+    servername: "storage.yandex.net"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "cW4DmIxDcnF1nNrdqnO29-gvYOGjmpDerK4fj9VCk1o"
-      short-id: "1b2a3f"
-  - name: "12. 🇩🇪 Germany"
+      public-key: "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA"
+      short-id: "364994a6f61fc955"
+  - name: "15. 🇭🇰 Hong Kong"
     type: "vless"
-    server: "104.16.75.46"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "13. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.53.227"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "14. 🇬🇧 United Kingdom"
-    type: "vless"
-    server: "87.242.85.201"
-    port: 13561
-    uuid: "bfa91d79-049c-41e1-be94-029397377150"
+    server: "log.bpminecraft.com"
+    port: 8880
+    uuid: "ed189537-41de-4abe-9f8b-bb75d457722d"
     udp: true
     tls: false
-    network: "tcp"
-  - name: "15. 🇷🇺 Russia"
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      headers:
+        Host: "lucky-cake-4f58.318-5ee.workers.dev"
+  - name: "16. 🇭🇰 Hong Kong"
     type: "vless"
-    server: "194.26.229.220"
+    server: "skk.moe"
+    port: 8880
+    uuid: "0de87762-7d50-49e7-a5ae-7ac85760e083"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      headers:
+        Host: "delicate-fog-bbae.205-635.workers.dev"
+  - name: "17. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "skk.moe"
+    port: 8880
+    uuid: "63a1d550-f8da-456e-813c-398dd819e405"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      headers:
+        Host: "noisy-cherry-b46b.206-866.workers.dev"
+  - name: "18. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "log.bpminecraft.com"
+    port: 8880
+    uuid: "ad85a1ce-3519-4634-9ea1-66c60d3694ba"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "little-pond-8731.81-68e.workers.dev"
+  - name: "19. 🇸🇪 Sweden"
+    type: "vless"
+    server: "www.speedtest.net"
+    port: 443
+    uuid: "fbca467d-cb8a-4dac-b513-efe5fdd5c591"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "PlAiN-Shadow-821f.pFegEHeJrrjrJJrj.wOrKeRs.DEV"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/eyJqdW5rIjoiUkhRNE9DUE81UCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0"
+  - name: "20. 🇷🇺 Russia"
+    type: "vless"
+    server: "162.159.156.214"
+    port: 8880
+    uuid: "8991a496-1baa-486f-9948-ffe44e68c072"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "soft-band-8da6.426.workers.dev"
+  - name: "22. 🇷🇺 Russia"
+    type: "vless"
+    server: "212.193.26.170"
     port: 2200
-    uuid: "47947923-49ac-49f8-86ed-2912bcbf2d18"
+    uuid: "d3984ebd-b876-4a38-be7d-90299feafc81"
     udp: true
     tls: false
     network: "ws"
@@ -622,544 +757,7 @@ proxies:
       path: "/v1"
       headers:
         Host: "rzd.ru"
-  - name: "16. 🇧🇷 Brazil"
-    type: "vless"
-    server: "85.155.226.30"
-    port: 443
-    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "getsavesafe.net"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
-      short-id: "82f5d3a1e9c0b661"
-  - name: "17. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.17.28.89"
-    port: 443
-    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "workspace.evan00.dpdns.org"
-    client-fingerprint: "randomized"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "workspace.evan00.dpdns.org"
-  - name: "19. 🇩🇪 Germany"
-    type: "vless"
-    server: "164.90.176.31"
-    port: 443
-    uuid: "e5c5c336-8ca7-44bc-82d6-0473a55ad1ae"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "pingoneorg.hydrash.workers.dev"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "pingoneorg.hydrash.workers.dev"
-  - name: "20. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.53.215"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "21. 🇷🇺 Russia"
-    type: "vless"
-    server: "8.39.125.152"
-    port: 8443
-    uuid: "8525fe74-67e6-4a55-8a26-95f227bd1384"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "bitter-shadow-4fc5.alvlirm852.workers.dev"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "bitter-shadow-4fc5.alvlirm852.workers.dev"
-  - name: "23. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.52.30"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "25. 🇭🇰 Hong Kong"
-    type: "vless"
-    server: "www.gov.ua"
-    port: 8880
-    uuid: "bf667068-11cb-4c37-a867-4a2b03b45555"
-    udp: true
-    tls: false
-    network: "ws"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/pyip=ProxyIP.US.CMLiussss.net"
-      headers:
-        Host: "flat-sun-b8d3.225-154.workers.dev"
-  - name: "26. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.53.42"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "27. 🇫🇷 France"
-    type: "vless"
-    server: "nasnet-162191099-direct.mbghalibaf.com"
-    port: 443
-    uuid: "nasnet"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "nasnet-162191099-direct.mbghalibaf.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-    flow: "xtls-rprx-vision"
-  - name: "30. 🇫🇷 France"
-    type: "vless"
-    server: "nuagevpn.duckdns.org"
-    port: 18094
-    uuid: "9623a087-ca5b-57c1-8ae1-722c964cc8ea"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/yojcfk2680"
-      headers:
-        Host: "dl.google.com"
-  - name: "31. 🇺🇸 United States"
-    type: "vless"
-    server: "fast.nanniang.top"
-    port: 8443
-    uuid: "916e3030-6eac-418b-9402-7508ca7d6280"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "us-akile.nanniang.top"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-  - name: "32. 🇫🇮 Finland"
-    type: "vless"
-    server: "104.17.103.53"
-    port: 8443
-    uuid: "7b102311-43fd-4e8f-877e-8090623c101d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "round-art-52ee.eadfgv.workers.dev"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "round-art-52ee.eadfgv.workers.dev"
-  - name: "33. 🇭🇰 Hong Kong"
-    type: "vless"
-    server: "small-tree-9ec0.84-971.workers.dev"
-    port: 8880
-    uuid: "8546bcef-8456-41a2-82bc-d2231b42b769"
-    udp: true
-    tls: false
-    network: "ws"
-    client-fingerprint: "qq"
-    ws-opts:
-      path: "/pyip=ProxyIP.KR.CMLiussss.net"
-  - name: "34. 🇩🇪 Germany"
-    type: "vless"
-    server: "188.114.96.19"
-    port: 2053
-    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "po.fastbrokencompony.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-  - name: "35. 🇫🇷 France"
-    type: "vless"
-    server: "xfr.saturn-cloud.net"
-    port: 443
-    uuid: "95ae0de8-d944-4b1e-b450-d34d80f9a528"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "xfr.saturn-cloud.net"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "UjwVdSvY-6dV5UKCNO7ROokiSF_aLaXYyUaG6RybOmI"
-      short-id: "2762604ed2e0fa2f"
-  - name: "36. 🇭🇰 Hong Kong"
-    type: "vless"
-    server: "www.gov.ua"
-    port: 8880
-    uuid: "580af126-448f-407b-a4c2-785e702cd8ea"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/pyip=proxyip.jp.cmliussss.net"
-      headers:
-        Host: "misty-wood-62b4.263-93e.workers.dev"
-  - name: "37. 🇺🇸 United States"
-    type: "vless"
-    server: "92.53.97.70"
-    port: 443
-    uuid: "b50a52ba-891f-44ff-af82-f5f0f3317024"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "novea.shieldix.top"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "V9MHR6nhlKPenVUq1172uIHJFZYOkRVqSOUkjCS4430"
-      short-id: "f0ba53a31b489b3e"
-  - name: "39. 🇪🇪 Estonia"
-    type: "vless"
-    server: "91.235.234.186"
-    port: 443
-    uuid: "4593aa27-a2a1-412f-935f-3829495c0970"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "us7fs3.proxen.pdevinfra.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "g-WqfHKjac71MMtkmq5bIvTFavzXTCAnEI_17KoTNSQ"
-  - name: "40. 🇩🇪 Germany"
-    type: "vless"
-    server: "164.90.176.31"
-    port: 8443
-    uuid: "a747c516-34bd-41b8-8590-a9d1edb79e95"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "summer-hall-8b23.asddsaasan.workers.dev"
-    client-fingerprint: "random"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "summer-hall-8b23.asddsaasan.workers.dev"
-  - name: "41. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.19.214.97"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "42. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.75.46"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    client-fingerprint: "chrome"
-  - name: "44. 🇲🇩 Moldova"
-    type: "vless"
-    server: "144.31.131.241"
-    port: 8443
-    uuid: "b406bc51-9002-474c-beae-b194b02c91da"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mold.speedload.online"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs"
-      short-id: "a20d3ed244c76426"
-  - name: "45. 🇭🇰 Hong Kong"
-    type: "vless"
-    server: "www.baipiao.eu.org"
-    port: 8880
-    uuid: "8546bcef-8456-41a2-82bc-d2231b42b769"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/pyip=ProxyIP.KR.CMLiussss.net"
-      headers:
-        Host: "small-tree-9ec0.84-971.workers.dev"
-  - name: "47. 🇩🇪 Germany"
-    type: "vless"
-    server: "164.90.166.120"
-    port: 443
-    uuid: "8525fe74-67e6-4a55-8a26-95f227bd1384"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "damp-dawn-3a96.alvlirm123.workers.dev"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "damp-dawn-3a96.alvlirm123.workers.dev"
-  - name: "49. 🇬🇧 United Kingdom"
-    type: "vless"
-    server: "45.155.52.231"
-    port: 443
-    uuid: "219f9fec-8983-4f6f-af8c-31bd0c6dbf19"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ru2.skydrgn-online.online"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "6p0aVCkOgd-xaxqSMANYABL6O4Tdbftnxjiy5qcmISQ"
-      short-id: "0b"
-  - name: "51. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.52.97"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "52. 🇬🇧 United Kingdom"
-    type: "vless"
-    server: "104.17.121.110"
-    port: 443
-    uuid: "b2f6aa3a-2550-4a1c-b2c0-1c94b1207217"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "terazhediii.info"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/hdgrbws"
-      headers:
-        Host: "terazhediii.info"
-  - name: "53. 🇸🇪 Sweden"
-    type: "vless"
-    server: "172.67.134.102"
-    port: 8880
-    uuid: "abd3678b-f654-404c-adc7-1355865197e1"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ"
-      headers:
-        Host: "vless.a-amr79.workers.dev"
-  - name: "54. 🇳🇱 The Netherlands"
-    type: "vless"
-    server: "185.125.100.120"
-    port: 8443
-    uuid: "8f6085da-2a5f-4969-97c8-ee3e490ec75d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "max.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc"
-  - name: "55. 🇬🇧 United Kingdom"
-    type: "vless"
-    server: "169.197.113.179"
-    port: 20190
-    uuid: "ad4dd89a-2e4b-4f33-bb96-7e9c4eb85d0b"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "56. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.24.237.67"
-    port: 443
-    uuid: "91875754-7fcc-5ba9-9573-5a43215dfd0f"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "node-8966333989-b9acc5.dsjvhbsdcjy.workers.dev"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/sync"
-      headers:
-        Host: "node-8966333989-b9acc5.dsjvhbsdcjy.workers.dev"
-  - name: "57. 🇺🇸 United States"
-    type: "vless"
-    server: "172.64.152.241"
-    port: 8443
-    uuid: "916e3030-6eac-418b-9402-7508ca7d6280"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "us-akile.nanniang.top"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "us-akile.nanniang.top"
-  - name: "58. 🇩🇪 Germany"
-    type: "vless"
-    server: "45.130.125.158"
-    port: 2053
-    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "po.fastbrokencompony.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "po.fastbrokencompony.com"
-  - name: "59. 🇷🇺 Russia"
-    type: "vless"
-    server: "da.mfa.gov.ua"
-    port: 443
-    uuid: "47fcef29-ab4e-4aa6-932b-d95a18f28a4e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "0h3qt.oqwt.pl0.hh.vavava.kdns.fr"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "0h3qt.oqwt.pl0.hh.vavava.kdns.fr"
-  - name: "60. 🇩🇪 Germany"
-    type: "vless"
-    server: "169.40.138.65"
-    port: 27254
-    uuid: "5109835e-f49b-4094-a069-3ad3ce240e9d"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "63. 🇸🇪 Sweden"
-    type: "vless"
-    server: "172.67.173.89"
-    port: 443
-    uuid: "ffa431ab-a59b-4092-a418-905fcb1e4d5f"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/vl/rYScQPG1EEjxXdswdMEU2b3rM4?ed=2560"
-      headers:
-        Host: "s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev"
-  - name: "64. 🇺🇸 United States"
-    type: "vless"
-    server: "billing.netraidly.ru"
-    port: 40443
-    uuid: "17d29827-7cf1-4115-b40d-548e10ec355d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "deepl.com"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM"
-      short-id: "aa3c"
-  - name: "65. 🇸🇪 Sweden"
-    type: "vless"
-    server: "46.246.92.109"
-    port: 443
-    uuid: "14f19724-de91-4285-a633-aa8e2caaf812"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.rumedia-cdn.com"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "JwL5KoiWkCJI2vMJxyTEplfv-zBAtwxOH8SMbw6QHzY"
-      short-id: "cd40c992fe4b10c2"
-  - name: "66. 🇯🇵 Japan"
-    type: "vless"
-    server: "46.250.250.149"
-    port: 2053
-    uuid: "98944209-4d92-41b2-9c24-c5ac17b3b493"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "2mp1wwmKQyvIVuGujoT0AGoAHwP1IFXlZRj8jB_UnGo"
-      short-id: "61abecf0a82c31f5"
-  - name: "67. 🇺🇸 United States"
-    type: "vless"
-    server: "169.40.42.75"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-  - name: "68. 🇸🇪 Sweden"
-    type: "vless"
-    server: "www.speedtest.net"
-    port: 443
-    uuid: "cccf62bc-7acf-4029-ada1-4b3952110b7d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "LoG-SvC-27d1BE.CI-runNer-E5b8dd.workers.Dev"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/eyJqdW5rIjoickg0WGJ1UzA2dzBtIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ"
-      headers:
-        Host: "loG-SVc-27d1be.Ci-rUnNEr-E5B8Dd.WoRKErS.DeV"
-  - name: "69. 🇬🇧 United Kingdom"
-    type: "vless"
-    server: "one-for-all.levikogjgfdd.ir"
-    port: 443
-    uuid: "b2f6aa3a-2550-4a1c-b2c0-1c94b1207217"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "terazhediii.info"
-    ws-opts:
-      path: "/hdgrbws"
-      headers:
-        Host: "terazhediii.info"
-  - name: "70. 🇭🇰 Hong Kong"
+  - name: "23. 🇭🇰 Hong Kong"
     type: "vless"
     server: "skk.moe"
     port: 8880
@@ -1174,202 +772,214 @@ proxies:
       path: "/pyip=ProxyIP.KR.CMLiussss.net"
       headers:
         Host: "soft-meadow-980a.458.workers.dev"
-  - name: "71. 🇸🇪 Sweden"
+  - name: "24. 🇳🇱 The Netherlands"
     type: "vless"
     server: "37.252.17.192"
-    port: 8451
-    uuid: "d63fb2c0-5645-43d5-9ea2-efb4fcbe4cef"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.rumedia-cdn.com"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "ob0P4YslMWVnPxNFehia13AWqHTQNuRUYTXhuiNZCTk"
-      short-id: "f5614cd78e939cd3"
-  - name: "72. 🇸🇬 Singapore"
-    type: "vless"
-    server: "64.176.36.17"
-    port: 443
-    uuid: "1bc380b1-cff7-446f-b13f-5c0ad29fc75a"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "zero.csmaster.ggff.net"
-    client-fingerprint: "firefox"
-  - name: "73. 🇫🇷 France"
-    type: "vless"
-    server: "xfr.saturn-cloud.net"
-    port: 443
-    uuid: "95ae0de8-d944-4b1e-b450-d34d80f9a528"
-    udp: true
-    tls: true
-    network: "tcp"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "UjwVdSvY-6dV5UKCNO7ROokiSF_aLaXYyUaG6RybOmI"
-      short-id: "2762604ed2e0fa2f"
-  - name: "74. 🇺🇸 United States"
-    type: "vless"
-    server: "3x-ui-upgrade-main-production.up.railway.app"
-    port: 443
-    uuid: "c149de60-f551-4063-af83-c2968420cc9b"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "3x-ui-upgrade-main-production.up.railway.app"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "3x-ui-upgrade-main-production.up.railway.app"
-  - name: "75. 🇫🇮 Finland"
-    type: "vless"
-    server: "159.194.226.13"
-    port: 443
-    uuid: "b6c29ae7-4748-4049-b642-b695c0d2c776"
+    port: 8449
+    uuid: "6d94a071-8084-413f-8317-bc9c7dbcbaf5"
     udp: true
     tls: true
     network: "raw"
-    servername: "vk.ru"
-    client-fingerprint: "ios"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "fk_aUHA_JijqIiSXZH61Ur6WSfPQ-Ke7J1IGgEZAh0I"
-  - name: "76. 🇦🇺 Australia"
-    type: "vless"
-    server: "46.250.240.80"
-    port: 2053
-    uuid: "5c53b9e9-fbe8-4c50-a623-73cdafa3886b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "cevjPz2GmTrXDFXQbGizdN6t4c6m11kclJEf5nOHOTE"
-      short-id: "52dfc493bb6b6c16"
-  - name: "78. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.52.230"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "79. 🇬🇧 United Kingdom"
-    type: "vless"
-    server: "ytryurdj64bbb.localip.ir"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ro-3.ariyuz.org"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ro-3.ariyuz.org"
-  - name: "82. 🇰🇷 South Korea"
-    type: "vless"
-    server: "132.145.89.30"
-    port: 443
-    uuid: "e6d8d743-a9bc-48c9-be99-8f3cc94d16e1"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ako.pagate.top"
+    servername: "www.rumedia-cdn.com"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
-  - name: "83. 🇹🇭 Thailand"
+    reality-opts:
+      public-key: "GRsIfBNDoa_oKblyBwY5BDIjirktnzYFUL1_F9KaQVo"
+      short-id: "15154145b2244829"
+  - name: "25. 🇭🇰 Hong Kong"
     type: "vless"
-    server: "3.162.103.99"
-    port: 443
-    uuid: "7ce54bb3-d612-4aa7-be08-089d3c461d53"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "d1yxsk0zprgivr.cloudfront.net"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "d1yxsk0zprgivr.cloudfront.net"
-  - name: "85. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.52.173"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-  - name: "86. 🇭🇰 Hong Kong"
-    type: "vless"
-    server: "www.ipget.net"
+    server: "steep-resonance-1ffb.274.workers.dev"
     port: 8880
-    uuid: "bbecfa92-4f64-4eb8-82e6-388394d909fe"
+    uuid: "4f74ff26-25af-41d6-9d39-be46fe8ff1a8"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+  - name: "26. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "www.gov.ua"
+    port: 8880
+    uuid: "48c20f0a-c2a4-453f-8a61-ec73ea7829c5"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "www.gov.ua"
+    ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      headers:
+        Host: "morning-brook-d78e.347.workers.dev"
+  - name: "27. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.21.88.129"
+    port: 8880
+    uuid: "8546bcef-8456-41a2-82bc-d2231b42b769"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
-      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
       headers:
-        Host: "empty-poetry-07b6.477-e0d.workers.dev"
-  - name: "87. 🇫🇷 France"
+        Host: "small-tree-9ec0.84-971.workers.dev"
+  - name: "28. 🇷🇺 Russia"
     type: "vless"
-    server: "185.193.89.51"
-    port: 443
-    uuid: "c124a209-d949-4951-8234-e2d918b3e6c0"
+    server: "45.12.75.242"
+    port: 26424
+    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
     udp: true
     tls: true
     network: "tcp"
-    servername: "p.keshevoz.ru"
-    flow: "xtls-rprx-vision"
+    servername: "ya.ru"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc"
-  - name: "88. 🇷🇺 Russia"
+      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
+      short-id: "23103e1e"
+  - name: "30. 🇭🇰 Hong Kong"
     type: "vless"
-    server: "cf.9999669.xyz"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    server: "restless-base-fe24.alirezahabibi20009.workers.dev"
+    port: 443
+    uuid: "4908acbe-485f-4e1c-bb11-5dd04b9f7e88"
     udp: true
     tls: true
     network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    servername: "restless-base-fe24.alirezahabibi20009.workers.dev"
     client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
     ws-opts:
-      path: "/?ed=2560"
+      path: "/eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0="
       headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "92. 🇷🇺 Russia"
+        Host: "restless-base-fe24.alirezahabibi20009.workers.dev"
+  - name: "31. 🇸🇪 Sweden"
     type: "vless"
-    server: "194.26.229.219"
-    port: 4100
-    uuid: "099c6e3f-e8d3-41d4-95f2-ef2eafb51cdc"
+    server: "104.17.170.132"
+    port: 8880
+    uuid: "984d10dd-4d51-45ac-a781-f0c1357644c2"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "lingering-sun-d7b5.49-56e.workers.dev"
+  - name: "33. 🇸🇪 Sweden"
+    type: "vless"
+    server: "172.66.170.53"
+    port: 8880
+    uuid: "6b6733fb-580b-411b-8bf8-51137c2aa037"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
+      headers:
+        Host: "restless-sky-eb31.438-aa8.workers.dev"
+  - name: "34. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "www.ipget.net"
+    port: 8880
+    uuid: "f3a30870-eb2e-4ad7-85cb-c0e65d061d5b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+      headers:
+        Host: "shrill-mouse-dacd.391.workers.dev"
+  - name: "35. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "www.baipiao.eu.org"
+    port: 8880
+    uuid: "121c3728-2b6b-4b69-bac6-170b13658d74"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "www.baipiao.eu.org"
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "falling-darkness-95ea.289.workers.dev"
+  - name: "37. 🇫🇮 Finland"
+    type: "vless"
+    server: "www.visa.com.sg"
+    port: 8880
+    uuid: "4af06e6a-63ae-43c1-83c0-f8f613aef263"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      headers:
+        Host: "withered-sea-c187.445-608.workers.dev"
+  - name: "38. 🇺🇸 United States"
+    type: "vless"
+    server: "104.171.137.148"
+    port: 2200
+    uuid: "a484645e-59df-4980-b649-92b71250ec60"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/v1"
       headers:
-        Host: "live.ok.ru"
-  - name: "93. 🇭🇰 Hong Kong"
+        Host: "rzd.ru"
+  - name: "42. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.21.88.129"
+    port: 8880
+    uuid: "ea29d6f1-3567-4d45-b8c2-e42f162caef4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      headers:
+        Host: "mute-dawn-f27b.375.workers.dev"
+  - name: "45. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "anydesk.com"
+    port: 8880
+    uuid: "85e14d59-02ea-4642-a317-50f1e1691660"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
+      headers:
+        Host: "icy-hat-20f3.328-99f.workers.dev"
+  - name: "46. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "anydesk.com"
+    port: 8880
+    uuid: "984d10dd-4d51-45ac-a781-f0c1357644c2"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "lingering-sun-d7b5.49-56e.workers.dev"
+  - name: "47. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.16.100.215"
+    port: 8880
+    uuid: "35e8826f-0873-492d-8b8a-d495c9947480"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
+      headers:
+        Host: "super-sunset-010c.24-43d.workers.dev"
+  - name: "49. 🇭🇰 Hong Kong"
     type: "vless"
     server: "log.bpminecraft.com"
     port: 8880
-    uuid: "1cefdbfd-6032-43d5-ac13-f58b4498e2f7"
+    uuid: "4212034d-c18b-4060-b218-4f8372e5473a"
     udp: true
     tls: false
     network: "ws"
@@ -1377,96 +987,142 @@ proxies:
     alpn:
       - "http/1.1"
     ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      headers:
+        Host: "summer-hill-7f65.275-521.workers.dev"
+  - name: "50. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "mute-surf-0003.209.workers.dev"
+    port: 8880
+    uuid: "70c16ec7-13f7-473b-b97d-06399f1481e3"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.US.CMLiussss.net"
+  - name: "51. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "log.bpminecraft.com"
+    port: 8880
+    uuid: "1f06dae9-e4cc-4aae-b026-07f7fc81fb56"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      headers:
+        Host: "spring-fire-a493.251-67d.workers.dev"
+  - name: "52. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "log.bpminecraft.com"
+    port: 8880
+    uuid: "ad85a1ce-3519-4634-9ea1-66c60d3694ba"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=proxyip.sg.cmliussss.net"
+      headers:
+        Host: "little-pond-8731.81-68e.workers.dev"
+  - name: "53. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "www.baipiao.eu.org"
+    port: 8880
+    uuid: "86d998bc-a5a2-45d5-8169-b906259110a6"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
       path: "/pyip=ProxyIP.US.CMLiussss.net"
       headers:
-        Host: "royal-salad-175d.306.workers.dev"
-  - name: "94. 🇺🇸 United States"
+        Host: "muddy-art-8cda.197-0c6.workers.dev"
+  - name: "54. 🇭🇰 Hong Kong"
     type: "vless"
-    server: "104.18.35.15"
-    port: 8443
-    uuid: "916e3030-6eac-418b-9402-7508ca7d6280"
+    server: "www.gov.ua"
+    port: 8880
+    uuid: "e06b6255-1c90-4db0-bd8c-7704df82b27c"
     udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "us-akile.nanniang.top"
     client-fingerprint: "chrome"
     ws-opts:
-      path: "/"
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
       headers:
-        Host: "us-akile.nanniang.top"
-  - name: "95. 🇸🇬 Singapore"
+        Host: "silent-cherry-7112.257.workers.dev"
+  - name: "55. 🇭🇰 Hong Kong"
     type: "vless"
-    server: "172.67.69.106"
+    server: "34.96.200.38"
     port: 443
-    uuid: "1bc380b1-cff7-446f-b13f-5c0ad29fc75a"
+    uuid: "2058418a-7718-4050-bdd5-db7487ffdb3b"
     udp: true
     tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "uoXBNYcBgR-h2YmU1NFhFyASr6qh9UghWOuo1WZIikw"
+      short-id: "17d824dd68e24aaf"
+  - name: "56. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "www.gov.ua"
+    port: 8880
+    uuid: "34ce8760-24ed-41e7-a1f5-aa6c2660a53c"
+    udp: true
+    tls: false
     network: "ws"
-    servername: "zero.csmaster.ggff.net"
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "quiet-frost-ac61.333-07d.workers.dev"
+  - name: "59. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "skk.moe"
+    port: 8880
+    uuid: "ba746959-18e7-471c-b00f-fa5cdd930abf"
+    udp: true
+    tls: false
+    network: "ws"
     client-fingerprint: "chrome"
     ws-opts:
-      path: "/"
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
       headers:
-        Host: "zero.csmaster.ggff.net"
-  - name: "1. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "82.38.31.213"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "2. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "82.38.31.201"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "5. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "82.38.31.185"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "18. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "82.38.31.204"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "29. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "82.38.31.198"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    udp: true
-  - name: "46. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "193.29.139.225"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "62. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "193.29.139.234"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "4a2rfixophdjffa8KVA4Aa"
-    udp: true
-  - name: "84. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "109.104.154.163"
-    port: 2375
-    cipher: "aes-256-gcm"
-    password: "faBAoD54k87UJG7"
-    udp: true
-  - name: "43. 🇭🇰 Hong Kong"
+        Host: "crimson-bread-c38e.295.workers.dev"
+  - name: "8. 🇭🇰 Hong Kong"
     type: "vmess"
-    server: "47.76.197.72"
+    server: "7timuei1uufoixbf.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "21. 🇭🇰 Hong Kong"
+    type: "vmess"
+    server: "6jdvarazgu3qqr6q.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "29. 🇭🇰 Hong Kong"
+    type: "vmess"
+    server: "drbkg16egf3fzlm3.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "32. 🇭🇰 Hong Kong"
+    type: "vmess"
+    server: "wwafj5lhl6bi8au9.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "44. 🇭🇰 Hong Kong"
+    type: "vmess"
+    server: "vah4urdzl3jdx5r2.v.3dns.vip"
     port: 443
     uuid: "f23bb427c1f94373876c2f43e9f790f3"
     alterId: 0
@@ -1474,96 +1130,46 @@ proxies:
     udp: true
   - name: "48. 🇭🇰 Hong Kong"
     type: "vmess"
-    server: "n1761296892.4u9ma.icu"
+    server: "ce0gedpxwou6cqon.v.3dns.vip"
     port: 443
-    uuid: "d6db128f-42b9-40b1-b979-5e0095fa593c"
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "90. 🇵🇭 Philippines"
+  - name: "58. 🇭🇰 Hong Kong"
     type: "vmess"
-    server: "61.245.11.60"
-    port: 80
-    uuid: "a3e3a710-79f8-4ae0-b83c-607aab40d197"
+    server: "47.76.197.72"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "9. 🇫🇷 France"
-    type: "trojan"
-    server: "172.64.152.23"
-    port: 443
-    password: "humanity"
+  - name: "60. 🇰🇿 Kazakhstan"
+    type: "vmess"
+    server: "38.107.234.57"
+    port: 80
+    uuid: "567f4be5-12ab-42e1-b8d9-db6fd1fdd31c"
+    alterId: 0
+    cipher: "auto"
     udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmlunch.com"
-  - name: "22. 🇩🇪 Germany"
+  - name: "36. 🇭🇰 Hong Kong"
     type: "trojan"
-    server: "discrete-basilisk.rooster465.autos"
+    server: "upright-hamster.rooster465.autos"
     port: 443
     password: "ND91608427"
     udp: true
     tls: true
     network: "tcp"
-    servername: "discrete-basilisk.rooster465.autos"
-  - name: "24. 🇯🇵 Japan"
+    servername: "upright-hamster.rooster465.autos"
+  - name: "39. 🇭🇰 Hong Kong"
     type: "trojan"
-    server: "picked-guinea.rooster465.autos"
+    server: "upright-hamster.rooster465.autos"
     port: 443
     password: "ND91608427"
     udp: true
     tls: true
     network: "tcp"
-    servername: "picked-guinea.rooster465.autos"
-  - name: "28. 🇯🇵 Japan"
-    type: "trojan"
-    server: "sensible-mongrel.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sensible-mongrel.rooster465.autos"
-  - name: "38. 🇭🇰 Hong Kong"
-    type: "trojan"
-    server: "dynamic-grubworm.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "50. 🇭🇰 Hong Kong"
-    type: "trojan"
-    server: "dynamic-grubworm.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "dynamic-grubworm.rooster465.autos"
-  - name: "61. 🇰🇷 South Korea"
-    type: "trojan"
-    server: "moved-meerkat.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "moved-meerkat.rooster465.autos"
-  - name: "80. 🇰🇷 South Korea"
-    type: "trojan"
-    server: "humorous-malamute.rooster465.autos"
-    port: 443
-    password: "ND91608427"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "humorous-malamute.rooster465.autos"
-  - name: "81. 🇭🇰 Hong Kong"
+  - name: "41. 🇭🇰 Hong Kong"
     type: "trojan"
     server: "ace-starling.rooster465.autos"
     port: 443
@@ -1572,15 +1178,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ace-starling.rooster465.autos"
-  - name: "89. 🇮🇪 Ireland"
-    type: "trojan"
-    server: "34.251.228.118"
-    port: 443
-    password: "UO36402987"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "definite-ladybird.rooster465.autos"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1595,99 +1192,63 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "3. 🇫🇮 Finland"
-      - "4. 🇷🇺 Russia"
-      - "6. 🇧🇷 Brazil"
-      - "7. 🇸🇪 Sweden"
-      - "8. 🇷🇺 Russia"
-      - "10. 🇫🇷 France"
-      - "11. 🇺🇸 United States"
-      - "12. 🇩🇪 Germany"
-      - "13. 🇷🇺 Russia"
-      - "14. 🇬🇧 United Kingdom"
-      - "15. 🇷🇺 Russia"
-      - "16. 🇧🇷 Brazil"
-      - "17. 🇸🇪 Sweden"
-      - "19. 🇩🇪 Germany"
-      - "20. 🇷🇺 Russia"
-      - "21. 🇷🇺 Russia"
-      - "23. 🇷🇺 Russia"
-      - "25. 🇭🇰 Hong Kong"
-      - "26. 🇷🇺 Russia"
-      - "27. 🇫🇷 France"
-      - "30. 🇫🇷 France"
-      - "31. 🇺🇸 United States"
-      - "32. 🇫🇮 Finland"
-      - "33. 🇭🇰 Hong Kong"
-      - "34. 🇩🇪 Germany"
-      - "35. 🇫🇷 France"
-      - "36. 🇭🇰 Hong Kong"
-      - "37. 🇺🇸 United States"
-      - "39. 🇪🇪 Estonia"
-      - "40. 🇩🇪 Germany"
-      - "41. 🇸🇪 Sweden"
-      - "42. 🇩🇪 Germany"
-      - "44. 🇲🇩 Moldova"
-      - "45. 🇭🇰 Hong Kong"
-      - "47. 🇩🇪 Germany"
-      - "49. 🇬🇧 United Kingdom"
-      - "51. 🇷🇺 Russia"
-      - "52. 🇬🇧 United Kingdom"
-      - "53. 🇸🇪 Sweden"
-      - "54. 🇳🇱 The Netherlands"
-      - "55. 🇬🇧 United Kingdom"
-      - "56. 🇸🇪 Sweden"
-      - "57. 🇺🇸 United States"
-      - "58. 🇩🇪 Germany"
-      - "59. 🇷🇺 Russia"
-      - "60. 🇩🇪 Germany"
-      - "63. 🇸🇪 Sweden"
-      - "64. 🇺🇸 United States"
-      - "65. 🇸🇪 Sweden"
-      - "66. 🇯🇵 Japan"
-      - "67. 🇺🇸 United States"
-      - "68. 🇸🇪 Sweden"
-      - "69. 🇬🇧 United Kingdom"
-      - "70. 🇭🇰 Hong Kong"
-      - "71. 🇸🇪 Sweden"
-      - "72. 🇸🇬 Singapore"
-      - "73. 🇫🇷 France"
-      - "74. 🇺🇸 United States"
-      - "75. 🇫🇮 Finland"
-      - "76. 🇦🇺 Australia"
-      - "78. 🇷🇺 Russia"
-      - "79. 🇬🇧 United Kingdom"
-      - "82. 🇰🇷 South Korea"
-      - "83. 🇹🇭 Thailand"
-      - "85. 🇷🇺 Russia"
-      - "86. 🇭🇰 Hong Kong"
-      - "87. 🇫🇷 France"
-      - "88. 🇷🇺 Russia"
-      - "92. 🇷🇺 Russia"
-      - "93. 🇭🇰 Hong Kong"
-      - "94. 🇺🇸 United States"
-      - "95. 🇸🇬 Singapore"
-      - "1. 🇳🇱 The Netherlands"
+      - "1. 🇷🇺 Russia"
       - "2. 🇳🇱 The Netherlands"
-      - "5. 🇳🇱 The Netherlands"
-      - "18. 🇳🇱 The Netherlands"
-      - "29. 🇳🇱 The Netherlands"
-      - "46. 🇳🇱 The Netherlands"
-      - "62. 🇳🇱 The Netherlands"
-      - "84. 🇳🇱 The Netherlands"
-      - "43. 🇭🇰 Hong Kong"
-      - "48. 🇭🇰 Hong Kong"
-      - "90. 🇵🇭 Philippines"
-      - "9. 🇫🇷 France"
-      - "22. 🇩🇪 Germany"
-      - "24. 🇯🇵 Japan"
-      - "28. 🇯🇵 Japan"
-      - "38. 🇭🇰 Hong Kong"
+      - "3. 🇷🇺 Russia"
+      - "4. 🇫🇷 France"
+      - "5. 🇷🇺 Russia"
+      - "6. 🇸🇪 Sweden"
+      - "7. 🇭🇰 Hong Kong"
+      - "9. 🇭🇰 Hong Kong"
+      - "10. 🇸🇪 Sweden"
+      - "11. 🇭🇰 Hong Kong"
+      - "12. 🇭🇰 Hong Kong"
+      - "13. 🇸🇪 Sweden"
+      - "14. 🇫🇷 France"
+      - "15. 🇭🇰 Hong Kong"
+      - "16. 🇭🇰 Hong Kong"
+      - "17. 🇭🇰 Hong Kong"
+      - "18. 🇭🇰 Hong Kong"
+      - "19. 🇸🇪 Sweden"
+      - "20. 🇷🇺 Russia"
+      - "22. 🇷🇺 Russia"
+      - "23. 🇭🇰 Hong Kong"
+      - "24. 🇳🇱 The Netherlands"
+      - "25. 🇭🇰 Hong Kong"
+      - "26. 🇭🇰 Hong Kong"
+      - "27. 🇸🇪 Sweden"
+      - "28. 🇷🇺 Russia"
+      - "30. 🇭🇰 Hong Kong"
+      - "31. 🇸🇪 Sweden"
+      - "33. 🇸🇪 Sweden"
+      - "34. 🇭🇰 Hong Kong"
+      - "35. 🇭🇰 Hong Kong"
+      - "37. 🇫🇮 Finland"
+      - "38. 🇺🇸 United States"
+      - "42. 🇸🇪 Sweden"
+      - "45. 🇭🇰 Hong Kong"
+      - "46. 🇭🇰 Hong Kong"
+      - "47. 🇸🇪 Sweden"
+      - "49. 🇭🇰 Hong Kong"
       - "50. 🇭🇰 Hong Kong"
-      - "61. 🇰🇷 South Korea"
-      - "80. 🇰🇷 South Korea"
-      - "81. 🇭🇰 Hong Kong"
-      - "89. 🇮🇪 Ireland"
+      - "51. 🇭🇰 Hong Kong"
+      - "52. 🇭🇰 Hong Kong"
+      - "53. 🇭🇰 Hong Kong"
+      - "54. 🇭🇰 Hong Kong"
+      - "55. 🇭🇰 Hong Kong"
+      - "56. 🇭🇰 Hong Kong"
+      - "59. 🇭🇰 Hong Kong"
+      - "8. 🇭🇰 Hong Kong"
+      - "21. 🇭🇰 Hong Kong"
+      - "29. 🇭🇰 Hong Kong"
+      - "32. 🇭🇰 Hong Kong"
+      - "44. 🇭🇰 Hong Kong"
+      - "48. 🇭🇰 Hong Kong"
+      - "58. 🇭🇰 Hong Kong"
+      - "60. 🇰🇿 Kazakhstan"
+      - "36. 🇭🇰 Hong Kong"
+      - "39. 🇭🇰 Hong Kong"
+      - "41. 🇭🇰 Hong Kong"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -1698,99 +1259,63 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "3. 🇫🇮 Finland"
-      - "4. 🇷🇺 Russia"
-      - "6. 🇧🇷 Brazil"
-      - "7. 🇸🇪 Sweden"
-      - "8. 🇷🇺 Russia"
-      - "10. 🇫🇷 France"
-      - "11. 🇺🇸 United States"
-      - "12. 🇩🇪 Germany"
-      - "13. 🇷🇺 Russia"
-      - "14. 🇬🇧 United Kingdom"
-      - "15. 🇷🇺 Russia"
-      - "16. 🇧🇷 Brazil"
-      - "17. 🇸🇪 Sweden"
-      - "19. 🇩🇪 Germany"
-      - "20. 🇷🇺 Russia"
-      - "21. 🇷🇺 Russia"
-      - "23. 🇷🇺 Russia"
-      - "25. 🇭🇰 Hong Kong"
-      - "26. 🇷🇺 Russia"
-      - "27. 🇫🇷 France"
-      - "30. 🇫🇷 France"
-      - "31. 🇺🇸 United States"
-      - "32. 🇫🇮 Finland"
-      - "33. 🇭🇰 Hong Kong"
-      - "34. 🇩🇪 Germany"
-      - "35. 🇫🇷 France"
-      - "36. 🇭🇰 Hong Kong"
-      - "37. 🇺🇸 United States"
-      - "39. 🇪🇪 Estonia"
-      - "40. 🇩🇪 Germany"
-      - "41. 🇸🇪 Sweden"
-      - "42. 🇩🇪 Germany"
-      - "44. 🇲🇩 Moldova"
-      - "45. 🇭🇰 Hong Kong"
-      - "47. 🇩🇪 Germany"
-      - "49. 🇬🇧 United Kingdom"
-      - "51. 🇷🇺 Russia"
-      - "52. 🇬🇧 United Kingdom"
-      - "53. 🇸🇪 Sweden"
-      - "54. 🇳🇱 The Netherlands"
-      - "55. 🇬🇧 United Kingdom"
-      - "56. 🇸🇪 Sweden"
-      - "57. 🇺🇸 United States"
-      - "58. 🇩🇪 Germany"
-      - "59. 🇷🇺 Russia"
-      - "60. 🇩🇪 Germany"
-      - "63. 🇸🇪 Sweden"
-      - "64. 🇺🇸 United States"
-      - "65. 🇸🇪 Sweden"
-      - "66. 🇯🇵 Japan"
-      - "67. 🇺🇸 United States"
-      - "68. 🇸🇪 Sweden"
-      - "69. 🇬🇧 United Kingdom"
-      - "70. 🇭🇰 Hong Kong"
-      - "71. 🇸🇪 Sweden"
-      - "72. 🇸🇬 Singapore"
-      - "73. 🇫🇷 France"
-      - "74. 🇺🇸 United States"
-      - "75. 🇫🇮 Finland"
-      - "76. 🇦🇺 Australia"
-      - "78. 🇷🇺 Russia"
-      - "79. 🇬🇧 United Kingdom"
-      - "82. 🇰🇷 South Korea"
-      - "83. 🇹🇭 Thailand"
-      - "85. 🇷🇺 Russia"
-      - "86. 🇭🇰 Hong Kong"
-      - "87. 🇫🇷 France"
-      - "88. 🇷🇺 Russia"
-      - "92. 🇷🇺 Russia"
-      - "93. 🇭🇰 Hong Kong"
-      - "94. 🇺🇸 United States"
-      - "95. 🇸🇬 Singapore"
-      - "1. 🇳🇱 The Netherlands"
+      - "1. 🇷🇺 Russia"
       - "2. 🇳🇱 The Netherlands"
-      - "5. 🇳🇱 The Netherlands"
-      - "18. 🇳🇱 The Netherlands"
-      - "29. 🇳🇱 The Netherlands"
-      - "46. 🇳🇱 The Netherlands"
-      - "62. 🇳🇱 The Netherlands"
-      - "84. 🇳🇱 The Netherlands"
-      - "43. 🇭🇰 Hong Kong"
-      - "48. 🇭🇰 Hong Kong"
-      - "90. 🇵🇭 Philippines"
-      - "9. 🇫🇷 France"
-      - "22. 🇩🇪 Germany"
-      - "24. 🇯🇵 Japan"
-      - "28. 🇯🇵 Japan"
-      - "38. 🇭🇰 Hong Kong"
+      - "3. 🇷🇺 Russia"
+      - "4. 🇫🇷 France"
+      - "5. 🇷🇺 Russia"
+      - "6. 🇸🇪 Sweden"
+      - "7. 🇭🇰 Hong Kong"
+      - "9. 🇭🇰 Hong Kong"
+      - "10. 🇸🇪 Sweden"
+      - "11. 🇭🇰 Hong Kong"
+      - "12. 🇭🇰 Hong Kong"
+      - "13. 🇸🇪 Sweden"
+      - "14. 🇫🇷 France"
+      - "15. 🇭🇰 Hong Kong"
+      - "16. 🇭🇰 Hong Kong"
+      - "17. 🇭🇰 Hong Kong"
+      - "18. 🇭🇰 Hong Kong"
+      - "19. 🇸🇪 Sweden"
+      - "20. 🇷🇺 Russia"
+      - "22. 🇷🇺 Russia"
+      - "23. 🇭🇰 Hong Kong"
+      - "24. 🇳🇱 The Netherlands"
+      - "25. 🇭🇰 Hong Kong"
+      - "26. 🇭🇰 Hong Kong"
+      - "27. 🇸🇪 Sweden"
+      - "28. 🇷🇺 Russia"
+      - "30. 🇭🇰 Hong Kong"
+      - "31. 🇸🇪 Sweden"
+      - "33. 🇸🇪 Sweden"
+      - "34. 🇭🇰 Hong Kong"
+      - "35. 🇭🇰 Hong Kong"
+      - "37. 🇫🇮 Finland"
+      - "38. 🇺🇸 United States"
+      - "42. 🇸🇪 Sweden"
+      - "45. 🇭🇰 Hong Kong"
+      - "46. 🇭🇰 Hong Kong"
+      - "47. 🇸🇪 Sweden"
+      - "49. 🇭🇰 Hong Kong"
       - "50. 🇭🇰 Hong Kong"
-      - "61. 🇰🇷 South Korea"
-      - "80. 🇰🇷 South Korea"
-      - "81. 🇭🇰 Hong Kong"
-      - "89. 🇮🇪 Ireland"
+      - "51. 🇭🇰 Hong Kong"
+      - "52. 🇭🇰 Hong Kong"
+      - "53. 🇭🇰 Hong Kong"
+      - "54. 🇭🇰 Hong Kong"
+      - "55. 🇭🇰 Hong Kong"
+      - "56. 🇭🇰 Hong Kong"
+      - "59. 🇭🇰 Hong Kong"
+      - "8. 🇭🇰 Hong Kong"
+      - "21. 🇭🇰 Hong Kong"
+      - "29. 🇭🇰 Hong Kong"
+      - "32. 🇭🇰 Hong Kong"
+      - "44. 🇭🇰 Hong Kong"
+      - "48. 🇭🇰 Hong Kong"
+      - "58. 🇭🇰 Hong Kong"
+      - "60. 🇰🇿 Kazakhstan"
+      - "36. 🇭🇰 Hong Kong"
+      - "39. 🇭🇰 Hong Kong"
+      - "41. 🇭🇰 Hong Kong"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -1800,99 +1325,63 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "3. 🇫🇮 Finland"
-      - "4. 🇷🇺 Russia"
-      - "6. 🇧🇷 Brazil"
-      - "7. 🇸🇪 Sweden"
-      - "8. 🇷🇺 Russia"
-      - "10. 🇫🇷 France"
-      - "11. 🇺🇸 United States"
-      - "12. 🇩🇪 Germany"
-      - "13. 🇷🇺 Russia"
-      - "14. 🇬🇧 United Kingdom"
-      - "15. 🇷🇺 Russia"
-      - "16. 🇧🇷 Brazil"
-      - "17. 🇸🇪 Sweden"
-      - "19. 🇩🇪 Germany"
-      - "20. 🇷🇺 Russia"
-      - "21. 🇷🇺 Russia"
-      - "23. 🇷🇺 Russia"
-      - "25. 🇭🇰 Hong Kong"
-      - "26. 🇷🇺 Russia"
-      - "27. 🇫🇷 France"
-      - "30. 🇫🇷 France"
-      - "31. 🇺🇸 United States"
-      - "32. 🇫🇮 Finland"
-      - "33. 🇭🇰 Hong Kong"
-      - "34. 🇩🇪 Germany"
-      - "35. 🇫🇷 France"
-      - "36. 🇭🇰 Hong Kong"
-      - "37. 🇺🇸 United States"
-      - "39. 🇪🇪 Estonia"
-      - "40. 🇩🇪 Germany"
-      - "41. 🇸🇪 Sweden"
-      - "42. 🇩🇪 Germany"
-      - "44. 🇲🇩 Moldova"
-      - "45. 🇭🇰 Hong Kong"
-      - "47. 🇩🇪 Germany"
-      - "49. 🇬🇧 United Kingdom"
-      - "51. 🇷🇺 Russia"
-      - "52. 🇬🇧 United Kingdom"
-      - "53. 🇸🇪 Sweden"
-      - "54. 🇳🇱 The Netherlands"
-      - "55. 🇬🇧 United Kingdom"
-      - "56. 🇸🇪 Sweden"
-      - "57. 🇺🇸 United States"
-      - "58. 🇩🇪 Germany"
-      - "59. 🇷🇺 Russia"
-      - "60. 🇩🇪 Germany"
-      - "63. 🇸🇪 Sweden"
-      - "64. 🇺🇸 United States"
-      - "65. 🇸🇪 Sweden"
-      - "66. 🇯🇵 Japan"
-      - "67. 🇺🇸 United States"
-      - "68. 🇸🇪 Sweden"
-      - "69. 🇬🇧 United Kingdom"
-      - "70. 🇭🇰 Hong Kong"
-      - "71. 🇸🇪 Sweden"
-      - "72. 🇸🇬 Singapore"
-      - "73. 🇫🇷 France"
-      - "74. 🇺🇸 United States"
-      - "75. 🇫🇮 Finland"
-      - "76. 🇦🇺 Australia"
-      - "78. 🇷🇺 Russia"
-      - "79. 🇬🇧 United Kingdom"
-      - "82. 🇰🇷 South Korea"
-      - "83. 🇹🇭 Thailand"
-      - "85. 🇷🇺 Russia"
-      - "86. 🇭🇰 Hong Kong"
-      - "87. 🇫🇷 France"
-      - "88. 🇷🇺 Russia"
-      - "92. 🇷🇺 Russia"
-      - "93. 🇭🇰 Hong Kong"
-      - "94. 🇺🇸 United States"
-      - "95. 🇸🇬 Singapore"
-      - "1. 🇳🇱 The Netherlands"
+      - "1. 🇷🇺 Russia"
       - "2. 🇳🇱 The Netherlands"
-      - "5. 🇳🇱 The Netherlands"
-      - "18. 🇳🇱 The Netherlands"
-      - "29. 🇳🇱 The Netherlands"
-      - "46. 🇳🇱 The Netherlands"
-      - "62. 🇳🇱 The Netherlands"
-      - "84. 🇳🇱 The Netherlands"
-      - "43. 🇭🇰 Hong Kong"
-      - "48. 🇭🇰 Hong Kong"
-      - "90. 🇵🇭 Philippines"
-      - "9. 🇫🇷 France"
-      - "22. 🇩🇪 Germany"
-      - "24. 🇯🇵 Japan"
-      - "28. 🇯🇵 Japan"
-      - "38. 🇭🇰 Hong Kong"
+      - "3. 🇷🇺 Russia"
+      - "4. 🇫🇷 France"
+      - "5. 🇷🇺 Russia"
+      - "6. 🇸🇪 Sweden"
+      - "7. 🇭🇰 Hong Kong"
+      - "9. 🇭🇰 Hong Kong"
+      - "10. 🇸🇪 Sweden"
+      - "11. 🇭🇰 Hong Kong"
+      - "12. 🇭🇰 Hong Kong"
+      - "13. 🇸🇪 Sweden"
+      - "14. 🇫🇷 France"
+      - "15. 🇭🇰 Hong Kong"
+      - "16. 🇭🇰 Hong Kong"
+      - "17. 🇭🇰 Hong Kong"
+      - "18. 🇭🇰 Hong Kong"
+      - "19. 🇸🇪 Sweden"
+      - "20. 🇷🇺 Russia"
+      - "22. 🇷🇺 Russia"
+      - "23. 🇭🇰 Hong Kong"
+      - "24. 🇳🇱 The Netherlands"
+      - "25. 🇭🇰 Hong Kong"
+      - "26. 🇭🇰 Hong Kong"
+      - "27. 🇸🇪 Sweden"
+      - "28. 🇷🇺 Russia"
+      - "30. 🇭🇰 Hong Kong"
+      - "31. 🇸🇪 Sweden"
+      - "33. 🇸🇪 Sweden"
+      - "34. 🇭🇰 Hong Kong"
+      - "35. 🇭🇰 Hong Kong"
+      - "37. 🇫🇮 Finland"
+      - "38. 🇺🇸 United States"
+      - "42. 🇸🇪 Sweden"
+      - "45. 🇭🇰 Hong Kong"
+      - "46. 🇭🇰 Hong Kong"
+      - "47. 🇸🇪 Sweden"
+      - "49. 🇭🇰 Hong Kong"
       - "50. 🇭🇰 Hong Kong"
-      - "61. 🇰🇷 South Korea"
-      - "80. 🇰🇷 South Korea"
-      - "81. 🇭🇰 Hong Kong"
-      - "89. 🇮🇪 Ireland"
+      - "51. 🇭🇰 Hong Kong"
+      - "52. 🇭🇰 Hong Kong"
+      - "53. 🇭🇰 Hong Kong"
+      - "54. 🇭🇰 Hong Kong"
+      - "55. 🇭🇰 Hong Kong"
+      - "56. 🇭🇰 Hong Kong"
+      - "59. 🇭🇰 Hong Kong"
+      - "8. 🇭🇰 Hong Kong"
+      - "21. 🇭🇰 Hong Kong"
+      - "29. 🇭🇰 Hong Kong"
+      - "32. 🇭🇰 Hong Kong"
+      - "44. 🇭🇰 Hong Kong"
+      - "48. 🇭🇰 Hong Kong"
+      - "58. 🇭🇰 Hong Kong"
+      - "60. 🇰🇿 Kazakhstan"
+      - "36. 🇭🇰 Hong Kong"
+      - "39. 🇭🇰 Hong Kong"
+      - "41. 🇭🇰 Hong Kong"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
