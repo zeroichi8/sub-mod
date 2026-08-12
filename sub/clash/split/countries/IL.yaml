@@ -499,40 +499,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+158.8ms"
-    type: "ss"
-    server: "45.140.204.75"
-    port: 45635
-    cipher: "chacha20-ietf-poly1305"
-    password: "QxU3Q3O44spzHBb6z3l4OS"
-    udp: true
-  - name: "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
-    type: "trojan"
-    server: "185.239.48.207"
-    port: 443
-    password: "9b934dc3-e441-4e5c-97d6-681747d4d966"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "joss.gpj.web.id"
-    ws-opts:
-      headers:
-        Host: "joss.gpj.web.id"
-  - name: "🇮🇱 Israel"
-    type: "vless"
-    server: "193.202.11.44"
-    port: 443
-    uuid: "06d44c57-8e1a-41f4-b9c4-65d35869e078"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "4usa.skorostnet.space"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o"
-      short-id: "fdda9806fe5d8584"
-  - name: "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+  - name: "🇮🇱 REALITY|IL🇮🇱 | 83.143.106.4-443 | 148.74ms"
     type: "vless"
     server: "83.143.106.4"
     port: 443
@@ -544,6 +511,13 @@ proxies:
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo"
+  - name: "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+166.96ms"
+    type: "ss"
+    server: "45.140.204.75"
+    port: 45635
+    cipher: "chacha20-ietf-poly1305"
+    password: "QxU3Q3O44spzHBb6z3l4OS"
+    udp: true
   - name: "🇮🇱 RU 🇷🇺 | @Raydikalx | 62BD60"
     type: "vless"
     server: "83.143.106.3"
@@ -558,6 +532,18 @@ proxies:
       public-key: "4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo"
     grpc-opts:
       grpc-service-name: "TunService"
+  - name: "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+    type: "trojan"
+    server: "185.239.48.207"
+    port: 443
+    password: "9b934dc3-e441-4e5c-97d6-681747d4d966"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "joss.gpj.web.id"
+    ws-opts:
+      headers:
+        Host: "joss.gpj.web.id"
   - name: "🇮🇱 🇸🇪 Sweden"
     type: "vless"
     server: "rcjip.restaurantbomb.com"
@@ -592,7 +578,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.yahoo.com"
+    servername: "yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -605,7 +591,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "yahoo.com"
+    servername: "www.yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -677,11 +663,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+158.8ms"
-      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
-      - "🇮🇱 Israel"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+      - "🇮🇱 REALITY|IL🇮🇱 | 83.143.106.4-443 | 148.74ms"
+      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+166.96ms"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | 62BD60"
+      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
       - "🇮🇱 🇸🇪 Sweden 3"
@@ -702,11 +687,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+158.8ms"
-      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
-      - "🇮🇱 Israel"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+      - "🇮🇱 REALITY|IL🇮🇱 | 83.143.106.4-443 | 148.74ms"
+      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+166.96ms"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | 62BD60"
+      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
       - "🇮🇱 🇸🇪 Sweden 3"
@@ -726,11 +710,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+158.8ms"
-      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
-      - "🇮🇱 Israel"
-      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+      - "🇮🇱 REALITY|IL🇮🇱 | 83.143.106.4-443 | 148.74ms"
+      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+166.96ms"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | 62BD60"
+      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
       - "🇮🇱 🇸🇪 Sweden 3"
