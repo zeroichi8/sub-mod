@@ -499,13 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+107.16ms"
-    type: "ss"
-    server: "45.140.204.75"
-    port: 45635
-    cipher: "chacha20-ietf-poly1305"
-    password: "QxU3Q3O44spzHBb6z3l4OS"
-    udp: true
   - name: "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
     type: "trojan"
     server: "185.239.48.207"
@@ -518,6 +511,13 @@ proxies:
     ws-opts:
       headers:
         Host: "joss.gpj.web.id"
+  - name: "🇮🇱 🔒 SS-TCP-NA 🇮🇱 IL-45.140.204.75:45635"
+    type: "ss"
+    server: "45.140.204.75"
+    port: 45635
+    cipher: "chacha20-ietf-poly1305"
+    password: "QxU3Q3O44spzHBb6z3l4OS"
+    udp: true
   - name: "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
     type: "vless"
     server: "83.143.106.4"
@@ -551,7 +551,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "yahoo.com"
+    servername: "www.yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -564,7 +564,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.yahoo.com"
+    servername: "yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -590,7 +590,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "yahoo.com"
+    servername: "www.yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -649,8 +649,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+107.16ms"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🇮🇱 🔒 SS-TCP-NA 🇮🇱 IL-45.140.204.75:45635"
       - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
@@ -672,8 +672,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+107.16ms"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🇮🇱 🔒 SS-TCP-NA 🇮🇱 IL-45.140.204.75:45635"
       - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
@@ -694,8 +694,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇱 IL🇮🇱+|+45.140.204.75-45635+|+107.16ms"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🇮🇱 🔒 SS-TCP-NA 🇮🇱 IL-45.140.204.75:45635"
       - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
