@@ -499,19 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇱🇺 RELAY🚩 | feijige.rujiao.icu-443 | 7.33ms"
-    type: "vless"
-    server: "188.42.89.10"
-    port: 443
-    uuid: "05000d14-abf6-45e0-b51a-16469cdea06a"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "feijige.rujiao.icu"
-    ws-opts:
-      path: "/?Telegram-WangCai2"
-      headers:
-        Host: "feijige.rujiao.icu"
   - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
     type: "ss"
     server: "92.38.163.53"
@@ -595,14 +582,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
-    type: "vmess"
-    server: "23.109.136.74"
-    port: 443
-    uuid: "418048af-a293-4b99-9b0c-98ca3580dd24"
-    alterId: 64
-    cipher: "auto"
-    udp: true
   - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
     type: "vless"
     server: "188.42.145.123"
@@ -615,6 +594,20 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/Telegram-WangCai2🇨🇳"
+      headers:
+        Host: "notls.lukongtou.eu.org"
+  - name: "🇱🇺 Russia"
+    type: "vless"
+    server: "188.42.145.123"
+    port: 443
+    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "notls.lukongtou.eu.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Telegram-WangCai2"
       headers:
         Host: "notls.lukongtou.eu.org"
 proxy-groups:
@@ -631,7 +624,6 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇱🇺 RELAY🚩 | feijige.rujiao.icu-443 | 7.33ms"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -640,8 +632,8 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 Russia"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -652,7 +644,6 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇱🇺 RELAY🚩 | feijige.rujiao.icu-443 | 7.33ms"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -661,8 +652,8 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 Russia"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -672,7 +663,6 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇱🇺 RELAY🚩 | feijige.rujiao.icu-443 | 7.33ms"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -681,8 +671,8 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 Russia"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
