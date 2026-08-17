@@ -499,7 +499,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 168.14ms"
+  - name: "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 30.5ms"
     type: "vless"
     server: "92.53.188.36"
     port: 443
@@ -512,17 +512,6 @@ proxies:
       - "h3"
       - "h2"
       - "http/1.1"
-  - name: "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 128.25ms"
-    type: "vless"
-    server: "92.53.188.36"
-    port: 443
-    uuid: "401374e6-df77-41fb-f638-dad8184f175b"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "pqh23v4.hiddendom.shop"
-    alpn:
-      - "h2"
   - name: "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
     type: "vless"
     server: "92.53.188.30"
@@ -547,9 +536,20 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime19.workers.dev"
+  - name: "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
+    type: "vless"
+    server: "92.53.188.36"
+    port: 443
+    uuid: "401374e6-df77-41fb-f638-dad8184f175b"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "pqh23v4.hiddendom.shop"
+    alpn:
+      - "h2"
   - name: "🇸🇮 @DeltaKroneckerGithub"
     type: "vless"
-    server: "92.53.191.123"
+    server: "92.60.74.123"
     port: 443
     uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
     udp: true
@@ -562,7 +562,7 @@ proxies:
         Host: "notls.lukongtou.eu.org"
   - name: "🇸🇮 @DeltaKroneckerGithub-1"
     type: "vless"
-    server: "92.60.74.123"
+    server: "92.53.191.123"
     port: 443
     uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
     udp: true
@@ -587,10 +587,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 168.14ms"
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 128.25ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 30.5ms"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
+      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
       - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 @DeltaKroneckerGithub-1"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -603,10 +603,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 168.14ms"
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 128.25ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 30.5ms"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
+      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
       - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 @DeltaKroneckerGithub-1"
   - name: "توزیع بار چرخشی ⚖️"
@@ -618,10 +618,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 168.14ms"
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 128.25ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 30.5ms"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
+      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
       - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 @DeltaKroneckerGithub-1"
   - name: "المنت 💬"
