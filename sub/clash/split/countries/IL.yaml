@@ -499,6 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇮🇱 IL 🇮🇱 | @Raydikalx | 390362"
+    type: "vless"
+    server: "212.179.49.187"
+    port: 13443
+    uuid: "423b1d79-08c4-403f-9d5e-c541f791b55f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "auto.cendora.ru"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM"
+      short-id: "a7f3c91b2e6d84c0"
   - name: "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
     type: "trojan"
     server: "185.239.48.207"
@@ -532,7 +546,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "yahoo.com"
+    servername: "www.yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -545,7 +559,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "yahoo.com"
+    servername: "www.yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -558,7 +572,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.yahoo.com"
+    servername: "yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -618,18 +632,32 @@ proxies:
     network: "tcp"
   - name: "🇮🇱 @DeltaKroneckerGithub"
     type: "vless"
-    server: "185.159.73.247"
-    port: 443
+    server: "212.179.49.187"
+    port: 13443
     uuid: "423b1d79-08c4-403f-9d5e-c541f791b55f"
     udp: true
     tls: true
     network: "tcp"
-    servername: "eu-central.cendora.ru"
+    servername: "auto.cendora.ru"
     client-fingerprint: "qq"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI"
-      short-id: "00bca5982f82d083"
+      public-key: "gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM"
+      short-id: "a7f3c91b2e6d84c0"
+  - name: "🇮🇱 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "185.95.231.156"
+    port: 443
+    uuid: "2c368215-ac89-4787-9762-edb2c9947630"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "ytnOqGbyUQ3efc25iPD8bJGdXgOi6zdBTP55JIa5OU0"
+      short-id: "964b2a1a"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -644,6 +672,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇮🇱 IL 🇮🇱 | @Raydikalx | 390362"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
@@ -656,6 +685,7 @@ proxy-groups:
       - "🇮🇱 🇸🇪 Sweden 4 - TCP"
       - "🇮🇱 🇳🇱 NL 5 - TCP"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -666,6 +696,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇮🇱 IL 🇮🇱 | @Raydikalx | 390362"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
@@ -678,6 +709,7 @@ proxy-groups:
       - "🇮🇱 🇸🇪 Sweden 4 - TCP"
       - "🇮🇱 🇳🇱 NL 5 - TCP"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -687,6 +719,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇮🇱 IL 🇮🇱 | @Raydikalx | 390362"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🇸🇪 Sweden"
       - "🇮🇱 🇸🇪 Sweden 2"
@@ -699,6 +732,7 @@ proxy-groups:
       - "🇮🇱 🇸🇪 Sweden 4 - TCP"
       - "🇮🇱 🇳🇱 NL 5 - TCP"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
