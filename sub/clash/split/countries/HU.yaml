@@ -499,6 +499,17 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇭🇺 🇫🇷 | @WhiteDNS | FR125|2.5MB/s|GPT⁺-FR|CL-FR|SP-FR"
+    type: "trojan"
+    server: "185.225.68.232"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
   - name: "🇭🇺 @DeltaKroneckerGithub"
     type: "trojan"
     server: "185.225.68.232"
@@ -512,13 +523,19 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.calmlunch.com"
-  - name: "🇭🇺 HU🇭🇺+|+217.70.14.216-8443+|+109.27ms"
-    type: "ss"
-    server: "217.70.14.216"
-    port: 8443
-    cipher: "chacha20-ietf-poly1305"
-    password: "48UQWJVetDr7ETiOXF+aEQ=="
+  - name: "🇭🇺 RELAY🚩 | forfreeuse.rtqa.ru-2053 | 28.01ms"
+    type: "vless"
+    server: "91.219.236.202"
+    port: 2053
+    uuid: "c7e9c591-2764-423a-afca-efbd010fd396"
     udp: true
+    tls: true
+    network: "ws"
+    servername: "forfreeuse.rtqa.ru"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "forfreeuse.rtqa.ru"
   - name: "🇭🇺 HU 🇭🇺 | @Raydikalx | 84BCCE"
     type: "vless"
     server: "152.233.41.31"
@@ -534,30 +551,35 @@ proxies:
       short-id: "10ffb85da1c2d986"
     grpc-opts:
       grpc-service-name: "neurex"
-  - name: "🇭🇺 HU 🇭🇺 | @Raydikalx | 1D9B87"
+  - name: "🇭🇺 HU 🇭🇺 | @Raydikalx | FD564F"
     type: "vless"
-    server: "91.219.236.202"
-    port: 2053
-    uuid: "c7e9c591-2764-423a-afca-efbd010fd396"
+    server: "152.233.41.30"
+    port: 16923
+    uuid: "c065e1bb-cb56-41e5-b043-9dfd15b67565"
     udp: true
     tls: true
-    network: "ws"
-    servername: "forfreeuse.rtqa.ru"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "forfreeuse.rtqa.ru"
-  - name: "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
-    type: "trojan"
-    server: "185.225.68.232"
+    network: "grpc"
+    servername: "api-maps.yandex.ru"
+    reality-opts:
+      public-key: "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA"
+      short-id: "10ffb85da1c2d986"
+    grpc-opts:
+      grpc-service-name: "neurex"
+  - name: "🇭🇺 HU 🇭🇺 | @Raydikalx | 54E3A1"
+    type: "vmess"
+    server: "185.128.26.70"
     port: 443
-    password: "humanity"
+    uuid: "418048af-a293-4b99-9b0c-98ca3580dd24"
+    alterId: 64
+    cipher: "auto"
     udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
+  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-217.70.14.216:8443"
+    type: "ss"
+    server: "217.70.14.216"
+    port: 8443
+    cipher: "chacha20-ietf-poly1305"
+    password: "48UQWJVetDr7ETiOXF+aEQ=="
+    udp: true
   - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
     type: "ss"
     server: "146.70.203.254"
@@ -579,11 +601,13 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇭🇺 🇫🇷 | @WhiteDNS | FR125|2.5MB/s|GPT⁺-FR|CL-FR|SP-FR"
       - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 HU🇭🇺+|+217.70.14.216-8443+|+109.27ms"
+      - "🇭🇺 RELAY🚩 | forfreeuse.rtqa.ru-2053 | 28.01ms"
       - "🇭🇺 HU 🇭🇺 | @Raydikalx | 84BCCE"
-      - "🇭🇺 HU 🇭🇺 | @Raydikalx | 1D9B87"
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 HU 🇭🇺 | @Raydikalx | FD564F"
+      - "🇭🇺 HU 🇭🇺 | @Raydikalx | 54E3A1"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-217.70.14.216:8443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -595,11 +619,13 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇭🇺 🇫🇷 | @WhiteDNS | FR125|2.5MB/s|GPT⁺-FR|CL-FR|SP-FR"
       - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 HU🇭🇺+|+217.70.14.216-8443+|+109.27ms"
+      - "🇭🇺 RELAY🚩 | forfreeuse.rtqa.ru-2053 | 28.01ms"
       - "🇭🇺 HU 🇭🇺 | @Raydikalx | 84BCCE"
-      - "🇭🇺 HU 🇭🇺 | @Raydikalx | 1D9B87"
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 HU 🇭🇺 | @Raydikalx | FD564F"
+      - "🇭🇺 HU 🇭🇺 | @Raydikalx | 54E3A1"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-217.70.14.216:8443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -610,11 +636,13 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇭🇺 🇫🇷 | @WhiteDNS | FR125|2.5MB/s|GPT⁺-FR|CL-FR|SP-FR"
       - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 HU🇭🇺+|+217.70.14.216-8443+|+109.27ms"
+      - "🇭🇺 RELAY🚩 | forfreeuse.rtqa.ru-2053 | 28.01ms"
       - "🇭🇺 HU 🇭🇺 | @Raydikalx | 84BCCE"
-      - "🇭🇺 HU 🇭🇺 | @Raydikalx | 1D9B87"
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 HU 🇭🇺 | @Raydikalx | FD564F"
+      - "🇭🇺 HU 🇭🇺 | @Raydikalx | 54E3A1"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-217.70.14.216:8443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
   - name: "المنت 💬"
     type: "select"

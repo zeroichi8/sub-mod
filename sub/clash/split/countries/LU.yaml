@@ -499,6 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇱🇺 🇩🇪 | @WhiteDNS | DE388|2.8MB/s|GPT⁺-DE|GM-SA|CL-DE|SP-IT"
+    type: "vless"
+    server: "188.42.145.123"
+    port: 443
+    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "notls.lukongtou.eu.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/Telegram-WangCai2🇨🇳"
+      headers:
+        Host: "notls.lukongtou.eu.org"
   - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
     type: "ss"
     server: "92.38.163.53"
@@ -582,30 +596,48 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
-    type: "vless"
-    server: "188.42.145.123"
+  - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
+    type: "vmess"
+    server: "23.109.136.74"
     port: 443
-    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
+    uuid: "418048af-a293-4b99-9b0c-98ca3580dd24"
+    alterId: 64
+    cipher: "auto"
+    udp: true
+  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+    type: "vless"
+    server: "188.42.88.24"
+    port: 2053
+    uuid: "ad313d8e-180d-42ae-b84c-b9c7c44c8b7e"
     udp: true
     tls: true
     network: "ws"
-    servername: "notls.lukongtou.eu.org"
-    client-fingerprint: "chrome"
+    servername: "de.hupcloud.com"
     ws-opts:
-      path: "/Telegram-WangCai2🇨🇳"
       headers:
-        Host: "notls.lukongtou.eu.org"
+        Host: "de.hupcloud.com"
+  - name: "🇱🇺 🔒 VL-TCP-NONE 🇱🇺 LU-80.93.223.38:8020"
+    type: "vless"
+    server: "80.93.223.38"
+    port: 8020
+    uuid: "ad313d8e-180d-42ae-b84c-b9c7c44c8b7e"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇱🇺 @DeltaKroneckerGithub"
     type: "vless"
-    server: "188.42.89.10"
-    port: 443
-    uuid: "05000d14-abf6-45e0-b51a-16469cdea06a"
+    server: "188.42.89.7"
+    port: 8443
+    uuid: "7967bf59-57e3-4cde-9898-527b0fe60022"
     udp: true
     tls: true
     network: "ws"
-    servername: "feijige.rujiao.icu"
+    servername: "speed.dulacloud.store"
     client-fingerprint: "chrome"
+    ws-opts:
+      path: "/dula?Telegram-WangCai2"
+      headers:
+        Host: "speed.dulacloud.store"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -620,6 +652,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇱🇺 🇩🇪 | @WhiteDNS | DE388|2.8MB/s|GPT⁺-DE|GM-SA|CL-DE|SP-IT"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -628,7 +661,9 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 🔒 VL-TCP-NONE 🇱🇺 LU-80.93.223.38:8020"
       - "🇱🇺 @DeltaKroneckerGithub"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -640,6 +675,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇱🇺 🇩🇪 | @WhiteDNS | DE388|2.8MB/s|GPT⁺-DE|GM-SA|CL-DE|SP-IT"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -648,7 +684,9 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 🔒 VL-TCP-NONE 🇱🇺 LU-80.93.223.38:8020"
       - "🇱🇺 @DeltaKroneckerGithub"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -659,6 +697,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇱🇺 🇩🇪 | @WhiteDNS | DE388|2.8MB/s|GPT⁺-DE|GM-SA|CL-DE|SP-IT"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
@@ -667,7 +706,9 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 🔒 VL-TCP-NONE 🇱🇺 LU-80.93.223.38:8020"
       - "🇱🇺 @DeltaKroneckerGithub"
   - name: "المنت 💬"
     type: "select"

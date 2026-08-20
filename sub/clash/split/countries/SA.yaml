@@ -499,7 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇸🇦 SA 🇸🇦 | @Raydikalx | 18158B"
+  - name: "🇸🇦 🔒 VL-WS-NONE 🇸🇦 SA-199.232.123.12:80"
+    type: "vless"
+    server: "199.232.123.12"
+    port: 80
+    uuid: "53fa8faf-ba4b-4322-9c69-a3e5b1555049"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        Host: "CHANNEL---ELiV2RAY-ELiV2RAY.IR"
+  - name: "🇸🇦 🔒 VL-GRPC-RLT 🇸🇦 SA-81.208.170.142:1500"
     type: "vless"
     server: "81.208.170.142"
     port: 1500
@@ -512,10 +524,18 @@ proxies:
     reality-opts:
       public-key: "VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE"
       short-id: "775eb6408888248e"
+  - name: "🇸🇦 🇸🇦 S-Arabia - TCP"
+    type: "vless"
+    server: "mskw.restaurantbomb.com"
+    port: 4765
+    uuid: "8f6fd775-1240-4ae3-ac8a-65cdc48f5075"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇸🇦 🇸🇦 S-Arabia"
     type: "vless"
     server: "mskw.restaurantbomb.com"
-    port: 1758
+    port: 10985
     uuid: "8f6fd775-1240-4ae3-ac8a-65cdc48f5075"
     udp: true
     tls: true
@@ -525,14 +545,6 @@ proxies:
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
       short-id: "b5516a2b1bdcb4f6"
-  - name: "🇸🇦 🇸🇦 S-Arabia - TCP"
-    type: "vless"
-    server: "mskw.restaurantbomb.com"
-    port: 4765
-    uuid: "8f6fd775-1240-4ae3-ac8a-65cdc48f5075"
-    udp: true
-    tls: false
-    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -547,9 +559,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇸🇦 SA 🇸🇦 | @Raydikalx | 18158B"
-      - "🇸🇦 🇸🇦 S-Arabia"
+      - "🇸🇦 🔒 VL-WS-NONE 🇸🇦 SA-199.232.123.12:80"
+      - "🇸🇦 🔒 VL-GRPC-RLT 🇸🇦 SA-81.208.170.142:1500"
       - "🇸🇦 🇸🇦 S-Arabia - TCP"
+      - "🇸🇦 🇸🇦 S-Arabia"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -560,9 +573,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇸🇦 SA 🇸🇦 | @Raydikalx | 18158B"
-      - "🇸🇦 🇸🇦 S-Arabia"
+      - "🇸🇦 🔒 VL-WS-NONE 🇸🇦 SA-199.232.123.12:80"
+      - "🇸🇦 🔒 VL-GRPC-RLT 🇸🇦 SA-81.208.170.142:1500"
       - "🇸🇦 🇸🇦 S-Arabia - TCP"
+      - "🇸🇦 🇸🇦 S-Arabia"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -572,9 +586,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇸🇦 SA 🇸🇦 | @Raydikalx | 18158B"
-      - "🇸🇦 🇸🇦 S-Arabia"
+      - "🇸🇦 🔒 VL-WS-NONE 🇸🇦 SA-199.232.123.12:80"
+      - "🇸🇦 🔒 VL-GRPC-RLT 🇸🇦 SA-81.208.170.142:1500"
       - "🇸🇦 🇸🇦 S-Arabia - TCP"
+      - "🇸🇦 🇸🇦 S-Arabia"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
