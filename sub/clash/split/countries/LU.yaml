@@ -499,18 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇱🇺 RELAY🚩 | de.hupcloud.com-2053 | 29.71ms"
+  - name: "🇱🇺 REALITY|LU🇱🇺 | da2ad3e049b658078.bexqima.ir-443 | 296.66ms"
     type: "vless"
-    server: "188.42.88.24"
-    port: 2053
-    uuid: "ad313d8e-180d-42ae-b84c-b9c7c44c8b7e"
+    server: "da2ad3e049b658078.bexqima.ir"
+    port: 443
+    uuid: "95da2faa-ef78-4662-8ec5-e336003fca1c"
     udp: true
     tls: true
-    network: "ws"
-    servername: "de.hupcloud.com"
-    ws-opts:
-      headers:
-        Host: "de.hupcloud.com"
+    network: "tcp"
+    servername: "amp-api-edge.apps.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zuhecme3slnTVgWk7HC2-gT7A1Xp08r7SIeCgwf_pQI"
+      short-id: "2bc3d20d9550e6fa"
   - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
     type: "ss"
     server: "92.38.163.53"
@@ -518,6 +520,18 @@ proxies:
     cipher: "aes-256-cfb"
     password: "f8f7aCzcPKbsF8p3"
     udp: true
+  - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | 5C39A0"
+    type: "vless"
+    server: "gerf.dearhossein-taktaz.ir"
+    port: 80
+    uuid: "17418657-0f42-4cf3-9785-6e787f2ced04"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "gerf.dearhossein-taktaz.ir"
   - name: "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
     type: "vless"
     server: "188.42.145.90"
@@ -594,14 +608,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
-    type: "vmess"
-    server: "23.109.136.74"
-    port: 443
-    uuid: "418048af-a293-4b99-9b0c-98ca3580dd24"
-    alterId: 64
-    cipher: "auto"
-    udp: true
   - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
     type: "vless"
     server: "188.42.145.123"
@@ -616,21 +622,33 @@ proxies:
       path: "/Telegram-WangCai2🇨🇳"
       headers:
         Host: "notls.lukongtou.eu.org"
-  - name: "🇱🇺 @DeltaKroneckerGithub"
+  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
     type: "vless"
-    server: "188.42.89.7"
-    port: 8443
-    uuid: "7967bf59-57e3-4cde-9898-527b0fe60022"
+    server: "188.42.88.24"
+    port: 2053
+    uuid: "ad313d8e-180d-42ae-b84c-b9c7c44c8b7e"
     udp: true
     tls: true
     network: "ws"
-    servername: "speed.dulacloud.store"
-    client-fingerprint: "chrome"
+    servername: "de.hupcloud.com"
     ws-opts:
-      path: "/dula?Telegram-WangCai2"
       headers:
-        Host: "speed.dulacloud.store"
-  - name: "🇱🇺 @DeltaKroneckerGithub-1"
+        Host: "de.hupcloud.com"
+  - name: "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-85.234.79.174:443"
+    type: "vless"
+    server: "85.234.79.174"
+    port: 443
+    uuid: "95da2faa-ef78-4662-8ec5-e336003fca1c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "amp-api-edge.apps.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "zuhecme3slnTVgWk7HC2-gT7A1Xp08r7SIeCgwf_pQI"
+      short-id: "2bc3d20d9550e6fa"
+  - name: "🇱🇺 @DeltaKroneckerGithub"
     type: "vless"
     server: "188.42.145.123"
     port: 443
@@ -657,8 +675,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇱🇺 RELAY🚩 | de.hupcloud.com-2053 | 29.71ms"
+      - "🇱🇺 REALITY|LU🇱🇺 | da2ad3e049b658078.bexqima.ir-443 | 296.66ms"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | 5C39A0"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | B97BDC"
@@ -666,10 +685,10 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-85.234.79.174:443"
       - "🇱🇺 @DeltaKroneckerGithub"
-      - "🇱🇺 @DeltaKroneckerGithub-1"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -680,8 +699,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇱🇺 RELAY🚩 | de.hupcloud.com-2053 | 29.71ms"
+      - "🇱🇺 REALITY|LU🇱🇺 | da2ad3e049b658078.bexqima.ir-443 | 296.66ms"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | 5C39A0"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | B97BDC"
@@ -689,10 +709,10 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-85.234.79.174:443"
       - "🇱🇺 @DeltaKroneckerGithub"
-      - "🇱🇺 @DeltaKroneckerGithub-1"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -702,8 +722,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇱🇺 RELAY🚩 | de.hupcloud.com-2053 | 29.71ms"
+      - "🇱🇺 REALITY|LU🇱🇺 | da2ad3e049b658078.bexqima.ir-443 | 296.66ms"
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | DEDADE"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | 5C39A0"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 8A0392"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | EB3D55"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | B97BDC"
@@ -711,10 +732,10 @@ proxy-groups:
       - "🇱🇺 LU 🇱🇺 | @Raydikalx | CF6140"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 703A7F"
       - "🇱🇺 NL 🇳🇱 | @Raydikalx | 3A8E6D"
-      - "🇱🇺 LU 🇱🇺 | @Raydikalx | C9443B"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
+      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.88.24:2053"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-85.234.79.174:443"
       - "🇱🇺 @DeltaKroneckerGithub"
-      - "🇱🇺 @DeltaKroneckerGithub-1"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
