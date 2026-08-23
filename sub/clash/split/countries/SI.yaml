@@ -499,7 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 79.32ms"
+  - name: "🇸🇮 RELAY🚩 | vms.lifetime19.workers.dev-8880 | 16.95ms"
+    type: "vless"
+    server: "92.53.189.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime19.workers.dev"
+  - name: "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 131.44ms"
     type: "vless"
     server: "92.53.188.36"
     port: 443
@@ -512,7 +524,7 @@ proxies:
       - "h3"
       - "h2"
       - "http/1.1"
-  - name: "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 43.65ms"
+  - name: "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 146.78ms"
     type: "vless"
     server: "92.53.188.36"
     port: 443
@@ -523,46 +535,7 @@ proxies:
     servername: "pqh23v4.hiddendom.shop"
     alpn:
       - "h2"
-  - name: "🇸🇮 🔒 VL-WS-TLS 🇸🇮 SI-92.53.188.172:443"
-    type: "vless"
-    server: "92.53.188.172"
-    port: 443
-    uuid: "50414e45-4c5f-5a45-5553-c4fa02327c73"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "7fzlk2egu60s.aozgheefu22s.workers.dev"
-    client-fingerprint: "android"
-    ws-opts:
-      path: "/stream/PANEL_ZEUS/c4fa02327c73/loc-1"
-      headers:
-        Host: "7fzlk2egu60s.aozgheefu22s.workers.dev"
-  - name: "🇸🇮 🔒 VL-WS-NA 🇸🇮 SI-92.53.189.40:8880"
-    type: "vless"
-    server: "92.53.189.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime19.workers.dev"
   - name: "🇸🇮 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "92.53.191.123"
-    port: 443
-    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "notls.lukongtou.eu.org"
-    ws-opts:
-      path: "Telegram-WangCai2"
-      headers:
-        Host: "notls.lukongtou.eu.org"
-  - name: "🇸🇮 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "92.53.189.2"
     port: 443
@@ -575,9 +548,22 @@ proxies:
       path: "/sg-amz"
       headers:
         Host: "support.zoom.us.yxls.eu.cc"
-  - name: "🇸🇮 @DeltaKroneckerGithub-2"
+  - name: "🇸🇮 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "92.60.74.123"
+    port: 443
+    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "notls.lukongtou.eu.org"
+    ws-opts:
+      path: "Telegram-WangCai2"
+      headers:
+        Host: "notls.lukongtou.eu.org"
+  - name: "🇸🇮 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "92.53.191.123"
     port: 443
     uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
     udp: true
@@ -602,10 +588,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 79.32ms"
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 43.65ms"
-      - "🇸🇮 🔒 VL-WS-TLS 🇸🇮 SI-92.53.188.172:443"
-      - "🇸🇮 🔒 VL-WS-NA 🇸🇮 SI-92.53.189.40:8880"
+      - "🇸🇮 RELAY🚩 | vms.lifetime19.workers.dev-8880 | 16.95ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 131.44ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 146.78ms"
       - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 @DeltaKroneckerGithub-1"
       - "🇸🇮 @DeltaKroneckerGithub-2"
@@ -619,10 +604,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 79.32ms"
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 43.65ms"
-      - "🇸🇮 🔒 VL-WS-TLS 🇸🇮 SI-92.53.188.172:443"
-      - "🇸🇮 🔒 VL-WS-NA 🇸🇮 SI-92.53.189.40:8880"
+      - "🇸🇮 RELAY🚩 | vms.lifetime19.workers.dev-8880 | 16.95ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 131.44ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 146.78ms"
       - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 @DeltaKroneckerGithub-1"
       - "🇸🇮 @DeltaKroneckerGithub-2"
@@ -635,10 +619,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 79.32ms"
-      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 43.65ms"
-      - "🇸🇮 🔒 VL-WS-TLS 🇸🇮 SI-92.53.188.172:443"
-      - "🇸🇮 🔒 VL-WS-NA 🇸🇮 SI-92.53.189.40:8880"
+      - "🇸🇮 RELAY🚩 | vms.lifetime19.workers.dev-8880 | 16.95ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 131.44ms"
+      - "🇸🇮 US🇺🇸 | pqh23v4.hiddendom.shop-443 | 146.78ms"
       - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 @DeltaKroneckerGithub-1"
       - "🇸🇮 @DeltaKroneckerGithub-2"

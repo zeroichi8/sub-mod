@@ -499,17 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇲🇽 MX🇲🇽 | ul-mexico1.09vpn.com-8443 | 139.05ms"
-    type: "vless"
-    server: "45.134.9.133"
-    port: 8443
-    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ul-mexico1.09vpn.com"
-    ws-opts:
-      path: "/vless/"
   - name: "🇲🇽 🇲🇽 - MX - @FreeOnlineVPN"
     type: "ss"
     server: "89.223.88.33"
@@ -524,7 +513,28 @@ proxies:
     cipher: "aes-256-cfb"
     password: "f8f7aCzcPKbsF8p3"
     udp: true
+  - name: "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-45.134.9.133:8443"
+    type: "vless"
+    server: "45.134.9.133"
+    port: 8443
+    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ul-mexico1.09vpn.com"
+    ws-opts:
+      path: "/vless/"
   - name: "🇲🇽 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "ul-mexico1.09vpn.com"
+    port: 8443
+    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇲🇽 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "ul-mexico1.09vpn.com"
     port: 8443
@@ -537,16 +547,6 @@ proxies:
       path: "/vless/"
       headers:
         Host: "ul-mexico1.09vpn.com"
-  - name: "🇲🇽 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "ul-mexico1.09vpn.com"
-    port: 8443
-    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
-    udp: true
-    tls: true
-    network: "ws"
-    ws-opts:
-      path: "/vless/"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -561,9 +561,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇲🇽 MX🇲🇽 | ul-mexico1.09vpn.com-8443 | 139.05ms"
       - "🇲🇽 🇲🇽 - MX - @FreeOnlineVPN"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 483986"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-45.134.9.133:8443"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -576,9 +576,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇲🇽 MX🇲🇽 | ul-mexico1.09vpn.com-8443 | 139.05ms"
       - "🇲🇽 🇲🇽 - MX - @FreeOnlineVPN"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 483986"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-45.134.9.133:8443"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
   - name: "توزیع بار چرخشی ⚖️"
@@ -590,9 +590,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇲🇽 MX🇲🇽 | ul-mexico1.09vpn.com-8443 | 139.05ms"
       - "🇲🇽 🇲🇽 - MX - @FreeOnlineVPN"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 483986"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-45.134.9.133:8443"
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
   - name: "المنت 💬"
