@@ -499,7 +499,70 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "1. 🇧🇷 Brazil"
+  - name: "1. 🇩🇪 Germany"
+    type: "vless"
+    server: "63.187.217.79"
+    port: 22223
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "2. 🇩🇪 Germany"
+    type: "vless"
+    server: "63.187.217.79"
+    port: 22224
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "3. 🇩🇪 Germany"
+    type: "vless"
+    server: "35.156.140.181"
+    port: 22223
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "4. 🇩🇪 Germany"
+    type: "vless"
+    server: "63.187.217.79"
+    port: 22222
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "5. 🇩🇪 Germany"
+    type: "vless"
+    server: "35.156.140.181"
+    port: 22222
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "6. 🇧🇷 Brazil"
+    type: "vless"
+    server: "200.165.234.62"
+    port: 4100
+    uuid: "5383fb97-1178-4709-9a25-b767b743e911"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/v1"
+  - name: "13. 🇧🇷 Brazil"
+    type: "vless"
+    server: "200.165.234.119"
+    port: 2200
+    uuid: "936b7663-a841-4b42-b639-6e3fab1dbf45"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/v1"
+      headers:
+        Host: "rzd.ru"
+  - name: "14. 🇧🇷 Brazil"
     type: "vless"
     server: "200.165.234.119"
     port: 2200
@@ -509,35 +572,7 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/v1"
-  - name: "2. 🇬🇧 United Kingdom"
-    type: "vless"
-    server: "51.158.206.98"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "4. 🇧🇷 Brazil"
-    type: "vless"
-    server: "85.155.226.210"
-    port: 443
-    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "getsavesafe.net"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
-      short-id: "82f5d3a1e9c0b661"
-  - name: "5. 🇧🇷 Brazil"
+  - name: "15. 🇧🇷 Brazil"
     type: "vless"
     server: "200.165.234.119"
     port: 2200
@@ -549,756 +584,7 @@ proxies:
     client-fingerprint: "edge"
     ws-opts:
       path: "/v1"
-  - name: "8. 🇧🇷 Brazil"
-    type: "vless"
-    server: "201.24.49.79"
-    port: 4100
-    uuid: "3b4274c1-4744-452e-9903-e11ccc0c9900"
-    udp: true
-    tls: false
-    network: "ws"
-    client-fingerprint: "edge"
-    ws-opts:
-      path: "/v1"
-      headers:
-        Host: "live.ok.ru"
-  - name: "9. 🇧🇷 Brazil"
-    type: "vless"
-    server: "201.24.49.79"
-    port: 2200
-    uuid: "3b4274c1-4744-452e-9903-e11ccc0c9900"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/v1"
-      headers:
-        Host: "rzd.ru"
-  - name: "10. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.17.28.89"
-    port: 443
-    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "workspace.evan00.dpdns.org"
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "workspace.evan00.dpdns.org"
-  - name: "11. 🇸🇪 Sweden"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 8080
-    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/fp=randomized"
-      headers:
-        Host: "workspace.evan00.dpdns.org"
-  - name: "12. 🇫🇮 Finland"
-    type: "vless"
-    server: "104.18.40.152"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "13. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.53.42"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "14. 🇷🇺 Russia"
-    type: "vless"
-    server: "172.64.52.30"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-  - name: "16. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.72.41"
-    port: 80
-    uuid: "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/http"
-      headers:
-        Host: "de.vpnbase.net"
-  - name: "17. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.16.150.246"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "20. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.16.150.108"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "21. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.19.229.21"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "22. 🇨🇭 Switzerland"
-    type: "vless"
-    server: "45.195.2.133"
-    port: 8443
-    uuid: "19b64e79-73b4-4478-bbfc-fb57737b94f8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8qHRGcCezzSu4S-Cz9l19BNRLWm4MkaSwZV3dNrLEwc"
-      short-id: "445ab326fc7c90ac"
-  - name: "24. 🇧🇷 Brazil"
-    type: "vless"
-    server: "201.24.49.233"
-    port: 2200
-    uuid: "714e1212-6707-471e-9f40-2fbd3d8d3b4b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/v1"
-      headers:
-        Host: "rzd.ru"
-  - name: "25. 🇧🇷 Brazil"
-    type: "vless"
-    server: "200.165.234.119"
-    port: 2200
-    uuid: "936b7663-a841-4b42-b639-6e3fab1dbf45"
-    udp: true
-    tls: false
-    network: "ws"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/v1"
-      headers:
-        Host: "rzd.ru"
-  - name: "26. 🇧🇷 Brazil"
-    type: "vless"
-    server: "201.24.49.233"
-    port: 4100
-    uuid: "714e1212-6707-471e-9f40-2fbd3d8d3b4b"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/v1"
-      headers:
-        Host: "live.ok.ru"
-  - name: "27. 🇩🇪 Germany"
-    type: "vless"
-    server: "cf.levikogjgfdd.ir"
-    port: 2053
-    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "po.fastbrokencompony.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/?ed=2053"
-      headers:
-        Host: "po.fastbrokencompony.com"
-  - name: "29. 🇩🇪 Germany"
-    type: "vless"
-    server: "www.speedtest.net"
-    port: 443
-    uuid: "903daa6f-534c-4f4a-bbc8-024993f5cb01"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ptr.cyberbear.io"
-    client-fingerprint: "random"
-    ws-opts:
-      path: "/CMlsadnCISdss"
-      headers:
-        Host: "ptr.cyberbear.io"
-  - name: "31. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.80.73"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "32. 🇸🇪 Sweden"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 443
-    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "workspace.evan00.dpdns.org"
-    client-fingerprint: "unsafe"
-    ws-opts:
-      path: "%2F"
-      headers:
-        Host: "workspace.evan00.dpdns.org"
-  - name: "34. 🇸🇪 Sweden"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 443
-    uuid: "0b06f318-ab9d-4de7-8779-360bd5f7ea67"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ed8d.wdz.de5.net"
-    client-fingerprint: "unsafe"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ed8d.wdz.de5.net"
-  - name: "38. 🇧🇷 Brazil"
-    type: "vless"
-    server: "85.155.226.137"
-    port: 443
-    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "getsavesafe.net"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
-      short-id: "82f5d3a1e9c0b661"
-  - name: "39. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.63.25"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "40. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.90.120"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "41. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.18.139.67"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "42. 🇩🇪 Germany"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 2053
-    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "po.fastbrokencompony.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/?ed=2053"
-      headers:
-        Host: "po.fastbrokencompony.com"
-  - name: "43. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.17.21.111"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "44. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.75.99"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "germany-2.ariyuz.org"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "germany-2.ariyuz.org"
-  - name: "45. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.89.120"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "46. 🇺🇸 United States"
-    type: "vless"
-    server: "45.131.212.57"
-    port: 443
-    uuid: "5322390f-20ee-49e4-9b38-51fc1b5a1758"
-    udp: true
-    tls: true
-    network: "tcp "
-    servername: "abuse.sellflow.org"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "47. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.117.43"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "48. 🇩🇪 Germany"
-    type: "vless"
-    server: "www.speedtest.net"
-    port: 443
-    uuid: "903daa6f-534c-4f4a-bbc8-024993f5cb01"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ptr.cyberbear.io"
-    client-fingerprint: "random"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/CMlsadnCISdss"
-      headers:
-        Host: "ptr.cyberbear.io"
-  - name: "49. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.18.42.54"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "50. 🇸🇪 Sweden"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 8080
-    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "workspace.evan00.dpdns.org"
-  - name: "52. 🇩🇪 Germany"
-    type: "vless"
-    server: "188.114.96.19"
-    port: 2053
-    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "po.fastbrokencompony.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-  - name: "54. 🇬🇧 United Kingdom"
-    type: "vless"
-    server: "it-two.letsgodance.site"
-    port: 443
-    uuid: "5d36ddf8-dde5-4b2d-8213-d3255f22a0f1"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "it-two.letsgodance.site"
-    client-fingerprint: "edge"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "K8LxbhrcgxM7bIW8SGKmEvqn-zbAGqyi4G37_u-kbh4"
-      short-id: "c2b104f3483063c5"
-  - name: "59. 🇺🇸 United States"
-    type: "vless"
-    server: "www.fbi.gov"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "www.fbi.gov"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fuckingfangbinxing.pusytroller.cf"
-  - name: "60. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.75.99"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "germany-2.ariyuz.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "germany-2.ariyuz.org"
-  - name: "61. 🇩🇪 Germany"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 2053
-    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "po.fastbrokencompony.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "po.fastbrokencompony.com"
-  - name: "63. 🇺🇸 United States"
-    type: "vless"
-    server: "129.121.95.159"
-    port: 443
-    uuid: "f6190ff2-864c-46cf-ac16-93908c069b75"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "129.121.95.159"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/connect#TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512"
-      headers:
-        Host: "129.121.95.159"
-  - name: "64. 🇺🇸 United States"
-    type: "vless"
-    server: "www.fbi.gov"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fuckingfangbinxing.pusytroller.cf"
-  - name: "66. 🇩🇪 Germany"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 2053
-    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "po.fastbrokencompony.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "po.fastbrokencompony.com"
-  - name: "68. 🇩🇪 Germany"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "69. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.79.73"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "71. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.63.25"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "germany-2.ariyuz.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "germany-2.ariyuz.org"
-  - name: "77. 🇺🇸 United States"
-    type: "vless"
-    server: "66.175.217.170"
-    port: 443
-    uuid: "b98d4c6e-6770-4a31-8256-a4750cdea0e7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.amazon.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo"
-      short-id: "1a"
-  - name: "78. 🇭🇰 Hong Kong"
-    type: "vless"
-    server: "rough-mouse-2a3a.424-e94.workers.dev"
-    port: 8880
-    uuid: "70ca8aec-42ba-41df-a874-ec9517053dec"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/pyip=ProxyIP.JP.CMLiussss.net"
-  - name: "79. 🇺🇸 United States"
-    type: "vless"
-    server: "188.114.97.6"
-    port: 443
-    uuid: "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "a.cwvps.eu.org"
-    client-fingerprint: "unsafe"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "a.cwvps.eu.org"
-  - name: "81. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.118.43"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "de-new.ariyuz.org"
-    ws-opts:
-      path: "/"
-  - name: "84. 🇺🇸 United States"
-    type: "vless"
-    server: "129.121.95.159"
-    port: 443
-    uuid: "f6190ff2-864c-46cf-ac16-93908c069b75"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "129.121.95.159"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/connect"
-      headers:
-        Host: "129.121.95.159"
-  - name: "86. 🇩🇪 Germany"
-    type: "vless"
-    server: "104.16.63.25"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "germany-2.ariyuz.org"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "germany-2.ariyuz.org"
-  - name: "88. 🇭🇰 Hong Kong"
-    type: "vless"
-    server: "43.161.225.44"
-    port: 443
-    uuid: "904183f1-0495-478b-b11f-1fe12e84ad8b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "j0mfhbzohqV1W_PaNeYyKEVuaiK1-A9k2AQJQK7ZDzQ"
-      short-id: "4aeab483de4dd53a"
-  - name: "91. 🇭🇰 Hong Kong"
-    type: "vless"
-    server: "ed8d.wdz.de5.net"
-    port: 443
-    uuid: "0b06f318-ab9d-4de7-8779-360bd5f7ea67"
-    udp: true
-    tls: true
-    network: "ws"
-    ws-opts:
-      path: "/"
-  - name: "92. 🇺🇸 United States"
-    type: "vless"
-    server: "cf.090227.xyz"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fuckingfangbinxing.pusytroller.cf"
-  - name: "93. 🇯🇵 Japan"
-    type: "vless"
-    server: "13.193.205.133"
-    port: 27407
-    uuid: "cd5cf6e7-7ce5-42c9-9316-68210fa72a32"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "bgcpartners.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04"
-      short-id: "e6ac18b63f23"
-  - name: "97. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.16.150.108"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-  - name: "98. 🇸🇪 Sweden"
-    type: "vless"
-    server: "104.16.228.202"
-    port: 2053
-    uuid: "50414e45-4c5f-5a45-5553-e0dfede8abc0"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "xoz60debusrs.lezuwaeiunjs.workers.dev"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/stream/PANEL_ZEUS/e0dfede8abc0"
-      headers:
-        Host: "xoz60debusrs.lezuwaeiunjs.workers.dev"
-  - name: "99. 🇸🇪 Sweden"
-    type: "vless"
-    server: "172.64.149.209"
-    port: 2087
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "100. 🇷🇺 Russia"
+  - name: "16. 🇷🇺 Russia"
     type: "vless"
     server: "172.64.52.68"
     port: 2087
@@ -1312,154 +598,232 @@ proxies:
       path: "/"
       headers:
         Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "102. 🇯🇵 Japan"
+  - name: "17. 🇷🇺 Russia"
     type: "vless"
-    server: "jpaws.ccwink.photos"
-    port: 53113
-    uuid: "a157bb84-dd84-4ad8-86b0-0656bc76e4d1"
+    server: "162.251.82.131"
+    port: 443
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "docs.aws.amazon.com"
+    network: "ws"
+    servername: "workspace.evan00.dpdns.org"
     client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "BdFiTcTZt1oIRD_Q04KnxPjs_1cZFqjV-sbVGP49PVY"
-      short-id: "238ba3b9e8"
-  - name: "103. 🇲🇴 Macao"
+    ws-opts:
+      path: "/"
+  - name: "18. 🇷🇺 Russia"
     type: "vless"
-    server: "jpaws.ccwink.photos"
-    port: 6897
-    uuid: "a157bb84-dd84-4ad8-86b0-0656bc76e4d1"
+    server: "172.64.52.30"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "docs.aws.amazon.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "X2thmYgL8pXZBmFxMOPo3oIYAga5CTMEd-YMcJHk4Es"
-      short-id: "54efd54cf3e7"
-  - name: "107. 🇺🇸 United States"
-    type: "vless"
-    server: "nmslfangbinxing.pusytroller.gq"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
     network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "nmslfangbinxing.pusytroller.gq"
-  - name: "109. 🇺🇸 United States"
-    type: "vless"
-    server: "fuckfangbinxing.pusytroller.gq"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "fuckfangbinxing.pusytroller.gq"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fuckfangbinxing.pusytroller.gq"
-  - name: "110. 🇺🇸 United States"
-    type: "vless"
-    server: "www.wto.org"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fuckingfangbinxing.pusytroller.cf"
-  - name: "111. 🇺🇸 United States"
-    type: "vless"
-    server: "fuckfangbinxing.pusytroller.gq"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "fuckfangbinxing.pusytroller.gq"
-  - name: "113. 🇺🇸 United States"
-    type: "vless"
-    server: "nmslfangbinxing.pusytroller.gq"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
-    network: "ws"
-  - name: "114. 🇩🇪 Germany"
-    type: "vless"
-    server: "185.141.227.228"
-    port: 2027
-    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo"
-      short-id: "8d3293f0066e129a"
-  - name: "115. 🇺🇸 United States"
-    type: "vless"
-    server: "fuckfangbinxing.pusytroller.gq"
-    port: 2095
-    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
-    udp: true
-    tls: false
-    network: "ws"
-  - name: "117. 🇸🇬 Singapore"
-    type: "vless"
-    server: "jpaws.ccwink.photos"
-    port: 64294
-    uuid: "a157bb84-dd84-4ad8-86b0-0656bc76e4d1"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "docs.aws.amazon.com"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
     client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "19. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.52.24"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+  - name: "20. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.52.175"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+  - name: "21. 🇸🇪 Sweden"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 8080
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/fp=randomized"
+      headers:
+        Host: "workspace.evan00.dpdns.org"
+  - name: "22. 🇸🇪 Sweden"
+    type: "vless"
+    server: "172.64.149.209"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "23. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.53.60"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "24. 🇸🇪 Sweden"
+    type: "vless"
+    server: "172.64.145.202"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "25. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.19.214.97"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "26. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.53.74"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "27. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.18.42.54"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "28. 🇩🇪 Germany"
+    type: "vless"
+    server: "ads.yandex-cloud.org"
+    port: 443
+    uuid: "5e50f2b6-0cf8-4cc5-b68a-1c47b89bd257"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.yandex-cloud.org"
+    client-fingerprint: "edge"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "KmcS-yU6kDycbSojXgUYU1-fHwXmF1oBk_ke0gbGUy0"
-      short-id: "7083"
-  - name: "119. 🇩🇪 Germany"
+      public-key: "IuvAXlAWBpeXehmEk0P-FIGTctUhny2H3UilbWWfJC0"
+      short-id: "122218f4c1f172e4"
+  - name: "31. 🇸🇪 Sweden"
     type: "vless"
-    server: "104.16.75.44"
-    port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    server: "104.16.150.108"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
     udp: true
     tls: true
     network: "ws"
-    servername: "de-new.ariyuz.org"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/"
-  - name: "121. 🇩🇪 Germany"
+  - name: "32. 🇳🇱 The Netherlands"
     type: "vless"
-    server: "104.16.7.70"
+    server: "202.71.14.156"
     port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    uuid: "d2247622-e6d2-4195-8270-55cdb709f35c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "nt02.hirbilon.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "7ktX54khBm6yULcC-MYNj_qElBu6hwmcAsJjP5UcXHk"
+      short-id: "05f6a5418c2a6865"
+  - name: "33. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.16.150.108"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
     udp: true
     tls: true
     network: "ws"
-    servername: "de-new.ariyuz.org"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/"
-  - name: "122. 🇷🇺 Russia"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "34. 🇸🇪 Sweden"
     type: "vless"
-    server: "109.73.192.29"
+    server: "172.64.147.104"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "35. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.17.28.89"
+    port: 443
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "workspace.evan00.dpdns.org"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "workspace.evan00.dpdns.org"
+  - name: "36. 🇷🇺 Russia"
+    type: "vless"
+    server: "81.200.144.27"
     port: 4100
-    uuid: "47f2ac7a-7bc6-4d4c-b4f2-c4681da7f231"
+    uuid: "f0528a17-863f-4160-a5a0-0d9ad03f2ee7"
     udp: true
     tls: false
     network: "ws"
@@ -1467,23 +831,192 @@ proxies:
       path: "/v1"
       headers:
         Host: "live.ok.ru"
-  - name: "123. 🇩🇪 Germany"
+  - name: "37. 🇫🇮 Finland"
     type: "vless"
-    server: "104.16.75.99"
+    server: "104.18.40.152"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "38. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.52.182"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "39. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.52.30"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "40. 🇸🇪 Sweden"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 8080
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "workspace.evan00.dpdns.org"
+  - name: "41. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.19.214.146"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "42. 🇸🇪 Sweden"
+    type: "vless"
+    server: "172.64.145.93"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fx3h2kf8xn.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fx3h2kf8xn.fx6hsv0.ccwu.cc"
+  - name: "43. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.18.38.47"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "44. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.146.211"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "45. 🇩🇪 Germany"
+    type: "vless"
+    server: "45.8.211.57"
     port: 443
     uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
     udp: true
     tls: true
     network: "ws"
-    servername: "germany-2.ariyuz.org"
+    servername: "de-new.ariyuz.org"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/"
+  - name: "46. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.19.215.97"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
     client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
     ws-opts:
       path: "/"
       headers:
-        Host: "germany-2.ariyuz.org"
-  - name: "124. 🇧🇷 Brazil"
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "47. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.52.175"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "48. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.46"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "49. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.52.230"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "50. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.53.227"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "51. 🇧🇷 Brazil"
     type: "vless"
     server: "85.155.226.174"
     port: 443
@@ -1497,35 +1030,185 @@ proxies:
     reality-opts:
       public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
       short-id: "82f5d3a1e9c0b661"
-  - name: "126. 🇩🇪 Germany"
+  - name: "53. 🇸🇪 Sweden"
     type: "vless"
-    server: "185.141.227.228"
-    port: 2027
-    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
+    server: "www.shopify.com"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
     udp: true
     tls: true
-    network: "raw"
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo"
-      short-id: "dc8109baf0f607ea"
-  - name: "129. 🇹🇼 Taiwan"
+    network: "ws"
+    servername: "fx3h2kf8xn.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "fx3h2kf8xn.fx6hsv0.ccwu.cc"
+  - name: "54. 🇸🇪 Sweden"
     type: "vless"
-    server: "jpaws.ccwink.photos"
-    port: 39777
-    uuid: "a157bb84-dd84-4ad8-86b0-0656bc76e4d1"
+    server: "188.114.97.6"
+    port: 443
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "docs.aws.amazon.com"
+    network: "ws"
+    servername: "workspace.evan00.dpdns.org"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "%2F"
+      headers:
+        Host: "workspace.evan00.dpdns.org"
+  - name: "56. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.16.150.7"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "57. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.44"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "58. 🇩🇪 Germany"
+    type: "vless"
+    server: "51.77.76.61"
+    port: 8444
+    uuid: "1f619326-cd93-4d6b-aebe-e0b5f8831d02"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "link.meshbeat.online"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/api/v1/devices/ff3c56308c/telemetry"
+      headers:
+        Host: "link.meshbeat.online"
+  - name: "60. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.68"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "germany-2.ariyuz.org"
+  - name: "61. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.17.28.89"
+    port: 443
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "workspace.evan00.dpdns.org"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "workspace.evan00.dpdns.org"
+  - name: "64. 🇩🇪 Germany"
+    type: "vless"
+    server: "ns3.zabidat.ir"
+    port: 443
+    uuid: "903daa6f-534c-4f4a-bbc8-024993f5cb01"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ptr.cyberbear.io"
+    ws-opts:
+      path: "/CMlsadnCISdss"
+      headers:
+        Host: "ptr.cyberbear.io"
+  - name: "66. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.118.43"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "67. 🇩🇪 Germany"
+    type: "vless"
+    server: "51.77.76.61"
+    port: 8444
+    uuid: "1f619326-cd93-4d6b-aebe-e0b5f8831d02"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "link.meshbeat.online"
     client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "g34pLEPfAcoh-gu60CCUfUAVr0bEjlexzNIYPujm0Xw"
-      short-id: "e84cf8eb3d"
-  - name: "130. 🇩🇪 Germany"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/api/v1/devices/ff3c56308c/telemetry"
+      headers:
+        Host: "link.meshbeat.online"
+  - name: "68. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.80.73"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "69. 🇩🇪 Germany"
+    type: "vless"
+    server: "link.meshbeat.online"
+    port: 8444
+    uuid: "1f619326-cd93-4d6b-aebe-e0b5f8831d02"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "link.meshbeat.online"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/api/v1/devices/ff3c56308c/telemetry"
+      headers:
+        Host: "link.meshbeat.online"
+  - name: "70. 🇷🇺 Russia"
+    type: "vless"
+    server: "162.251.82.131"
+    port: 443
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "workspace.evan00.dpdns.org"
+    client-fingerprint: "firefox"
+  - name: "71. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.46"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+  - name: "72. 🇩🇪 Germany"
     type: "vless"
     server: "www.speedtest.net"
     port: 443
@@ -1543,17 +1226,1161 @@ proxies:
       path: "/CMlsadnCISdss#TELEGRAM-mehrosaboran?ed=2560"
       headers:
         Host: "ptr.cyberbear.io"
-  - name: "135. 🇷🇺 Russia"
+  - name: "73. 🇷🇺 Russia"
     type: "vless"
-    server: "194.26.229.157"
-    port: 2200
-    uuid: "c05888f0-4029-45c8-bea7-ea5eff564462"
+    server: "172.64.53.42"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "74. 🇫🇮 Finland"
+    type: "vless"
+    server: "65.109.211.136"
+    port: 30551
+    uuid: "e951ae39-2240-40ca-be13-9f862c3de3ce"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "76. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.44"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+  - name: "77. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.6.70"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "78. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.16.150.246"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "80. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.18.1.18"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org."
+    client-fingerprint: "ios"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "germany-2.ariyuz.org."
+  - name: "81. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.19.229.21"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "82. 🇷🇺 Russia"
+    type: "vless"
+    server: "172.64.52.97"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "83. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.90.120"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "84. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.63.25"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "85. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.7.70"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "86. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.18.139.67"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "87. 🇷🇺 Russia"
+    type: "vless"
+    server: "104.18.42.163"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "fx3h2kf8xn.fx6hsv0.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fx3h2kf8xn.fx6hsv0.ccwu.cc"
+  - name: "88. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.99"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "germany-2.ariyuz.org"
+  - name: "89. 🇩🇪 Germany"
+    type: "vless"
+    server: "188.114.96.19"
+    port: 2053
+    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "po.fastbrokencompony.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+  - name: "91. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.89.120"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "93. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.79.73"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "94. 🇩🇪 Germany"
+    type: "vless"
+    server: "link.meshbeat.online"
+    port: 8444
+    uuid: "1f619326-cd93-4d6b-aebe-e0b5f8831d02"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "link.meshbeat.online"
+    client-fingerprint: "firefox"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/api/v1/devices/ff3c56308c/telemetry"
+      headers:
+        Host: "link.meshbeat.online"
+  - name: "95. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.117.43"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "96. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.68"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "germany-2.ariyuz.org"
+  - name: "99. 🇸🇪 Sweden"
+    type: "vless"
+    server: "cf.090227.xyz"
+    port: 443
+    uuid: "5b374761-e26c-4117-8af8-5c637992fcbf"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "vls.baiyi.cloudns.org"
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: "vls.baiyi.cloudns.org"
+  - name: "101. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.99"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "germany-2.ariyuz.org"
+  - name: "103. 🇺🇸 United States"
+    type: "vless"
+    server: "104.18.28.234"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "download.pusytroller.gq"
+  - name: "104. 🇺🇸 United States"
+    type: "vless"
+    server: "104.16.72.41"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckfangbinxing.pusytroller.gq"
+  - name: "105. 🇺🇸 United States"
+    type: "vless"
+    server: "104.18.42.163"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "download.pusytroller.gq"
+  - name: "108. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.63.25"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "germany-2.ariyuz.org"
+  - name: "110. 🇺🇸 United States"
+    type: "vless"
+    server: "172.67.202.17"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckfangbinxing.pusytroller.gq"
+  - name: "111. 🇺🇸 United States"
+    type: "vless"
+    server: "www.fbi.gov"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "www.fbi.gov"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckingfangbinxing.pusytroller.cf"
+  - name: "112. 🇺🇸 United States"
+    type: "vless"
+    server: "104.17.21.111"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "114. 🇬🇧 United Kingdom"
+    type: "vless"
+    server: "104.26.14.21"
+    port: 443
+    uuid: "61113265-3e78-4012-8f42-692b5069ddac"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "afrcloud22.mmv.kr"
+    ws-opts:
+      path: "/140.245.53.45=443"
+      headers:
+        Host: "afrcloud22.mmv.kr"
+  - name: "116. 🇳🇱 The Netherlands"
+    type: "vless"
+    server: "5hsytrdbbvcrxokk.localip.ir"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "nl-10.ariyuz.org"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "nl-10.ariyuz.org"
+  - name: "120. 🇺🇸 United States"
+    type: "vless"
+    server: "162.159.36.5"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "122. 🇺🇸 United States"
+    type: "vless"
+    server: "www.fbi.gov"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckingfangbinxing.pusytroller.cf"
+  - name: "124. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.99"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "germany-2.ariyuz.org"
+  - name: "126. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.17.21.111"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "127. 🇺🇸 United States"
+    type: "vless"
+    server: "104.21.76.231"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "nmslfangbinxing.pusytroller.gq"
+  - name: "128. 🇺🇸 United States"
+    type: "vless"
+    server: "104.18.42.163"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "download.pusytroller.gq"
+  - name: "129. 🇺🇸 United States"
+    type: "vless"
+    server: "cf.levikogjgfdd.ir"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "131. 🇺🇸 United States"
+    type: "vless"
+    server: "cf.levikogjgfdd.ir"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "download.pusytroller.gq"
+  - name: "132. 🇺🇸 United States"
+    type: "vless"
+    server: "104.17.185.207"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "133. 🇫🇮 Finland"
+    type: "vless"
+    server: "ipw.ygdfw.com"
+    port: 443
+    uuid: "9f2f3e55-a8a6-40f3-aeb2-1061e9207d4d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ng0xg5l.uploodmusicmelody.ir"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/ws-fi"
+      headers:
+        Host: "ng0xg5l.uploodmusicmelody.ir"
+  - name: "134. 🇺🇸 United States"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "download.pusytroller.gq"
+  - name: "135. 🇺🇸 United States"
+    type: "vless"
+    server: "172.67.202.17"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "nmslfangbinxing.pusytroller.gq"
+  - name: "136. 🇷🇺 Russia"
+    type: "vless"
+    server: "codecanyon.net"
+    port: 8880
+    uuid: "baaa882d-ac50-4bba-bd8d-5486f7d34005"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.SG.CMLiussss.net"
+      headers:
+        Host: "blue-water-924c.174-235.workers.dev"
+  - name: "138. 🇺🇸 United States"
+    type: "vless"
+    server: "104.17.101.139"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "139. 🇺🇸 United States"
+    type: "vless"
+    server: "172.64.146.153"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "140. 🇺🇸 United States"
+    type: "vless"
+    server: "104.18.185.26"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "141. 🇸🇪 Sweden"
+    type: "vless"
+    server: "178.236.254.21"
+    port: 2083
+    uuid: "da98e502-5e93-4fc5-bd61-388c557df29c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "swe-one.quiet-rogue.site"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "40eDnye2AHCQqgM2_ikKzRayZ4Vlu4rnnkHmLmNalQc"
+      short-id: "32a37218722f0081"
+  - name: "142. 🇧🇷 Brazil"
+    type: "vless"
+    server: "85.155.226.168"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+  - name: "145. 🇷🇺 Russia"
+    type: "vless"
+    server: "188.225.47.234"
+    port: 4100
+    uuid: "7b2ce6b0-6d2b-4926-b7bf-6247eb1a0050"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/v1"
-  - name: "136. 🇺🇸 United States"
+  - name: "146. 🇺🇸 United States"
+    type: "vless"
+    server: "172.64.145.202"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "149. 🇺🇸 United States"
+    type: "vless"
+    server: "193.233.217.140"
+    port: 2200
+    uuid: "19365fd3-d23c-4a9e-a2ef-543d230e65c4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/v1"
+  - name: "150. 🇺🇸 United States"
+    type: "vless"
+    server: "cf.090227.xyz"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckingfangbinxing.pusytroller.cf"
+  - name: "151. 🇺🇸 United States"
+    type: "vless"
+    server: "141.101.122.147"
+    port: 443
+    uuid: "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "a.cwvps.eu.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "a.cwvps.eu.org"
+  - name: "152. 🇺🇸 United States"
+    type: "vless"
+    server: "nmslfangbinxing.pusytroller.gq"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+  - name: "153. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.75.99"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "159. 🇸🇬 Singapore"
+    type: "vless"
+    server: "support.zoom.us"
+    port: 8080
+    uuid: "ce9e52ff-7069-4b43-91a9-c8bd4a5b38d3"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "support.zoom.us"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "zero.csmaster.ggff.net"
+  - name: "161. 🇮🇳 India"
+    type: "vless"
+    server: "194.61.31.126"
+    port: 2053
+    uuid: "0bf89828-484f-4710-9581-12aa961e3bf1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "Gy6W0bXf2bpxoG1k3szp8X0ekzoyXlEtzT8V4mYQ3EE"
+      short-id: "29fe4205ddc971a8"
+  - name: "163. 🇺🇸 United States"
+    type: "vless"
+    server: "172.64.144.82"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "164. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "43.161.225.44"
+    port: 443
+    uuid: "904183f1-0495-478b-b11f-1fe12e84ad8b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "j0mfhbzohqV1W_PaNeYyKEVuaiK1-A9k2AQJQK7ZDzQ"
+      short-id: "4aeab483de4dd53a"
+  - name: "166. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "ed8d.wdz.de5.net"
+    port: 443
+    uuid: "0b06f318-ab9d-4de7-8779-360bd5f7ea67"
+    udp: true
+    tls: true
+    network: "ws"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/static"
+  - name: "168. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "ed8d.wdz.de5.net"
+    port: 443
+    uuid: "0b06f318-ab9d-4de7-8779-360bd5f7ea67"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ed8d.wdz.de5.net"
+    ws-opts:
+      path: "/static"
+  - name: "170. 🇺🇸 United States"
+    type: "vless"
+    server: "104.18.38.47"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "171. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.63.25"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "germany-2.ariyuz.org"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "germany-2.ariyuz.org"
+  - name: "172. 🇯🇵 Japan"
+    type: "vless"
+    server: "13.193.205.133"
+    port: 27407
+    uuid: "cd5cf6e7-7ce5-42c9-9316-68210fa72a32"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "bgcpartners.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04"
+      short-id: "e6ac18b63f23"
+  - name: "173. 🇺🇸 United States"
+    type: "vless"
+    server: "162.159.36.5"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "fangbinxingnmsl.pusytroller.gq"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "174. 🇧🇷 Brazil"
+    type: "vless"
+    server: "85.155.226.210"
+    port: 443
+    uuid: "39c42b0a-b823-4c93-bb99-74b4183e518d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "getsavesafe.net"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs"
+      short-id: "82f5d3a1e9c0b661"
+  - name: "175. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "ed8d.wdz.de5.net"
+    port: 443
+    uuid: "0b06f318-ab9d-4de7-8779-360bd5f7ea67"
+    udp: true
+    tls: true
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=chrome"
+  - name: "176. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "ed8d.wdz.de5.net"
+    port: 443
+    uuid: "0b06f318-ab9d-4de7-8779-360bd5f7ea67"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ed8d.wdz.de5.net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp"
+  - name: "177. 🇭🇰 Hong Kong"
+    type: "vless"
+    server: "ed8d.wdz.de5.net"
+    port: 443
+    uuid: "0b06f318-ab9d-4de7-8779-360bd5f7ea67"
+    udp: true
+    tls: true
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ed8d.wdz.de5.net"
+  - name: "183. 🇺🇸 United States"
+    type: "vless"
+    server: "nmslfangbinxing.pusytroller.gq"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "nmslfangbinxing.pusytroller.gq"
+  - name: "184. 🇸🇪 Sweden"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 443
+    uuid: "0b06f318-ab9d-4de7-8779-360bd5f7ea67"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ed8d.wdz.de5.net"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ed8d.wdz.de5.net"
+  - name: "185. 🇸🇬 Singapore"
+    type: "vless"
+    server: "support.zoom.us"
+    port: 8080
+    uuid: "3670ab0a-1af7-4f1d-9a19-8bb8ae42ec08"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "support.zoom.us"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "zero.csmaster.ggff.net"
+  - name: "187. 🇺🇸 United States"
+    type: "vless"
+    server: "fuckfangbinxing.pusytroller.gq"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "fuckfangbinxing.pusytroller.gq"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckfangbinxing.pusytroller.gq"
+  - name: "188. 🇸🇪 Sweden"
+    type: "vless"
+    server: "104.16.228.202"
+    port: 2053
+    uuid: "50414e45-4c5f-5a45-5553-e0dfede8abc0"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xoz60debusrs.lezuwaeiunjs.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/stream/PANEL_ZEUS/e0dfede8abc0"
+      headers:
+        Host: "xoz60debusrs.lezuwaeiunjs.workers.dev"
+  - name: "191. 🇸🇬 Singapore"
+    type: "vless"
+    server: "sg2-8sb.6121999.dpdns.org"
+    port: 19825
+    uuid: "2d1ad594-80a4-4bfb-87a6-038e39701f51"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sg2-8sb.6121999.dpdns.org"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI"
+      short-id: "6ba85179e30d4fc2"
+  - name: "192. 🇺🇸 United States"
+    type: "vless"
+    server: "fuckfangbinxing.pusytroller.gq"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+  - name: "194. 🇺🇸 United States"
+    type: "vless"
+    server: "fangbinxingnmsl.pusytroller.gq"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+  - name: "195. 🇺🇸 United States"
+    type: "vless"
+    server: "fuckfangbinxing.pusytroller.gq"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckfangbinxing.pusytroller.gq"
+  - name: "196. 🇺🇸 United States"
+    type: "vless"
+    server: "129.121.95.159"
+    port: 443
+    uuid: "f6190ff2-864c-46cf-ac16-93908c069b75"
+    udp: true
+    tls: true
+    network: "ws"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/connect#TELEGRAM-TOOTFFARANGI_TOOTFFARANGI?ed"
+  - name: "197. 🇺🇸 United States"
+    type: "vless"
+    server: "www.wto.org"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckingfangbinxing.pusytroller.cf"
+  - name: "199. 🇩🇪 Germany"
+    type: "vless"
+    server: "undef.network"
+    port: 2052
+    uuid: "b0a6832e-e6a3-491c-8137-fee5a7912ed4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/@BlueKnight_net--@BlueKnight_net"
+      headers:
+        Host: "uwu.blueknightnet.qzz.io"
+  - name: "200. 🇩🇪 Germany"
+    type: "vless"
+    server: "ns3.zabidat.ir"
+    port: 443
+    uuid: "903daa6f-534c-4f4a-bbc8-024993f5cb01"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ptr.cyberbear.io"
+    client-fingerprint: "random"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/CMlsadnCISdss"
+      headers:
+        Host: "ptr.cyberbear.io"
+  - name: "201. 🇺🇸 United States"
+    type: "vless"
+    server: "104.21.76.231"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "fuckfangbinxing.pusytroller.gq"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckfangbinxing.pusytroller.gq"
+  - name: "202. 🇯🇵 Japan"
+    type: "vless"
+    server: "13.193.205.133"
+    port: 27407
+    uuid: "cd5cf6e7-7ce5-42c9-9316-68210fa72a32"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "bgcpartners.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04"
+      short-id: "e6ac18b63f23"
+  - name: "203. 🇩🇪 Germany"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 443
+    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "de-new.ariyuz.org"
+    ws-opts:
+      path: "/"
+  - name: "206. 🇺🇸 United States"
+    type: "vless"
+    server: "66.175.217.170"
+    port: 443
+    uuid: "b98d4c6e-6770-4a31-8256-a4750cdea0e7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.amazon.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo"
+      short-id: "1a"
+  - name: "207. 🇺🇸 United States"
+    type: "vless"
+    server: "172.67.202.17"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "fuckfangbinxing.pusytroller.gq"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fuckfangbinxing.pusytroller.gq"
+  - name: "211. 🇷🇺 Russia"
+    type: "vless"
+    server: "141.8.199.212"
+    port: 4100
+    uuid: "fc72e947-b8dd-4de0-9ec7-2b0050c9f83a"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/v1"
+      headers:
+        Host: "live.ok.ru"
+  - name: "212. 🇺🇸 United States"
+    type: "vless"
+    server: "104.21.74.214"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "download.pusytroller.gq"
+  - name: "213. 🇬🇧 United Kingdom"
+    type: "vless"
+    server: "31.77.154.244"
+    port: 443
+    uuid: "5d36ddf8-dde5-4b2d-8213-d3255f22a0f1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "it-two.letsgodance.site"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "K8LxbhrcgxM7bIW8SGKmEvqn-zbAGqyi4G37_u-kbh4"
+      short-id: "c2b104f3483063c5"
+  - name: "214. 🇺🇸 United States"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "215. 🇺🇸 United States"
     type: "vless"
     server: "66.175.217.170"
     port: 443
@@ -1569,331 +2396,394 @@ proxies:
     reality-opts:
       public-key: "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo"
       short-id: "1a"
-  - name: "139. 🇩🇪 Germany"
+  - name: "216. 🇭🇰 Hong Kong"
     type: "vless"
-    server: "104.16.75.68"
+    server: "rough-mouse-2a3a.424-e94.workers.dev"
+    port: 8880
+    uuid: "70ca8aec-42ba-41df-a874-ec9517053dec"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+  - name: "217. 🇩🇪 Germany"
+    type: "vless"
+    server: "104.16.72.110"
+    port: 80
+    uuid: "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/http"
+      headers:
+        Host: "de.vpnbase.net"
+  - name: "220. 🇩🇪 Germany"
+    type: "vless"
+    server: "workers.dev"
     port: 443
-    uuid: "03707fb7-0990-440f-88f6-b0e0f7242a38"
+    uuid: "80391a2c-6086-4a94-b246-d0583448b1b5"
     udp: true
     tls: true
     network: "ws"
-    servername: "germany-2.ariyuz.org"
-    alpn:
-      - "http/1.1"
+    servername: "blue-tree-e048.sarahhermit33.workers.dev"
     ws-opts:
-      path: "/"
+      path: "/@Bypass_Project/"
       headers:
-        Host: "germany-2.ariyuz.org"
-  - name: "140. 🇺🇸 United States"
+        Host: "blue-tree-e048.sarahhermit33.workers.dev"
+  - name: "229. 🇯🇵 Japan"
     type: "vless"
-    server: "18.239.134.69"
-    port: 80
-    uuid: "de27291c-15a9-4256-9ba7-ad517569877e"
+    server: "cf02.564895.xyz"
+    port: 2096
+    uuid: "a157bb84-dd84-4ad8-86b0-0656bc76e4d1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "jp01.564895.xyz"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/asdasd"
+      headers:
+        Host: "jp01.564895.xyz"
+  - name: "230. 🇺🇸 United States"
+    type: "vless"
+    server: "104.21.74.214"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
       path: "/"
       headers:
-        Host: "d2e1v87ko56lyw.cloudfront.net:assets.opensignal.com"
-  - name: "141. 🇩🇪 Germany"
+        Host: "fangbinxingnmsl.pusytroller.gq"
+  - name: "232. 🇸🇪 Sweden"
     type: "vless"
-    server: "po.fastbrokencompony.com"
-    port: 2053
-    uuid: "e7961655-9674-4cbd-a36f-ec0d5d7d660c"
+    server: "104.17.28.89"
+    port: 443
+    uuid: "1078d418-b4e0-4668-9018-dc90c2042d61"
     udp: true
     tls: true
     network: "ws"
-    servername: "po.fastbrokencompony.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
+    servername: "workspace.evan00.dpdns.org"
+    ws-opts:
+      path: "%2F"
+      headers:
+        Host: "workspace.evan00.dpdns.org"
+  - name: "236. 🇸🇬 Singapore"
+    type: "vless"
+    server: "support.zoom.us"
+    port: 80
+    uuid: "2475d0bd-bcb1-4121-9b1c-5e30841630b9"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "support.zoom.us"
     ws-opts:
       path: "/"
       headers:
-        Host: "po.fastbrokencompony.com"
-  - name: "144. 🇺🇸 United States"
+        Host: "sahanwickramasinghevip.shop"
+  - name: "238. 🇩🇪 Germany"
     type: "vless"
-    server: "141.101.122.147"
+    server: "www.speedtest.net"
     port: 443
-    uuid: "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46"
+    uuid: "903daa6f-534c-4f4a-bbc8-024993f5cb01"
     udp: true
     tls: true
     network: "ws"
-    servername: "a.cwvps.eu.org"
+    servername: "ptr.cyberbear.io"
+    client-fingerprint: "random"
     ws-opts:
-      path: "/ws"
+      path: "/CMlsadnCISdss"
       headers:
-        Host: "a.cwvps.eu.org"
-  - name: "146. 🇩🇪 Germany"
+        Host: "ptr.cyberbear.io"
+  - name: "239. 🇷🇺 Russia"
     type: "vless"
-    server: "91.110.174.210"
-    port: 8443
-    uuid: "cf39fab0-bb85-42cb-9945-2ad69d78e575"
+    server: "cf.9999669.xyz"
+    port: 2087
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
     udp: true
     tls: true
     network: "ws"
-    servername: "rubifen.adaspoloandco.com"
+    servername: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
     client-fingerprint: "chrome"
     ws-opts:
-      path: "/GOrbEh"
+      path: "/?ed=2560"
       headers:
-        Host: "rubifen.adaspoloandco.com"
-  - name: "148. 🇸🇬 Singapore"
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "240. 🇩🇪 Germany"
     type: "vless"
-    server: "146.235.16.130"
-    port: 19825
-    uuid: "2d1ad594-80a4-4bfb-87a6-038e39701f51"
+    server: "www.speedtest.net"
+    port: 443
+    uuid: "903daa6f-534c-4f4a-bbc8-024993f5cb01"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ptr.cyberbear.io"
+    client-fingerprint: "random"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/CMlsadnCISdss"
+      headers:
+        Host: "ptr.cyberbear.io"
+  - name: "241. 🇸🇬 Singapore"
+    type: "vless"
+    server: "support.zoom.us"
+    port: 80
+    uuid: "2475d0bd-bcb1-4121-9b1c-5e30841630b9"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "sahanwickramasinghevip.shop"
+  - name: "242. 🇩🇪 Germany"
+    type: "vless"
+    server: "www.speedtest.net"
+    port: 443
+    uuid: "903daa6f-534c-4f4a-bbc8-024993f5cb01"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ptr.cyberbear.io"
+    client-fingerprint: "random"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/CMlsadnCISdss#TELEGRAM-MARAMBASHI_MARAMBASHI?ed=2560"
+      headers:
+        Host: "ptr.cyberbear.io"
+  - name: "247. 🇬🇧 United Kingdom"
+    type: "vless"
+    server: "it-two.letsgodance.site"
+    port: 443
+    uuid: "5d36ddf8-dde5-4b2d-8213-d3255f22a0f1"
     udp: true
     tls: true
     network: "tcp"
-    servername: "sg2-8sb.6121999.dpdns.org"
-    client-fingerprint: "firefox"
+    servername: "it-two.letsgodance.site"
+    client-fingerprint: "edge"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI"
-      short-id: "6ba85179e30d4fc2"
-  - name: "150. 🇺🇸 United States"
-    type: "vless"
-    server: "141.101.122.147"
-    port: 443
-    uuid: "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46"
+      public-key: "K8LxbhrcgxM7bIW8SGKmEvqn-zbAGqyi4G37_u-kbh4"
+      short-id: "c2b104f3483063c5"
+  - name: "7. 🇳🇱 The Netherlands"
+    type: "ss"
+    server: "82.38.31.206"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-    tls: true
-    network: "ws"
-    servername: "a.cwvps.eu.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "a.cwvps.eu.org"
-  - name: "3. 🇩🇪 Germany"
+  - name: "8. 🇳🇱 The Netherlands"
+    type: "ss"
+    server: "82.38.31.174"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    udp: true
+  - name: "9. 🇩🇪 Germany"
     type: "ss"
     server: "130.61.118.77"
     port: 59924
     cipher: "2022-blake3-chacha20-poly1305"
     password: "Cem5PpJ66yTcbs+EKD4C2cDlCjGW5YSQCWkjhY8T/MY="
     udp: true
-  - name: "6. 🇫🇮 Finland"
+  - name: "10. 🇳🇱 The Netherlands"
     type: "ss"
-    server: "166.1.129.245"
-    port: 42607
-    cipher: "chacha20-ietf-poly1305"
-    password: "f2FivziSooWMDzE6p2kBx7ri7owdLZyPnuQLPeDhnY8qXKm6zZ4M39pov4w7MfxRN5FjWqC1cCA8gGoLpZQVouPt9cCA9idN"
-    udp: true
-  - name: "7. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "82.38.31.200"
+    server: "82.38.31.213"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "15. 🇩🇪 Germany"
+  - name: "11. 🇳🇱 The Netherlands"
     type: "ss"
-    server: "51.195.126.38"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "2YdE4lFOid5a"
-    udp: true
-  - name: "18. 🇪🇸 Spain"
-    type: "ss"
-    server: "108.181.121.226"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "WSyL4XTwNsdv"
-    udp: true
-  - name: "19. 🇺🇸 United States"
-    type: "ss"
-    server: "140.82.63.79"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "ZoZtfPOyVvmKARUN"
-    udp: true
-  - name: "33. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "188.116.23.244"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "eVC634QvVk5l"
-    udp: true
-  - name: "35. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "193.29.139.212"
+    server: "82.38.31.201"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
-    password: "QCXDxuDlTTMD7jtgHUjIoj"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "37. 🇱🇹 Lithuania"
+  - name: "30. 🇳🇱 The Netherlands"
     type: "ss"
-    server: "144.31.243.2"
-    port: 16015
+    server: "82.38.31.182"
+    port: 8080
     cipher: "chacha20-ietf-poly1305"
-    password: "J1InuU6QRT5JOh1mQfkjU2"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "53. 🇨🇦 Canada"
+  - name: "52. 🇳🇱 The Netherlands"
     type: "ss"
-    server: "51.222.155.113"
-    port: 5601
-    cipher: "aes-256-gcm"
-    password: "Y6R9pAtvxxzmGC"
+    server: "82.38.31.18"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
   - name: "62. 🇨🇦 Canada"
-    type: "ss"
-    server: "51.222.12.127"
-    port: 445
-    cipher: "aes-256-gcm"
-    password: "zDNVedRFPQexG9v"
-    udp: true
-  - name: "65. 🇭🇰 Hong Kong"
-    type: "ss"
-    server: "212.192.13.121"
-    port: 20990
-    cipher: "aes-256-gcm"
-    password: "72553320ae6bcc8f"
-    udp: true
-  - name: "70. 🇸🇬 Singapore"
-    type: "ss"
-    server: "167.150.100.115"
-    port: 27755
-    cipher: "2022-blake3-aes-256-gcm"
-    password: "fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0="
-    udp: true
-  - name: "72. 🇯🇵 Japan"
-    type: "ss"
-    server: "84.247.155.196"
-    port: 80
-    cipher: "aes-256-gcm"
-    password: "3eOFeNssde7PYYMv"
-    udp: true
-  - name: "74. 🇨🇦 Canada"
     type: "ss"
     server: "51.79.64.198"
     port: 8119
     cipher: "aes-256-gcm"
     password: "cdBIDV42DCwnfIN"
     udp: true
-  - name: "76. 🇹🇼 Taiwan"
+  - name: "79. 🇨🇦 Canada"
     type: "ss"
-    server: "61.231.22.178"
-    port: 50099
-    cipher: "chacha20-ietf-poly1305"
-    password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
-    udp: true
-  - name: "83. 🇮🇹 Italy"
-    type: "ss"
-    server: "194.87.47.97"
-    port: 10901
+    server: "51.222.12.127"
+    port: 445
     cipher: "aes-256-gcm"
-    password: "d1fa2f4b98a38bc8"
+    password: "zDNVedRFPQexG9v"
     udp: true
-  - name: "89. 🇺🇸 United States"
+  - name: "113. 🇭🇰 Hong Kong"
     type: "ss"
-    server: "38.180.135.156"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "YHtesZ0qvgtg"
+    server: "212.192.13.121"
+    port: 20990
+    cipher: "aes-256-gcm"
+    password: "72553320ae6bcc8f"
     udp: true
-  - name: "94. 🇳🇱 The Netherlands"
+  - name: "130. 🇸🇬 Singapore"
     type: "ss"
-    server: "193.29.139.225"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    server: "167.150.100.115"
+    port: 27755
+    cipher: "2022-blake3-aes-256-gcm"
+    password: "fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0="
     udp: true
-  - name: "95. 🇩🇪 Germany"
+  - name: "144. 🇭🇰 Hong Kong"
     type: "ss"
     server: "mn.qwer-cn.org"
-    port: 10910
+    port: 10925
     cipher: "aes-128-gcm"
     password: "adbc1e8c-184e-4d02-b0e0-f0cb70b377df"
     udp: true
-  - name: "96. 🇳🇱 The Netherlands"
-    type: "ss"
-    server: "193.29.139.230"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "118. 🇸🇬 Singapore"
-    type: "ss"
-    server: "176.97.64.144"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "TFElG2FVqyqG"
-    udp: true
-  - name: "125. 🇨🇦 Canada"
-    type: "ss"
-    server: "51.79.49.116"
-    port: 8882
-    cipher: "aes-256-gcm"
-    password: "kDWvXYZoTBcGkC4"
-    udp: true
-  - name: "128. 🇯🇵 Japan"
-    type: "ss"
-    server: "89.125.33.16"
-    port: 1234
-    cipher: "chacha20-ietf-poly1305"
-    password: "Z3bYaWfgFo8K--R4ZTNLRwBvaJLUyoUe"
-    udp: true
-  - name: "134. 🇺🇸 United States"
-    type: "ss"
-    server: "15.204.246.132"
-    port: 7307
-    cipher: "aes-256-gcm"
-    password: "FoOiGlkAA9yPEGP"
-    udp: true
-  - name: "137. 🇯🇵 Japan"
-    type: "ss"
-    server: "176.97.73.215"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "ma6zc4JoLRJA"
-    udp: true
-  - name: "138. 🇸🇬 Singapore"
+  - name: "147. 🇸🇬 Singapore"
     type: "ss"
     server: "mn.qwer-cn.org"
     port: 10934
     cipher: "aes-128-gcm"
     password: "adbc1e8c-184e-4d02-b0e0-f0cb70b377df"
     udp: true
-  - name: "142. 🇯🇵 Japan"
+  - name: "148. 🇹🇼 Taiwan"
     type: "ss"
-    server: "45.32.16.53"
+    server: "61.231.22.178"
+    port: 50099
+    cipher: "chacha20-ietf-poly1305"
+    password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+    udp: true
+  - name: "154. 🇹🇼 Taiwan"
+    type: "ss"
+    server: "r3mrcg001287h3p.cybervena.com"
+    port: 50099
+    cipher: "chacha20-ietf-poly1305"
+    password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+    udp: true
+  - name: "156. 🇹🇼 Taiwan"
+    type: "ss"
+    server: "R3MRCG00129437X.cybervena.com"
+    port: 50099
+    cipher: "chacha20-ietf-poly1305"
+    password: "b1ae0fce-9340-4f2e-882d-fdb2218e2e2b"
+    udp: true
+  - name: "157. 🇹🇼 Taiwan"
+    type: "ss"
+    server: "R3MRCG001287H3P.cybervena.com"
+    port: 50099
+    cipher: "chacha20-ietf-poly1305"
+    password: "b1ae0fce-9340-4f2e-882d-fdb2218e2e2b"
+    udp: true
+  - name: "162. 🇯🇵 Japan"
+    type: "ss"
+    server: "176.97.73.215"
     port: 8388
     cipher: "chacha20-ietf-poly1305"
-    password: "uTBjZhDmOMwBVAJI"
+    password: "ma6zc4JoLRJA"
     udp: true
-  - name: "145. 🇸🇬 Singapore"
+  - name: "165. 🇩🇪 Germany"
     type: "ss"
-    server: "139.180.133.90"
-    port: 80
-    cipher: "aes-256-gcm"
-    password: "jSU7bGKupQ96YFvf"
+    server: "mn.qwer-cn.org"
+    port: 10910
+    cipher: "aes-128-gcm"
+    password: "adbc1e8c-184e-4d02-b0e0-f0cb70b377df"
     udp: true
-  - name: "149. 🇸🇬 Singapore"
+  - name: "179. 🇹🇼 Taiwan"
     type: "ss"
-    server: "139.180.133.90"
+    server: "mn.qwer-cn.org"
+    port: 10936
+    cipher: "aes-128-gcm"
+    password: "adbc1e8c-184e-4d02-b0e0-f0cb70b377df"
+    udp: true
+  - name: "180. 🇺🇸 United States"
+    type: "ss"
+    server: "198.98.53.130"
     port: 443
-    cipher: "aes-256-gcm"
-    password: "jSU7bGKupQ96YFvf"
+    cipher: "chacha20-ietf-poly1305"
+    password: "eDfN7SODQceIOmIAbtJJtK"
     udp: true
-  - name: "151. 🇧🇷 Brazil"
+  - name: "182. 🇨🇦 Canada"
     type: "ss"
-    server: "150.230.229.189"
+    server: "51.222.155.113"
+    port: 5601
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
+  - name: "193. 🇹🇼 Taiwan"
+    type: "ss"
+    server: "r3mrcg001286ek2.cybervena.com"
+    port: 50099
+    cipher: "chacha20-ietf-poly1305"
+    password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+    udp: true
+  - name: "208. 🇩🇪 Germany"
+    type: "ss"
+    server: "185.226.172.8"
+    port: 8008
+    cipher: "aes-256-gcm"
+    password: "XKFKl2rULjIp74"
+    udp: true
+  - name: "210. 🇦🇺 Australia"
+    type: "ss"
+    server: "mn.qwer-cn.org"
+    port: 10927
+    cipher: "aes-128-gcm"
+    password: "adbc1e8c-184e-4d02-b0e0-f0cb70b377df"
+    udp: true
+  - name: "223. 🇨🇦 Canada"
+    type: "ss"
+    server: "51.79.49.116"
+    port: 8882
+    cipher: "aes-256-gcm"
+    password: "kDWvXYZoTBcGkC4"
+    udp: true
+  - name: "226. 🇫🇮 Finland"
+    type: "ss"
+    server: "166.1.129.245"
+    port: 42607
+    cipher: "chacha20-ietf-poly1305"
+    password: "f2FivziSooWMDzE6p2kBx7ri7owdLZyPnuQLPeDhnY8qXKm6zZ4M39pov4w7MfxRN5FjWqC1cCA8gGoLpZQVouPt9cCA9idN"
+    udp: true
+  - name: "231. 🇸🇬 Singapore"
+    type: "ss"
+    server: "176.97.64.144"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "TFElG2FVqyqG"
+    udp: true
+  - name: "234. 🇬🇧 United Kingdom"
+    type: "ss"
+    server: "31.76.82.131"
+    port: 34260
+    cipher: "chacha20-ietf-poly1305"
+    password: "cTAObwg4OWWXkZJQs0ZdgC"
+    udp: true
+  - name: "246. 🇧🇷 Brazil"
+    type: "ss"
+    server: "147.15.34.121"
     port: 59319
     cipher: "2022-blake3-chacha20-poly1305"
-    password: "VNZU26yCu5J1TaXQ9IdJasKHopBUzc2xt+JUl9ECB+g="
+    password: "XVdJDPuYb1x072JrCC2+BfeiCgIMDhDO3q3hl467FZU="
     udp: true
-  - name: "23. 🇺🇸 United States"
-    type: "vmess"
-    server: "165.140.216.141"
-    port: 443
-    uuid: "e7d72a8d-26f2-4b54-b366-0c43e0bcba7d"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "36. 🇩🇪 Germany"
+  - name: "29. 🇩🇪 Germany"
     type: "vmess"
     server: "172.238.96.215"
     port: 2053
@@ -1901,7 +2791,15 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "51. 🇺🇸 United States"
+  - name: "59. 🇺🇸 United States"
+    type: "vmess"
+    server: "165.140.216.141"
+    port: 443
+    uuid: "e7d72a8d-26f2-4b54-b366-0c43e0bcba7d"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "90. 🇺🇸 United States"
     type: "vmess"
     server: "129.146.77.248"
     port: 39495
@@ -1909,15 +2807,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "55. 🇹🇼 Taiwan"
-    type: "vmess"
-    server: "165.154.195.38"
-    port: 35034
-    uuid: "959a8caf-4cea-43d0-a548-3628e7ddfafc"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "73. 🇩🇪 Germany"
+  - name: "92. 🇩🇪 Germany"
     type: "vmess"
     server: "deapp.jisuyun.top"
     port: 2053
@@ -1925,31 +2815,15 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "80. 🇵🇭 Philippines"
+  - name: "98. 🇹🇼 Taiwan"
     type: "vmess"
-    server: "61.245.11.60"
-    port: 80
-    uuid: "a3e3a710-79f8-4ae0-b83c-607aab40d197"
+    server: "165.154.195.38"
+    port: 35034
+    uuid: "959a8caf-4cea-43d0-a548-3628e7ddfafc"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "90. 🇭🇰 Hong Kong"
-    type: "vmess"
-    server: "drbkg16egf3fzlm3.v.3dns.vip"
-    port: 443
-    uuid: "f23bb427-c1f9-4373-876c-2f43e9f790f3"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "101. 🇭🇰 Hong Kong"
-    type: "vmess"
-    server: "162.19.192.89"
-    port: 16632
-    uuid: "d52b72b0-a509-490a-adae-23da2348d29c"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "104. 🇨🇦 Canada"
+  - name: "143. 🇨🇦 Canada"
     type: "vmess"
     server: "216.128.176.166"
     port: 28809
@@ -1957,15 +2831,23 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "106. 🇳🇱 The Netherlands"
+  - name: "158. 🇵🇭 Philippines"
     type: "vmess"
-    server: "23.137.249.110"
-    port: 30011
-    uuid: "a7aee69e-6e02-47d1-8172-701866bbb28c"
+    server: "61.245.11.60"
+    port: 80
+    uuid: "a3e3a710-79f8-4ae0-b83c-607aab40d197"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "108. 🇰🇷 South Korea"
+  - name: "169. 🇭🇰 Hong Kong"
+    type: "vmess"
+    server: "drbkg16egf3fzlm3.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427-c1f9-4373-876c-2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "186. 🇰🇷 South Korea"
     type: "vmess"
     server: "132.145.80.230"
     port: 80
@@ -1973,15 +2855,23 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "112. 🇹🇷 Turkey"
+  - name: "189. 🇭🇰 Hong Kong"
     type: "vmess"
-    server: "dashboard.aframarket.top"
-    port: 5384
-    uuid: "cfd42ad2-6fc7-443f-994e-10e3d7df24d1"
+    server: "u2frxj0g13vdi0wo.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "143. 🇭🇰 Hong Kong"
+  - name: "221. 🇸🇬 Singapore"
+    type: "vmess"
+    server: "140.83.57.20"
+    port: 13118
+    uuid: "1f01e389-fbcb-494c-e46a-210ec36329c2"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "224. 🇭🇰 Hong Kong"
     type: "vmess"
     server: "6jdvarazgu3qqr6q.v.3dns.vip"
     port: 443
@@ -1989,15 +2879,102 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "147. 🇺🇸 United States"
+  - name: "227. 🇭🇰 Hong Kong"
     type: "vmess"
-    server: "www.nextkyc.com"
-    port: 8443
-    uuid: "60441548-b68e-43b2-8191-e3b884be4b3c"
+    server: "wwafj5lhl6bi8au9.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "28. 🇸🇪 Sweden"
+  - name: "228. 🇭🇰 Hong Kong"
+    type: "vmess"
+    server: "nycqg19zkwacpm1b.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "233. 🇭🇰 Hong Kong"
+    type: "vmess"
+    server: "162.19.192.89"
+    port: 16632
+    uuid: "d52b72b0-a509-490a-adae-23da2348d29c"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "235. 🇺🇸 United States"
+    type: "vmess"
+    server: "rush-6it6b.teeopp.quest"
+    port: 443
+    uuid: "03fcc618-b93d-6796-6aed-8a38c975d581"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "237. 🇳🇱 The Netherlands"
+    type: "vmess"
+    server: "176.120.17.21"
+    port: 1015
+    uuid: "032523ee-63d9-4619-ad45-6fd8df518fd0"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "243. 🇹🇷 Turkey"
+    type: "vmess"
+    server: "dashboard.aframarket.top"
+    port: 5384
+    uuid: "cfd42ad2-6fc7-443f-994e-10e3d7df24d1"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "244. 🇭🇰 Hong Kong"
+    type: "vmess"
+    server: "vah4urdzl3jdx5r2.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "97. 🇺🇸 United States"
+    type: "trojan"
+    server: "44.251.158.80"
+    port: 443
+    password: "FH72359861"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "obliging-louse.rooster465.autos"
+  - name: "119. 🇺🇸 United States"
+    type: "trojan"
+    server: "neutral-quail.rooster465.autos"
+    port: 443
+    password: "FH72359861"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "125. 🇸🇪 Sweden"
+    type: "trojan"
+    server: "188.114.97.6"
+    port: 443
+    password: "MITIVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "95895-mitivpn--mitivpn------mitivpn.mitivpn-s.lifestyle"
+    ws-opts:
+      path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-d@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
+      headers:
+        Host: "83463833-mitivpn--mitivpn------mitivpn.mitivpn-s.lifestyle"
+  - name: "167. 🇺🇸 United States"
+    type: "trojan"
+    server: "neutral-quail.rooster465.autos"
+    port: 443
+    password: "FH72359861"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "neutral-quail.rooster465.autos"
+  - name: "198. 🇸🇪 Sweden"
     type: "trojan"
     server: "188.114.97.6"
     port: 443
@@ -2010,32 +2987,41 @@ proxies:
       path: "/sg-orcl"
       headers:
         Host: "space.byu.id.yxls.eu.cc"
-  - name: "67. 🇺🇸 United States"
+  - name: "204. 🇫🇷 France"
     type: "trojan"
-    server: "neutral-quail.rooster465.autos"
+    server: "www.ignitelimit.com"
     port: 443
-    password: "FH72359861"
+    password: "humanity"
     udp: true
     tls: true
-    network: "tcp"
-  - name: "127. 🇺🇸 United States"
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "205. 🇫🇷 France"
     type: "trojan"
-    server: "44.251.158.80"
+    server: "join-telegram-channel-tirexnet.trex.kdns.fr"
     port: 443
-    password: "FH72359861"
+    password: "humanity"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "obliging-louse.rooster465.autos"
-  - name: "131. 🇺🇸 United States"
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "209. 🇫🇷 France"
     type: "trojan"
-    server: "neutral-quail.rooster465.autos"
+    server: "join-telegram-channel-tirexnet.trex.kdns.fr"
     port: 443
-    password: "FH72359861"
+    password: "humanity"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "neutral-quail.rooster465.autos"
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -2050,144 +3036,227 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "1. 🇧🇷 Brazil"
-      - "2. 🇬🇧 United Kingdom"
-      - "4. 🇧🇷 Brazil"
-      - "5. 🇧🇷 Brazil"
-      - "8. 🇧🇷 Brazil"
-      - "9. 🇧🇷 Brazil"
-      - "10. 🇸🇪 Sweden"
-      - "11. 🇸🇪 Sweden"
-      - "12. 🇫🇮 Finland"
-      - "13. 🇷🇺 Russia"
-      - "14. 🇷🇺 Russia"
-      - "16. 🇩🇪 Germany"
-      - "17. 🇸🇪 Sweden"
-      - "20. 🇸🇪 Sweden"
-      - "21. 🇩🇪 Germany"
-      - "22. 🇨🇭 Switzerland"
-      - "24. 🇧🇷 Brazil"
-      - "25. 🇧🇷 Brazil"
-      - "26. 🇧🇷 Brazil"
-      - "27. 🇩🇪 Germany"
-      - "29. 🇩🇪 Germany"
-      - "31. 🇩🇪 Germany"
-      - "32. 🇸🇪 Sweden"
+      - "1. 🇩🇪 Germany"
+      - "2. 🇩🇪 Germany"
+      - "3. 🇩🇪 Germany"
+      - "4. 🇩🇪 Germany"
+      - "5. 🇩🇪 Germany"
+      - "6. 🇧🇷 Brazil"
+      - "13. 🇧🇷 Brazil"
+      - "14. 🇧🇷 Brazil"
+      - "15. 🇧🇷 Brazil"
+      - "16. 🇷🇺 Russia"
+      - "17. 🇷🇺 Russia"
+      - "18. 🇷🇺 Russia"
+      - "19. 🇷🇺 Russia"
+      - "20. 🇷🇺 Russia"
+      - "21. 🇸🇪 Sweden"
+      - "22. 🇸🇪 Sweden"
+      - "23. 🇷🇺 Russia"
+      - "24. 🇸🇪 Sweden"
+      - "25. 🇸🇪 Sweden"
+      - "26. 🇷🇺 Russia"
+      - "27. 🇸🇪 Sweden"
+      - "28. 🇩🇪 Germany"
+      - "31. 🇸🇪 Sweden"
+      - "32. 🇳🇱 The Netherlands"
+      - "33. 🇸🇪 Sweden"
       - "34. 🇸🇪 Sweden"
-      - "38. 🇧🇷 Brazil"
-      - "39. 🇩🇪 Germany"
-      - "40. 🇩🇪 Germany"
-      - "41. 🇩🇪 Germany"
-      - "42. 🇩🇪 Germany"
-      - "43. 🇩🇪 Germany"
-      - "44. 🇩🇪 Germany"
+      - "35. 🇸🇪 Sweden"
+      - "36. 🇷🇺 Russia"
+      - "37. 🇫🇮 Finland"
+      - "38. 🇷🇺 Russia"
+      - "39. 🇷🇺 Russia"
+      - "40. 🇸🇪 Sweden"
+      - "41. 🇸🇪 Sweden"
+      - "42. 🇸🇪 Sweden"
+      - "43. 🇸🇪 Sweden"
+      - "44. 🇷🇺 Russia"
       - "45. 🇩🇪 Germany"
-      - "46. 🇺🇸 United States"
-      - "47. 🇩🇪 Germany"
+      - "46. 🇸🇪 Sweden"
+      - "47. 🇷🇺 Russia"
       - "48. 🇩🇪 Germany"
-      - "49. 🇸🇪 Sweden"
-      - "50. 🇸🇪 Sweden"
-      - "52. 🇩🇪 Germany"
-      - "54. 🇬🇧 United Kingdom"
-      - "59. 🇺🇸 United States"
+      - "49. 🇷🇺 Russia"
+      - "50. 🇷🇺 Russia"
+      - "51. 🇧🇷 Brazil"
+      - "53. 🇸🇪 Sweden"
+      - "54. 🇸🇪 Sweden"
+      - "56. 🇸🇪 Sweden"
+      - "57. 🇩🇪 Germany"
+      - "58. 🇩🇪 Germany"
       - "60. 🇩🇪 Germany"
-      - "61. 🇩🇪 Germany"
-      - "63. 🇺🇸 United States"
-      - "64. 🇺🇸 United States"
+      - "61. 🇸🇪 Sweden"
+      - "64. 🇩🇪 Germany"
       - "66. 🇩🇪 Germany"
+      - "67. 🇩🇪 Germany"
       - "68. 🇩🇪 Germany"
       - "69. 🇩🇪 Germany"
+      - "70. 🇷🇺 Russia"
       - "71. 🇩🇪 Germany"
-      - "77. 🇺🇸 United States"
-      - "78. 🇭🇰 Hong Kong"
-      - "79. 🇺🇸 United States"
+      - "72. 🇩🇪 Germany"
+      - "73. 🇷🇺 Russia"
+      - "74. 🇫🇮 Finland"
+      - "76. 🇩🇪 Germany"
+      - "77. 🇩🇪 Germany"
+      - "78. 🇸🇪 Sweden"
+      - "80. 🇩🇪 Germany"
       - "81. 🇩🇪 Germany"
-      - "84. 🇺🇸 United States"
+      - "82. 🇷🇺 Russia"
+      - "83. 🇩🇪 Germany"
+      - "84. 🇩🇪 Germany"
+      - "85. 🇩🇪 Germany"
       - "86. 🇩🇪 Germany"
-      - "88. 🇭🇰 Hong Kong"
-      - "91. 🇭🇰 Hong Kong"
-      - "92. 🇺🇸 United States"
-      - "93. 🇯🇵 Japan"
-      - "97. 🇸🇪 Sweden"
-      - "98. 🇸🇪 Sweden"
+      - "87. 🇷🇺 Russia"
+      - "88. 🇩🇪 Germany"
+      - "89. 🇩🇪 Germany"
+      - "91. 🇩🇪 Germany"
+      - "93. 🇩🇪 Germany"
+      - "94. 🇩🇪 Germany"
+      - "95. 🇩🇪 Germany"
+      - "96. 🇩🇪 Germany"
       - "99. 🇸🇪 Sweden"
-      - "100. 🇷🇺 Russia"
-      - "102. 🇯🇵 Japan"
-      - "103. 🇲🇴 Macao"
-      - "107. 🇺🇸 United States"
-      - "109. 🇺🇸 United States"
+      - "101. 🇩🇪 Germany"
+      - "103. 🇺🇸 United States"
+      - "104. 🇺🇸 United States"
+      - "105. 🇺🇸 United States"
+      - "108. 🇩🇪 Germany"
       - "110. 🇺🇸 United States"
       - "111. 🇺🇸 United States"
-      - "113. 🇺🇸 United States"
-      - "114. 🇩🇪 Germany"
-      - "115. 🇺🇸 United States"
-      - "117. 🇸🇬 Singapore"
-      - "119. 🇩🇪 Germany"
-      - "121. 🇩🇪 Germany"
-      - "122. 🇷🇺 Russia"
-      - "123. 🇩🇪 Germany"
-      - "124. 🇧🇷 Brazil"
+      - "112. 🇺🇸 United States"
+      - "114. 🇬🇧 United Kingdom"
+      - "116. 🇳🇱 The Netherlands"
+      - "120. 🇺🇸 United States"
+      - "122. 🇺🇸 United States"
+      - "124. 🇩🇪 Germany"
       - "126. 🇩🇪 Germany"
-      - "129. 🇹🇼 Taiwan"
-      - "130. 🇩🇪 Germany"
-      - "135. 🇷🇺 Russia"
-      - "136. 🇺🇸 United States"
-      - "139. 🇩🇪 Germany"
-      - "140. 🇺🇸 United States"
-      - "141. 🇩🇪 Germany"
-      - "144. 🇺🇸 United States"
-      - "146. 🇩🇪 Germany"
-      - "148. 🇸🇬 Singapore"
-      - "150. 🇺🇸 United States"
-      - "3. 🇩🇪 Germany"
-      - "6. 🇫🇮 Finland"
-      - "7. 🇳🇱 The Netherlands"
-      - "15. 🇩🇪 Germany"
-      - "18. 🇪🇸 Spain"
-      - "19. 🇺🇸 United States"
-      - "33. 🇳🇱 The Netherlands"
-      - "35. 🇳🇱 The Netherlands"
-      - "37. 🇱🇹 Lithuania"
-      - "53. 🇨🇦 Canada"
-      - "62. 🇨🇦 Canada"
-      - "65. 🇭🇰 Hong Kong"
-      - "70. 🇸🇬 Singapore"
-      - "72. 🇯🇵 Japan"
-      - "74. 🇨🇦 Canada"
-      - "76. 🇹🇼 Taiwan"
-      - "83. 🇮🇹 Italy"
-      - "89. 🇺🇸 United States"
-      - "94. 🇳🇱 The Netherlands"
-      - "95. 🇩🇪 Germany"
-      - "96. 🇳🇱 The Netherlands"
-      - "118. 🇸🇬 Singapore"
-      - "125. 🇨🇦 Canada"
-      - "128. 🇯🇵 Japan"
-      - "134. 🇺🇸 United States"
-      - "137. 🇯🇵 Japan"
-      - "138. 🇸🇬 Singapore"
-      - "142. 🇯🇵 Japan"
-      - "145. 🇸🇬 Singapore"
-      - "149. 🇸🇬 Singapore"
-      - "151. 🇧🇷 Brazil"
-      - "23. 🇺🇸 United States"
-      - "36. 🇩🇪 Germany"
-      - "51. 🇺🇸 United States"
-      - "55. 🇹🇼 Taiwan"
-      - "73. 🇩🇪 Germany"
-      - "80. 🇵🇭 Philippines"
-      - "90. 🇭🇰 Hong Kong"
-      - "101. 🇭🇰 Hong Kong"
-      - "104. 🇨🇦 Canada"
-      - "106. 🇳🇱 The Netherlands"
-      - "108. 🇰🇷 South Korea"
-      - "112. 🇹🇷 Turkey"
-      - "143. 🇭🇰 Hong Kong"
-      - "147. 🇺🇸 United States"
-      - "28. 🇸🇪 Sweden"
-      - "67. 🇺🇸 United States"
       - "127. 🇺🇸 United States"
+      - "128. 🇺🇸 United States"
+      - "129. 🇺🇸 United States"
       - "131. 🇺🇸 United States"
+      - "132. 🇺🇸 United States"
+      - "133. 🇫🇮 Finland"
+      - "134. 🇺🇸 United States"
+      - "135. 🇺🇸 United States"
+      - "136. 🇷🇺 Russia"
+      - "138. 🇺🇸 United States"
+      - "139. 🇺🇸 United States"
+      - "140. 🇺🇸 United States"
+      - "141. 🇸🇪 Sweden"
+      - "142. 🇧🇷 Brazil"
+      - "145. 🇷🇺 Russia"
+      - "146. 🇺🇸 United States"
+      - "149. 🇺🇸 United States"
+      - "150. 🇺🇸 United States"
+      - "151. 🇺🇸 United States"
+      - "152. 🇺🇸 United States"
+      - "153. 🇩🇪 Germany"
+      - "159. 🇸🇬 Singapore"
+      - "161. 🇮🇳 India"
+      - "163. 🇺🇸 United States"
+      - "164. 🇭🇰 Hong Kong"
+      - "166. 🇭🇰 Hong Kong"
+      - "168. 🇭🇰 Hong Kong"
+      - "170. 🇺🇸 United States"
+      - "171. 🇩🇪 Germany"
+      - "172. 🇯🇵 Japan"
+      - "173. 🇺🇸 United States"
+      - "174. 🇧🇷 Brazil"
+      - "175. 🇭🇰 Hong Kong"
+      - "176. 🇭🇰 Hong Kong"
+      - "177. 🇭🇰 Hong Kong"
+      - "183. 🇺🇸 United States"
+      - "184. 🇸🇪 Sweden"
+      - "185. 🇸🇬 Singapore"
+      - "187. 🇺🇸 United States"
+      - "188. 🇸🇪 Sweden"
+      - "191. 🇸🇬 Singapore"
+      - "192. 🇺🇸 United States"
+      - "194. 🇺🇸 United States"
+      - "195. 🇺🇸 United States"
+      - "196. 🇺🇸 United States"
+      - "197. 🇺🇸 United States"
+      - "199. 🇩🇪 Germany"
+      - "200. 🇩🇪 Germany"
+      - "201. 🇺🇸 United States"
+      - "202. 🇯🇵 Japan"
+      - "203. 🇩🇪 Germany"
+      - "206. 🇺🇸 United States"
+      - "207. 🇺🇸 United States"
+      - "211. 🇷🇺 Russia"
+      - "212. 🇺🇸 United States"
+      - "213. 🇬🇧 United Kingdom"
+      - "214. 🇺🇸 United States"
+      - "215. 🇺🇸 United States"
+      - "216. 🇭🇰 Hong Kong"
+      - "217. 🇩🇪 Germany"
+      - "220. 🇩🇪 Germany"
+      - "229. 🇯🇵 Japan"
+      - "230. 🇺🇸 United States"
+      - "232. 🇸🇪 Sweden"
+      - "236. 🇸🇬 Singapore"
+      - "238. 🇩🇪 Germany"
+      - "239. 🇷🇺 Russia"
+      - "240. 🇩🇪 Germany"
+      - "241. 🇸🇬 Singapore"
+      - "242. 🇩🇪 Germany"
+      - "247. 🇬🇧 United Kingdom"
+      - "7. 🇳🇱 The Netherlands"
+      - "8. 🇳🇱 The Netherlands"
+      - "9. 🇩🇪 Germany"
+      - "10. 🇳🇱 The Netherlands"
+      - "11. 🇳🇱 The Netherlands"
+      - "30. 🇳🇱 The Netherlands"
+      - "52. 🇳🇱 The Netherlands"
+      - "62. 🇨🇦 Canada"
+      - "79. 🇨🇦 Canada"
+      - "113. 🇭🇰 Hong Kong"
+      - "130. 🇸🇬 Singapore"
+      - "144. 🇭🇰 Hong Kong"
+      - "147. 🇸🇬 Singapore"
+      - "148. 🇹🇼 Taiwan"
+      - "154. 🇹🇼 Taiwan"
+      - "156. 🇹🇼 Taiwan"
+      - "157. 🇹🇼 Taiwan"
+      - "162. 🇯🇵 Japan"
+      - "165. 🇩🇪 Germany"
+      - "179. 🇹🇼 Taiwan"
+      - "180. 🇺🇸 United States"
+      - "182. 🇨🇦 Canada"
+      - "193. 🇹🇼 Taiwan"
+      - "208. 🇩🇪 Germany"
+      - "210. 🇦🇺 Australia"
+      - "223. 🇨🇦 Canada"
+      - "226. 🇫🇮 Finland"
+      - "231. 🇸🇬 Singapore"
+      - "234. 🇬🇧 United Kingdom"
+      - "246. 🇧🇷 Brazil"
+      - "29. 🇩🇪 Germany"
+      - "59. 🇺🇸 United States"
+      - "90. 🇺🇸 United States"
+      - "92. 🇩🇪 Germany"
+      - "98. 🇹🇼 Taiwan"
+      - "143. 🇨🇦 Canada"
+      - "158. 🇵🇭 Philippines"
+      - "169. 🇭🇰 Hong Kong"
+      - "186. 🇰🇷 South Korea"
+      - "189. 🇭🇰 Hong Kong"
+      - "221. 🇸🇬 Singapore"
+      - "224. 🇭🇰 Hong Kong"
+      - "227. 🇭🇰 Hong Kong"
+      - "228. 🇭🇰 Hong Kong"
+      - "233. 🇭🇰 Hong Kong"
+      - "235. 🇺🇸 United States"
+      - "237. 🇳🇱 The Netherlands"
+      - "243. 🇹🇷 Turkey"
+      - "244. 🇭🇰 Hong Kong"
+      - "97. 🇺🇸 United States"
+      - "119. 🇺🇸 United States"
+      - "125. 🇸🇪 Sweden"
+      - "167. 🇺🇸 United States"
+      - "198. 🇸🇪 Sweden"
+      - "204. 🇫🇷 France"
+      - "205. 🇫🇷 France"
+      - "209. 🇫🇷 France"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -2198,144 +3267,227 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "1. 🇧🇷 Brazil"
-      - "2. 🇬🇧 United Kingdom"
-      - "4. 🇧🇷 Brazil"
-      - "5. 🇧🇷 Brazil"
-      - "8. 🇧🇷 Brazil"
-      - "9. 🇧🇷 Brazil"
-      - "10. 🇸🇪 Sweden"
-      - "11. 🇸🇪 Sweden"
-      - "12. 🇫🇮 Finland"
-      - "13. 🇷🇺 Russia"
-      - "14. 🇷🇺 Russia"
-      - "16. 🇩🇪 Germany"
-      - "17. 🇸🇪 Sweden"
-      - "20. 🇸🇪 Sweden"
-      - "21. 🇩🇪 Germany"
-      - "22. 🇨🇭 Switzerland"
-      - "24. 🇧🇷 Brazil"
-      - "25. 🇧🇷 Brazil"
-      - "26. 🇧🇷 Brazil"
-      - "27. 🇩🇪 Germany"
-      - "29. 🇩🇪 Germany"
-      - "31. 🇩🇪 Germany"
-      - "32. 🇸🇪 Sweden"
+      - "1. 🇩🇪 Germany"
+      - "2. 🇩🇪 Germany"
+      - "3. 🇩🇪 Germany"
+      - "4. 🇩🇪 Germany"
+      - "5. 🇩🇪 Germany"
+      - "6. 🇧🇷 Brazil"
+      - "13. 🇧🇷 Brazil"
+      - "14. 🇧🇷 Brazil"
+      - "15. 🇧🇷 Brazil"
+      - "16. 🇷🇺 Russia"
+      - "17. 🇷🇺 Russia"
+      - "18. 🇷🇺 Russia"
+      - "19. 🇷🇺 Russia"
+      - "20. 🇷🇺 Russia"
+      - "21. 🇸🇪 Sweden"
+      - "22. 🇸🇪 Sweden"
+      - "23. 🇷🇺 Russia"
+      - "24. 🇸🇪 Sweden"
+      - "25. 🇸🇪 Sweden"
+      - "26. 🇷🇺 Russia"
+      - "27. 🇸🇪 Sweden"
+      - "28. 🇩🇪 Germany"
+      - "31. 🇸🇪 Sweden"
+      - "32. 🇳🇱 The Netherlands"
+      - "33. 🇸🇪 Sweden"
       - "34. 🇸🇪 Sweden"
-      - "38. 🇧🇷 Brazil"
-      - "39. 🇩🇪 Germany"
-      - "40. 🇩🇪 Germany"
-      - "41. 🇩🇪 Germany"
-      - "42. 🇩🇪 Germany"
-      - "43. 🇩🇪 Germany"
-      - "44. 🇩🇪 Germany"
+      - "35. 🇸🇪 Sweden"
+      - "36. 🇷🇺 Russia"
+      - "37. 🇫🇮 Finland"
+      - "38. 🇷🇺 Russia"
+      - "39. 🇷🇺 Russia"
+      - "40. 🇸🇪 Sweden"
+      - "41. 🇸🇪 Sweden"
+      - "42. 🇸🇪 Sweden"
+      - "43. 🇸🇪 Sweden"
+      - "44. 🇷🇺 Russia"
       - "45. 🇩🇪 Germany"
-      - "46. 🇺🇸 United States"
-      - "47. 🇩🇪 Germany"
+      - "46. 🇸🇪 Sweden"
+      - "47. 🇷🇺 Russia"
       - "48. 🇩🇪 Germany"
-      - "49. 🇸🇪 Sweden"
-      - "50. 🇸🇪 Sweden"
-      - "52. 🇩🇪 Germany"
-      - "54. 🇬🇧 United Kingdom"
-      - "59. 🇺🇸 United States"
+      - "49. 🇷🇺 Russia"
+      - "50. 🇷🇺 Russia"
+      - "51. 🇧🇷 Brazil"
+      - "53. 🇸🇪 Sweden"
+      - "54. 🇸🇪 Sweden"
+      - "56. 🇸🇪 Sweden"
+      - "57. 🇩🇪 Germany"
+      - "58. 🇩🇪 Germany"
       - "60. 🇩🇪 Germany"
-      - "61. 🇩🇪 Germany"
-      - "63. 🇺🇸 United States"
-      - "64. 🇺🇸 United States"
+      - "61. 🇸🇪 Sweden"
+      - "64. 🇩🇪 Germany"
       - "66. 🇩🇪 Germany"
+      - "67. 🇩🇪 Germany"
       - "68. 🇩🇪 Germany"
       - "69. 🇩🇪 Germany"
+      - "70. 🇷🇺 Russia"
       - "71. 🇩🇪 Germany"
-      - "77. 🇺🇸 United States"
-      - "78. 🇭🇰 Hong Kong"
-      - "79. 🇺🇸 United States"
+      - "72. 🇩🇪 Germany"
+      - "73. 🇷🇺 Russia"
+      - "74. 🇫🇮 Finland"
+      - "76. 🇩🇪 Germany"
+      - "77. 🇩🇪 Germany"
+      - "78. 🇸🇪 Sweden"
+      - "80. 🇩🇪 Germany"
       - "81. 🇩🇪 Germany"
-      - "84. 🇺🇸 United States"
+      - "82. 🇷🇺 Russia"
+      - "83. 🇩🇪 Germany"
+      - "84. 🇩🇪 Germany"
+      - "85. 🇩🇪 Germany"
       - "86. 🇩🇪 Germany"
-      - "88. 🇭🇰 Hong Kong"
-      - "91. 🇭🇰 Hong Kong"
-      - "92. 🇺🇸 United States"
-      - "93. 🇯🇵 Japan"
-      - "97. 🇸🇪 Sweden"
-      - "98. 🇸🇪 Sweden"
+      - "87. 🇷🇺 Russia"
+      - "88. 🇩🇪 Germany"
+      - "89. 🇩🇪 Germany"
+      - "91. 🇩🇪 Germany"
+      - "93. 🇩🇪 Germany"
+      - "94. 🇩🇪 Germany"
+      - "95. 🇩🇪 Germany"
+      - "96. 🇩🇪 Germany"
       - "99. 🇸🇪 Sweden"
-      - "100. 🇷🇺 Russia"
-      - "102. 🇯🇵 Japan"
-      - "103. 🇲🇴 Macao"
-      - "107. 🇺🇸 United States"
-      - "109. 🇺🇸 United States"
+      - "101. 🇩🇪 Germany"
+      - "103. 🇺🇸 United States"
+      - "104. 🇺🇸 United States"
+      - "105. 🇺🇸 United States"
+      - "108. 🇩🇪 Germany"
       - "110. 🇺🇸 United States"
       - "111. 🇺🇸 United States"
-      - "113. 🇺🇸 United States"
-      - "114. 🇩🇪 Germany"
-      - "115. 🇺🇸 United States"
-      - "117. 🇸🇬 Singapore"
-      - "119. 🇩🇪 Germany"
-      - "121. 🇩🇪 Germany"
-      - "122. 🇷🇺 Russia"
-      - "123. 🇩🇪 Germany"
-      - "124. 🇧🇷 Brazil"
+      - "112. 🇺🇸 United States"
+      - "114. 🇬🇧 United Kingdom"
+      - "116. 🇳🇱 The Netherlands"
+      - "120. 🇺🇸 United States"
+      - "122. 🇺🇸 United States"
+      - "124. 🇩🇪 Germany"
       - "126. 🇩🇪 Germany"
-      - "129. 🇹🇼 Taiwan"
-      - "130. 🇩🇪 Germany"
-      - "135. 🇷🇺 Russia"
-      - "136. 🇺🇸 United States"
-      - "139. 🇩🇪 Germany"
-      - "140. 🇺🇸 United States"
-      - "141. 🇩🇪 Germany"
-      - "144. 🇺🇸 United States"
-      - "146. 🇩🇪 Germany"
-      - "148. 🇸🇬 Singapore"
-      - "150. 🇺🇸 United States"
-      - "3. 🇩🇪 Germany"
-      - "6. 🇫🇮 Finland"
-      - "7. 🇳🇱 The Netherlands"
-      - "15. 🇩🇪 Germany"
-      - "18. 🇪🇸 Spain"
-      - "19. 🇺🇸 United States"
-      - "33. 🇳🇱 The Netherlands"
-      - "35. 🇳🇱 The Netherlands"
-      - "37. 🇱🇹 Lithuania"
-      - "53. 🇨🇦 Canada"
-      - "62. 🇨🇦 Canada"
-      - "65. 🇭🇰 Hong Kong"
-      - "70. 🇸🇬 Singapore"
-      - "72. 🇯🇵 Japan"
-      - "74. 🇨🇦 Canada"
-      - "76. 🇹🇼 Taiwan"
-      - "83. 🇮🇹 Italy"
-      - "89. 🇺🇸 United States"
-      - "94. 🇳🇱 The Netherlands"
-      - "95. 🇩🇪 Germany"
-      - "96. 🇳🇱 The Netherlands"
-      - "118. 🇸🇬 Singapore"
-      - "125. 🇨🇦 Canada"
-      - "128. 🇯🇵 Japan"
-      - "134. 🇺🇸 United States"
-      - "137. 🇯🇵 Japan"
-      - "138. 🇸🇬 Singapore"
-      - "142. 🇯🇵 Japan"
-      - "145. 🇸🇬 Singapore"
-      - "149. 🇸🇬 Singapore"
-      - "151. 🇧🇷 Brazil"
-      - "23. 🇺🇸 United States"
-      - "36. 🇩🇪 Germany"
-      - "51. 🇺🇸 United States"
-      - "55. 🇹🇼 Taiwan"
-      - "73. 🇩🇪 Germany"
-      - "80. 🇵🇭 Philippines"
-      - "90. 🇭🇰 Hong Kong"
-      - "101. 🇭🇰 Hong Kong"
-      - "104. 🇨🇦 Canada"
-      - "106. 🇳🇱 The Netherlands"
-      - "108. 🇰🇷 South Korea"
-      - "112. 🇹🇷 Turkey"
-      - "143. 🇭🇰 Hong Kong"
-      - "147. 🇺🇸 United States"
-      - "28. 🇸🇪 Sweden"
-      - "67. 🇺🇸 United States"
       - "127. 🇺🇸 United States"
+      - "128. 🇺🇸 United States"
+      - "129. 🇺🇸 United States"
       - "131. 🇺🇸 United States"
+      - "132. 🇺🇸 United States"
+      - "133. 🇫🇮 Finland"
+      - "134. 🇺🇸 United States"
+      - "135. 🇺🇸 United States"
+      - "136. 🇷🇺 Russia"
+      - "138. 🇺🇸 United States"
+      - "139. 🇺🇸 United States"
+      - "140. 🇺🇸 United States"
+      - "141. 🇸🇪 Sweden"
+      - "142. 🇧🇷 Brazil"
+      - "145. 🇷🇺 Russia"
+      - "146. 🇺🇸 United States"
+      - "149. 🇺🇸 United States"
+      - "150. 🇺🇸 United States"
+      - "151. 🇺🇸 United States"
+      - "152. 🇺🇸 United States"
+      - "153. 🇩🇪 Germany"
+      - "159. 🇸🇬 Singapore"
+      - "161. 🇮🇳 India"
+      - "163. 🇺🇸 United States"
+      - "164. 🇭🇰 Hong Kong"
+      - "166. 🇭🇰 Hong Kong"
+      - "168. 🇭🇰 Hong Kong"
+      - "170. 🇺🇸 United States"
+      - "171. 🇩🇪 Germany"
+      - "172. 🇯🇵 Japan"
+      - "173. 🇺🇸 United States"
+      - "174. 🇧🇷 Brazil"
+      - "175. 🇭🇰 Hong Kong"
+      - "176. 🇭🇰 Hong Kong"
+      - "177. 🇭🇰 Hong Kong"
+      - "183. 🇺🇸 United States"
+      - "184. 🇸🇪 Sweden"
+      - "185. 🇸🇬 Singapore"
+      - "187. 🇺🇸 United States"
+      - "188. 🇸🇪 Sweden"
+      - "191. 🇸🇬 Singapore"
+      - "192. 🇺🇸 United States"
+      - "194. 🇺🇸 United States"
+      - "195. 🇺🇸 United States"
+      - "196. 🇺🇸 United States"
+      - "197. 🇺🇸 United States"
+      - "199. 🇩🇪 Germany"
+      - "200. 🇩🇪 Germany"
+      - "201. 🇺🇸 United States"
+      - "202. 🇯🇵 Japan"
+      - "203. 🇩🇪 Germany"
+      - "206. 🇺🇸 United States"
+      - "207. 🇺🇸 United States"
+      - "211. 🇷🇺 Russia"
+      - "212. 🇺🇸 United States"
+      - "213. 🇬🇧 United Kingdom"
+      - "214. 🇺🇸 United States"
+      - "215. 🇺🇸 United States"
+      - "216. 🇭🇰 Hong Kong"
+      - "217. 🇩🇪 Germany"
+      - "220. 🇩🇪 Germany"
+      - "229. 🇯🇵 Japan"
+      - "230. 🇺🇸 United States"
+      - "232. 🇸🇪 Sweden"
+      - "236. 🇸🇬 Singapore"
+      - "238. 🇩🇪 Germany"
+      - "239. 🇷🇺 Russia"
+      - "240. 🇩🇪 Germany"
+      - "241. 🇸🇬 Singapore"
+      - "242. 🇩🇪 Germany"
+      - "247. 🇬🇧 United Kingdom"
+      - "7. 🇳🇱 The Netherlands"
+      - "8. 🇳🇱 The Netherlands"
+      - "9. 🇩🇪 Germany"
+      - "10. 🇳🇱 The Netherlands"
+      - "11. 🇳🇱 The Netherlands"
+      - "30. 🇳🇱 The Netherlands"
+      - "52. 🇳🇱 The Netherlands"
+      - "62. 🇨🇦 Canada"
+      - "79. 🇨🇦 Canada"
+      - "113. 🇭🇰 Hong Kong"
+      - "130. 🇸🇬 Singapore"
+      - "144. 🇭🇰 Hong Kong"
+      - "147. 🇸🇬 Singapore"
+      - "148. 🇹🇼 Taiwan"
+      - "154. 🇹🇼 Taiwan"
+      - "156. 🇹🇼 Taiwan"
+      - "157. 🇹🇼 Taiwan"
+      - "162. 🇯🇵 Japan"
+      - "165. 🇩🇪 Germany"
+      - "179. 🇹🇼 Taiwan"
+      - "180. 🇺🇸 United States"
+      - "182. 🇨🇦 Canada"
+      - "193. 🇹🇼 Taiwan"
+      - "208. 🇩🇪 Germany"
+      - "210. 🇦🇺 Australia"
+      - "223. 🇨🇦 Canada"
+      - "226. 🇫🇮 Finland"
+      - "231. 🇸🇬 Singapore"
+      - "234. 🇬🇧 United Kingdom"
+      - "246. 🇧🇷 Brazil"
+      - "29. 🇩🇪 Germany"
+      - "59. 🇺🇸 United States"
+      - "90. 🇺🇸 United States"
+      - "92. 🇩🇪 Germany"
+      - "98. 🇹🇼 Taiwan"
+      - "143. 🇨🇦 Canada"
+      - "158. 🇵🇭 Philippines"
+      - "169. 🇭🇰 Hong Kong"
+      - "186. 🇰🇷 South Korea"
+      - "189. 🇭🇰 Hong Kong"
+      - "221. 🇸🇬 Singapore"
+      - "224. 🇭🇰 Hong Kong"
+      - "227. 🇭🇰 Hong Kong"
+      - "228. 🇭🇰 Hong Kong"
+      - "233. 🇭🇰 Hong Kong"
+      - "235. 🇺🇸 United States"
+      - "237. 🇳🇱 The Netherlands"
+      - "243. 🇹🇷 Turkey"
+      - "244. 🇭🇰 Hong Kong"
+      - "97. 🇺🇸 United States"
+      - "119. 🇺🇸 United States"
+      - "125. 🇸🇪 Sweden"
+      - "167. 🇺🇸 United States"
+      - "198. 🇸🇪 Sweden"
+      - "204. 🇫🇷 France"
+      - "205. 🇫🇷 France"
+      - "209. 🇫🇷 France"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -2345,144 +3497,227 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "1. 🇧🇷 Brazil"
-      - "2. 🇬🇧 United Kingdom"
-      - "4. 🇧🇷 Brazil"
-      - "5. 🇧🇷 Brazil"
-      - "8. 🇧🇷 Brazil"
-      - "9. 🇧🇷 Brazil"
-      - "10. 🇸🇪 Sweden"
-      - "11. 🇸🇪 Sweden"
-      - "12. 🇫🇮 Finland"
-      - "13. 🇷🇺 Russia"
-      - "14. 🇷🇺 Russia"
-      - "16. 🇩🇪 Germany"
-      - "17. 🇸🇪 Sweden"
-      - "20. 🇸🇪 Sweden"
-      - "21. 🇩🇪 Germany"
-      - "22. 🇨🇭 Switzerland"
-      - "24. 🇧🇷 Brazil"
-      - "25. 🇧🇷 Brazil"
-      - "26. 🇧🇷 Brazil"
-      - "27. 🇩🇪 Germany"
-      - "29. 🇩🇪 Germany"
-      - "31. 🇩🇪 Germany"
-      - "32. 🇸🇪 Sweden"
+      - "1. 🇩🇪 Germany"
+      - "2. 🇩🇪 Germany"
+      - "3. 🇩🇪 Germany"
+      - "4. 🇩🇪 Germany"
+      - "5. 🇩🇪 Germany"
+      - "6. 🇧🇷 Brazil"
+      - "13. 🇧🇷 Brazil"
+      - "14. 🇧🇷 Brazil"
+      - "15. 🇧🇷 Brazil"
+      - "16. 🇷🇺 Russia"
+      - "17. 🇷🇺 Russia"
+      - "18. 🇷🇺 Russia"
+      - "19. 🇷🇺 Russia"
+      - "20. 🇷🇺 Russia"
+      - "21. 🇸🇪 Sweden"
+      - "22. 🇸🇪 Sweden"
+      - "23. 🇷🇺 Russia"
+      - "24. 🇸🇪 Sweden"
+      - "25. 🇸🇪 Sweden"
+      - "26. 🇷🇺 Russia"
+      - "27. 🇸🇪 Sweden"
+      - "28. 🇩🇪 Germany"
+      - "31. 🇸🇪 Sweden"
+      - "32. 🇳🇱 The Netherlands"
+      - "33. 🇸🇪 Sweden"
       - "34. 🇸🇪 Sweden"
-      - "38. 🇧🇷 Brazil"
-      - "39. 🇩🇪 Germany"
-      - "40. 🇩🇪 Germany"
-      - "41. 🇩🇪 Germany"
-      - "42. 🇩🇪 Germany"
-      - "43. 🇩🇪 Germany"
-      - "44. 🇩🇪 Germany"
+      - "35. 🇸🇪 Sweden"
+      - "36. 🇷🇺 Russia"
+      - "37. 🇫🇮 Finland"
+      - "38. 🇷🇺 Russia"
+      - "39. 🇷🇺 Russia"
+      - "40. 🇸🇪 Sweden"
+      - "41. 🇸🇪 Sweden"
+      - "42. 🇸🇪 Sweden"
+      - "43. 🇸🇪 Sweden"
+      - "44. 🇷🇺 Russia"
       - "45. 🇩🇪 Germany"
-      - "46. 🇺🇸 United States"
-      - "47. 🇩🇪 Germany"
+      - "46. 🇸🇪 Sweden"
+      - "47. 🇷🇺 Russia"
       - "48. 🇩🇪 Germany"
-      - "49. 🇸🇪 Sweden"
-      - "50. 🇸🇪 Sweden"
-      - "52. 🇩🇪 Germany"
-      - "54. 🇬🇧 United Kingdom"
-      - "59. 🇺🇸 United States"
+      - "49. 🇷🇺 Russia"
+      - "50. 🇷🇺 Russia"
+      - "51. 🇧🇷 Brazil"
+      - "53. 🇸🇪 Sweden"
+      - "54. 🇸🇪 Sweden"
+      - "56. 🇸🇪 Sweden"
+      - "57. 🇩🇪 Germany"
+      - "58. 🇩🇪 Germany"
       - "60. 🇩🇪 Germany"
-      - "61. 🇩🇪 Germany"
-      - "63. 🇺🇸 United States"
-      - "64. 🇺🇸 United States"
+      - "61. 🇸🇪 Sweden"
+      - "64. 🇩🇪 Germany"
       - "66. 🇩🇪 Germany"
+      - "67. 🇩🇪 Germany"
       - "68. 🇩🇪 Germany"
       - "69. 🇩🇪 Germany"
+      - "70. 🇷🇺 Russia"
       - "71. 🇩🇪 Germany"
-      - "77. 🇺🇸 United States"
-      - "78. 🇭🇰 Hong Kong"
-      - "79. 🇺🇸 United States"
+      - "72. 🇩🇪 Germany"
+      - "73. 🇷🇺 Russia"
+      - "74. 🇫🇮 Finland"
+      - "76. 🇩🇪 Germany"
+      - "77. 🇩🇪 Germany"
+      - "78. 🇸🇪 Sweden"
+      - "80. 🇩🇪 Germany"
       - "81. 🇩🇪 Germany"
-      - "84. 🇺🇸 United States"
+      - "82. 🇷🇺 Russia"
+      - "83. 🇩🇪 Germany"
+      - "84. 🇩🇪 Germany"
+      - "85. 🇩🇪 Germany"
       - "86. 🇩🇪 Germany"
-      - "88. 🇭🇰 Hong Kong"
-      - "91. 🇭🇰 Hong Kong"
-      - "92. 🇺🇸 United States"
-      - "93. 🇯🇵 Japan"
-      - "97. 🇸🇪 Sweden"
-      - "98. 🇸🇪 Sweden"
+      - "87. 🇷🇺 Russia"
+      - "88. 🇩🇪 Germany"
+      - "89. 🇩🇪 Germany"
+      - "91. 🇩🇪 Germany"
+      - "93. 🇩🇪 Germany"
+      - "94. 🇩🇪 Germany"
+      - "95. 🇩🇪 Germany"
+      - "96. 🇩🇪 Germany"
       - "99. 🇸🇪 Sweden"
-      - "100. 🇷🇺 Russia"
-      - "102. 🇯🇵 Japan"
-      - "103. 🇲🇴 Macao"
-      - "107. 🇺🇸 United States"
-      - "109. 🇺🇸 United States"
+      - "101. 🇩🇪 Germany"
+      - "103. 🇺🇸 United States"
+      - "104. 🇺🇸 United States"
+      - "105. 🇺🇸 United States"
+      - "108. 🇩🇪 Germany"
       - "110. 🇺🇸 United States"
       - "111. 🇺🇸 United States"
-      - "113. 🇺🇸 United States"
-      - "114. 🇩🇪 Germany"
-      - "115. 🇺🇸 United States"
-      - "117. 🇸🇬 Singapore"
-      - "119. 🇩🇪 Germany"
-      - "121. 🇩🇪 Germany"
-      - "122. 🇷🇺 Russia"
-      - "123. 🇩🇪 Germany"
-      - "124. 🇧🇷 Brazil"
+      - "112. 🇺🇸 United States"
+      - "114. 🇬🇧 United Kingdom"
+      - "116. 🇳🇱 The Netherlands"
+      - "120. 🇺🇸 United States"
+      - "122. 🇺🇸 United States"
+      - "124. 🇩🇪 Germany"
       - "126. 🇩🇪 Germany"
-      - "129. 🇹🇼 Taiwan"
-      - "130. 🇩🇪 Germany"
-      - "135. 🇷🇺 Russia"
-      - "136. 🇺🇸 United States"
-      - "139. 🇩🇪 Germany"
-      - "140. 🇺🇸 United States"
-      - "141. 🇩🇪 Germany"
-      - "144. 🇺🇸 United States"
-      - "146. 🇩🇪 Germany"
-      - "148. 🇸🇬 Singapore"
-      - "150. 🇺🇸 United States"
-      - "3. 🇩🇪 Germany"
-      - "6. 🇫🇮 Finland"
-      - "7. 🇳🇱 The Netherlands"
-      - "15. 🇩🇪 Germany"
-      - "18. 🇪🇸 Spain"
-      - "19. 🇺🇸 United States"
-      - "33. 🇳🇱 The Netherlands"
-      - "35. 🇳🇱 The Netherlands"
-      - "37. 🇱🇹 Lithuania"
-      - "53. 🇨🇦 Canada"
-      - "62. 🇨🇦 Canada"
-      - "65. 🇭🇰 Hong Kong"
-      - "70. 🇸🇬 Singapore"
-      - "72. 🇯🇵 Japan"
-      - "74. 🇨🇦 Canada"
-      - "76. 🇹🇼 Taiwan"
-      - "83. 🇮🇹 Italy"
-      - "89. 🇺🇸 United States"
-      - "94. 🇳🇱 The Netherlands"
-      - "95. 🇩🇪 Germany"
-      - "96. 🇳🇱 The Netherlands"
-      - "118. 🇸🇬 Singapore"
-      - "125. 🇨🇦 Canada"
-      - "128. 🇯🇵 Japan"
-      - "134. 🇺🇸 United States"
-      - "137. 🇯🇵 Japan"
-      - "138. 🇸🇬 Singapore"
-      - "142. 🇯🇵 Japan"
-      - "145. 🇸🇬 Singapore"
-      - "149. 🇸🇬 Singapore"
-      - "151. 🇧🇷 Brazil"
-      - "23. 🇺🇸 United States"
-      - "36. 🇩🇪 Germany"
-      - "51. 🇺🇸 United States"
-      - "55. 🇹🇼 Taiwan"
-      - "73. 🇩🇪 Germany"
-      - "80. 🇵🇭 Philippines"
-      - "90. 🇭🇰 Hong Kong"
-      - "101. 🇭🇰 Hong Kong"
-      - "104. 🇨🇦 Canada"
-      - "106. 🇳🇱 The Netherlands"
-      - "108. 🇰🇷 South Korea"
-      - "112. 🇹🇷 Turkey"
-      - "143. 🇭🇰 Hong Kong"
-      - "147. 🇺🇸 United States"
-      - "28. 🇸🇪 Sweden"
-      - "67. 🇺🇸 United States"
       - "127. 🇺🇸 United States"
+      - "128. 🇺🇸 United States"
+      - "129. 🇺🇸 United States"
       - "131. 🇺🇸 United States"
+      - "132. 🇺🇸 United States"
+      - "133. 🇫🇮 Finland"
+      - "134. 🇺🇸 United States"
+      - "135. 🇺🇸 United States"
+      - "136. 🇷🇺 Russia"
+      - "138. 🇺🇸 United States"
+      - "139. 🇺🇸 United States"
+      - "140. 🇺🇸 United States"
+      - "141. 🇸🇪 Sweden"
+      - "142. 🇧🇷 Brazil"
+      - "145. 🇷🇺 Russia"
+      - "146. 🇺🇸 United States"
+      - "149. 🇺🇸 United States"
+      - "150. 🇺🇸 United States"
+      - "151. 🇺🇸 United States"
+      - "152. 🇺🇸 United States"
+      - "153. 🇩🇪 Germany"
+      - "159. 🇸🇬 Singapore"
+      - "161. 🇮🇳 India"
+      - "163. 🇺🇸 United States"
+      - "164. 🇭🇰 Hong Kong"
+      - "166. 🇭🇰 Hong Kong"
+      - "168. 🇭🇰 Hong Kong"
+      - "170. 🇺🇸 United States"
+      - "171. 🇩🇪 Germany"
+      - "172. 🇯🇵 Japan"
+      - "173. 🇺🇸 United States"
+      - "174. 🇧🇷 Brazil"
+      - "175. 🇭🇰 Hong Kong"
+      - "176. 🇭🇰 Hong Kong"
+      - "177. 🇭🇰 Hong Kong"
+      - "183. 🇺🇸 United States"
+      - "184. 🇸🇪 Sweden"
+      - "185. 🇸🇬 Singapore"
+      - "187. 🇺🇸 United States"
+      - "188. 🇸🇪 Sweden"
+      - "191. 🇸🇬 Singapore"
+      - "192. 🇺🇸 United States"
+      - "194. 🇺🇸 United States"
+      - "195. 🇺🇸 United States"
+      - "196. 🇺🇸 United States"
+      - "197. 🇺🇸 United States"
+      - "199. 🇩🇪 Germany"
+      - "200. 🇩🇪 Germany"
+      - "201. 🇺🇸 United States"
+      - "202. 🇯🇵 Japan"
+      - "203. 🇩🇪 Germany"
+      - "206. 🇺🇸 United States"
+      - "207. 🇺🇸 United States"
+      - "211. 🇷🇺 Russia"
+      - "212. 🇺🇸 United States"
+      - "213. 🇬🇧 United Kingdom"
+      - "214. 🇺🇸 United States"
+      - "215. 🇺🇸 United States"
+      - "216. 🇭🇰 Hong Kong"
+      - "217. 🇩🇪 Germany"
+      - "220. 🇩🇪 Germany"
+      - "229. 🇯🇵 Japan"
+      - "230. 🇺🇸 United States"
+      - "232. 🇸🇪 Sweden"
+      - "236. 🇸🇬 Singapore"
+      - "238. 🇩🇪 Germany"
+      - "239. 🇷🇺 Russia"
+      - "240. 🇩🇪 Germany"
+      - "241. 🇸🇬 Singapore"
+      - "242. 🇩🇪 Germany"
+      - "247. 🇬🇧 United Kingdom"
+      - "7. 🇳🇱 The Netherlands"
+      - "8. 🇳🇱 The Netherlands"
+      - "9. 🇩🇪 Germany"
+      - "10. 🇳🇱 The Netherlands"
+      - "11. 🇳🇱 The Netherlands"
+      - "30. 🇳🇱 The Netherlands"
+      - "52. 🇳🇱 The Netherlands"
+      - "62. 🇨🇦 Canada"
+      - "79. 🇨🇦 Canada"
+      - "113. 🇭🇰 Hong Kong"
+      - "130. 🇸🇬 Singapore"
+      - "144. 🇭🇰 Hong Kong"
+      - "147. 🇸🇬 Singapore"
+      - "148. 🇹🇼 Taiwan"
+      - "154. 🇹🇼 Taiwan"
+      - "156. 🇹🇼 Taiwan"
+      - "157. 🇹🇼 Taiwan"
+      - "162. 🇯🇵 Japan"
+      - "165. 🇩🇪 Germany"
+      - "179. 🇹🇼 Taiwan"
+      - "180. 🇺🇸 United States"
+      - "182. 🇨🇦 Canada"
+      - "193. 🇹🇼 Taiwan"
+      - "208. 🇩🇪 Germany"
+      - "210. 🇦🇺 Australia"
+      - "223. 🇨🇦 Canada"
+      - "226. 🇫🇮 Finland"
+      - "231. 🇸🇬 Singapore"
+      - "234. 🇬🇧 United Kingdom"
+      - "246. 🇧🇷 Brazil"
+      - "29. 🇩🇪 Germany"
+      - "59. 🇺🇸 United States"
+      - "90. 🇺🇸 United States"
+      - "92. 🇩🇪 Germany"
+      - "98. 🇹🇼 Taiwan"
+      - "143. 🇨🇦 Canada"
+      - "158. 🇵🇭 Philippines"
+      - "169. 🇭🇰 Hong Kong"
+      - "186. 🇰🇷 South Korea"
+      - "189. 🇭🇰 Hong Kong"
+      - "221. 🇸🇬 Singapore"
+      - "224. 🇭🇰 Hong Kong"
+      - "227. 🇭🇰 Hong Kong"
+      - "228. 🇭🇰 Hong Kong"
+      - "233. 🇭🇰 Hong Kong"
+      - "235. 🇺🇸 United States"
+      - "237. 🇳🇱 The Netherlands"
+      - "243. 🇹🇷 Turkey"
+      - "244. 🇭🇰 Hong Kong"
+      - "97. 🇺🇸 United States"
+      - "119. 🇺🇸 United States"
+      - "125. 🇸🇪 Sweden"
+      - "167. 🇺🇸 United States"
+      - "198. 🇸🇪 Sweden"
+      - "204. 🇫🇷 France"
+      - "205. 🇫🇷 France"
+      - "209. 🇫🇷 France"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
