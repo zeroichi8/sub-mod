@@ -499,40 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇦🇿 🇫🇮 | @WhiteDNS | FI5|3.0MB/s|DNSOK|GPT⁺-FI|GM-FI|CL-FI|SP-FI"
-    type: "vless"
-    server: "94.20.154.22"
-    port: 443
-    uuid: "a5194487-9b9a-462f-a047-ac7580d80201"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "kotakbla.b-cdn.net"
-    client-fingerprint: "firefox"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "kotakbla.b-cdn.net"
-  - name: "🇦🇿 REALITY|AZ🇦🇿 | azerbaijan.zulacdn.ir-50581 | 690.61ms"
-    type: "vless"
-    server: "azerbaijan.zulacdn.ir"
-    port: 50581
-    uuid: "13474472-ab43-4749-be44-769321b0d683"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "google.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "rY0p9bslbo1BOCOy-KL3V7sVPyp-eJv0IR6NxysFtW8"
-      short-id: "70a439e9aa8458cd"
   - name: "🇦🇿 AZ 🇦🇿 | @Raydikalx | A52069"
     type: "ss"
     server: "180.149.44.120"
@@ -547,14 +513,6 @@ proxies:
     cipher: "aes-256-cfb"
     password: "f8f7aCzcPKbsF8p3"
     udp: true
-  - name: "🇦🇿 🔒 VL-TCP-NA 🇦🇿 AZ-180.149.45.140:64584"
-    type: "vless"
-    server: "180.149.45.140"
-    port: 64584
-    uuid: "474651c3-72c6-49c4-b747-ca7e2c838564"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇦🇿 🔒 VL-TCP-RLT 🇦🇿 AZ-180.149.44.178:50581"
     type: "vless"
     server: "180.149.44.178"
@@ -587,11 +545,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇦🇿 🇫🇮 | @WhiteDNS | FI5|3.0MB/s|DNSOK|GPT⁺-FI|GM-FI|CL-FI|SP-FI"
-      - "🇦🇿 REALITY|AZ🇦🇿 | azerbaijan.zulacdn.ir-50581 | 690.61ms"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | A52069"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | FFB638"
-      - "🇦🇿 🔒 VL-TCP-NA 🇦🇿 AZ-180.149.45.140:64584"
       - "🇦🇿 🔒 VL-TCP-RLT 🇦🇿 AZ-180.149.44.178:50581"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -603,11 +558,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇦🇿 🇫🇮 | @WhiteDNS | FI5|3.0MB/s|DNSOK|GPT⁺-FI|GM-FI|CL-FI|SP-FI"
-      - "🇦🇿 REALITY|AZ🇦🇿 | azerbaijan.zulacdn.ir-50581 | 690.61ms"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | A52069"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | FFB638"
-      - "🇦🇿 🔒 VL-TCP-NA 🇦🇿 AZ-180.149.45.140:64584"
       - "🇦🇿 🔒 VL-TCP-RLT 🇦🇿 AZ-180.149.44.178:50581"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -618,11 +570,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇦🇿 🇫🇮 | @WhiteDNS | FI5|3.0MB/s|DNSOK|GPT⁺-FI|GM-FI|CL-FI|SP-FI"
-      - "🇦🇿 REALITY|AZ🇦🇿 | azerbaijan.zulacdn.ir-50581 | 690.61ms"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | A52069"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | FFB638"
-      - "🇦🇿 🔒 VL-TCP-NA 🇦🇿 AZ-180.149.45.140:64584"
       - "🇦🇿 🔒 VL-TCP-RLT 🇦🇿 AZ-180.149.44.178:50581"
   - name: "المنت 💬"
     type: "select"

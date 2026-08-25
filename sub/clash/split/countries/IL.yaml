@@ -499,6 +499,27 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇮🇱 🇸🇪 Sweden"
+    type: "vless"
+    server: "f906293e47c272d0.swcdlg.kevmixa.ir"
+    port: 53966
+    uuid: "d325c0aa-17df-4d65-a144-d997e07b2c4e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇱 🇸🇪 Sweden Reality"
+    type: "vless"
+    server: "36ca589924f509b1.swcdlg.kevmixa.ir"
+    port: 46312
+    uuid: "d325c0aa-17df-4d65-a144-d997e07b2c4e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "amp-api-edge.apps.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "LiNmk0DYhmt0yuiyYE183eCsPLWZ6bFEutMBLfqfwGI"
+      short-id: "0c1fd5602216f902"
   - name: "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
     type: "vless"
     server: "212.179.49.187"
@@ -576,7 +597,7 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇮🇱 🇸🇪 Sweden"
+  - name: "🇮🇱 🇸🇪 Sweden-1"
     type: "vless"
     server: "opmenu.kevmixa.ir"
     port: 10985
@@ -584,7 +605,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.yahoo.com"
+    servername: "yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -597,7 +618,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.yahoo.com"
+    servername: "yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -623,7 +644,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.yahoo.com"
+    servername: "yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
@@ -636,25 +657,11 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.yahoo.com"
+    servername: "yahoo.com"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "YHpxdq3UWoSZyk_mw5hUWvSkWIN4A8bksnnxrfHrzBE"
       short-id: "b5516a2b1bdcb4f6"
-  - name: "🇮🇱 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "185.95.231.156"
-    port: 443
-    uuid: "1f8cf47a-b66a-4916-979f-26edfcf44eea"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
-      short-id: "a3a578ab"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -669,6 +676,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇮🇱 🇸🇪 Sweden"
+      - "🇮🇱 🇸🇪 Sweden Reality"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | F86979"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
@@ -677,12 +686,11 @@ proxy-groups:
       - "🇮🇱 🇸🇪 Sweden 3 - TCP"
       - "🇮🇱 🇸🇪 Sweden 4 - TCP"
       - "🇮🇱 🇳🇱 NL 5 - TCP"
-      - "🇮🇱 🇸🇪 Sweden"
+      - "🇮🇱 🇸🇪 Sweden-1"
       - "🇮🇱 🇸🇪 Sweden 2"
       - "🇮🇱 🇸🇪 Sweden 3"
       - "🇮🇱 🇸🇪 Sweden 4"
       - "🇮🇱 🇳🇱 Netherlands 5"
-      - "🇮🇱 @DeltaKroneckerGithub"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -693,6 +701,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇮🇱 🇸🇪 Sweden"
+      - "🇮🇱 🇸🇪 Sweden Reality"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | F86979"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
@@ -701,12 +711,11 @@ proxy-groups:
       - "🇮🇱 🇸🇪 Sweden 3 - TCP"
       - "🇮🇱 🇸🇪 Sweden 4 - TCP"
       - "🇮🇱 🇳🇱 NL 5 - TCP"
-      - "🇮🇱 🇸🇪 Sweden"
+      - "🇮🇱 🇸🇪 Sweden-1"
       - "🇮🇱 🇸🇪 Sweden 2"
       - "🇮🇱 🇸🇪 Sweden 3"
       - "🇮🇱 🇸🇪 Sweden 4"
       - "🇮🇱 🇳🇱 Netherlands 5"
-      - "🇮🇱 @DeltaKroneckerGithub"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -716,6 +725,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇮🇱 🇸🇪 Sweden"
+      - "🇮🇱 🇸🇪 Sweden Reality"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | F86979"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
@@ -724,12 +735,11 @@ proxy-groups:
       - "🇮🇱 🇸🇪 Sweden 3 - TCP"
       - "🇮🇱 🇸🇪 Sweden 4 - TCP"
       - "🇮🇱 🇳🇱 NL 5 - TCP"
-      - "🇮🇱 🇸🇪 Sweden"
+      - "🇮🇱 🇸🇪 Sweden-1"
       - "🇮🇱 🇸🇪 Sweden 2"
       - "🇮🇱 🇸🇪 Sweden 3"
       - "🇮🇱 🇸🇪 Sweden 4"
       - "🇮🇱 🇳🇱 Netherlands 5"
-      - "🇮🇱 @DeltaKroneckerGithub"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
