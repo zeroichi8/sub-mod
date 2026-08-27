@@ -499,17 +499,56 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "@Daily_Configs : کانال تلگرام"
+  - name: "chopin-x | @Frog_V2ray"
     type: "vless"
-    server: "dey.lnmarketplace.net"
+    server: "b2n.ir"
     port: 443
-    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
+    uuid: "d5af4dfe-eaf1-460c-87aa-fefe930db0ba"
     udp: true
     tls: true
     network: "xhttp"
-    servername: "dey.lnmarketplace.net"
+    servername: "chopin.kaftarkakolbesarwifi.com"
+    client-fingerprint: "chrome"
     alpn:
       - "h2"
+      - "http/1.1"
+      - "h3"
+  - name: "Beaver-x | @Frog_V2ray"
+    type: "vless"
+    server: "b2n.ir"
+    port: 443
+    uuid: "14c44521-e28f-4561-a12c-337d8cc44d87"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "beaver.kaftarkakolbesarwifi.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+  - name: "𝗝𝗼𝗶𝗻➠@PlanB_net"
+    type: "vless"
+    server: "172.64.150.28"
+    port: 2082
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "@FarazV2ray"
+    type: "vless"
+    server: "180.178.60.254"
+    port: 10000
+    uuid: "caec0d8d-ab2f-4247-b97d-7fb1a34ab195"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🦁74@oneclickvpnkeys"
     type: "vless"
     server: "54.38.138.175"
@@ -522,20 +561,6 @@ proxies:
     reality-opts:
       public-key: "LrDYMSt1pt2h6n-7YnHpcUAb_IG7QsQ0rfXz8RqkfCY"
       short-id: "9e0fac51cc19d2"
-  - name: "Artemisvpn1"
-    type: "vless"
-    server: "31.76.4.103"
-    port: 443
-    uuid: "423b1d79-08c4-403f-9d5e-c541f791b55f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "eu-central.cendora.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI"
-      short-id: "00bca5982f82d083"
   - name: ""
     type: "vless"
     server: "40.160.68.122"
@@ -546,13 +571,6 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/?ed"
-  - name: "🇺🇸 United States"
-    type: "ss"
-    server: "31.76.82.131"
-    port: 34260
-    cipher: "chacha20-ietf-poly1305"
-    password: "cTAObwg4OWWXkZJQs0ZdgC"
-    udp: true
   - name: "⚙️8@oneclickvpnkeys"
     type: "ss"
     server: "158.173.20.208"
@@ -565,14 +583,6 @@ proxies:
     server: "165.140.216.142"
     port: 443
     uuid: "b65a2d69-5634-42a2-e4be-54e8a6176900"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
-    type: "vmess"
-    server: "82.198.246.37"
-    port: 180
-    uuid: "d13fc2f5-3e05-4795-81eb-44143a09e552"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -592,22 +602,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇬🇧 @proxy_kafee"
-    type: "vmess"
-    server: "66.163.117.58"
-    port: 22324
-    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸"
-    type: "vmess"
-    server: "82.198.246.233"
-    port: 180
-    uuid: "d13fc2f5-3e05-4795-81eb-44143a09e552"
-    alterId: 0
-    cipher: "auto"
-    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -622,18 +616,16 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "@Daily_Configs : کانال تلگرام"
+      - "chopin-x | @Frog_V2ray"
+      - "Beaver-x | @Frog_V2ray"
+      - "𝗝𝗼𝗶𝗻➠@PlanB_net"
+      - "@FarazV2ray"
       - "🦁74@oneclickvpnkeys"
-      - "Artemisvpn1"
       - ""
-      - "🇺🇸 United States"
       - "⚙️8@oneclickvpnkeys"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
       - "✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪"
       - "@Hope_Net-join-us-on-Telegram"
-      - "🇬🇧 @proxy_kafee"
-      - "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -644,18 +636,16 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "@Daily_Configs : کانال تلگرام"
+      - "chopin-x | @Frog_V2ray"
+      - "Beaver-x | @Frog_V2ray"
+      - "𝗝𝗼𝗶𝗻➠@PlanB_net"
+      - "@FarazV2ray"
       - "🦁74@oneclickvpnkeys"
-      - "Artemisvpn1"
       - ""
-      - "🇺🇸 United States"
       - "⚙️8@oneclickvpnkeys"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
       - "✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪"
       - "@Hope_Net-join-us-on-Telegram"
-      - "🇬🇧 @proxy_kafee"
-      - "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -665,18 +655,16 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "@Daily_Configs : کانال تلگرام"
+      - "chopin-x | @Frog_V2ray"
+      - "Beaver-x | @Frog_V2ray"
+      - "𝗝𝗼𝗶𝗻➠@PlanB_net"
+      - "@FarazV2ray"
       - "🦁74@oneclickvpnkeys"
-      - "Artemisvpn1"
       - ""
-      - "🇺🇸 United States"
       - "⚙️8@oneclickvpnkeys"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
       - "✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪"
       - "@Hope_Net-join-us-on-Telegram"
-      - "🇬🇧 @proxy_kafee"
-      - "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
