@@ -499,18 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.215.228.157:8443"
     type: "vless"
-    server: "185.143.234.122"
-    port: 8080
-    uuid: "fb3f7f53-5c98-4551-9c62-722888b8919f"
+    server: "185.215.228.157"
+    port: 8443
+    uuid: "2d9de6ea-56c9-422d-a4ad-cac95b8e0881"
     udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "rt.orvexa.ir"
+    tls: true
+    network: "xhttp"
+    servername: "ca.lebas2.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
   - name: "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
     type: "vless"
     server: "185.143.234.200"
@@ -519,12 +520,24 @@ proxies:
     udp: true
     tls: true
     network: "ws"
-    servername: "aiomovie.ir"
+    servername: "cafeamiran.com"
     client-fingerprint: "randomized"
     ws-opts:
       path: "/?ed=443"
       headers:
-        Host: "aiomovie.ir.wnticaceninl10.mahanmapcdn.com"
+        Host: "cafeamiran.com.bugtr15sv.mapircdn.com"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.238:8443"
+    type: "vless"
+    server: "185.143.234.238"
+    port: 8443
+    uuid: "3b9d36c8-48ef-494b-8f0f-ec96d8616561"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "console.hptune.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
   - name: "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.14:443"
     type: "vless"
     server: "87.107.113.14"
@@ -537,93 +550,140 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "assets"
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-87.107.82.171:8080"
+  - name: "🔒 VL-WS-TLS 🇮🇷 IR-213.176.112.136:5222"
     type: "vless"
-    server: "87.107.82.171"
-    port: 8080
-    uuid: "f6bec3c4-c29d-4392-a4fe-96936b9b3005"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/abc?ed=2048"
-      headers:
-        Host: "film-doni.com"
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
-    type: "vless"
-    server: "185.143.234.238"
-    port: 2086
-    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "parsi.parsi.sbs"
-  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-217.114.40.12:80"
-    type: "vless"
-    server: "217.114.40.12"
-    port: 80
-    uuid: "a9f40576-6321-491f-bb4a-7d8a762eea27"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-62.60.141.153:50972"
-    type: "vless"
-    server: "62.60.141.153"
-    port: 50972
-    uuid: "01640ed0-9b23-493d-ac18-3947750e25c2"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-94.183.149.168:8880"
-    type: "vless"
-    server: "94.183.149.168"
-    port: 8880
-    uuid: "d24e1b75-d80f-4818-d621-ee919ea71c16"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
-    type: "vless"
-    server: "185.143.233.122"
-    port: 2095
-    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "api.aramonlineshop.ir"
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
-    type: "vless"
-    server: "185.143.233.122"
-    port: 8080
-    uuid: "fb3f7f53-5c98-4551-9c62-722888b8919f"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "rt.orvexa.ir"
-  - name: "🔒 VL-GRPC-TLS 🇮🇷 IR-193.151.141.5:2086"
-    type: "vless"
-    server: "193.151.141.5"
-    port: 2086
-    uuid: "257c313c-36fa-4d99-ba06-bb4a02aae70d"
+    server: "213.176.112.136"
+    port: 5222
+    uuid: "8d955d71-ed5d-4f4c-ae68-42d120f06861"
     udp: true
     tls: true
-    network: "grpc"
-    servername: "adgof.mgodping12.xyz"
+    network: "ws"
+    servername: "kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+    ws-opts:
+      path: "/@Marisa_kristi"
+      headers:
+        Host: "kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
+    type: "vless"
+    server: "212.80.9.157"
+    port: 2087
+    uuid: "4eaed498-55aa-4d80-8a9e-df18a7dcb27f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "s5.zynetrax.ir"
     client-fingerprint: "chrome"
     alpn:
       - "h2"
       - "http/1.1"
       - "h3"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.238:8443"
+    type: "vless"
+    server: "185.143.233.238"
+    port: 8443
+    uuid: "3b9d36c8-48ef-494b-8f0f-ec96d8616561"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "console.hptune.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
+    type: "vless"
+    server: "185.143.233.5"
+    port: 443
+    uuid: "46aea670-5e6c-40af-9b99-95585dd71cc3"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "maquery.ir"
+    client-fingerprint: "randomized"
+    ws-opts:
+      path: "/?ed=443"
+      headers:
+        Host: "maquery.ir.xmhkjgqwzneevm.mapircdn.com"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2052"
+    type: "vless"
+    server: "185.143.233.238"
+    port: 2052
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pgcfws-r4"
+      headers:
+        Host: "panel.mymarzban.cyou"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.146:2087"
+    type: "vless"
+    server: "212.80.9.146"
+    port: 2087
+    uuid: "ea5d300a-33d7-4d9e-9c5f-3506733541d3"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "s4.zynetraq.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+      - "h3"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8080"
+    type: "vless"
+    server: "185.143.233.238"
+    port: 8080
+    uuid: "eec45cd4-2f91-4df8-8f59-6e2447a17ff8"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "game.nexoshopp.help"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.238:443"
+    type: "vless"
+    server: "185.143.233.238"
+    port: 443
+    uuid: "3b9d36c8-48ef-494b-8f0f-ec96d8616561"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "console.hptune.ir"
+  - name: "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:80"
+    type: "vless"
+    server: "185.143.233.122"
+    port: 80
+    uuid: "4863a1b5-3c18-4d42-9d30-c7239e11ba5e"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🔒 VL-TCP-TLS 🇮🇷 IR-87.107.4.190:2080"
+    type: "vless"
+    server: "87.107.4.190"
+    port: 2080
+    uuid: "9966d083-4a8d-4b5c-b35d-06e58388f12a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "g18.vcommunity.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2082"
+    type: "vless"
+    server: "185.143.233.238"
+    port: 2082
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pgcfws-r4"
+      headers:
+        Host: "panel.mymarzban.cyou"
   - name: "🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
     type: "vless"
     server: "194.50.216.61"
@@ -641,16 +701,103 @@ proxies:
       path: "/nBvJWhBF9Zbeiq3B"
       headers:
         Host: "SaNDworM.pAges.dEv"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8542"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-94.183.149.168:8880"
     type: "vless"
-    server: "185.60.59.238"
-    port: 8542
-    uuid: "bc384878-f259-4558-97eb-ca3d0d365474"
+    server: "94.183.149.168"
+    port: 8880
+    uuid: "d24e1b75-d80f-4818-d621-ee919ea71c16"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+  - name: "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.12:443"
+    type: "vless"
+    server: "87.107.113.12"
+    port: 443
+    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "global.mikro-host.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "assets"
+  - name: "🔒 VL-WS-TLS 🇮🇷 IR-89.44.243.173:8778"
+    type: "vless"
+    server: "89.44.243.173"
+    port: 8778
+    uuid: "419fd5e3-7a7e-452d-ad10-3442894bc415"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "tk2.lion-lion.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - " http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "tk2.lion-lion.ir"
+  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
+    type: "vless"
+    server: "45.94.215.137"
+    port: 443
+    uuid: "a0d7cdab-5821-4477-b0c2-33c0060baf62"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-87.107.82.171:8080"
+    type: "vless"
+    server: "87.107.82.171"
+    port: 8080
+    uuid: "f6bec3c4-c29d-4392-a4fe-96936b9b3005"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/abc?ed=2048"
+      headers:
+        Host: "film-doni.com"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2052"
+    type: "vless"
+    server: "185.143.234.238"
+    port: 2052
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pgcfws-r4"
+      headers:
+        Host: "panel.mymarzban.cyou"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.88.177.40:443"
+    type: "vless"
+    server: "185.88.177.40"
+    port: 443
+    uuid: "2d9de6ea-56c9-422d-a4ad-cac95b8e0881"
     udp: true
     tls: true
     network: "xhttp"
-    servername: "ge.soft05.sbs"
+    servername: "german2.fluentfast.ir"
     client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:80"
+    type: "vless"
+    server: "185.143.233.238"
+    port: 80
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pgcfws-r4"
+      headers:
+        Host: "panel.mymarzban.cyou"
   - name: "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
     type: "vless"
     server: "185.143.234.5"
@@ -659,57 +806,47 @@ proxies:
     udp: true
     tls: true
     network: "ws"
-    servername: "1001co.com"
+    servername: "alef.ir"
     client-fingerprint: "randomized"
     ws-opts:
       path: "/?ed=443"
       headers:
-        Host: "1001co.com.wnticacenich1.mapircdn.com"
-  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-217.18.90.79:443"
+        Host: "alef.ir.oadeflantrogm.mahanmapcdn.com"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
     type: "vless"
-    server: "217.18.90.79"
-    port: 443
-    uuid: "14c3d8cb-0073-4362-904f-f3bcd55ef22b"
+    server: "185.143.234.238"
+    port: 2086
+    uuid: "1ee1f28d-4975-4d7c-95c7-76172c20eed5"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "parsi.parsi.sbs"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+    type: "vless"
+    server: "185.143.234.238"
+    port: 80
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pgcfws-r4"
+      headers:
+        Host: "panel.mymarzban.cyou"
+  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-81.12.50.100:21818"
+    type: "vless"
+    server: "81.12.50.100"
+    port: 21818
+    uuid: "8f5568b3-68c0-448b-875c-26cb746c3b6a"
     udp: true
     tls: false
     network: "tcp"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8562"
+  - name: "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
     type: "vless"
-    server: "185.60.59.238"
-    port: 8562
-    uuid: "bc384878-f259-4558-97eb-ca3d0d365474"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ge.soft05.sbs"
-    client-fingerprint: "chrome"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8502"
-    type: "vless"
-    server: "185.60.59.238"
-    port: 8502
-    uuid: "bc384878-f259-4558-97eb-ca3d0d365474"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ru-canary.iran1405.sbs"
-    client-fingerprint: "chrome"
-  - name: "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.238:443"
-    type: "vless"
-    server: "185.143.234.238"
-    port: 443
-    uuid: "a4cb769e-78ee-483f-8a9f-42e768ea1f1d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "dalton.makanyab.app"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "dalton"
-      headers:
-        Host: "dalton.makanyab.app"
-  - name: "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.12:443"
-    type: "vless"
-    server: "87.107.113.12"
+    server: "87.107.113.20"
     port: 443
     uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
     udp: true
@@ -732,105 +869,20 @@ proxies:
       path: "/"
       headers:
         Host: "zapzap.mc.filimo.cam"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8522"
+  - name: "🔒 VL-WS-TLS 🇮🇷 IR-77.237.73.242:32010"
     type: "vless"
-    server: "185.60.59.238"
-    port: 8522
-    uuid: "bc384878-f259-4558-97eb-ca3d0d365474"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "tr.iran1406.sbs"
-    client-fingerprint: "chrome"
-  - name: "🔒 VL-WS-TLS 🇮🇷 IR-185.84.158.197:443"
-    type: "vless"
-    server: "185.84.158.197"
-    port: 443
-    uuid: "fb03abb3-53d2-4d6b-bbdb-fa0da87916ea"
+    server: "77.237.73.242"
+    port: 32010
+    uuid: "dca189c2-b03f-4864-9fa0-e3b9c319cd5d"
     udp: true
     tls: true
     network: "ws"
-    servername: "ger.x2net.top"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
+    servername: "pish-data-14.myket.ir"
     ws-opts:
       path: "/"
-      headers:
-        Host: "ger.x2net.top"
-  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
     type: "vless"
-    server: "45.94.215.137"
-    port: 443
-    uuid: "a0d7cdab-5821-4477-b0c2-33c0060baf62"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:80"
-    type: "vless"
-    server: "185.143.234.122"
-    port: 80
-    uuid: "4863a1b5-3c18-4d42-9d30-c7239e11ba5e"
-    udp: true
-    tls: false
-    network: "httpupgrade"
-  - name: "🔒 VL-WS-TLS 🇮🇷 IR-213.176.112.136:5222"
-    type: "vless"
-    server: "213.176.112.136"
-    port: 5222
-    uuid: "8d955d71-ed5d-4f4c-ae68-42d120f06861"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-    ws-opts:
-      path: "/@Marisa_kristi"
-      headers:
-        Host: "kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev"
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8080"
-    type: "vless"
-    server: "185.143.233.238"
-    port: 8080
-    uuid: "eec45cd4-2f91-4df8-8f59-6e2447a17ff8"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "game.nexoshopp.help"
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-95.38.184.199:3454"
-    type: "vless"
-    server: "95.38.184.199"
-    port: 3454
-    uuid: "5643c800-d78c-4cab-9ba9-b58e61d04f99"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-  - name: "🔒 VL-WS-TLS 🇮🇷 IR-79.127.127.68:443"
-    type: "vless"
-    server: "79.127.127.68"
-    port: 443
-    uuid: "6a89dc04-7781-46fe-b35c-e14a6b6e60b8"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "test-teSt-tEsT-teSt.pagES.DEv"
-    client-fingerprint: "randomized"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    ws-opts:
-      path: "/Telegram-@V2ray_Alpha/?ed=2048"
-      headers:
-        Host: "TESt-TEsT-TEST-TEsT.pAGes.dEV"
-  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
-    type: "vless"
-    server: "185.143.234.122"
+    server: "185.143.233.122"
     port: 2095
     uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
     udp: true
@@ -839,31 +891,54 @@ proxies:
     ws-opts:
       headers:
         Host: "api.aramonlineshop.ir"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.152:2087"
+  - name: "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
     type: "vless"
-    server: "212.80.9.152"
-    port: 2087
-    uuid: "34787117-384f-496f-8157-10366be268b2"
+    server: "87.107.113.16"
+    port: 443
+    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "s3.zynetraq.ir"
+    network: "ws"
+    servername: "global.mikro-host.com"
     client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-      - "h3"
+    ws-opts:
+      path: "assets"
+  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-217.114.40.12:80"
+    type: "vless"
+    server: "217.114.40.12"
+    port: 80
+    uuid: "a9f40576-6321-491f-bb4a-7d8a762eea27"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-62.60.141.153:50972"
+    type: "vless"
+    server: "62.60.141.153"
+    port: 50972
+    uuid: "01640ed0-9b23-493d-ac18-3947750e25c2"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🔒 VL-TCP-NONE 🇮🇷 IR-95.38.184.31:2096"
+    type: "vless"
+    server: "95.38.184.31"
+    port: 2096
+    uuid: "2eb5469e-6d7a-4d44-b7cf-8e7852f24f97"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:8080"
     type: "vless"
     server: "185.143.234.238"
     port: 8080
-    uuid: "eec45cd4-2f91-4df8-8f59-6e2447a17ff8"
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
+      path: "/pgcfws-r4"
       headers:
-        Host: "game.nexoshopp.help"
+        Host: "panel.mymarzban.cyou"
   - name: "🔒 VL-WS-TLS 🇮🇷 IR-81.12.54.134:5050"
     type: "vless"
     server: "81.12.54.134"
@@ -878,101 +953,80 @@ proxies:
       path: "/"
       headers:
         Host: "tr.begooserver.xyz"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.88.177.40:443"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2082"
     type: "vless"
-    server: "185.88.177.40"
-    port: 443
-    uuid: "2d9de6ea-56c9-422d-a4ad-cac95b8e0881"
+    server: "185.143.234.238"
+    port: 2082
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
     udp: true
-    tls: true
-    network: "xhttp"
-    servername: "german2.fluentfast.ir"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8512"
-    type: "vless"
-    server: "185.60.59.238"
-    port: 8512
-    uuid: "bc384878-f259-4558-97eb-ca3d0d365474"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "fr.iranleader.sbs"
-    client-fingerprint: "chrome"
-  - name: "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
-    type: "vless"
-    server: "185.143.233.5"
-    port: 443
-    uuid: "46aea670-5e6c-40af-9b99-95585dd71cc3"
-    udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "1001cns.com"
-    client-fingerprint: "randomized"
     ws-opts:
-      path: "/?ed=443"
+      path: "/pgcfws-r4"
       headers:
-        Host: "1001cns.com.wnticacenidk1.abrmahanair.com"
-  - name: "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:80"
+        Host: "panel.mymarzban.cyou"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.238:443"
     type: "vless"
-    server: "185.143.233.122"
+    server: "185.143.234.238"
+    port: 443
+    uuid: "3b9d36c8-48ef-494b-8f0f-ec96d8616561"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "console.hptune.ir"
+  - name: "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:80"
+    type: "vless"
+    server: "185.143.234.122"
     port: 80
     uuid: "4863a1b5-3c18-4d42-9d30-c7239e11ba5e"
     udp: true
     tls: false
     network: "httpupgrade"
-  - name: "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.238:443"
+  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.152:2087"
+    type: "vless"
+    server: "212.80.9.152"
+    port: 2087
+    uuid: "650abfb0-4223-4722-cdf7-ba3b5bc2c2d6"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "s3.zynetraq.ir"
+    client-fingerprint: "chrome"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:8880"
+    type: "vless"
+    server: "185.143.234.238"
+    port: 8880
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/pgcfws-r4"
+      headers:
+        Host: "panel.mymarzban.cyou"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
+    type: "vless"
+    server: "185.143.234.122"
+    port: 2095
+    uuid: "07dce2d7-9849-4e22-adb9-36d2763c3b89"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "api.aramonlineshop.ir"
+  - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8880"
     type: "vless"
     server: "185.143.233.238"
-    port: 443
-    uuid: "c387b0f2-5d9e-4c95-882d-1d5eeb443ce2"
+    port: 8880
+    uuid: "d747ee9f-68f6-40fc-a155-0831322e5bfe"
     udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
     ws-opts:
-      path: "/movie"
+      path: "/pgcfws-r4"
       headers:
-        Host: "nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir"
-  - name: "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
-    type: "vless"
-    server: "87.107.113.20"
-    port: 443
-    uuid: "c80d6b6d-83b1-4cf7-a43b-08932420cbcb"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "global.mikro-host.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "assets"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8532"
-    type: "vless"
-    server: "185.60.59.238"
-    port: 8532
-    uuid: "bc384878-f259-4558-97eb-ca3d0d365474"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "nl.iygjdk.fun"
-    client-fingerprint: "chrome"
-  - name: "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8552"
-    type: "vless"
-    server: "185.60.59.238"
-    port: 8552
-    uuid: "bc384878-f259-4558-97eb-ca3d0d365474"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "uk.leaderiran.sbs"
-    client-fingerprint: "chrome"
+        Host: "panel.mymarzban.cyou"
   - name: "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
     type: "vless"
     server: "185.143.233.238"
@@ -985,6 +1039,32 @@ proxies:
       path: "/"
       headers:
         Host: "parsi.parsi.sbs"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.47:30051"
+    type: "vless"
+    server: "188.136.162.47"
+    port: 30051
+    uuid: "33b0ecd0-1c5a-4c6e-90ee-44f7fb045a93"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.speedtest.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc"
+      short-id: "100645b1"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.168:24443"
+    type: "vless"
+    server: "89.42.137.168"
+    port: 24443
+    uuid: "addac6b8-90f4-422b-918e-233859b3a03e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "A-WcezAbYc6GrL7gqM9Kg89OAgLBp2nxC_wrpenGlDg"
+      short-id: "b7e45d3a65bfc319"
   - name: "🔒 VL-TCP-RLT 🇮🇷 IR-81.28.254.137:30051"
     type: "vless"
     server: "81.28.254.137"
@@ -998,11 +1078,182 @@ proxies:
     reality-opts:
       public-key: "8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc"
       short-id: "100645b1"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.178:27195"
+    type: "vless"
+    server: "81.12.56.178"
+    port: 27195
+    uuid: "c45460b9-3224-446e-b823-587fe215bf5d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "h2IZ2DHQ-ibHC8NzuO7TVo3wS7G8DBV1hoCCR5cbRko"
+      short-id: "a9dc264d7346"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.24:30051"
+    type: "vless"
+    server: "188.136.162.24"
+    port: 30051
+    uuid: "33b0ecd0-1c5a-4c6e-90ee-44f7fb045a93"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.speedtest.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc"
+      short-id: "100645b1"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-178.239.157.40:8443"
+    type: "vless"
+    server: "178.239.157.40"
+    port: 8443
+    uuid: "35c52da3-1d61-4aa1-88ab-7e3628b00f16"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.aparat.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "9UpuSUEgust4Chto6fjXmOSdMDWf_adp3Ps3_deyHTQ"
+      short-id: "39b301abbc615e74"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.32:443"
+    type: "vless"
+    server: "185.24.151.32"
+    port: 443
+    uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "uk.jobinvest.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.212:4554"
+    type: "vless"
+    server: "81.12.56.212"
+    port: 4554
+    uuid: "7f3c3105-bc39-47fa-812d-1833b3709a9f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "v-ydSy2Eb-YyiWYd3WyFoJc4Bjs9QPGRTsVac6SyO14"
+      short-id: "e3"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-37.202.247.166:43234"
+    type: "vless"
+    server: "37.202.247.166"
+    port: 43234
+    uuid: "addac6b8-90f4-422b-918e-233859b3a03e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "A-WcezAbYc6GrL7gqM9Kg89OAgLBp2nxC_wrpenGlDg"
+      short-id: "b7e45d3a65bfc319"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.37:443"
+    type: "vless"
+    server: "185.24.151.37"
+    port: 443
+    uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de.jobinvest.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-193.228.91.84:443"
+    type: "vless"
+    server: "193.228.91.84"
+    port: 443
+    uuid: "53042463-db3c-442f-aced-c6dc507ec494"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.google.com"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "QbEFPAfsgGgCqXjaKCnHi7dEDQdWIWzirr0bN3xowWI"
+      short-id: "0df159"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.166:43234"
+    type: "vless"
+    server: "89.42.137.166"
+    port: 43234
+    uuid: "addac6b8-90f4-422b-918e-233859b3a03e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "A-WcezAbYc6GrL7gqM9Kg89OAgLBp2nxC_wrpenGlDg"
+      short-id: "b7e45d3a65bfc319"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.62:443"
+    type: "vless"
+    server: "185.24.151.62"
+    port: 443
+    uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "tr.jobinvest.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-45.89.223.139:4040"
+    type: "vless"
+    server: "45.89.223.139"
+    port: 4040
+    uuid: "b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.nvidia.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI"
+      short-id: "c57bcc26"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.168:43234"
+    type: "vless"
+    server: "89.42.137.168"
+    port: 43234
+    uuid: "addac6b8-90f4-422b-918e-233859b3a03e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "A-WcezAbYc6GrL7gqM9Kg89OAgLBp2nxC_wrpenGlDg"
+      short-id: "b7e45d3a65bfc319"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.60:443"
+    type: "vless"
+    server: "185.24.151.60"
+    port: 443
+    uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "kz.jobinvest.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
   - name: "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.178:27632"
     type: "vless"
     server: "81.12.56.178"
     port: 27632
-    uuid: "6421cb23-e524-4ce5-924f-a8e9d4d1da72"
+    uuid: "4d0fb838-2dbe-4dff-ae36-da6ee02739ca"
     udp: true
     tls: true
     network: "tcp"
@@ -1011,32 +1262,20 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c"
-      short-id: "2c9dd97f742c96"
-  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.242:443"
+      short-id: "3892a7a76e8b"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.31:443"
     type: "vless"
-    server: "185.24.151.242"
+    server: "185.24.151.31"
     port: 443
     uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
     udp: true
     tls: true
     network: "tcp"
     servername: "jobinvest.ru"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "🔒 VL-XHTTP-RLT 🇮🇷 IR-213.177.178.232:2082"
-    type: "vless"
-    server: "213.177.178.232"
-    port: 2082
-    uuid: "cddd0717-87b6-4079-9d37-6967c449805f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "www.yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "g9ZWk2159T5S3B_XFQgc41L6nJtC10TW9YKdhPr692I"
-      short-id: "1b5ead"
   - name: "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.26:30051"
     type: "vless"
     server: "188.136.162.26"
@@ -1063,71 +1302,19 @@ proxies:
     reality-opts:
       public-key: "8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc"
       short-id: "100645b1"
-  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-109.95.66.29:2083"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.63:443"
     type: "vless"
-    server: "109.95.66.29"
-    port: 2083
-    uuid: "b783a8ff-2835-43b9-894e-13867142be5f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "play.google.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "FhMWFvLreYsLAVipnrvcbHBoYpNC0E9-Jt-ThM6f0Hk"
-      short-id: "a65299fbaa29e71c"
-  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.30:443"
-    type: "vless"
-    server: "185.24.151.30"
+    server: "185.24.151.63"
     port: 443
     uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
     udp: true
     tls: true
     network: "tcp"
-    servername: "jobinvest.ru"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.24:30051"
-    type: "vless"
-    server: "188.136.162.24"
-    port: 30051
-    uuid: "33b0ecd0-1c5a-4c6e-90ee-44f7fb045a93"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.speedtest.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc"
-      short-id: "100645b1"
-  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.212:4554"
-    type: "vless"
-    server: "81.12.56.212"
-    port: 4554
-    uuid: "7f3c3105-bc39-47fa-812d-1833b3709a9f"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
+    servername: "de.jobinvest.ru"
     client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "v-ydSy2Eb-YyiWYd3WyFoJc4Bjs9QPGRTsVac6SyO14"
-      short-id: "e3"
-  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-45.89.223.139:4040"
-    type: "vless"
-    server: "45.89.223.139"
-    port: 4040
-    uuid: "b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.nvidia.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI"
-      short-id: "c57bcc26"
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
   - name: "🔒 VL-TCP-RLT 🇮🇷 IR-194.150.70.125:30051"
     type: "vless"
     server: "194.150.70.125"
@@ -1141,45 +1328,71 @@ proxies:
     reality-opts:
       public-key: "8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc"
       short-id: "100645b1"
-  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-178.239.157.41:8443"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.36:443"
     type: "vless"
-    server: "178.239.157.41"
-    port: 8443
-    uuid: "35c52da3-1d61-4aa1-88ab-7e3628b00f16"
+    server: "185.24.151.36"
+    port: 443
+    uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.aparat.com"
-    client-fingerprint: "chrome"
+    servername: "ar.jobinvest.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "9UpuSUEgust4Chto6fjXmOSdMDWf_adp3Ps3_deyHTQ"
-      short-id: "39b301abbc615e74"
-  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.47:30051"
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-109.95.66.29:2083"
     type: "vless"
-    server: "188.136.162.47"
-    port: 30051
-    uuid: "33b0ecd0-1c5a-4c6e-90ee-44f7fb045a93"
+    server: "109.95.66.29"
+    port: 2083
+    uuid: "b783a8ff-2835-43b9-894e-13867142be5f"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.speedtest.net"
+    servername: "play.google.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc"
-      short-id: "100645b1"
-  - name: "🔒 SS-TCP-NA 🇮🇷 IR-193.176.242.55:10117"
-    type: "ss"
-    server: "193.176.242.55"
-    port: 10117
-    cipher: "aes-256-gcm"
-    password: "MTVlNGFkYjZlODAwZjNkMWUxMDc1NDlmMTk5MmM5"
+      public-key: "FhMWFvLreYsLAVipnrvcbHBoYpNC0E9-Jt-ThM6f0Hk"
+      short-id: "a65299fbaa29e71c"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.67:443"
+    type: "vless"
+    server: "185.24.151.67"
+    port: 443
+    uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
     udp: true
-  - name: "🔒 SS-TCP-NA 🇮🇷 IR-95.38.167.78:9112"
+    tls: true
+    network: "tcp"
+    servername: "kz.jobinvest.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.236:443"
+    type: "vless"
+    server: "185.24.151.236"
+    port: 443
+    uuid: "8ff82100-8aad-4281-bf41-f318519d7182"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ca.jobinvest.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-185.215.231.57:443"
     type: "ss"
-    server: "95.38.167.78"
-    port: 9112
+    server: "185.215.231.57"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "kiM81U2p5f8m-AfeRRUi6_un9S4mX8Ly"
+    udp: true
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-46.38.143.237:19208"
+    type: "ss"
+    server: "46.38.143.237"
+    port: 19208
     cipher: "aes-256-gcm"
-    password: "ZTIyODg5OTAwNGZlZDE1NzAwNWE2ZDRjYjdkMjEy"
+    password: "8deaeea8-24ac-4bef-b335-314d8bf9df99"
     udp: true
   - name: "🔒 SS-TCP-NA 🇮🇷 IR-46.38.146.247:2052"
     type: "ss"
@@ -1188,6 +1401,13 @@ proxies:
     cipher: "xchacha20-ietf-poly1305"
     password: "9s4i38tohiiccd1a"
     udp: true
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-62.60.144.52:2082"
+    type: "ss"
+    server: "62.60.144.52"
+    port: 2082
+    cipher: "2022-blake3-aes-256-gcm"
+    password: "KComEQ28cVXIzVlxdpTy6LXLockXExZUh1xUJT49/nk="
+    udp: true
   - name: "🔒 SS-TCP-NA 🇮🇷 IR-185.215.228.132:2044"
     type: "ss"
     server: "185.215.228.132"
@@ -1195,44 +1415,23 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "3rfnj11q5xvg72y1"
     udp: true
-  - name: "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.7:56985"
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-94.101.187.94:10117"
     type: "ss"
-    server: "185.84.158.7"
-    port: 56985
+    server: "94.101.187.94"
+    port: 10117
+    cipher: "aes-256-gcm"
+    password: "MTVlNGFkYjZlODAwZjNkMWUxMDc1NDlmMTk5MmM5"
+    udp: true
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.231:16156"
+    type: "ss"
+    server: "185.84.158.231"
+    port: 16156
     cipher: "chacha20-ietf-poly1305"
-    password: "bWVPA17/4c5/OuBS5MvPuAwkKVOToXr8wANE9TCNH/c="
+    password: "no4dl1ENNqLx0q7l7C5Z/AZgQ0cKwYENHPdC5TvTLAg="
     udp: true
   - name: "🔒 SS-TCP-NA 🇮🇷 IR-81.12.32.101:443"
     type: "ss"
     server: "81.12.32.101"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "kiM81U2p5f8m-AfeRRUi6_un9S4mX8Ly"
-    udp: true
-  - name: "🔒 SS-TCP-NA 🇮🇷 IR-2.188.255.142:3333"
-    type: "ss"
-    server: "2.188.255.142"
-    port: 3333
-    cipher: "chacha20-ietf-poly1305"
-    password: "700OfeaU9vuHv2lqG1H5xuXXUYzfORQe"
-    udp: true
-  - name: "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.187:30874"
-    type: "ss"
-    server: "213.176.6.187"
-    port: 30874
-    cipher: "chacha20-ietf-poly1305"
-    password: "BlRtjyYlj18kYcrEL/8wcbSyqNKSPESiwSDDvisu9+o="
-    udp: true
-  - name: "🔒 SS-TCP-NA 🇮🇷 IR-188.213.197.139:1515"
-    type: "ss"
-    server: "188.213.197.139"
-    port: 1515
-    cipher: "chacha20-ietf-poly1305"
-    password: "1Df9ujhY9DXTqR9C8A9lU-Qn_daquF0M"
-    udp: true
-  - name: "🔒 SS-TCP-NA 🇮🇷 IR-185.215.231.57:443"
-    type: "ss"
-    server: "185.215.231.57"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "kiM81U2p5f8m-AfeRRUi6_un9S4mX8Ly"
@@ -1243,6 +1442,34 @@ proxies:
     port: 51570
     cipher: "chacha20-ietf-poly1305"
     password: "+IV2jmMwF6SvmKvyrpgok5J9pACAvRkMb/bZSu7Gl+g="
+    udp: true
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.187:30874"
+    type: "ss"
+    server: "213.176.6.187"
+    port: 30874
+    cipher: "chacha20-ietf-poly1305"
+    password: "BlRtjyYlj18kYcrEL/8wcbSyqNKSPESiwSDDvisu9+o="
+    udp: true
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-2.188.255.142:3333"
+    type: "ss"
+    server: "2.188.255.142"
+    port: 3333
+    cipher: "chacha20-ietf-poly1305"
+    password: "700OfeaU9vuHv2lqG1H5xuXXUYzfORQe"
+    udp: true
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-62.60.144.52:2083"
+    type: "ss"
+    server: "62.60.144.52"
+    port: 2083
+    cipher: "2022-blake3-aes-256-gcm"
+    password: "KComEQ28cVXIzVlxdpTy6LXLockXExZUh1xUJT49/nk="
+    udp: true
+  - name: "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.7:56985"
+    type: "ss"
+    server: "185.84.158.7"
+    port: 56985
+    cipher: "chacha20-ietf-poly1305"
+    password: "bWVPA17/4c5/OuBS5MvPuAwkKVOToXr8wANE9TCNH/c="
     udp: true
   - name: "🔒 SS-TCP-NA 🇮🇷 IR-85.133.243.248:9403"
     type: "ss"
@@ -1259,27 +1486,11 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🔒 VM-TCP-NA 🇮🇷 IR-89.44.112.25:1038"
+  - name: "🔒 VM-TCP-NA 🇮🇷 IR-85.133.206.244:3071"
     type: "vmess"
-    server: "89.44.112.25"
-    port: 1038
-    uuid: "c3a9baaa-3af1-4f47-97df-327b4d8a1c0e"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
-  - name: "🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
-    type: "vmess"
-    server: "94.139.183.67"
-    port: 1074
-    uuid: "343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
-  - name: "🔒 VM-TCP-NA 🇮🇷 IR-94.139.180.179:1020"
-    type: "vmess"
-    server: "94.139.180.179"
-    port: 1020
-    uuid: "ca9640a3-b21a-4073-964b-83188048dd22"
+    server: "85.133.206.244"
+    port: 3071
+    uuid: "bbefddcb-9484-46cd-8664-3be3dde98bc7"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -1287,7 +1498,31 @@ proxies:
     type: "vmess"
     server: "176.120.17.21"
     port: 1015
-    uuid: "032523ee-63d9-4619-ad45-6fd8df518fd0"
+    uuid: "43531b5b-d94b-49ba-8a5e-7a6d4bb68459"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+    type: "vmess"
+    server: "94.139.183.66"
+    port: 1074
+    uuid: "343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
+  - name: "🔒 VM-TCP-NA 🇮🇷 IR-176.120.17.48:15910"
+    type: "vmess"
+    server: "176.120.17.48"
+    port: 15910
+    uuid: "769add67-0ea4-43c7-8cad-18b2c060fabe"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🔒 VM-TCP-NONE 🇮🇷 IR-193.24.120.18:1070"
+    type: "vmess"
+    server: "193.24.120.18"
+    port: 1070
+    uuid: "d650af9f-bcbf-4c29-bd2b-ea5be51f45d8"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -1296,14 +1531,6 @@ proxies:
     server: "94.182.88.61"
     port: 2078
     uuid: "8c207682-e007-4a0d-88a3-68b8638b3d10"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🔒 VM-WS-NA 🇮🇷 IR-178.239.150.193:8880"
-    type: "vmess"
-    server: "178.239.150.193"
-    port: 8880
-    uuid: "bc7c3ef8-e853-469c-8feb-6b2d88576957"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -1318,8 +1545,6 @@ proxies:
     servername: "www.ignitelimit.com"
     ws-opts:
       path: "/assignment"
-      headers:
-        Host: "www.ignitelimit.com"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1334,80 +1559,99 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.215.228.157:8443"
       - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.238:8443"
       - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.14:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-213.176.112.136:5222"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.238:8443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2052"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.146:2087"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8080"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.238:443"
+      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🔒 VL-TCP-TLS 🇮🇷 IR-87.107.4.190:2080"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2082"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-94.183.149.168:8880"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.12:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-89.44.243.173:8778"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
       - "🔒 VL-WS-NONE 🇮🇷 IR-87.107.82.171:8080"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2052"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.88.177.40:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:80"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-81.12.50.100:21818"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-77.237.73.242:32010"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
       - "🔒 VL-TCP-NONE 🇮🇷 IR-217.114.40.12:80"
       - "🔒 VL-TCP-NONE 🇮🇷 IR-62.60.141.153:50972"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-94.183.149.168:8880"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
-      - "🔒 VL-GRPC-TLS 🇮🇷 IR-193.151.141.5:2086"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8542"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
-      - "🔒 VL-TCP-NONE 🇮🇷 IR-217.18.90.79:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8562"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8502"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.238:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.12:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8522"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.84.158.197:443"
-      - "🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
-      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:80"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-213.176.112.136:5222"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8080"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-95.38.184.199:3454"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-79.127.127.68:443"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.152:2087"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-95.38.184.31:2096"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:8080"
       - "🔒 VL-WS-TLS 🇮🇷 IR-81.12.54.134:5050"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.88.177.40:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8512"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
-      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:80"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.238:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8532"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8552"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2082"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.238:443"
+      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:80"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.152:2087"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:8880"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8880"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.47:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.168:24443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-81.28.254.137:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.178:27195"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.24:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-178.239.157.40:8443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.32:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.212:4554"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-37.202.247.166:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.37:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-193.228.91.84:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.166:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.62:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-45.89.223.139:4040"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.168:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.60:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.178:27632"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.242:443"
-      - "🔒 VL-XHTTP-RLT 🇮🇷 IR-213.177.178.232:2082"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.31:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.26:30051"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.48:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-109.95.66.29:2083"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.30:443"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.24:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.212:4554"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-45.89.223.139:4040"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.63:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-194.150.70.125:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-178.239.157.41:8443"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.47:30051"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-193.176.242.55:10117"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-95.38.167.78:9112"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.146.247:2052"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.228.132:2044"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.7:56985"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-81.12.32.101:443"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-2.188.255.142:3333"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.187:30874"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-188.213.197.139:1515"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.36:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-109.95.66.29:2083"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.67:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.236:443"
       - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.231.57:443"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.143.237:19208"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.146.247:2052"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-62.60.144.52:2082"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.228.132:2044"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-94.101.187.94:10117"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.231:16156"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-81.12.32.101:443"
       - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.226:51570"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.187:30874"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-2.188.255.142:3333"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-62.60.144.52:2083"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.7:56985"
       - "🔒 SS-TCP-NA 🇮🇷 IR-85.133.243.248:9403"
       - "🔒 VM-TCP-TLS 🇮🇷 IR-176.120.17.21:1016"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-89.44.112.25:1038"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.180.179:1020"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-85.133.206.244:3071"
       - "🔒 VM-TCP-TLS 🇮🇷 IR-176.120.17.21:1015"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-176.120.17.48:15910"
+      - "🔒 VM-TCP-NONE 🇮🇷 IR-193.24.120.18:1070"
       - "🔒 VM-TCP-NA 🇮🇷 IR-94.182.88.61:2078"
-      - "🔒 VM-WS-NA 🇮🇷 IR-178.239.150.193:8880"
       - "🔒 TR-WS-TLS 🇮🇷 IR-2.144.21.112:40443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1419,80 +1663,99 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.215.228.157:8443"
       - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.238:8443"
       - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.14:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-213.176.112.136:5222"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.238:8443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2052"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.146:2087"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8080"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.238:443"
+      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🔒 VL-TCP-TLS 🇮🇷 IR-87.107.4.190:2080"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2082"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-94.183.149.168:8880"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.12:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-89.44.243.173:8778"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
       - "🔒 VL-WS-NONE 🇮🇷 IR-87.107.82.171:8080"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2052"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.88.177.40:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:80"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-81.12.50.100:21818"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-77.237.73.242:32010"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
       - "🔒 VL-TCP-NONE 🇮🇷 IR-217.114.40.12:80"
       - "🔒 VL-TCP-NONE 🇮🇷 IR-62.60.141.153:50972"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-94.183.149.168:8880"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
-      - "🔒 VL-GRPC-TLS 🇮🇷 IR-193.151.141.5:2086"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8542"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
-      - "🔒 VL-TCP-NONE 🇮🇷 IR-217.18.90.79:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8562"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8502"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.238:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.12:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8522"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.84.158.197:443"
-      - "🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
-      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:80"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-213.176.112.136:5222"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8080"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-95.38.184.199:3454"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-79.127.127.68:443"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.152:2087"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-95.38.184.31:2096"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:8080"
       - "🔒 VL-WS-TLS 🇮🇷 IR-81.12.54.134:5050"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.88.177.40:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8512"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
-      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:80"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.238:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8532"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8552"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2082"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.238:443"
+      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:80"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.152:2087"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:8880"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8880"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.47:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.168:24443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-81.28.254.137:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.178:27195"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.24:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-178.239.157.40:8443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.32:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.212:4554"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-37.202.247.166:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.37:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-193.228.91.84:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.166:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.62:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-45.89.223.139:4040"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.168:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.60:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.178:27632"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.242:443"
-      - "🔒 VL-XHTTP-RLT 🇮🇷 IR-213.177.178.232:2082"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.31:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.26:30051"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.48:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-109.95.66.29:2083"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.30:443"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.24:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.212:4554"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-45.89.223.139:4040"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.63:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-194.150.70.125:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-178.239.157.41:8443"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.47:30051"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-193.176.242.55:10117"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-95.38.167.78:9112"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.146.247:2052"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.228.132:2044"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.7:56985"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-81.12.32.101:443"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-2.188.255.142:3333"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.187:30874"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-188.213.197.139:1515"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.36:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-109.95.66.29:2083"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.67:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.236:443"
       - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.231.57:443"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.143.237:19208"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.146.247:2052"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-62.60.144.52:2082"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.228.132:2044"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-94.101.187.94:10117"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.231:16156"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-81.12.32.101:443"
       - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.226:51570"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.187:30874"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-2.188.255.142:3333"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-62.60.144.52:2083"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.7:56985"
       - "🔒 SS-TCP-NA 🇮🇷 IR-85.133.243.248:9403"
       - "🔒 VM-TCP-TLS 🇮🇷 IR-176.120.17.21:1016"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-89.44.112.25:1038"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.180.179:1020"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-85.133.206.244:3071"
       - "🔒 VM-TCP-TLS 🇮🇷 IR-176.120.17.21:1015"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-176.120.17.48:15910"
+      - "🔒 VM-TCP-NONE 🇮🇷 IR-193.24.120.18:1070"
       - "🔒 VM-TCP-NA 🇮🇷 IR-94.182.88.61:2078"
-      - "🔒 VM-WS-NA 🇮🇷 IR-178.239.150.193:8880"
       - "🔒 TR-WS-TLS 🇮🇷 IR-2.144.21.112:40443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1503,80 +1766,99 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.215.228.157:8443"
       - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.238:8443"
       - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.14:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-213.176.112.136:5222"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.157:2087"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.238:8443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2052"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.146:2087"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8080"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.233.238:443"
+      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:80"
+      - "🔒 VL-TCP-TLS 🇮🇷 IR-87.107.4.190:2080"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2082"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-94.183.149.168:8880"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.12:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-89.44.243.173:8778"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
       - "🔒 VL-WS-NONE 🇮🇷 IR-87.107.82.171:8080"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2052"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.88.177.40:443"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:80"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2086"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:80"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-81.12.50.100:21818"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-77.237.73.242:32010"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
+      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.16:443"
       - "🔒 VL-TCP-NONE 🇮🇷 IR-217.114.40.12:80"
       - "🔒 VL-TCP-NONE 🇮🇷 IR-62.60.141.153:50972"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-94.183.149.168:8880"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2095"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
-      - "🔒 VL-GRPC-TLS 🇮🇷 IR-193.151.141.5:2086"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-194.50.216.61:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8542"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
-      - "🔒 VL-TCP-NONE 🇮🇷 IR-217.18.90.79:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8562"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8502"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.238:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.12:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8522"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.84.158.197:443"
-      - "🔒 VL-TCP-NONE 🇮🇷 IR-45.94.215.137:443"
-      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:80"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-213.176.112.136:5222"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8080"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-95.38.184.199:3454"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-79.127.127.68:443"
-      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.152:2087"
+      - "🔒 VL-TCP-NONE 🇮🇷 IR-95.38.184.31:2096"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:8080"
       - "🔒 VL-WS-TLS 🇮🇷 IR-81.12.54.134:5050"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.88.177.40:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8512"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
-      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.122:80"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.238:443"
-      - "🔒 VL-WS-TLS 🇮🇷 IR-87.107.113.20:443"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8532"
-      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.60.59.238:8552"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:2082"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-185.143.234.238:443"
+      - "🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.234.122:80"
+      - "🔒 VL-XHTTP-TLS 🇮🇷 IR-212.80.9.152:2087"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.238:8880"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2095"
+      - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:8880"
       - "🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.238:2086"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.47:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.168:24443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-81.28.254.137:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.178:27195"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.24:30051"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-178.239.157.40:8443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.32:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.212:4554"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-37.202.247.166:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.37:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-193.228.91.84:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.166:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.62:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-45.89.223.139:4040"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-89.42.137.168:43234"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.60:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.178:27632"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.242:443"
-      - "🔒 VL-XHTTP-RLT 🇮🇷 IR-213.177.178.232:2082"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.31:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.26:30051"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.48:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-109.95.66.29:2083"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.30:443"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.24:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-81.12.56.212:4554"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-45.89.223.139:4040"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.63:443"
       - "🔒 VL-TCP-RLT 🇮🇷 IR-194.150.70.125:30051"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-178.239.157.41:8443"
-      - "🔒 VL-TCP-RLT 🇮🇷 IR-188.136.162.47:30051"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-193.176.242.55:10117"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-95.38.167.78:9112"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.146.247:2052"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.228.132:2044"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.7:56985"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-81.12.32.101:443"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-2.188.255.142:3333"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.187:30874"
-      - "🔒 SS-TCP-NA 🇮🇷 IR-188.213.197.139:1515"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.36:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-109.95.66.29:2083"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.67:443"
+      - "🔒 VL-TCP-RLT 🇮🇷 IR-185.24.151.236:443"
       - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.231.57:443"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.143.237:19208"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-46.38.146.247:2052"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-62.60.144.52:2082"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.215.228.132:2044"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-94.101.187.94:10117"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.231:16156"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-81.12.32.101:443"
       - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.226:51570"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-213.176.6.187:30874"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-2.188.255.142:3333"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-62.60.144.52:2083"
+      - "🔒 SS-TCP-NA 🇮🇷 IR-185.84.158.7:56985"
       - "🔒 SS-TCP-NA 🇮🇷 IR-85.133.243.248:9403"
       - "🔒 VM-TCP-TLS 🇮🇷 IR-176.120.17.21:1016"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-89.44.112.25:1038"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.67:1074"
-      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.180.179:1020"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-85.133.206.244:3071"
       - "🔒 VM-TCP-TLS 🇮🇷 IR-176.120.17.21:1015"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+      - "🔒 VM-TCP-NA 🇮🇷 IR-176.120.17.48:15910"
+      - "🔒 VM-TCP-NONE 🇮🇷 IR-193.24.120.18:1070"
       - "🔒 VM-TCP-NA 🇮🇷 IR-94.182.88.61:2078"
-      - "🔒 VM-WS-NA 🇮🇷 IR-178.239.150.193:8880"
       - "🔒 TR-WS-TLS 🇮🇷 IR-2.144.21.112:40443"
   - name: "المنت 💬"
     type: "select"
