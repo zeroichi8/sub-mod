@@ -499,7 +499,30 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇿 BZ 🇧🇿 | @Raydikalx | 05F4DF"
+  - name: "🇧🇿 BZ 🇧🇿 | @Raydikalx | 6BCACC"
+    type: "vless"
+    server: "45.135.235.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime07.workers.dev"
+  - name: "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
+    type: "vless"
+    server: "45.135.235.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime07.workers.dev"
+  - name: "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.155:2096"
     type: "vless"
     server: "45.135.235.155"
     port: 2096
@@ -514,30 +537,6 @@ proxies:
     ws-opts:
       headers:
         Host: "GeR7.SimAnSaNat.iR."
-  - name: "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-202.181.177.116:443"
-    type: "vless"
-    server: "202.181.177.116"
-    port: 443
-    uuid: "9ce4c9e2-1dcc-abe8-9abf-9bf8bc1269f6"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "8.o.8.e.t.g.7.w.8.n.e.1.l.e.us.art-us.kdns.fr"
-    ws-opts:
-      path: "/pg/10086-dfc816f117c491730| 瑞典 se | arn | 202.181.177.116:443"
-      headers:
-        Host: "8.o.8.e.t.g.7.w.8.n.e.1.l.e.us.art-us.kdns.fr"
-  - name: "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
-    type: "vless"
-    server: "45.135.235.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime07.workers.dev"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -552,9 +551,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 05F4DF"
-      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-202.181.177.116:443"
+      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 6BCACC"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.155:2096"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -565,9 +564,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 05F4DF"
-      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-202.181.177.116:443"
+      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 6BCACC"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.155:2096"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -577,9 +576,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 05F4DF"
-      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-202.181.177.116:443"
+      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 6BCACC"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.155:2096"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
