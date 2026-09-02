@@ -499,20 +499,35 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇭🇷 HR 🇭🇷 | @Raydikalx | 9554AF"
-    type: "ss"
-    server: "46.183.184.61"
-    port: 989
-    cipher: "aes-256-cfb"
-    password: "f8f7aCzcPKbsF8p3"
+  - name: "🇭🇷 @DeltaKroneckerGithub"
+    type: "trojan"
+    server: "213.182.199.137"
+    port: 443
+    password: "humanity"
     udp: true
-  - name: "🇭🇷 HR 🇭🇷 | @Raydikalx | 63535F"
-    type: "ss"
-    server: "46.183.184.64"
-    port: 989
-    cipher: "aes-256-cfb"
-    password: "f8f7aCzcPKbsF8p3"
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🇭🇷 RELAY🚩 | f--r-s-s.kingcloud-1.ir-443 | 431.77ms"
+    type: "vless"
+    server: "213.182.199.137"
+    port: 443
+    uuid: "95b25338-be30-4e0d-9695-d840f0f2d73c"
     udp: true
+    tls: true
+    network: "ws"
+    servername: "f--r-s-s.kingcloud-1.ir"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "f--r-s-s.kingcloud-1.ir"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -527,8 +542,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇭🇷 HR 🇭🇷 | @Raydikalx | 9554AF"
-      - "🇭🇷 HR 🇭🇷 | @Raydikalx | 63535F"
+      - "🇭🇷 @DeltaKroneckerGithub"
+      - "🇭🇷 RELAY🚩 | f--r-s-s.kingcloud-1.ir-443 | 431.77ms"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -539,8 +554,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇭🇷 HR 🇭🇷 | @Raydikalx | 9554AF"
-      - "🇭🇷 HR 🇭🇷 | @Raydikalx | 63535F"
+      - "🇭🇷 @DeltaKroneckerGithub"
+      - "🇭🇷 RELAY🚩 | f--r-s-s.kingcloud-1.ir-443 | 431.77ms"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -550,8 +565,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇭🇷 HR 🇭🇷 | @Raydikalx | 9554AF"
-      - "🇭🇷 HR 🇭🇷 | @Raydikalx | 63535F"
+      - "🇭🇷 @DeltaKroneckerGithub"
+      - "🇭🇷 RELAY🚩 | f--r-s-s.kingcloud-1.ir-443 | 431.77ms"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
