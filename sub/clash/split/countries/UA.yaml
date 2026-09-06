@@ -499,13 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-    type: "ss"
-    server: "130.0.233.100"
-    port: 33610
-    cipher: "chacha20-ietf-poly1305"
-    password: "Bqyimiv3YNgu6dApctpw7t"
-    udp: true
   - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
     type: "ss"
     server: "194.54.80.37"
@@ -513,14 +506,13 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
-  - name: "🇺🇦 🔒 VL-TCP-NONE 🇺🇦 UA-87.76.154.238:64428"
-    type: "vless"
-    server: "87.76.154.238"
-    port: 64428
-    uuid: "a313335f-0ce2-456a-bf18-ef5f6467b779"
+  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+    type: "ss"
+    server: "130.0.233.100"
+    port: 33610
+    cipher: "chacha20-ietf-poly1305"
+    password: "Bqyimiv3YNgu6dApctpw7t"
     udp: true
-    tls: false
-    network: "tcp"
   - name: "🇺🇦 @prrofile_purple | 𝗙𝗮𝗦𝗧 💚"
     type: "vless"
     server: "87.76.154.21"
@@ -542,7 +534,7 @@ proxies:
       path: "/sg-lnd"
       headers:
         Host: "tn1rr.qzz.io"
-  - name: "🇺🇦 REALITY|UA🇺🇦 | 91.218.122.10-8443 | 164.39ms"
+  - name: "🇺🇦 REALITY|UA🇺🇦 | 91.218.122.10-8443 | 141.93ms"
     type: "vless"
     server: "91.218.122.10"
     port: 8443
@@ -556,6 +548,19 @@ proxies:
       public-key: "VxlbLM9ypmP8KyH65M6nPgArl19XOyREm9oNUlCN2yA"
     grpc-opts:
       grpc-service-name: "TunService"
+  - name: "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 173.84ms"
+    type: "vless"
+    server: "130.0.233.100"
+    port: 8443
+    uuid: "72e97eb0d0544970a7ed42d796c6773c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ya.ru"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
+      short-id: "aabbccdd"
   - name: "🇺🇦 @DeltaKroneckerGithub"
     type: "trojan"
     server: "130.0.236.88"
@@ -573,48 +578,27 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-193.41.4.96:8443"
+  - name: "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-213.111.149.58:8443"
     type: "vless"
-    server: "193.41.4.96"
+    server: "213.111.149.58"
     port: 8443
-    uuid: "9b6ab750-d669-4a4a-865a-1c86a7b05561"
+    uuid: "2eadb97f-bba4-4471-8d55-bd461525a2dc"
     udp: true
     tls: true
     network: "ws"
-    servername: "ir.azxjet.ir"
+    servername: "eded-52n.pages.dev"
     client-fingerprint: "chrome"
     ws-opts:
       path: "/"
-  - name: "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+175.56ms"
+      headers:
+        Host: "eded-52n.pages.dev"
+  - name: "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+174.43ms"
     type: "ss"
     server: "130.0.233.100"
     port: 33610
     cipher: "chacha20-ietf-poly1305"
     password: "aRNFYKtLOnaPE5FCHI9ylr"
     udp: true
-  - name: "🇺🇦 🔒 VL-XHTTP-TLS 🇺🇦 UA-193.41.4.96:19508"
-    type: "vless"
-    server: "193.41.4.96"
-    port: 19508
-    uuid: "9b6ab750-d669-4a4a-865a-1c86a7b05561"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ir.azxjet.ir"
-    client-fingerprint: "chrome"
-  - name: "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
-    type: "vless"
-    server: "130.0.233.100"
-    port: 8443
-    uuid: "72e97eb0d0544970a7ed42d796c6773c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ya.ru"
-    client-fingerprint: "random"
-    reality-opts:
-      public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
-      short-id: "aabbccdd"
   - name: "🇺🇦 🇩🇪 Rose—11"
     type: "hysteria2"
     server: "193.41.5.243"
@@ -636,18 +620,16 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 VL-TCP-NONE 🇺🇦 UA-87.76.154.238:64428"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 @prrofile_purple | 𝗙𝗮𝗦𝗧 💚"
       - "🇺🇦 کانال تلگرام : Free_VPN_CH@"
-      - "🇺🇦 REALITY|UA🇺🇦 | 91.218.122.10-8443 | 164.39ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 91.218.122.10-8443 | 141.93ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 173.84ms"
       - "🇺🇦 @DeltaKroneckerGithub"
       - "🇺🇦 UA 🇺🇦 | @Raydikalx | 4D9BA5"
-      - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-193.41.4.96:8443"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+175.56ms"
-      - "🇺🇦 🔒 VL-XHTTP-TLS 🇺🇦 UA-193.41.4.96:19508"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
+      - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-213.111.149.58:8443"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+174.43ms"
       - "🇺🇦 🇩🇪 Rose—11"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -659,18 +641,16 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 VL-TCP-NONE 🇺🇦 UA-87.76.154.238:64428"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 @prrofile_purple | 𝗙𝗮𝗦𝗧 💚"
       - "🇺🇦 کانال تلگرام : Free_VPN_CH@"
-      - "🇺🇦 REALITY|UA🇺🇦 | 91.218.122.10-8443 | 164.39ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 91.218.122.10-8443 | 141.93ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 173.84ms"
       - "🇺🇦 @DeltaKroneckerGithub"
       - "🇺🇦 UA 🇺🇦 | @Raydikalx | 4D9BA5"
-      - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-193.41.4.96:8443"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+175.56ms"
-      - "🇺🇦 🔒 VL-XHTTP-TLS 🇺🇦 UA-193.41.4.96:19508"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
+      - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-213.111.149.58:8443"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+174.43ms"
       - "🇺🇦 🇩🇪 Rose—11"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -681,18 +661,16 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
-      - "🇺🇦 🔒 VL-TCP-NONE 🇺🇦 UA-87.76.154.238:64428"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 @prrofile_purple | 𝗙𝗮𝗦𝗧 💚"
       - "🇺🇦 کانال تلگرام : Free_VPN_CH@"
-      - "🇺🇦 REALITY|UA🇺🇦 | 91.218.122.10-8443 | 164.39ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 91.218.122.10-8443 | 141.93ms"
+      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 173.84ms"
       - "🇺🇦 @DeltaKroneckerGithub"
       - "🇺🇦 UA 🇺🇦 | @Raydikalx | 4D9BA5"
-      - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-193.41.4.96:8443"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+175.56ms"
-      - "🇺🇦 🔒 VL-XHTTP-TLS 🇺🇦 UA-193.41.4.96:19508"
-      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
+      - "🇺🇦 🔒 VL-WS-TLS 🇺🇦 UA-213.111.149.58:8443"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+174.43ms"
       - "🇺🇦 🇩🇪 Rose—11"
   - name: "المنت 💬"
     type: "select"

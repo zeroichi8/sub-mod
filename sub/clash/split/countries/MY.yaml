@@ -499,7 +499,14 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
+  - name: "🇲🇾 🔒 SS-TCP-NA 🇲🇾 MY-118.107.222.231:65443"
+    type: "ss"
+    server: "118.107.222.231"
+    port: 65443
+    cipher: "aes-256-cfb"
+    password: "7eadc6dbe2ae"
+    udp: true
+  - name: "🇲🇾 🔒 TR-TCP-TLS 🇲🇾 MY-47.250.84.25:443"
     type: "trojan"
     server: "47.250.84.25"
     port: 443
@@ -508,12 +515,13 @@ proxies:
     tls: true
     network: "tcp"
     servername: "moltbot.doctoroyy.net"
-  - name: "🇲🇾 马来西亚"
-    type: "ss"
-    server: "118.107.222.231"
-    port: 65443
-    cipher: "aes-256-cfb"
-    password: "7eadc6dbe2ae"
+  - name: "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
+    type: "vmess"
+    server: "47.250.135.244"
+    port: 10000
+    uuid: "aedc66b8-99d7-4a21-8310-61870e7f870d"
+    alterId: 0
+    cipher: "auto"
     udp: true
   - name: "🇲🇾 @SylphNet | 2026-06-27 04:22"
     type: "vless"
@@ -527,22 +535,20 @@ proxies:
       path: "@SylphNet"
       headers:
         Host: "anten.ir"
-  - name: "🇲🇾 🇲🇾 MY"
-    type: "vmess"
-    server: "47.250.135.244"
-    port: 10000
-    uuid: "aedc66b8-99d7-4a21-8310-61870e7f870d"
-    alterId: 0
-    cipher: "auto"
+  - name: "🇲🇾 کانال ما"
+    type: "vless"
+    server: "56.69.159.191"
+    port: 53271
+    uuid: "e8358eb5-7210-4cf8-982f-68af141b7694"
     udp: true
-  - name: "🇲🇾 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾"
-    type: "vmess"
-    server: "47.250.45.234"
-    port: 43063
-    uuid: "c77f48f5-4be3-4461-b52b-49998e7b897b"
-    alterId: 0
-    cipher: "auto"
-    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.tesla.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc"
+      short-id: "0a9bd9db19578964"
   - name: "🇲🇾 @Net2ray MY 🇲🇾"
     type: "vmess"
     server: "166.88.35.128"
@@ -551,11 +557,19 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇲🇾 🇲🇾MY-47.250.45.234-0171"
+  - name: "🇲🇾 🇲🇾MY-47.250.45.234-4604"
     type: "vmess"
     server: "47.250.45.234"
     port: 8613
     uuid: "80039b4d-bac0-4f89-82c7-54fad3b0a1ea"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇲🇾 🇲🇾MY-47.250.45.234-0213"
+    type: "vmess"
+    server: "47.250.45.234"
+    port: 43063
+    uuid: "c77f48f5-4be3-4461-b52b-49998e7b897b"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -599,7 +613,7 @@ proxies:
       short-id: "0a9bd9db19578964"
   - name: "🇲🇾 @DeltaKroneckerGithub"
     type: "trojan"
-    server: "my.singaporenodeserverone.kyiv.ua"
+    server: "202.43.102.57"
     port: 443
     password: "6e1b9a65-884f-3aa9-9469-bf6ec0f08610"
     udp: true
@@ -608,7 +622,7 @@ proxies:
     servername: "45.32.28.232"
   - name: "🇲🇾 @DeltaKroneckerGithub-1"
     type: "trojan"
-    server: "202.43.102.57"
+    server: "my.singaporenodeserverone.kyiv.ua"
     port: 443
     password: "6e1b9a65-884f-3aa9-9469-bf6ec0f08610"
     udp: true
@@ -616,20 +630,6 @@ proxies:
     network: "tcp"
     servername: "45.32.28.232"
   - name: "🇲🇾 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "56.69.159.191"
-    port: 53271
-    uuid: "e8358eb5-7210-4cf8-982f-68af141b7694"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.tesla.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc"
-      short-id: "0a9bd9db19578964"
-  - name: "🇲🇾 @DeltaKroneckerGithub-3"
     type: "vless"
     server: "43.217.16.8"
     port: 21874
@@ -643,6 +643,20 @@ proxies:
     reality-opts:
       public-key: "75sTDYJk8ylA97-aBhAlF1tU4OaCfdOaOSIBshPW7Bs"
       short-id: "42e853a5559e1032"
+  - name: "🇲🇾 @DeltaKroneckerGithub-3"
+    type: "vless"
+    server: "56.69.159.191"
+    port: 53271
+    uuid: "e8358eb5-7210-4cf8-982f-68af141b7694"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.tesla.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc"
+      short-id: "0a9bd9db19578964"
   - name: "🇲🇾 MY 🇲🇾 | @Raydikalx | BC9E19"
     type: "ss"
     server: "47.250.212.59"
@@ -704,13 +718,14 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
-      - "🇲🇾 马来西亚"
+      - "🇲🇾 🔒 SS-TCP-NA 🇲🇾 MY-118.107.222.231:65443"
+      - "🇲🇾 🔒 TR-TCP-TLS 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
       - "🇲🇾 @SylphNet | 2026-06-27 04:22"
-      - "🇲🇾 🇲🇾 MY"
-      - "🇲🇾 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾"
+      - "🇲🇾 کانال ما"
       - "🇲🇾 @Net2ray MY 🇲🇾"
-      - "🇲🇾 🇲🇾MY-47.250.45.234-0171"
+      - "🇲🇾 🇲🇾MY-47.250.45.234-4604"
+      - "🇲🇾 🇲🇾MY-47.250.45.234-0213"
       - "🇲🇾 France"
       - "🇲🇾 Malaysia"
       - "🇲🇾 United+States"
@@ -733,13 +748,14 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
-      - "🇲🇾 马来西亚"
+      - "🇲🇾 🔒 SS-TCP-NA 🇲🇾 MY-118.107.222.231:65443"
+      - "🇲🇾 🔒 TR-TCP-TLS 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
       - "🇲🇾 @SylphNet | 2026-06-27 04:22"
-      - "🇲🇾 🇲🇾 MY"
-      - "🇲🇾 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾"
+      - "🇲🇾 کانال ما"
       - "🇲🇾 @Net2ray MY 🇲🇾"
-      - "🇲🇾 🇲🇾MY-47.250.45.234-0171"
+      - "🇲🇾 🇲🇾MY-47.250.45.234-4604"
+      - "🇲🇾 🇲🇾MY-47.250.45.234-0213"
       - "🇲🇾 France"
       - "🇲🇾 Malaysia"
       - "🇲🇾 United+States"
@@ -761,13 +777,14 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇲🇾 🔒 TR-TCP-NA 🇲🇾 MY-47.250.84.25:443"
-      - "🇲🇾 马来西亚"
+      - "🇲🇾 🔒 SS-TCP-NA 🇲🇾 MY-118.107.222.231:65443"
+      - "🇲🇾 🔒 TR-TCP-TLS 🇲🇾 MY-47.250.84.25:443"
+      - "🇲🇾 🔒 VM-TCP-NA 🇲🇾 MY-47.250.135.244:10000"
       - "🇲🇾 @SylphNet | 2026-06-27 04:22"
-      - "🇲🇾 🇲🇾 MY"
-      - "🇲🇾 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾"
+      - "🇲🇾 کانال ما"
       - "🇲🇾 @Net2ray MY 🇲🇾"
-      - "🇲🇾 🇲🇾MY-47.250.45.234-0171"
+      - "🇲🇾 🇲🇾MY-47.250.45.234-4604"
+      - "🇲🇾 🇲🇾MY-47.250.45.234-0213"
       - "🇲🇾 France"
       - "🇲🇾 Malaysia"
       - "🇲🇾 United+States"
