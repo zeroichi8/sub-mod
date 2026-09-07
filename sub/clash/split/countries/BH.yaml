@@ -499,13 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
-    type: "ss"
-    server: "38.54.2.182"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "f8f7aCzcPKbsF8p3"
-    udp: true
   - name: "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-154.205.146.153:990"
     type: "ss"
     server: "154.205.146.153"
@@ -513,6 +506,21 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
+  - name: "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
+    type: "ss"
+    server: "38.54.2.182"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "f8f7aCzcPKbsF8p3"
+    udp: true
+  - name: "🇧🇭 @Hope_Net-join-us-on-Telegram"
+    type: "vless"
+    server: "194.33.28.15"
+    port: 8008
+    uuid: "2de2b89e-6488-4100-b9ae-bff4c288c61a"
+    udp: true
+    tls: false
+    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -527,8 +535,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
       - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-154.205.146.153:990"
+      - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
+      - "🇧🇭 @Hope_Net-join-us-on-Telegram"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -539,8 +548,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
       - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-154.205.146.153:990"
+      - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
+      - "🇧🇭 @Hope_Net-join-us-on-Telegram"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -550,8 +560,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
       - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-154.205.146.153:990"
+      - "🇧🇭 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
+      - "🇧🇭 @Hope_Net-join-us-on-Telegram"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
