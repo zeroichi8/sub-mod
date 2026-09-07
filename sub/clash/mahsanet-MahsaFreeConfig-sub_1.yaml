@@ -499,6 +499,30 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "(S104)"
+    type: "vless"
+    server: "13.36.74.87"
+    port: 22222
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "OurChannel"
+    type: "vless"
+    server: "52.47.129.194"
+    port: 22223
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "@VlessConfig"
+    type: "vless"
+    server: "52.47.129.194"
+    port: 22224
+    uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "@Daily_Configs"
     type: "vless"
     server: "yt.orpheous.ru"
@@ -513,6 +537,17 @@ proxies:
     reality-opts:
       public-key: "9rdvkUGJyNbRvsB0Pp06h1URq9AHDPRtH9-wmNB1-j4"
       short-id: "e4aa362b5f9d07d7"
+  - name: "⭐️40@oneclickvpnkeys"
+    type: "vless"
+    server: "167.233.219.201"
+    port: 443
+    uuid: "05bfcbaa-cba0-4bce-9103-09fe3f5f0667"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "fsn1.nordlinkcloud.com"
+    alpn:
+      - "h2"
   - name: "@v2raybaaz"
     type: "vless"
     server: "51.38.70.192"
@@ -564,53 +599,14 @@ proxies:
     reality-opts:
       public-key: "LrDYMSt1pt2h6n-7YnHpcUAb_IG7QsQ0rfXz8RqkfCY"
       short-id: "9e0fac51cc19d2"
-  - name: "Channel id: @ShadowProxy66 🇹🇼"
+  - name: "Server 102"
     type: "ss"
-    server: "36.224.147.226"
-    port: 50099
-    cipher: "chacha20-ietf-poly1305"
-    password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+    server: "51.79.85.185"
+    port: 8118
+    cipher: "aes-256-gcm"
+    password: "cdBIDV42DCwnfIN"
     udp: true
   - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-    type: "trojan"
-    server: "151.101.56.7"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/---TOOTFFARANGI"
-      headers:
-        Host: "mitivpn-mitivpn-mitivpn--mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
-  - name: "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚"
-    type: "trojan"
-    server: "151.101.56.7"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "@mehrosaboran"
-      headers:
-        Host: "mitivpn-mitivpn-mitivpn--mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
-  - name: "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-1"
-    type: "trojan"
-    server: "199.232.78.160"
-    port: 443
-    password: "MiTiVPN"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ssl.fastly.com"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "mitivpn-ss-mitivpn-----mitivpn.global.ssl.fastly.net"
-  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
     type: "trojan"
     server: "151.101.56.7"
     port: 443
@@ -623,6 +619,19 @@ proxies:
       path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN"
       headers:
         Host: "mitivpn-mitivpn-mitivpn--mitivpn-mitivpn--mitivpn.global.ssl.fastly.net"
+  - name: "@mehrosaboran"
+    type: "trojan"
+    server: "199.232.78.160"
+    port: 443
+    password: "MiTiVPN"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "mitivpn-ss-mitivpn-----mitivpn.global.ssl.fastly.net"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -637,16 +646,18 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "(S104)"
+      - "OurChannel"
+      - "@VlessConfig"
       - "@Daily_Configs"
+      - "⭐️40@oneclickvpnkeys"
       - "@v2raybaaz"
       - "Server 287"
       - "🍏89@oneclickvpnkeys"
       - "Poland"
-      - "Channel id: @ShadowProxy66 🇹🇼"
+      - "Server 102"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚"
-      - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-1"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
+      - "@mehrosaboran"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -657,16 +668,18 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "(S104)"
+      - "OurChannel"
+      - "@VlessConfig"
       - "@Daily_Configs"
+      - "⭐️40@oneclickvpnkeys"
       - "@v2raybaaz"
       - "Server 287"
       - "🍏89@oneclickvpnkeys"
       - "Poland"
-      - "Channel id: @ShadowProxy66 🇹🇼"
+      - "Server 102"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚"
-      - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-1"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
+      - "@mehrosaboran"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -676,16 +689,18 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "(S104)"
+      - "OurChannel"
+      - "@VlessConfig"
       - "@Daily_Configs"
+      - "⭐️40@oneclickvpnkeys"
       - "@v2raybaaz"
       - "Server 287"
       - "🍏89@oneclickvpnkeys"
       - "Poland"
-      - "Channel id: @ShadowProxy66 🇹🇼"
+      - "Server 102"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚"
-      - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-1"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
+      - "@mehrosaboran"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
