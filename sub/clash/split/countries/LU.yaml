@@ -499,7 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇱🇺 @v2ray_phoenix"
+  - name: "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-193.239.179.15:443"
+    type: "vless"
+    server: "193.239.179.15"
+    port: 443
+    uuid: "a903a468-ce63-4f3b-a4de-332eb91cc2f0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "worldoftanks.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4"
+  - name: "🇱🇺 @Daily_Configs"
     type: "trojan"
     server: "188.42.145.180"
     port: 443
@@ -512,7 +525,7 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.volumeroot.com"
-  - name: "🇱🇺 @Daily_Configs"
+  - name: "🇱🇺 @bored_vpn"
     type: "vless"
     server: "193.239.179.15"
     port: 443
@@ -521,19 +534,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "worldoftanks.asia"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4"
-  - name: "🇱🇺 REALITY|LU🇱🇺 | 193.239.179.15-443 | 37.37ms"
-    type: "vless"
-    server: "193.239.179.15"
-    port: 443
-    uuid: "a903a468-ce63-4f3b-a4de-332eb91cc2f0"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "worldoftanks.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
@@ -549,20 +549,6 @@ proxies:
     servername: "www.volumeroot.com"
     ws-opts:
       path: "/assignment"
-  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
-    type: "vless"
-    server: "188.42.145.123"
-    port: 443
-    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "notls.lukongtou.eu.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/Telegram-WangCai2🇨🇳"
-      headers:
-        Host: "notls.lukongtou.eu.org"
   - name: "🇱🇺 ARISTA"
     type: "vless"
     server: "193.239.179.15"
@@ -590,11 +576,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇱🇺 @v2ray_phoenix"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-193.239.179.15:443"
       - "🇱🇺 @Daily_Configs"
-      - "🇱🇺 REALITY|LU🇱🇺 | 193.239.179.15-443 | 37.37ms"
+      - "🇱🇺 @bored_vpn"
       - "🇱🇺 Russia"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
       - "🇱🇺 ARISTA"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -606,11 +591,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇱🇺 @v2ray_phoenix"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-193.239.179.15:443"
       - "🇱🇺 @Daily_Configs"
-      - "🇱🇺 REALITY|LU🇱🇺 | 193.239.179.15-443 | 37.37ms"
+      - "🇱🇺 @bored_vpn"
       - "🇱🇺 Russia"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
       - "🇱🇺 ARISTA"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -621,11 +605,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇱🇺 @v2ray_phoenix"
+      - "🇱🇺 🔒 VL-TCP-RLT 🇱🇺 LU-193.239.179.15:443"
       - "🇱🇺 @Daily_Configs"
-      - "🇱🇺 REALITY|LU🇱🇺 | 193.239.179.15-443 | 37.37ms"
+      - "🇱🇺 @bored_vpn"
       - "🇱🇺 Russia"
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-188.42.145.123:443"
       - "🇱🇺 ARISTA"
   - name: "المنت 💬"
     type: "select"
