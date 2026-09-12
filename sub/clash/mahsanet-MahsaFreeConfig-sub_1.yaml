@@ -499,17 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "@Shh_Proxy-New³"
-    type: "vless"
-    server: "165.231.99.52"
-    port: 8443
-    uuid: "6b03ffdd-6646-410b-b575-6c05eafdaf60"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "vusr-6aa2cf2b.adhil.uk"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
   - name: "@V2rayng_Fast 🇩🇪"
     type: "vless"
     server: "31.76.91.72"
@@ -527,18 +516,33 @@ proxies:
       grpc-service-name: "grpc"
   - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy"
     type: "vless"
-    server: "rs2.univesalsrv.com"
+    server: "api.noneok.com"
+    port: 443
+    uuid: "a8e3155b-ceb1-4fcb-bc0c-2e77ec005401"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "api.noneok.com"
+    reality-opts:
+      public-key: "S8O8R938N960cpQfIIDXsJTxeGAkbVv6PlIqP0-d30w"
+      short-id: "1ea59febb8d4fc8e"
+    grpc-opts:
+      grpc-service-name: "api.v1.StreamService"
+  - name: "@v2raybaaz ²"
+    type: "vless"
+    server: "md5.univesalsrv.com"
     port: 443
     uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
     udp: true
     tls: true
     network: "grpc"
+    servername: "md5.univesalsrv.com"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE"
-      short-id: "1469af2040b7c323"
+      public-key: "99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg"
+      short-id: "aa9884f2982b7d3c"
     grpc-opts:
-      grpc-service-name: "media.v1.ObjectService"
+      grpc-service-name: "app.v1.PushService"
   - name: "Poland"
     type: "vless"
     server: "54.38.138.175"
@@ -586,9 +590,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "@Shh_Proxy-New³"
       - "@V2rayng_Fast 🇩🇪"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@v2raybaaz ²"
       - "Poland"
       - "🦁74@oneclickvpnkeys"
       - "🇬🇧 @proxy_kafee"
@@ -602,9 +606,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "@Shh_Proxy-New³"
       - "@V2rayng_Fast 🇩🇪"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@v2raybaaz ²"
       - "Poland"
       - "🦁74@oneclickvpnkeys"
       - "🇬🇧 @proxy_kafee"
@@ -617,9 +621,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "@Shh_Proxy-New³"
       - "@V2rayng_Fast 🇩🇪"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@v2raybaaz ²"
       - "Poland"
       - "🦁74@oneclickvpnkeys"
       - "🇬🇧 @proxy_kafee"
