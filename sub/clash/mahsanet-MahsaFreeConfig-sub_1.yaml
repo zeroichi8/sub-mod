@@ -499,6 +499,34 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "Channel : @Daily_Configs"
+    type: "vless"
+    server: "150.40.126.19"
+    port: 443
+    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "rs2.univesalsrv.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE"
+      short-id: "1469af2040b7c323"
+    grpc-opts:
+      grpc-service-name: "media.v1.ObjectService"
+  - name: "@Daily_Configs"
+    type: "vless"
+    server: "144.31.5.64"
+    port: 443
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl6.moritech.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+    flow: "xtls-rprx-vision"
   - name: "𝗝𝗼𝗶𝗻➠@PlanB_net"
     type: "vless"
     server: "172.64.150.28"
@@ -569,17 +597,6 @@ proxies:
       path: "/fp"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "@FarazV2ray"
-    type: "vless"
-    server: "dey.lnmarketplace.net"
-    port: 443
-    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "dey.lnmarketplace.net"
-    alpn:
-      - "h2"
   - name: "Poland"
     type: "vless"
     server: "54.38.138.175"
@@ -605,7 +622,7 @@ proxies:
     reality-opts:
       public-key: "LrDYMSt1pt2h6n-7YnHpcUAb_IG7QsQ0rfXz8RqkfCY"
       short-id: "9e0fac51cc19d2"
-  - name: "🇨🇦telegram➠@v2rayNG_Matsuri"
+  - name: "🇬🇧 @proxy_kafee"
     type: "vmess"
     server: "66.163.117.58"
     port: 22324
@@ -613,7 +630,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "@Daily_Configs"
+  - name: "@Daily_Configs-1"
     type: "trojan"
     server: "188.42.145.180"
     port: 443
@@ -640,16 +657,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "Channel : @Daily_Configs"
+      - "@Daily_Configs"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "@V2rayng_Fast 🇩🇪"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@v2raybaaz ²"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
-      - "@FarazV2ray"
       - "Poland"
       - "🦁74@oneclickvpnkeys"
-      - "🇨🇦telegram➠@v2rayNG_Matsuri"
-      - "@Daily_Configs"
+      - "🇬🇧 @proxy_kafee"
+      - "@Daily_Configs-1"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -660,16 +678,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "Channel : @Daily_Configs"
+      - "@Daily_Configs"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "@V2rayng_Fast 🇩🇪"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@v2raybaaz ²"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
-      - "@FarazV2ray"
       - "Poland"
       - "🦁74@oneclickvpnkeys"
-      - "🇨🇦telegram➠@v2rayNG_Matsuri"
-      - "@Daily_Configs"
+      - "🇬🇧 @proxy_kafee"
+      - "@Daily_Configs-1"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -679,16 +698,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "Channel : @Daily_Configs"
+      - "@Daily_Configs"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "@V2rayng_Fast 🇩🇪"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@v2raybaaz ²"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
-      - "@FarazV2ray"
       - "Poland"
       - "🦁74@oneclickvpnkeys"
-      - "🇨🇦telegram➠@v2rayNG_Matsuri"
-      - "@Daily_Configs"
+      - "🇬🇧 @proxy_kafee"
+      - "@Daily_Configs-1"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
