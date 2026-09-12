@@ -499,19 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-45.82.13.150:8443"
+  - name: "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.186.136:1400"
     type: "vless"
-    server: "45.82.13.150"
-    port: 8443
-    uuid: "51231507-67c3-4141-ab08-a69eb121c716"
+    server: "151.123.186.136"
+    port: 1400
+    uuid: "f79462e3-d519-44cd-bd1e-3b468dd66878"
     udp: true
     tls: true
     network: "tcp"
-    servername: "tradingview.com"
-    flow: "xtls-rprx-vision"
+    servername: "gitlab.io"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "B0S7A-ceRt0c3aRqbeQG69FVSkK-si6NWLBEM_QuC3U"
-      short-id: "1688"
+      public-key: "yttTg1YSCbhJpKC0Q4c_TpzAS38wtnidOJ42wwi9TGU"
+      short-id: "587e34aa4f966262"
   - name: "🇦🇱 🇦🇱139891 | ⚡️Telegram = t.me/SOSkeyNET"
     type: "vless"
     server: "yt.alba.xanka.best"
@@ -528,19 +528,6 @@ proxies:
     reality-opts:
       public-key: "0OajRGdqF2S2JJgKYcsq6nIF3K_ypFYCTUzCjR8Wh1o"
       short-id: "c692a719"
-  - name: "🇦🇱 REALITY|AL🇦🇱 | 151.123.186.136-1400 | 113.95ms"
-    type: "vless"
-    server: "151.123.186.136"
-    port: 1400
-    uuid: "f79462e3-d519-44cd-bd1e-3b468dd66878"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "gitlab.io"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "yttTg1YSCbhJpKC0Q4c_TpzAS38wtnidOJ42wwi9TGU"
-      short-id: "587e34aa4f966262"
   - name: "🇦🇱 🇦🇱 Albania Reality"
     type: "vless"
     server: "woeks.restaurantbomb.com"
@@ -555,32 +542,6 @@ proxies:
     reality-opts:
       public-key: "LiNmk0DYhmt0yuiyYE183eCsPLWZ6bFEutMBLfqfwGI"
       short-id: "0c1fd5602216f902"
-  - name: "🇦🇱 RELAY🚩 | www.ignitelimit.com-443 | 3.75ms"
-    type: "trojan"
-    server: "185.75.243.102"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.ignitelimit.com"
-  - name: "🇦🇱 ARISTA"
-    type: "vless"
-    server: "45.82.13.150"
-    port: 8443
-    uuid: "51231507-67c3-4141-ab08-a69eb121c716"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "B0S7A-ceRt0c3aRqbeQG69FVSkK-si6NWLBEM_QuC3U"
-      short-id: "1688"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -595,12 +556,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-45.82.13.150:8443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.186.136:1400"
       - "🇦🇱 🇦🇱139891 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "🇦🇱 REALITY|AL🇦🇱 | 151.123.186.136-1400 | 113.95ms"
       - "🇦🇱 🇦🇱 Albania Reality"
-      - "🇦🇱 RELAY🚩 | www.ignitelimit.com-443 | 3.75ms"
-      - "🇦🇱 ARISTA"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -611,12 +569,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-45.82.13.150:8443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.186.136:1400"
       - "🇦🇱 🇦🇱139891 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "🇦🇱 REALITY|AL🇦🇱 | 151.123.186.136-1400 | 113.95ms"
       - "🇦🇱 🇦🇱 Albania Reality"
-      - "🇦🇱 RELAY🚩 | www.ignitelimit.com-443 | 3.75ms"
-      - "🇦🇱 ARISTA"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -626,12 +581,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-45.82.13.150:8443"
+      - "🇦🇱 🔒 VL-TCP-RLT 🇦🇱 AL-151.123.186.136:1400"
       - "🇦🇱 🇦🇱139891 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "🇦🇱 REALITY|AL🇦🇱 | 151.123.186.136-1400 | 113.95ms"
       - "🇦🇱 🇦🇱 Albania Reality"
-      - "🇦🇱 RELAY🚩 | www.ignitelimit.com-443 | 3.75ms"
-      - "🇦🇱 ARISTA"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
