@@ -499,21 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇨🇵"
-    type: "vless"
-    server: "rs1.univesalsrv.com"
-    port: 443
-    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "rs1.univesalsrv.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "upIzyaSbVz2ZK6KfGtXmPl_-sCwn8XLDyFDH5CsL9iY"
-      short-id: "ed0cd5cc2e26e6e7"
-    grpc-opts:
-      grpc-service-name: "node.v2.ObjectService"
   - name: "@v2raybaaz ²"
     type: "vless"
     server: "md5.univesalsrv.com"
@@ -529,21 +514,17 @@ proxies:
       short-id: "aa9884f2982b7d3c"
     grpc-opts:
       grpc-service-name: "app.v1.PushService"
-  - name: "@V2ray_confiig"
+  - name: "@FarazV2ray"
     type: "vless"
-    server: "rs1.univesalsrv.com"
+    server: "dey.lnmarketplace.net"
     port: 443
-    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
+    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
     udp: true
     tls: true
-    network: "grpc"
-    servername: "rs1.univesalsrv.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "upIzyaSbVz2ZK6KfGtXmPl_-sCwn8XLDyFDH5CsL9iY"
-      short-id: "ed0cd5cc2e26e6e7"
-    grpc-opts:
-      grpc-service-name: "node.v2.ObjectService"
+    network: "xhttp"
+    servername: "dey.lnmarketplace.net"
+    alpn:
+      - "h2"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -558,9 +539,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇨🇵"
       - "@v2raybaaz ²"
-      - "@V2ray_confiig"
+      - "@FarazV2ray"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -571,9 +551,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇨🇵"
       - "@v2raybaaz ²"
-      - "@V2ray_confiig"
+      - "@FarazV2ray"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -583,9 +562,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇨🇵"
       - "@v2raybaaz ²"
-      - "@V2ray_confiig"
+      - "@FarazV2ray"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

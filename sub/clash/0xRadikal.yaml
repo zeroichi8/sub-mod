@@ -499,11 +499,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "DE 🇩🇪 | @Raydikalx | 391CA4"
+  - name: "DE 🇩🇪 | @Raydikalx | 1D45E0"
     type: "anytls"
-    server: "178.105.126.242"
-    port: 443
-    password: "e70ec0f2ab60e8c22b316156bf9ac43fec98b45be6681401"
+    server: "178.162.221.200"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    servername: "fra.freeguard.org"
+  - name: "GB 🇬🇧 | @Raydikalx | BC8DC4"
+    type: "anytls"
+    server: "95.168.184.34"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    servername: "lon1.freeguard.org"
   - name: "DE 🇩🇪 | @Raydikalx | 66E6DE"
     type: "anytls"
     server: "178.105.126.242"
@@ -1248,6 +1255,15 @@ proxies:
     password: "h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT"
     sni: "hopp-legend-se.roxa.org"
     skip-cert-verify: true
+  - name: "NL 🇳🇱 | @Raydikalx | 78AF0D"
+    type: "hysteria2"
+    server: "51.15.19.206"
+    port: 8443
+    password: "HowdyHysteria2023w0W"
+    sni: "sni-here.com"
+    skip-cert-verify: true
+    obfs: "salamander"
+    obfs-password: "HysteriaHowdy"
   - name: "NL 🇳🇱 | @Raydikalx | B843BA"
     type: "hysteria2"
     server: "hysteria.udpgw.com"
@@ -1305,15 +1321,6 @@ proxies:
     skip-cert-verify: true
     obfs: "salamander"
     obfs-password: "KevinZakarian"
-  - name: "US 🇺🇸 | @Raydikalx | 4A0433"
-    type: "hysteria2"
-    server: "107.172.67.52"
-    port: 2053
-    password: "maintell"
-    sni: "bing.com"
-    skip-cert-verify: true
-    obfs: "salamander"
-    obfs-password: "maintell"
   - name: "DE 🇩🇪 | @Raydikalx | BC4ABB"
     type: "hysteria2"
     server: "64.188.98.171"
@@ -1795,7 +1802,7 @@ proxies:
     server: "130.61.50.75"
     port: 6443
     password: "zhangyang"
-    sni: "https://www.calmloud.com"
+    sni: "https%253a%252f%252fwww.calmloud.com"
     skip-cert-verify: true
   - name: "DE 🇩🇪 | @Raydikalx | 429F7D"
     type: "hysteria2"
@@ -1803,13 +1810,6 @@ proxies:
     port: 6443
     password: "zhangyang"
     sni: "130.61.50.75"
-    skip-cert-verify: true
-  - name: "DE 🇩🇪 | @Raydikalx | C4F82A"
-    type: "hysteria2"
-    server: "130.61.50.75"
-    port: 6443
-    password: "zhangyang"
-    sni: "dash.cloudflare.com"
     skip-cert-verify: true
   - name: "DE 🇩🇪 | @Raydikalx | 91EC3F"
     type: "hysteria2"
@@ -2084,6 +2084,36 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "GB 🇬🇧 | @Raydikalx | 8A1073"
+    type: "vless"
+    server: "185.178.208.176"
+    port: 443
+    uuid: "0189f5b5-fc49-43b3-92ef-01a4d9721005"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "founders-blog.online"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+    ws-opts:
+      path: "/stream/615428/socket"
+      headers:
+        Host: "founders-blog.online"
+  - name: "RU 🇷🇺 | @Raydikalx | 35538B"
+    type: "vless"
+    server: "87.242.94.175"
+    port: 1443
+    uuid: "0189f5b5-fc49-43b3-92ef-01a4d9721005"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "360.yandex.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "mK6jUHK0Iv4jpVqpvs4oadjh2Pifkz4QwrOdhWHJ9U0"
+      short-id: "66371c8d7a"
   - name: "IR 🇮🇷 | @Raydikalx | 126ED4"
     type: "vless"
     server: "91.234.39.183"
@@ -2759,6 +2789,22 @@ proxies:
     client-fingerprint: "chrome"
     alpn:
       - "h2"
+  - name: "FI 🇫🇮 | @Raydikalx | E6C980"
+    type: "vless"
+    server: "31.76.88.10"
+    port: 443
+    uuid: "03c48eca-e0aa-4e18-998c-1f53f1de293c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cf5.rumedia-cdn.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/cdn/v3/live"
+      headers:
+        Host: "cf5.rumedia-cdn.com"
   - name: "DE 🇩🇪 | @Raydikalx | 02185B"
     type: "vless"
     server: "94.156.232.254"
@@ -2884,6 +2930,20 @@ proxies:
     client-fingerprint: "unsafe"
     alpn:
       - "http/1.1"
+    ws-opts:
+      path: "/eyJqdW5rIjoiOENNZnB6WTgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119"
+      headers:
+        Host: "bpb-4dc4958b.hxjkcghchv.workers.dev"
+  - name: "CA 🇨🇦 | @Raydikalx | 5B8C34"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 443
+    uuid: "0432902e-6604-40cd-bbd0-57ab4e5d909f"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "bpb-4dc4958b.hxjkcghchv.workers.dev"
+    client-fingerprint: "unsafe"
     ws-opts:
       path: "/eyJqdW5rIjoiOENNZnB6WTgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119"
       headers:
@@ -3186,6 +3246,20 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/"
+  - name: "PL 🇵🇱 | @Raydikalx | 5EE46A"
+    type: "vless"
+    server: "82.118.22.161"
+    port: 443
+    uuid: "05488656-d4bf-4634-8b2e-e4ff5a56c7e2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
+      short-id: "fa3ea655619a3e78"
   - name: "IE 🇮🇪 | @Raydikalx | 3AC782"
     type: "vless"
     server: "52.50.233.226"
@@ -3510,6 +3584,32 @@ proxies:
       path: "/?ed=2560"
       headers:
         Host: "xdol7mayq6wu5kil7wjyrni7o8tnydsafcmhfhn7g6rimbw5o2g6mlm.zjde5.de5.net"
+  - name: "TR 🇹🇷 | @Raydikalx | FBD25A"
+    type: "vless"
+    server: "107.161.174.26"
+    port: 443
+    uuid: "069ba4cf-e8af-4561-b11e-18bd07b0dbd3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "books.blackbigdog.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "N8tPKh6gTyc6L5GOmBn_3wIy707a-5QYB0FrF2HigUc"
+  - name: "NL 🇳🇱 | @Raydikalx | E321DF"
+    type: "vless"
+    server: "217.60.98.56"
+    port: 443
+    uuid: "069ba4cf-e8af-4561-b11e-18bd07b0dbd3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "west.blackbigdog.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "N8tPKh6gTyc6L5GOmBn_3wIy707a-5QYB0FrF2HigUc"
   - name: "CN 🇨🇳 | @Raydikalx | E4200A"
     type: "vless"
     server: "43.169.18.179"
@@ -3807,7 +3907,7 @@ proxies:
     udp: true
     tls: true
     network: "ws"
-    servername: "WeaTHeREd-MATH-1f8B.aMIRAligHasEMPoR010.WOrkERs.dEv"
+    servername: "weathered-math-1f8b.amiralighasempor010.workers.dev"
     ws-opts:
       path: "/eyJqdW5rIjoiUHQ4YzBma3IxczlPIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIl19?ed"
       headers:
@@ -3840,6 +3940,38 @@ proxies:
       path: "/eyJqdW5rIjoiUHQ4YzBma3IxczlPIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIl19?ed"
       headers:
         Host: "weathered-math-1f8b.amiralighasempor010.workers.dev"
+  - name: "CA 🇨🇦 | @Raydikalx | CACE88"
+    type: "vless"
+    server: "188.114.97.6"
+    port: 443
+    uuid: "07821f66-cdb7-4c70-9de6-e230cffac470"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev"
+    client-fingerprint: "unsafe"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/vl/Li1khIHH3DNItJyzraemsPBQvu"
+      headers:
+        Host: "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev"
+  - name: "CA 🇨🇦 | @Raydikalx | BC8406"
+    type: "vless"
+    server: "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev"
+    port: 443
+    uuid: "07821f66-cdb7-4c70-9de6-e230cffac470"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/vl/li1khihh3dnitjyzraemspbqvu"
+      headers:
+        Host: "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev"
   - name: "CA 🇨🇦 | @Raydikalx | 22E386"
     type: "vless"
     server: "104.21.89.181"
@@ -3876,20 +4008,6 @@ proxies:
       path: "/"
       headers:
         Host: "red-snowflake-c399.12-ee1.workers.dev"
-  - name: "RU 🇷🇺 | @Raydikalx | 3AC9C1"
-    type: "vless"
-    server: "188.130.209.199"
-    port: 443
-    uuid: "0799864e-f978-46a4-adc7-834473f01493"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "send.mycdn-io.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "G4fqCmAVU43HdijV43q-USF8wRgPt8Ld3L7_msJyfTo"
-      short-id: "fc1b2a12a84ea61b"
   - name: "DE 🇩🇪 | @Raydikalx | 87968D"
     type: "vless"
     server: "5.75.196.249"
@@ -3911,19 +4029,6 @@ proxies:
     reality-opts:
       public-key: "scstSNvoaY9_9cauw_7JGQMWciyqpO4NTRrhT0yOY1A"
       short-id: "d2d732ba"
-  - name: "US 🇺🇸 | @Raydikalx | C95C96"
-    type: "vless"
-    server: "69.46.46.95"
-    port: 443
-    uuid: "07ecddba-4be2-6e24-e112-7836f094ed13"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "panelsolivpn-production.up.railway.app"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
   - name: "CA 🇨🇦 | @Raydikalx | E2AACA"
     type: "vless"
     server: "104.21.88.201"
@@ -4217,6 +4322,34 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc"
+  - name: "CZ 🇨🇿 | @Raydikalx | EFC6D0"
+    type: "vless"
+    server: "188.130.208.210"
+    port: 443
+    uuid: "08b6dd4b-08df-4aa2-9580-92a3360cf07c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "edge-cz1.lovely.ceo"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8"
+      short-id: "59ab2fc39ec55bc7"
+  - name: "CZ 🇨🇿 | @Raydikalx | 2D90BF"
+    type: "vless"
+    server: "edge-cz1.lovely.ceo"
+    port: 443
+    uuid: "08b6dd4b-08df-4aa2-9580-92a3360cf07c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "edge-cz1.lovely.ceo"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8"
+      short-id: "59ab2fc39ec55bc7"
   - name: "DE 🇩🇪 | @Raydikalx | 98D5C6"
     type: "vless"
     server: "91.99.7.24"
@@ -4303,18 +4436,6 @@ proxies:
       path: "/"
       headers:
         Host: "c12.com"
-  - name: "CA 🇨🇦 | @Raydikalx | D22B3B"
-    type: "vless"
-    server: "162.159.156.214"
-    port: 8880
-    uuid: "090e5985-bbeb-4400-8278-d3a8e9ae5d92"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/pyip=ProxyIP.JP.CMLiussss.net"
-      headers:
-        Host: "shy-star-7967.311-f0b.workers.dev"
   - name: "CA 🇨🇦 | @Raydikalx | 9BC2F4"
     type: "vless"
     server: "188.114.97.6"
@@ -4641,7 +4762,7 @@ proxies:
     tls: true
     network: "ws"
     servername: "cf3.rumedia-cdn.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/casc"
       headers:
@@ -4830,6 +4951,20 @@ proxies:
     reality-opts:
       public-key: "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI"
       short-id: "d82fb387"
+  - name: "CA 🇨🇦 | @Raydikalx | 15AB9F"
+    type: "vless"
+    server: "104.21.70.21"
+    port: 443
+    uuid: "0b17eb47-587b-4e46-86a7-e1681cbbe76c"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "orange-math-9c83.371.workers.dev"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/pyip=ProxyIP.JP.CMLiussss.net"
+      headers:
+        Host: "orange-math-9c83.371.workers.dev"
   - name: "CA 🇨🇦 | @Raydikalx | 5E5E56"
     type: "vless"
     server: "104.21.70.21"
@@ -5135,7 +5270,7 @@ proxies:
       path: "/@LOCKEY_VPN--@LOCKEY_VPN--@LOCKEY_VPN--@LOCKEY_VPN--@LOCKEY_VPN--@LOCKEY_VPN--@LOCKEY_VPN--@LOCKEY_VPN--@LOCKEY_VPN"
       headers:
         Host: "nginx.tehranspeedtestdncheckerinternetchecker.ir"
-  - name: "CA 🇨🇦 | @Raydikalx | 4A9997"
+  - name: "Global 🌐 | @Raydikalx | 4A9997"
     type: "vless"
     server: "amern.pages.dev"
     port: 443
@@ -5491,131 +5626,12 @@ proxies:
     reality-opts:
       public-key: "NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs"
       short-id: "1bfe954cb07fb70a"
-  - name: "DE 🇩🇪 | @Raydikalx | 524E76"
-    type: "vless"
-    server: "91.92.33.95"
-    port: 443
-    uuid: "0dd9cfaa-cebd-4444-8778-70cb22737944"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "dl.google.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "HFTFARa1OS53m4HWnjwtZ0J3lu7aoKkE7OujIyM62QI"
-      short-id: "2a236a7fcbe0ce61"
-    grpc-opts:
-      grpc-service-name: "grpc-tunnel"
-  - name: "CA 🇨🇦 | @Raydikalx | F4BE81"
-    type: "vless"
-    server: "104.21.56.202"
-    port: 8880
-    uuid: "0de87762-7d50-49e7-a5ae-7ac85760e083"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/pyip"
-      headers:
-        Host: "delicate-fog-bbae.205-635.workers.dev"
-  - name: "CA 🇨🇦 | @Raydikalx | A04FB3"
-    type: "vless"
-    server: "skk.moe"
-    port: 8880
-    uuid: "0de87762-7d50-49e7-a5ae-7ac85760e083"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/pyip"
-      headers:
-        Host: "delicate-fog-bbae.205-635.workers.dev"
-  - name: "RU 🇷🇺 | @Raydikalx | 643C77"
-    type: "vless"
-    server: "201.24.114.60"
-    port: 443
-    uuid: "0dea82cd-a030-4c11-bccd-f3c0be845297"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "app.prostocalc.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "RRawEiil652RhrCcf0Oq94mBii7I21eN3YyOo34NrTY"
-      short-id: "47e4cb670b4e547d"
-  - name: "US 🇺🇸 | @Raydikalx | 1BF119"
-    type: "vless"
-    server: "digin.riziro.ir"
-    port: 8443
-    uuid: "0e6001f1-fe90-4e8c-9f4f-57071268af6e"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "au2-images.shop.samsung.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "zKeOuPoCS_FA1bsfFr-A8MmdYIS-DhcHwxmhDC1WaSA"
-      short-id: "8586"
-  - name: "NL 🇳🇱 | @Raydikalx | DFCA4E"
-    type: "vless"
-    server: "hollowcon.riziro.ir"
-    port: 8443
-    uuid: "0e6001f1-fe90-4e8c-9f4f-57071268af6e"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "au2-images.shop.samsung.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Ve-mF0aFGxV4deOSEA8jDe3FdjxLddF7n4IchNKvcDc"
-      short-id: "c664c8be"
-  - name: "FI 🇫🇮 | @Raydikalx | 14EF2C"
-    type: "vless"
-    server: "37.143.129.244"
-    port: 443
-    uuid: "0e6de971-69e8-4536-b06d-8b6eae57021b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "gateway.icloud.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY"
-      short-id: "48fd192dc4e46bc0"
-  - name: "128.241.25.3"
-    type: "vless"
-    server: "128.241.25.3"
-    port: 30021
-    uuid: "0e8371c0-0287-4805-a882-42a7b482a9de"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/@Marisa_kristi"
-      headers:
-        Host: "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
-  - name: "NL 🇳🇱 | @Raydikalx | E7B1EC"
-    type: "vless"
-    server: "31.58.181.88"
-    port: 8443
-    uuid: "0e83e0b6-cefa-4964-a8cf-2b43154cee01"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc"
-  - name: "DE 🇩🇪 | @Raydikalx | 1A4379"
+  - name: "DE 🇩🇪 | @Raydikalx | 864041"
     type: "ss"
-    server: "178.105.187.73"
-    port: 8557
+    server: "setlor.rehan-iogsar.ir"
+    port: 4680
     cipher: "2022-blake3-aes-128-gcm"
-    password: "CDFvxFTDtN82wcL3jMRNPg==:9hc+aOTa6oOZuBPX9EUxvA=="
+    password: "1JvlmtT4v8y1yGczDtT6Ww==:aCtpeMietGsJY50h6jDW6w=="
     udp: true
   - name: "ES 🇪🇸 | @Raydikalx | BA620A"
     type: "ss"
@@ -5736,6 +5752,13 @@ proxies:
     cipher: "2022-blake3-chacha20-poly1305"
     password: "bYDYE98Um55QDC0NmNkkSta8WZY+76jxtLFZNaug0GY="
     udp: true
+  - name: "GB 🇬🇧 | @Raydikalx | 2286B7"
+    type: "ss"
+    server: "129.151.95.27"
+    port: 61312
+    cipher: "2022-blake3-chacha20-poly1305"
+    password: "etWHWAsjCiGbHaessIM5QuQfSZ8qjOUGlo0fyhpFkDw="
+    udp: true
   - name: "DE 🇩🇪 | @Raydikalx | 17F675"
     type: "ss"
     server: "130.61.82.58"
@@ -5799,10 +5822,10 @@ proxies:
     cipher: "2022-blake3-chacha20-poly1305"
     password: "wtrUMVbSRSi4MlzATr+FjvqFCczZWFxG3hZ7+IWW1y0="
     udp: true
-  - name: "CN 🇨🇳 | @Raydikalx | 93678B"
+  - name: "CN 🇨🇳 | @Raydikalx | 918B96"
     type: "ss"
     server: "14.29.124.168"
-    port: 25217
+    port: 25245
     cipher: "aes-128-cfb"
     password: "QazEdcTgb159@$*"
     udp: true
@@ -5812,6 +5835,20 @@ proxies:
     port: 443
     cipher: "aes-128-cfb"
     password: "shadowsocks"
+    udp: true
+  - name: "Global 🌐 | @Raydikalx | 5DE482"
+    type: "ss"
+    server: "eu2.dns-node.top"
+    port: 46302
+    cipher: "aes-128-gcm"
+    password: "63dc87e0-8ec3-4401-bebd-4d499743f873"
+    udp: true
+  - name: "HK 🇭🇰 | @Raydikalx | D71F9C"
+    type: "ss"
+    server: "47.242.177.168"
+    port: 32259
+    cipher: "aes-128-gcm"
+    password: "HOUyi530"
     udp: true
   - name: "NL 🇳🇱 | @Raydikalx | 74ECDA"
     type: "ss"
@@ -5974,6 +6011,13 @@ proxies:
     cipher: "aes-128-gcm"
     password: "xo6k84l7b00n2hJp"
     udp: true
+  - name: "KR 🇰🇷 | @Raydikalx | FBAF15"
+    type: "ss"
+    server: "49.254.204.133"
+    port: 1774
+    cipher: "aes-256-cfb"
+    password: "1234!@#$"
+    udp: true
   - name: "TH 🇹🇭 | @Raydikalx | 355C22"
     type: "ss"
     server: "103.169.67.34"
@@ -6086,9 +6130,72 @@ proxies:
     cipher: "aes-256-cfb"
     password: "amazonskr05"
     udp: true
+  - name: "US 🇺🇸 | @Raydikalx | BCC16C"
+    type: "ss"
+    server: "34.208.170.155"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | A0B25F"
+    type: "ss"
+    server: "34.213.242.165"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 1163A2"
+    type: "ss"
+    server: "34.217.73.31"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 88A7C3"
+    type: "ss"
+    server: "34.217.75.169"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 24EFAC"
+    type: "ss"
+    server: "34.218.228.243"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | D7C1D3"
+    type: "ss"
+    server: "34.219.40.74"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | B9BCF6"
+    type: "ss"
+    server: "34.222.132.123"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | B03743"
+    type: "ss"
+    server: "34.223.228.213"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
   - name: "GB 🇬🇧 | @Raydikalx | 3B2F4F"
     type: "ss"
     server: "35.178.181.116"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "GB 🇬🇧 | @Raydikalx | 46FDEB"
+    type: "ss"
+    server: "35.179.104.218"
     port: 443
     cipher: "aes-256-cfb"
     password: "amazonskr05"
@@ -6103,6 +6210,55 @@ proxies:
   - name: "CA 🇨🇦 | @Raydikalx | 6D32CD"
     type: "ss"
     server: "35.182.182.58"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 3BD536"
+    type: "ss"
+    server: "35.91.221.138"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 64DE82"
+    type: "ss"
+    server: "35.92.45.179"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 949309"
+    type: "ss"
+    server: "35.94.178.238"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 7573B5"
+    type: "ss"
+    server: "35.95.35.11"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "KR 🇰🇷 | @Raydikalx | 004BAD"
+    type: "ss"
+    server: "43.200.245.35"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "KR 🇰🇷 | @Raydikalx | 76DEB5"
+    type: "ss"
+    server: "43.201.108.109"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "KR 🇰🇷 | @Raydikalx | 6541DE"
+    type: "ss"
+    server: "43.201.47.102"
     port: 443
     cipher: "aes-256-cfb"
     password: "amazonskr05"
@@ -6134,6 +6290,20 @@ proxies:
     port: 13979
     cipher: "aes-256-cfb"
     password: "qwerREWQ@@"
+    udp: true
+  - name: "PL 🇵🇱 | @Raydikalx | 2BB896"
+    type: "ss"
+    server: "217.30.10.70"
+    port: 9001
+    cipher: "aes-256-cfb"
+    password: "UkXRsXvR6buDMG2Y"
+    udp: true
+  - name: "VN 🇻🇳 | @Raydikalx | 46BEEB"
+    type: "ss"
+    server: "103.186.154.29"
+    port: 38388
+    cipher: "aes-256-cfb"
+    password: "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
     udp: true
   - name: "RU 🇷🇺 | @Raydikalx | B5BE9D"
     type: "ss"
@@ -6408,13 +6578,6 @@ proxies:
     cipher: "aes-256-gcm"
     password: "fbcec76953a2d173"
     udp: true
-  - name: "CA 🇨🇦 | @Raydikalx | E212C2"
-    type: "ss"
-    server: "166.88.130.218"
-    port: 60111
-    cipher: "aes-256-gcm"
-    password: "fbcec76953a2d173"
-    udp: true
   - name: "US 🇺🇸 | @Raydikalx | 81C193"
     type: "ss"
     server: "142.202.48.52"
@@ -6624,13 +6787,6 @@ proxies:
     port: 8882
     cipher: "aes-256-gcm"
     password: "kDWvXYZoTBcGkC4"
-    udp: true
-  - name: "SG 🇸🇬 | @Raydikalx | DBE274"
-    type: "ss"
-    server: "194.87.10.41"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "kem2ysB5TNrzUhzP"
     udp: true
   - name: "US 🇺🇸 | @Raydikalx | 06FADB"
     type: "ss"
@@ -6849,6 +7005,13 @@ proxies:
     cipher: "aes-256-gcm"
     password: "pKEW8JPByTVTLtM"
     udp: true
+  - name: "IT 🇮🇹 | @Raydikalx | FABE1D"
+    type: "ss"
+    server: "66.245.207.70"
+    port: 8388
+    cipher: "aes-256-gcm"
+    password: "qMvJmCbMduKUoeHq"
+    udp: true
   - name: "SG 🇸🇬 | @Raydikalx | EC2CA0"
     type: "ss"
     server: "139.180.220.175"
@@ -6981,13 +7144,6 @@ proxies:
     port: 8388
     cipher: "aes-256-gcm"
     password: "wBYiDjDDyFqcBnNl"
-    udp: true
-  - name: "CL 🇨🇱 | @Raydikalx | 83BCCE"
-    type: "ss"
-    server: "64.176.2.21"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "xBStBEVqvGwHPocc"
     udp: true
   - name: "KR 🇰🇷 | @Raydikalx | F95186"
     type: "ss"
@@ -7262,6 +7418,13 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "0JtCfjPIHnLCzDia"
     udp: true
+  - name: "Global 🌐 | @Raydikalx | 924C9D"
+    type: "ss"
+    server: "camy3aydjwpettcn.psuddd789.com"
+    port: 51141
+    cipher: "chacha20-ietf-poly1305"
+    password: "1036e487-9102-4e09-81fd-01b0f832b972"
+    udp: true
   - name: "DE 🇩🇪 | @Raydikalx | 20162C"
     type: "ss"
     server: "51.89.119.213"
@@ -7296,6 +7459,13 @@ proxies:
     port: 31348
     cipher: "chacha20-ietf-poly1305"
     password: "21DuJOEMxyefCUlK3Ees8urFzcpTw3XjLW3L9N"
+    udp: true
+  - name: "CN 🇨🇳 | @Raydikalx | 98A759"
+    type: "ss"
+    server: "223.95.40.39"
+    port: 10713
+    cipher: "chacha20-ietf-poly1305"
+    password: "27de6fe2-606d-4683-aa22-c1a50a3949cb"
     udp: true
   - name: "IE 🇮🇪 | @Raydikalx | CF6380"
     type: "ss"
@@ -7353,19 +7523,12 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "4ioKA_q8jdDh3yLCfLrNASLLencsiJ2T"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | C04235"
+  - name: "FI 🇫🇮 | @Raydikalx | E06D2D"
     type: "ss"
-    server: "150.241.102.95"
-    port: 21771
+    server: "89.35.119.87"
+    port: 5904
     cipher: "chacha20-ietf-poly1305"
-    password: "5mgZJzPv7hrLX4KMdPIeAW"
-    udp: true
-  - name: "Global 🌐 | @Raydikalx | 907099"
-    type: "ss"
-    server: "sg5.mhw7e2.online"
-    port: 20029
-    cipher: "chacha20-ietf-poly1305"
-    password: "70747514-fb14-4f31-8390-e1f0453eff6d"
+    password: "5TZnwPb23pQS39lIucspJw"
     udp: true
   - name: "MX 🇲🇽 | @Raydikalx | 252F9A"
     type: "ss"
@@ -7401,6 +7564,13 @@ proxies:
     port: 8243
     cipher: "chacha20-ietf-poly1305"
     password: "7pGg-mZzpoKRN5TYPg8I2Q"
+    udp: true
+  - name: "MK 🇲🇰 | @Raydikalx | 6F8882"
+    type: "ss"
+    server: "185.203.4.204"
+    port: 1
+    cipher: "chacha20-ietf-poly1305"
+    password: "816Efx8yiCSDDpvvpxXL8Q"
     udp: true
   - name: "RU 🇷🇺 | @Raydikalx | 6C93B9"
     type: "ss"
@@ -7555,160 +7725,6 @@ proxies:
     port: 8388
     cipher: "chacha20-ietf-poly1305"
     password: "CJmTCCx7Ltud"
-    udp: true
-  - name: "NL 🇳🇱 | @Raydikalx | B42DD1"
-    type: "ss"
-    server: "108.181.58.239"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "CJmTCCx7Ltud"
-    udp: true
-  - name: "NL 🇳🇱 | @Raydikalx | CEC5AC"
-    type: "ss"
-    server: "nl1.levikogjgfdd.ir"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "CJmTCCx7Ltud"
-    udp: true
-  - name: "NO 🇳🇴 | @Raydikalx | 24AA52"
-    type: "ss"
-    server: "45.87.175.183"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "cvII85TrW6n0OGyfpHVS1u"
-    udp: true
-  - name: "DE 🇩🇪 | @Raydikalx | 1FEF02"
-    type: "ss"
-    server: "cdn-2d12.giftcardbazarbot.com"
-    port: 8243
-    cipher: "chacha20-ietf-poly1305"
-    password: "cXzqTLtMHmVAuueEq2rByw"
-    udp: true
-  - name: "IE 🇮🇪 | @Raydikalx | 2DEF7B"
-    type: "ss"
-    server: "20.234.82.250"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "D1VXfiP9b9VeX9ZD"
-    udp: true
-  - name: "FR 🇫🇷 | @Raydikalx | 4EBD57"
-    type: "ss"
-    server: "20.111.9.76"
-    port: 59380
-    cipher: "chacha20-ietf-poly1305"
-    password: "DdhrBvEX2dHRjaakWHBZUa"
-    udp: true
-  - name: "GB 🇬🇧 | @Raydikalx | 9729A1"
-    type: "ss"
-    server: "140.238.64.207"
-    port: 42345
-    cipher: "chacha20-ietf-poly1305"
-    password: "e936372a-d976-4e25-8b3b-29c1a5841e06"
-    udp: true
-  - name: "IN 🇮🇳 | @Raydikalx | 2FC761"
-    type: "ss"
-    server: "103.120.178.193"
-    port: 31348
-    cipher: "chacha20-ietf-poly1305"
-    password: "EBDRo9THx4CqiFU7h5gfov76oNwzZURAh0ZwbWjBKddtUhvz"
-    udp: true
-  - name: "CN 🇨🇳 | @Raydikalx | 82BF0D"
-    type: "ss"
-    server: "117.164.185.220"
-    port: 61025
-    cipher: "chacha20-ietf-poly1305"
-    password: "ec3d404b-e7de-44d7-a646-c6b52bdb148c"
-    udp: true
-  - name: "US 🇺🇸 | @Raydikalx | E82A92"
-    type: "ss"
-    server: "198.98.53.130"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "eDfN7SODQceIOmIAbtJJtK"
-    udp: true
-  - name: "NL 🇳🇱 | @Raydikalx | 948C07"
-    type: "ss"
-    server: "188.116.23.244"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "eVC634QvVk5l"
-    udp: true
-  - name: "NL 🇳🇱 | @Raydikalx | 7C69A3"
-    type: "ss"
-    server: "64.188.77.159"
-    port: 8390
-    cipher: "chacha20-ietf-poly1305"
-    password: "EyGy11BMfeP-6UHjsgajWw"
-    udp: true
-  - name: "CA 🇨🇦 | @Raydikalx | 612E73"
-    type: "ss"
-    server: "15.235.75.71"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "FD3rCuOsxOay"
-    udp: true
-  - name: "Global 🌐 | @Raydikalx | CAD7B5"
-    type: "ss"
-    server: "ca4.levikogjgfdd.ir"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "FD3rCuOsxOay"
-    udp: true
-  - name: "KZ 🇰🇿 | @Raydikalx | D4DE7F"
-    type: "ss"
-    server: "77.240.38.27"
-    port: 8443
-    cipher: "chacha20-ietf-poly1305"
-    password: "fkXtvCEQ1ZU1rzF3fIK0fw=="
-    udp: true
-  - name: "ZA 🇿🇦 | @Raydikalx | 019FC6"
-    type: "ss"
-    server: "102.37.108.75"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "FYGlWYggB4Akk6HP"
-    udp: true
-  - name: "ZA 🇿🇦 | @Raydikalx | D9C968"
-    type: "ss"
-    server: "4.168.198.18"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "FYGlWYggB4Akk6HP"
-    udp: true
-  - name: "GB 🇬🇧 | @Raydikalx | 58B9AD"
-    type: "ss"
-    server: "185.160.24.217"
-    port: 811
-    cipher: "chacha20-ietf-poly1305"
-    password: "G!yBwPWH3Vao"
-    udp: true
-  - name: "CA 🇨🇦 | @Raydikalx | 9267BE"
-    type: "ss"
-    server: "196.247.59.156"
-    port: 801
-    cipher: "chacha20-ietf-poly1305"
-    password: "G!yBwPWH3Vao"
-    udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 148700"
-    type: "ss"
-    server: "38.91.107.225"
-    port: 800
-    cipher: "chacha20-ietf-poly1305"
-    password: "G!yBwPWH3Vao"
-    udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 0DF31E"
-    type: "ss"
-    server: "38.91.107.225"
-    port: 802
-    cipher: "chacha20-ietf-poly1305"
-    password: "G!yBwPWH3Vao"
-    udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 58906C"
-    type: "ss"
-    server: "38.91.107.225"
-    port: 805
-    cipher: "chacha20-ietf-poly1305"
-    password: "G!yBwPWH3Vao"
     udp: true
   - name: "Server 5"
     type: "vmess"
@@ -7876,7 +7892,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "DE 🇩🇪 | @Raydikalx | 391CA4"
+      - "DE 🇩🇪 | @Raydikalx | 1D45E0"
+      - "GB 🇬🇧 | @Raydikalx | BC8DC4"
       - "DE 🇩🇪 | @Raydikalx | 66E6DE"
       - "JP 🇯🇵 | @Raydikalx | 312B82"
       - "FI 🇫🇮 | @Raydikalx | 224922"
@@ -7980,6 +7997,7 @@ proxy-groups:
       - "UA 🇺🇦 | @Raydikalx | C5AC49"
       - "FI 🇫🇮 | @Raydikalx | AB8199"
       - "FI 🇫🇮 | @Raydikalx | 456C6A"
+      - "NL 🇳🇱 | @Raydikalx | 78AF0D"
       - "NL 🇳🇱 | @Raydikalx | B843BA"
       - "FI 🇫🇮 | @Raydikalx | 8D2A93"
       - "FI 🇫🇮 | @Raydikalx | 515667"
@@ -7987,7 +8005,6 @@ proxy-groups:
       - "FI 🇫🇮 | @Raydikalx | 0B8C1A"
       - "FR 🇫🇷 | @Raydikalx | 73C6C6"
       - "DE 🇩🇪 | @Raydikalx | BD6A32"
-      - "US 🇺🇸 | @Raydikalx | 4A0433"
       - "DE 🇩🇪 | @Raydikalx | BC4ABB"
       - "DE 🇩🇪 | @Raydikalx | 8EB60A"
       - "DE 🇩🇪 | @Raydikalx | F4B200"
@@ -8055,7 +8072,6 @@ proxy-groups:
       - "RU 🇷🇺 | @Raydikalx | 8B711C"
       - "DE 🇩🇪 | @Raydikalx | A3ECD1"
       - "DE 🇩🇪 | @Raydikalx | 429F7D"
-      - "DE 🇩🇪 | @Raydikalx | C4F82A"
       - "DE 🇩🇪 | @Raydikalx | 91EC3F"
       - "US 🇺🇸 | @Raydikalx | BF3066"
       - "US 🇺🇸 | @Raydikalx | 7CFEAC"
@@ -8079,6 +8095,8 @@ proxy-groups:
       - "IR 🇮🇷 | @Raydikalx | 0B1B35"
       - "Global 🌐 | @Raydikalx | A05BBF"
       - "IR 🇮🇷 | @Raydikalx | 94B36A"
+      - "GB 🇬🇧 | @Raydikalx | 8A1073"
+      - "RU 🇷🇺 | @Raydikalx | 35538B"
       - "IR 🇮🇷 | @Raydikalx | 126ED4"
       - "TW 🇹🇼 | @Raydikalx | E30390"
       - "CA 🇨🇦 | @Raydikalx | A40692"
@@ -8134,6 +8152,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3FF590"
       - "CA 🇨🇦 | @Raydikalx | 8758CC"
       - "US 🇺🇸 | @Raydikalx | BB4839"
+      - "FI 🇫🇮 | @Raydikalx | E6C980"
       - "DE 🇩🇪 | @Raydikalx | 02185B"
       - "IR 🇮🇷 | @Raydikalx | 14A058"
       - "AU 🇦🇺 | @Raydikalx | B41F77"
@@ -8144,6 +8163,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3F3060"
       - "CA 🇨🇦 | @Raydikalx | FF5438"
       - "CA 🇨🇦 | @Raydikalx | BD21ED"
+      - "CA 🇨🇦 | @Raydikalx | 5B8C34"
       - "CA 🇨🇦 | @Raydikalx | 405ECA"
       - "CA 🇨🇦 | @Raydikalx | 80F016"
       - "45.131.66.61"
@@ -8167,6 +8187,7 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | B9029C"
       - "NL 🇳🇱 | @Raydikalx | E0B24B"
       - "NL 🇳🇱 | @Raydikalx | A637EE"
+      - "PL 🇵🇱 | @Raydikalx | 5EE46A"
       - "IE 🇮🇪 | @Raydikalx | 3AC782"
       - "US 🇺🇸 | @Raydikalx | EFC7C0"
       - "US 🇺🇸 | @Raydikalx | 32D5E7"
@@ -8193,6 +8214,8 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | B915DF"
       - "US 🇺🇸 | @Raydikalx | ABCC9E"
       - "CA 🇨🇦 | @Raydikalx | 5DE9EA"
+      - "TR 🇹🇷 | @Raydikalx | FBD25A"
+      - "NL 🇳🇱 | @Raydikalx | E321DF"
       - "CN 🇨🇳 | @Raydikalx | E4200A"
       - "CA 🇨🇦 | @Raydikalx | 4004E4"
       - "CA 🇨🇦 | @Raydikalx | 954034"
@@ -8218,13 +8241,13 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | F47902"
       - "CA 🇨🇦 | @Raydikalx | 37C567"
       - "CA 🇨🇦 | @Raydikalx | E823C2"
+      - "CA 🇨🇦 | @Raydikalx | CACE88"
+      - "CA 🇨🇦 | @Raydikalx | BC8406"
       - "CA 🇨🇦 | @Raydikalx | 22E386"
       - "CA 🇨🇦 | @Raydikalx | ABACEA"
       - "CA 🇨🇦 | @Raydikalx | E3D94A"
-      - "RU 🇷🇺 | @Raydikalx | 3AC9C1"
       - "DE 🇩🇪 | @Raydikalx | 87968D"
       - "NL 🇳🇱 | @Raydikalx | 32C96C"
-      - "US 🇺🇸 | @Raydikalx | C95C96"
       - "CA 🇨🇦 | @Raydikalx | E2AACA"
       - "CA 🇨🇦 | @Raydikalx | C73CC1"
       - "CA 🇨🇦 | @Raydikalx | DA967F"
@@ -8249,6 +8272,8 @@ proxy-groups:
       - "Global 🌐 | @Raydikalx | 7383CB"
       - "IN 🇮🇳 | @Raydikalx | 0FFE7B"
       - "NL 🇳🇱 | @Raydikalx | D290EE"
+      - "CZ 🇨🇿 | @Raydikalx | EFC6D0"
+      - "CZ 🇨🇿 | @Raydikalx | 2D90BF"
       - "DE 🇩🇪 | @Raydikalx | 98D5C6"
       - "US 🇺🇸 | @Raydikalx | 5AFE3D"
       - "CA 🇨🇦 | @Raydikalx | C27E71"
@@ -8256,7 +8281,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 6EF5D7"
       - "US 🇺🇸 | @Raydikalx | F2F389"
       - "US 🇺🇸 | @Raydikalx | 531984"
-      - "CA 🇨🇦 | @Raydikalx | D22B3B"
       - "CA 🇨🇦 | @Raydikalx | 9BC2F4"
       - "57.129.130.57-1"
       - "CA 🇨🇦 | @Raydikalx | F43B19"
@@ -8298,6 +8322,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3A0EE5"
       - "FI 🇫🇮 | @Raydikalx | ABA688"
       - "TR 🇹🇷 | @Raydikalx | 126B9C"
+      - "CA 🇨🇦 | @Raydikalx | 15AB9F"
       - "CA 🇨🇦 | @Raydikalx | 5E5E56"
       - "CA 🇨🇦 | @Raydikalx | 85B190"
       - "DE 🇩🇪 | @Raydikalx | DA350F"
@@ -8322,7 +8347,7 @@ proxy-groups:
       - "HK 🇭🇰 | @Raydikalx | 0B1F02"
       - "CA 🇨🇦 | @Raydikalx | B000C5"
       - "CA 🇨🇦 | @Raydikalx | 26ED5A"
-      - "CA 🇨🇦 | @Raydikalx | 4A9997"
+      - "Global 🌐 | @Raydikalx | 4A9997"
       - "CA 🇨🇦 | @Raydikalx | 803F00"
       - "CA 🇨🇦 | @Raydikalx | F5815B"
       - "CA 🇨🇦 | @Raydikalx | 6E346F"
@@ -8348,16 +8373,7 @@ proxy-groups:
       - "DE 🇩🇪 | @Raydikalx | E25393"
       - "SE 🇸🇪 | @Raydikalx | F84E8B"
       - "IT 🇮🇹 | @Raydikalx | 9E92AE"
-      - "DE 🇩🇪 | @Raydikalx | 524E76"
-      - "CA 🇨🇦 | @Raydikalx | F4BE81"
-      - "CA 🇨🇦 | @Raydikalx | A04FB3"
-      - "RU 🇷🇺 | @Raydikalx | 643C77"
-      - "US 🇺🇸 | @Raydikalx | 1BF119"
-      - "NL 🇳🇱 | @Raydikalx | DFCA4E"
-      - "FI 🇫🇮 | @Raydikalx | 14EF2C"
-      - "128.241.25.3"
-      - "NL 🇳🇱 | @Raydikalx | E7B1EC"
-      - "DE 🇩🇪 | @Raydikalx | 1A4379"
+      - "DE 🇩🇪 | @Raydikalx | 864041"
       - "ES 🇪🇸 | @Raydikalx | BA620A"
       - "GB 🇬🇧 | @Raydikalx | 7AD800"
       - "CA 🇨🇦 | @Raydikalx | 903532"
@@ -8375,6 +8391,7 @@ proxy-groups:
       - "DE 🇩🇪 | @Raydikalx | F252D8"
       - "GB 🇬🇧 | @Raydikalx | A05499"
       - "DE 🇩🇪 | @Raydikalx | 214B89"
+      - "GB 🇬🇧 | @Raydikalx | 2286B7"
       - "DE 🇩🇪 | @Raydikalx | 17F675"
       - "IR 🇮🇷 | @Raydikalx | 37F206"
       - "GB 🇬🇧 | @Raydikalx | 7BA6AB"
@@ -8384,8 +8401,10 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | FD54BE"
       - "DE 🇩🇪 | @Raydikalx | 6EF72E"
       - "GB 🇬🇧 | @Raydikalx | 7EEBF1"
-      - "CN 🇨🇳 | @Raydikalx | 93678B"
+      - "CN 🇨🇳 | @Raydikalx | 918B96"
       - "NL 🇳🇱 | @Raydikalx | BA4344"
+      - "Global 🌐 | @Raydikalx | 5DE482"
+      - "HK 🇭🇰 | @Raydikalx | D71F9C"
       - "NL 🇳🇱 | @Raydikalx | 74ECDA"
       - "GB 🇬🇧 | @Raydikalx | 4A01A8"
       - "JP 🇯🇵 | @Raydikalx | 554D18"
@@ -8409,6 +8428,7 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | BB7720"
       - "DE 🇩🇪 | @Raydikalx | 5F81E9"
       - "US 🇺🇸 | @Raydikalx | 734C60"
+      - "KR 🇰🇷 | @Raydikalx | FBAF15"
       - "TH 🇹🇭 | @Raydikalx | 355C22"
       - "MY 🇲🇾 | @Raydikalx | 59F364"
       - "CN 🇨🇳 | @Raydikalx | A9CA1B"
@@ -8425,13 +8445,31 @@ proxy-groups:
       - "GB 🇬🇧 | @Raydikalx | 505E62"
       - "US 🇺🇸 | @Raydikalx | 45AF12"
       - "IE 🇮🇪 | @Raydikalx | 406AA0"
+      - "US 🇺🇸 | @Raydikalx | BCC16C"
+      - "US 🇺🇸 | @Raydikalx | A0B25F"
+      - "US 🇺🇸 | @Raydikalx | 1163A2"
+      - "US 🇺🇸 | @Raydikalx | 88A7C3"
+      - "US 🇺🇸 | @Raydikalx | 24EFAC"
+      - "US 🇺🇸 | @Raydikalx | D7C1D3"
+      - "US 🇺🇸 | @Raydikalx | B9BCF6"
+      - "US 🇺🇸 | @Raydikalx | B03743"
       - "GB 🇬🇧 | @Raydikalx | 3B2F4F"
+      - "GB 🇬🇧 | @Raydikalx | 46FDEB"
       - "CA 🇨🇦 | @Raydikalx | 8D36C0"
       - "CA 🇨🇦 | @Raydikalx | 6D32CD"
+      - "US 🇺🇸 | @Raydikalx | 3BD536"
+      - "US 🇺🇸 | @Raydikalx | 64DE82"
+      - "US 🇺🇸 | @Raydikalx | 949309"
+      - "US 🇺🇸 | @Raydikalx | 7573B5"
+      - "KR 🇰🇷 | @Raydikalx | 004BAD"
+      - "KR 🇰🇷 | @Raydikalx | 76DEB5"
+      - "KR 🇰🇷 | @Raydikalx | 6541DE"
       - "IE 🇮🇪 | @Raydikalx | B9C797"
       - "IE 🇮🇪 | @Raydikalx | DC02F9"
       - "KR 🇰🇷 | @Raydikalx | 81E9CD"
       - "KR 🇰🇷 | @Raydikalx | 0E1FB7"
+      - "PL 🇵🇱 | @Raydikalx | 2BB896"
+      - "VN 🇻🇳 | @Raydikalx | 46BEEB"
       - "RU 🇷🇺 | @Raydikalx | B5BE9D"
       - "SG 🇸🇬 | @Raydikalx | 17E3DC"
       - "SG 🇸🇬 | @Raydikalx | EA55E0"
@@ -8471,7 +8509,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 06E2F4"
       - "US 🇺🇸 | @Raydikalx | 604A70"
       - "CA 🇨🇦 | @Raydikalx | AB94B4"
-      - "CA 🇨🇦 | @Raydikalx | E212C2"
       - "US 🇺🇸 | @Raydikalx | 81C193"
       - "US 🇺🇸 | @Raydikalx | 1F5965"
       - "US 🇺🇸 | @Raydikalx | BB2B22"
@@ -8502,7 +8539,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 1CB981"
       - "CA 🇨🇦 | @Raydikalx | FB6887"
       - "CA 🇨🇦 | @Raydikalx | BEBFBB"
-      - "SG 🇸🇬 | @Raydikalx | DBE274"
       - "US 🇺🇸 | @Raydikalx | 06FADB"
       - "US 🇺🇸 | @Raydikalx | 78396C"
       - "US 🇺🇸 | @Raydikalx | 4C9A2B"
@@ -8534,6 +8570,7 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | A0E988"
       - "US 🇺🇸 | @Raydikalx | 891F68"
       - "US 🇺🇸 | @Raydikalx | 095ABD"
+      - "IT 🇮🇹 | @Raydikalx | FABE1D"
       - "SG 🇸🇬 | @Raydikalx | EC2CA0"
       - "KR 🇰🇷 | @Raydikalx | 037DBF"
       - "KR 🇰🇷 | @Raydikalx | 96864A"
@@ -8553,7 +8590,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | B53D67"
       - "SG 🇸🇬 | @Raydikalx | E5CCE8"
       - "ES 🇪🇸 | @Raydikalx | EB5C0E"
-      - "CL 🇨🇱 | @Raydikalx | 83BCCE"
       - "KR 🇰🇷 | @Raydikalx | F95186"
       - "DE 🇩🇪 | @Raydikalx | 7771B1"
       - "US 🇺🇸 | @Raydikalx | E4B6CE"
@@ -8593,11 +8629,13 @@ proxy-groups:
       - "GB 🇬🇧 | @Raydikalx | 8FB4B4"
       - "GB 🇬🇧 | @Raydikalx | FE6DDC"
       - "ZA 🇿🇦 | @Raydikalx | F1E030"
+      - "Global 🌐 | @Raydikalx | 924C9D"
       - "DE 🇩🇪 | @Raydikalx | 20162C"
       - "DE 🇩🇪 | @Raydikalx | 82FC13"
       - "NO 🇳🇴 | @Raydikalx | BABF0F"
       - "NO 🇳🇴 | @Raydikalx | E70997"
       - "NL 🇳🇱 | @Raydikalx | DAFACD"
+      - "CN 🇨🇳 | @Raydikalx | 98A759"
       - "IE 🇮🇪 | @Raydikalx | CF6380"
       - "DE 🇩🇪 | @Raydikalx | FCDE3D"
       - "JP 🇯🇵 | @Raydikalx | 3A2FCA"
@@ -8606,13 +8644,13 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | F0C303"
       - "AE 🇦🇪 | @Raydikalx | EC5751"
       - "AE 🇦🇪 | @Raydikalx | 0E1207"
-      - "US 🇺🇸 | @Raydikalx | C04235"
-      - "Global 🌐 | @Raydikalx | 907099"
+      - "FI 🇫🇮 | @Raydikalx | E06D2D"
       - "MX 🇲🇽 | @Raydikalx | 252F9A"
       - "TW 🇹🇼 | @Raydikalx | 882AEA"
       - "TW 🇹🇼 | @Raydikalx | D5B6D3"
       - "TW 🇹🇼 | @Raydikalx | B59995"
       - "DE 🇩🇪 | @Raydikalx | 43E28C"
+      - "MK 🇲🇰 | @Raydikalx | 6F8882"
       - "RU 🇷🇺 | @Raydikalx | 6C93B9"
       - "DE 🇩🇪 | @Raydikalx | 863E01"
       - "ID 🇮🇩 | @Raydikalx | 49126A"
@@ -8635,28 +8673,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 6B0BC3"
       - "FR 🇫🇷 | @Raydikalx | D0F0B9"
       - "NL 🇳🇱 | @Raydikalx | 9AD496"
-      - "NL 🇳🇱 | @Raydikalx | B42DD1"
-      - "NL 🇳🇱 | @Raydikalx | CEC5AC"
-      - "NO 🇳🇴 | @Raydikalx | 24AA52"
-      - "DE 🇩🇪 | @Raydikalx | 1FEF02"
-      - "IE 🇮🇪 | @Raydikalx | 2DEF7B"
-      - "FR 🇫🇷 | @Raydikalx | 4EBD57"
-      - "GB 🇬🇧 | @Raydikalx | 9729A1"
-      - "IN 🇮🇳 | @Raydikalx | 2FC761"
-      - "CN 🇨🇳 | @Raydikalx | 82BF0D"
-      - "US 🇺🇸 | @Raydikalx | E82A92"
-      - "NL 🇳🇱 | @Raydikalx | 948C07"
-      - "NL 🇳🇱 | @Raydikalx | 7C69A3"
-      - "CA 🇨🇦 | @Raydikalx | 612E73"
-      - "Global 🌐 | @Raydikalx | CAD7B5"
-      - "KZ 🇰🇿 | @Raydikalx | D4DE7F"
-      - "ZA 🇿🇦 | @Raydikalx | 019FC6"
-      - "ZA 🇿🇦 | @Raydikalx | D9C968"
-      - "GB 🇬🇧 | @Raydikalx | 58B9AD"
-      - "CA 🇨🇦 | @Raydikalx | 9267BE"
-      - "US 🇺🇸 | @Raydikalx | 148700"
-      - "US 🇺🇸 | @Raydikalx | 0DF31E"
-      - "US 🇺🇸 | @Raydikalx | 58906C"
       - "Server 5"
       - "GB 🇬🇧 | @Raydikalx | B364F3"
       - "US 🇺🇸 | @Raydikalx | 7B0044"
@@ -8686,7 +8702,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "DE 🇩🇪 | @Raydikalx | 391CA4"
+      - "DE 🇩🇪 | @Raydikalx | 1D45E0"
+      - "GB 🇬🇧 | @Raydikalx | BC8DC4"
       - "DE 🇩🇪 | @Raydikalx | 66E6DE"
       - "JP 🇯🇵 | @Raydikalx | 312B82"
       - "FI 🇫🇮 | @Raydikalx | 224922"
@@ -8790,6 +8807,7 @@ proxy-groups:
       - "UA 🇺🇦 | @Raydikalx | C5AC49"
       - "FI 🇫🇮 | @Raydikalx | AB8199"
       - "FI 🇫🇮 | @Raydikalx | 456C6A"
+      - "NL 🇳🇱 | @Raydikalx | 78AF0D"
       - "NL 🇳🇱 | @Raydikalx | B843BA"
       - "FI 🇫🇮 | @Raydikalx | 8D2A93"
       - "FI 🇫🇮 | @Raydikalx | 515667"
@@ -8797,7 +8815,6 @@ proxy-groups:
       - "FI 🇫🇮 | @Raydikalx | 0B8C1A"
       - "FR 🇫🇷 | @Raydikalx | 73C6C6"
       - "DE 🇩🇪 | @Raydikalx | BD6A32"
-      - "US 🇺🇸 | @Raydikalx | 4A0433"
       - "DE 🇩🇪 | @Raydikalx | BC4ABB"
       - "DE 🇩🇪 | @Raydikalx | 8EB60A"
       - "DE 🇩🇪 | @Raydikalx | F4B200"
@@ -8865,7 +8882,6 @@ proxy-groups:
       - "RU 🇷🇺 | @Raydikalx | 8B711C"
       - "DE 🇩🇪 | @Raydikalx | A3ECD1"
       - "DE 🇩🇪 | @Raydikalx | 429F7D"
-      - "DE 🇩🇪 | @Raydikalx | C4F82A"
       - "DE 🇩🇪 | @Raydikalx | 91EC3F"
       - "US 🇺🇸 | @Raydikalx | BF3066"
       - "US 🇺🇸 | @Raydikalx | 7CFEAC"
@@ -8889,6 +8905,8 @@ proxy-groups:
       - "IR 🇮🇷 | @Raydikalx | 0B1B35"
       - "Global 🌐 | @Raydikalx | A05BBF"
       - "IR 🇮🇷 | @Raydikalx | 94B36A"
+      - "GB 🇬🇧 | @Raydikalx | 8A1073"
+      - "RU 🇷🇺 | @Raydikalx | 35538B"
       - "IR 🇮🇷 | @Raydikalx | 126ED4"
       - "TW 🇹🇼 | @Raydikalx | E30390"
       - "CA 🇨🇦 | @Raydikalx | A40692"
@@ -8944,6 +8962,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3FF590"
       - "CA 🇨🇦 | @Raydikalx | 8758CC"
       - "US 🇺🇸 | @Raydikalx | BB4839"
+      - "FI 🇫🇮 | @Raydikalx | E6C980"
       - "DE 🇩🇪 | @Raydikalx | 02185B"
       - "IR 🇮🇷 | @Raydikalx | 14A058"
       - "AU 🇦🇺 | @Raydikalx | B41F77"
@@ -8954,6 +8973,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3F3060"
       - "CA 🇨🇦 | @Raydikalx | FF5438"
       - "CA 🇨🇦 | @Raydikalx | BD21ED"
+      - "CA 🇨🇦 | @Raydikalx | 5B8C34"
       - "CA 🇨🇦 | @Raydikalx | 405ECA"
       - "CA 🇨🇦 | @Raydikalx | 80F016"
       - "45.131.66.61"
@@ -8977,6 +8997,7 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | B9029C"
       - "NL 🇳🇱 | @Raydikalx | E0B24B"
       - "NL 🇳🇱 | @Raydikalx | A637EE"
+      - "PL 🇵🇱 | @Raydikalx | 5EE46A"
       - "IE 🇮🇪 | @Raydikalx | 3AC782"
       - "US 🇺🇸 | @Raydikalx | EFC7C0"
       - "US 🇺🇸 | @Raydikalx | 32D5E7"
@@ -9003,6 +9024,8 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | B915DF"
       - "US 🇺🇸 | @Raydikalx | ABCC9E"
       - "CA 🇨🇦 | @Raydikalx | 5DE9EA"
+      - "TR 🇹🇷 | @Raydikalx | FBD25A"
+      - "NL 🇳🇱 | @Raydikalx | E321DF"
       - "CN 🇨🇳 | @Raydikalx | E4200A"
       - "CA 🇨🇦 | @Raydikalx | 4004E4"
       - "CA 🇨🇦 | @Raydikalx | 954034"
@@ -9028,13 +9051,13 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | F47902"
       - "CA 🇨🇦 | @Raydikalx | 37C567"
       - "CA 🇨🇦 | @Raydikalx | E823C2"
+      - "CA 🇨🇦 | @Raydikalx | CACE88"
+      - "CA 🇨🇦 | @Raydikalx | BC8406"
       - "CA 🇨🇦 | @Raydikalx | 22E386"
       - "CA 🇨🇦 | @Raydikalx | ABACEA"
       - "CA 🇨🇦 | @Raydikalx | E3D94A"
-      - "RU 🇷🇺 | @Raydikalx | 3AC9C1"
       - "DE 🇩🇪 | @Raydikalx | 87968D"
       - "NL 🇳🇱 | @Raydikalx | 32C96C"
-      - "US 🇺🇸 | @Raydikalx | C95C96"
       - "CA 🇨🇦 | @Raydikalx | E2AACA"
       - "CA 🇨🇦 | @Raydikalx | C73CC1"
       - "CA 🇨🇦 | @Raydikalx | DA967F"
@@ -9059,6 +9082,8 @@ proxy-groups:
       - "Global 🌐 | @Raydikalx | 7383CB"
       - "IN 🇮🇳 | @Raydikalx | 0FFE7B"
       - "NL 🇳🇱 | @Raydikalx | D290EE"
+      - "CZ 🇨🇿 | @Raydikalx | EFC6D0"
+      - "CZ 🇨🇿 | @Raydikalx | 2D90BF"
       - "DE 🇩🇪 | @Raydikalx | 98D5C6"
       - "US 🇺🇸 | @Raydikalx | 5AFE3D"
       - "CA 🇨🇦 | @Raydikalx | C27E71"
@@ -9066,7 +9091,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 6EF5D7"
       - "US 🇺🇸 | @Raydikalx | F2F389"
       - "US 🇺🇸 | @Raydikalx | 531984"
-      - "CA 🇨🇦 | @Raydikalx | D22B3B"
       - "CA 🇨🇦 | @Raydikalx | 9BC2F4"
       - "57.129.130.57-1"
       - "CA 🇨🇦 | @Raydikalx | F43B19"
@@ -9108,6 +9132,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3A0EE5"
       - "FI 🇫🇮 | @Raydikalx | ABA688"
       - "TR 🇹🇷 | @Raydikalx | 126B9C"
+      - "CA 🇨🇦 | @Raydikalx | 15AB9F"
       - "CA 🇨🇦 | @Raydikalx | 5E5E56"
       - "CA 🇨🇦 | @Raydikalx | 85B190"
       - "DE 🇩🇪 | @Raydikalx | DA350F"
@@ -9132,7 +9157,7 @@ proxy-groups:
       - "HK 🇭🇰 | @Raydikalx | 0B1F02"
       - "CA 🇨🇦 | @Raydikalx | B000C5"
       - "CA 🇨🇦 | @Raydikalx | 26ED5A"
-      - "CA 🇨🇦 | @Raydikalx | 4A9997"
+      - "Global 🌐 | @Raydikalx | 4A9997"
       - "CA 🇨🇦 | @Raydikalx | 803F00"
       - "CA 🇨🇦 | @Raydikalx | F5815B"
       - "CA 🇨🇦 | @Raydikalx | 6E346F"
@@ -9158,16 +9183,7 @@ proxy-groups:
       - "DE 🇩🇪 | @Raydikalx | E25393"
       - "SE 🇸🇪 | @Raydikalx | F84E8B"
       - "IT 🇮🇹 | @Raydikalx | 9E92AE"
-      - "DE 🇩🇪 | @Raydikalx | 524E76"
-      - "CA 🇨🇦 | @Raydikalx | F4BE81"
-      - "CA 🇨🇦 | @Raydikalx | A04FB3"
-      - "RU 🇷🇺 | @Raydikalx | 643C77"
-      - "US 🇺🇸 | @Raydikalx | 1BF119"
-      - "NL 🇳🇱 | @Raydikalx | DFCA4E"
-      - "FI 🇫🇮 | @Raydikalx | 14EF2C"
-      - "128.241.25.3"
-      - "NL 🇳🇱 | @Raydikalx | E7B1EC"
-      - "DE 🇩🇪 | @Raydikalx | 1A4379"
+      - "DE 🇩🇪 | @Raydikalx | 864041"
       - "ES 🇪🇸 | @Raydikalx | BA620A"
       - "GB 🇬🇧 | @Raydikalx | 7AD800"
       - "CA 🇨🇦 | @Raydikalx | 903532"
@@ -9185,6 +9201,7 @@ proxy-groups:
       - "DE 🇩🇪 | @Raydikalx | F252D8"
       - "GB 🇬🇧 | @Raydikalx | A05499"
       - "DE 🇩🇪 | @Raydikalx | 214B89"
+      - "GB 🇬🇧 | @Raydikalx | 2286B7"
       - "DE 🇩🇪 | @Raydikalx | 17F675"
       - "IR 🇮🇷 | @Raydikalx | 37F206"
       - "GB 🇬🇧 | @Raydikalx | 7BA6AB"
@@ -9194,8 +9211,10 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | FD54BE"
       - "DE 🇩🇪 | @Raydikalx | 6EF72E"
       - "GB 🇬🇧 | @Raydikalx | 7EEBF1"
-      - "CN 🇨🇳 | @Raydikalx | 93678B"
+      - "CN 🇨🇳 | @Raydikalx | 918B96"
       - "NL 🇳🇱 | @Raydikalx | BA4344"
+      - "Global 🌐 | @Raydikalx | 5DE482"
+      - "HK 🇭🇰 | @Raydikalx | D71F9C"
       - "NL 🇳🇱 | @Raydikalx | 74ECDA"
       - "GB 🇬🇧 | @Raydikalx | 4A01A8"
       - "JP 🇯🇵 | @Raydikalx | 554D18"
@@ -9219,6 +9238,7 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | BB7720"
       - "DE 🇩🇪 | @Raydikalx | 5F81E9"
       - "US 🇺🇸 | @Raydikalx | 734C60"
+      - "KR 🇰🇷 | @Raydikalx | FBAF15"
       - "TH 🇹🇭 | @Raydikalx | 355C22"
       - "MY 🇲🇾 | @Raydikalx | 59F364"
       - "CN 🇨🇳 | @Raydikalx | A9CA1B"
@@ -9235,13 +9255,31 @@ proxy-groups:
       - "GB 🇬🇧 | @Raydikalx | 505E62"
       - "US 🇺🇸 | @Raydikalx | 45AF12"
       - "IE 🇮🇪 | @Raydikalx | 406AA0"
+      - "US 🇺🇸 | @Raydikalx | BCC16C"
+      - "US 🇺🇸 | @Raydikalx | A0B25F"
+      - "US 🇺🇸 | @Raydikalx | 1163A2"
+      - "US 🇺🇸 | @Raydikalx | 88A7C3"
+      - "US 🇺🇸 | @Raydikalx | 24EFAC"
+      - "US 🇺🇸 | @Raydikalx | D7C1D3"
+      - "US 🇺🇸 | @Raydikalx | B9BCF6"
+      - "US 🇺🇸 | @Raydikalx | B03743"
       - "GB 🇬🇧 | @Raydikalx | 3B2F4F"
+      - "GB 🇬🇧 | @Raydikalx | 46FDEB"
       - "CA 🇨🇦 | @Raydikalx | 8D36C0"
       - "CA 🇨🇦 | @Raydikalx | 6D32CD"
+      - "US 🇺🇸 | @Raydikalx | 3BD536"
+      - "US 🇺🇸 | @Raydikalx | 64DE82"
+      - "US 🇺🇸 | @Raydikalx | 949309"
+      - "US 🇺🇸 | @Raydikalx | 7573B5"
+      - "KR 🇰🇷 | @Raydikalx | 004BAD"
+      - "KR 🇰🇷 | @Raydikalx | 76DEB5"
+      - "KR 🇰🇷 | @Raydikalx | 6541DE"
       - "IE 🇮🇪 | @Raydikalx | B9C797"
       - "IE 🇮🇪 | @Raydikalx | DC02F9"
       - "KR 🇰🇷 | @Raydikalx | 81E9CD"
       - "KR 🇰🇷 | @Raydikalx | 0E1FB7"
+      - "PL 🇵🇱 | @Raydikalx | 2BB896"
+      - "VN 🇻🇳 | @Raydikalx | 46BEEB"
       - "RU 🇷🇺 | @Raydikalx | B5BE9D"
       - "SG 🇸🇬 | @Raydikalx | 17E3DC"
       - "SG 🇸🇬 | @Raydikalx | EA55E0"
@@ -9281,7 +9319,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 06E2F4"
       - "US 🇺🇸 | @Raydikalx | 604A70"
       - "CA 🇨🇦 | @Raydikalx | AB94B4"
-      - "CA 🇨🇦 | @Raydikalx | E212C2"
       - "US 🇺🇸 | @Raydikalx | 81C193"
       - "US 🇺🇸 | @Raydikalx | 1F5965"
       - "US 🇺🇸 | @Raydikalx | BB2B22"
@@ -9312,7 +9349,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 1CB981"
       - "CA 🇨🇦 | @Raydikalx | FB6887"
       - "CA 🇨🇦 | @Raydikalx | BEBFBB"
-      - "SG 🇸🇬 | @Raydikalx | DBE274"
       - "US 🇺🇸 | @Raydikalx | 06FADB"
       - "US 🇺🇸 | @Raydikalx | 78396C"
       - "US 🇺🇸 | @Raydikalx | 4C9A2B"
@@ -9344,6 +9380,7 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | A0E988"
       - "US 🇺🇸 | @Raydikalx | 891F68"
       - "US 🇺🇸 | @Raydikalx | 095ABD"
+      - "IT 🇮🇹 | @Raydikalx | FABE1D"
       - "SG 🇸🇬 | @Raydikalx | EC2CA0"
       - "KR 🇰🇷 | @Raydikalx | 037DBF"
       - "KR 🇰🇷 | @Raydikalx | 96864A"
@@ -9363,7 +9400,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | B53D67"
       - "SG 🇸🇬 | @Raydikalx | E5CCE8"
       - "ES 🇪🇸 | @Raydikalx | EB5C0E"
-      - "CL 🇨🇱 | @Raydikalx | 83BCCE"
       - "KR 🇰🇷 | @Raydikalx | F95186"
       - "DE 🇩🇪 | @Raydikalx | 7771B1"
       - "US 🇺🇸 | @Raydikalx | E4B6CE"
@@ -9403,11 +9439,13 @@ proxy-groups:
       - "GB 🇬🇧 | @Raydikalx | 8FB4B4"
       - "GB 🇬🇧 | @Raydikalx | FE6DDC"
       - "ZA 🇿🇦 | @Raydikalx | F1E030"
+      - "Global 🌐 | @Raydikalx | 924C9D"
       - "DE 🇩🇪 | @Raydikalx | 20162C"
       - "DE 🇩🇪 | @Raydikalx | 82FC13"
       - "NO 🇳🇴 | @Raydikalx | BABF0F"
       - "NO 🇳🇴 | @Raydikalx | E70997"
       - "NL 🇳🇱 | @Raydikalx | DAFACD"
+      - "CN 🇨🇳 | @Raydikalx | 98A759"
       - "IE 🇮🇪 | @Raydikalx | CF6380"
       - "DE 🇩🇪 | @Raydikalx | FCDE3D"
       - "JP 🇯🇵 | @Raydikalx | 3A2FCA"
@@ -9416,13 +9454,13 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | F0C303"
       - "AE 🇦🇪 | @Raydikalx | EC5751"
       - "AE 🇦🇪 | @Raydikalx | 0E1207"
-      - "US 🇺🇸 | @Raydikalx | C04235"
-      - "Global 🌐 | @Raydikalx | 907099"
+      - "FI 🇫🇮 | @Raydikalx | E06D2D"
       - "MX 🇲🇽 | @Raydikalx | 252F9A"
       - "TW 🇹🇼 | @Raydikalx | 882AEA"
       - "TW 🇹🇼 | @Raydikalx | D5B6D3"
       - "TW 🇹🇼 | @Raydikalx | B59995"
       - "DE 🇩🇪 | @Raydikalx | 43E28C"
+      - "MK 🇲🇰 | @Raydikalx | 6F8882"
       - "RU 🇷🇺 | @Raydikalx | 6C93B9"
       - "DE 🇩🇪 | @Raydikalx | 863E01"
       - "ID 🇮🇩 | @Raydikalx | 49126A"
@@ -9445,28 +9483,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 6B0BC3"
       - "FR 🇫🇷 | @Raydikalx | D0F0B9"
       - "NL 🇳🇱 | @Raydikalx | 9AD496"
-      - "NL 🇳🇱 | @Raydikalx | B42DD1"
-      - "NL 🇳🇱 | @Raydikalx | CEC5AC"
-      - "NO 🇳🇴 | @Raydikalx | 24AA52"
-      - "DE 🇩🇪 | @Raydikalx | 1FEF02"
-      - "IE 🇮🇪 | @Raydikalx | 2DEF7B"
-      - "FR 🇫🇷 | @Raydikalx | 4EBD57"
-      - "GB 🇬🇧 | @Raydikalx | 9729A1"
-      - "IN 🇮🇳 | @Raydikalx | 2FC761"
-      - "CN 🇨🇳 | @Raydikalx | 82BF0D"
-      - "US 🇺🇸 | @Raydikalx | E82A92"
-      - "NL 🇳🇱 | @Raydikalx | 948C07"
-      - "NL 🇳🇱 | @Raydikalx | 7C69A3"
-      - "CA 🇨🇦 | @Raydikalx | 612E73"
-      - "Global 🌐 | @Raydikalx | CAD7B5"
-      - "KZ 🇰🇿 | @Raydikalx | D4DE7F"
-      - "ZA 🇿🇦 | @Raydikalx | 019FC6"
-      - "ZA 🇿🇦 | @Raydikalx | D9C968"
-      - "GB 🇬🇧 | @Raydikalx | 58B9AD"
-      - "CA 🇨🇦 | @Raydikalx | 9267BE"
-      - "US 🇺🇸 | @Raydikalx | 148700"
-      - "US 🇺🇸 | @Raydikalx | 0DF31E"
-      - "US 🇺🇸 | @Raydikalx | 58906C"
       - "Server 5"
       - "GB 🇬🇧 | @Raydikalx | B364F3"
       - "US 🇺🇸 | @Raydikalx | 7B0044"
@@ -9495,7 +9511,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "DE 🇩🇪 | @Raydikalx | 391CA4"
+      - "DE 🇩🇪 | @Raydikalx | 1D45E0"
+      - "GB 🇬🇧 | @Raydikalx | BC8DC4"
       - "DE 🇩🇪 | @Raydikalx | 66E6DE"
       - "JP 🇯🇵 | @Raydikalx | 312B82"
       - "FI 🇫🇮 | @Raydikalx | 224922"
@@ -9599,6 +9616,7 @@ proxy-groups:
       - "UA 🇺🇦 | @Raydikalx | C5AC49"
       - "FI 🇫🇮 | @Raydikalx | AB8199"
       - "FI 🇫🇮 | @Raydikalx | 456C6A"
+      - "NL 🇳🇱 | @Raydikalx | 78AF0D"
       - "NL 🇳🇱 | @Raydikalx | B843BA"
       - "FI 🇫🇮 | @Raydikalx | 8D2A93"
       - "FI 🇫🇮 | @Raydikalx | 515667"
@@ -9606,7 +9624,6 @@ proxy-groups:
       - "FI 🇫🇮 | @Raydikalx | 0B8C1A"
       - "FR 🇫🇷 | @Raydikalx | 73C6C6"
       - "DE 🇩🇪 | @Raydikalx | BD6A32"
-      - "US 🇺🇸 | @Raydikalx | 4A0433"
       - "DE 🇩🇪 | @Raydikalx | BC4ABB"
       - "DE 🇩🇪 | @Raydikalx | 8EB60A"
       - "DE 🇩🇪 | @Raydikalx | F4B200"
@@ -9674,7 +9691,6 @@ proxy-groups:
       - "RU 🇷🇺 | @Raydikalx | 8B711C"
       - "DE 🇩🇪 | @Raydikalx | A3ECD1"
       - "DE 🇩🇪 | @Raydikalx | 429F7D"
-      - "DE 🇩🇪 | @Raydikalx | C4F82A"
       - "DE 🇩🇪 | @Raydikalx | 91EC3F"
       - "US 🇺🇸 | @Raydikalx | BF3066"
       - "US 🇺🇸 | @Raydikalx | 7CFEAC"
@@ -9698,6 +9714,8 @@ proxy-groups:
       - "IR 🇮🇷 | @Raydikalx | 0B1B35"
       - "Global 🌐 | @Raydikalx | A05BBF"
       - "IR 🇮🇷 | @Raydikalx | 94B36A"
+      - "GB 🇬🇧 | @Raydikalx | 8A1073"
+      - "RU 🇷🇺 | @Raydikalx | 35538B"
       - "IR 🇮🇷 | @Raydikalx | 126ED4"
       - "TW 🇹🇼 | @Raydikalx | E30390"
       - "CA 🇨🇦 | @Raydikalx | A40692"
@@ -9753,6 +9771,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3FF590"
       - "CA 🇨🇦 | @Raydikalx | 8758CC"
       - "US 🇺🇸 | @Raydikalx | BB4839"
+      - "FI 🇫🇮 | @Raydikalx | E6C980"
       - "DE 🇩🇪 | @Raydikalx | 02185B"
       - "IR 🇮🇷 | @Raydikalx | 14A058"
       - "AU 🇦🇺 | @Raydikalx | B41F77"
@@ -9763,6 +9782,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3F3060"
       - "CA 🇨🇦 | @Raydikalx | FF5438"
       - "CA 🇨🇦 | @Raydikalx | BD21ED"
+      - "CA 🇨🇦 | @Raydikalx | 5B8C34"
       - "CA 🇨🇦 | @Raydikalx | 405ECA"
       - "CA 🇨🇦 | @Raydikalx | 80F016"
       - "45.131.66.61"
@@ -9786,6 +9806,7 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | B9029C"
       - "NL 🇳🇱 | @Raydikalx | E0B24B"
       - "NL 🇳🇱 | @Raydikalx | A637EE"
+      - "PL 🇵🇱 | @Raydikalx | 5EE46A"
       - "IE 🇮🇪 | @Raydikalx | 3AC782"
       - "US 🇺🇸 | @Raydikalx | EFC7C0"
       - "US 🇺🇸 | @Raydikalx | 32D5E7"
@@ -9812,6 +9833,8 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | B915DF"
       - "US 🇺🇸 | @Raydikalx | ABCC9E"
       - "CA 🇨🇦 | @Raydikalx | 5DE9EA"
+      - "TR 🇹🇷 | @Raydikalx | FBD25A"
+      - "NL 🇳🇱 | @Raydikalx | E321DF"
       - "CN 🇨🇳 | @Raydikalx | E4200A"
       - "CA 🇨🇦 | @Raydikalx | 4004E4"
       - "CA 🇨🇦 | @Raydikalx | 954034"
@@ -9837,13 +9860,13 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | F47902"
       - "CA 🇨🇦 | @Raydikalx | 37C567"
       - "CA 🇨🇦 | @Raydikalx | E823C2"
+      - "CA 🇨🇦 | @Raydikalx | CACE88"
+      - "CA 🇨🇦 | @Raydikalx | BC8406"
       - "CA 🇨🇦 | @Raydikalx | 22E386"
       - "CA 🇨🇦 | @Raydikalx | ABACEA"
       - "CA 🇨🇦 | @Raydikalx | E3D94A"
-      - "RU 🇷🇺 | @Raydikalx | 3AC9C1"
       - "DE 🇩🇪 | @Raydikalx | 87968D"
       - "NL 🇳🇱 | @Raydikalx | 32C96C"
-      - "US 🇺🇸 | @Raydikalx | C95C96"
       - "CA 🇨🇦 | @Raydikalx | E2AACA"
       - "CA 🇨🇦 | @Raydikalx | C73CC1"
       - "CA 🇨🇦 | @Raydikalx | DA967F"
@@ -9868,6 +9891,8 @@ proxy-groups:
       - "Global 🌐 | @Raydikalx | 7383CB"
       - "IN 🇮🇳 | @Raydikalx | 0FFE7B"
       - "NL 🇳🇱 | @Raydikalx | D290EE"
+      - "CZ 🇨🇿 | @Raydikalx | EFC6D0"
+      - "CZ 🇨🇿 | @Raydikalx | 2D90BF"
       - "DE 🇩🇪 | @Raydikalx | 98D5C6"
       - "US 🇺🇸 | @Raydikalx | 5AFE3D"
       - "CA 🇨🇦 | @Raydikalx | C27E71"
@@ -9875,7 +9900,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 6EF5D7"
       - "US 🇺🇸 | @Raydikalx | F2F389"
       - "US 🇺🇸 | @Raydikalx | 531984"
-      - "CA 🇨🇦 | @Raydikalx | D22B3B"
       - "CA 🇨🇦 | @Raydikalx | 9BC2F4"
       - "57.129.130.57-1"
       - "CA 🇨🇦 | @Raydikalx | F43B19"
@@ -9917,6 +9941,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 3A0EE5"
       - "FI 🇫🇮 | @Raydikalx | ABA688"
       - "TR 🇹🇷 | @Raydikalx | 126B9C"
+      - "CA 🇨🇦 | @Raydikalx | 15AB9F"
       - "CA 🇨🇦 | @Raydikalx | 5E5E56"
       - "CA 🇨🇦 | @Raydikalx | 85B190"
       - "DE 🇩🇪 | @Raydikalx | DA350F"
@@ -9941,7 +9966,7 @@ proxy-groups:
       - "HK 🇭🇰 | @Raydikalx | 0B1F02"
       - "CA 🇨🇦 | @Raydikalx | B000C5"
       - "CA 🇨🇦 | @Raydikalx | 26ED5A"
-      - "CA 🇨🇦 | @Raydikalx | 4A9997"
+      - "Global 🌐 | @Raydikalx | 4A9997"
       - "CA 🇨🇦 | @Raydikalx | 803F00"
       - "CA 🇨🇦 | @Raydikalx | F5815B"
       - "CA 🇨🇦 | @Raydikalx | 6E346F"
@@ -9967,16 +9992,7 @@ proxy-groups:
       - "DE 🇩🇪 | @Raydikalx | E25393"
       - "SE 🇸🇪 | @Raydikalx | F84E8B"
       - "IT 🇮🇹 | @Raydikalx | 9E92AE"
-      - "DE 🇩🇪 | @Raydikalx | 524E76"
-      - "CA 🇨🇦 | @Raydikalx | F4BE81"
-      - "CA 🇨🇦 | @Raydikalx | A04FB3"
-      - "RU 🇷🇺 | @Raydikalx | 643C77"
-      - "US 🇺🇸 | @Raydikalx | 1BF119"
-      - "NL 🇳🇱 | @Raydikalx | DFCA4E"
-      - "FI 🇫🇮 | @Raydikalx | 14EF2C"
-      - "128.241.25.3"
-      - "NL 🇳🇱 | @Raydikalx | E7B1EC"
-      - "DE 🇩🇪 | @Raydikalx | 1A4379"
+      - "DE 🇩🇪 | @Raydikalx | 864041"
       - "ES 🇪🇸 | @Raydikalx | BA620A"
       - "GB 🇬🇧 | @Raydikalx | 7AD800"
       - "CA 🇨🇦 | @Raydikalx | 903532"
@@ -9994,6 +10010,7 @@ proxy-groups:
       - "DE 🇩🇪 | @Raydikalx | F252D8"
       - "GB 🇬🇧 | @Raydikalx | A05499"
       - "DE 🇩🇪 | @Raydikalx | 214B89"
+      - "GB 🇬🇧 | @Raydikalx | 2286B7"
       - "DE 🇩🇪 | @Raydikalx | 17F675"
       - "IR 🇮🇷 | @Raydikalx | 37F206"
       - "GB 🇬🇧 | @Raydikalx | 7BA6AB"
@@ -10003,8 +10020,10 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | FD54BE"
       - "DE 🇩🇪 | @Raydikalx | 6EF72E"
       - "GB 🇬🇧 | @Raydikalx | 7EEBF1"
-      - "CN 🇨🇳 | @Raydikalx | 93678B"
+      - "CN 🇨🇳 | @Raydikalx | 918B96"
       - "NL 🇳🇱 | @Raydikalx | BA4344"
+      - "Global 🌐 | @Raydikalx | 5DE482"
+      - "HK 🇭🇰 | @Raydikalx | D71F9C"
       - "NL 🇳🇱 | @Raydikalx | 74ECDA"
       - "GB 🇬🇧 | @Raydikalx | 4A01A8"
       - "JP 🇯🇵 | @Raydikalx | 554D18"
@@ -10028,6 +10047,7 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | BB7720"
       - "DE 🇩🇪 | @Raydikalx | 5F81E9"
       - "US 🇺🇸 | @Raydikalx | 734C60"
+      - "KR 🇰🇷 | @Raydikalx | FBAF15"
       - "TH 🇹🇭 | @Raydikalx | 355C22"
       - "MY 🇲🇾 | @Raydikalx | 59F364"
       - "CN 🇨🇳 | @Raydikalx | A9CA1B"
@@ -10044,13 +10064,31 @@ proxy-groups:
       - "GB 🇬🇧 | @Raydikalx | 505E62"
       - "US 🇺🇸 | @Raydikalx | 45AF12"
       - "IE 🇮🇪 | @Raydikalx | 406AA0"
+      - "US 🇺🇸 | @Raydikalx | BCC16C"
+      - "US 🇺🇸 | @Raydikalx | A0B25F"
+      - "US 🇺🇸 | @Raydikalx | 1163A2"
+      - "US 🇺🇸 | @Raydikalx | 88A7C3"
+      - "US 🇺🇸 | @Raydikalx | 24EFAC"
+      - "US 🇺🇸 | @Raydikalx | D7C1D3"
+      - "US 🇺🇸 | @Raydikalx | B9BCF6"
+      - "US 🇺🇸 | @Raydikalx | B03743"
       - "GB 🇬🇧 | @Raydikalx | 3B2F4F"
+      - "GB 🇬🇧 | @Raydikalx | 46FDEB"
       - "CA 🇨🇦 | @Raydikalx | 8D36C0"
       - "CA 🇨🇦 | @Raydikalx | 6D32CD"
+      - "US 🇺🇸 | @Raydikalx | 3BD536"
+      - "US 🇺🇸 | @Raydikalx | 64DE82"
+      - "US 🇺🇸 | @Raydikalx | 949309"
+      - "US 🇺🇸 | @Raydikalx | 7573B5"
+      - "KR 🇰🇷 | @Raydikalx | 004BAD"
+      - "KR 🇰🇷 | @Raydikalx | 76DEB5"
+      - "KR 🇰🇷 | @Raydikalx | 6541DE"
       - "IE 🇮🇪 | @Raydikalx | B9C797"
       - "IE 🇮🇪 | @Raydikalx | DC02F9"
       - "KR 🇰🇷 | @Raydikalx | 81E9CD"
       - "KR 🇰🇷 | @Raydikalx | 0E1FB7"
+      - "PL 🇵🇱 | @Raydikalx | 2BB896"
+      - "VN 🇻🇳 | @Raydikalx | 46BEEB"
       - "RU 🇷🇺 | @Raydikalx | B5BE9D"
       - "SG 🇸🇬 | @Raydikalx | 17E3DC"
       - "SG 🇸🇬 | @Raydikalx | EA55E0"
@@ -10090,7 +10128,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 06E2F4"
       - "US 🇺🇸 | @Raydikalx | 604A70"
       - "CA 🇨🇦 | @Raydikalx | AB94B4"
-      - "CA 🇨🇦 | @Raydikalx | E212C2"
       - "US 🇺🇸 | @Raydikalx | 81C193"
       - "US 🇺🇸 | @Raydikalx | 1F5965"
       - "US 🇺🇸 | @Raydikalx | BB2B22"
@@ -10121,7 +10158,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 1CB981"
       - "CA 🇨🇦 | @Raydikalx | FB6887"
       - "CA 🇨🇦 | @Raydikalx | BEBFBB"
-      - "SG 🇸🇬 | @Raydikalx | DBE274"
       - "US 🇺🇸 | @Raydikalx | 06FADB"
       - "US 🇺🇸 | @Raydikalx | 78396C"
       - "US 🇺🇸 | @Raydikalx | 4C9A2B"
@@ -10153,6 +10189,7 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | A0E988"
       - "US 🇺🇸 | @Raydikalx | 891F68"
       - "US 🇺🇸 | @Raydikalx | 095ABD"
+      - "IT 🇮🇹 | @Raydikalx | FABE1D"
       - "SG 🇸🇬 | @Raydikalx | EC2CA0"
       - "KR 🇰🇷 | @Raydikalx | 037DBF"
       - "KR 🇰🇷 | @Raydikalx | 96864A"
@@ -10172,7 +10209,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | B53D67"
       - "SG 🇸🇬 | @Raydikalx | E5CCE8"
       - "ES 🇪🇸 | @Raydikalx | EB5C0E"
-      - "CL 🇨🇱 | @Raydikalx | 83BCCE"
       - "KR 🇰🇷 | @Raydikalx | F95186"
       - "DE 🇩🇪 | @Raydikalx | 7771B1"
       - "US 🇺🇸 | @Raydikalx | E4B6CE"
@@ -10212,11 +10248,13 @@ proxy-groups:
       - "GB 🇬🇧 | @Raydikalx | 8FB4B4"
       - "GB 🇬🇧 | @Raydikalx | FE6DDC"
       - "ZA 🇿🇦 | @Raydikalx | F1E030"
+      - "Global 🌐 | @Raydikalx | 924C9D"
       - "DE 🇩🇪 | @Raydikalx | 20162C"
       - "DE 🇩🇪 | @Raydikalx | 82FC13"
       - "NO 🇳🇴 | @Raydikalx | BABF0F"
       - "NO 🇳🇴 | @Raydikalx | E70997"
       - "NL 🇳🇱 | @Raydikalx | DAFACD"
+      - "CN 🇨🇳 | @Raydikalx | 98A759"
       - "IE 🇮🇪 | @Raydikalx | CF6380"
       - "DE 🇩🇪 | @Raydikalx | FCDE3D"
       - "JP 🇯🇵 | @Raydikalx | 3A2FCA"
@@ -10225,13 +10263,13 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | F0C303"
       - "AE 🇦🇪 | @Raydikalx | EC5751"
       - "AE 🇦🇪 | @Raydikalx | 0E1207"
-      - "US 🇺🇸 | @Raydikalx | C04235"
-      - "Global 🌐 | @Raydikalx | 907099"
+      - "FI 🇫🇮 | @Raydikalx | E06D2D"
       - "MX 🇲🇽 | @Raydikalx | 252F9A"
       - "TW 🇹🇼 | @Raydikalx | 882AEA"
       - "TW 🇹🇼 | @Raydikalx | D5B6D3"
       - "TW 🇹🇼 | @Raydikalx | B59995"
       - "DE 🇩🇪 | @Raydikalx | 43E28C"
+      - "MK 🇲🇰 | @Raydikalx | 6F8882"
       - "RU 🇷🇺 | @Raydikalx | 6C93B9"
       - "DE 🇩🇪 | @Raydikalx | 863E01"
       - "ID 🇮🇩 | @Raydikalx | 49126A"
@@ -10254,28 +10292,6 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 6B0BC3"
       - "FR 🇫🇷 | @Raydikalx | D0F0B9"
       - "NL 🇳🇱 | @Raydikalx | 9AD496"
-      - "NL 🇳🇱 | @Raydikalx | B42DD1"
-      - "NL 🇳🇱 | @Raydikalx | CEC5AC"
-      - "NO 🇳🇴 | @Raydikalx | 24AA52"
-      - "DE 🇩🇪 | @Raydikalx | 1FEF02"
-      - "IE 🇮🇪 | @Raydikalx | 2DEF7B"
-      - "FR 🇫🇷 | @Raydikalx | 4EBD57"
-      - "GB 🇬🇧 | @Raydikalx | 9729A1"
-      - "IN 🇮🇳 | @Raydikalx | 2FC761"
-      - "CN 🇨🇳 | @Raydikalx | 82BF0D"
-      - "US 🇺🇸 | @Raydikalx | E82A92"
-      - "NL 🇳🇱 | @Raydikalx | 948C07"
-      - "NL 🇳🇱 | @Raydikalx | 7C69A3"
-      - "CA 🇨🇦 | @Raydikalx | 612E73"
-      - "Global 🌐 | @Raydikalx | CAD7B5"
-      - "KZ 🇰🇿 | @Raydikalx | D4DE7F"
-      - "ZA 🇿🇦 | @Raydikalx | 019FC6"
-      - "ZA 🇿🇦 | @Raydikalx | D9C968"
-      - "GB 🇬🇧 | @Raydikalx | 58B9AD"
-      - "CA 🇨🇦 | @Raydikalx | 9267BE"
-      - "US 🇺🇸 | @Raydikalx | 148700"
-      - "US 🇺🇸 | @Raydikalx | 0DF31E"
-      - "US 🇺🇸 | @Raydikalx | 58906C"
       - "Server 5"
       - "GB 🇬🇧 | @Raydikalx | B364F3"
       - "US 🇺🇸 | @Raydikalx | 7B0044"
