@@ -499,6 +499,13 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.193.5.112:1080"
+    type: "ss"
+    server: "91.193.5.112"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
   - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.77.154.91:443"
     type: "vless"
     server: "31.77.154.91"
@@ -515,19 +522,42 @@ proxies:
     reality-opts:
       public-key: "vMpyuTZ06hfF-Yu1u8w43TiUidkML1Ges5KGeyr6Ui4"
       short-id: "324344345654"
-  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
+    type: "ss"
+    server: "176.126.83.158"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
+    udp: true
+  - name: "🇮🇹 🔒 VL-TCP-TLS 🇮🇹 IT-185.119.19.105:10829"
     type: "vless"
-    server: "57.131.38.163"
-    port: 2053
-    uuid: "d4b08cd6-0903-411a-9dac-45dbdf5c9712"
+    server: "185.119.19.105"
+    port: 10829
+    uuid: "41f4cb15-5a3f-3934-89fe-b4177146adf4"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.apple.com"
+    servername: "u643766u2c5f47d6s8746.gogocs.xyz"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.19.226:443"
+    type: "vless"
+    server: "57.131.19.226"
+    port: 443
+    uuid: "df677fac-8183-4658-b448-307511ee6572"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.sony.com.au"
     client-fingerprint: "chrome"
+    alpn:
+      - "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
     reality-opts:
-      public-key: "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc"
-      short-id: "5b8a942318178e7b"
+      public-key: "9mgAr9QUQzxncMwhYf7Xg8SSJ49444K1rUxq7LPGAFk"
+      short-id: "f1e2d15f"
   - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.238.232.239:32833"
     type: "vless"
     server: "172.238.232.239"
@@ -541,59 +571,20 @@ proxies:
     reality-opts:
       public-key: "PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20"
       short-id: "a0a305ccc8e94aa8"
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-66.245.207.70:8388"
-    type: "ss"
-    server: "66.245.207.70"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "qMvJmCbMduKUoeHq"
-    udp: true
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
-    type: "ss"
-    server: "176.126.83.158"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.19.226:443"
+  - name: "🇮🇹 🔒 VL-TCP-NONE 🇮🇹 IT-204.216.216.23:10086"
     type: "vless"
-    server: "57.131.19.226"
-    port: 443
-    uuid: "df677fac-8183-4658-b448-307511ee6572"
+    server: "204.216.216.23"
+    port: 10086
+    uuid: "9f0285ee-20ca-4953-bcdb-86a920652923"
     udp: true
-    tls: true
+    tls: false
     network: "tcp"
-    servername: "www.sony.com.au"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "9mgAr9QUQzxncMwhYf7Xg8SSJ49444K1rUxq7LPGAFk"
-      short-id: "f1e2d15f"
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
     type: "ss"
     server: "91.201.65.122"
-    port: 9070
+    port: 9039
     cipher: "aes-256-cfb"
-    password: "bf7v334KKDV3YDhH"
-    udp: true
-  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.232.206.156:8735"
-    type: "vless"
-    server: "172.232.206.156"
-    port: 8735
-    uuid: "0dd9bd66-b041-4fb6-86ce-5357b3eb6ae8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "play-apps-features.googleusercontent.com"
-    client-fingerprint: "edge"
-    reality-opts:
-      public-key: "NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs"
-      short-id: "1bfe954cb07fb70a"
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
-    type: "ss"
-    server: "57.131.48.45"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "itzvpn@321"
+    password: "qYEN5HX4JKeVCdEC"
     udp: true
   - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.76.113.51:443"
     type: "vless"
@@ -609,13 +600,19 @@ proxies:
     reality-opts:
       public-key: "zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY"
       short-id: "7a3f9e2b1c8d4f6a"
-  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.193.5.112:1080"
-    type: "ss"
-    server: "91.193.5.112"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
+  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+    type: "vless"
+    server: "57.131.38.163"
+    port: 2053
+    uuid: "d4b08cd6-0903-411a-9dac-45dbdf5c9712"
     udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc"
+      short-id: "5b8a942318178e7b"
   - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053-1"
     type: "vless"
     server: "57.131.38.163"
@@ -628,26 +625,39 @@ proxies:
     reality-opts:
       public-key: "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc"
       short-id: "5b8a942318178e7b"
-  - name: "🇮🇹 🔒 VL-TCP-TLS 🇮🇹 IT-185.119.19.105:10829"
-    type: "vless"
-    server: "185.119.19.105"
-    port: 10829
-    uuid: "41f4cb15-5a3f-3934-89fe-b4177146adf4"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "u643766u2c5f47d6s8746.gogocs.xyz"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
   - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
     type: "ss"
     server: "91.201.65.122"
     port: 9053
     cipher: "aes-256-cfb"
     password: "SBM7R883jBmnqe6C"
+    udp: true
+  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.187:443"
+    type: "vless"
+    server: "82.118.16.187"
+    port: 443
+    uuid: "dc2259c4-388e-4285-ba18-df619b6672b6"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU"
+      short-id: "cd6065902eea7a02"
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9092"
+    type: "ss"
+    server: "91.201.65.122"
+    port: 9092
+    cipher: "aes-256-cfb"
+    password: "TyNkGmp9hs6eGpDK"
+    udp: true
+  - name: "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
+    type: "ss"
+    server: "57.131.48.45"
+    port: 8388
+    cipher: "aes-256-gcm"
+    password: "itzvpn@321"
     udp: true
   - name: "🇮🇹 @Shh_Proxy-New³"
     type: "vless"
@@ -659,19 +669,6 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless/"
-  - name: "🇮🇹 ✈️ @FreeConfigForYou"
-    type: "vless"
-    server: "ff13741198843a8f.portalcode.ir"
-    port: 8735
-    uuid: "0dd9bd66-b041-4fb6-86ce-5357b3eb6ae8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "play-apps-features.googleusercontent.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs"
-      short-id: "1bfe954cb07fb70a"
   - name: "🇮🇹 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹"
     type: "vless"
     server: "57.131.32.191"
@@ -685,22 +682,19 @@ proxies:
       path: "/vless/"
       headers:
         Host: "ov-italy1.09vpn.com"
-  - name: "🇮🇹 @meliproxyy"
+  - name: "🇮🇹 ✈️ @FreeConfigForYou"
     type: "vless"
-    server: "mil.2clash.ru"
-    port: 443
-    uuid: "3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1"
+    server: "e607890ef11ddc8a.rainzone.ir"
+    port: 8735
+    uuid: "2e050832-ad53-42ba-9fd3-cec1f74cb626"
     udp: true
     tls: true
     network: "tcp"
-    servername: "mil.2clash.ru"
+    servername: "play-apps-features.googleusercontent.com"
     client-fingerprint: "chrome"
-    alpn:
-      - "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
-    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "vMpyuTZ06hfF-Yu1u8w43TiUidkML1Ges5KGeyr6Ui4"
-      short-id: "324344345654"
+      public-key: "NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs"
+      short-id: "1bfe954cb07fb70a"
   - name: "🇮🇹 @confiig_hub"
     type: "vless"
     server: "tuntey.poefauscw.ir"
@@ -709,7 +703,7 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇮🇹 @V2RAYNG_IP ☀️"
+  - name: "🇮🇹 @Shh_Proxy-New⁷"
     type: "vless"
     server: "57.131.21.102"
     port: 8443
@@ -771,7 +765,7 @@ proxies:
     reality-opts:
       public-key: "cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0"
       short-id: "a1b2c4d4a1b2c5d5"
-  - name: "🇮🇹 @V2ray_Alpha🌉 5"
+  - name: "🇮🇹 @V2ray_confiig"
     type: "vless"
     server: "31.76.113.202"
     port: 8443
@@ -785,6 +779,14 @@ proxies:
     reality-opts:
       public-key: "cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0"
       short-id: "a1b2c4d4a1b2c5d5"
+  - name: "🇮🇹 کانال ما"
+    type: "vless"
+    server: "151.115.164.110"
+    port: 8880
+    uuid: "8dc7722c-2767-4eea-a28b-2f8daacc07e3"
+    udp: true
+    tls: false
+    network: "grpc"
   - name: "🇮🇹 🇮🇹 @GozargahVPN"
     type: "vless"
     server: "151.115.164.120"
@@ -900,27 +902,6 @@ proxies:
     servername: "/?v2rayNplus"
     alpn:
       - "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
-  - name: "🇮🇹 @v2ray313 کانالمون ❤️"
-    type: "vless"
-    server: "204.216.216.23"
-    port: 10086
-    uuid: "9f0285ee-20ca-4953-bcdb-86a920652923"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇮🇹 @vmesskhodam"
-    type: "vless"
-    server: "itl.mobileemdad.top"
-    port: 443
-    uuid: "a2157358-ee62-4c6a-a1bd-8e97114060af"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "play-apps-features.googleusercontent.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ"
-      short-id: "aefc7f3722"
   - name: "🇮🇹 法国"
     type: "vless"
     server: "158.180.231.216"
@@ -961,19 +942,19 @@ proxies:
     reality-opts:
       public-key: "Pj1XWo01sxdH8jKJ_8DoJiZDFANHFKRAqOncP8RNkwU"
       short-id: "dd6ce6af95001a"
-  - name: "🇮🇹 Free x130 @Outline_Vpn"
+  - name: "🇮🇹 🏀54@oneclickvpnkeys"
     type: "vless"
-    server: "ww4.levikogjgfdd.ir"
-    port: 32396
-    uuid: "bd6ebd72-25cd-4209-a418-a8c72946da90"
+    server: "82.118.16.189"
+    port: 443
+    uuid: "d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.sony.com"
+    servername: "www.cloudflare.com"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "Pj1XWo01sxdH8jKJ_8DoJiZDFANHFKRAqOncP8RNkwU"
-      short-id: "dd6ce6af95001a"
+      public-key: "SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY"
+      short-id: "37fbf155c7a9f3ff"
   - name: "🇮🇹 @V2RAYNG_IP"
     type: "vless"
     server: "milan.adaspoloandco.com"
@@ -988,20 +969,7 @@ proxies:
       path: "/uploader.php"
       headers:
         Host: "maple.adaspoloandco.com"
-  - name: "🇮🇹 ⛽39@oneclickvpnkeys"
-    type: "vless"
-    server: "82.118.16.187"
-    port: 443
-    uuid: "dc2259c4-388e-4285-ba18-df619b6672b6"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU"
-      short-id: "cd6065902eea7a02"
-  - name: "🇮🇹 @meliproxyy-1"
+  - name: "🇮🇹 Tel-@ProxyMtAlpha🍘 14"
     type: "vless"
     server: "57.131.19.226"
     port: 443
@@ -1011,8 +979,6 @@ proxies:
     network: "tcp"
     servername: "www.sony.com.au"
     client-fingerprint: "chrome"
-    alpn:
-      - "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
     reality-opts:
       public-key: "9mgAr9QUQzxncMwhYf7Xg8SSJ49444K1rUxq7LPGAFk"
       short-id: "f1e2d15f"
@@ -1051,6 +1017,33 @@ proxies:
     cipher: "aes-256-gcm"
     password: "d1fa2f4b98a38bc8"
     udp: true
+  - name: "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 164.23ms"
+    type: "vless"
+    server: "104.105.69.97"
+    port: 443
+    uuid: "694eb5d5-794c-4389-af65-e5a4b8489dae"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Qr6_9TMQYMCB2hVSYeONcMvxBqIaT0mzPUy8nIivV1g"
+      short-id: "b58b"
+  - name: "🇮🇹 REALITY|IT🇮🇹 | mil.2clash.ru-443 | 237.73ms"
+    type: "vless"
+    server: "mil.2clash.ru"
+    port: 443
+    uuid: "3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mil.2clash.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "vMpyuTZ06hfF-Yu1u8w43TiUidkML1Ges5KGeyr6Ui4"
+      short-id: "324344345654"
   - name: "🇮🇹 Ukraine"
     type: "vless"
     server: "82.118.16.189"
@@ -1090,20 +1083,18 @@ proxies:
     servername: "ngepz.ambercc.filegear-sg.me"
   - name: "🇮🇹 @DeltaKroneckerGithub-1"
     type: "vless"
-    server: "mil.2clash.ru"
-    port: 443
-    uuid: "3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1"
+    server: "204.216.216.23"
+    port: 1114
+    uuid: "6ba2eac6-0ec9-44ca-a42b-a8e23aafb530"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "mil.2clash.ru"
-    client-fingerprint: "firefox"
-    alpn:
-      - "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
+    network: "raw"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "vMpyuTZ06hfF-Yu1u8w43TiUidkML1Ges5KGeyr6Ui4"
-      short-id: "324344345654"
+      public-key: "WfkCF0eEuIoO0MyJsKOddU89QrTzCZ4y2dzCJbH99CQ"
+      short-id: "79a1e14b"
   - name: "🇮🇹 @DeltaKroneckerGithub-2"
     type: "vless"
     server: "172.238.232.239"
@@ -1120,33 +1111,32 @@ proxies:
       short-id: "a0a305ccc8e94aa8"
   - name: "🇮🇹 @DeltaKroneckerGithub-3"
     type: "vless"
-    server: "204.216.216.23"
-    port: 1114
-    uuid: "6ba2eac6-0ec9-44ca-a42b-a8e23aafb530"
+    server: "31.77.154.14"
+    port: 8443
+    uuid: "75079a7f-75b5-418b-8a65-f7b2f438cd4a"
     udp: true
     tls: true
-    network: "raw"
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
+    network: "grpc"
+    servername: "swscan.apple.com"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "WfkCF0eEuIoO0MyJsKOddU89QrTzCZ4y2dzCJbH99CQ"
-      short-id: "79a1e14b"
-  - name: "🇮🇹 @DeltaKroneckerGithub-4"
+      public-key: "3O__mdy-whzI07V-QEyR6GQnag1FNwtHijDxt2_jkDQ"
+    grpc-opts:
+      grpc-service-name: "grpc-tunnel"
+  - name: "🇮🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
     type: "vless"
-    server: "31.77.154.91"
-    port: 443
-    uuid: "3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1"
+    server: "e607890ef11ddc8a.rainzone.ir"
+    port: 8735
+    uuid: "2e050832-ad53-42ba-9fd3-cec1f74cb626"
     udp: true
     tls: true
     network: "tcp"
-    servername: "mil.2clash.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
+    servername: "play-apps-features.googleusercontent.com"
+    client-fingerprint: "edge"
     reality-opts:
-      public-key: "vMpyuTZ06hfF-Yu1u8w43TiUidkML1Ges5KGeyr6Ui4"
-      short-id: "324344345654"
-  - name: "🇮🇹 🇮🇹 | @WhiteDNS | IT1258|675KB/s|DNSOK|GPT⁺-IT"
+      public-key: "NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs"
+      short-id: "1bfe954cb07fb70a"
+  - name: "🇮🇹 🇮🇹 | @WhiteDNS | IT1147|21.8MB/s|DNSOK|GPT⁺-IT"
     type: "vless"
     server: "172.238.232.239"
     port: 32833
@@ -1160,38 +1150,6 @@ proxies:
     reality-opts:
       public-key: "PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20"
       short-id: "a0a305ccc8e94aa8"
-  - name: "🇮🇹 🇮🇹 | @WhiteDNS | IT1260|649KB/s|DNSOK|GPT⁺-IT"
-    type: "vless"
-    server: "204.216.216.23"
-    port: 1114
-    uuid: "6ba2eac6-0ec9-44ca-a42b-a8e23aafb530"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "WfkCF0eEuIoO0MyJsKOddU89QrTzCZ4y2dzCJbH99CQ"
-      short-id: "79a1e14b"
-  - name: "🇮🇹 🇮🇹 | @WhiteDNS | IT1261|620KB/s|DNSOK|GPT⁺-IT"
-    type: "vless"
-    server: "204.216.216.23"
-    port: 10086
-    uuid: "9f0285ee-20ca-4953-bcdb-86a920652923"
-    udp: true
-    tls: false
-    network: "tcp"
-    servername: "/"
-  - name: "🇮🇹 🇮🇹 | @WhiteDNS | IT1262|537KB/s|DNSOK|GPT⁺-IT"
-    type: "vless"
-    server: "204.216.216.23"
-    port: 10086
-    uuid: "9f0285ee-20ca-4953-bcdb-86a920652923"
-    udp: true
-    tls: false
-    network: "tcp"
-    servername: "/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI"
   - name: "🇮🇹 IT 🇮🇹 | @Raydikalx | C8729C"
     type: "vmess"
     server: "57.131.32.191"
@@ -1226,31 +1184,32 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.77.154.91:443"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.238.232.239:32833"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-66.245.207.70:8388"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.19.226:443"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.232.206.156:8735"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.76.113.51:443"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.193.5.112:1080"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053-1"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.77.154.91:443"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
       - "🇮🇹 🔒 VL-TCP-TLS 🇮🇹 IT-185.119.19.105:10829"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.19.226:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.238.232.239:32833"
+      - "🇮🇹 🔒 VL-TCP-NONE 🇮🇹 IT-204.216.216.23:10086"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.76.113.51:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053-1"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.187:443"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9092"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
       - "🇮🇹 @Shh_Proxy-New³"
-      - "🇮🇹 ✈️ @FreeConfigForYou"
       - "🇮🇹 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹"
-      - "🇮🇹 @meliproxyy"
+      - "🇮🇹 ✈️ @FreeConfigForYou"
       - "🇮🇹 @confiig_hub"
-      - "🇮🇹 @V2RAYNG_IP ☀️"
+      - "🇮🇹 @Shh_Proxy-New⁷"
       - "🇮🇹 @Sparrk_VPN"
       - "🇮🇹 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹-1"
       - "🇮🇹 @ICV2RAY"
       - "🇮🇹 @i10VPN5️⃣"
-      - "🇮🇹 @V2ray_Alpha🌉 5"
+      - "🇮🇹 @V2ray_confiig"
+      - "🇮🇹 کانال ما"
       - "🇮🇹 🇮🇹 @GozargahVPN"
       - "🇮🇹 TEL;Father_vpn"
       - "🇮🇹 @ehsawn8"
@@ -1265,29 +1224,25 @@ proxy-groups:
       - "🇮🇹 @ehsawn8-1"
       - "🇮🇹 @V2rayng3"
       - "🇮🇹 configprxy"
-      - "🇮🇹 @v2ray313 کانالمون ❤️"
-      - "🇮🇹 @vmesskhodam"
       - "🇮🇹 法国"
       - "🇮🇹 @confiig_hub-1"
       - "🇮🇹 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn"
-      - "🇮🇹 Free x130 @Outline_Vpn"
+      - "🇮🇹 🏀54@oneclickvpnkeys"
       - "🇮🇹 @V2RAYNG_IP"
-      - "🇮🇹 ⛽39@oneclickvpnkeys"
-      - "🇮🇹 @meliproxyy-1"
+      - "🇮🇹 Tel-@ProxyMtAlpha🍘 14"
       - "🇮🇹 TEL;Father_vpn-6"
       - "🇮🇹 Telegram @mtmvpn  3"
       - "🇮🇹 >>@configV2rayNG::IT"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 164.23ms"
+      - "🇮🇹 REALITY|IT🇮🇹 | mil.2clash.ru-443 | 237.73ms"
       - "🇮🇹 Ukraine"
       - "🇮🇹 Ukraine-1"
       - "🇮🇹 @DeltaKroneckerGithub"
       - "🇮🇹 @DeltaKroneckerGithub-1"
       - "🇮🇹 @DeltaKroneckerGithub-2"
       - "🇮🇹 @DeltaKroneckerGithub-3"
-      - "🇮🇹 @DeltaKroneckerGithub-4"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1258|675KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1260|649KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1261|620KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1262|537KB/s|DNSOK|GPT⁺-IT"
+      - "🇮🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1147|21.8MB/s|DNSOK|GPT⁺-IT"
       - "🇮🇹 IT 🇮🇹 | @Raydikalx | C8729C"
       - "🇮🇹 🔒 TR-WS-NONE 🇮🇹 IT-151.101.243.172:80"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -1300,31 +1255,32 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.77.154.91:443"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.238.232.239:32833"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-66.245.207.70:8388"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.19.226:443"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.232.206.156:8735"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.76.113.51:443"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.193.5.112:1080"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053-1"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.77.154.91:443"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
       - "🇮🇹 🔒 VL-TCP-TLS 🇮🇹 IT-185.119.19.105:10829"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.19.226:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.238.232.239:32833"
+      - "🇮🇹 🔒 VL-TCP-NONE 🇮🇹 IT-204.216.216.23:10086"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.76.113.51:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053-1"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.187:443"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9092"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
       - "🇮🇹 @Shh_Proxy-New³"
-      - "🇮🇹 ✈️ @FreeConfigForYou"
       - "🇮🇹 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹"
-      - "🇮🇹 @meliproxyy"
+      - "🇮🇹 ✈️ @FreeConfigForYou"
       - "🇮🇹 @confiig_hub"
-      - "🇮🇹 @V2RAYNG_IP ☀️"
+      - "🇮🇹 @Shh_Proxy-New⁷"
       - "🇮🇹 @Sparrk_VPN"
       - "🇮🇹 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹-1"
       - "🇮🇹 @ICV2RAY"
       - "🇮🇹 @i10VPN5️⃣"
-      - "🇮🇹 @V2ray_Alpha🌉 5"
+      - "🇮🇹 @V2ray_confiig"
+      - "🇮🇹 کانال ما"
       - "🇮🇹 🇮🇹 @GozargahVPN"
       - "🇮🇹 TEL;Father_vpn"
       - "🇮🇹 @ehsawn8"
@@ -1339,29 +1295,25 @@ proxy-groups:
       - "🇮🇹 @ehsawn8-1"
       - "🇮🇹 @V2rayng3"
       - "🇮🇹 configprxy"
-      - "🇮🇹 @v2ray313 کانالمون ❤️"
-      - "🇮🇹 @vmesskhodam"
       - "🇮🇹 法国"
       - "🇮🇹 @confiig_hub-1"
       - "🇮🇹 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn"
-      - "🇮🇹 Free x130 @Outline_Vpn"
+      - "🇮🇹 🏀54@oneclickvpnkeys"
       - "🇮🇹 @V2RAYNG_IP"
-      - "🇮🇹 ⛽39@oneclickvpnkeys"
-      - "🇮🇹 @meliproxyy-1"
+      - "🇮🇹 Tel-@ProxyMtAlpha🍘 14"
       - "🇮🇹 TEL;Father_vpn-6"
       - "🇮🇹 Telegram @mtmvpn  3"
       - "🇮🇹 >>@configV2rayNG::IT"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 164.23ms"
+      - "🇮🇹 REALITY|IT🇮🇹 | mil.2clash.ru-443 | 237.73ms"
       - "🇮🇹 Ukraine"
       - "🇮🇹 Ukraine-1"
       - "🇮🇹 @DeltaKroneckerGithub"
       - "🇮🇹 @DeltaKroneckerGithub-1"
       - "🇮🇹 @DeltaKroneckerGithub-2"
       - "🇮🇹 @DeltaKroneckerGithub-3"
-      - "🇮🇹 @DeltaKroneckerGithub-4"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1258|675KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1260|649KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1261|620KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1262|537KB/s|DNSOK|GPT⁺-IT"
+      - "🇮🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1147|21.8MB/s|DNSOK|GPT⁺-IT"
       - "🇮🇹 IT 🇮🇹 | @Raydikalx | C8729C"
       - "🇮🇹 🔒 TR-WS-NONE 🇮🇹 IT-151.101.243.172:80"
   - name: "توزیع بار چرخشی ⚖️"
@@ -1373,31 +1325,32 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.77.154.91:443"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.238.232.239:32833"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-66.245.207.70:8388"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.19.226:443"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9070"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.232.206.156:8735"
-      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.76.113.51:443"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.193.5.112:1080"
-      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053-1"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.77.154.91:443"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-176.126.83.158:990"
       - "🇮🇹 🔒 VL-TCP-TLS 🇮🇹 IT-185.119.19.105:10829"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.19.226:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-172.238.232.239:32833"
+      - "🇮🇹 🔒 VL-TCP-NONE 🇮🇹 IT-204.216.216.23:10086"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9039"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-31.76.113.51:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-57.131.38.163:2053-1"
       - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9053"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-82.118.16.187:443"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-91.201.65.122:9092"
+      - "🇮🇹 🔒 SS-TCP-NA 🇮🇹 IT-57.131.48.45:8388"
       - "🇮🇹 @Shh_Proxy-New³"
-      - "🇮🇹 ✈️ @FreeConfigForYou"
       - "🇮🇹 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹"
-      - "🇮🇹 @meliproxyy"
+      - "🇮🇹 ✈️ @FreeConfigForYou"
       - "🇮🇹 @confiig_hub"
-      - "🇮🇹 @V2RAYNG_IP ☀️"
+      - "🇮🇹 @Shh_Proxy-New⁷"
       - "🇮🇹 @Sparrk_VPN"
       - "🇮🇹 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹-1"
       - "🇮🇹 @ICV2RAY"
       - "🇮🇹 @i10VPN5️⃣"
-      - "🇮🇹 @V2ray_Alpha🌉 5"
+      - "🇮🇹 @V2ray_confiig"
+      - "🇮🇹 کانال ما"
       - "🇮🇹 🇮🇹 @GozargahVPN"
       - "🇮🇹 TEL;Father_vpn"
       - "🇮🇹 @ehsawn8"
@@ -1412,29 +1365,25 @@ proxy-groups:
       - "🇮🇹 @ehsawn8-1"
       - "🇮🇹 @V2rayng3"
       - "🇮🇹 configprxy"
-      - "🇮🇹 @v2ray313 کانالمون ❤️"
-      - "🇮🇹 @vmesskhodam"
       - "🇮🇹 法国"
       - "🇮🇹 @confiig_hub-1"
       - "🇮🇹 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn"
-      - "🇮🇹 Free x130 @Outline_Vpn"
+      - "🇮🇹 🏀54@oneclickvpnkeys"
       - "🇮🇹 @V2RAYNG_IP"
-      - "🇮🇹 ⛽39@oneclickvpnkeys"
-      - "🇮🇹 @meliproxyy-1"
+      - "🇮🇹 Tel-@ProxyMtAlpha🍘 14"
       - "🇮🇹 TEL;Father_vpn-6"
       - "🇮🇹 Telegram @mtmvpn  3"
       - "🇮🇹 >>@configV2rayNG::IT"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 164.23ms"
+      - "🇮🇹 REALITY|IT🇮🇹 | mil.2clash.ru-443 | 237.73ms"
       - "🇮🇹 Ukraine"
       - "🇮🇹 Ukraine-1"
       - "🇮🇹 @DeltaKroneckerGithub"
       - "🇮🇹 @DeltaKroneckerGithub-1"
       - "🇮🇹 @DeltaKroneckerGithub-2"
       - "🇮🇹 @DeltaKroneckerGithub-3"
-      - "🇮🇹 @DeltaKroneckerGithub-4"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1258|675KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1260|649KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1261|620KB/s|DNSOK|GPT⁺-IT"
-      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1262|537KB/s|DNSOK|GPT⁺-IT"
+      - "🇮🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "🇮🇹 🇮🇹 | @WhiteDNS | IT1147|21.8MB/s|DNSOK|GPT⁺-IT"
       - "🇮🇹 IT 🇮🇹 | @Raydikalx | C8729C"
       - "🇮🇹 🔒 TR-WS-NONE 🇮🇹 IT-151.101.243.172:80"
   - name: "المنت 💬"
