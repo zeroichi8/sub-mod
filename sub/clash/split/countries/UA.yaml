@@ -499,26 +499,12 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
-    type: "ss"
-    server: "130.0.233.100"
-    port: 33610
-    cipher: "chacha20-ietf-poly1305"
-    password: "Bqyimiv3YNgu6dApctpw7t"
-    udp: true
   - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-185.164.175.81:19999"
     type: "ss"
     server: "185.164.175.81"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-45.134.173.247:443"
-    type: "ss"
-    server: "45.134.173.247"
-    port: 443
-    cipher: "aes-256-gcm"
-    password: "MzRlYzA0ZGY0Njc2ZjQ2YTRiMTg2YTkzNjM4OGI1"
     udp: true
   - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
     type: "ss"
@@ -527,6 +513,27 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
     udp: true
+  - name: "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+    type: "ss"
+    server: "130.0.233.100"
+    port: 33610
+    cipher: "chacha20-ietf-poly1305"
+    password: "Bqyimiv3YNgu6dApctpw7t"
+    udp: true
+  - name: "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-87.76.154.102:6070"
+    type: "vless"
+    server: "87.76.154.102"
+    port: 6070
+    uuid: "6bd95cbc-124f-413b-8f8f-52acd34902c1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "amp-api-edge.apps.apple.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "n0s2CC1yzpAxgbezazYP9fzXpvaZiwwDybE-BiKJEAE"
+      short-id: "44ff6b214b39f2b1"
   - name: "🇺🇦 کانال تلگرام : Free_VPN_CH@"
     type: "vless"
     server: "46.202.30.8"
@@ -540,7 +547,7 @@ proxies:
       path: "/sg-lnd"
       headers:
         Host: "tn1rr.qzz.io"
-  - name: "🏳️ vpnsal"
+  - name: "🇺🇦 vpnsal"
     type: "vless"
     server: "ukraine-sgood.wopd.butnorwa.butter.silicore.ir"
     port: 9000
@@ -553,7 +560,45 @@ proxies:
     reality-opts:
       public-key: "Du5pk4KuMNA1sRcSpmuoLuC0HmxDBmFljFNfUzqxKiM"
       short-id: "cd0a1986719e44c8"
-  - name: "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 187.56ms"
+  - name: "🇺🇦 @DeltaKroneckerGithub"
+    type: "trojan"
+    server: "130.0.236.88"
+    port: 443
+    password: "d2adff89-5143-4d67-921f-3478464de5bb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ua.freeguard.org"
+  - name: "🇺🇦 UA 🇺🇦 | @Raydikalx | 6582DE"
+    type: "ss"
+    server: "163.171.137.76"
+    port: 47393
+    cipher: "chacha20-ietf-poly1305"
+    password: "eafad96826c79ddd"
+    udp: true
+  - name: "🇺🇦 UA 🇺🇦 | @Raydikalx | 4D9BA5"
+    type: "vmess"
+    server: "2.59.223.72"
+    port: 921
+    uuid: "2bedbb99-acb2-4cfb-b381-b3cea5045cff"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇺🇦 UA🇺🇦+|+kyiv02.npvnot.com-443+|+224.73ms"
+    type: "ss"
+    server: "kyiv02.npvnot.com"
+    port: 443
+    cipher: "aes-256-gcm"
+    password: "MzRlYzA0ZGY0Njc2ZjQ2YTRiMTg2YTkzNjM4OGI1"
+    udp: true
+  - name: "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+177.64ms"
+    type: "ss"
+    server: "130.0.233.100"
+    port: 33610
+    cipher: "chacha20-ietf-poly1305"
+    password: "aRNFYKtLOnaPE5FCHI9ylr"
+    udp: true
+  - name: "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
     type: "vless"
     server: "130.0.233.100"
     port: 8443
@@ -566,44 +611,6 @@ proxies:
     reality-opts:
       public-key: "oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno"
       short-id: "aabbccdd"
-  - name: "🇺🇦 @DeltaKroneckerGithub"
-    type: "trojan"
-    server: "130.0.236.88"
-    port: 443
-    password: "d2adff89-5143-4d67-921f-3478464de5bb"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ua.freeguard.org"
-  - name: "🇺🇦 UA 🇺🇦 | @Raydikalx | 4D9BA5"
-    type: "vmess"
-    server: "2.59.223.72"
-    port: 921
-    uuid: "2bedbb99-acb2-4cfb-b381-b3cea5045cff"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-91.218.122.10:8443"
-    type: "vless"
-    server: "91.218.122.10"
-    port: 8443
-    uuid: "c10999b4-7f93-5a50-3908-1467b1e52ae2"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "VxlbLM9ypmP8KyH65M6nPgArl19XOyREm9oNUlCN2yA"
-    grpc-opts:
-      grpc-service-name: "TunService"
-  - name: "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+183.47ms"
-    type: "ss"
-    server: "130.0.233.100"
-    port: 33610
-    cipher: "chacha20-ietf-poly1305"
-    password: "aRNFYKtLOnaPE5FCHI9ylr"
-    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -618,17 +625,18 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-185.164.175.81:19999"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-45.134.173.247:443"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-87.76.154.102:6070"
       - "🇺🇦 کانال تلگرام : Free_VPN_CH@"
-      - "🏳️ vpnsal"
-      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 187.56ms"
+      - "🇺🇦 vpnsal"
       - "🇺🇦 @DeltaKroneckerGithub"
+      - "🇺🇦 UA 🇺🇦 | @Raydikalx | 6582DE"
       - "🇺🇦 UA 🇺🇦 | @Raydikalx | 4D9BA5"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-91.218.122.10:8443"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+183.47ms"
+      - "🇺🇦 UA🇺🇦+|+kyiv02.npvnot.com-443+|+224.73ms"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+177.64ms"
+      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -639,17 +647,18 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-185.164.175.81:19999"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-45.134.173.247:443"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-87.76.154.102:6070"
       - "🇺🇦 کانال تلگرام : Free_VPN_CH@"
-      - "🏳️ vpnsal"
-      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 187.56ms"
+      - "🇺🇦 vpnsal"
       - "🇺🇦 @DeltaKroneckerGithub"
+      - "🇺🇦 UA 🇺🇦 | @Raydikalx | 6582DE"
       - "🇺🇦 UA 🇺🇦 | @Raydikalx | 4D9BA5"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-91.218.122.10:8443"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+183.47ms"
+      - "🇺🇦 UA🇺🇦+|+kyiv02.npvnot.com-443+|+224.73ms"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+177.64ms"
+      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -659,17 +668,18 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-185.164.175.81:19999"
-      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-45.134.173.247:443"
       - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-194.54.80.37:1080"
+      - "🇺🇦 🔒 SS-TCP-NA 🇺🇦 UA-130.0.233.100:33610"
+      - "🇺🇦 🔒 VL-TCP-RLT 🇺🇦 UA-87.76.154.102:6070"
       - "🇺🇦 کانال تلگرام : Free_VPN_CH@"
-      - "🏳️ vpnsal"
-      - "🇺🇦 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 187.56ms"
+      - "🇺🇦 vpnsal"
       - "🇺🇦 @DeltaKroneckerGithub"
+      - "🇺🇦 UA 🇺🇦 | @Raydikalx | 6582DE"
       - "🇺🇦 UA 🇺🇦 | @Raydikalx | 4D9BA5"
-      - "🇺🇦 🔒 VL-GRPC-RLT 🇺🇦 UA-91.218.122.10:8443"
-      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+183.47ms"
+      - "🇺🇦 UA🇺🇦+|+kyiv02.npvnot.com-443+|+224.73ms"
+      - "🇺🇦 UA🇺🇦+|+130.0.233.100-33610+|+177.64ms"
+      - "🇺🇦 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

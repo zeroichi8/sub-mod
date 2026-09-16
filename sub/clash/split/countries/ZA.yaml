@@ -499,12 +499,12 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-4.168.198.18:443"
+  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
     type: "ss"
-    server: "4.168.198.18"
-    port: 443
+    server: "154.205.150.157"
+    port: 990
     cipher: "chacha20-ietf-poly1305"
-    password: "FYGlWYggB4Akk6HP"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
   - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
     type: "ss"
@@ -527,20 +527,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "Xsy8Ox4yOV3xLlpxtjzs3X"
     udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
-    type: "ss"
-    server: "102.37.156.224"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "aduB9HGxQHjA2SBMRjkHX6"
-    udp: true
-  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
-    type: "ss"
-    server: "154.205.150.157"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
   - name: "🇿🇦 🔒 VL-TCP-RLT 🇿🇦 ZA-31.43.191.39:443"
     type: "vless"
     server: "31.43.191.39"
@@ -561,6 +547,13 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
+  - name: "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
+    type: "ss"
+    server: "102.37.156.224"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "aduB9HGxQHjA2SBMRjkHX6"
+    udp: true
   - name: "🇿🇦 @leviconfigs🪐-15"
     type: "ss"
     server: "20.164.205.35"
@@ -568,12 +561,26 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "0JtCfjPIHnLCzDia"
     udp: true
+  - name: "🇿🇦 @FarazV2ray"
+    type: "ss"
+    server: "20.87.3.84"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "w0Yff67jxd3zXY9g"
+    udp: true
   - name: "🇿🇦 @Selinc"
     type: "ss"
     server: "20.87.2.40"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "yQ3varyJ3ZhSYTA4"
+    udp: true
+  - name: "🇿🇦 @FarazV2ray-1"
+    type: "ss"
+    server: "4.168.198.18"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "FYGlWYggB4Akk6HP"
     udp: true
   - name: "🇿🇦 Telegram @mtmvpn"
     type: "ss"
@@ -681,18 +688,6 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇿🇦 AZ 🇦🇿 | @Raydikalx | 4D5DE2"
-    type: "vless"
-    server: "31.43.191.131"
-    port: 443
-    uuid: "d407defe-cd4f-4d32-a3b1-47c2c813c50d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tehno.store"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "SHDdd617KLHHb0qlQFOHepeHFl_Ch2i-K7o891uyo2M"
   - name: "🇿🇦 ZA 🇿🇦 | @Raydikalx | 2E0B6F"
     type: "vmess"
     server: "160.115.193.99"
@@ -701,15 +696,27 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.82:443"
+  - name: "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.176.30:8880"
     type: "vless"
-    server: "160.123.255.82"
+    server: "102.177.176.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime28.workers.dev"
+  - name: "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.18:443"
+    type: "vless"
+    server: "160.123.255.18"
     port: 443
     uuid: "a13df940-020c-465f-bc89-ee5279b5cd6a"
     udp: true
     tls: true
     network: "ws"
-    servername: "kk626.ylks.link"
+    servername: "hkd.ylks.link"
     ws-opts:
       path: "/?proxyip"
 proxy-groups:
@@ -726,16 +733,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-4.168.198.18:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-139.84.247.164:8388"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 VL-TCP-RLT 🇿🇦 ZA-31.43.191.39:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
       - "🇿🇦 @leviconfigs🪐-15"
+      - "🇿🇦 @FarazV2ray"
       - "🇿🇦 @Selinc"
+      - "🇿🇦 @FarazV2ray-1"
       - "🇿🇦 Telegram @mtmvpn"
       - "🇿🇦 @confiig_hub"
       - "🇿🇦 کانال تلگرام ما ange1Vpn@"
@@ -747,9 +755,9 @@ proxy-groups:
       - "🇿🇦 @DeltaKroneckerGithub"
       - "🇿🇦 NL 🇳🇱 | @Raydikalx | 24804A"
       - "🇿🇦 NL 🇳🇱 | @Raydikalx | 07218F"
-      - "🇿🇦 AZ 🇦🇿 | @Raydikalx | 4D5DE2"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 2E0B6F"
-      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.82:443"
+      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.176.30:8880"
+      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.18:443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -760,16 +768,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-4.168.198.18:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-139.84.247.164:8388"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 VL-TCP-RLT 🇿🇦 ZA-31.43.191.39:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
       - "🇿🇦 @leviconfigs🪐-15"
+      - "🇿🇦 @FarazV2ray"
       - "🇿🇦 @Selinc"
+      - "🇿🇦 @FarazV2ray-1"
       - "🇿🇦 Telegram @mtmvpn"
       - "🇿🇦 @confiig_hub"
       - "🇿🇦 کانال تلگرام ما ange1Vpn@"
@@ -781,9 +790,9 @@ proxy-groups:
       - "🇿🇦 @DeltaKroneckerGithub"
       - "🇿🇦 NL 🇳🇱 | @Raydikalx | 24804A"
       - "🇿🇦 NL 🇳🇱 | @Raydikalx | 07218F"
-      - "🇿🇦 AZ 🇦🇿 | @Raydikalx | 4D5DE2"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 2E0B6F"
-      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.82:443"
+      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.176.30:8880"
+      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.18:443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -793,16 +802,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-4.168.198.18:443"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-20.164.211.25:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-139.84.247.164:8388"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.133.165.160:16233"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
-      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-154.205.150.157:990"
       - "🇿🇦 🔒 VL-TCP-RLT 🇿🇦 ZA-31.43.191.39:443"
       - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-156.38.168.58:990"
+      - "🇿🇦 🔒 SS-TCP-NA 🇿🇦 ZA-102.37.156.224:443"
       - "🇿🇦 @leviconfigs🪐-15"
+      - "🇿🇦 @FarazV2ray"
       - "🇿🇦 @Selinc"
+      - "🇿🇦 @FarazV2ray-1"
       - "🇿🇦 Telegram @mtmvpn"
       - "🇿🇦 @confiig_hub"
       - "🇿🇦 کانال تلگرام ما ange1Vpn@"
@@ -814,9 +824,9 @@ proxy-groups:
       - "🇿🇦 @DeltaKroneckerGithub"
       - "🇿🇦 NL 🇳🇱 | @Raydikalx | 24804A"
       - "🇿🇦 NL 🇳🇱 | @Raydikalx | 07218F"
-      - "🇿🇦 AZ 🇦🇿 | @Raydikalx | 4D5DE2"
       - "🇿🇦 ZA 🇿🇦 | @Raydikalx | 2E0B6F"
-      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.82:443"
+      - "🇿🇦 🔒 VL-WS-NONE 🇿🇦 ZA-102.177.176.30:8880"
+      - "🇿🇦 🔒 VL-WS-TLS 🇿🇦 ZA-160.123.255.18:443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
