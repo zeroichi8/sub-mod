@@ -499,27 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "Free x330 @Outline_Vpn"
+    type: "vless"
+    server: "web.turbooserver.net.tr"
+    port: 8443
+    uuid: "60a2998c-cd85-562e-a3fd-396e4925dd3a"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "Server 140"
     type: "vless"
     server: "164.90.191.251"
     port: 440
     uuid: "59906cb2-a61b-4cf3-b77b-5762ef61d2b0"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "Server 91"
-    type: "vless"
-    server: "164.92.231.255"
-    port: 440
-    uuid: "59906cb2-a61b-4cf3-b77b-5762ef61d2b0"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🐒17@oneclickvpnkeys"
-    type: "vless"
-    server: "web.turbooserver.net.tr"
-    port: 8443
-    uuid: "60a2998c-cd85-562e-a3fd-396e4925dd3a"
     udp: true
     tls: false
     network: "tcp"
@@ -553,16 +545,6 @@ proxies:
       short-id: "d3b394558cfe0266"
     grpc-opts:
       grpc-service-name: "api.v1.StreamService"
-  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-    type: "vless"
-    server: "b2n.ir"
-    port: 2087
-    uuid: "c75775e9-cf53-47b6-9d1d-29c3a46633fd"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ratatouille.rahmatokaduie.ir"
-    client-fingerprint: "chrome"
   - name: "𝗝𝗼𝗶𝗻➠@PlanB_net"
     type: "vless"
     server: "172.64.150.28"
@@ -590,31 +572,7 @@ proxies:
       short-id: "1469af2040b7c323"
     grpc-opts:
       grpc-service-name: "media.v1.ObjectService"
-  - name: "🔒13@oneclickvpnkeys"
-    type: "vless"
-    server: "31.76.76.28"
-    port: 443
-    uuid: "de5906f3-df38-4463-aa9d-2b01320cc6ea"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
-    type: "vless"
-    server: "rs2.univesalsrv.com"
-    port: 443
-    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
-    udp: true
-    tls: true
-    network: "grpc"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE"
-      short-id: "1469af2040b7c323"
-    grpc-opts:
-      grpc-service-name: "media.v1.ObjectService"
-  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy-2"
+  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy"
     type: "vless"
     server: "api.noneok.com"
     port: 443
@@ -666,6 +624,19 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
+    type: "trojan"
+    server: "8.47.69.0"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -680,21 +651,18 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "Free x330 @Outline_Vpn"
       - "Server 140"
-      - "Server 91"
-      - "🐒17@oneclickvpnkeys"
       - "@V2rayng_Fast 🇧🇷"
       - "Server 50"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "@FarazV2ray"
-      - "🔒13@oneclickvpnkeys"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-2"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@v2raybaaz ²"
       - "v2ray_dalghak"
       - "@vpnbaz 🐍"
       - "🇬🇧 @proxy_kafee"
+      - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -705,21 +673,18 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "Free x330 @Outline_Vpn"
       - "Server 140"
-      - "Server 91"
-      - "🐒17@oneclickvpnkeys"
       - "@V2rayng_Fast 🇧🇷"
       - "Server 50"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "@FarazV2ray"
-      - "🔒13@oneclickvpnkeys"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-2"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@v2raybaaz ²"
       - "v2ray_dalghak"
       - "@vpnbaz 🐍"
       - "🇬🇧 @proxy_kafee"
+      - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -729,21 +694,18 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "Free x330 @Outline_Vpn"
       - "Server 140"
-      - "Server 91"
-      - "🐒17@oneclickvpnkeys"
       - "@V2rayng_Fast 🇧🇷"
       - "Server 50"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "@FarazV2ray"
-      - "🔒13@oneclickvpnkeys"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-2"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@v2raybaaz ²"
       - "v2ray_dalghak"
       - "@vpnbaz 🐍"
       - "🇬🇧 @proxy_kafee"
+      - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
