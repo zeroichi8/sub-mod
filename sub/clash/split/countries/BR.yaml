@@ -499,20 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-216.128.168.190:8388"
-    type: "ss"
-    server: "216.128.168.190"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "owVdNnQcdPgthSyX"
+  - name: "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.204:443"
+    type: "vless"
+    server: "200.169.178.204"
+    port: 443
+    uuid: "13c245fd-ac78-0007-9378-97968a70dac4"
     udp: true
-  - name: "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
-    type: "ss"
-    server: "185.192.124.188"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "f8f7aCzcPKbsF8p3"
-    udp: true
+    tls: true
+    network: "tcp"
+    servername: "strm-rad-23.strm.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "k9BuzZPnzofDcPTaa7ROHNIc9ww2jy3tLAJ04GuKvAQ"
+      short-id: "cd0b563c7e0ea754"
   - name: "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
     type: "ss"
     server: "38.54.57.90"
@@ -520,20 +520,64 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-  - name: "🇧🇷 🇷🇺 Russia 1 | YouTube без рекламы"
+  - name: "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.33:443"
     type: "vless"
-    server: "ru.axolab.org"
+    server: "200.169.178.33"
     port: 443
     uuid: "13c245fd-ac78-0007-9378-97968a70dac4"
     udp: true
     tls: true
     network: "tcp"
     servername: "strm-rad-23.strm.yandex.net"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "k9BuzZPnzofDcPTaa7ROHNIc9ww2jy3tLAJ04GuKvAQ"
       short-id: "cd0b563c7e0ea754"
+  - name: "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.42:443"
+    type: "vless"
+    server: "200.169.178.42"
+    port: 443
+    uuid: "13c245fd-ac78-0007-9378-97968a70dac4"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "strm-rad-23.strm.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "k9BuzZPnzofDcPTaa7ROHNIc9ww2jy3tLAJ04GuKvAQ"
+      short-id: "cd0b563c7e0ea754"
+  - name: "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.208:443"
+    type: "vless"
+    server: "200.169.178.208"
+    port: 443
+    uuid: "13c245fd-ac78-0007-9378-97968a70dac4"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "strm-rad-23.strm.yandex.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "k9BuzZPnzofDcPTaa7ROHNIc9ww2jy3tLAJ04GuKvAQ"
+      short-id: "cd0b563c7e0ea754"
+  - name: "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+    type: "ss"
+    server: "185.192.124.188"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "f8f7aCzcPKbsF8p3"
+    udp: true
+  - name: "🇧🇷 咕咕"
+    type: "hysteria2"
+    server: "137.131.167.179"
+    port: 443
+    password: "CyG0RFxMjzs41uQD4OLuHQ=="
+    sni: "rmgyvpn.rest"
+    skip-cert-verify: true
+    obfs: "salamander"
+    obfs-password: "CyG0RFxMjzs41uQD4OLuHQ=="
   - name: "🇧🇷 Telegram:@v2rayng3"
     type: "vless"
     server: "23.251.56.78"
@@ -578,10 +622,13 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-216.128.168.190:8388"
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.204:443"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
-      - "🇧🇷 🇷🇺 Russia 1 | YouTube без рекламы"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.33:443"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.42:443"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.208:443"
+      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 咕咕"
       - "🇧🇷 Telegram:@v2rayng3"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
@@ -595,10 +642,13 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-216.128.168.190:8388"
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.204:443"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
-      - "🇧🇷 🇷🇺 Russia 1 | YouTube без рекламы"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.33:443"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.42:443"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.208:443"
+      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 咕咕"
       - "🇧🇷 Telegram:@v2rayng3"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
@@ -611,10 +661,13 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-216.128.168.190:8388"
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.204:443"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
-      - "🇧🇷 🇷🇺 Russia 1 | YouTube без рекламы"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.33:443"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.42:443"
+      - "🇧🇷 🔒 VL-TCP-RLT 🇧🇷 BR-200.169.178.208:443"
+      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 咕咕"
       - "🇧🇷 Telegram:@v2rayng3"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
