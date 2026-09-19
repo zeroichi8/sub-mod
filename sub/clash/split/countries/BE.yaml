@@ -511,6 +511,13 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
+  - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+    type: "ss"
+    server: "185.210.217.94"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
   - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
     type: "vless"
     server: "109.69.218.164"
@@ -523,13 +530,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
-  - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-    type: "ss"
-    server: "185.210.217.94"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
   - name: "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
     type: "vless"
     server: "109.69.218.217"
@@ -589,6 +589,31 @@ proxies:
     alterId: 0
     cipher: "aes-128-gcm"
     udp: true
+  - name: "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 29.52ms"
+    type: "vless"
+    server: "151.101.9.80"
+    port: 80
+    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=1049"
+      headers:
+        Host: "adspeedx23.global.ssl.fastly.net"
+  - name: "🇧🇪 BE 🇧🇪 | @Raydikalx | 020295"
+    type: "vless"
+    server: "207.175.190.56"
+    port: 443
+    uuid: "51e493d4-b275-45e0-a714-e014f40b3c32"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "nTLhc6e5HMgO-hpD8RUMp0cd2t6p2_RqHLHM0P39_xA"
+      short-id: "95ae4a39d3933191"
   - name: "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
     type: "vmess"
     server: "192.71.249.186"
@@ -605,18 +630,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-    type: "vless"
-    server: "151.101.9.80"
-    port: 80
-    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/?ed=1049"
-      headers:
-        Host: "adspeedx23.global.ssl.fastly.net"
   - name: "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
     type: "vless"
     server: "188.95.12.226"
@@ -640,16 +653,17 @@ proxy-groups:
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
       - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.168:443"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 @NOFiLTERING2🇩🇪"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
+      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 29.52ms"
+      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 020295"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -662,16 +676,17 @@ proxy-groups:
     max-failed-times: 2
     proxies:
       - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.168:443"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 @NOFiLTERING2🇩🇪"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
+      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 29.52ms"
+      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 020295"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -683,16 +698,17 @@ proxy-groups:
     lazy: false
     proxies:
       - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.168:443"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 @NOFiLTERING2🇩🇪"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
+      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 29.52ms"
+      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 020295"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
   - name: "المنت 💬"
     type: "select"

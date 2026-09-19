@@ -499,13 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇹🇭 泰国"
-    type: "ss"
-    server: "103.169.67.34"
-    port: 65443
-    cipher: "aes-256-cfb"
-    password: "7eadc6dbe2ae"
+  - name: "🇹🇭 🔒 VL-TCP-RLT 🇹🇭 TH-103.40.119.56:11000"
+    type: "vless"
+    server: "103.40.119.56"
+    port: 11000
+    uuid: "0e46345c-f33b-4f9b-b8ec-90e7c986af7e"
     udp: true
+    tls: true
+    network: "tcp"
+    servername: "s0.awsstatic.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "sFRyah8EOSGcab8TfIdkq53c5HBSwAVfYQCyvZ0_BG4"
   - name: "🇹🇭 🇹🇭TH_1177_@Surfboardv2ray"
     type: "vless"
     server: "103.86.49.57"
@@ -563,7 +569,32 @@ proxies:
     ws-opts:
       path: "/ws"
       headers:
+        Host: "aIs.SpEeDtEsT.nEt"
+  - name: "🇹🇭 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "v2ray.simspeedup.com"
+    port: 80
+    uuid: "3c52e091-6714-4915-949f-2149fe69951b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/ws"
+      headers:
         Host: "v2ray.simspeedup.com"
+  - name: "🇹🇭 TH 🇹🇭 | @Raydikalx | F26294"
+    type: "vless"
+    server: "34.15.162.1"
+    port: 443
+    uuid: "2b1d0c2a-9c80-4b72-892e-93d0500b9210"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw"
+      short-id: "ca672c53fbbac555"
   - name: "🇹🇭 TH 🇹🇭 | @Raydikalx | 86FF76"
     type: "vmess"
     server: "119.46.51.45"
@@ -572,6 +603,18 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇹🇭 🔒 VL-WS-NONE 🇹🇭 TH-103.86.49.57:80"
+    type: "vless"
+    server: "103.86.49.57"
+    port: 80
+    uuid: "3c52e091-6714-4915-949f-2149fe69951b"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "v2ray.simspeedup.com"
   - name: "🇹🇭 🔒 VL-XHTTP-NONE 🇹🇭 TH-45.144.165.11:80"
     type: "vless"
     server: "45.144.165.11"
@@ -594,13 +637,16 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇹🇭 泰国"
+      - "🇹🇭 🔒 VL-TCP-RLT 🇹🇭 TH-103.40.119.56:11000"
       - "🇹🇭 🇹🇭TH_1177_@Surfboardv2ray"
       - "🇹🇭 @SylphNet | 2026-06-27 03:52"
       - "🇹🇭 🇹🇭 Join+Telegram:@Farah_VPN 🇹🇭"
       - "🇹🇭 🇹🇭TH_94_@Surfboardv2ray"
       - "🇹🇭 @DeltaKroneckerGithub"
+      - "🇹🇭 @DeltaKroneckerGithub-1"
+      - "🇹🇭 TH 🇹🇭 | @Raydikalx | F26294"
       - "🇹🇭 TH 🇹🇭 | @Raydikalx | 86FF76"
+      - "🇹🇭 🔒 VL-WS-NONE 🇹🇭 TH-103.86.49.57:80"
       - "🇹🇭 🔒 VL-XHTTP-NONE 🇹🇭 TH-45.144.165.11:80"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -612,13 +658,16 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇹🇭 泰国"
+      - "🇹🇭 🔒 VL-TCP-RLT 🇹🇭 TH-103.40.119.56:11000"
       - "🇹🇭 🇹🇭TH_1177_@Surfboardv2ray"
       - "🇹🇭 @SylphNet | 2026-06-27 03:52"
       - "🇹🇭 🇹🇭 Join+Telegram:@Farah_VPN 🇹🇭"
       - "🇹🇭 🇹🇭TH_94_@Surfboardv2ray"
       - "🇹🇭 @DeltaKroneckerGithub"
+      - "🇹🇭 @DeltaKroneckerGithub-1"
+      - "🇹🇭 TH 🇹🇭 | @Raydikalx | F26294"
       - "🇹🇭 TH 🇹🇭 | @Raydikalx | 86FF76"
+      - "🇹🇭 🔒 VL-WS-NONE 🇹🇭 TH-103.86.49.57:80"
       - "🇹🇭 🔒 VL-XHTTP-NONE 🇹🇭 TH-45.144.165.11:80"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -629,13 +678,16 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇹🇭 泰国"
+      - "🇹🇭 🔒 VL-TCP-RLT 🇹🇭 TH-103.40.119.56:11000"
       - "🇹🇭 🇹🇭TH_1177_@Surfboardv2ray"
       - "🇹🇭 @SylphNet | 2026-06-27 03:52"
       - "🇹🇭 🇹🇭 Join+Telegram:@Farah_VPN 🇹🇭"
       - "🇹🇭 🇹🇭TH_94_@Surfboardv2ray"
       - "🇹🇭 @DeltaKroneckerGithub"
+      - "🇹🇭 @DeltaKroneckerGithub-1"
+      - "🇹🇭 TH 🇹🇭 | @Raydikalx | F26294"
       - "🇹🇭 TH 🇹🇭 | @Raydikalx | 86FF76"
+      - "🇹🇭 🔒 VL-WS-NONE 🇹🇭 TH-103.86.49.57:80"
       - "🇹🇭 🔒 VL-XHTTP-NONE 🇹🇭 TH-45.144.165.11:80"
   - name: "المنت 💬"
     type: "select"
