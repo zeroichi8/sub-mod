@@ -514,6 +514,43 @@ proxies:
       short-id: "d3b394558cfe0266"
     grpc-opts:
       grpc-service-name: "api.v1.StreamService"
+  - name: "VLESS"
+    type: "vless"
+    server: "150.241.101.80"
+    port: 8443
+    uuid: "47d9b534-8a0a-4bd2-90f1-1d6ade14427e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yandex.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      short-id: "6ba85179e30d4fc2"
+  - name: "📀48@oneclickvpnkeys"
+    type: "vless"
+    server: "b2n.ir"
+    port: 2087
+    uuid: "8c561eb2-f643-49ce-b5b6-81690ec268c0"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "fish.kaftarkakolbesarwifi.ir"
+    client-fingerprint: "chrome"
+  - name: "@Daily_Configs"
+    type: "vless"
+    server: "144.31.5.64"
+    port: 443
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl6.moritech.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
+    flow: "xtls-rprx-vision"
   - name: "𝗝𝗼𝗶𝗻➠@PlanB_net"
     type: "vless"
     server: "172.64.150.28"
@@ -540,12 +577,31 @@ proxies:
       path: "/fp"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "@Daily_Configs-1"
+    type: "vless"
+    server: "dey.lnmarketplace.net"
+    port: 443
+    uuid: "3536e1fa-0850-44d1-b123-925ce12476cf"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dey.lnmarketplace.net"
+    alpn:
+      - "h2"
   - name: "v2ray_dalghak"
     type: "ss"
     server: "156.146.38.167"
     port: 443
     cipher: "aes-128-gcm"
     password: "shadowsocks"
+    udp: true
+  - name: "🇨🇦telegram➠@v2rayNG_Matsuri"
+    type: "vmess"
+    server: "66.163.117.58"
+    port: 22324
+    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
+    alterId: 0
+    cipher: "auto"
     udp: true
   - name: "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸"
     type: "vmess"
@@ -555,15 +611,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇬🇧 @proxy_kafee"
-    type: "vmess"
-    server: "66.163.117.58"
-    port: 22324
-    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "@Daily_Configs"
+  - name: "@Daily_Configs-2"
     type: "trojan"
     server: "188.42.145.180"
     port: 443
@@ -591,12 +639,16 @@ proxy-groups:
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
       - "@V2rayng_Fast 🇧🇷"
+      - "VLESS"
+      - "📀48@oneclickvpnkeys"
+      - "@Daily_Configs"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
+      - "@Daily_Configs-1"
       - "v2ray_dalghak"
+      - "🇨🇦telegram➠@v2rayNG_Matsuri"
       - "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸"
-      - "🇬🇧 @proxy_kafee"
-      - "@Daily_Configs"
+      - "@Daily_Configs-2"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -608,12 +660,16 @@ proxy-groups:
     max-failed-times: 2
     proxies:
       - "@V2rayng_Fast 🇧🇷"
+      - "VLESS"
+      - "📀48@oneclickvpnkeys"
+      - "@Daily_Configs"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
+      - "@Daily_Configs-1"
       - "v2ray_dalghak"
+      - "🇨🇦telegram➠@v2rayNG_Matsuri"
       - "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸"
-      - "🇬🇧 @proxy_kafee"
-      - "@Daily_Configs"
+      - "@Daily_Configs-2"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -624,12 +680,16 @@ proxy-groups:
     lazy: false
     proxies:
       - "@V2rayng_Fast 🇧🇷"
+      - "VLESS"
+      - "📀48@oneclickvpnkeys"
+      - "@Daily_Configs"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net-1"
+      - "@Daily_Configs-1"
       - "v2ray_dalghak"
+      - "🇨🇦telegram➠@v2rayNG_Matsuri"
       - "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸"
-      - "🇬🇧 @proxy_kafee"
-      - "@Daily_Configs"
+      - "@Daily_Configs-2"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
