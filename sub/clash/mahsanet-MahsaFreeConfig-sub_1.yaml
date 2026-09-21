@@ -499,9 +499,9 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "Server 50"
+  - name: "@V2rayng_Fast 🇧🇷"
     type: "vless"
-    server: "files.noneok.com"
+    server: "88.216.220.88"
     port: 443
     uuid: "a8e3155b-ceb1-4fcb-bc0c-2e77ec005401"
     udp: true
@@ -514,6 +514,20 @@ proxies:
       short-id: "d3b394558cfe0266"
     grpc-opts:
       grpc-service-name: "api.v1.StreamService"
+  - name: "VLESS"
+    type: "vless"
+    server: "150.241.101.80"
+    port: 8443
+    uuid: "47d9b534-8a0a-4bd2-90f1-1d6ade14427e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yandex.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      short-id: "6ba85179e30d4fc2"
   - name: "👝19@oneclickvpnkeys"
     type: "vless"
     server: "82.24.203.20"
@@ -524,6 +538,20 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/fd5ba98a3970"
+  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+    type: "vless"
+    server: "api.noneok.com"
+    port: 443
+    uuid: "a8e3155b-ceb1-4fcb-bc0c-2e77ec005401"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "api.noneok.com"
+    reality-opts:
+      public-key: "S8O8R938N960cpQfIIDXsJTxeGAkbVv6PlIqP0-d30w"
+      short-id: "1ea59febb8d4fc8e"
+    grpc-opts:
+      grpc-service-name: "api.v1.StreamService"
   - name: "172.64.150.28"
     type: "vless"
     server: "172.64.150.28"
@@ -536,6 +564,21 @@ proxies:
       path: "/fp"
       headers:
         Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "@v2raybaaz ²"
+    type: "vless"
+    server: "md5.univesalsrv.com"
+    port: 443
+    uuid: "2f35965a-9a9b-45fd-ba32-987296dfb6be"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "md5.univesalsrv.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg"
+      short-id: "aa9884f2982b7d3c"
+    grpc-opts:
+      grpc-service-name: "app.v1.PushService"
   - name: "𝗝𝗼𝗶𝗻➠@PlanB_net"
     type: "vless"
     server: "172.64.150.28"
@@ -557,19 +600,11 @@ proxies:
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
-  - name: "🇨🇦telegram➠@v2rayNG_Matsuri"
+  - name: "🇬🇧 @proxy_kafee"
     type: "vmess"
     server: "66.163.117.58"
     port: 22324
     uuid: "04621bae-ab36-11ec-b909-0242ac120002"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-    type: "vmess"
-    server: "82.198.246.233"
-    port: 180
-    uuid: "d13fc2f5-3e05-4795-81eb-44143a09e552"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -600,13 +635,15 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "Server 50"
+      - "@V2rayng_Fast 🇧🇷"
+      - "VLESS"
       - "👝19@oneclickvpnkeys"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "172.64.150.28"
+      - "@v2raybaaz ²"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "v2ray_dalghak"
-      - "🇨🇦telegram➠@v2rayNG_Matsuri"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "🇬🇧 @proxy_kafee"
       - "@Daily_Configs"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -618,13 +655,15 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "Server 50"
+      - "@V2rayng_Fast 🇧🇷"
+      - "VLESS"
       - "👝19@oneclickvpnkeys"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "172.64.150.28"
+      - "@v2raybaaz ²"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "v2ray_dalghak"
-      - "🇨🇦telegram➠@v2rayNG_Matsuri"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "🇬🇧 @proxy_kafee"
       - "@Daily_Configs"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -635,13 +674,15 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "Server 50"
+      - "@V2rayng_Fast 🇧🇷"
+      - "VLESS"
       - "👝19@oneclickvpnkeys"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "172.64.150.28"
+      - "@v2raybaaz ²"
       - "𝗝𝗼𝗶𝗻➠@PlanB_net"
       - "v2ray_dalghak"
-      - "🇨🇦telegram➠@v2rayNG_Matsuri"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "🇬🇧 @proxy_kafee"
       - "@Daily_Configs"
   - name: "المنت 💬"
     type: "select"
