@@ -499,33 +499,73 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇨🇳 China, Haidian (Haidian Qu) | [BL]"
+    type: "hysteria2"
+    server: "xg1.mangshe.xyz"
+    port: 2056
+    password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
+    sni: "hdlb1.mangshe.xyz"
+    skip-cert-verify: true
+  - name: "🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+    type: "hysteria2"
+    server: "dg1.mangshe.xyz"
+    port: 2056
+    password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
+    sni: "dg1.mangshe.xyz"
+    skip-cert-verify: true
   - name: "🇲🇾 Malaysia, Cyberjaya | [BL]"
+    type: "hysteria2"
+    server: "103.117.141.103"
+    port: 2060
+    password: "5d0a6445-a30d-4522-bb1f-94f1d3ad63be"
+    sni: "mlxy.mangshe.xyz"
+    skip-cert-verify: true
+  - name: "🇲🇾 Malaysia, Cyberjaya | [BL]-1"
     type: "hysteria2"
     server: "103.117.141.124"
     port: 2060
     password: "5d0a6445-a30d-4522-bb1f-94f1d3ad63be"
     sni: "mlxy1.mangshe.xyz"
     skip-cert-verify: true
-  - name: "🇲🇾 Malaysia, Cyberjaya | [BL]-1"
+  - name: "🇲🇾 Malaysia, Cyberjaya | [BL]-2"
     type: "hysteria2"
     server: "mlxy1.mangshe.xyz"
     port: 2060
     password: "5d0a6445-a30d-4522-bb1f-94f1d3ad63be"
     sni: "mlxy1.mangshe.xyz"
     skip-cert-verify: true
-  - name: "🇲🇾 Malaysia, Cyberjaya | [BL]-2"
+  - name: "🇲🇾 Malaysia, Cyberjaya | [BL]-3"
     type: "hysteria2"
     server: "mlxy2.mangshe.xyz"
     port: 2060
     password: "5d0a6445-a30d-4522-bb1f-94f1d3ad63be"
+    skip-cert-verify: true
+  - name: "🇲🇾 Malaysia, Cyberjaya | [BL]-4"
+    type: "hysteria2"
+    server: "mlxy2.mangshe.xyz"
+    port: 2060
+    password: "5d0a6445-a30d-4522-bb1f-94f1d3ad63be"
+    sni: "mlxy2.mangshe.xyz"
+    skip-cert-verify: true
+  - name: "🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | [BL]"
+    type: "hysteria2"
+    server: "nl01ntrhy01.tcp-reset-club.net"
+    port: 443
+    password: "8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3"
+    sni: "127.0.0.1"
     skip-cert-verify: true
   - name: "🇷🇺 Russia, Moscow | 🌐 | [BL]"
     type: "hysteria2"
     server: "msk.frkn.org"
     port: 443
     password: "f317b5d6-d399-4d3d-a051-89d674ae953c"
-    skip-cert-verify: true
   - name: "🇷🇺 Russia, Moscow | 🌐 | [BL]-1"
+    type: "hysteria2"
+    server: "msk.frkn.org"
+    port: 443
+    password: "f317b5d6-d399-4d3d-a051-89d674ae953c"
+    skip-cert-verify: true
+  - name: "🇷🇺 Russia, Moscow | 🌐 | [BL]-2"
     type: "hysteria2"
     server: "msk.frkn.org"
     port: 443
@@ -1523,11 +1563,78 @@ proxies:
       path: "/pyip=ProxyIP.JP.CMLiussss.net"
       headers:
         Host: "wispy-cake-ec69.193-bc6.workers.dev"
-  - name: "US 🇺🇸 | @Raydikalx | B5554D"
+  - name: "US 🇺🇸 | @Raydikalx | 59A8D3"
     type: "vless"
-    server: "47.251.108.158"
+    server: "88.216.195.187"
     port: 443
-    uuid: "975fc322-6e38-434b-a53c-d39fed49b9a9"
+    uuid: "c5694dc5-39fd-4a92-8430-3837baa522a3"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "usa.superbuba.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "5en_SFrWntR3ZtxGn7_ZnnK5UW_Prh90rs-o8p7glw4"
+      short-id: "9c2378562188c3cb"
+  - name: "US 🇺🇸 | @Raydikalx | E7FE2D"
+    type: "vless"
+    server: "88.216.195.13"
+    port: 443
+    uuid: "3c48b5f5-7766-4896-874e-b3ba1860e83a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "w-mebel.pro"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "4VzPARgETZ4lJIffknTNqmfkP567FqYV94A18Be8vxQ"
+      short-id: "837f454e9c8a7e19"
+  - name: "US 🇺🇸 | @Raydikalx | 5AAC6E"
+    type: "vless"
+    server: "198.251.78.29"
+    port: 2053
+    uuid: "c423cc1b-f88e-421c-9a16-c480d84da20f"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "Uk5b-Wh_uxeCc7R8NS9iWE40xc0h9wWC04rSB9yhgAw"
+      short-id: "b5d625695ec82c7e"
+  - name: "US 🇺🇸 | @Raydikalx | 010324"
+    type: "vless"
+    server: "usa.superbuba.top"
+    port: 443
+    uuid: "c5694dc5-39fd-4a92-8430-3837baa522a3"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "usa.superbuba.top"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "5en_SFrWntR3ZtxGn7_ZnnK5UW_Prh90rs-o8p7glw4"
+      short-id: "9c2378562188c3cb"
+  - name: "CA 🇨🇦 | @Raydikalx | 13D326"
+    type: "vless"
+    server: "23.132.28.51"
+    port: 443
+    uuid: "dcf8e133-09a2-4884-abf9-80356bb334ac"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "candy.atlasparser.site"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "xcTXD3of3Yt5hHdIwYGZ1LjMBgiL6sqj5J33J4U4ozM"
+      short-id: "a7c31f92"
+  - name: "US 🇺🇸 | @Raydikalx | F40C28"
+    type: "vless"
+    server: "195.211.98.43"
+    port: 443
+    uuid: "1b4b11d5-4c2d-4533-9a55-636757cdee94"
     udp: true
     tls: true
     network: "tcp"
@@ -1535,414 +1642,104 @@ proxies:
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs"
-      short-id: "896f52ba2cfca903"
-  - name: "US 🇺🇸 | @Raydikalx | 2ABC0C"
+      public-key: "xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA"
+      short-id: "9c56fddf237e8eaf"
+  - name: "US 🇺🇸 | @Raydikalx | D01265"
     type: "vless"
-    server: "47.251.25.74"
-    port: 443
-    uuid: "18805ff3-b420-45de-af18-93be14024ae8"
+    server: "162.35.96.15"
+    port: 8081
+    uuid: "54ee5e59-55a3-4599-83ff-0c67b3f411b2"
     udp: true
-    tls: true
-    network: "raw"
-    servername: "www.amazon.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8"
-  - name: "US 🇺🇸 | @Raydikalx | 19DFAE"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "17e85193-a95c-4430-9b05-d8f303a34ac3"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | B44369"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "06b7bb5f-c1fe-4c33-a420-cf0a5c94d3cd"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | CD5181"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "06e00e3d-f71f-4621-99a2-779793daf449"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 97FB17"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "137c30a7-d172-4b6c-a97b-c3a6a4fda042"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | DE43D9"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "18841820-cd3a-4bc5-9ac3-fec72438b872"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | BAC21B"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "1837e910-ebd6-4e64-a9ae-7c9779e4d60d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 99352A"
-    type: "vless"
-    server: "5.78.159.214"
-    port: 80
-    uuid: "52ecd83b-b6c1-41ee-bc36-049755bd33d2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "5.78.159.214"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "NTXb7QGg9EyPkpG-7lmBNNaqf4473p_l8ITmTH-xmHg"
-      short-id: "0db5c018ed7bb596"
-  - name: "US 🇺🇸 | @Raydikalx | 258AB3"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "0817a3bb-c8fb-4ddf-a05e-321565b39cd8"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | CA7613"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "00dda8ac-c263-4106-a740-1e4478a7dc44"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "tradingview.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | F06532"
-    type: "vless"
-    server: "5.78.28.48"
-    port: 80
-    uuid: "2be98d5e-6eed-445d-aef4-9c776fdd03af"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "5.78.159.97"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "u42o3SnK9nE0nEUNd1JREM03dsT7N_c-m2rECXFCCHg"
-      short-id: "ed87fb8386bbbbe5"
-  - name: "US 🇺🇸 | @Raydikalx | B8D498"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "0165ef77-68d5-468e-922b-43f5395287bb"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | F2D13C"
-    type: "vless"
-    server: "5.78.28.48"
-    port: 80
-    uuid: "2be98d5e-6eed-445d-aef4-9c776fdd03af"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "5.78.159.97"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "u42o3SnK9nE0nEUNd1JREM03dsT7N_c-m2rECXFCCHg"
-      short-id: "ed87fb8386bbbbe5"
-  - name: "US 🇺🇸 | @Raydikalx | 10FF78"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "2ba5d80f-c28b-4247-bc07-bdedc8705857"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 100149"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "11cf4be2-8e22-410b-ac9f-c389d2b2e1cd"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | F922EE"
-    type: "vless"
-    server: "15.204.97.206"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | 1EC5C2"
-    type: "vless"
-    server: "15.204.97.219"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | D73C3B"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "2eea435c-8c8f-45e3-8907-956a0c6b0182"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 91D02A"
-    type: "vless"
-    server: "15.204.97.198"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | 66830B"
-    type: "vless"
-    server: "15.204.97.216"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | 1FD863"
-    type: "vless"
-    server: "15.204.97.209"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | E89C89"
-    type: "vless"
-    server: "ww13.levikogjgfdd.ir"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | 4CDCFE"
-    type: "vless"
-    server: "15.204.97.195"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | 8BA744"
-    type: "vless"
-    server: "15.204.97.197"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | EE5BA3"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "6ae3c57a-f5fb-4b7e-a886-b8c00af5c693"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 6F42E7"
-    type: "vless"
-    server: "15.204.97.214"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "US 🇺🇸 | @Raydikalx | EEEE4A"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "3044b722-695b-42a6-8729-e2c65ba0ccb3"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 74FBAF"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "1925051c-083e-401a-8f53-de39d83bfc94"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 6FE517"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "306b4e17-e660-4739-bf96-fc7ec6aa7949"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "CA 🇨🇦 | @Raydikalx | 679DD2"
-    type: "vless"
-    server: "104.16.232.209"
-    port: 443
-    uuid: "47fcef29-ab4e-4aa6-932b-d95a18f28a4e"
-    udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "e34bq.oa9r.zl3.hh.vavava.kdns.fr"
     ws-opts:
-      path: "/?ed=2560"
-      headers:
-        Host: "e34bq.oa9r.zl3.hh.vavava.kdns.fr"
-  - name: "CA 🇨🇦 | @Raydikalx | 01F44A"
+      path: "/vless-test"
+  - name: "US 🇺🇸 | @Raydikalx | D27190"
     type: "vless"
-    server: "104.18.34.14"
-    port: 80
+    server: "169.40.42.89"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "US 🇺🇸 | @Raydikalx | A3A64A"
+    type: "vless"
+    server: "89.125.43.121"
+    port: 443
+    uuid: "9bbd487f-8f84-4ad7-b897-681c3f7d95dc"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "hyhhuh.mervi.icu"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "wl-pbwMLXrvJkR4yo1JNBU7oiewyuQ-t7jxiS6Kz4D8"
+      short-id: "2997575f36da5a09"
+  - name: "US 🇺🇸 | @Raydikalx | 2E7150"
+    type: "vless"
+    server: "147.182.212.232"
+    port: 56565
+    uuid: "7b188eea-b08f-42c2-bac7-d3b0e74218b8"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.paypal.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY"
+  - name: "CA 🇨🇦 | @Raydikalx | BF17E3"
+    type: "vless"
+    server: "130.107.73.148"
+    port: 41373
+    uuid: "a71c8954-66a8-4321-bedb-2336230d81ce"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU"
+      short-id: "0e"
+  - name: "US 🇺🇸 | @Raydikalx | 60C474"
+    type: "vless"
+    server: "138.124.60.146"
+    port: 443
+    uuid: "bbfd1f68-ec64-452f-8404-9e2bcf1df951"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "usa.oblaco.bet"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
+  - name: "US 🇺🇸 | @Raydikalx | 7E08CC"
+    type: "vless"
+    server: "169.40.42.235"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "US 🇺🇸 | @Raydikalx | 45D6E2"
+    type: "vless"
+    server: "108.162.198.178"
+    port: 2052
     uuid: "47fcef29-ab4e-4aa6-932b-d95a18f28a4e"
     udp: true
     tls: false
@@ -1952,96 +1749,10 @@ proxies:
       path: "/?ed=2560security=tls"
       headers:
         Host: "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-  - name: "CA 🇨🇦 | @Raydikalx | BC6006"
-    type: "vless"
-    server: "172.67.142.169"
-    port: 443
-    uuid: "4c0b7280-76bb-495c-9c8b-f05712ebf805"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "youxuanku.kdns.fr"
-    client-fingerprint: "chrome"
-  - name: "US 🇺🇸 | @Raydikalx | AB619F"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "22d5930c-6f96-4b77-8f0a-88faca0c9397"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 75E559"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "382bd1ec-1ba8-44fd-8df4-53e251c467c7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | C834F5"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "3b043a16-99d6-43f4-bc3d-3db1b3f2a052"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 9A1825"
-    type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "2733bd9c-4f35-45f2-a59f-e67b618664f2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "CA 🇨🇦 | @Raydikalx | 5A01CE"
-    type: "vless"
-    server: "104.18.33.8"
-    port: 443
-    uuid: "47fcef29-ab4e-4aa6-932b-d95a18f28a4e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "e34bq.oa9r.zl3.hh.vavava.kdns.fr"
-    ws-opts:
-      path: "/?ed=2560"
-      headers:
-        Host: "e34bq.oa9r.zl3.hh.vavava.kdns.fr"
-  - name: "CA 🇨🇦 | @Raydikalx | BA6E49"
+  - name: "CA 🇨🇦 | @Raydikalx | 63FD51"
     type: "vless"
     server: "104.18.47.113"
-    port: 2052
-    uuid: "47fcef29-ab4e-4aa6-932b-d95a18f28a4e"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-  - name: "CA 🇨🇦 | @Raydikalx | 05250D"
-    type: "vless"
-    server: "172.64.154.8"
-    port: 8880
+    port: 8080
     uuid: "47fcef29-ab4e-4aa6-932b-d95a18f28a4e"
     udp: true
     tls: false
@@ -2050,32 +1761,128 @@ proxies:
       path: "/?ed=2560security=tls"
       headers:
         Host: "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-  - name: "US 🇺🇸 | @Raydikalx | EF3745"
+  - name: "US 🇺🇸 | @Raydikalx | 474258"
     type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "2ddd1e4f-90ff-4723-9542-09b0116f6067"
+    server: "169.40.42.35"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "US 🇺🇸 | @Raydikalx | 776391"
+    type: "vless"
+    server: "169.40.42.212"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
     udp: true
     tls: true
     network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
-  - name: "US 🇺🇸 | @Raydikalx | 7756D7"
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "US 🇺🇸 | @Raydikalx | 2CDE8F"
     type: "vless"
-    server: "31.58.50.200"
-    port: 8443
-    uuid: "431acd7d-ef6c-4d2b-b471-bcdddca8050c"
+    server: "159.89.87.21"
+    port: 28190
+    uuid: "14c80e0e-f7ce-4991-94fc-99a1db4a9b1e"
     udp: true
     tls: true
     network: "tcp"
-    servername: "tradingview.com"
-    client-fingerprint: "firefox"
+    servername: "aws.amazon.com"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU"
+      public-key: "ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno"
+  - name: "CA 🇨🇦 | @Raydikalx | 75F2DF"
+    type: "vless"
+    server: "172.67.130.159"
+    port: 2096
+    uuid: "1d54a125-8f1e-46bb-9a23-0ecf4ac92db8"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn-ca.skyvora.app"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fqg7aacd8s"
+      headers:
+        Host: "cdn-ca.skyvora.app"
+  - name: "US 🇺🇸 | @Raydikalx | 6A8F5F"
+    type: "vless"
+    server: "138.124.60.146"
+    port: 443
+    uuid: "bbfd1f68-ec64-452f-8404-9e2bcf1df951"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "usa.oblaco.bet"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
+  - name: "US 🇺🇸 | @Raydikalx | F810CA"
+    type: "vless"
+    server: "185.95.231.233"
+    port: 443
+    uuid: "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "store.steampowered.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho"
+      short-id: "a1b2c3d4"
+  - name: "US 🇺🇸 | @Raydikalx | F2D13C"
+    type: "vless"
+    server: "5.78.28.48"
+    port: 80
+    uuid: "2be98d5e-6eed-445d-aef4-9c776fdd03af"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "5.78.159.97"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "u42o3SnK9nE0nEUNd1JREM03dsT7N_c-m2rECXFCCHg"
+      short-id: "ed87fb8386bbbbe5"
+  - name: "US 🇺🇸 | @Raydikalx | D48530"
+    type: "vless"
+    server: "34.85.179.6"
+    port: 443
+    uuid: "8ea1a178-2719-47b7-99d0-33d8dc361ba3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "cTwhlN0bIkprnzvGCMPmsdxk8XkqUz3LcCrS0FKnbVI"
+      short-id: "c08efcd72d7e8389"
+  - name: "US 🇺🇸 | @Raydikalx | 1646E6"
+    type: "vless"
+    server: "79.141.172.154"
+    port: 10453
+    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "www.google.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc"
+    grpc-opts:
+      grpc-service-name: "TunService"
   - name: "@FREE2CONFIG - 1"
     type: "vless"
     server: "194.77.71.152"
@@ -3480,19 +3287,6 @@ proxies:
     reality-opts:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
-  - name: "@FREE2CONFIG - 140"
-    type: "vless"
-    server: "159.89.87.21"
-    port: 28190
-    uuid: "14c80e0e-f7ce-4991-94fc-99a1db4a9b1e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "aws.amazon.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno"
   - name: "@FREE2CONFIG - 141"
     type: "vless"
     server: "5.180.42.57"
@@ -3704,6 +3498,20 @@ proxies:
       path: "/apiv1/esa1-asda2jcvnbpseflkn-kjweksad"
       headers:
         Host: "apicdn.4subnodes.com"
+  - name: "@FREE2CONFIG - 157"
+    type: "vless"
+    server: "15.204.97.206"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
   - name: "@FREE2CONFIG - 158"
     type: "vless"
     server: "15.204.97.216"
@@ -3761,6 +3569,20 @@ proxies:
       short-id: "2fed44d8c59f7e71"
     grpc-opts:
       grpc-service-name: "grpc_common3"
+  - name: "@FREE2CONFIG - 162"
+    type: "vless"
+    server: "ww13.levikogjgfdd.ir"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
   - name: "@FREE2CONFIG - 163"
     type: "vless"
     server: "15.204.97.209"
@@ -4429,6 +4251,238 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
+  - name: "@FREE2CONFIG - 228"
+    type: "vless"
+    server: "169.40.42.182"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "@FREE2CONFIG - 213"
+    type: "vless"
+    server: "169.40.42.232"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "@FREE2CONFIG - 214"
+    type: "vless"
+    server: "5.253.42.164"
+    port: 40443
+    uuid: "e99ba96d-dec8-42eb-be53-19e71eef7cab"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw"
+      short-id: "68a8"
+  - name: "@FREE2CONFIG - 230"
+    type: "vless"
+    server: "169.40.42.52"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "@FREE2CONFIG - 215"
+    type: "vless"
+    server: "54.251.9.130"
+    port: 24146
+    uuid: "9d9a048b-3aea-4b3e-b106-1106bf301feb"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.intel.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo"
+      short-id: "7205d9079521832c"
+  - name: "@FREE2CONFIG - 231"
+    type: "vless"
+    server: "169.40.42.15"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "@FREE2CONFIG - 216"
+    type: "vless"
+    server: "150.241.101.80"
+    port: 8443
+    uuid: "47d9b534-8a0a-4bd2-90f1-1d6ade14427e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yandex.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      short-id: "6ba85179e30d4fc2"
+  - name: "@FREE2CONFIG - 232"
+    type: "vless"
+    server: "169.40.42.173"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "@FREE2CONFIG - 233"
+    type: "vless"
+    server: "169.40.42.231"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "@FREE2CONFIG - 218"
+    type: "vless"
+    server: "93.152.217.20"
+    port: 40443
+    uuid: "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "deepl.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4"
+      short-id: "db46e2946fc466fd"
+  - name: "@FREE2CONFIG - 234"
+    type: "vless"
+    server: "169.40.42.95"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "@FREE2CONFIG - 212"
+    type: "vless"
+    server: "144.31.2.33"
+    port: 443
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "pl3.moritech.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+    flow: "xtls-rprx-vision"
+  - name: "@FREE2CONFIG - 235"
+    type: "vless"
+    server: "103.109.234.246"
+    port: 443
+    uuid: "ddf09ad0-02dc-485b-9048-1038de5bebf0"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de10.delivery-4f1c.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "z_Rn0Vvq1GB39RhN6v7DhdtD-kS0XZa_je0h-no_hWs"
+      short-id: "59eee550a1014198"
+  - name: "@FREE2CONFIG - 237"
+    type: "vless"
+    server: "45.91.138.179"
+    port: 443
+    uuid: "11f21602-47aa-42e2-9149-69120f2e6df6"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us05.shifor01.life"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "36sTeaLdaAjQQxxzh492XihoPi2YxmttQyncmLuxYHE"
+      short-id: "169fc2df88419465"
+  - name: "@FREE2CONFIG - 241"
+    type: "vless"
+    server: "104.17.70.206"
+    port: 2096
+    uuid: "395d040e-a04a-43d7-a1e9-8635f545879a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shalana.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/shalana"
+      headers:
+        Host: "shalana.xyz"
+  - name: "@FREE2CONFIG - 242"
+    type: "vless"
+    server: "170.114.45.6"
+    port: 80
+    uuid: "6aa028bc-08a9-41d1-a397-d60ce65df081"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/shalana"
+      headers:
+        Host: "shalana.xyz"
+  - name: "@FREE2CONFIG - 243"
+    type: "vless"
+    server: "2407:30c0:181::6"
+    port: 80
+    uuid: "6aa028bc-08a9-41d1-a397-d60ce65df081"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/shalana"
+      headers:
+        Host: "shalana.xyz"
   - name: "Server 1 🇳🇱"
     type: "ss"
     server: "82.38.31.219"
@@ -4828,12 +4882,103 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 569DA6"
+  - name: "US 🇺🇸 | @Raydikalx | F4AF2E"
     type: "ss"
-    server: "108.181.118.10"
+    server: "156.146.38.168"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | FEA075"
+    type: "ss"
+    server: "156.146.38.170"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "CA 🇨🇦 | @Raydikalx | 94FAF6"
+    type: "ss"
+    server: "185.156.47.97"
+    port: 9443
+    cipher: "aes-256-gcm"
+    password: "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 7B7C80"
+    type: "ss"
+    server: "38.180.135.156"
     port: 8388
     cipher: "chacha20-ietf-poly1305"
-    password: "G5p6ww4o67HB"
+    password: "YHtesZ0qvgtg"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 36A242"
+    type: "ss"
+    server: "23.150.248.20"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "qB2Cv9VIlujj"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | FC32AF"
+    type: "ss"
+    server: "140.82.63.79"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "ZoZtfPOyVvmKARUN"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | BB7720"
+    type: "ss"
+    server: "37.19.198.244"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | E82A92"
+    type: "ss"
+    server: "198.98.53.130"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "eDfN7SODQceIOmIAbtJJtK"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 9366BE"
+    type: "ss"
+    server: "37.19.198.160"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 02CE4D"
+    type: "ss"
+    server: "37.19.198.243"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 088543"
+    type: "ss"
+    server: "37.19.198.236"
+    port: 443
+    cipher: "aes-128-gcm"
+    password: "shadowsocks"
+    udp: true
+  - name: "CA 🇨🇦 | @Raydikalx | EACCED"
+    type: "ss"
+    server: "142.4.216.225"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "mrs2e9a"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | E86741"
+    type: "ss"
+    server: "108.181.57.93"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "RSo52SbxW40r"
+    udp: true
+  - name: "CA 🇨🇦 | @Raydikalx | 029AE4"
+    type: "ss"
+    server: "yyz-ca-01.blncvpn4u.cc"
+    port: 9443
+    cipher: "aes-256-gcm"
+    password: "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
     udp: true
   - name: "CA 🇨🇦 | @Raydikalx | DEBC1A"
     type: "ss"
@@ -4842,362 +4987,348 @@ proxies:
     cipher: "aes-128-gcm"
     password: "shadowsocks"
     udp: true
-  - name: "🏳️ ShatakVPN 214964"
-    type: "ss"
-    server: "15.204.246.108"
-    port: 8881
-    cipher: "aes-256-gcm"
-    password: "kDWvXYZoTBcGkC4"
-    udp: true
-  - name: "🏳️ ShatakVPN 444844"
-    type: "ss"
-    server: "108.181.58.239"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "CJmTCCx7Ltud"
-    udp: true
-  - name: "🏳️ ShatakVPN 452727"
-    type: "ss"
-    server: "108.181.126.122"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "CJmTCCx7Ltud"
-    udp: true
-  - name: "🏳️ ShatakVPN 356497"
-    type: "ss"
-    server: "185.226.172.8"
-    port: 8008
-    cipher: "aes-256-gcm"
-    password: "XKFKl2rULjIp74"
-    udp: true
-  - name: "🏳️ ShatakVPN 631578"
-    type: "ss"
-    server: "51.255.13.232"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "BqnqToih0PbU"
-    udp: true
-  - name: "🏳️ ShatakVPN 227254"
-    type: "ss"
-    server: "57.131.48.45"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "itzvpn@321"
-    udp: true
-  - name: "🏳️ ShatakVPN 219243"
-    type: "ss"
-    server: "82.38.31.155"
-    port: 8080
-    cipher: "chacha20-ietf-poly1305"
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    udp: true
-  - name: "🏳️ ShatakVPN 836262"
+  - name: "🏳️ ShatakVPN 916728"
     type: "ss"
     server: "193.29.139.151"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 933419"
+  - name: "🏳️ ShatakVPN 374973"
     type: "ss"
-    server: "54.36.174.134"
-    port: 443
+    server: "51.255.13.232"
+    port: 8388
     cipher: "chacha20-ietf-poly1305"
-    password: "ytw2awn"
+    password: "BqnqToih0PbU"
     udp: true
-  - name: "🏳️ ShatakVPN 717397"
+  - name: "🏳️ ShatakVPN 437191"
     type: "ss"
-    server: "54.36.174.140"
-    port: 443
+    server: "82.38.31.155"
+    port: 8080
     cipher: "chacha20-ietf-poly1305"
-    password: "ytw2awn"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 833728"
+  - name: "🏳️ ShatakVPN 905951"
     type: "ss"
-    server: "15.204.246.111"
-    port: 5498
+    server: "185.226.172.8"
+    port: 8008
     cipher: "aes-256-gcm"
-    password: "lGqs95QkFHo2NV"
+    password: "XKFKl2rULjIp74"
     udp: true
-  - name: "🏳️ ShatakVPN 518214"
+  - name: "🏳️ ShatakVPN 408028"
+    type: "ss"
+    server: "57.131.48.45"
+    port: 8388
+    cipher: "aes-256-gcm"
+    password: "itzvpn@321"
+    udp: true
+  - name: "🏳️ ShatakVPN 891064"
     type: "ss"
     server: "194.87.47.204"
     port: 10901
     cipher: "aes-256-gcm"
     password: "d1fa2f4b98a38bc8"
     udp: true
-  - name: "🏳️ ShatakVPN 523164"
+  - name: "🏳️ ShatakVPN 460914"
     type: "ss"
-    server: "15.204.246.107"
-    port: 8888
-    cipher: "aes-256-gcm"
-    password: "Y6R9pAtvxxzmGC"
-    udp: true
-  - name: "🏳️ ShatakVPN 285289"
-    type: "ss"
-    server: "198.98.53.130"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "eDfN7SODQceIOmIAbtJJtK"
-    udp: true
-  - name: "🏳️ ShatakVPN 342312"
-    type: "ss"
-    server: "142.4.216.225"
+    server: "54.36.174.140"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "ytw2awn"
     udp: true
-  - name: "🏳️ ShatakVPN 985661"
-    type: "ss"
-    server: "37.19.198.236"
-    port: 443
-    cipher: "aes-128-gcm"
-    password: "shadowsocks"
-    udp: true
-  - name: "🏳️ ShatakVPN 504406"
+  - name: "🏳️ ShatakVPN 548144"
     type: "ss"
     server: "51.222.12.127"
     port: 445
     cipher: "aes-256-gcm"
     password: "zDNVedRFPQexG9v"
     udp: true
-  - name: "🏳️ ShatakVPN 915335"
+  - name: "🏳️ ShatakVPN 853398"
     type: "ss"
-    server: "51.79.85.185"
-    port: 8118
+    server: "15.204.246.111"
+    port: 5498
     cipher: "aes-256-gcm"
-    password: "cdBIDV42DCwnfIN"
+    password: "lGqs95QkFHo2NV"
     udp: true
-  - name: "🏳️ ShatakVPN 197393"
+  - name: "🏳️ ShatakVPN 443421"
+    type: "ss"
+    server: "15.204.246.107"
+    port: 8888
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
+  - name: "🏳️ ShatakVPN 836383"
+    type: "ss"
+    server: "15.204.247.206"
+    port: 4444
+    cipher: "aes-256-gcm"
+    password: "pKEW8JPByTVTLtM"
+    udp: true
+  - name: "🏳️ ShatakVPN 482893"
+    type: "ss"
+    server: "142.4.216.225"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "ytw2awn"
+    udp: true
+  - name: "🏳️ ShatakVPN 286351"
     type: "ss"
     server: "51.79.49.116"
     port: 8882
     cipher: "aes-256-gcm"
     password: "kDWvXYZoTBcGkC4"
     udp: true
-  - name: "🏳️ ShatakVPN 800478"
+  - name: "🏳️ ShatakVPN 674849"
     type: "ss"
-    server: "15.204.247.124"
-    port: 2375
-    cipher: "aes-256-gcm"
-    password: "faBAoD54k87UJG7"
-    udp: true
-  - name: "🏳️ ShatakVPN 938602"
-    type: "ss"
-    server: "185.156.47.97"
-    port: 9443
-    cipher: "aes-256-gcm"
-    password: "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
-    udp: true
-  - name: "🏳️ ShatakVPN 222762"
-    type: "ss"
-    server: "176.97.64.144"
-    port: 8388
+    server: "54.36.174.134"
+    port: 443
     cipher: "chacha20-ietf-poly1305"
-    password: "TFElG2FVqyqG"
+    password: "ytw2awn"
     udp: true
-  - name: "🏳️ ShatakVPN 534729"
+  - name: "🏳️ ShatakVPN 313999"
     type: "ss"
     server: "4.221.224.246"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "3aN9XUwhvq1ujlsO"
     udp: true
-  - name: "🏳️ ShatakVPN 343584"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 6679
-    cipher: "aes-256-gcm"
-    password: "TEzjfAYq2IjtuoS"
-    udp: true
-  - name: "🏳️ ShatakVPN 273654"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 9090
-    cipher: "aes-256-gcm"
-    password: "Y6R9pAtvxxzmGC"
-    udp: true
-  - name: "🏳️ ShatakVPN 168585"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 5498
-    cipher: "aes-256-gcm"
-    password: "lGqs95QkFHo2NV"
-    udp: true
-  - name: "🏳️ ShatakVPN 842600"
-    type: "ss"
-    server: "141.164.45.187"
-    port: 8091
-    cipher: "aes-256-gcm"
-    password: "PCnnH6SQSnfoS27"
-    udp: true
-  - name: "🏳️ ShatakVPN 470587"
+  - name: "🏳️ ShatakVPN 619892"
     type: "ss"
     server: "92.112.126.90"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "9tqhMdIrTkgQ46PvhyAtMH"
     udp: true
-  - name: "🏳️ ShatakVPN 810824"
+  - name: "🏳️ ShatakVPN 907215"
     type: "ss"
     server: "193.29.139.234"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "4a2rfixophdjffa8KVA4Aa"
     udp: true
-  - name: "🏳️ ShatakVPN 238346"
+  - name: "🏳️ ShatakVPN 397257"
     type: "ss"
     server: "36.224.152.189"
     port: 50099
     cipher: "chacha20-ietf-poly1305"
     password: "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
     udp: true
-  - name: "🏳️ ShatakVPN 745534"
+  - name: "🏳️ ShatakVPN 806840"
     type: "ss"
     server: "92.112.126.90"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "wwzVn2ZnHfqYa6l8EWh3eY"
     udp: true
-  - name: "🏳️ ShatakVPN 960396"
+  - name: "🏳️ ShatakVPN 240347"
+    type: "ss"
+    server: "108.181.126.122"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "CJmTCCx7Ltud"
+    udp: true
+  - name: "🏳️ ShatakVPN 698805"
+    type: "ss"
+    server: "108.181.58.239"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "CJmTCCx7Ltud"
+    udp: true
+  - name: "🏳️ ShatakVPN 906357"
     type: "ss"
     server: "193.29.139.168"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "QCXDxuDlTTMD7jtgHUjIoj"
     udp: true
-  - name: "🏳️ ShatakVPN 230348"
+  - name: "🏳️ ShatakVPN 597957"
     type: "ss"
     server: "144.31.243.2"
     port: 16015
     cipher: "chacha20-ietf-poly1305"
     password: "J1InuU6QRT5JOh1mQfkjU2"
     udp: true
-  - name: "🏳️ ShatakVPN 755024"
+  - name: "🏳️ ShatakVPN 746889"
     type: "ss"
     server: "194.61.121.93"
     port: 7538
     cipher: "chacha20-ietf-poly1305"
     password: "U9YAoqBgg5VyGBc6vQv1sN"
     udp: true
-  - name: "🏳️ ShatakVPN 691128"
+  - name: "🏳️ ShatakVPN 637665"
+    type: "ss"
+    server: "176.97.64.144"
+    port: 8388
+    cipher: "chacha20-ietf-poly1305"
+    password: "TFElG2FVqyqG"
+    udp: true
+  - name: "🏳️ ShatakVPN 227175"
     type: "ss"
     server: "20.107.193.38"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "imq0vLikbOx4THZP"
     udp: true
-  - name: "🏳️ ShatakVPN 419337"
+  - name: "🏳️ ShatakVPN 733034"
     type: "ss"
     server: "82.38.31.179"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🏳️ ShatakVPN 863255"
+  - name: "🏳️ ShatakVPN 364047"
     type: "ss"
     server: "82.38.31.186"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🏳️ ShatakVPN 134559"
+  - name: "🏳️ ShatakVPN 527717"
     type: "ss"
     server: "82.38.31.198"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🏳️ ShatakVPN 127475"
+  - name: "🏳️ ShatakVPN 743837"
     type: "ss"
     server: "82.38.31.201"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🏳️ ShatakVPN 454714"
+  - name: "🏳️ ShatakVPN 768134"
     type: "ss"
     server: "82.38.31.218"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🏳️ ShatakVPN 588461"
+  - name: "🏳️ ShatakVPN 667413"
     type: "ss"
     server: "82.38.31.205"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     udp: true
-  - name: "🏳️ ShatakVPN 983056"
+  - name: "🏳️ ShatakVPN 685705"
     type: "ss"
     server: "82.38.31.11"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 926042"
+  - name: "🏳️ ShatakVPN 342411"
     type: "ss"
     server: "82.38.31.13"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 167269"
+  - name: "🏳️ ShatakVPN 945648"
     type: "ss"
     server: "193.29.139.129"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 723088"
+  - name: "🏳️ ShatakVPN 139800"
     type: "ss"
     server: "193.29.139.129"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 405936"
+  - name: "🏳️ ShatakVPN 571078"
     type: "ss"
     server: "193.29.139.180"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 269468"
+  - name: "🏳️ ShatakVPN 845619"
     type: "ss"
     server: "193.29.139.230"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 959405"
+  - name: "🏳️ ShatakVPN 914187"
     type: "ss"
     server: "82.38.31.9"
     port: 8080
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 948791"
+  - name: "🏳️ ShatakVPN 824184"
     type: "ss"
     server: "82.38.31.42"
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     udp: true
-  - name: "🏳️ ShatakVPN 119380"
+  - name: "🏳️ ShatakVPN 939557"
+    type: "ss"
+    server: "141.164.45.187"
+    port: 6679
+    cipher: "aes-256-gcm"
+    password: "TEzjfAYq2IjtuoS"
+    udp: true
+  - name: "🏳️ ShatakVPN 265794"
+    type: "ss"
+    server: "141.164.45.187"
+    port: 9090
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
+  - name: "🏳️ ShatakVPN 814665"
+    type: "ss"
+    server: "15.204.246.108"
+    port: 8881
+    cipher: "aes-256-gcm"
+    password: "kDWvXYZoTBcGkC4"
+    udp: true
+  - name: "🏳️ ShatakVPN 979365"
+    type: "ss"
+    server: "15.204.247.124"
+    port: 2375
+    cipher: "aes-256-gcm"
+    password: "faBAoD54k87UJG7"
+    udp: true
+  - name: "🏳️ ShatakVPN 125826"
+    type: "ss"
+    server: "51.79.85.185"
+    port: 8118
+    cipher: "aes-256-gcm"
+    password: "cdBIDV42DCwnfIN"
+    udp: true
+  - name: "🏳️ ShatakVPN 893513"
     type: "ss"
     server: "45.207.207.25"
     port: 443
     cipher: "aes-256-gcm"
     password: "gj1+XKulKV0nmw6IThckOkkJh5DSM7+C"
     udp: true
-  - name: "🏳️ ShatakVPN 904743"
+  - name: "🏳️ ShatakVPN 971254"
     type: "ss"
     server: "51.83.192.80"
     port: 8388
     cipher: "aes-256-gcm"
     password: "itzvpn@321"
+    udp: true
+  - name: "🏳️ ShatakVPN 895361"
+    type: "ss"
+    server: "141.164.45.187"
+    port: 5498
+    cipher: "aes-256-gcm"
+    password: "lGqs95QkFHo2NV"
+    udp: true
+  - name: "🏳️ ShatakVPN 677408"
+    type: "ss"
+    server: "141.164.45.187"
+    port: 8091
+    cipher: "aes-256-gcm"
+    password: "PCnnH6SQSnfoS27"
     udp: true
   - name: "[OpenRay] 🇳🇱 NL-632"
     type: "ss"
@@ -5317,13 +5448,6 @@ proxies:
     port: 2342
     cipher: "chacha20-ietf-poly1305"
     password: "XV4bvaJIWoxl3IYEC1e6W7"
-    udp: true
-  - name: "🇺🇸 | @WhiteDNS | US1161|2.4MB/s|DNSOK|GPT⁺-US"
-    type: "ss"
-    server: "140.82.63.79"
-    port: 8388
-    cipher: "chacha20-ietf-poly1305"
-    password: "ZoZtfPOyVvmKARUN"
     udp: true
   - name: "🇩🇪 | @WhiteDNS | DE214|2.0MB/s|DNSOK|GPT⁺-GB"
     type: "ss"
@@ -5451,15 +5575,31 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 491BE8"
+  - name: "US 🇺🇸 | @Raydikalx | 7AA8C3"
     type: "vmess"
-    server: "82.198.246.37"
-    port: 180
-    uuid: "d13fc2f5-3e05-4795-81eb-44143a09e552"
+    server: "167.88.62.124"
+    port: 22324
+    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | C895A6"
+  - name: "US 🇺🇸 | @Raydikalx | 4B0BA9"
+    type: "vmess"
+    server: "167.88.63.59"
+    port: 22324
+    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 3D513A"
+    type: "vmess"
+    server: "172.111.38.100"
+    port: 22324
+    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 50B762"
     type: "vmess"
     server: "82.198.246.97"
     port: 180
@@ -5467,7 +5607,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 3E46F6"
+  - name: "US 🇺🇸 | @Raydikalx | 16964D"
     type: "vmess"
     server: "82.198.246.250"
     port: 180
@@ -5475,11 +5615,11 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 73199F"
+  - name: "US 🇺🇸 | @Raydikalx | AA510F"
     type: "vmess"
-    server: "167.17.68.89"
-    port: 22324
-    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
+    server: "82.198.246.37"
+    port: 180
+    uuid: "d13fc2f5-3e05-4795-81eb-44143a09e552"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -5491,17 +5631,9 @@ proxies:
     alterId: 0
     cipher: "aes-128-gcm"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 6B3F16"
+  - name: "CA 🇨🇦 | @Raydikalx | 82A9E2"
     type: "vmess"
-    server: "216.152.152.187"
-    port: 22324
-    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "US 🇺🇸 | @Raydikalx | F5B1CA"
-    type: "vmess"
-    server: "216.106.185.141"
+    server: "134.195.198.214"
     port: 22324
     uuid: "04621bae-ab36-11ec-b909-0242ac120002"
     alterId: 0
@@ -5515,6 +5647,14 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "US 🇺🇸 | @Raydikalx | 73199F"
+    type: "vmess"
+    server: "167.17.68.89"
+    port: 22324
+    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "US 🇺🇸 | @Raydikalx | 101269"
     type: "vmess"
     server: "84.17.41.2"
@@ -5523,19 +5663,19 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | 9B4F83"
+  - name: "US 🇺🇸 | @Raydikalx | 120B0A"
     type: "vmess"
-    server: "129.146.77.248"
-    port: 39495
-    uuid: "f836c736-87fc-4fde-aabc-00857ecdff3e"
+    server: "67.220.72.237"
+    port: 22324
+    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "US 🇺🇸 | @Raydikalx | E38DDB"
+  - name: "US 🇺🇸 | @Raydikalx | 19450F"
     type: "vmess"
-    server: "169.197.142.22"
-    port: 18000
-    uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe"
+    server: "107.173.254.27"
+    port: 15311
+    uuid: "ad78d02b-873f-4cff-8d4a-673f53d6ce0f"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -5595,27 +5735,27 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇭🇰 Hong Kong, Hong Kong | [BL]"
+    type: "vmess"
+    server: "i2psm3knof5qjjix.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427c1f94373876c2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇭🇰 Hong Kong, Hong Kong | [BL]-1"
+    type: "vmess"
+    server: "i2psm3knof5qjjix.v.3dns.vip"
+    port: 443
+    uuid: "f23bb427-c1f9-4373-876c-2f43e9f790f3"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇭🇰 Hong Kong, Tin Shui Wai | [BL]"
     type: "vmess"
     server: "dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn"
     port: 443
     uuid: "d90e4077-bc7e-414d-a650-70bf1baae4d6"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇹🇼 Taiwan, Yuanlin | [BL]"
-    type: "vmess"
-    server: "654168416355441.oylfmxz.cn"
-    port: 443
-    uuid: "d90e4077-bc7e-414d-a650-70bf1baae4d6"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇺🇸 United States, St Louis (Downtown) | [BL]"
-    type: "vmess"
-    server: "chatgpt.com"
-    port: 8443
-    uuid: "60441548-b68e-43b2-8191-e3b884be4b3c"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -5648,6 +5788,14 @@ proxies:
     server: "172.237.70.226"
     port: 22324
     uuid: "04621bae-ab36-11ec-b909-0242ac120002"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇺🇸 | @WhiteDNS | US1153|2.6MB/s|DNSOK|GPT⁺-US"
+    type: "vmess"
+    server: "129.146.77.248"
+    port: 39495
+    uuid: "f836c736-87fc-4fde-aabc-00857ecdff3e"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -5782,7 +5930,27 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/assignment"
-  - name: ".𖥔 ݁ ˖ִ🛸༄˖°. | [BL]"
+  - name: "🇨🇳 China, Guilin | [BL]"
+    type: "trojan"
+    server: "100.42.228.109"
+    port: 443
+    password: "BxceQaOe"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "100.42.228.109"
+  - name: "🇩🇪 Germany, Frankfurt am Main | [BL]"
+    type: "trojan"
+    server: "185.238.191.45"
+    port: 443
+    password: "-svgCjAG2X4akN5ats6xfvSmTSNjEnSA"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "d4-de2.cloud-cdn.xyz"
+    grpc-opts:
+      grpc-service-name: "ajv"
+  - name: "🇺🇸 United States, Santa Clara | [BL]"
     type: "trojan"
     server: "43.173.90.202"
     port: 443
@@ -5818,11 +5986,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇨🇳 China, Haidian (Haidian Qu) | [BL]"
+      - "🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]-1"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]-2"
+      - "🇲🇾 Malaysia, Cyberjaya | [BL]-3"
+      - "🇲🇾 Malaysia, Cyberjaya | [BL]-4"
+      - "🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | [BL]"
       - "🇷🇺 Russia, Moscow | 🌐 | [BL]"
       - "🇷🇺 Russia, Moscow | 🌐 | [BL]-1"
+      - "🇷🇺 Russia, Moscow | 🌐 | [BL]-2"
       - "🇫🇷 | @WhiteDNS | FR195|7.2MB/s|DNSOK|GPT⁺-FR"
       - "🇺🇸 | @WhiteDNS | US1133|5.7MB/s|DNSOK|GPT⁺-US"
       - "🇺🇸 | @WhiteDNS | US1144|2.9MB/s|DNSOK|GPT⁺-US"
@@ -5907,48 +6081,30 @@ proxy-groups:
       - "Server 166 🇺🇸"
       - "Server 169 🇨🇦"
       - "Server 170 🇺🇸"
-      - "US 🇺🇸 | @Raydikalx | B5554D"
-      - "US 🇺🇸 | @Raydikalx | 2ABC0C"
-      - "US 🇺🇸 | @Raydikalx | 19DFAE"
-      - "US 🇺🇸 | @Raydikalx | B44369"
-      - "US 🇺🇸 | @Raydikalx | CD5181"
-      - "US 🇺🇸 | @Raydikalx | 97FB17"
-      - "US 🇺🇸 | @Raydikalx | DE43D9"
-      - "US 🇺🇸 | @Raydikalx | BAC21B"
-      - "US 🇺🇸 | @Raydikalx | 99352A"
-      - "US 🇺🇸 | @Raydikalx | 258AB3"
-      - "US 🇺🇸 | @Raydikalx | CA7613"
-      - "US 🇺🇸 | @Raydikalx | F06532"
-      - "US 🇺🇸 | @Raydikalx | B8D498"
+      - "US 🇺🇸 | @Raydikalx | 59A8D3"
+      - "US 🇺🇸 | @Raydikalx | E7FE2D"
+      - "US 🇺🇸 | @Raydikalx | 5AAC6E"
+      - "US 🇺🇸 | @Raydikalx | 010324"
+      - "CA 🇨🇦 | @Raydikalx | 13D326"
+      - "US 🇺🇸 | @Raydikalx | F40C28"
+      - "US 🇺🇸 | @Raydikalx | D01265"
+      - "US 🇺🇸 | @Raydikalx | D27190"
+      - "US 🇺🇸 | @Raydikalx | A3A64A"
+      - "US 🇺🇸 | @Raydikalx | 2E7150"
+      - "CA 🇨🇦 | @Raydikalx | BF17E3"
+      - "US 🇺🇸 | @Raydikalx | 60C474"
+      - "US 🇺🇸 | @Raydikalx | 7E08CC"
+      - "US 🇺🇸 | @Raydikalx | 45D6E2"
+      - "CA 🇨🇦 | @Raydikalx | 63FD51"
+      - "US 🇺🇸 | @Raydikalx | 474258"
+      - "US 🇺🇸 | @Raydikalx | 776391"
+      - "US 🇺🇸 | @Raydikalx | 2CDE8F"
+      - "CA 🇨🇦 | @Raydikalx | 75F2DF"
+      - "US 🇺🇸 | @Raydikalx | 6A8F5F"
+      - "US 🇺🇸 | @Raydikalx | F810CA"
       - "US 🇺🇸 | @Raydikalx | F2D13C"
-      - "US 🇺🇸 | @Raydikalx | 10FF78"
-      - "US 🇺🇸 | @Raydikalx | 100149"
-      - "US 🇺🇸 | @Raydikalx | F922EE"
-      - "US 🇺🇸 | @Raydikalx | 1EC5C2"
-      - "US 🇺🇸 | @Raydikalx | D73C3B"
-      - "US 🇺🇸 | @Raydikalx | 91D02A"
-      - "US 🇺🇸 | @Raydikalx | 66830B"
-      - "US 🇺🇸 | @Raydikalx | 1FD863"
-      - "US 🇺🇸 | @Raydikalx | E89C89"
-      - "US 🇺🇸 | @Raydikalx | 4CDCFE"
-      - "US 🇺🇸 | @Raydikalx | 8BA744"
-      - "US 🇺🇸 | @Raydikalx | EE5BA3"
-      - "US 🇺🇸 | @Raydikalx | 6F42E7"
-      - "US 🇺🇸 | @Raydikalx | EEEE4A"
-      - "US 🇺🇸 | @Raydikalx | 74FBAF"
-      - "US 🇺🇸 | @Raydikalx | 6FE517"
-      - "CA 🇨🇦 | @Raydikalx | 679DD2"
-      - "CA 🇨🇦 | @Raydikalx | 01F44A"
-      - "CA 🇨🇦 | @Raydikalx | BC6006"
-      - "US 🇺🇸 | @Raydikalx | AB619F"
-      - "US 🇺🇸 | @Raydikalx | 75E559"
-      - "US 🇺🇸 | @Raydikalx | C834F5"
-      - "US 🇺🇸 | @Raydikalx | 9A1825"
-      - "CA 🇨🇦 | @Raydikalx | 5A01CE"
-      - "CA 🇨🇦 | @Raydikalx | BA6E49"
-      - "CA 🇨🇦 | @Raydikalx | 05250D"
-      - "US 🇺🇸 | @Raydikalx | EF3745"
-      - "US 🇺🇸 | @Raydikalx | 7756D7"
+      - "US 🇺🇸 | @Raydikalx | D48530"
+      - "US 🇺🇸 | @Raydikalx | 1646E6"
       - "@FREE2CONFIG - 1"
       - "@FREE2CONFIG - 2"
       - "@FREE2CONFIG - 3"
@@ -6058,7 +6214,6 @@ proxy-groups:
       - "@FREE2CONFIG - 137"
       - "@FREE2CONFIG - 138"
       - "@FREE2CONFIG - 139"
-      - "@FREE2CONFIG - 140"
       - "@FREE2CONFIG - 141"
       - "@FREE2CONFIG - 142"
       - "@FREE2CONFIG - 143"
@@ -6074,10 +6229,12 @@ proxy-groups:
       - "@FREE2CONFIG - 154"
       - "@FREE2CONFIG - 155"
       - "@FREE2CONFIG - 156"
+      - "@FREE2CONFIG - 157"
       - "@FREE2CONFIG - 158"
       - "@FREE2CONFIG - 159"
       - "@FREE2CONFIG - 160"
       - "@FREE2CONFIG - 161"
+      - "@FREE2CONFIG - 162"
       - "@FREE2CONFIG - 163"
       - "@FREE2CONFIG - 164"
       - "@FREE2CONFIG - 165"
@@ -6128,6 +6285,23 @@ proxy-groups:
       - "@FREE2CONFIG - 222"
       - "@FREE2CONFIG - 224"
       - "@FREE2CONFIG - 225"
+      - "@FREE2CONFIG - 228"
+      - "@FREE2CONFIG - 213"
+      - "@FREE2CONFIG - 214"
+      - "@FREE2CONFIG - 230"
+      - "@FREE2CONFIG - 215"
+      - "@FREE2CONFIG - 231"
+      - "@FREE2CONFIG - 216"
+      - "@FREE2CONFIG - 232"
+      - "@FREE2CONFIG - 233"
+      - "@FREE2CONFIG - 218"
+      - "@FREE2CONFIG - 234"
+      - "@FREE2CONFIG - 212"
+      - "@FREE2CONFIG - 235"
+      - "@FREE2CONFIG - 237"
+      - "@FREE2CONFIG - 241"
+      - "@FREE2CONFIG - 242"
+      - "@FREE2CONFIG - 243"
       - "Server 1 🇳🇱"
       - "Server 3 🇳🇱"
       - "Server 4 🇳🇱"
@@ -6185,59 +6359,70 @@ proxy-groups:
       - "Server 165 🇰🇷"
       - "Server 167 🇰🇷"
       - "Server 168 🇹🇼"
-      - "US 🇺🇸 | @Raydikalx | 569DA6"
+      - "US 🇺🇸 | @Raydikalx | F4AF2E"
+      - "US 🇺🇸 | @Raydikalx | FEA075"
+      - "CA 🇨🇦 | @Raydikalx | 94FAF6"
+      - "US 🇺🇸 | @Raydikalx | 7B7C80"
+      - "US 🇺🇸 | @Raydikalx | 36A242"
+      - "US 🇺🇸 | @Raydikalx | FC32AF"
+      - "US 🇺🇸 | @Raydikalx | BB7720"
+      - "US 🇺🇸 | @Raydikalx | E82A92"
+      - "US 🇺🇸 | @Raydikalx | 9366BE"
+      - "US 🇺🇸 | @Raydikalx | 02CE4D"
+      - "US 🇺🇸 | @Raydikalx | 088543"
+      - "CA 🇨🇦 | @Raydikalx | EACCED"
+      - "US 🇺🇸 | @Raydikalx | E86741"
+      - "CA 🇨🇦 | @Raydikalx | 029AE4"
       - "CA 🇨🇦 | @Raydikalx | DEBC1A"
-      - "🏳️ ShatakVPN 214964"
-      - "🏳️ ShatakVPN 444844"
-      - "🏳️ ShatakVPN 452727"
-      - "🏳️ ShatakVPN 356497"
-      - "🏳️ ShatakVPN 631578"
-      - "🏳️ ShatakVPN 227254"
-      - "🏳️ ShatakVPN 219243"
-      - "🏳️ ShatakVPN 836262"
-      - "🏳️ ShatakVPN 933419"
-      - "🏳️ ShatakVPN 717397"
-      - "🏳️ ShatakVPN 833728"
-      - "🏳️ ShatakVPN 518214"
-      - "🏳️ ShatakVPN 523164"
-      - "🏳️ ShatakVPN 285289"
-      - "🏳️ ShatakVPN 342312"
-      - "🏳️ ShatakVPN 985661"
-      - "🏳️ ShatakVPN 504406"
-      - "🏳️ ShatakVPN 915335"
-      - "🏳️ ShatakVPN 197393"
-      - "🏳️ ShatakVPN 800478"
-      - "🏳️ ShatakVPN 938602"
-      - "🏳️ ShatakVPN 222762"
-      - "🏳️ ShatakVPN 534729"
-      - "🏳️ ShatakVPN 343584"
-      - "🏳️ ShatakVPN 273654"
-      - "🏳️ ShatakVPN 168585"
-      - "🏳️ ShatakVPN 842600"
-      - "🏳️ ShatakVPN 470587"
-      - "🏳️ ShatakVPN 810824"
-      - "🏳️ ShatakVPN 238346"
-      - "🏳️ ShatakVPN 745534"
-      - "🏳️ ShatakVPN 960396"
-      - "🏳️ ShatakVPN 230348"
-      - "🏳️ ShatakVPN 755024"
-      - "🏳️ ShatakVPN 691128"
-      - "🏳️ ShatakVPN 419337"
-      - "🏳️ ShatakVPN 863255"
-      - "🏳️ ShatakVPN 134559"
-      - "🏳️ ShatakVPN 127475"
-      - "🏳️ ShatakVPN 454714"
-      - "🏳️ ShatakVPN 588461"
-      - "🏳️ ShatakVPN 983056"
-      - "🏳️ ShatakVPN 926042"
-      - "🏳️ ShatakVPN 167269"
-      - "🏳️ ShatakVPN 723088"
-      - "🏳️ ShatakVPN 405936"
-      - "🏳️ ShatakVPN 269468"
-      - "🏳️ ShatakVPN 959405"
-      - "🏳️ ShatakVPN 948791"
-      - "🏳️ ShatakVPN 119380"
-      - "🏳️ ShatakVPN 904743"
+      - "🏳️ ShatakVPN 916728"
+      - "🏳️ ShatakVPN 374973"
+      - "🏳️ ShatakVPN 437191"
+      - "🏳️ ShatakVPN 905951"
+      - "🏳️ ShatakVPN 408028"
+      - "🏳️ ShatakVPN 891064"
+      - "🏳️ ShatakVPN 460914"
+      - "🏳️ ShatakVPN 548144"
+      - "🏳️ ShatakVPN 853398"
+      - "🏳️ ShatakVPN 443421"
+      - "🏳️ ShatakVPN 836383"
+      - "🏳️ ShatakVPN 482893"
+      - "🏳️ ShatakVPN 286351"
+      - "🏳️ ShatakVPN 674849"
+      - "🏳️ ShatakVPN 313999"
+      - "🏳️ ShatakVPN 619892"
+      - "🏳️ ShatakVPN 907215"
+      - "🏳️ ShatakVPN 397257"
+      - "🏳️ ShatakVPN 806840"
+      - "🏳️ ShatakVPN 240347"
+      - "🏳️ ShatakVPN 698805"
+      - "🏳️ ShatakVPN 906357"
+      - "🏳️ ShatakVPN 597957"
+      - "🏳️ ShatakVPN 746889"
+      - "🏳️ ShatakVPN 637665"
+      - "🏳️ ShatakVPN 227175"
+      - "🏳️ ShatakVPN 733034"
+      - "🏳️ ShatakVPN 364047"
+      - "🏳️ ShatakVPN 527717"
+      - "🏳️ ShatakVPN 743837"
+      - "🏳️ ShatakVPN 768134"
+      - "🏳️ ShatakVPN 667413"
+      - "🏳️ ShatakVPN 685705"
+      - "🏳️ ShatakVPN 342411"
+      - "🏳️ ShatakVPN 945648"
+      - "🏳️ ShatakVPN 139800"
+      - "🏳️ ShatakVPN 571078"
+      - "🏳️ ShatakVPN 845619"
+      - "🏳️ ShatakVPN 914187"
+      - "🏳️ ShatakVPN 824184"
+      - "🏳️ ShatakVPN 939557"
+      - "🏳️ ShatakVPN 265794"
+      - "🏳️ ShatakVPN 814665"
+      - "🏳️ ShatakVPN 979365"
+      - "🏳️ ShatakVPN 125826"
+      - "🏳️ ShatakVPN 893513"
+      - "🏳️ ShatakVPN 971254"
+      - "🏳️ ShatakVPN 895361"
+      - "🏳️ ShatakVPN 677408"
       - "[OpenRay] 🇳🇱 NL-632"
       - "[OpenRay] 🇳🇱 NL-626"
       - "[OpenRay] 🇳🇱 NL-633"
@@ -6255,7 +6440,6 @@ proxy-groups:
       - "🇿🇦 | @WhiteDNS | ZA4|2.8MB/s|DNSOK|GPT⁺-ZA"
       - "🇿🇦 | @WhiteDNS | ZA5|2.6MB/s|DNSOK|GPT⁺-ZA"
       - "🇸🇬 | @WhiteDNS | SG113|2.5MB/s|DNSOK|GPT⁺-SG"
-      - "🇺🇸 | @WhiteDNS | US1161|2.4MB/s|DNSOK|GPT⁺-US"
       - "🇩🇪 | @WhiteDNS | DE214|2.0MB/s|DNSOK|GPT⁺-GB"
       - "🇿🇦 | @WhiteDNS | ZA6|1.0MB/s|DNSOK|GPT⁺-ZA"
       - "Server 2 🇩🇪"
@@ -6272,17 +6456,19 @@ proxy-groups:
       - "Server 110 🇸🇬"
       - "Server 134 🇹🇼"
       - "Server 153 🇺🇸"
-      - "US 🇺🇸 | @Raydikalx | 491BE8"
-      - "US 🇺🇸 | @Raydikalx | C895A6"
-      - "US 🇺🇸 | @Raydikalx | 3E46F6"
-      - "US 🇺🇸 | @Raydikalx | 73199F"
+      - "US 🇺🇸 | @Raydikalx | 7AA8C3"
+      - "US 🇺🇸 | @Raydikalx | 4B0BA9"
+      - "US 🇺🇸 | @Raydikalx | 3D513A"
+      - "US 🇺🇸 | @Raydikalx | 50B762"
+      - "US 🇺🇸 | @Raydikalx | 16964D"
+      - "US 🇺🇸 | @Raydikalx | AA510F"
       - "US 🇺🇸 | @Raydikalx | B6570F"
-      - "US 🇺🇸 | @Raydikalx | 6B3F16"
-      - "US 🇺🇸 | @Raydikalx | F5B1CA"
+      - "CA 🇨🇦 | @Raydikalx | 82A9E2"
       - "US 🇺🇸 | @Raydikalx | 55BE05"
+      - "US 🇺🇸 | @Raydikalx | 73199F"
       - "US 🇺🇸 | @Raydikalx | 101269"
-      - "US 🇺🇸 | @Raydikalx | 9B4F83"
-      - "US 🇺🇸 | @Raydikalx | E38DDB"
+      - "US 🇺🇸 | @Raydikalx | 120B0A"
+      - "US 🇺🇸 | @Raydikalx | 19450F"
       - "[OpenRay] 🇰🇿 KZ-53"
       - "[OpenRay] 🇰🇿 KZ-64"
       - "[OpenRay] 🇭🇰 HK-301"
@@ -6290,13 +6476,14 @@ proxy-groups:
       - "[OpenRay] 🇨🇦 CA-14153"
       - "[OpenRay] 🇵🇭 PH-9"
       - "[OpenRay] 🇲🇾 MY-42"
+      - "🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "🇭🇰 Hong Kong, Hong Kong | [BL]-1"
       - "🇭🇰 Hong Kong, Tin Shui Wai | [BL]"
-      - "🇹🇼 Taiwan, Yuanlin | [BL]"
-      - "🇺🇸 United States, St Louis (Downtown) | [BL]"
       - "🇩🇪 | @WhiteDNS | DE183|32.4MB/s|DNSOK|GPT⁺-DE"
       - "🇩🇪 | @WhiteDNS | DE185|30.8MB/s|DNSOK|GPT⁺-DE"
       - "🇳🇱 | @WhiteDNS | NL570|6.6MB/s|DNSOK|GPT⁺-NL"
       - "🇸🇬 | @WhiteDNS | SG111|2.8MB/s|DNSOK|GPT⁺-SG"
+      - "🇺🇸 | @WhiteDNS | US1153|2.6MB/s|DNSOK|GPT⁺-US"
       - "🇺🇸 | @WhiteDNS | US1156|2.5MB/s|DNSOK|GPT⁺"
       - "🇧🇷 | @WhiteDNS | BR23|2.3MB/s|DNSOK|GPT⁺-BR"
       - "🇰🇷 | @WhiteDNS | KR96|1.3MB/s|DNSOK|GPT⁺-KR"
@@ -6310,7 +6497,9 @@ proxy-groups:
       - "[OpenRay] Dynamic-12539"
       - "[OpenRay] Dynamic-11959"
       - "[OpenRay] Dynamic-13305"
-      - ".𖥔 ݁ ˖ִ🛸༄˖°. | [BL]"
+      - "🇨🇳 China, Guilin | [BL]"
+      - "🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "🇺🇸 United States, Santa Clara | [BL]"
       - "🇸🇬 | @WhiteDNS | SG127|1.2MB/s|DNSOK|GPT⁺-SG"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -6322,11 +6511,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇨🇳 China, Haidian (Haidian Qu) | [BL]"
+      - "🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]-1"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]-2"
+      - "🇲🇾 Malaysia, Cyberjaya | [BL]-3"
+      - "🇲🇾 Malaysia, Cyberjaya | [BL]-4"
+      - "🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | [BL]"
       - "🇷🇺 Russia, Moscow | 🌐 | [BL]"
       - "🇷🇺 Russia, Moscow | 🌐 | [BL]-1"
+      - "🇷🇺 Russia, Moscow | 🌐 | [BL]-2"
       - "🇫🇷 | @WhiteDNS | FR195|7.2MB/s|DNSOK|GPT⁺-FR"
       - "🇺🇸 | @WhiteDNS | US1133|5.7MB/s|DNSOK|GPT⁺-US"
       - "🇺🇸 | @WhiteDNS | US1144|2.9MB/s|DNSOK|GPT⁺-US"
@@ -6411,48 +6606,30 @@ proxy-groups:
       - "Server 166 🇺🇸"
       - "Server 169 🇨🇦"
       - "Server 170 🇺🇸"
-      - "US 🇺🇸 | @Raydikalx | B5554D"
-      - "US 🇺🇸 | @Raydikalx | 2ABC0C"
-      - "US 🇺🇸 | @Raydikalx | 19DFAE"
-      - "US 🇺🇸 | @Raydikalx | B44369"
-      - "US 🇺🇸 | @Raydikalx | CD5181"
-      - "US 🇺🇸 | @Raydikalx | 97FB17"
-      - "US 🇺🇸 | @Raydikalx | DE43D9"
-      - "US 🇺🇸 | @Raydikalx | BAC21B"
-      - "US 🇺🇸 | @Raydikalx | 99352A"
-      - "US 🇺🇸 | @Raydikalx | 258AB3"
-      - "US 🇺🇸 | @Raydikalx | CA7613"
-      - "US 🇺🇸 | @Raydikalx | F06532"
-      - "US 🇺🇸 | @Raydikalx | B8D498"
+      - "US 🇺🇸 | @Raydikalx | 59A8D3"
+      - "US 🇺🇸 | @Raydikalx | E7FE2D"
+      - "US 🇺🇸 | @Raydikalx | 5AAC6E"
+      - "US 🇺🇸 | @Raydikalx | 010324"
+      - "CA 🇨🇦 | @Raydikalx | 13D326"
+      - "US 🇺🇸 | @Raydikalx | F40C28"
+      - "US 🇺🇸 | @Raydikalx | D01265"
+      - "US 🇺🇸 | @Raydikalx | D27190"
+      - "US 🇺🇸 | @Raydikalx | A3A64A"
+      - "US 🇺🇸 | @Raydikalx | 2E7150"
+      - "CA 🇨🇦 | @Raydikalx | BF17E3"
+      - "US 🇺🇸 | @Raydikalx | 60C474"
+      - "US 🇺🇸 | @Raydikalx | 7E08CC"
+      - "US 🇺🇸 | @Raydikalx | 45D6E2"
+      - "CA 🇨🇦 | @Raydikalx | 63FD51"
+      - "US 🇺🇸 | @Raydikalx | 474258"
+      - "US 🇺🇸 | @Raydikalx | 776391"
+      - "US 🇺🇸 | @Raydikalx | 2CDE8F"
+      - "CA 🇨🇦 | @Raydikalx | 75F2DF"
+      - "US 🇺🇸 | @Raydikalx | 6A8F5F"
+      - "US 🇺🇸 | @Raydikalx | F810CA"
       - "US 🇺🇸 | @Raydikalx | F2D13C"
-      - "US 🇺🇸 | @Raydikalx | 10FF78"
-      - "US 🇺🇸 | @Raydikalx | 100149"
-      - "US 🇺🇸 | @Raydikalx | F922EE"
-      - "US 🇺🇸 | @Raydikalx | 1EC5C2"
-      - "US 🇺🇸 | @Raydikalx | D73C3B"
-      - "US 🇺🇸 | @Raydikalx | 91D02A"
-      - "US 🇺🇸 | @Raydikalx | 66830B"
-      - "US 🇺🇸 | @Raydikalx | 1FD863"
-      - "US 🇺🇸 | @Raydikalx | E89C89"
-      - "US 🇺🇸 | @Raydikalx | 4CDCFE"
-      - "US 🇺🇸 | @Raydikalx | 8BA744"
-      - "US 🇺🇸 | @Raydikalx | EE5BA3"
-      - "US 🇺🇸 | @Raydikalx | 6F42E7"
-      - "US 🇺🇸 | @Raydikalx | EEEE4A"
-      - "US 🇺🇸 | @Raydikalx | 74FBAF"
-      - "US 🇺🇸 | @Raydikalx | 6FE517"
-      - "CA 🇨🇦 | @Raydikalx | 679DD2"
-      - "CA 🇨🇦 | @Raydikalx | 01F44A"
-      - "CA 🇨🇦 | @Raydikalx | BC6006"
-      - "US 🇺🇸 | @Raydikalx | AB619F"
-      - "US 🇺🇸 | @Raydikalx | 75E559"
-      - "US 🇺🇸 | @Raydikalx | C834F5"
-      - "US 🇺🇸 | @Raydikalx | 9A1825"
-      - "CA 🇨🇦 | @Raydikalx | 5A01CE"
-      - "CA 🇨🇦 | @Raydikalx | BA6E49"
-      - "CA 🇨🇦 | @Raydikalx | 05250D"
-      - "US 🇺🇸 | @Raydikalx | EF3745"
-      - "US 🇺🇸 | @Raydikalx | 7756D7"
+      - "US 🇺🇸 | @Raydikalx | D48530"
+      - "US 🇺🇸 | @Raydikalx | 1646E6"
       - "@FREE2CONFIG - 1"
       - "@FREE2CONFIG - 2"
       - "@FREE2CONFIG - 3"
@@ -6562,7 +6739,6 @@ proxy-groups:
       - "@FREE2CONFIG - 137"
       - "@FREE2CONFIG - 138"
       - "@FREE2CONFIG - 139"
-      - "@FREE2CONFIG - 140"
       - "@FREE2CONFIG - 141"
       - "@FREE2CONFIG - 142"
       - "@FREE2CONFIG - 143"
@@ -6578,10 +6754,12 @@ proxy-groups:
       - "@FREE2CONFIG - 154"
       - "@FREE2CONFIG - 155"
       - "@FREE2CONFIG - 156"
+      - "@FREE2CONFIG - 157"
       - "@FREE2CONFIG - 158"
       - "@FREE2CONFIG - 159"
       - "@FREE2CONFIG - 160"
       - "@FREE2CONFIG - 161"
+      - "@FREE2CONFIG - 162"
       - "@FREE2CONFIG - 163"
       - "@FREE2CONFIG - 164"
       - "@FREE2CONFIG - 165"
@@ -6632,6 +6810,23 @@ proxy-groups:
       - "@FREE2CONFIG - 222"
       - "@FREE2CONFIG - 224"
       - "@FREE2CONFIG - 225"
+      - "@FREE2CONFIG - 228"
+      - "@FREE2CONFIG - 213"
+      - "@FREE2CONFIG - 214"
+      - "@FREE2CONFIG - 230"
+      - "@FREE2CONFIG - 215"
+      - "@FREE2CONFIG - 231"
+      - "@FREE2CONFIG - 216"
+      - "@FREE2CONFIG - 232"
+      - "@FREE2CONFIG - 233"
+      - "@FREE2CONFIG - 218"
+      - "@FREE2CONFIG - 234"
+      - "@FREE2CONFIG - 212"
+      - "@FREE2CONFIG - 235"
+      - "@FREE2CONFIG - 237"
+      - "@FREE2CONFIG - 241"
+      - "@FREE2CONFIG - 242"
+      - "@FREE2CONFIG - 243"
       - "Server 1 🇳🇱"
       - "Server 3 🇳🇱"
       - "Server 4 🇳🇱"
@@ -6689,59 +6884,70 @@ proxy-groups:
       - "Server 165 🇰🇷"
       - "Server 167 🇰🇷"
       - "Server 168 🇹🇼"
-      - "US 🇺🇸 | @Raydikalx | 569DA6"
+      - "US 🇺🇸 | @Raydikalx | F4AF2E"
+      - "US 🇺🇸 | @Raydikalx | FEA075"
+      - "CA 🇨🇦 | @Raydikalx | 94FAF6"
+      - "US 🇺🇸 | @Raydikalx | 7B7C80"
+      - "US 🇺🇸 | @Raydikalx | 36A242"
+      - "US 🇺🇸 | @Raydikalx | FC32AF"
+      - "US 🇺🇸 | @Raydikalx | BB7720"
+      - "US 🇺🇸 | @Raydikalx | E82A92"
+      - "US 🇺🇸 | @Raydikalx | 9366BE"
+      - "US 🇺🇸 | @Raydikalx | 02CE4D"
+      - "US 🇺🇸 | @Raydikalx | 088543"
+      - "CA 🇨🇦 | @Raydikalx | EACCED"
+      - "US 🇺🇸 | @Raydikalx | E86741"
+      - "CA 🇨🇦 | @Raydikalx | 029AE4"
       - "CA 🇨🇦 | @Raydikalx | DEBC1A"
-      - "🏳️ ShatakVPN 214964"
-      - "🏳️ ShatakVPN 444844"
-      - "🏳️ ShatakVPN 452727"
-      - "🏳️ ShatakVPN 356497"
-      - "🏳️ ShatakVPN 631578"
-      - "🏳️ ShatakVPN 227254"
-      - "🏳️ ShatakVPN 219243"
-      - "🏳️ ShatakVPN 836262"
-      - "🏳️ ShatakVPN 933419"
-      - "🏳️ ShatakVPN 717397"
-      - "🏳️ ShatakVPN 833728"
-      - "🏳️ ShatakVPN 518214"
-      - "🏳️ ShatakVPN 523164"
-      - "🏳️ ShatakVPN 285289"
-      - "🏳️ ShatakVPN 342312"
-      - "🏳️ ShatakVPN 985661"
-      - "🏳️ ShatakVPN 504406"
-      - "🏳️ ShatakVPN 915335"
-      - "🏳️ ShatakVPN 197393"
-      - "🏳️ ShatakVPN 800478"
-      - "🏳️ ShatakVPN 938602"
-      - "🏳️ ShatakVPN 222762"
-      - "🏳️ ShatakVPN 534729"
-      - "🏳️ ShatakVPN 343584"
-      - "🏳️ ShatakVPN 273654"
-      - "🏳️ ShatakVPN 168585"
-      - "🏳️ ShatakVPN 842600"
-      - "🏳️ ShatakVPN 470587"
-      - "🏳️ ShatakVPN 810824"
-      - "🏳️ ShatakVPN 238346"
-      - "🏳️ ShatakVPN 745534"
-      - "🏳️ ShatakVPN 960396"
-      - "🏳️ ShatakVPN 230348"
-      - "🏳️ ShatakVPN 755024"
-      - "🏳️ ShatakVPN 691128"
-      - "🏳️ ShatakVPN 419337"
-      - "🏳️ ShatakVPN 863255"
-      - "🏳️ ShatakVPN 134559"
-      - "🏳️ ShatakVPN 127475"
-      - "🏳️ ShatakVPN 454714"
-      - "🏳️ ShatakVPN 588461"
-      - "🏳️ ShatakVPN 983056"
-      - "🏳️ ShatakVPN 926042"
-      - "🏳️ ShatakVPN 167269"
-      - "🏳️ ShatakVPN 723088"
-      - "🏳️ ShatakVPN 405936"
-      - "🏳️ ShatakVPN 269468"
-      - "🏳️ ShatakVPN 959405"
-      - "🏳️ ShatakVPN 948791"
-      - "🏳️ ShatakVPN 119380"
-      - "🏳️ ShatakVPN 904743"
+      - "🏳️ ShatakVPN 916728"
+      - "🏳️ ShatakVPN 374973"
+      - "🏳️ ShatakVPN 437191"
+      - "🏳️ ShatakVPN 905951"
+      - "🏳️ ShatakVPN 408028"
+      - "🏳️ ShatakVPN 891064"
+      - "🏳️ ShatakVPN 460914"
+      - "🏳️ ShatakVPN 548144"
+      - "🏳️ ShatakVPN 853398"
+      - "🏳️ ShatakVPN 443421"
+      - "🏳️ ShatakVPN 836383"
+      - "🏳️ ShatakVPN 482893"
+      - "🏳️ ShatakVPN 286351"
+      - "🏳️ ShatakVPN 674849"
+      - "🏳️ ShatakVPN 313999"
+      - "🏳️ ShatakVPN 619892"
+      - "🏳️ ShatakVPN 907215"
+      - "🏳️ ShatakVPN 397257"
+      - "🏳️ ShatakVPN 806840"
+      - "🏳️ ShatakVPN 240347"
+      - "🏳️ ShatakVPN 698805"
+      - "🏳️ ShatakVPN 906357"
+      - "🏳️ ShatakVPN 597957"
+      - "🏳️ ShatakVPN 746889"
+      - "🏳️ ShatakVPN 637665"
+      - "🏳️ ShatakVPN 227175"
+      - "🏳️ ShatakVPN 733034"
+      - "🏳️ ShatakVPN 364047"
+      - "🏳️ ShatakVPN 527717"
+      - "🏳️ ShatakVPN 743837"
+      - "🏳️ ShatakVPN 768134"
+      - "🏳️ ShatakVPN 667413"
+      - "🏳️ ShatakVPN 685705"
+      - "🏳️ ShatakVPN 342411"
+      - "🏳️ ShatakVPN 945648"
+      - "🏳️ ShatakVPN 139800"
+      - "🏳️ ShatakVPN 571078"
+      - "🏳️ ShatakVPN 845619"
+      - "🏳️ ShatakVPN 914187"
+      - "🏳️ ShatakVPN 824184"
+      - "🏳️ ShatakVPN 939557"
+      - "🏳️ ShatakVPN 265794"
+      - "🏳️ ShatakVPN 814665"
+      - "🏳️ ShatakVPN 979365"
+      - "🏳️ ShatakVPN 125826"
+      - "🏳️ ShatakVPN 893513"
+      - "🏳️ ShatakVPN 971254"
+      - "🏳️ ShatakVPN 895361"
+      - "🏳️ ShatakVPN 677408"
       - "[OpenRay] 🇳🇱 NL-632"
       - "[OpenRay] 🇳🇱 NL-626"
       - "[OpenRay] 🇳🇱 NL-633"
@@ -6759,7 +6965,6 @@ proxy-groups:
       - "🇿🇦 | @WhiteDNS | ZA4|2.8MB/s|DNSOK|GPT⁺-ZA"
       - "🇿🇦 | @WhiteDNS | ZA5|2.6MB/s|DNSOK|GPT⁺-ZA"
       - "🇸🇬 | @WhiteDNS | SG113|2.5MB/s|DNSOK|GPT⁺-SG"
-      - "🇺🇸 | @WhiteDNS | US1161|2.4MB/s|DNSOK|GPT⁺-US"
       - "🇩🇪 | @WhiteDNS | DE214|2.0MB/s|DNSOK|GPT⁺-GB"
       - "🇿🇦 | @WhiteDNS | ZA6|1.0MB/s|DNSOK|GPT⁺-ZA"
       - "Server 2 🇩🇪"
@@ -6776,17 +6981,19 @@ proxy-groups:
       - "Server 110 🇸🇬"
       - "Server 134 🇹🇼"
       - "Server 153 🇺🇸"
-      - "US 🇺🇸 | @Raydikalx | 491BE8"
-      - "US 🇺🇸 | @Raydikalx | C895A6"
-      - "US 🇺🇸 | @Raydikalx | 3E46F6"
-      - "US 🇺🇸 | @Raydikalx | 73199F"
+      - "US 🇺🇸 | @Raydikalx | 7AA8C3"
+      - "US 🇺🇸 | @Raydikalx | 4B0BA9"
+      - "US 🇺🇸 | @Raydikalx | 3D513A"
+      - "US 🇺🇸 | @Raydikalx | 50B762"
+      - "US 🇺🇸 | @Raydikalx | 16964D"
+      - "US 🇺🇸 | @Raydikalx | AA510F"
       - "US 🇺🇸 | @Raydikalx | B6570F"
-      - "US 🇺🇸 | @Raydikalx | 6B3F16"
-      - "US 🇺🇸 | @Raydikalx | F5B1CA"
+      - "CA 🇨🇦 | @Raydikalx | 82A9E2"
       - "US 🇺🇸 | @Raydikalx | 55BE05"
+      - "US 🇺🇸 | @Raydikalx | 73199F"
       - "US 🇺🇸 | @Raydikalx | 101269"
-      - "US 🇺🇸 | @Raydikalx | 9B4F83"
-      - "US 🇺🇸 | @Raydikalx | E38DDB"
+      - "US 🇺🇸 | @Raydikalx | 120B0A"
+      - "US 🇺🇸 | @Raydikalx | 19450F"
       - "[OpenRay] 🇰🇿 KZ-53"
       - "[OpenRay] 🇰🇿 KZ-64"
       - "[OpenRay] 🇭🇰 HK-301"
@@ -6794,13 +7001,14 @@ proxy-groups:
       - "[OpenRay] 🇨🇦 CA-14153"
       - "[OpenRay] 🇵🇭 PH-9"
       - "[OpenRay] 🇲🇾 MY-42"
+      - "🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "🇭🇰 Hong Kong, Hong Kong | [BL]-1"
       - "🇭🇰 Hong Kong, Tin Shui Wai | [BL]"
-      - "🇹🇼 Taiwan, Yuanlin | [BL]"
-      - "🇺🇸 United States, St Louis (Downtown) | [BL]"
       - "🇩🇪 | @WhiteDNS | DE183|32.4MB/s|DNSOK|GPT⁺-DE"
       - "🇩🇪 | @WhiteDNS | DE185|30.8MB/s|DNSOK|GPT⁺-DE"
       - "🇳🇱 | @WhiteDNS | NL570|6.6MB/s|DNSOK|GPT⁺-NL"
       - "🇸🇬 | @WhiteDNS | SG111|2.8MB/s|DNSOK|GPT⁺-SG"
+      - "🇺🇸 | @WhiteDNS | US1153|2.6MB/s|DNSOK|GPT⁺-US"
       - "🇺🇸 | @WhiteDNS | US1156|2.5MB/s|DNSOK|GPT⁺"
       - "🇧🇷 | @WhiteDNS | BR23|2.3MB/s|DNSOK|GPT⁺-BR"
       - "🇰🇷 | @WhiteDNS | KR96|1.3MB/s|DNSOK|GPT⁺-KR"
@@ -6814,7 +7022,9 @@ proxy-groups:
       - "[OpenRay] Dynamic-12539"
       - "[OpenRay] Dynamic-11959"
       - "[OpenRay] Dynamic-13305"
-      - ".𖥔 ݁ ˖ִ🛸༄˖°. | [BL]"
+      - "🇨🇳 China, Guilin | [BL]"
+      - "🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "🇺🇸 United States, Santa Clara | [BL]"
       - "🇸🇬 | @WhiteDNS | SG127|1.2MB/s|DNSOK|GPT⁺-SG"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -6825,11 +7035,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇨🇳 China, Haidian (Haidian Qu) | [BL]"
+      - "🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]-1"
       - "🇲🇾 Malaysia, Cyberjaya | [BL]-2"
+      - "🇲🇾 Malaysia, Cyberjaya | [BL]-3"
+      - "🇲🇾 Malaysia, Cyberjaya | [BL]-4"
+      - "🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | [BL]"
       - "🇷🇺 Russia, Moscow | 🌐 | [BL]"
       - "🇷🇺 Russia, Moscow | 🌐 | [BL]-1"
+      - "🇷🇺 Russia, Moscow | 🌐 | [BL]-2"
       - "🇫🇷 | @WhiteDNS | FR195|7.2MB/s|DNSOK|GPT⁺-FR"
       - "🇺🇸 | @WhiteDNS | US1133|5.7MB/s|DNSOK|GPT⁺-US"
       - "🇺🇸 | @WhiteDNS | US1144|2.9MB/s|DNSOK|GPT⁺-US"
@@ -6914,48 +7130,30 @@ proxy-groups:
       - "Server 166 🇺🇸"
       - "Server 169 🇨🇦"
       - "Server 170 🇺🇸"
-      - "US 🇺🇸 | @Raydikalx | B5554D"
-      - "US 🇺🇸 | @Raydikalx | 2ABC0C"
-      - "US 🇺🇸 | @Raydikalx | 19DFAE"
-      - "US 🇺🇸 | @Raydikalx | B44369"
-      - "US 🇺🇸 | @Raydikalx | CD5181"
-      - "US 🇺🇸 | @Raydikalx | 97FB17"
-      - "US 🇺🇸 | @Raydikalx | DE43D9"
-      - "US 🇺🇸 | @Raydikalx | BAC21B"
-      - "US 🇺🇸 | @Raydikalx | 99352A"
-      - "US 🇺🇸 | @Raydikalx | 258AB3"
-      - "US 🇺🇸 | @Raydikalx | CA7613"
-      - "US 🇺🇸 | @Raydikalx | F06532"
-      - "US 🇺🇸 | @Raydikalx | B8D498"
+      - "US 🇺🇸 | @Raydikalx | 59A8D3"
+      - "US 🇺🇸 | @Raydikalx | E7FE2D"
+      - "US 🇺🇸 | @Raydikalx | 5AAC6E"
+      - "US 🇺🇸 | @Raydikalx | 010324"
+      - "CA 🇨🇦 | @Raydikalx | 13D326"
+      - "US 🇺🇸 | @Raydikalx | F40C28"
+      - "US 🇺🇸 | @Raydikalx | D01265"
+      - "US 🇺🇸 | @Raydikalx | D27190"
+      - "US 🇺🇸 | @Raydikalx | A3A64A"
+      - "US 🇺🇸 | @Raydikalx | 2E7150"
+      - "CA 🇨🇦 | @Raydikalx | BF17E3"
+      - "US 🇺🇸 | @Raydikalx | 60C474"
+      - "US 🇺🇸 | @Raydikalx | 7E08CC"
+      - "US 🇺🇸 | @Raydikalx | 45D6E2"
+      - "CA 🇨🇦 | @Raydikalx | 63FD51"
+      - "US 🇺🇸 | @Raydikalx | 474258"
+      - "US 🇺🇸 | @Raydikalx | 776391"
+      - "US 🇺🇸 | @Raydikalx | 2CDE8F"
+      - "CA 🇨🇦 | @Raydikalx | 75F2DF"
+      - "US 🇺🇸 | @Raydikalx | 6A8F5F"
+      - "US 🇺🇸 | @Raydikalx | F810CA"
       - "US 🇺🇸 | @Raydikalx | F2D13C"
-      - "US 🇺🇸 | @Raydikalx | 10FF78"
-      - "US 🇺🇸 | @Raydikalx | 100149"
-      - "US 🇺🇸 | @Raydikalx | F922EE"
-      - "US 🇺🇸 | @Raydikalx | 1EC5C2"
-      - "US 🇺🇸 | @Raydikalx | D73C3B"
-      - "US 🇺🇸 | @Raydikalx | 91D02A"
-      - "US 🇺🇸 | @Raydikalx | 66830B"
-      - "US 🇺🇸 | @Raydikalx | 1FD863"
-      - "US 🇺🇸 | @Raydikalx | E89C89"
-      - "US 🇺🇸 | @Raydikalx | 4CDCFE"
-      - "US 🇺🇸 | @Raydikalx | 8BA744"
-      - "US 🇺🇸 | @Raydikalx | EE5BA3"
-      - "US 🇺🇸 | @Raydikalx | 6F42E7"
-      - "US 🇺🇸 | @Raydikalx | EEEE4A"
-      - "US 🇺🇸 | @Raydikalx | 74FBAF"
-      - "US 🇺🇸 | @Raydikalx | 6FE517"
-      - "CA 🇨🇦 | @Raydikalx | 679DD2"
-      - "CA 🇨🇦 | @Raydikalx | 01F44A"
-      - "CA 🇨🇦 | @Raydikalx | BC6006"
-      - "US 🇺🇸 | @Raydikalx | AB619F"
-      - "US 🇺🇸 | @Raydikalx | 75E559"
-      - "US 🇺🇸 | @Raydikalx | C834F5"
-      - "US 🇺🇸 | @Raydikalx | 9A1825"
-      - "CA 🇨🇦 | @Raydikalx | 5A01CE"
-      - "CA 🇨🇦 | @Raydikalx | BA6E49"
-      - "CA 🇨🇦 | @Raydikalx | 05250D"
-      - "US 🇺🇸 | @Raydikalx | EF3745"
-      - "US 🇺🇸 | @Raydikalx | 7756D7"
+      - "US 🇺🇸 | @Raydikalx | D48530"
+      - "US 🇺🇸 | @Raydikalx | 1646E6"
       - "@FREE2CONFIG - 1"
       - "@FREE2CONFIG - 2"
       - "@FREE2CONFIG - 3"
@@ -7065,7 +7263,6 @@ proxy-groups:
       - "@FREE2CONFIG - 137"
       - "@FREE2CONFIG - 138"
       - "@FREE2CONFIG - 139"
-      - "@FREE2CONFIG - 140"
       - "@FREE2CONFIG - 141"
       - "@FREE2CONFIG - 142"
       - "@FREE2CONFIG - 143"
@@ -7081,10 +7278,12 @@ proxy-groups:
       - "@FREE2CONFIG - 154"
       - "@FREE2CONFIG - 155"
       - "@FREE2CONFIG - 156"
+      - "@FREE2CONFIG - 157"
       - "@FREE2CONFIG - 158"
       - "@FREE2CONFIG - 159"
       - "@FREE2CONFIG - 160"
       - "@FREE2CONFIG - 161"
+      - "@FREE2CONFIG - 162"
       - "@FREE2CONFIG - 163"
       - "@FREE2CONFIG - 164"
       - "@FREE2CONFIG - 165"
@@ -7135,6 +7334,23 @@ proxy-groups:
       - "@FREE2CONFIG - 222"
       - "@FREE2CONFIG - 224"
       - "@FREE2CONFIG - 225"
+      - "@FREE2CONFIG - 228"
+      - "@FREE2CONFIG - 213"
+      - "@FREE2CONFIG - 214"
+      - "@FREE2CONFIG - 230"
+      - "@FREE2CONFIG - 215"
+      - "@FREE2CONFIG - 231"
+      - "@FREE2CONFIG - 216"
+      - "@FREE2CONFIG - 232"
+      - "@FREE2CONFIG - 233"
+      - "@FREE2CONFIG - 218"
+      - "@FREE2CONFIG - 234"
+      - "@FREE2CONFIG - 212"
+      - "@FREE2CONFIG - 235"
+      - "@FREE2CONFIG - 237"
+      - "@FREE2CONFIG - 241"
+      - "@FREE2CONFIG - 242"
+      - "@FREE2CONFIG - 243"
       - "Server 1 🇳🇱"
       - "Server 3 🇳🇱"
       - "Server 4 🇳🇱"
@@ -7192,59 +7408,70 @@ proxy-groups:
       - "Server 165 🇰🇷"
       - "Server 167 🇰🇷"
       - "Server 168 🇹🇼"
-      - "US 🇺🇸 | @Raydikalx | 569DA6"
+      - "US 🇺🇸 | @Raydikalx | F4AF2E"
+      - "US 🇺🇸 | @Raydikalx | FEA075"
+      - "CA 🇨🇦 | @Raydikalx | 94FAF6"
+      - "US 🇺🇸 | @Raydikalx | 7B7C80"
+      - "US 🇺🇸 | @Raydikalx | 36A242"
+      - "US 🇺🇸 | @Raydikalx | FC32AF"
+      - "US 🇺🇸 | @Raydikalx | BB7720"
+      - "US 🇺🇸 | @Raydikalx | E82A92"
+      - "US 🇺🇸 | @Raydikalx | 9366BE"
+      - "US 🇺🇸 | @Raydikalx | 02CE4D"
+      - "US 🇺🇸 | @Raydikalx | 088543"
+      - "CA 🇨🇦 | @Raydikalx | EACCED"
+      - "US 🇺🇸 | @Raydikalx | E86741"
+      - "CA 🇨🇦 | @Raydikalx | 029AE4"
       - "CA 🇨🇦 | @Raydikalx | DEBC1A"
-      - "🏳️ ShatakVPN 214964"
-      - "🏳️ ShatakVPN 444844"
-      - "🏳️ ShatakVPN 452727"
-      - "🏳️ ShatakVPN 356497"
-      - "🏳️ ShatakVPN 631578"
-      - "🏳️ ShatakVPN 227254"
-      - "🏳️ ShatakVPN 219243"
-      - "🏳️ ShatakVPN 836262"
-      - "🏳️ ShatakVPN 933419"
-      - "🏳️ ShatakVPN 717397"
-      - "🏳️ ShatakVPN 833728"
-      - "🏳️ ShatakVPN 518214"
-      - "🏳️ ShatakVPN 523164"
-      - "🏳️ ShatakVPN 285289"
-      - "🏳️ ShatakVPN 342312"
-      - "🏳️ ShatakVPN 985661"
-      - "🏳️ ShatakVPN 504406"
-      - "🏳️ ShatakVPN 915335"
-      - "🏳️ ShatakVPN 197393"
-      - "🏳️ ShatakVPN 800478"
-      - "🏳️ ShatakVPN 938602"
-      - "🏳️ ShatakVPN 222762"
-      - "🏳️ ShatakVPN 534729"
-      - "🏳️ ShatakVPN 343584"
-      - "🏳️ ShatakVPN 273654"
-      - "🏳️ ShatakVPN 168585"
-      - "🏳️ ShatakVPN 842600"
-      - "🏳️ ShatakVPN 470587"
-      - "🏳️ ShatakVPN 810824"
-      - "🏳️ ShatakVPN 238346"
-      - "🏳️ ShatakVPN 745534"
-      - "🏳️ ShatakVPN 960396"
-      - "🏳️ ShatakVPN 230348"
-      - "🏳️ ShatakVPN 755024"
-      - "🏳️ ShatakVPN 691128"
-      - "🏳️ ShatakVPN 419337"
-      - "🏳️ ShatakVPN 863255"
-      - "🏳️ ShatakVPN 134559"
-      - "🏳️ ShatakVPN 127475"
-      - "🏳️ ShatakVPN 454714"
-      - "🏳️ ShatakVPN 588461"
-      - "🏳️ ShatakVPN 983056"
-      - "🏳️ ShatakVPN 926042"
-      - "🏳️ ShatakVPN 167269"
-      - "🏳️ ShatakVPN 723088"
-      - "🏳️ ShatakVPN 405936"
-      - "🏳️ ShatakVPN 269468"
-      - "🏳️ ShatakVPN 959405"
-      - "🏳️ ShatakVPN 948791"
-      - "🏳️ ShatakVPN 119380"
-      - "🏳️ ShatakVPN 904743"
+      - "🏳️ ShatakVPN 916728"
+      - "🏳️ ShatakVPN 374973"
+      - "🏳️ ShatakVPN 437191"
+      - "🏳️ ShatakVPN 905951"
+      - "🏳️ ShatakVPN 408028"
+      - "🏳️ ShatakVPN 891064"
+      - "🏳️ ShatakVPN 460914"
+      - "🏳️ ShatakVPN 548144"
+      - "🏳️ ShatakVPN 853398"
+      - "🏳️ ShatakVPN 443421"
+      - "🏳️ ShatakVPN 836383"
+      - "🏳️ ShatakVPN 482893"
+      - "🏳️ ShatakVPN 286351"
+      - "🏳️ ShatakVPN 674849"
+      - "🏳️ ShatakVPN 313999"
+      - "🏳️ ShatakVPN 619892"
+      - "🏳️ ShatakVPN 907215"
+      - "🏳️ ShatakVPN 397257"
+      - "🏳️ ShatakVPN 806840"
+      - "🏳️ ShatakVPN 240347"
+      - "🏳️ ShatakVPN 698805"
+      - "🏳️ ShatakVPN 906357"
+      - "🏳️ ShatakVPN 597957"
+      - "🏳️ ShatakVPN 746889"
+      - "🏳️ ShatakVPN 637665"
+      - "🏳️ ShatakVPN 227175"
+      - "🏳️ ShatakVPN 733034"
+      - "🏳️ ShatakVPN 364047"
+      - "🏳️ ShatakVPN 527717"
+      - "🏳️ ShatakVPN 743837"
+      - "🏳️ ShatakVPN 768134"
+      - "🏳️ ShatakVPN 667413"
+      - "🏳️ ShatakVPN 685705"
+      - "🏳️ ShatakVPN 342411"
+      - "🏳️ ShatakVPN 945648"
+      - "🏳️ ShatakVPN 139800"
+      - "🏳️ ShatakVPN 571078"
+      - "🏳️ ShatakVPN 845619"
+      - "🏳️ ShatakVPN 914187"
+      - "🏳️ ShatakVPN 824184"
+      - "🏳️ ShatakVPN 939557"
+      - "🏳️ ShatakVPN 265794"
+      - "🏳️ ShatakVPN 814665"
+      - "🏳️ ShatakVPN 979365"
+      - "🏳️ ShatakVPN 125826"
+      - "🏳️ ShatakVPN 893513"
+      - "🏳️ ShatakVPN 971254"
+      - "🏳️ ShatakVPN 895361"
+      - "🏳️ ShatakVPN 677408"
       - "[OpenRay] 🇳🇱 NL-632"
       - "[OpenRay] 🇳🇱 NL-626"
       - "[OpenRay] 🇳🇱 NL-633"
@@ -7262,7 +7489,6 @@ proxy-groups:
       - "🇿🇦 | @WhiteDNS | ZA4|2.8MB/s|DNSOK|GPT⁺-ZA"
       - "🇿🇦 | @WhiteDNS | ZA5|2.6MB/s|DNSOK|GPT⁺-ZA"
       - "🇸🇬 | @WhiteDNS | SG113|2.5MB/s|DNSOK|GPT⁺-SG"
-      - "🇺🇸 | @WhiteDNS | US1161|2.4MB/s|DNSOK|GPT⁺-US"
       - "🇩🇪 | @WhiteDNS | DE214|2.0MB/s|DNSOK|GPT⁺-GB"
       - "🇿🇦 | @WhiteDNS | ZA6|1.0MB/s|DNSOK|GPT⁺-ZA"
       - "Server 2 🇩🇪"
@@ -7279,17 +7505,19 @@ proxy-groups:
       - "Server 110 🇸🇬"
       - "Server 134 🇹🇼"
       - "Server 153 🇺🇸"
-      - "US 🇺🇸 | @Raydikalx | 491BE8"
-      - "US 🇺🇸 | @Raydikalx | C895A6"
-      - "US 🇺🇸 | @Raydikalx | 3E46F6"
-      - "US 🇺🇸 | @Raydikalx | 73199F"
+      - "US 🇺🇸 | @Raydikalx | 7AA8C3"
+      - "US 🇺🇸 | @Raydikalx | 4B0BA9"
+      - "US 🇺🇸 | @Raydikalx | 3D513A"
+      - "US 🇺🇸 | @Raydikalx | 50B762"
+      - "US 🇺🇸 | @Raydikalx | 16964D"
+      - "US 🇺🇸 | @Raydikalx | AA510F"
       - "US 🇺🇸 | @Raydikalx | B6570F"
-      - "US 🇺🇸 | @Raydikalx | 6B3F16"
-      - "US 🇺🇸 | @Raydikalx | F5B1CA"
+      - "CA 🇨🇦 | @Raydikalx | 82A9E2"
       - "US 🇺🇸 | @Raydikalx | 55BE05"
+      - "US 🇺🇸 | @Raydikalx | 73199F"
       - "US 🇺🇸 | @Raydikalx | 101269"
-      - "US 🇺🇸 | @Raydikalx | 9B4F83"
-      - "US 🇺🇸 | @Raydikalx | E38DDB"
+      - "US 🇺🇸 | @Raydikalx | 120B0A"
+      - "US 🇺🇸 | @Raydikalx | 19450F"
       - "[OpenRay] 🇰🇿 KZ-53"
       - "[OpenRay] 🇰🇿 KZ-64"
       - "[OpenRay] 🇭🇰 HK-301"
@@ -7297,13 +7525,14 @@ proxy-groups:
       - "[OpenRay] 🇨🇦 CA-14153"
       - "[OpenRay] 🇵🇭 PH-9"
       - "[OpenRay] 🇲🇾 MY-42"
+      - "🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "🇭🇰 Hong Kong, Hong Kong | [BL]-1"
       - "🇭🇰 Hong Kong, Tin Shui Wai | [BL]"
-      - "🇹🇼 Taiwan, Yuanlin | [BL]"
-      - "🇺🇸 United States, St Louis (Downtown) | [BL]"
       - "🇩🇪 | @WhiteDNS | DE183|32.4MB/s|DNSOK|GPT⁺-DE"
       - "🇩🇪 | @WhiteDNS | DE185|30.8MB/s|DNSOK|GPT⁺-DE"
       - "🇳🇱 | @WhiteDNS | NL570|6.6MB/s|DNSOK|GPT⁺-NL"
       - "🇸🇬 | @WhiteDNS | SG111|2.8MB/s|DNSOK|GPT⁺-SG"
+      - "🇺🇸 | @WhiteDNS | US1153|2.6MB/s|DNSOK|GPT⁺-US"
       - "🇺🇸 | @WhiteDNS | US1156|2.5MB/s|DNSOK|GPT⁺"
       - "🇧🇷 | @WhiteDNS | BR23|2.3MB/s|DNSOK|GPT⁺-BR"
       - "🇰🇷 | @WhiteDNS | KR96|1.3MB/s|DNSOK|GPT⁺-KR"
@@ -7317,7 +7546,9 @@ proxy-groups:
       - "[OpenRay] Dynamic-12539"
       - "[OpenRay] Dynamic-11959"
       - "[OpenRay] Dynamic-13305"
-      - ".𖥔 ݁ ˖ִ🛸༄˖°. | [BL]"
+      - "🇨🇳 China, Guilin | [BL]"
+      - "🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "🇺🇸 United States, Santa Clara | [BL]"
       - "🇸🇬 | @WhiteDNS | SG127|1.2MB/s|DNSOK|GPT⁺-SG"
   - name: "المنت 💬"
     type: "select"
