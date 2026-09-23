@@ -515,16 +515,42 @@ proxies:
         Host: "cdn8848.776676.xyz"
   - name: "🇧🇿 @DeltaKroneckerGithub"
     type: "vless"
-    server: "45.135.235.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    server: "45.135.235.123"
+    port: 443
+    uuid: "1d16c6e0-1bbe-435b-b661-90043fee999c"
     udp: true
-    tls: false
+    tls: true
     network: "ws"
+    servername: "notls.lukongtou.eu.org"
+    client-fingerprint: "chrome"
     ws-opts:
-      path: "/?ed=2560"
+      path: "/Telegram-WangCai2"
       headers:
-        Host: "vms.lifetime07.workers.dev"
+        Host: "notls.lukongtou.eu.org"
+  - name: "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-202.181.177.8:8443"
+    type: "vless"
+    server: "202.181.177.8"
+    port: 8443
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
+    alpn:
+      - "networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-"
+    ws-opts:
+      path: "/channels/act"
+      headers:
+        Host: "cdn8848.776676.xyz"
+  - name: "🇧🇿 AU🇦🇺 | oplg1.cfcdn2.xyz-443 | 130.69ms"
+    type: "vmess"
+    server: "203.30.191.6"
+    port: 443
+    uuid: "c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7"
+    alterId: 0
+    cipher: "auto"
+    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -541,6 +567,8 @@ proxy-groups:
     proxies:
       - "🇧🇿 🇩🇪All⁴ | @BigSmoke_Config"
       - "🇧🇿 @DeltaKroneckerGithub"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-202.181.177.8:8443"
+      - "🇧🇿 AU🇦🇺 | oplg1.cfcdn2.xyz-443 | 130.69ms"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -553,6 +581,8 @@ proxy-groups:
     proxies:
       - "🇧🇿 🇩🇪All⁴ | @BigSmoke_Config"
       - "🇧🇿 @DeltaKroneckerGithub"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-202.181.177.8:8443"
+      - "🇧🇿 AU🇦🇺 | oplg1.cfcdn2.xyz-443 | 130.69ms"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -564,6 +594,8 @@ proxy-groups:
     proxies:
       - "🇧🇿 🇩🇪All⁴ | @BigSmoke_Config"
       - "🇧🇿 @DeltaKroneckerGithub"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-202.181.177.8:8443"
+      - "🇧🇿 AU🇦🇺 | oplg1.cfcdn2.xyz-443 | 130.69ms"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
