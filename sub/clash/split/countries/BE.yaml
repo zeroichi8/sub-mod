@@ -499,6 +499,13 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+    type: "ss"
+    server: "185.210.217.94"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
   - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
     type: "vless"
     server: "109.69.218.164"
@@ -511,39 +518,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
-  - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-113.30.152.247:8080"
-    type: "vless"
-    server: "113.30.152.247"
-    port: 8080
-    uuid: "38eb3e71-4349-4bd6-9baf-9740e1896495"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "unpkg.com"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko"
-      short-id: "b0d8c9a285c70f6f"
-  - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-    type: "ss"
-    server: "185.210.217.94"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.206:443"
-    type: "vless"
-    server: "109.69.218.206"
-    port: 443
-    uuid: "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "kind-wolf.cdn.cachefleet.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
   - name: "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
     type: "vless"
     server: "109.69.218.217"
@@ -590,7 +564,7 @@ proxies:
     alterId: 0
     cipher: "aes-128-gcm"
     udp: true
-  - name: "🇧🇪 RELAY🚩 | shuma.ccwu.cc-443 | 103.04ms"
+  - name: "🇧🇪 RELAY🚩 | shuma.ccwu.cc-443 | 2.55ms"
     type: "vless"
     server: "194.71.227.213"
     port: 443
@@ -603,7 +577,15 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 7.42ms"
+  - name: "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+    type: "vless"
+    server: "188.95.12.226"
+    port: 2095
+    uuid: "681314c5-b3ee-41f1-a959-fa42841f5383"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
     type: "vless"
     server: "151.101.9.80"
     port: 80
@@ -643,14 +625,6 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇧🇪 🆔ar14n24b 🔓 VL-HTTPUPGRADE-N/A ❔ XX 104ms"
-    type: "vless"
-    server: "cdn2.portalcode.ir"
-    port: 2095
-    uuid: "681314c5-b3ee-41f1-a959-fa42841f5383"
-    udp: true
-    tls: false
-    network: "httpupgrade"
   - name: "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
     type: "vmess"
     server: "192.71.249.186"
@@ -681,19 +655,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-113.30.152.247:8080"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.206:443"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
-      - "🇧🇪 RELAY🚩 | shuma.ccwu.cc-443 | 103.04ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 7.42ms"
+      - "🇧🇪 RELAY🚩 | shuma.ccwu.cc-443 | 2.55ms"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 @DeltaKroneckerGithub"
       - "🇧🇪 @DeltaKroneckerGithub-1"
-      - "🇧🇪 🆔ar14n24b 🔓 VL-HTTPUPGRADE-N/A ❔ XX 104ms"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -706,19 +678,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-113.30.152.247:8080"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.206:443"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
-      - "🇧🇪 RELAY🚩 | shuma.ccwu.cc-443 | 103.04ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 7.42ms"
+      - "🇧🇪 RELAY🚩 | shuma.ccwu.cc-443 | 2.55ms"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 @DeltaKroneckerGithub"
       - "🇧🇪 @DeltaKroneckerGithub-1"
-      - "🇧🇪 🆔ar14n24b 🔓 VL-HTTPUPGRADE-N/A ❔ XX 104ms"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
   - name: "توزیع بار چرخشی ⚖️"
@@ -730,19 +700,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-113.30.152.247:8080"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.206:443"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
-      - "🇧🇪 RELAY🚩 | shuma.ccwu.cc-443 | 103.04ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 7.42ms"
+      - "🇧🇪 RELAY🚩 | shuma.ccwu.cc-443 | 2.55ms"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 @DeltaKroneckerGithub"
       - "🇧🇪 @DeltaKroneckerGithub-1"
-      - "🇧🇪 🆔ar14n24b 🔓 VL-HTTPUPGRADE-N/A ❔ XX 104ms"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
   - name: "المنت 💬"
