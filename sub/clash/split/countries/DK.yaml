@@ -499,10 +499,10 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.208.169:8443"
+  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
     type: "vless"
-    server: "193.180.208.169"
-    port: 8443
+    server: "193.180.209.136"
+    port: 443
     uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
     udp: true
     tls: true
@@ -513,10 +513,10 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.208.169:8443"
     type: "vless"
-    server: "193.180.209.136"
-    port: 443
+    server: "193.180.208.169"
+    port: 8443
     uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
     udp: true
     tls: true
@@ -539,21 +539,14 @@ proxies:
     ws-opts:
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇩🇰 https://t.me/ForceRunVPN-🇩🇰-Copenhagen-509ms-M247 Europe SRL"
+  - name: "🇩🇰 https://t.me/ForceRunVPN-🇩🇰-Copenhagen-449ms-M247 Europe SRL"
     type: "ss"
     server: "38.180.214.110"
     port: 5600
     cipher: "aes-256-gcm"
     password: "Y6R9pAtvxxzmGC"
     udp: true
-  - name: "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
-    type: "ss"
-    server: "37.120.131.62"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-92.113.149.59:443-1"
+  - name: "🇩🇰 RELAY🚩 | shuma.ccwu.cc-443 | 6.38ms"
     type: "vless"
     server: "92.113.149.59"
     port: 443
@@ -566,6 +559,13 @@ proxies:
       path: "/fp=chrome"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+    type: "ss"
+    server: "37.120.131.62"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
   - name: "🇩🇰 DK 🇩🇰 | @Raydikalx | 01248C"
     type: "hysteria2"
     server: "se.xiaoliyu.cyou"
@@ -573,12 +573,6 @@ proxies:
     password: "19f72087-4591-4d72-930b-2697078ec2be"
     sni: "se.xiaoliyu.cyou"
     skip-cert-verify: true
-  - name: "🇩🇰 DK 🇩🇰 | @Raydikalx | E68282"
-    type: "hysteria2"
-    server: "se.xiaoliyu.cyou"
-    port: 4433
-    password: "19f72087-4591-4d72-930b-2697078ec2be"
-    sni: "se.xiaoliyu.cyou"
   - name: "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
     type: "trojan"
     server: "iranserver.com"
@@ -592,6 +586,20 @@ proxies:
       path: "/@Azarakhsh_Proxy?ed=2560"
       headers:
         Host: "tg.cmliussss.us.kg"
+  - name: "🇩🇰 DK 🇩🇰 | @Raydikalx | 76F306"
+    type: "vless"
+    server: "45.148.30.11"
+    port: 443
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/season/classify?ed=2560"
+      headers:
+        Host: "cdn8848.776676.xyz"
   - name: "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
     type: "vmess"
     server: "193.180.208.234"
@@ -630,15 +638,15 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.208.169:8443"
       - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.208.169:8443"
       - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-92.113.149.59:443"
-      - "🇩🇰 https://t.me/ForceRunVPN-🇩🇰-Copenhagen-509ms-M247 Europe SRL"
+      - "🇩🇰 https://t.me/ForceRunVPN-🇩🇰-Copenhagen-449ms-M247 Europe SRL"
+      - "🇩🇰 RELAY🚩 | shuma.ccwu.cc-443 | 6.38ms"
       - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-92.113.149.59:443-1"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 01248C"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | E68282"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
+      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 76F306"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
@@ -652,15 +660,15 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.208.169:8443"
       - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.208.169:8443"
       - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-92.113.149.59:443"
-      - "🇩🇰 https://t.me/ForceRunVPN-🇩🇰-Copenhagen-509ms-M247 Europe SRL"
+      - "🇩🇰 https://t.me/ForceRunVPN-🇩🇰-Copenhagen-449ms-M247 Europe SRL"
+      - "🇩🇰 RELAY🚩 | shuma.ccwu.cc-443 | 6.38ms"
       - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-92.113.149.59:443-1"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 01248C"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | E68282"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
+      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 76F306"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
@@ -673,15 +681,15 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.208.169:8443"
       - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.208.169:8443"
       - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-92.113.149.59:443"
-      - "🇩🇰 https://t.me/ForceRunVPN-🇩🇰-Copenhagen-509ms-M247 Europe SRL"
+      - "🇩🇰 https://t.me/ForceRunVPN-🇩🇰-Copenhagen-449ms-M247 Europe SRL"
+      - "🇩🇰 RELAY🚩 | shuma.ccwu.cc-443 | 6.38ms"
       - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-92.113.149.59:443-1"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 01248C"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | E68282"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
+      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 76F306"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
