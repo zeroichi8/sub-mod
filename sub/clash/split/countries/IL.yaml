@@ -499,7 +499,27 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇱 069-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
+  - name: "🇮🇱 🔒 VL-GRPC-TLS 🇮🇱 IL-72.4.65.116:443"
+    type: "vless"
+    server: "72.4.65.116"
+    port: 443
+    uuid: "0dca2cfe-98eb-4f9d-9a47-cf87510c558b"
+    udp: true
+    tls: true
+    network: "grpc"
+    servername: "assets-de2.pleiades.codes"
+    client-fingerprint: "chrome"
+    grpc-opts:
+      grpc-service-name: "cdn.v1.AssetService"
+  - name: "🇮🇱 🔒 VL-TCP-NONE 🇮🇱 IL-185.95.231.233:443"
+    type: "vless"
+    server: "185.95.231.233"
+    port: 443
+    uuid: "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇱 058-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
     type: "vless"
     server: "72.4.65.116"
     port: 443
@@ -511,69 +531,7 @@ proxies:
     client-fingerprint: "edge"
     grpc-opts:
       grpc-service-name: "cdn.v1.AssetService"
-  - name: "🇮🇱 086-🇮🇱 IL ✂️@GheychiAmoozesh"
-    type: "hysteria2"
-    server: "129.159.156.109"
-    port: 50160
-    password: "f25f19f29ce3fb53a35bf1b35b452a43"
-    sni: "www.bing.com"
   - name: "🇮🇱 @DeltaKroneckerGithub"
-    type: "vless"
-    server: "185.95.231.233"
-    port: 443
-    uuid: "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "store.steampowered.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho"
-      short-id: "a1b2c3d4"
-  - name: "🇮🇱 @DeltaKroneckerGithub-1"
-    type: "vless"
-    server: "185.249.153.108"
-    port: 443
-    uuid: "4cf9c712-11c4-47d8-aa31-a1693a1aa4e5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.nordivablog.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "xOJ3INBNzRKOKYGQZmSYczgTjTKwdYQ4BFfc75wVazw"
-      short-id: "73c9e31ccafda20e"
-  - name: "🇮🇱 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "193.202.10.248"
-    port: 40443
-    uuid: "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "deepl.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4"
-      short-id: "db46e2946fc466fd"
-  - name: "🇮🇱 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "45.140.204.199"
-    port: 8443
-    uuid: "482514e8-2979-4628-acf3-d04f607c4f12"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ads.x5.ru"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "FS94iBvy7Vx93IMVFkMmFgyHRD8YZ7hmj1yv7vpWwBQ"
-      short-id: "c8b62f04"
-  - name: "🇮🇱 @DeltaKroneckerGithub-4"
     type: "vless"
     server: "185.95.231.156"
     port: 443
@@ -587,7 +545,63 @@ proxies:
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
-  - name: "🇮🇱 REALITY|IL🇮🇱 | 45.140.204.34-8443 | 168.28ms"
+  - name: "🇮🇱 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "185.95.231.233"
+    port: 443
+    uuid: "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "store.steampowered.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho"
+      short-id: "a1b2c3d4"
+  - name: "🇮🇱 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "185.249.153.108"
+    port: 443
+    uuid: "4cf9c712-11c4-47d8-aa31-a1693a1aa4e5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.nordivablog.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "xOJ3INBNzRKOKYGQZmSYczgTjTKwdYQ4BFfc75wVazw"
+      short-id: "73c9e31ccafda20e"
+  - name: "🇮🇱 @DeltaKroneckerGithub-3"
+    type: "vless"
+    server: "de2.dzvn.space"
+    port: 2291
+    uuid: "25284368-40d5-4abe-9f56-54a07e88a7af"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de2.dzvn.space"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "tLWqTzKtCCMxxOzSskvSwDB2an1bxxZ706kcNDqGNWg"
+      short-id: "50ace5ab34f6df9b"
+  - name: "🇮🇱 @DeltaKroneckerGithub-4"
+    type: "vless"
+    server: "193.202.10.137"
+    port: 2291
+    uuid: "25284368-40d5-4abe-9f56-54a07e88a7af"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de2.dzvn.space"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "tLWqTzKtCCMxxOzSskvSwDB2an1bxxZ706kcNDqGNWg"
+      short-id: "50ace5ab34f6df9b"
+  - name: "🇮🇱 REALITY|IL🇮🇱 | 45.140.204.34-8443 | 103.99ms"
     type: "vless"
     server: "45.140.204.34"
     port: 8443
@@ -600,32 +614,6 @@ proxies:
     reality-opts:
       public-key: "N4UtYAhibzkb0n_U2Qmqze5-lZMQqDozqg7OCqvufGA"
       short-id: "7c8e3d4a9b1f26d3"
-  - name: "🇮🇱 REALITY|IL🇮🇱 | 185.249.153.108-443 | 153.01ms"
-    type: "vless"
-    server: "185.249.153.108"
-    port: 443
-    uuid: "4cf9c712-11c4-47d8-aa31-a1693a1aa4e5"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.nordivablog.ru"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "xOJ3INBNzRKOKYGQZmSYczgTjTKwdYQ4BFfc75wVazw"
-      short-id: "73c9e31ccafda20e"
-  - name: "🇮🇱 REALITY|IL🇮🇱 | 185.95.231.233-443 | 67.5ms"
-    type: "vless"
-    server: "185.95.231.233"
-    port: 443
-    uuid: "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "store.steampowered.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho"
-      short-id: "a1b2c3d4"
   - name: "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
     type: "trojan"
     server: "185.239.48.207"
@@ -638,6 +626,20 @@ proxies:
     ws-opts:
       headers:
         Host: "joss.gpj.web.id"
+  - name: "🇮🇱 https://t.me/ForceRunVPN-🇮🇱-RoshHa‘Ayin-473ms-SmartApe OU"
+    type: "vless"
+    server: "193.169.229.145"
+    port: 443
+    uuid: "46b3a70b-b99f-4c6e-aa83-df6d842bb954"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "isr.vpnskyline.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "2CwgJn1lc23uxQjAdGphQl4SSRmd1amunSpYXxgCgCM"
+      short-id: "7e13fde9"
   - name: "🇮🇱 IL 🇮🇱 | @Raydikalx | CCE58C"
     type: "vless"
     server: "94.154.123.222"
@@ -706,48 +708,19 @@ proxies:
     reality-opts:
       public-key: "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4"
       short-id: "db46e2946fc466fd"
-  - name: "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.137:2291"
+  - name: "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.233:443"
     type: "vless"
-    server: "193.202.10.137"
-    port: 2291
-    uuid: "25284368-40d5-4abe-9f56-54a07e88a7af"
+    server: "185.95.231.233"
+    port: 443
+    uuid: "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106"
     udp: true
     tls: true
     network: "tcp"
-    servername: "de2.dzvn.space"
-    client-fingerprint: "firefox"
+    servername: "store.steampowered.com"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "tLWqTzKtCCMxxOzSskvSwDB2an1bxxZ706kcNDqGNWg"
-      short-id: "50ace5ab34f6df9b"
-  - name: "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.248:40443"
-    type: "vless"
-    server: "193.202.10.248"
-    port: 40443
-    uuid: "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "deepl.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4"
-      short-id: "db46e2946fc466fd"
-  - name: "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.248:40443-1"
-    type: "vless"
-    server: "193.202.10.248"
-    port: 40443
-    uuid: "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "deepl.com"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4"
-      short-id: "db46e2946fc466fd"
+      public-key: "r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho"
+      short-id: "a1b2c3d4"
   - name: "🇮🇱 Israel"
     type: "vless"
     server: "185.95.231.233"
@@ -790,25 +763,23 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇱 069-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
-      - "🇮🇱 086-🇮🇱 IL ✂️@GheychiAmoozesh"
+      - "🇮🇱 🔒 VL-GRPC-TLS 🇮🇱 IL-72.4.65.116:443"
+      - "🇮🇱 🔒 VL-TCP-NONE 🇮🇱 IL-185.95.231.233:443"
+      - "🇮🇱 058-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
       - "🇮🇱 @DeltaKroneckerGithub"
       - "🇮🇱 @DeltaKroneckerGithub-1"
       - "🇮🇱 @DeltaKroneckerGithub-2"
       - "🇮🇱 @DeltaKroneckerGithub-3"
       - "🇮🇱 @DeltaKroneckerGithub-4"
-      - "🇮🇱 REALITY|IL🇮🇱 | 45.140.204.34-8443 | 168.28ms"
-      - "🇮🇱 REALITY|IL🇮🇱 | 185.249.153.108-443 | 153.01ms"
-      - "🇮🇱 REALITY|IL🇮🇱 | 185.95.231.233-443 | 67.5ms"
+      - "🇮🇱 REALITY|IL🇮🇱 | 45.140.204.34-8443 | 103.99ms"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🇮🇱 https://t.me/ForceRunVPN-🇮🇱-RoshHa‘Ayin-473ms-SmartApe OU"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | CCE58C"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
       - "🇮🇱 PL 🇵🇱 | @Raydikalx | 0B655C"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | F86979"
       - "🇮🇱 DE 🇩🇪 | @Raydikalx | 157B56"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.137:2291"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.248:40443"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.248:40443-1"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.233:443"
       - "🇮🇱 Israel"
       - "🇮🇱 🔒 VL-RAW-RLT 🇮🇱 IL-185.95.231.156:443"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -821,25 +792,23 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇱 069-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
-      - "🇮🇱 086-🇮🇱 IL ✂️@GheychiAmoozesh"
+      - "🇮🇱 🔒 VL-GRPC-TLS 🇮🇱 IL-72.4.65.116:443"
+      - "🇮🇱 🔒 VL-TCP-NONE 🇮🇱 IL-185.95.231.233:443"
+      - "🇮🇱 058-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
       - "🇮🇱 @DeltaKroneckerGithub"
       - "🇮🇱 @DeltaKroneckerGithub-1"
       - "🇮🇱 @DeltaKroneckerGithub-2"
       - "🇮🇱 @DeltaKroneckerGithub-3"
       - "🇮🇱 @DeltaKroneckerGithub-4"
-      - "🇮🇱 REALITY|IL🇮🇱 | 45.140.204.34-8443 | 168.28ms"
-      - "🇮🇱 REALITY|IL🇮🇱 | 185.249.153.108-443 | 153.01ms"
-      - "🇮🇱 REALITY|IL🇮🇱 | 185.95.231.233-443 | 67.5ms"
+      - "🇮🇱 REALITY|IL🇮🇱 | 45.140.204.34-8443 | 103.99ms"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🇮🇱 https://t.me/ForceRunVPN-🇮🇱-RoshHa‘Ayin-473ms-SmartApe OU"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | CCE58C"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
       - "🇮🇱 PL 🇵🇱 | @Raydikalx | 0B655C"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | F86979"
       - "🇮🇱 DE 🇩🇪 | @Raydikalx | 157B56"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.137:2291"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.248:40443"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.248:40443-1"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.233:443"
       - "🇮🇱 Israel"
       - "🇮🇱 🔒 VL-RAW-RLT 🇮🇱 IL-185.95.231.156:443"
   - name: "توزیع بار چرخشی ⚖️"
@@ -851,25 +820,23 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇱 069-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
-      - "🇮🇱 086-🇮🇱 IL ✂️@GheychiAmoozesh"
+      - "🇮🇱 🔒 VL-GRPC-TLS 🇮🇱 IL-72.4.65.116:443"
+      - "🇮🇱 🔒 VL-TCP-NONE 🇮🇱 IL-185.95.231.233:443"
+      - "🇮🇱 058-🇩🇪 DE grpc-tls ✂️@GheychiAmoozesh"
       - "🇮🇱 @DeltaKroneckerGithub"
       - "🇮🇱 @DeltaKroneckerGithub-1"
       - "🇮🇱 @DeltaKroneckerGithub-2"
       - "🇮🇱 @DeltaKroneckerGithub-3"
       - "🇮🇱 @DeltaKroneckerGithub-4"
-      - "🇮🇱 REALITY|IL🇮🇱 | 45.140.204.34-8443 | 168.28ms"
-      - "🇮🇱 REALITY|IL🇮🇱 | 185.249.153.108-443 | 153.01ms"
-      - "🇮🇱 REALITY|IL🇮🇱 | 185.95.231.233-443 | 67.5ms"
+      - "🇮🇱 REALITY|IL🇮🇱 | 45.140.204.34-8443 | 103.99ms"
       - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+      - "🇮🇱 https://t.me/ForceRunVPN-🇮🇱-RoshHa‘Ayin-473ms-SmartApe OU"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | CCE58C"
       - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
       - "🇮🇱 PL 🇵🇱 | @Raydikalx | 0B655C"
       - "🇮🇱 RU 🇷🇺 | @Raydikalx | F86979"
       - "🇮🇱 DE 🇩🇪 | @Raydikalx | 157B56"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.137:2291"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.248:40443"
-      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-193.202.10.248:40443-1"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.233:443"
       - "🇮🇱 Israel"
       - "🇮🇱 🔒 VL-RAW-RLT 🇮🇱 IL-185.95.231.156:443"
   - name: "المنت 💬"

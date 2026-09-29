@@ -499,6 +499,14 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇦🇿 🔒 VL-TCP-NONE 🇦🇿 AZ-180.149.45.195:37532"
+    type: "vless"
+    server: "180.149.45.195"
+    port: 37532
+    uuid: "6774780f-4a9d-4c47-8b20-7b38d4e39639"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇦🇿 AZ 🇦🇿 | @Raydikalx | B6A55D"
     type: "vless"
     server: "basalam.horqen.ir"
@@ -523,6 +531,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇦🇿 🔒 VL-TCP-NONE 🇦🇿 AZ-180.149.45.195:37532"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | B6A55D"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -534,6 +543,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇦🇿 🔒 VL-TCP-NONE 🇦🇿 AZ-180.149.45.195:37532"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | B6A55D"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -544,6 +554,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇦🇿 🔒 VL-TCP-NONE 🇦🇿 AZ-180.149.45.195:37532"
       - "🇦🇿 AZ 🇦🇿 | @Raydikalx | B6A55D"
   - name: "المنت 💬"
     type: "select"
