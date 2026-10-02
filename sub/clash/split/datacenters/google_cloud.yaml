@@ -499,6 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇺🇸 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "m.youtube.com"
+    port: 443
+    uuid: "9a0afcc5-1baf-41c7-8a4d-625ee1a8156b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "api.safaricom.et"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "server2-871155101457.europe-west1.run.app"
   - name: "🇺🇸 US 🇺🇸 | @Raydikalx | 5A1BD6"
     type: "vmess"
     server: "8.8.8.8"
@@ -521,6 +535,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇺🇸 @DeltaKroneckerGithub"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | 5A1BD6"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -532,6 +547,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇺🇸 @DeltaKroneckerGithub"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | 5A1BD6"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -542,6 +558,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇺🇸 @DeltaKroneckerGithub"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | 5A1BD6"
   - name: "المنت 💬"
     type: "select"
