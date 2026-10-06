@@ -499,6 +499,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇺🇸@FreakConfig"
+    type: "vless"
+    server: "199.232.78.159"
+    port: 443
+    uuid: "6ead3f4c-023f-4322-b5c4-ac4e327d259d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ssl.fastly.com"
+    ws-opts:
+      headers:
+        Host: "pannn1.global.ssl.fastly.net"
   - name: "🪙42@oneclickvpnkeys"
     type: "vless"
     server: "65.108.3.59"
@@ -735,19 +747,6 @@ proxies:
     reality-opts:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
-  - name: "📍88@oneclickvpnkeys"
-    type: "vless"
-    server: "169.40.42.104"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
   - name: "172.64.150.28"
     type: "vless"
     server: "172.64.150.28"
@@ -770,6 +769,20 @@ proxies:
     network: "tcp"
     servername: "yahoo.com"
     client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "@mon_proxys کانالمون"
+    type: "vless"
+    server: "169.40.42.16"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
@@ -857,20 +870,14 @@ proxies:
     reality-opts:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
-  - name: "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
-    type: "vless"
-    server: "169.40.42.15"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+  - name: "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇩🇪"
+    type: "vmess"
+    server: "216.106.187.60"
+    port: 22324
+    uuid: "04621bae-ab36-11ec-b909-0242ac120002"
+    alterId: 0
+    cipher: "auto"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
   - name: "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸-9"
     type: "vmess"
     server: "216.152.152.187"
@@ -893,6 +900,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇺🇸@FreakConfig"
       - "🪙42@oneclickvpnkeys"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸-1"
@@ -910,16 +918,16 @@ proxy-groups:
       - "2⭐️@oneclickvpnkeys"
       - "☺️89@oneclickvpnkeys"
       - "🇫🇮telegram➠@v2rayNG_Matsuri"
-      - "📍88@oneclickvpnkeys"
       - "172.64.150.28"
       - "@ConfigYab_AUTO"
+      - "@mon_proxys کانالمون"
       - "@ConfigYab_AUTO-1"
       - "Server 29"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "🔖96@oneclickvpnkeys"
       - "🇩🇪telegram➠@v2rayNG_Matsuri"
       - "🇬🇧telegram➠@v2rayNG_Matsuri"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
+      - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇩🇪"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸-9"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -931,6 +939,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇺🇸@FreakConfig"
       - "🪙42@oneclickvpnkeys"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸-1"
@@ -948,16 +957,16 @@ proxy-groups:
       - "2⭐️@oneclickvpnkeys"
       - "☺️89@oneclickvpnkeys"
       - "🇫🇮telegram➠@v2rayNG_Matsuri"
-      - "📍88@oneclickvpnkeys"
       - "172.64.150.28"
       - "@ConfigYab_AUTO"
+      - "@mon_proxys کانالمون"
       - "@ConfigYab_AUTO-1"
       - "Server 29"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "🔖96@oneclickvpnkeys"
       - "🇩🇪telegram➠@v2rayNG_Matsuri"
       - "🇬🇧telegram➠@v2rayNG_Matsuri"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
+      - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇩🇪"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸-9"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -968,6 +977,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇺🇸@FreakConfig"
       - "🪙42@oneclickvpnkeys"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸-1"
@@ -985,16 +995,16 @@ proxy-groups:
       - "2⭐️@oneclickvpnkeys"
       - "☺️89@oneclickvpnkeys"
       - "🇫🇮telegram➠@v2rayNG_Matsuri"
-      - "📍88@oneclickvpnkeys"
       - "172.64.150.28"
       - "@ConfigYab_AUTO"
+      - "@mon_proxys کانالمون"
       - "@ConfigYab_AUTO-1"
       - "Server 29"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "🔖96@oneclickvpnkeys"
       - "🇩🇪telegram➠@v2rayNG_Matsuri"
       - "🇬🇧telegram➠@v2rayNG_Matsuri"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy-1"
+      - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇩🇪"
       - "𝗝𝗼𝗶𝗻 ➠ @vpnplusee_free | 🇺🇸-9"
   - name: "المنت 💬"
     type: "select"
