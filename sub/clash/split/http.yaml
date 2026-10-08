@@ -499,6 +499,28 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-104.21.60.101:443"
+    type: "vless"
+    server: "104.21.60.101"
+    port: 443
+    uuid: "86c0996e-817e-409f-a732-ff9ef94917bd"
+    udp: true
+    tls: true
+    network: "http"
+    servername: "s3.bamans.uk"
+    alpn:
+      - "h2"
+  - name: "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-172.67.195.196:443"
+    type: "vless"
+    server: "172.67.195.196"
+    port: 443
+    uuid: "86c0996e-817e-409f-a732-ff9ef94917bd"
+    udp: true
+    tls: true
+    network: "http"
+    servername: "s3.bamans.uk"
+    alpn:
+      - "h2"
   - name: "🇫🇮 FI 🇫🇮 | @Raydikalx | C9ABBD"
     type: "vless"
     server: "65.109.208.97"
@@ -520,6 +542,17 @@ proxies:
     reality-opts:
       public-key: "TbEfreFBXTwf3jMZFm1Zv3s2gPazYFBgf1T_GK3UcAM"
       short-id: "1b1bd767"
+  - name: "🏳️ CA 🇨🇦 | @Raydikalx | 71C775"
+    type: "vless"
+    server: "s3.bamans.uk"
+    port: 443
+    uuid: "86c0996e-817e-409f-a732-ff9ef94917bd"
+    udp: true
+    tls: true
+    network: "http"
+    servername: "s3.bamans.uk"
+    alpn:
+      - "h2"
   - name: "🏳️ @iTV2RAY+/+All+oprator+/+iOS"
     type: "vless"
     server: "itv2ray.ddns.net"
@@ -547,8 +580,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-104.21.60.101:443"
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-172.67.195.196:443"
       - "🇫🇮 FI 🇫🇮 | @Raydikalx | C9ABBD"
       - "🏳️ Global 🌐 | @Raydikalx | 299E3B"
+      - "🏳️ CA 🇨🇦 | @Raydikalx | 71C775"
       - "🏳️ @iTV2RAY+/+All+oprator+/+iOS"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -560,8 +596,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-104.21.60.101:443"
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-172.67.195.196:443"
       - "🇫🇮 FI 🇫🇮 | @Raydikalx | C9ABBD"
       - "🏳️ Global 🌐 | @Raydikalx | 299E3B"
+      - "🏳️ CA 🇨🇦 | @Raydikalx | 71C775"
       - "🏳️ @iTV2RAY+/+All+oprator+/+iOS"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -572,8 +611,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-104.21.60.101:443"
+      - "🏳️ 🔒 VL-HTTP-TLS 🏴☠️ NA-172.67.195.196:443"
       - "🇫🇮 FI 🇫🇮 | @Raydikalx | C9ABBD"
       - "🏳️ Global 🌐 | @Raydikalx | 299E3B"
+      - "🏳️ CA 🇨🇦 | @Raydikalx | 71C775"
       - "🏳️ @iTV2RAY+/+All+oprator+/+iOS"
   - name: "المنت 💬"
     type: "select"
