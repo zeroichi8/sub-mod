@@ -499,6 +499,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇩🇰 🔒 VL-XHTTP-TLS 🇩🇰 DK-140.248.69.254:443"
+    type: "vless"
+    server: "140.248.69.254"
+    port: 443
+    uuid: "c658d81a-808d-45eb-8d5a-35a1fed4dab0"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
   - name: "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
     type: "ss"
     server: "37.120.131.62"
@@ -557,6 +569,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇩🇰 🔒 VL-XHTTP-TLS 🇩🇰 DK-140.248.69.254:443"
       - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
@@ -572,6 +585,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇩🇰 🔒 VL-XHTTP-TLS 🇩🇰 DK-140.248.69.254:443"
       - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
@@ -586,6 +600,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇩🇰 🔒 VL-XHTTP-TLS 🇩🇰 DK-140.248.69.254:443"
       - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
