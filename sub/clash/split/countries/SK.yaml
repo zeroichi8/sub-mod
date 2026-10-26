@@ -499,20 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
-    type: "vless"
-    server: "89.46.42.92"
-    port: 2053
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
   - name: "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.141:2053"
     type: "vless"
     server: "89.46.42.141"
@@ -527,37 +513,7 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.10:2085"
-    type: "vless"
-    server: "80.243.228.10"
-    port: 2085
-    uuid: "2be02fad-902b-4b0a-9b50-385d868bedd4"
-    udp: true
-    tls: false
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "vless"
-  - name: "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.51:2085"
-    type: "vless"
-    server: "80.243.228.51"
-    port: 2085
-    uuid: "2928b6cd-a3f0-44d9-bdfe-71bbb4706326"
-    udp: true
-    tls: false
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "vless"
-  - name: "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.61:2085"
-    type: "vless"
-    server: "80.243.228.61"
-    port: 2085
-    uuid: "8f6f8a4a-b30b-4061-bf5f-646997a6bcc9"
-    udp: true
-    tls: false
-    network: "grpc"
-    grpc-opts:
-      grpc-service-name: "vless"
-  - name: "🇸🇰 SK🇸🇰 | 80.243.228.130-2085 | 144.56ms"
+  - name: "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.130:2085"
     type: "vless"
     server: "80.243.228.130"
     port: 2085
@@ -567,7 +523,28 @@ proxies:
     network: "grpc"
     grpc-opts:
       grpc-service-name: "vless"
-  - name: "🇸🇰 https://t.me/ForceRunVPN-🇸🇰-Bratislava-453ms-eServer s.r.o."
+  - name: "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
+    type: "vless"
+    server: "89.46.42.92"
+    port: 2053
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
+    type: "ss"
+    server: "156.146.40.84"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
+  - name: "🇸🇰 SK 🇸🇰 | @Raydikalx | 59D3B9"
     type: "vless"
     server: "45.129.141.154"
     port: 443
@@ -580,13 +557,16 @@ proxies:
     reality-opts:
       public-key: "breG0HwhH88ppAzFb4ZiWvhJjDAQCXJvIG6Ef95MXis"
       short-id: "ef"
-  - name: "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
-    type: "ss"
-    server: "156.146.40.84"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
+  - name: "🇸🇰 SK 🇸🇰 | @Raydikalx | 41DAA2"
+    type: "vless"
+    server: "80.243.228.84"
+    port: 2085
+    uuid: "a7c66f66-76b7-42ea-8d2b-890a37239368"
     udp: true
+    tls: false
+    network: "grpc"
+    grpc-opts:
+      grpc-service-name: "vless"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -601,14 +581,12 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.141:2053"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.10:2085"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.51:2085"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.61:2085"
-      - "🇸🇰 SK🇸🇰 | 80.243.228.130-2085 | 144.56ms"
-      - "🇸🇰 https://t.me/ForceRunVPN-🇸🇰-Bratislava-453ms-eServer s.r.o."
+      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.130:2085"
+      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
+      - "🇸🇰 SK 🇸🇰 | @Raydikalx | 59D3B9"
+      - "🇸🇰 SK 🇸🇰 | @Raydikalx | 41DAA2"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -619,14 +597,12 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.141:2053"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.10:2085"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.51:2085"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.61:2085"
-      - "🇸🇰 SK🇸🇰 | 80.243.228.130-2085 | 144.56ms"
-      - "🇸🇰 https://t.me/ForceRunVPN-🇸🇰-Bratislava-453ms-eServer s.r.o."
+      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.130:2085"
+      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
+      - "🇸🇰 SK 🇸🇰 | @Raydikalx | 59D3B9"
+      - "🇸🇰 SK 🇸🇰 | @Raydikalx | 41DAA2"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -636,14 +612,12 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.141:2053"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.10:2085"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.51:2085"
-      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.61:2085"
-      - "🇸🇰 SK🇸🇰 | 80.243.228.130-2085 | 144.56ms"
-      - "🇸🇰 https://t.me/ForceRunVPN-🇸🇰-Bratislava-453ms-eServer s.r.o."
+      - "🇸🇰 🔒 VL-GRPC-NONE 🇸🇰 SK-80.243.228.130:2085"
+      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
+      - "🇸🇰 SK 🇸🇰 | @Raydikalx | 59D3B9"
+      - "🇸🇰 SK 🇸🇰 | @Raydikalx | 41DAA2"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
