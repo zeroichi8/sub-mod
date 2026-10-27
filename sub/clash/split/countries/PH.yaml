@@ -499,7 +499,17 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇵🇭 PH 🇵🇭 | @Raydikalx | 23B141"
+  - name: "🇵🇭 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "130.94.53.51"
+    port: 15656
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ph001.zestapp778.com"
+    client-fingerprint: "firefox"
+  - name: "🇵🇭 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "ph001.zestapp778.com"
     port: 15656
@@ -509,6 +519,22 @@ proxies:
     network: "tcp"
     servername: "ph001.zestapp778.com"
     client-fingerprint: "chrome"
+  - name: "🇵🇭 @DeltaKroneckerGithub-2"
+    type: "ss"
+    server: "149.104.109.252"
+    port: 8882
+    cipher: "aes-256-gcm"
+    password: "kDWvXYZoTBcGkC4"
+    udp: true
+  - name: "🇵🇭 PH 🇵🇭 | @Raydikalx | E4B79E"
+    type: "vless"
+    server: "130.94.53.51"
+    port: 15656
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ph001.zestapp778.com"
   - name: "🇵🇭 PH 🇵🇭 | @Raydikalx | BD9FB4"
     type: "vmess"
     server: "61.245.11.60"
@@ -517,23 +543,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇵🇭 Indonesia"
-    type: "vless"
-    server: "206.237.107.205"
-    port: 443
-    uuid: "495c7195-85b8-498a-bf20-2ea9ce9175b5"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "snip.edgeoneai.cc.cd"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "snip.edgeoneai.cc.cd"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -548,9 +557,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇵🇭 PH 🇵🇭 | @Raydikalx | 23B141"
+      - "🇵🇭 @DeltaKroneckerGithub"
+      - "🇵🇭 @DeltaKroneckerGithub-1"
+      - "🇵🇭 @DeltaKroneckerGithub-2"
+      - "🇵🇭 PH 🇵🇭 | @Raydikalx | E4B79E"
       - "🇵🇭 PH 🇵🇭 | @Raydikalx | BD9FB4"
-      - "🇵🇭 Indonesia"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -561,9 +572,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇵🇭 PH 🇵🇭 | @Raydikalx | 23B141"
+      - "🇵🇭 @DeltaKroneckerGithub"
+      - "🇵🇭 @DeltaKroneckerGithub-1"
+      - "🇵🇭 @DeltaKroneckerGithub-2"
+      - "🇵🇭 PH 🇵🇭 | @Raydikalx | E4B79E"
       - "🇵🇭 PH 🇵🇭 | @Raydikalx | BD9FB4"
-      - "🇵🇭 Indonesia"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -573,9 +586,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇵🇭 PH 🇵🇭 | @Raydikalx | 23B141"
+      - "🇵🇭 @DeltaKroneckerGithub"
+      - "🇵🇭 @DeltaKroneckerGithub-1"
+      - "🇵🇭 @DeltaKroneckerGithub-2"
+      - "🇵🇭 PH 🇵🇭 | @Raydikalx | E4B79E"
       - "🇵🇭 PH 🇵🇭 | @Raydikalx | BD9FB4"
-      - "🇵🇭 Indonesia"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

@@ -499,6 +499,25 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇩🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 133ms"
+    type: "ss"
+    server: "63.180.254.10"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
+    type: "vless"
+    server: "63.141.128.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime42.workers.dev"
   - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
     type: "vless"
     server: "63.141.128.14"
@@ -527,25 +546,19 @@ proxies:
     ws-opts:
       headers:
         Host: "misty-tooth-78ca.fobogah414-e7b.workers.dev"
-  - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
+  - name: "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 123.56ms"
     type: "vless"
-    server: "63.141.128.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    server: "104.105.69.97"
+    port: 443
+    uuid: "694eb5d5-794c-4389-af65-e5a4b8489dae"
     udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime42.workers.dev"
-  - name: "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-104.105.3.249:1081"
-    type: "ss"
-    server: "104.105.3.249"
-    port: 1081
-    cipher: "chacha20-ietf-poly1305"
-    password: "ocO_H-g2Eroh80c9MzD6SMPEleiYaMLP"
-    udp: true
+    tls: true
+    network: "tcp"
+    servername: "play.google.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Qr6_9TMQYMCB2hVSYeONcMvxBqIaT0mzPUy8nIivV1g"
+      short-id: "b58b"
   - name: "🇺🇸 US 🇺🇸 | @Raydikalx | C350F0"
     type: "vless"
     server: "63.141.128.22"
@@ -613,10 +626,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇩🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 133ms"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-104.105.3.249:1081"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 123.56ms"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | C350F0"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 56CFC3"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"
@@ -633,10 +647,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇩🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 133ms"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-104.105.3.249:1081"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 123.56ms"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | C350F0"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 56CFC3"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"
@@ -652,10 +667,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇩🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 133ms"
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-104.105.3.249:1081"
+      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 123.56ms"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | C350F0"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 56CFC3"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"

@@ -499,6 +499,30 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
+    type: "vless"
+    server: "92.53.189.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime19.workers.dev"
+  - name: "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
+    type: "vless"
+    server: "92.53.188.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime18.workers.dev"
   - name: "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
     type: "vless"
     server: "92.53.188.36"
@@ -512,44 +536,60 @@ proxies:
       - "h3"
       - "h2"
       - "http/1.1"
-  - name: "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
+  - name: "🇸🇮 @DeltaKroneckerGithub"
     type: "vless"
-    server: "92.53.188.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime18.workers.dev"
-  - name: "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
-    type: "vless"
-    server: "92.53.189.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime19.workers.dev"
-  - name: "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
-    type: "vless"
-    server: "92.60.78.221"
+    server: "92.42.201.102"
     port: 443
-    uuid: "6897c181-24b1-4880-8660-e6c5c7ee13c7"
+    uuid: "d0c8aa8d-a535-432a-b521-21f0e561f643"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.tradingview.com"
-    client-fingerprint: "chrome"
+    servername: "node-slo01.rkitman.ru"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "pkIWxbuPAasjatPaHnAaTnCxVj1RkDFsJEWpLUTOcWY"
-      short-id: "9917d2350096"
+      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
+      short-id: "88d9dc52ef39c8bd"
+  - name: "🇸🇮 @DeltaKroneckerGithub-1"
+    type: "vless"
+    server: "92.42.201.107"
+    port: 443
+    uuid: "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "node-slo02.rkitman.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
+      short-id: "88d9dc52ef39c8bd"
+  - name: "🇸🇮 🇸🇮 💥Config_jo-247"
+    type: "vless"
+    server: "92.42.201.102"
+    port: 443
+    uuid: "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "node-slo01.rkitman.ru"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
+      short-id: "88d9dc52ef39c8bd"
+  - name: "🇸🇮 🇸🇮 💥Config_jo-248"
+    type: "vless"
+    server: "92.42.201.107"
+    port: 443
+    uuid: "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "node-slo02.rkitman.ru"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
+      short-id: "88d9dc52ef39c8bd"
   - name: "🇸🇮 SI 🇸🇮 | @Raydikalx | 144F11"
     type: "vless"
     server: "node-slo01.rkitman.ru"
@@ -564,6 +604,48 @@ proxies:
     reality-opts:
       public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
       short-id: "88d9dc52ef39c8bd"
+  - name: "🇸🇮 SI 🇸🇮 | @Raydikalx | 31EDFF"
+    type: "vless"
+    server: "92.42.201.107"
+    port: 443
+    uuid: "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "node-slo02.rkitman.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
+      short-id: "88d9dc52ef39c8bd"
+  - name: "🇸🇮 SI 🇸🇮 | @Raydikalx | AC348E"
+    type: "vless"
+    server: "node-slo05.rkitman.ru"
+    port: 443
+    uuid: "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "node-slo05.rkitman.ru"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
+      short-id: "88d9dc52ef39c8bd"
+  - name: "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
+    type: "vless"
+    server: "92.60.78.221"
+    port: 443
+    uuid: "6897c181-24b1-4880-8660-e6c5c7ee13c7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.tradingview.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "pkIWxbuPAasjatPaHnAaTnCxVj1RkDFsJEWpLUTOcWY"
+      short-id: "9917d2350096"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -578,11 +660,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
-      - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
-      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
+      - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
+      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
+      - "🇸🇮 @DeltaKroneckerGithub"
+      - "🇸🇮 @DeltaKroneckerGithub-1"
+      - "🇸🇮 🇸🇮 💥Config_jo-247"
+      - "🇸🇮 🇸🇮 💥Config_jo-248"
       - "🇸🇮 SI 🇸🇮 | @Raydikalx | 144F11"
+      - "🇸🇮 SI 🇸🇮 | @Raydikalx | 31EDFF"
+      - "🇸🇮 SI 🇸🇮 | @Raydikalx | AC348E"
+      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -593,11 +681,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
-      - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
-      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
+      - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
+      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
+      - "🇸🇮 @DeltaKroneckerGithub"
+      - "🇸🇮 @DeltaKroneckerGithub-1"
+      - "🇸🇮 🇸🇮 💥Config_jo-247"
+      - "🇸🇮 🇸🇮 💥Config_jo-248"
       - "🇸🇮 SI 🇸🇮 | @Raydikalx | 144F11"
+      - "🇸🇮 SI 🇸🇮 | @Raydikalx | 31EDFF"
+      - "🇸🇮 SI 🇸🇮 | @Raydikalx | AC348E"
+      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -607,11 +701,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
-      - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
-      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
+      - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
+      - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
+      - "🇸🇮 @DeltaKroneckerGithub"
+      - "🇸🇮 @DeltaKroneckerGithub-1"
+      - "🇸🇮 🇸🇮 💥Config_jo-247"
+      - "🇸🇮 🇸🇮 💥Config_jo-248"
       - "🇸🇮 SI 🇸🇮 | @Raydikalx | 144F11"
+      - "🇸🇮 SI 🇸🇮 | @Raydikalx | 31EDFF"
+      - "🇸🇮 SI 🇸🇮 | @Raydikalx | AC348E"
+      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
