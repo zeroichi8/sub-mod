@@ -499,13 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇩🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 133ms"
-    type: "ss"
-    server: "63.180.254.10"
-    port: 443
-    cipher: "aes-256-cfb"
-    password: "amazonskr05"
-    udp: true
   - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
     type: "vless"
     server: "63.141.128.30"
@@ -546,7 +539,23 @@ proxies:
     ws-opts:
       headers:
         Host: "misty-tooth-78ca.fobogah414-e7b.workers.dev"
-  - name: "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 123.56ms"
+  - name: "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
+    type: "ss"
+    server: "63.180.254.10"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
+  - name: "🇯🇵 🔒 TR-TCP-TLS 🇯🇵 JP-104.105.138.173:443"
+    type: "trojan"
+    server: "104.105.138.173"
+    port: 443
+    password: "eb6fb64d-18c0-44d0-9ee5-f29c29194083"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net"
+  - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
     type: "vless"
     server: "104.105.69.97"
     port: 443
@@ -612,6 +621,14 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇯🇵 JP 🇯🇵 | @Raydikalx | E69D4E"
+    type: "vmess"
+    server: "v6.hdacd.com"
+    port: 30806
+    uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
+    alterId: 2
+    cipher: "auto"
+    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -626,17 +643,19 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇩🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 133ms"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
-      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 123.56ms"
+      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
+      - "🇯🇵 🔒 TR-TCP-TLS 🇯🇵 JP-104.105.138.173:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | C350F0"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 56CFC3"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | A47E16"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | B44FC1"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 3E496F"
+      - "🇯🇵 JP 🇯🇵 | @Raydikalx | E69D4E"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -647,17 +666,19 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇩🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 133ms"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
-      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 123.56ms"
+      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
+      - "🇯🇵 🔒 TR-TCP-TLS 🇯🇵 JP-104.105.138.173:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | C350F0"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 56CFC3"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | A47E16"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | B44FC1"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 3E496F"
+      - "🇯🇵 JP 🇯🇵 | @Raydikalx | E69D4E"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -667,17 +688,19 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇩🇪 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 133ms"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
-      - "🇮🇹 REALITY|IT🇮🇹 | 104.105.69.97-443 | 123.56ms"
+      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
+      - "🇯🇵 🔒 TR-TCP-TLS 🇯🇵 JP-104.105.138.173:443"
+      - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
       - "🇺🇸 US 🇺🇸 | @Raydikalx | C350F0"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 56CFC3"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | A47E16"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | B44FC1"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 3E496F"
+      - "🇯🇵 JP 🇯🇵 | @Raydikalx | E69D4E"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
