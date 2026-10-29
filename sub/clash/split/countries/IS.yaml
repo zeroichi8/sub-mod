@@ -499,20 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-151.243.181.99:443"
-    type: "vless"
-    server: "151.243.181.99"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
   - name: "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-195.246.230.125:443"
     type: "vless"
     server: "195.246.230.125"
@@ -527,6 +513,34 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-151.243.181.99:443"
+    type: "vless"
+    server: "151.243.181.99"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇮🇸 🇩🇪All¹ | @BigSmoke_Config"
+    type: "vless"
+    server: "188.241.54.208"
+    port: 443
+    uuid: "fbaa413d-2ffb-4e36-8444-e1b1ab829fe1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "qlVZ2ehdXHCxIADkf5swgXT2ZHrpSP7HM6SKTBMQXRU"
+      short-id: "456bf62e2b728b97"
   - name: "🇮🇸 GB 🇬🇧 | @Raydikalx | A53DD6"
     type: "vless"
     server: "185.146.234.242"
@@ -541,20 +555,6 @@ proxies:
       path: "/"
       headers:
         Host: "www.nihaoyun.top"
-  - name: "🇮🇸 FI 🇫🇮 | @Raydikalx | 3E32F0"
-    type: "vless"
-    server: "188.241.54.208"
-    port: 443
-    uuid: "fbaa413d-2ffb-4e36-8444-e1b1ab829fe1"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.samsung.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "qlVZ2ehdXHCxIADkf5swgXT2ZHrpSP7HM6SKTBMQXRU"
-      short-id: "456bf62e2b728b97"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -569,10 +569,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-151.243.181.99:443"
       - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-195.246.230.125:443"
+      - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-151.243.181.99:443"
+      - "🇮🇸 🇩🇪All¹ | @BigSmoke_Config"
       - "🇮🇸 GB 🇬🇧 | @Raydikalx | A53DD6"
-      - "🇮🇸 FI 🇫🇮 | @Raydikalx | 3E32F0"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -583,10 +583,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-151.243.181.99:443"
       - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-195.246.230.125:443"
+      - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-151.243.181.99:443"
+      - "🇮🇸 🇩🇪All¹ | @BigSmoke_Config"
       - "🇮🇸 GB 🇬🇧 | @Raydikalx | A53DD6"
-      - "🇮🇸 FI 🇫🇮 | @Raydikalx | 3E32F0"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -596,10 +596,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-151.243.181.99:443"
       - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-195.246.230.125:443"
+      - "🇮🇸 🔒 VL-WS-TLS 🇮🇸 IS-151.243.181.99:443"
+      - "🇮🇸 🇩🇪All¹ | @BigSmoke_Config"
       - "🇮🇸 GB 🇬🇧 | @Raydikalx | A53DD6"
-      - "🇮🇸 FI 🇫🇮 | @Raydikalx | 3E32F0"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

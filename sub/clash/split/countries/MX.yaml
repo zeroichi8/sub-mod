@@ -500,23 +500,52 @@ rule-providers:
     path: "./ruleset/mihSpotify.yaml"
 proxies:
   - name: "🇲🇽 @DeltaKroneckerGithub"
-    type: "trojan"
-    server: "216.238.80.100"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    type: "vless"
+    server: "ul-mexico1.09vpn.com"
+    port: 8443
+    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "connectwithtopemployersandfindidealjobs.com"
+    network: "ws"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/vless/"
+      headers:
+        Host: "ul-mexico1.09vpn.com"
   - name: "🇲🇽 @DeltaKroneckerGithub-1"
-    type: "trojan"
-    server: "154.205.152.109"
-    port: 443
-    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    type: "vless"
+    server: "45.134.9.133"
+    port: 8443
+    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "154.205.152.109"
+    network: "ws"
+    servername: "ul-mexico1.09vpn.com"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇲🇽 @DeltaKroneckerGithub-2"
+    type: "vless"
+    server: "ul-mexico1.09vpn.com"
+    port: 8443
+    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
+    udp: true
+    tls: true
+    network: "ws"
+    ws-opts:
+      path: "/vless/"
+  - name: "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
+    type: "vless"
+    server: "140.248.180.30"
+    port: 443
+    uuid: "86fdb625-1a7f-4784-99a6-a96b3a80fc6d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "speedtest.net"
+    ws-opts:
+      path: "/vip1"
+      headers:
+        Host: "hamshahriesfahan.com"
   - name: "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-216.238.79.164:443"
     type: "vless"
     server: "216.238.79.164"
@@ -531,79 +560,6 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇲🇽 🔒 VL-TCP-TLS 🇲🇽 MX-149.104.90.21:19167"
-    type: "vless"
-    server: "149.104.90.21"
-    port: 19167
-    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
-  - name: "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
-    type: "vless"
-    server: "140.248.180.30"
-    port: 443
-    uuid: "86fdb625-1a7f-4784-99a6-a96b3a80fc6d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "speedtest.net"
-    ws-opts:
-      path: "/vip1"
-      headers:
-        Host: "hamshahriesfahan.com"
-  - name: "🇲🇽 @DeltaKroneckerGithub-2"
-    type: "vless"
-    server: "ul-mexico1.09vpn.com"
-    port: 8443
-    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
-    udp: true
-    tls: true
-    network: "ws"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/vless/"
-      headers:
-        Host: "ul-mexico1.09vpn.com"
-  - name: "🇲🇽 @DeltaKroneckerGithub-3"
-    type: "vless"
-    server: "149.104.90.21"
-    port: 19167
-    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
-    client-fingerprint: "firefox"
-  - name: "🇲🇽 @DeltaKroneckerGithub-4"
-    type: "vless"
-    server: "45.134.9.133"
-    port: 8443
-    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ul-mexico1.09vpn.com"
-    ws-opts:
-      path: "/vless/"
-  - name: "🇲🇽 @DeltaKroneckerGithub-5"
-    type: "vless"
-    server: "mx001.zestapp778.com"
-    port: 19167
-    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
-    client-fingerprint: "chrome"
-  - name: "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
-    type: "ss"
-    server: "64.177.90.30"
-    port: 8388
-    cipher: "aes-256-gcm"
-    password: "BWyPPTusFKhGgzKh"
-    udp: true
   - name: "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
     type: "trojan"
     server: "131.196.254.151"
@@ -615,34 +571,113 @@ proxies:
     servername: "www.pleadcourt.org"
     ws-opts:
       path: "/assignment"
-  - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | 252F9A"
+  - name: "🇲🇽 🔒 VL-TCP-TLS 🇲🇽 MX-149.104.90.184:19167"
+    type: "vless"
+    server: "149.104.90.184"
+    port: 19167
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mx001.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "🇲🇽 @DeltaKroneckerGithub-3"
+    type: "trojan"
+    server: "131.196.254.151"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.pleadcourt.org"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.pleadcourt.org"
+  - name: "🇲🇽 @DeltaKroneckerGithub-4"
+    type: "trojan"
+    server: "154.205.152.109"
+    port: 443
+    password: "af4b064a9c39472fb34ad8b113acdc6b"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "154.205.152.109"
+  - name: "🇲🇽 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "216.238.80.100"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "connectwithtopemployersandfindidealjobs.com"
+  - name: "🇲🇽 @DeltaKroneckerGithub-6"
+    type: "vmess"
+    server: "38.60.224.173"
+    port: 32153
+    uuid: "5cf1f470-3f70-4589-a2a4-4657ea3a1edf"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
+    type: "ss"
+    server: "64.177.90.30"
+    port: 8388
+    cipher: "aes-256-gcm"
+    password: "BWyPPTusFKhGgzKh"
+    udp: true
+  - name: "🇲🇽 MX🇲🇽 | mx001.zestapp778.com-19167 | 115.31ms"
+    type: "vless"
+    server: "149.104.90.21"
+    port: 19167
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mx001.zestapp778.com"
+  - name: "🇲🇽 🇲🇽 - MX - @FreeOnlineVPN"
     type: "ss"
     server: "89.223.88.33"
     port: 11201
     cipher: "chacha20-ietf-poly1305"
     password: "7c31a67b41b18c26"
     udp: true
-  - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | 9A0800"
-    type: "vless"
-    server: "131.196.253.141"
-    port: 443
-    uuid: "0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "kclx.eu.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/154.16.10.34-8080"
-      headers:
-        Host: "kclx.eu.org"
-  - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | 03BF9D"
+  - name: "🇲🇽 @Begoo_VPN ²⁹⁷"
     type: "vless"
     server: "45.164.20.114"
     port: 10226
     uuid: "9aab8f39-ccb3-44ea-acdc-a8aefe211287"
     udp: true
     tls: false
+    network: "tcp"
+  - name: "🇲🇽 @GozargahAzad|🇲🇽"
+    type: "vless"
+    server: "130.94.101.27"
+    port: 19167
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mx001.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽"
+    type: "vless"
+    server: "mx001.zestapp778.com"
+    port: 19167
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mx001.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽-1"
+    type: "vless"
+    server: "mx001.zestapp778.com"
+    port: 19167
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
     network: "tcp"
   - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | E04EFF"
     type: "vless"
@@ -680,14 +715,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | 8D829F"
-    type: "vmess"
-    server: "38.60.224.173"
-    port: 32153
-    uuid: "5cf1f470-3f70-4589-a2a4-4657ea3a1edf"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇲🇽 Mexico"
     type: "vless"
     server: "131.196.253.141"
@@ -700,15 +727,6 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/154.16.10.34-8080"
-  - name: "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽"
-    type: "vless"
-    server: "mx001.zestapp778.com"
-    port: 19167
-    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "mx001.zestapp778.com"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -725,24 +743,26 @@ proxy-groups:
     proxies:
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-216.238.79.164:443"
-      - "🇲🇽 🔒 VL-TCP-TLS 🇲🇽 MX-149.104.90.21:19167"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
       - "🇲🇽 @DeltaKroneckerGithub-2"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-216.238.79.164:443"
+      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
+      - "🇲🇽 🔒 VL-TCP-TLS 🇲🇽 MX-149.104.90.184:19167"
       - "🇲🇽 @DeltaKroneckerGithub-3"
       - "🇲🇽 @DeltaKroneckerGithub-4"
       - "🇲🇽 @DeltaKroneckerGithub-5"
+      - "🇲🇽 @DeltaKroneckerGithub-6"
       - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 252F9A"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 9A0800"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 03BF9D"
+      - "🇲🇽 MX🇲🇽 | mx001.zestapp778.com-19167 | 115.31ms"
+      - "🇲🇽 🇲🇽 - MX - @FreeOnlineVPN"
+      - "🇲🇽 @Begoo_VPN ²⁹⁷"
+      - "🇲🇽 @GozargahAzad|🇲🇽"
+      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽"
+      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽-1"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | E04EFF"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 19F2B9"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 63C709"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8D829F"
       - "🇲🇽 Mexico"
-      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -755,24 +775,26 @@ proxy-groups:
     proxies:
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-216.238.79.164:443"
-      - "🇲🇽 🔒 VL-TCP-TLS 🇲🇽 MX-149.104.90.21:19167"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
       - "🇲🇽 @DeltaKroneckerGithub-2"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-216.238.79.164:443"
+      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
+      - "🇲🇽 🔒 VL-TCP-TLS 🇲🇽 MX-149.104.90.184:19167"
       - "🇲🇽 @DeltaKroneckerGithub-3"
       - "🇲🇽 @DeltaKroneckerGithub-4"
       - "🇲🇽 @DeltaKroneckerGithub-5"
+      - "🇲🇽 @DeltaKroneckerGithub-6"
       - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 252F9A"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 9A0800"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 03BF9D"
+      - "🇲🇽 MX🇲🇽 | mx001.zestapp778.com-19167 | 115.31ms"
+      - "🇲🇽 🇲🇽 - MX - @FreeOnlineVPN"
+      - "🇲🇽 @Begoo_VPN ²⁹⁷"
+      - "🇲🇽 @GozargahAzad|🇲🇽"
+      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽"
+      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽-1"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | E04EFF"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 19F2B9"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 63C709"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8D829F"
       - "🇲🇽 Mexico"
-      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -784,24 +806,26 @@ proxy-groups:
     proxies:
       - "🇲🇽 @DeltaKroneckerGithub"
       - "🇲🇽 @DeltaKroneckerGithub-1"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-216.238.79.164:443"
-      - "🇲🇽 🔒 VL-TCP-TLS 🇲🇽 MX-149.104.90.21:19167"
-      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
       - "🇲🇽 @DeltaKroneckerGithub-2"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-140.248.180.30:443"
+      - "🇲🇽 🔒 VL-WS-TLS 🇲🇽 MX-216.238.79.164:443"
+      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
+      - "🇲🇽 🔒 VL-TCP-TLS 🇲🇽 MX-149.104.90.184:19167"
       - "🇲🇽 @DeltaKroneckerGithub-3"
       - "🇲🇽 @DeltaKroneckerGithub-4"
       - "🇲🇽 @DeltaKroneckerGithub-5"
+      - "🇲🇽 @DeltaKroneckerGithub-6"
       - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
-      - "🇲🇽 🔒 TR-WS-TLS 🇲🇽 MX-131.196.254.151:443"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 252F9A"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 9A0800"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 03BF9D"
+      - "🇲🇽 MX🇲🇽 | mx001.zestapp778.com-19167 | 115.31ms"
+      - "🇲🇽 🇲🇽 - MX - @FreeOnlineVPN"
+      - "🇲🇽 @Begoo_VPN ²⁹⁷"
+      - "🇲🇽 @GozargahAzad|🇲🇽"
+      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽"
+      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽-1"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | E04EFF"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 19F2B9"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 63C709"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8D829F"
       - "🇲🇽 Mexico"
-      - "🇲🇽 Channel id: @ConfigV2RayNG 🇲🇽"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

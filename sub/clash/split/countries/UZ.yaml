@@ -499,20 +499,33 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇺🇿 🔒 VL-WS-TLS 🇺🇿 UZ-157.22.128.7:443"
+  - name: "🇺🇿 🔒 VL-TCP-RLT 🇺🇿 UZ-82.148.6.146:443"
     type: "vless"
-    server: "157.22.128.7"
+    server: "82.148.6.146"
     port: 443
-    uuid: "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
+    uuid: "3cd95e58-9f0a-47e1-9937-64a58e949aa5"
     udp: true
     tls: true
-    network: "ws"
-    servername: "free.cndyw.ggff.net"
-    ws-opts:
-      path: "pyip=bpb.yousef.isegaro.comfp=random"
-      headers:
-        Host: "free.cndyw.ggff.net"
-  - name: "🇺🇿 UZ 🇺🇿 | @Raydikalx | BA47D7"
+    network: "tcp"
+    servername: "stats.vk-portal.net"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6eN2NciEaZis5J4muRRqpfLQ1OglI3A8lNSTmAGo6Do"
+      short-id: "3c6fc84d"
+  - name: "🇺🇿 🔒 VL-TCP-RLT 🇺🇿 UZ-185.76.14.21:443"
+    type: "vless"
+    server: "185.76.14.21"
+    port: 443
+    uuid: "3cd95e58-9f0a-47e1-9937-64a58e949aa5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "stats.vk-portal.net"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "6eN2NciEaZis5J4muRRqpfLQ1OglI3A8lNSTmAGo6Do"
+      short-id: "3c6fc84d"
+  - name: "🇺🇿 🇵🇱 Join+Telegram:@Farah_VPN 🇵🇱"
     type: "vless"
     server: "94.154.128.132"
     port: 443
@@ -521,22 +534,11 @@ proxies:
     tls: true
     network: "ws"
     servername: "free.cndyw.ggff.net"
-    client-fingerprint: "chrome"
     ws-opts:
-      path: "pyip=bpb.yousef.isegaro.com"
+      path: "pyip=bpb.yousef.isegaro.comfp=chrome"
       headers:
         Host: "free.cndyw.ggff.net"
-  - name: "🇺🇿 UZ 🇺🇿 | @Raydikalx | F9BD64"
-    type: "vless"
-    server: "189.74.97.47"
-    port: 2087
-    uuid: "894fe9f0-b998-49c0-8003-a5007de921e1"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/755276b33b6f"
-  - name: "🇺🇿 UZ 🇺🇿 | @Raydikalx | 67A40E"
+  - name: "🇺🇿 configprxy"
     type: "vless"
     server: "157.22.133.130"
     port: 2087
@@ -548,7 +550,7 @@ proxies:
       - "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
     ws-opts:
       path: "/5021201ef53f"
-  - name: "🇺🇿 UZ 🇺🇿 | @Raydikalx | 8DD418"
+  - name: "🇺🇿 Telegram:@v2rayng3"
     type: "vless"
     server: "157.22.133.130"
     port: 2087
@@ -558,6 +560,16 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/5021201ef53f"
+  - name: "🇺🇿 >>@V2rayNG3::UZ"
+    type: "vless"
+    server: "189.74.97.47"
+    port: 2087
+    uuid: "894fe9f0-b998-49c0-8003-a5007de921e1"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/755276b33b6f"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -572,11 +584,12 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇺🇿 🔒 VL-WS-TLS 🇺🇿 UZ-157.22.128.7:443"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | BA47D7"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | F9BD64"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | 67A40E"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | 8DD418"
+      - "🇺🇿 🔒 VL-TCP-RLT 🇺🇿 UZ-82.148.6.146:443"
+      - "🇺🇿 🔒 VL-TCP-RLT 🇺🇿 UZ-185.76.14.21:443"
+      - "🇺🇿 🇵🇱 Join+Telegram:@Farah_VPN 🇵🇱"
+      - "🇺🇿 configprxy"
+      - "🇺🇿 Telegram:@v2rayng3"
+      - "🇺🇿 >>@V2rayNG3::UZ"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -587,11 +600,12 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇺🇿 🔒 VL-WS-TLS 🇺🇿 UZ-157.22.128.7:443"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | BA47D7"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | F9BD64"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | 67A40E"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | 8DD418"
+      - "🇺🇿 🔒 VL-TCP-RLT 🇺🇿 UZ-82.148.6.146:443"
+      - "🇺🇿 🔒 VL-TCP-RLT 🇺🇿 UZ-185.76.14.21:443"
+      - "🇺🇿 🇵🇱 Join+Telegram:@Farah_VPN 🇵🇱"
+      - "🇺🇿 configprxy"
+      - "🇺🇿 Telegram:@v2rayng3"
+      - "🇺🇿 >>@V2rayNG3::UZ"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -601,11 +615,12 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇺🇿 🔒 VL-WS-TLS 🇺🇿 UZ-157.22.128.7:443"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | BA47D7"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | F9BD64"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | 67A40E"
-      - "🇺🇿 UZ 🇺🇿 | @Raydikalx | 8DD418"
+      - "🇺🇿 🔒 VL-TCP-RLT 🇺🇿 UZ-82.148.6.146:443"
+      - "🇺🇿 🔒 VL-TCP-RLT 🇺🇿 UZ-185.76.14.21:443"
+      - "🇺🇿 🇵🇱 Join+Telegram:@Farah_VPN 🇵🇱"
+      - "🇺🇿 configprxy"
+      - "🇺🇿 Telegram:@v2rayng3"
+      - "🇺🇿 >>@V2rayNG3::UZ"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

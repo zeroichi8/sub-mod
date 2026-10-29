@@ -499,6 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
+    type: "vless"
+    server: "194.71.227.213"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
   - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
     type: "vless"
     server: "151.101.9.80"
@@ -511,7 +525,15 @@ proxies:
       path: "/?ed=1049"
       headers:
         Host: "adspeedx23.global.ssl.fastly.net"
-  - name: "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 90.14ms"
+  - name: "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+    type: "vless"
+    server: "188.95.12.226"
+    port: 2095
+    uuid: "681314c5-b3ee-41f1-a959-fa42841f5383"
+    udp: true
+    tls: false
+    network: "httpupgrade"
+  - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
     type: "vless"
     server: "109.69.218.164"
     port: 443
@@ -530,7 +552,7 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "XF0klw7870vXn3uQIxe19Q"
     udp: true
-  - name: "🇧🇪 NL 🇳🇱 | @Raydikalx | CC6764"
+  - name: "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
     type: "vless"
     server: "109.69.218.217"
     port: 443
@@ -542,7 +564,20 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
-  - name: "🇧🇪 BE 🇧🇪 | @Raydikalx | 7F68DC"
+  - name: "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
+    type: "vless"
+    server: "109.69.218.217"
+    port: 443
+    uuid: "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "kind-wolf.cdn.cachefleet.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
+  - name: "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
     type: "vless"
     server: "109.69.218.168"
     port: 443
@@ -555,6 +590,14 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
+  - name: "🇧🇪 A42"
+    type: "vmess"
+    server: "46.183.187.73"
+    port: 443
+    uuid: "92a048ec-a160-497e-8069-c2e902626d7a"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
   - name: "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
     type: "vmess"
     server: "192.71.249.186"
@@ -571,27 +614,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇧🇪 BE 🇧🇪 | @Raydikalx | 2066E0"
-    type: "vmess"
-    server: "46.183.187.73"
-    port: 443
-    uuid: "92a048ec-a160-497e-8069-c2e902626d7a"
-    alterId: 0
-    cipher: "aes-128-gcm"
-    udp: true
-  - name: "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
-    type: "vless"
-    server: "109.69.218.217"
-    port: 443
-    uuid: "2a12bb81-f3a3-41bb-99ab-36febf676b4a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "kind-wolf.cdn.cachefleet.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -606,15 +628,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 90.14ms"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-      - "🇧🇪 NL 🇳🇱 | @Raydikalx | CC6764"
-      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 7F68DC"
+      - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 A42"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
-      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 2066E0"
-      - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -625,15 +649,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 90.14ms"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-      - "🇧🇪 NL 🇳🇱 | @Raydikalx | CC6764"
-      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 7F68DC"
+      - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 A42"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
-      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 2066E0"
-      - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -643,15 +669,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 90.14ms"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-      - "🇧🇪 NL 🇳🇱 | @Raydikalx | CC6764"
-      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 7F68DC"
+      - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 A42"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
-      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 2066E0"
-      - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
