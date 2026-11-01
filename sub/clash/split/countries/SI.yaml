@@ -499,6 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇸🇮 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "92.42.201.65"
+    port: 4443
+    uuid: "e0134f1c-8b74-4733-9c34-50cb251480c2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "node-slo03.rkitman.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "CTiiN_SriTUj-eBv0047HpCWgLtAzWzq-gwvIWN9KUI"
+      short-id: "7f0275a4db6068fb"
   - name: "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
     type: "vless"
     server: "92.53.189.40"
@@ -549,6 +563,19 @@ proxies:
     reality-opts:
       public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
       short-id: "88d9dc52ef39c8bd"
+  - name: "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.155:443"
+    type: "vless"
+    server: "92.42.201.155"
+    port: 443
+    uuid: "d0c8aa8d-a535-432a-b521-21f0e561f643"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "node-slo04.rkitman.ru"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
+      short-id: "88d9dc52ef39c8bd"
   - name: "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
     type: "vless"
     server: "92.60.78.221"
@@ -576,33 +603,6 @@ proxies:
     reality-opts:
       public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
       short-id: "88d9dc52ef39c8bd"
-  - name: "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.155:443"
-    type: "vless"
-    server: "92.42.201.155"
-    port: 443
-    uuid: "d0c8aa8d-a535-432a-b521-21f0e561f643"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "node-slo04.rkitman.ru"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
-      short-id: "88d9dc52ef39c8bd"
-  - name: "🇸🇮 🇸🇮 @UpsetVPN"
-    type: "vless"
-    server: "node-slo01.rkitman.ru"
-    port: 443
-    uuid: "322710c4-eef9-45ea-ad10-1efa1c6767d0"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "node-slo01.rkitman.ru"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU"
-      short-id: "88d9dc52ef39c8bd"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -617,14 +617,14 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.102:443"
+      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.155:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.160:443"
-      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.155:443"
-      - "🇸🇮 🇸🇮 @UpsetVPN"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -635,14 +635,14 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.102:443"
+      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.155:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.160:443"
-      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.155:443"
-      - "🇸🇮 🇸🇮 @UpsetVPN"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -652,14 +652,14 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇸🇮 @DeltaKroneckerGithub"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.189.40:8880"
       - "🇸🇮 🔒 VL-WS-NONE 🇸🇮 SI-92.53.188.30:8880"
       - "🇸🇮 🔒 VL-GRPC-TLS 🇸🇮 SI-92.53.188.36:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.102:443"
+      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.155:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
       - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.160:443"
-      - "🇸🇮 🔒 VL-TCP-RLT 🇸🇮 SI-92.42.201.155:443"
-      - "🇸🇮 🇸🇮 @UpsetVPN"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
