@@ -499,14 +499,32 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇺🇸[openproxylist.com] vless-US"
+  - name: "🏳[openproxylist.com] vless-"
     type: "vless"
-    server: "32.199.151.91"
-    port: 80
-    uuid: "6daa0b95-9210-4f29-be40-8c6db00bc5bb"
+    server: "156.252.229.136"
+    port: 8443
+    uuid: "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
     udp: true
-    tls: false
+    tls: true
     network: "tcp"
+    servername: "play.googleapis.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
+      short-id: "974f7f8f"
+  - name: "🇪🇪[openproxylist.com] vless-EE"
+    type: "vless"
+    server: "ee.h1cloud.net"
+    port: 25895
+    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k"
+      short-id: "a73f0410d728c823"
   - name: "🇳🇱[openproxylist.com] vless-NL"
     type: "vless"
     server: "45.91.202.32"
@@ -523,33 +541,18 @@ proxies:
       path: "/api/v1/devices/02585a2d89/telemetry"
       headers:
         Host: "nl15.meshbeat.online"
-  - name: "🇪🇸[openproxylist.com] vless-ES"
+  - name: "🇹🇷[openproxylist.com] vless-TR"
     type: "vless"
-    server: "156.252.229.136"
-    port: 8443
-    uuid: "3e21e3d3-6d26-4155-b851-764dd8e8c6b5"
+    server: "177.3.208.65"
+    port: 443
+    uuid: "4f34bc04-479c-49ba-91a8-6bb9ed15031c"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "play.googleapis.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
-      short-id: "974f7f8f"
-  - name: "🏳[openproxylist.com] vless-"
-    type: "vless"
-    server: "tr2.h1cloud.net"
-    port: 25021
-    uuid: "2446e2e2-1ce3-4502-9050-1dd32bacc68c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.samsung.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "od79bUkYtqQtsGrrTdhmkDflx5c9al4vqxwWApvc-Dg"
-      short-id: "17fa3af0924c88b3"
+    network: "ws"
+    servername: "tgmansion.site"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/vless-tr"
   - name: "🇸🇪[openproxylist.com] vless-SE"
     type: "vless"
     server: "swidenafterlanzerotte.space"
@@ -578,34 +581,21 @@ proxies:
       short-id: "27350908de933e09"
     grpc-opts:
       grpc-service-name: "neurex"
-  - name: "🏳[openproxylist.com] vless--1"
-    type: "vless"
-    server: "199.232.78.160"
-    port: 443
-    uuid: "3d9d91c0-0a90-471a-a518-a0ff66a1970a"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "community.fastly.steamstatic.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."
   - name: "🇳🇱[openproxylist.com] vless-NL-2"
     type: "vless"
-    server: "176.222.52.72"
+    server: "5.149.249.94"
     port: 443
-    uuid: "d4001352-dc64-48b8-b786-5860b284ad3d"
+    uuid: "ed77c1dc-3df2-412b-b855-49286f979c21"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "steamcommunity.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
+    network: "grpc"
+    servername: "nlb.kosmosapp.net"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "HyVJj9KuPfDV5lOLEkMeVmYFZoFMQid6eiLC_6Yf1mQ"
-      short-id: "5c56a4cfea5866c0"
+      public-key: "pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ"
+      short-id: "27350908de933e09"
+    grpc-opts:
+      grpc-service-name: "neurex"
   - name: "🇩🇪[openproxylist.com] vless-DE"
     type: "vless"
     server: "hw6.divarkhaghazi.com"
@@ -614,20 +604,7 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] vless-US-1"
-    type: "vless"
-    server: "141.193.154.234"
-    port: 443
-    uuid: "80fdddb8-3eb8-41ad-9916-fbb42c442e6e"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cloudflare.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "dN2EhTLZsQ1RsO4rCdoIBIi7mFtmqsC2iekPft3MPnY"
-      short-id: "1835"
-  - name: "🏳[openproxylist.com] vless--2"
+  - name: "🇫🇮[openproxylist.com] vless-FI"
     type: "vless"
     server: "45.38.143.210"
     port: 30584
@@ -640,6 +617,19 @@ proxies:
     reality-opts:
       public-key: "2hV4TY2ygvQ7ISa5o4u_FUKXzlIhLgbsScE8M1h0m3Y"
       short-id: "67ece882d65d0f1a"
+  - name: "🇵🇱[openproxylist.com] vless-PL"
+    type: "vless"
+    server: "79.182.39.37"
+    port: 27591
+    uuid: "056405e8-de9f-4d0d-8145-956f13cc34da"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM"
+      short-id: "6c5c7900406a1ae7"
   - name: "🇩🇪[openproxylist.com] vless-DE-1"
     type: "vless"
     server: "191.44.108.30"
@@ -654,7 +644,7 @@ proxies:
     reality-opts:
       public-key: "3pBHfffYFRPpe8Lt47cLSSgCgwNR-70blFzpEbm11AE"
       short-id: "b2baf331493d3de1"
-  - name: "🏳[openproxylist.com] vless--3"
+  - name: "🇩🇪[openproxylist.com] vless-DE-2"
     type: "vless"
     server: "de15.h1cloud.net"
     port: 25362
@@ -667,7 +657,7 @@ proxies:
     reality-opts:
       public-key: "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA"
       short-id: "23732d14a527990d"
-  - name: "🇺🇸[openproxylist.com] vless-US-2"
+  - name: "🇺🇸[openproxylist.com] vless-US"
     type: "vless"
     server: "66.154.101.36"
     port: 443
@@ -694,7 +684,7 @@ proxies:
     reality-opts:
       public-key: "23cb4W9THzBKsrECsLh-A_FcKZfkAtUONoDze8-GnQE"
       short-id: "e90360ec7cc61b20"
-  - name: "🏳[openproxylist.com] vless--4"
+  - name: "🇩🇪[openproxylist.com] vless-DE-3"
     type: "vless"
     server: "144.31.140.125"
     port: 8443
@@ -708,7 +698,7 @@ proxies:
     reality-opts:
       public-key: "wgyw3OxZw4HEzedNdY_eHdcVkrtT7GEeZSHfzcZ8iDo"
       short-id: "168c15efac9df5fd"
-  - name: "🇺🇸[openproxylist.com] vless-US-3"
+  - name: "🇺🇸[openproxylist.com] vless-US-1"
     type: "vless"
     server: "us3.shtil.io"
     port: 443
@@ -718,20 +708,6 @@ proxies:
     network: "tcp"
     servername: "us3.shtil.io"
     client-fingerprint: "firefox"
-  - name: "🏳[openproxylist.com] vless--5"
-    type: "vless"
-    server: "fr.golangwikito.cfd"
-    port: 443
-    uuid: "f8d52ece-fad4-478d-875d-df6eed3befa7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fr.golangwikito.cfd"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "isYQuhKDrgc7IQ7G0LHywFnt57wffrkZ-er18DkVsBA"
-      short-id: "e6d589857d1cec5e"
   - name: "🇭🇰[openproxylist.com] vless-HK"
     type: "vless"
     server: "152.175.6.229"
@@ -742,7 +718,21 @@ proxies:
     network: "tcp"
     servername: "hk010.zestapp778.com"
     client-fingerprint: "chrome"
-  - name: "🇺🇸[openproxylist.com] vless-US-4"
+  - name: "🇺🇸[openproxylist.com] vless-US-2"
+    type: "vless"
+    server: "146.75.59.186"
+    port: 443
+    uuid: "3d9d91c0-0a90-471a-a518-a0ff66a1970a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "community.fastly.steamstatic.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net."
+  - name: "🇺🇸[openproxylist.com] vless-US-3"
     type: "vless"
     server: "67.209.184.133"
     port: 443
@@ -756,6 +746,19 @@ proxies:
     reality-opts:
       public-key: "Tp015Ga5LodBwKs4z7Wz4hTvqeh8-4q1EQPZqvZfWR0"
       short-id: "ad09494d431b2b92"
+  - name: "🇮🇷[openproxylist.com] vless-IR"
+    type: "vless"
+    server: "tunell2027.crackerbinam.org"
+    port: 48312
+    uuid: "f47057d5-120d-4b42-b6d6-30469aef6813"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y"
+      short-id: "902c315efc"
   - name: "🇸🇪[openproxylist.com] vless-SE-1"
     type: "vless"
     server: "150.241.79.124"
@@ -770,7 +773,7 @@ proxies:
     reality-opts:
       public-key: "dlhvkjq7Sj-TT__FLwUJzFLMDCk8bgi85Uz4qDU-5FM"
       short-id: "5212dad2aa9723d7"
-  - name: "🇩🇪[openproxylist.com] vless-DE-2"
+  - name: "🇩🇪[openproxylist.com] vless-DE-4"
     type: "vless"
     server: "213.108.198.158"
     port: 8442
@@ -784,7 +787,7 @@ proxies:
     reality-opts:
       public-key: "pFRfJJDY6TYJq-OVgAqFXhdaeur7gJWJM-RZT8g8yAA"
       short-id: "59b75803"
-  - name: "🇩🇪[openproxylist.com] vless-DE-3"
+  - name: "🇩🇪[openproxylist.com] vless-DE-5"
     type: "vless"
     server: "130.49.177.193"
     port: 443
@@ -798,7 +801,7 @@ proxies:
     reality-opts:
       public-key: "DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc"
       short-id: "681fc2dd643bc2f3"
-  - name: "🏳[openproxylist.com] vless--6"
+  - name: "🇳🇱[openproxylist.com] vless-NL-3"
     type: "vless"
     server: "138.16.140.168"
     port: 443
@@ -822,20 +825,6 @@ proxies:
     network: "tcp"
     servername: "in001.zestapp778.com"
     client-fingerprint: "firefox"
-  - name: "🇺🇸[openproxylist.com] vless-US-5"
-    type: "vless"
-    server: "146.75.59.186"
-    port: 443
-    uuid: "3d9d91c0-0a90-471a-a518-a0ff66a1970a"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "community.fastly.steamstatic.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net."
   - name: "🇺🇦[openproxylist.com] vless-UA"
     type: "vless"
     server: "83.147.18.75"
@@ -845,12 +834,12 @@ proxies:
     tls: true
     network: "tcp"
     servername: "www.bing.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "qq"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc"
       short-id: "7f1e29593aa94ad1"
-  - name: "🏳[openproxylist.com] vless--7"
+  - name: "🇸🇬[openproxylist.com] vless-SG"
     type: "vless"
     server: "206.206.78.36"
     port: 443
@@ -864,27 +853,11 @@ proxies:
     reality-opts:
       public-key: "UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ"
       short-id: "133a3f10a1581047"
-  - name: "🇩🇪[openproxylist.com] vless-DE-4"
-    type: "vless"
-    server: "148-253-210-191.sslip.io"
-    port: 443
-    uuid: "53f03acd-fec1-6685-fc8f-03baf9550cb8"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "148-253-210-191.sslip.io"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/test-ws"
-      headers:
-        Host: "148-253-210-191.sslip.io"
-  - name: "🇺🇸[openproxylist.com] vless-US-6"
+  - name: "🇺🇸[openproxylist.com] vless-US-4"
     type: "vless"
     server: "fast.145779.xyz"
     port: 2053
-    uuid: "c83f15bf-1817-4ec8-a19f-6393d226434c"
+    uuid: "e3149c82-00f6-4227-b2c0-b78f1dd81279"
     udp: true
     tls: true
     network: "ws"
@@ -894,7 +867,7 @@ proxies:
       path: "/ws-tesla"
       headers:
         Host: "fast.145779.xyz"
-  - name: "🇮🇷[openproxylist.com] vless-IR"
+  - name: "🇮🇷[openproxylist.com] vless-IR-1"
     type: "vless"
     server: "198.16.113.222"
     port: 8443
@@ -908,7 +881,7 @@ proxies:
     reality-opts:
       public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
       short-id: "69984b9e02545831"
-  - name: "🇮🇷[openproxylist.com] vless-IR-1"
+  - name: "🇮🇷[openproxylist.com] vless-IR-2"
     type: "vless"
     server: "198.16.113.220"
     port: 8443
@@ -922,21 +895,7 @@ proxies:
     reality-opts:
       public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
       short-id: "69984b9e02545831"
-  - name: "🇺🇸[openproxylist.com] vless-US-7"
-    type: "vless"
-    server: "47.251.108.158"
-    port: 443
-    uuid: "975fc322-6e38-434b-a53c-d39fed49b9a9"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs"
-      short-id: "896f52ba2cfca903"
-  - name: "🇳🇱[openproxylist.com] vless-NL-3"
+  - name: "🇳🇱[openproxylist.com] vless-NL-4"
     type: "vless"
     server: "186.246.9.29"
     port: 443
@@ -949,7 +908,21 @@ proxies:
     reality-opts:
       public-key: "MPNMomAMn_lu9YMYjD2jAQWrI-rTM4hj9Jgg9d6qzTA"
       short-id: "50ad5564"
-  - name: "🇮🇷[openproxylist.com] vless-IR-2"
+  - name: "🇨🇦[openproxylist.com] vless-CA"
+    type: "vless"
+    server: "66.163.113.238"
+    port: 443
+    uuid: "13bf9403-22d1-4221-939b-f6606c423139"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "steamcommunity.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "DNCphTaL7BtXj1HybzMFir0ki_IiM62kr6ddIZYxagw"
+      short-id: "5c56a4cfea5866c0"
+  - name: "🇮🇷[openproxylist.com] vless-IR-3"
     type: "vless"
     server: "198.16.113.221"
     port: 8443
@@ -963,20 +936,7 @@ proxies:
     reality-opts:
       public-key: "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE"
       short-id: "69984b9e02545831"
-  - name: "🏳[openproxylist.com] vless--8"
-    type: "vless"
-    server: "cz-prg.dontblockmepls.com"
-    port: 2063
-    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "rusbid.de"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "🇩🇪[openproxylist.com] vless-DE-5"
+  - name: "🇩🇪[openproxylist.com] vless-DE-6"
     type: "vless"
     server: "91.107.179.0"
     port: 10105
@@ -990,7 +950,17 @@ proxies:
     reality-opts:
       public-key: "PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es"
       short-id: "12e321badd07906e"
-  - name: "🇺🇸[openproxylist.com] vless-US-8"
+  - name: "🇸🇬[openproxylist.com] vless-SG-1"
+    type: "vless"
+    server: "sg1.zestapp778.com"
+    port: 56984
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sg1.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "🇺🇸[openproxylist.com] vless-US-5"
     type: "vless"
     server: "46.29.255.123"
     port: 59539
@@ -1003,7 +973,15 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ"
-  - name: "🏳[openproxylist.com] vless--9"
+  - name: "🇮🇳[openproxylist.com] vless-IN"
+    type: "vless"
+    server: "122.176.216.52"
+    port: 443
+    uuid: "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] vless-US-6"
     type: "vless"
     server: "169.128.83.4"
     port: 57259
@@ -1011,35 +989,7 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇳🇱[openproxylist.com] vless-NL-4"
-    type: "vless"
-    server: "185.14.30.98"
-    port: 8443
-    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "twitch.tv"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Q0dPyF2hFWgxL7hxntJWJammcb6zcRCyA-NOiOFrsAo"
-      short-id: "1433a38abea1191c"
-  - name: "🇨🇭[openproxylist.com] vless-CH"
-    type: "vless"
-    server: "45.90.57.119"
-    port: 8443
-    uuid: "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "twitch.tv"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI"
-      short-id: "16036bbef04d0509"
-  - name: "🇺🇸[openproxylist.com] vless-US-9"
+  - name: "🇺🇸[openproxylist.com] vless-US-7"
     type: "vless"
     server: "us007.zestapp778.com"
     port: 18580
@@ -1049,7 +999,7 @@ proxies:
     network: "tcp"
     servername: "us007.zestapp778.com"
     client-fingerprint: "chrome"
-  - name: "🇸🇬[openproxylist.com] vless-SG"
+  - name: "🇸🇬[openproxylist.com] vless-SG-2"
     type: "vless"
     server: "45.77.243.143"
     port: 443
@@ -1072,7 +1022,33 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇪🇸[openproxylist.com] vless-ES-1"
+  - name: "🇹🇼[openproxylist.com] vless-TW"
+    type: "vless"
+    server: "n04.jinggai.online"
+    port: 8443
+    uuid: "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "n04.jinggai.online"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/nvl-n04-ws/e0577fe8fd7c8823"
+      headers:
+        Host: "n04.jinggai.online"
+  - name: "🇭🇰[openproxylist.com] vless-HK-1"
+    type: "vless"
+    server: "38.76.180.144"
+    port: 1443
+    uuid: "d98b67d4-024a-4bba-91e2-e6ebece6df11"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless-ws"
+      headers:
+        Host: "38.76.180.144"
+  - name: "🇪🇸[openproxylist.com] vless-ES"
     type: "vless"
     server: "156.252.229.30"
     port: 8443
@@ -1085,21 +1061,7 @@ proxies:
     reality-opts:
       public-key: "7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A"
       short-id: "974f7f8f"
-  - name: "🇹🇼[openproxylist.com] vless-TW"
-    type: "vless"
-    server: "152.32.167.33"
-    port: 443
-    uuid: "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.amazon.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Q8QwBSGN6J-FqgDV1pYNm0VThS_xNRyQ3DPPa9YZ3j4"
-      short-id: "cff998a4"
-  - name: "🏳[openproxylist.com] vless--10"
+  - name: "🇪🇸[openproxylist.com] vless-ES-1"
     type: "vless"
     server: "156.252.229.11"
     port: 8443
@@ -1122,6 +1084,20 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/"
+  - name: "🇺🇸[openproxylist.com] vless-US-8"
+    type: "vless"
+    server: "72.249.201.21"
+    port: 21899
+    uuid: "fb69a6b9-980c-48c2-a94f-5f95868a2d2a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kvLUYW6fwHXutu8Z4On6mi61kjslCyCc8ErFffUM1D0"
+      short-id: "dedce016e3671418"
   - name: "🇹🇭[openproxylist.com] vless-TH"
     type: "vless"
     server: "45.154.26.63"
@@ -1177,7 +1153,21 @@ proxies:
     reality-opts:
       public-key: "rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo"
       short-id: "77bb0d07bddbc832"
-  - name: "🇭🇰[openproxylist.com] vless-HK-1"
+  - name: "🇮🇱[openproxylist.com] vless-IL"
+    type: "vless"
+    server: "77.91.69.169"
+    port: 19226
+    uuid: "f0b144bd-4c44-440d-b630-d79ec82cad3a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "yahoo.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk"
+      short-id: "7c"
+  - name: "🇭🇰[openproxylist.com] vless-HK-2"
     type: "vless"
     server: "165.154.63.139"
     port: 443
@@ -1191,7 +1181,7 @@ proxies:
     reality-opts:
       public-key: "AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ"
       short-id: "ca4aedd4"
-  - name: "🇸🇬[openproxylist.com] vless-SG-1"
+  - name: "🇸🇬[openproxylist.com] vless-SG-3"
     type: "vless"
     server: "172.237.88.103"
     port: 443
@@ -1205,7 +1195,7 @@ proxies:
     reality-opts:
       public-key: "EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI"
       short-id: "5a42dbd7e26a0415"
-  - name: "🇮🇷[openproxylist.com] vless-IR-3"
+  - name: "🇮🇷[openproxylist.com] vless-IR-4"
     type: "vless"
     server: "198.16.113.219"
     port: 8443
@@ -1258,7 +1248,7 @@ proxies:
     reality-opts:
       public-key: "Zotx4F9CI6_q9yeKCKIHDjwzCv_Aq7WSo7N0Zc1A6Sc"
       short-id: "3c99c85cbb6b3b44"
-  - name: "🇵🇱[openproxylist.com] vless-PL"
+  - name: "🇵🇱[openproxylist.com] vless-PL-1"
     type: "vless"
     server: "2.26.6.1"
     port: 2087
@@ -1282,7 +1272,7 @@ proxies:
     reality-opts:
       public-key: "6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4"
       short-id: "38d72071"
-  - name: "🇩🇪[openproxylist.com] vless-DE-6"
+  - name: "🇩🇪[openproxylist.com] vless-DE-7"
     type: "vless"
     server: "104.17.70.206"
     port: 8443
@@ -1298,7 +1288,7 @@ proxies:
       path: "/"
       headers:
         Host: "free.sahanwickramasinghe.com"
-  - name: "🇩🇪[openproxylist.com] vless-DE-7"
+  - name: "🇩🇪[openproxylist.com] vless-DE-8"
     type: "vless"
     server: "191.44.108.31"
     port: 443
@@ -1326,7 +1316,7 @@ proxies:
     reality-opts:
       public-key: "SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY"
       short-id: "37fbf155c7a9f3ff"
-  - name: "🇨🇭[openproxylist.com] vless-CH-1"
+  - name: "🇨🇭[openproxylist.com] vless-CH"
     type: "vless"
     server: "45.90.59.15"
     port: 443
@@ -1354,112 +1344,13 @@ proxies:
     reality-opts:
       public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
       short-id: "0dfc23fe80778c00"
-  - name: "🏳[openproxylist.com] vless--11"
-    type: "vless"
-    server: "208.67.106.154"
-    port: 443
-    uuid: "96ee55ac-d534-4502-878a-468c7896360b"
+  - name: "🇺🇸[openproxylist.com] ss-US"
+    type: "ss"
+    server: "138.197.89.234"
+    port: 28960
+    cipher: "chacha20-ietf-poly1305"
+    password: "DZRy4Q3QH0jUGfKFl2jDCZ"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.microsoft.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_0fpFqEEuCso3B8K7AAcMjctwG_xfCxO2PdKzGd_-hg"
-      short-id: "c9677d3b7dea"
-  - name: "🇮🇹[openproxylist.com] vless-IT-1"
-    type: "vless"
-    server: "82.118.16.187"
-    port: 443
-    uuid: "dc2259c4-388e-4285-ba18-df619b6672b6"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU"
-      short-id: "cd6065902eea7a02"
-  - name: "🇫🇮[openproxylist.com] vless-FI"
-    type: "vless"
-    server: "31.77.199.147"
-    port: 4443
-    uuid: "20dd9433-389e-4573-ba7b-689619cf13da"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "images.unsplash.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A"
-      short-id: "7da2eae792187ab9"
-  - name: "🏳[openproxylist.com] vless--12"
-    type: "vless"
-    server: "108.61.164.217"
-    port: 4443
-    uuid: "20dd9433-389e-4573-ba7b-689619cf13da"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.samsung.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "k9srkQedwHsZGJP-R-GGwDOGok05gk23s8d4mtidMC4"
-      short-id: "835391010667297d"
-  - name: "🇨🇿[openproxylist.com] vless-CZ-1"
-    type: "vless"
-    server: "195.123.245.241"
-    port: 443
-    uuid: "7c053ca8-38cc-45e2-930c-eda1fd66f903"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "gateway.icloud.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw"
-      short-id: "23d0950d60bc0d5b"
-  - name: "🏳[openproxylist.com] vless--13"
-    type: "vless"
-    server: "82.118.19.153"
-    port: 443
-    uuid: "adcaa148-7c66-4282-a81a-99ec8afa029d"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE"
-      short-id: "670ed9f350bd8ee0"
-  - name: "🇻🇳[openproxylist.com] vless-VN"
-    type: "vless"
-    server: "150.95.109.109"
-    port: 2086
-    uuid: "b83faafc-cbb7-4655-99d4-2c4c39a49d1b"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🏳[openproxylist.com] vless--14"
-    type: "vless"
-    server: "195.123.240.65"
-    port: 443
-    uuid: "ce18d0eb-5c71-41f9-96e5-1632e22456e4"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "ios"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE"
-      short-id: "19296c9f1bf9c7b1"
   - name: "🇰🇷[openproxylist.com] ss-KR"
     type: "ss"
     server: "43.202.1.87"
@@ -1484,13 +1375,13 @@ proxies:
     udp: true
   - name: "🇸🇬[openproxylist.com] vmess-SG"
     type: "vmess"
-    server: "wjofHsQtEuEywxEq.v.3dns.vip"
+    server: "wjofhsqteueywxeq.v.3dns.vip"
     port: 443
     uuid: "a9f4de8b-68f1-44b6-b6a2-1db60940503a"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🏳[openproxylist.com] vmess-"
+  - name: "🇰🇷[openproxylist.com] vmess-KR"
     type: "vmess"
     server: "129.154.61.196"
     port: 800
@@ -1508,13 +1399,21 @@ proxies:
     udp: true
   - name: "🇭🇰[openproxylist.com] vmess-HK-1"
     type: "vmess"
-    server: "8.217.186.60"
+    server: "euu1yalfmcqvljex.v.3dns.vip"
     port: 443
     uuid: "d237ab38-1974-4b36-94a3-0665ce8587b9"
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🏳[openproxylist.com] vmess--1"
+  - name: "🇩🇪[openproxylist.com] vmess-DE-1"
+    type: "vmess"
+    server: "de.zhou-yufan.com"
+    port: 443
+    uuid: "f38e591d-d13a-4c30-9763-6be3ad65f3ec"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇺🇸[openproxylist.com] vmess-US"
     type: "vmess"
     server: "43.130.35.53"
     port: 10087
@@ -1524,9 +1423,17 @@ proxies:
     udp: true
   - name: "🇫🇷[openproxylist.com] vmess-FR"
     type: "vmess"
-    server: "www.windowssearchtools.com"
+    server: "188.114.97.1"
     port: 443
     uuid: "ba1116e2-8c2f-4e3d-8e50-c954360cf970"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇨🇦[openproxylist.com] vmess-CA"
+    type: "vmess"
+    server: "www.windowsmsidownloads.com"
+    port: 443
+    uuid: "80be2deb-3b27-4775-9bd1-7f2a2b9c261b"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -1538,7 +1445,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇩🇪[openproxylist.com] vmess-DE-1"
+  - name: "🇩🇪[openproxylist.com] vmess-DE-2"
     type: "vmess"
     server: "www.gptcloudai.com"
     port: 443
@@ -1546,23 +1453,31 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🏳[openproxylist.com] vmess--2"
-    type: "vmess"
-    server: "158.160.180.165"
-    port: 24212
-    uuid: "c58c1205-b308-416f-8503-c04557abf93d"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇬🇧[openproxylist.com] trojan-GB"
+  - name: "🇳🇱[openproxylist.com] trojan-NL"
     type: "trojan"
-    server: "en001.zestapp778.com"
-    port: 29813
-    password: "5t6i121em5lkmsmk"
+    server: "66.163.127.155"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "en001.zestapp778.com"
+  - name: "🇩🇪[openproxylist.com] trojan-DE"
+    type: "trojan"
+    server: "de-bots4.h1cloud.net"
+    port: 25267
+    password: "happybirthdaydaniel"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US"
+    type: "trojan"
+    server: "167.88.61.198"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdn.browseseniorrolesandenhanceyourcareertoday.com"
   - name: "🏳[openproxylist.com] trojan-"
     type: "trojan"
     server: "167.88.61.193"
@@ -1573,13 +1488,22 @@ proxies:
     network: "tcp"
   - name: "🇨🇦[openproxylist.com] trojan-CA"
     type: "trojan"
-    server: "216.152.147.89"
+    server: "216.152.147.79"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US"
+    servername: "blog.connectingpeoplewithgreatjobs.com"
+  - name: "🇨🇦[openproxylist.com] trojan-CA-1"
+    type: "trojan"
+    server: "216.152.147.85"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-1"
     type: "trojan"
     server: "170.101.101.131"
     port: 443
@@ -1587,9 +1511,17 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🏳[openproxylist.com] trojan--1"
+  - name: "🇨🇦[openproxylist.com] trojan-CA-2"
     type: "trojan"
-    server: "216.152.147.85"
+    server: "216.152.147.152"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇩🇪[openproxylist.com] trojan-DE-1"
+    type: "trojan"
+    server: "193.108.119.78"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
@@ -1604,15 +1536,16 @@ proxies:
     tls: true
     network: "tcp"
     servername: "browseexecutivejobopeningsandenhanceleadershipcareer.com"
-  - name: "🏳[openproxylist.com] trojan--2"
+  - name: "🇺🇸[openproxylist.com] trojan-US-2"
     type: "trojan"
-    server: "216.152.147.79"
+    server: "170.101.101.53"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-1"
+    servername: "www.explorecreativejobsandenhanceyourcareerportfolio.com"
+  - name: "🇺🇸[openproxylist.com] trojan-US-3"
     type: "trojan"
     server: "170.101.101.67"
     port: 443
@@ -1620,7 +1553,22 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "courses.explorecreativejobsandenhanceyourcareerportfolio.com"
+  - name: "🇨🇦[openproxylist.com] trojan-CA-3"
+    type: "trojan"
+    server: "216.152.147.79"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-4"
+    type: "trojan"
+    server: "170.101.101.53"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
   - name: "🇸🇬[openproxylist.com] trojan-SG"
     type: "trojan"
     server: "149.28.130.108"
@@ -1630,7 +1578,15 @@ proxies:
     tls: true
     network: "tcp"
     servername: "searchcreativejobsandshowcaseyourartistictalents.com"
-  - name: "🇨🇦[openproxylist.com] trojan-CA-1"
+  - name: "🇨🇦[openproxylist.com] trojan-CA-4"
+    type: "trojan"
+    server: "216.152.147.74"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇨🇦[openproxylist.com] trojan-CA-5"
     type: "trojan"
     server: "216.152.147.93"
     port: 443
@@ -1638,26 +1594,18 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-2"
+  - name: "🇩🇪[openproxylist.com] trojan-DE-2"
     type: "trojan"
-    server: "167.88.61.198"
+    server: "193.108.119.15"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "cdn.browseseniorrolesandenhanceyourcareertoday.com"
-  - name: "🏳[openproxylist.com] trojan--3"
+    servername: "courses.iloverussia2026.com"
+  - name: "🇺🇸[openproxylist.com] trojan-US-5"
     type: "trojan"
-    server: "216.152.147.152"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇩🇪[openproxylist.com] trojan-DE"
-    type: "trojan"
-    server: "193.108.119.78"
+    server: "169.197.140.245"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
@@ -1671,24 +1619,56 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-3"
+  - name: "🇮🇳[openproxylist.com] trojan-IN"
     type: "trojan"
-    server: "169.197.140.218"
+    server: "in002.zestapp778.com"
+    port: 42733
+    password: "5t6i121em5lkmsmk"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-6"
+    type: "trojan"
+    server: "66.163.112.121"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-4"
+  - name: "🇺🇸[openproxylist.com] trojan-US-7"
     type: "trojan"
-    server: "66.163.112.13"
+    server: "169.197.140.214"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "blog.unlockyourfuturefindyourperfectcareer.com"
-  - name: "🇺🇸[openproxylist.com] trojan-US-5"
+  - name: "🇺🇸[openproxylist.com] trojan-US-8"
+    type: "trojan"
+    server: "66.163.122.113"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-9"
+    type: "trojan"
+    server: "66.163.112.171"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇪🇸[openproxylist.com] trojan-ES"
+    type: "trojan"
+    server: "66.163.118.62"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "courses.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇺🇸[openproxylist.com] trojan-US-10"
     type: "trojan"
     server: "66.163.122.7"
     port: 443
@@ -1705,66 +1685,23 @@ proxies:
     tls: true
     network: "tcp"
     servername: "connectwithemployerstohireyouridealteam.com"
-  - name: "🇺🇸[openproxylist.com] trojan-US-6"
+  - name: "🇺🇸[openproxylist.com] trojan-US-11"
     type: "trojan"
-    server: "216.152.155.59"
+    server: "216.152.155.54"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-7"
+  - name: "🇺🇸[openproxylist.com] trojan-US-12"
     type: "trojan"
-    server: "66.163.112.147"
+    server: "216.152.156.81"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇪🇸[openproxylist.com] trojan-ES"
-    type: "trojan"
-    server: "66.163.118.166"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "learn.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🇪🇸[openproxylist.com] trojan-ES-1"
-    type: "trojan"
-    server: "66.163.118.62"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "courses.discovergreatjobsandadvanceyourcareer.com"
-  - name: "🏳[openproxylist.com] trojan--4"
-    type: "trojan"
-    server: "169.197.140.245"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-8"
-    type: "trojan"
-    server: "66.163.122.113"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api.searchnationwidecareerchangehelperandguidancetoday.com"
-  - name: "🇺🇸[openproxylist.com] trojan-US-9"
-    type: "trojan"
-    server: "66.163.112.171"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-10"
+  - name: "🇺🇸[openproxylist.com] trojan-US-13"
     type: "trojan"
     server: "66.163.112.121"
     port: 443
@@ -1773,15 +1710,38 @@ proxies:
     tls: true
     network: "tcp"
     servername: "www.unlockyourfuturefindyourperfectcareer.com"
-  - name: "🇪🇸[openproxylist.com] trojan-ES-2"
+  - name: "🇺🇸[openproxylist.com] trojan-US-14"
     type: "trojan"
-    server: "66.163.118.131"
+    server: "169.197.140.218"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.discovergreatjobsandadvanceyourcareer.com"
+  - name: "🇺🇸[openproxylist.com] trojan-US-15"
+    type: "trojan"
+    server: "66.163.112.13"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-16"
+    type: "trojan"
+    server: "66.163.112.76"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-17"
+    type: "trojan"
+    server: "66.163.112.142"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
   - name: "🇨🇱[openproxylist.com] trojan-CL"
     type: "trojan"
     server: "64.176.7.205"
@@ -1798,133 +1758,7 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-11"
-    type: "trojan"
-    server: "66.163.112.76"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "api.unlockyourfuturefindyourperfectcareer.com"
-  - name: "🇺🇸[openproxylist.com] trojan-US-12"
-    type: "trojan"
-    server: "216.152.155.23"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "courses.nextjobopportunityandclaimyouridealrole.com"
-  - name: "🇺🇸[openproxylist.com] trojan-US-13"
-    type: "trojan"
-    server: "216.152.155.158"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🏳[openproxylist.com] trojan--5"
-    type: "trojan"
-    server: "169.197.140.214"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-14"
-    type: "trojan"
-    server: "66.163.122.81"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-15"
-    type: "trojan"
-    server: "216.152.155.176"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "blog.nextjobopportunityandclaimyouridealrole.com"
-  - name: "🇺🇸[openproxylist.com] trojan-US-16"
-    type: "trojan"
-    server: "66.163.114.45"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🏳[openproxylist.com] trojan--6"
-    type: "trojan"
-    server: "66.163.114.245"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-17"
-    type: "trojan"
-    server: "216.152.156.65"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
   - name: "🇺🇸[openproxylist.com] trojan-US-18"
-    type: "trojan"
-    server: "216.152.156.65"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-19"
-    type: "trojan"
-    server: "66.163.114.114"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "learn.findconnectwithemployersandbuildprofessionalnetwork.com"
-  - name: "🏳[openproxylist.com] trojan--7"
-    type: "trojan"
-    server: "216.152.156.81"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-20"
-    type: "trojan"
-    server: "216.152.156.42"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
-  - name: "🏳[openproxylist.com] trojan--8"
-    type: "trojan"
-    server: "66.163.122.113"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🏳[openproxylist.com] trojan--9"
-    type: "trojan"
-    server: "216.152.155.23"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    udp: true
-    tls: true
-    network: "tcp"
-  - name: "🏳[openproxylist.com] trojan--10"
     type: "trojan"
     server: "66.163.114.126"
     port: 443
@@ -1932,16 +1766,47 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇺🇸[openproxylist.com] trojan-US-21"
+  - name: "🇺🇸[openproxylist.com] trojan-US-19"
     type: "trojan"
-    server: "66.163.114.132"
+    server: "216.152.155.23"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "courses.findconnectwithemployersandbuildprofessionalnetwork.com"
+  - name: "🇺🇸[openproxylist.com] trojan-US-20"
+    type: "trojan"
+    server: "216.152.155.176"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-21"
+    type: "trojan"
+    server: "216.152.155.158"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
   - name: "🇺🇸[openproxylist.com] trojan-US-22"
+    type: "trojan"
+    server: "66.163.114.45"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-23"
+    type: "trojan"
+    server: "216.152.156.42"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-24"
     type: "trojan"
     server: "216.152.156.212"
     port: 443
@@ -1949,16 +1814,54 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-    servername: "courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
-  - name: "🇺🇸[openproxylist.com] trojan-US-23"
+  - name: "🇺🇸[openproxylist.com] trojan-US-25"
     type: "trojan"
-    server: "216.152.156.81"
+    server: "66.163.114.132"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.healthcarejobshubenhancemedicalprofessionalskillstoday.com"
+  - name: "🇺🇸[openproxylist.com] trojan-US-26"
+    type: "trojan"
+    server: "216.152.156.49"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-27"
+    type: "trojan"
+    server: "216.152.155.131"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-28"
+    type: "trojan"
+    server: "66.163.114.245"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-29"
+    type: "trojan"
+    server: "66.163.114.106"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
+  - name: "🇺🇸[openproxylist.com] trojan-US-30"
+    type: "trojan"
+    server: "216.152.156.65"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+    tls: true
+    network: "tcp"
   - name: "🇮🇱[openproxylist.com] trojan-IL"
     type: "trojan"
     server: "64.176.163.182"
@@ -1968,15 +1871,14 @@ proxies:
     tls: true
     network: "tcp"
     servername: "exploreeducationsectoropportunitiestodayandadvancecareers.com"
-  - name: "🇺🇸[openproxylist.com] trojan-US-24"
+  - name: "🇺🇸[openproxylist.com] trojan-US-31"
     type: "trojan"
-    server: "216.152.155.54"
+    server: "216.152.155.59"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
     udp: true
     tls: true
     network: "tcp"
-    servername: "learn.nextjobopportunityandclaimyouridealrole.com"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1991,141 +1893,137 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇺🇸[openproxylist.com] vless-US"
-      - "🇳🇱[openproxylist.com] vless-NL"
-      - "🇪🇸[openproxylist.com] vless-ES"
       - "🏳[openproxylist.com] vless-"
+      - "🇪🇪[openproxylist.com] vless-EE"
+      - "🇳🇱[openproxylist.com] vless-NL"
+      - "🇹🇷[openproxylist.com] vless-TR"
       - "🇸🇪[openproxylist.com] vless-SE"
       - "🇳🇱[openproxylist.com] vless-NL-1"
-      - "🏳[openproxylist.com] vless--1"
       - "🇳🇱[openproxylist.com] vless-NL-2"
       - "🇩🇪[openproxylist.com] vless-DE"
-      - "🇺🇸[openproxylist.com] vless-US-1"
-      - "🏳[openproxylist.com] vless--2"
+      - "🇫🇮[openproxylist.com] vless-FI"
+      - "🇵🇱[openproxylist.com] vless-PL"
       - "🇩🇪[openproxylist.com] vless-DE-1"
-      - "🏳[openproxylist.com] vless--3"
-      - "🇺🇸[openproxylist.com] vless-US-2"
-      - "🇨🇿[openproxylist.com] vless-CZ"
-      - "🏳[openproxylist.com] vless--4"
-      - "🇺🇸[openproxylist.com] vless-US-3"
-      - "🏳[openproxylist.com] vless--5"
-      - "🇭🇰[openproxylist.com] vless-HK"
-      - "🇺🇸[openproxylist.com] vless-US-4"
-      - "🇸🇪[openproxylist.com] vless-SE-1"
       - "🇩🇪[openproxylist.com] vless-DE-2"
+      - "🇺🇸[openproxylist.com] vless-US"
+      - "🇨🇿[openproxylist.com] vless-CZ"
       - "🇩🇪[openproxylist.com] vless-DE-3"
-      - "🏳[openproxylist.com] vless--6"
-      - "🇮🇩[openproxylist.com] vless-ID"
-      - "🇺🇸[openproxylist.com] vless-US-5"
-      - "🇺🇦[openproxylist.com] vless-UA"
-      - "🏳[openproxylist.com] vless--7"
-      - "🇩🇪[openproxylist.com] vless-DE-4"
-      - "🇺🇸[openproxylist.com] vless-US-6"
+      - "🇺🇸[openproxylist.com] vless-US-1"
+      - "🇭🇰[openproxylist.com] vless-HK"
+      - "🇺🇸[openproxylist.com] vless-US-2"
+      - "🇺🇸[openproxylist.com] vless-US-3"
       - "🇮🇷[openproxylist.com] vless-IR"
-      - "🇮🇷[openproxylist.com] vless-IR-1"
-      - "🇺🇸[openproxylist.com] vless-US-7"
-      - "🇳🇱[openproxylist.com] vless-NL-3"
-      - "🇮🇷[openproxylist.com] vless-IR-2"
-      - "🏳[openproxylist.com] vless--8"
+      - "🇸🇪[openproxylist.com] vless-SE-1"
+      - "🇩🇪[openproxylist.com] vless-DE-4"
       - "🇩🇪[openproxylist.com] vless-DE-5"
-      - "🇺🇸[openproxylist.com] vless-US-8"
-      - "🏳[openproxylist.com] vless--9"
-      - "🇳🇱[openproxylist.com] vless-NL-4"
-      - "🇨🇭[openproxylist.com] vless-CH"
-      - "🇺🇸[openproxylist.com] vless-US-9"
+      - "🇳🇱[openproxylist.com] vless-NL-3"
+      - "🇮🇩[openproxylist.com] vless-ID"
+      - "🇺🇦[openproxylist.com] vless-UA"
       - "🇸🇬[openproxylist.com] vless-SG"
+      - "🇺🇸[openproxylist.com] vless-US-4"
+      - "🇮🇷[openproxylist.com] vless-IR-1"
+      - "🇮🇷[openproxylist.com] vless-IR-2"
+      - "🇳🇱[openproxylist.com] vless-NL-4"
+      - "🇨🇦[openproxylist.com] vless-CA"
+      - "🇮🇷[openproxylist.com] vless-IR-3"
+      - "🇩🇪[openproxylist.com] vless-DE-6"
+      - "🇸🇬[openproxylist.com] vless-SG-1"
+      - "🇺🇸[openproxylist.com] vless-US-5"
+      - "🇮🇳[openproxylist.com] vless-IN"
+      - "🇺🇸[openproxylist.com] vless-US-6"
+      - "🇺🇸[openproxylist.com] vless-US-7"
+      - "🇸🇬[openproxylist.com] vless-SG-2"
       - "🇫🇷[openproxylist.com] vless-FR"
-      - "🇪🇸[openproxylist.com] vless-ES-1"
       - "🇹🇼[openproxylist.com] vless-TW"
-      - "🏳[openproxylist.com] vless--10"
+      - "🇭🇰[openproxylist.com] vless-HK-1"
+      - "🇪🇸[openproxylist.com] vless-ES"
+      - "🇪🇸[openproxylist.com] vless-ES-1"
       - "🇰🇷[openproxylist.com] vless-KR"
+      - "🇺🇸[openproxylist.com] vless-US-8"
       - "🇹🇭[openproxylist.com] vless-TH"
       - "🇳🇱[openproxylist.com] vless-NL-5"
       - "🇷🇺[openproxylist.com] vless-RU"
       - "🇧🇬[openproxylist.com] vless-BG"
-      - "🇭🇰[openproxylist.com] vless-HK-1"
-      - "🇸🇬[openproxylist.com] vless-SG-1"
-      - "🇮🇷[openproxylist.com] vless-IR-3"
+      - "🇮🇱[openproxylist.com] vless-IL"
+      - "🇭🇰[openproxylist.com] vless-HK-2"
+      - "🇸🇬[openproxylist.com] vless-SG-3"
+      - "🇮🇷[openproxylist.com] vless-IR-4"
       - "🇬🇧[openproxylist.com] vless-GB"
       - "🇧🇾[openproxylist.com] vless-BY"
       - "🇳🇱[openproxylist.com] vless-NL-6"
-      - "🇵🇱[openproxylist.com] vless-PL"
+      - "🇵🇱[openproxylist.com] vless-PL-1"
       - "🇵🇪[openproxylist.com] vless-PE"
-      - "🇩🇪[openproxylist.com] vless-DE-6"
       - "🇩🇪[openproxylist.com] vless-DE-7"
+      - "🇩🇪[openproxylist.com] vless-DE-8"
       - "🇮🇹[openproxylist.com] vless-IT"
-      - "🇨🇭[openproxylist.com] vless-CH-1"
+      - "🇨🇭[openproxylist.com] vless-CH"
       - "🇪🇸[openproxylist.com] vless-ES-2"
-      - "🏳[openproxylist.com] vless--11"
-      - "🇮🇹[openproxylist.com] vless-IT-1"
-      - "🇫🇮[openproxylist.com] vless-FI"
-      - "🏳[openproxylist.com] vless--12"
-      - "🇨🇿[openproxylist.com] vless-CZ-1"
-      - "🏳[openproxylist.com] vless--13"
-      - "🇻🇳[openproxylist.com] vless-VN"
-      - "🏳[openproxylist.com] vless--14"
+      - "🇺🇸[openproxylist.com] ss-US"
       - "🇰🇷[openproxylist.com] ss-KR"
       - "🇳🇱[openproxylist.com] ss-NL"
       - "🇩🇪[openproxylist.com] vmess-DE"
       - "🇸🇬[openproxylist.com] vmess-SG"
-      - "🏳[openproxylist.com] vmess-"
+      - "🇰🇷[openproxylist.com] vmess-KR"
       - "🇭🇰[openproxylist.com] vmess-HK"
       - "🇭🇰[openproxylist.com] vmess-HK-1"
-      - "🏳[openproxylist.com] vmess--1"
-      - "🇫🇷[openproxylist.com] vmess-FR"
-      - "🇬🇧[openproxylist.com] vmess-GB"
       - "🇩🇪[openproxylist.com] vmess-DE-1"
-      - "🏳[openproxylist.com] vmess--2"
-      - "🇬🇧[openproxylist.com] trojan-GB"
+      - "🇺🇸[openproxylist.com] vmess-US"
+      - "🇫🇷[openproxylist.com] vmess-FR"
+      - "🇨🇦[openproxylist.com] vmess-CA"
+      - "🇬🇧[openproxylist.com] vmess-GB"
+      - "🇩🇪[openproxylist.com] vmess-DE-2"
+      - "🇳🇱[openproxylist.com] trojan-NL"
+      - "🇩🇪[openproxylist.com] trojan-DE"
+      - "🇺🇸[openproxylist.com] trojan-US"
       - "🏳[openproxylist.com] trojan-"
       - "🇨🇦[openproxylist.com] trojan-CA"
-      - "🇺🇸[openproxylist.com] trojan-US"
-      - "🏳[openproxylist.com] trojan--1"
-      - "🇵🇱[openproxylist.com] trojan-PL"
-      - "🏳[openproxylist.com] trojan--2"
-      - "🇺🇸[openproxylist.com] trojan-US-1"
-      - "🇸🇬[openproxylist.com] trojan-SG"
       - "🇨🇦[openproxylist.com] trojan-CA-1"
+      - "🇺🇸[openproxylist.com] trojan-US-1"
+      - "🇨🇦[openproxylist.com] trojan-CA-2"
+      - "🇩🇪[openproxylist.com] trojan-DE-1"
+      - "🇵🇱[openproxylist.com] trojan-PL"
       - "🇺🇸[openproxylist.com] trojan-US-2"
-      - "🏳[openproxylist.com] trojan--3"
-      - "🇩🇪[openproxylist.com] trojan-DE"
-      - "🇲🇽[openproxylist.com] trojan-MX"
       - "🇺🇸[openproxylist.com] trojan-US-3"
+      - "🇨🇦[openproxylist.com] trojan-CA-3"
       - "🇺🇸[openproxylist.com] trojan-US-4"
+      - "🇸🇬[openproxylist.com] trojan-SG"
+      - "🇨🇦[openproxylist.com] trojan-CA-4"
+      - "🇨🇦[openproxylist.com] trojan-CA-5"
+      - "🇩🇪[openproxylist.com] trojan-DE-2"
       - "🇺🇸[openproxylist.com] trojan-US-5"
-      - "🇦🇺[openproxylist.com] trojan-AU"
+      - "🇲🇽[openproxylist.com] trojan-MX"
+      - "🇮🇳[openproxylist.com] trojan-IN"
       - "🇺🇸[openproxylist.com] trojan-US-6"
       - "🇺🇸[openproxylist.com] trojan-US-7"
-      - "🇪🇸[openproxylist.com] trojan-ES"
-      - "🇪🇸[openproxylist.com] trojan-ES-1"
-      - "🏳[openproxylist.com] trojan--4"
       - "🇺🇸[openproxylist.com] trojan-US-8"
       - "🇺🇸[openproxylist.com] trojan-US-9"
+      - "🇪🇸[openproxylist.com] trojan-ES"
       - "🇺🇸[openproxylist.com] trojan-US-10"
-      - "🇪🇸[openproxylist.com] trojan-ES-2"
-      - "🇨🇱[openproxylist.com] trojan-CL"
-      - "🇧🇷[openproxylist.com] trojan-BR"
+      - "🇦🇺[openproxylist.com] trojan-AU"
       - "🇺🇸[openproxylist.com] trojan-US-11"
       - "🇺🇸[openproxylist.com] trojan-US-12"
       - "🇺🇸[openproxylist.com] trojan-US-13"
-      - "🏳[openproxylist.com] trojan--5"
       - "🇺🇸[openproxylist.com] trojan-US-14"
       - "🇺🇸[openproxylist.com] trojan-US-15"
       - "🇺🇸[openproxylist.com] trojan-US-16"
-      - "🏳[openproxylist.com] trojan--6"
       - "🇺🇸[openproxylist.com] trojan-US-17"
+      - "🇨🇱[openproxylist.com] trojan-CL"
+      - "🇧🇷[openproxylist.com] trojan-BR"
       - "🇺🇸[openproxylist.com] trojan-US-18"
       - "🇺🇸[openproxylist.com] trojan-US-19"
-      - "🏳[openproxylist.com] trojan--7"
       - "🇺🇸[openproxylist.com] trojan-US-20"
-      - "🏳[openproxylist.com] trojan--8"
-      - "🏳[openproxylist.com] trojan--9"
-      - "🏳[openproxylist.com] trojan--10"
       - "🇺🇸[openproxylist.com] trojan-US-21"
       - "🇺🇸[openproxylist.com] trojan-US-22"
       - "🇺🇸[openproxylist.com] trojan-US-23"
-      - "🇮🇱[openproxylist.com] trojan-IL"
       - "🇺🇸[openproxylist.com] trojan-US-24"
+      - "🇺🇸[openproxylist.com] trojan-US-25"
+      - "🇺🇸[openproxylist.com] trojan-US-26"
+      - "🇺🇸[openproxylist.com] trojan-US-27"
+      - "🇺🇸[openproxylist.com] trojan-US-28"
+      - "🇺🇸[openproxylist.com] trojan-US-29"
+      - "🇺🇸[openproxylist.com] trojan-US-30"
+      - "🇮🇱[openproxylist.com] trojan-IL"
+      - "🇺🇸[openproxylist.com] trojan-US-31"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -2136,141 +2034,137 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇺🇸[openproxylist.com] vless-US"
-      - "🇳🇱[openproxylist.com] vless-NL"
-      - "🇪🇸[openproxylist.com] vless-ES"
       - "🏳[openproxylist.com] vless-"
+      - "🇪🇪[openproxylist.com] vless-EE"
+      - "🇳🇱[openproxylist.com] vless-NL"
+      - "🇹🇷[openproxylist.com] vless-TR"
       - "🇸🇪[openproxylist.com] vless-SE"
       - "🇳🇱[openproxylist.com] vless-NL-1"
-      - "🏳[openproxylist.com] vless--1"
       - "🇳🇱[openproxylist.com] vless-NL-2"
       - "🇩🇪[openproxylist.com] vless-DE"
-      - "🇺🇸[openproxylist.com] vless-US-1"
-      - "🏳[openproxylist.com] vless--2"
+      - "🇫🇮[openproxylist.com] vless-FI"
+      - "🇵🇱[openproxylist.com] vless-PL"
       - "🇩🇪[openproxylist.com] vless-DE-1"
-      - "🏳[openproxylist.com] vless--3"
-      - "🇺🇸[openproxylist.com] vless-US-2"
-      - "🇨🇿[openproxylist.com] vless-CZ"
-      - "🏳[openproxylist.com] vless--4"
-      - "🇺🇸[openproxylist.com] vless-US-3"
-      - "🏳[openproxylist.com] vless--5"
-      - "🇭🇰[openproxylist.com] vless-HK"
-      - "🇺🇸[openproxylist.com] vless-US-4"
-      - "🇸🇪[openproxylist.com] vless-SE-1"
       - "🇩🇪[openproxylist.com] vless-DE-2"
+      - "🇺🇸[openproxylist.com] vless-US"
+      - "🇨🇿[openproxylist.com] vless-CZ"
       - "🇩🇪[openproxylist.com] vless-DE-3"
-      - "🏳[openproxylist.com] vless--6"
-      - "🇮🇩[openproxylist.com] vless-ID"
-      - "🇺🇸[openproxylist.com] vless-US-5"
-      - "🇺🇦[openproxylist.com] vless-UA"
-      - "🏳[openproxylist.com] vless--7"
-      - "🇩🇪[openproxylist.com] vless-DE-4"
-      - "🇺🇸[openproxylist.com] vless-US-6"
+      - "🇺🇸[openproxylist.com] vless-US-1"
+      - "🇭🇰[openproxylist.com] vless-HK"
+      - "🇺🇸[openproxylist.com] vless-US-2"
+      - "🇺🇸[openproxylist.com] vless-US-3"
       - "🇮🇷[openproxylist.com] vless-IR"
-      - "🇮🇷[openproxylist.com] vless-IR-1"
-      - "🇺🇸[openproxylist.com] vless-US-7"
-      - "🇳🇱[openproxylist.com] vless-NL-3"
-      - "🇮🇷[openproxylist.com] vless-IR-2"
-      - "🏳[openproxylist.com] vless--8"
+      - "🇸🇪[openproxylist.com] vless-SE-1"
+      - "🇩🇪[openproxylist.com] vless-DE-4"
       - "🇩🇪[openproxylist.com] vless-DE-5"
-      - "🇺🇸[openproxylist.com] vless-US-8"
-      - "🏳[openproxylist.com] vless--9"
-      - "🇳🇱[openproxylist.com] vless-NL-4"
-      - "🇨🇭[openproxylist.com] vless-CH"
-      - "🇺🇸[openproxylist.com] vless-US-9"
+      - "🇳🇱[openproxylist.com] vless-NL-3"
+      - "🇮🇩[openproxylist.com] vless-ID"
+      - "🇺🇦[openproxylist.com] vless-UA"
       - "🇸🇬[openproxylist.com] vless-SG"
+      - "🇺🇸[openproxylist.com] vless-US-4"
+      - "🇮🇷[openproxylist.com] vless-IR-1"
+      - "🇮🇷[openproxylist.com] vless-IR-2"
+      - "🇳🇱[openproxylist.com] vless-NL-4"
+      - "🇨🇦[openproxylist.com] vless-CA"
+      - "🇮🇷[openproxylist.com] vless-IR-3"
+      - "🇩🇪[openproxylist.com] vless-DE-6"
+      - "🇸🇬[openproxylist.com] vless-SG-1"
+      - "🇺🇸[openproxylist.com] vless-US-5"
+      - "🇮🇳[openproxylist.com] vless-IN"
+      - "🇺🇸[openproxylist.com] vless-US-6"
+      - "🇺🇸[openproxylist.com] vless-US-7"
+      - "🇸🇬[openproxylist.com] vless-SG-2"
       - "🇫🇷[openproxylist.com] vless-FR"
-      - "🇪🇸[openproxylist.com] vless-ES-1"
       - "🇹🇼[openproxylist.com] vless-TW"
-      - "🏳[openproxylist.com] vless--10"
+      - "🇭🇰[openproxylist.com] vless-HK-1"
+      - "🇪🇸[openproxylist.com] vless-ES"
+      - "🇪🇸[openproxylist.com] vless-ES-1"
       - "🇰🇷[openproxylist.com] vless-KR"
+      - "🇺🇸[openproxylist.com] vless-US-8"
       - "🇹🇭[openproxylist.com] vless-TH"
       - "🇳🇱[openproxylist.com] vless-NL-5"
       - "🇷🇺[openproxylist.com] vless-RU"
       - "🇧🇬[openproxylist.com] vless-BG"
-      - "🇭🇰[openproxylist.com] vless-HK-1"
-      - "🇸🇬[openproxylist.com] vless-SG-1"
-      - "🇮🇷[openproxylist.com] vless-IR-3"
+      - "🇮🇱[openproxylist.com] vless-IL"
+      - "🇭🇰[openproxylist.com] vless-HK-2"
+      - "🇸🇬[openproxylist.com] vless-SG-3"
+      - "🇮🇷[openproxylist.com] vless-IR-4"
       - "🇬🇧[openproxylist.com] vless-GB"
       - "🇧🇾[openproxylist.com] vless-BY"
       - "🇳🇱[openproxylist.com] vless-NL-6"
-      - "🇵🇱[openproxylist.com] vless-PL"
+      - "🇵🇱[openproxylist.com] vless-PL-1"
       - "🇵🇪[openproxylist.com] vless-PE"
-      - "🇩🇪[openproxylist.com] vless-DE-6"
       - "🇩🇪[openproxylist.com] vless-DE-7"
+      - "🇩🇪[openproxylist.com] vless-DE-8"
       - "🇮🇹[openproxylist.com] vless-IT"
-      - "🇨🇭[openproxylist.com] vless-CH-1"
+      - "🇨🇭[openproxylist.com] vless-CH"
       - "🇪🇸[openproxylist.com] vless-ES-2"
-      - "🏳[openproxylist.com] vless--11"
-      - "🇮🇹[openproxylist.com] vless-IT-1"
-      - "🇫🇮[openproxylist.com] vless-FI"
-      - "🏳[openproxylist.com] vless--12"
-      - "🇨🇿[openproxylist.com] vless-CZ-1"
-      - "🏳[openproxylist.com] vless--13"
-      - "🇻🇳[openproxylist.com] vless-VN"
-      - "🏳[openproxylist.com] vless--14"
+      - "🇺🇸[openproxylist.com] ss-US"
       - "🇰🇷[openproxylist.com] ss-KR"
       - "🇳🇱[openproxylist.com] ss-NL"
       - "🇩🇪[openproxylist.com] vmess-DE"
       - "🇸🇬[openproxylist.com] vmess-SG"
-      - "🏳[openproxylist.com] vmess-"
+      - "🇰🇷[openproxylist.com] vmess-KR"
       - "🇭🇰[openproxylist.com] vmess-HK"
       - "🇭🇰[openproxylist.com] vmess-HK-1"
-      - "🏳[openproxylist.com] vmess--1"
-      - "🇫🇷[openproxylist.com] vmess-FR"
-      - "🇬🇧[openproxylist.com] vmess-GB"
       - "🇩🇪[openproxylist.com] vmess-DE-1"
-      - "🏳[openproxylist.com] vmess--2"
-      - "🇬🇧[openproxylist.com] trojan-GB"
+      - "🇺🇸[openproxylist.com] vmess-US"
+      - "🇫🇷[openproxylist.com] vmess-FR"
+      - "🇨🇦[openproxylist.com] vmess-CA"
+      - "🇬🇧[openproxylist.com] vmess-GB"
+      - "🇩🇪[openproxylist.com] vmess-DE-2"
+      - "🇳🇱[openproxylist.com] trojan-NL"
+      - "🇩🇪[openproxylist.com] trojan-DE"
+      - "🇺🇸[openproxylist.com] trojan-US"
       - "🏳[openproxylist.com] trojan-"
       - "🇨🇦[openproxylist.com] trojan-CA"
-      - "🇺🇸[openproxylist.com] trojan-US"
-      - "🏳[openproxylist.com] trojan--1"
-      - "🇵🇱[openproxylist.com] trojan-PL"
-      - "🏳[openproxylist.com] trojan--2"
-      - "🇺🇸[openproxylist.com] trojan-US-1"
-      - "🇸🇬[openproxylist.com] trojan-SG"
       - "🇨🇦[openproxylist.com] trojan-CA-1"
+      - "🇺🇸[openproxylist.com] trojan-US-1"
+      - "🇨🇦[openproxylist.com] trojan-CA-2"
+      - "🇩🇪[openproxylist.com] trojan-DE-1"
+      - "🇵🇱[openproxylist.com] trojan-PL"
       - "🇺🇸[openproxylist.com] trojan-US-2"
-      - "🏳[openproxylist.com] trojan--3"
-      - "🇩🇪[openproxylist.com] trojan-DE"
-      - "🇲🇽[openproxylist.com] trojan-MX"
       - "🇺🇸[openproxylist.com] trojan-US-3"
+      - "🇨🇦[openproxylist.com] trojan-CA-3"
       - "🇺🇸[openproxylist.com] trojan-US-4"
+      - "🇸🇬[openproxylist.com] trojan-SG"
+      - "🇨🇦[openproxylist.com] trojan-CA-4"
+      - "🇨🇦[openproxylist.com] trojan-CA-5"
+      - "🇩🇪[openproxylist.com] trojan-DE-2"
       - "🇺🇸[openproxylist.com] trojan-US-5"
-      - "🇦🇺[openproxylist.com] trojan-AU"
+      - "🇲🇽[openproxylist.com] trojan-MX"
+      - "🇮🇳[openproxylist.com] trojan-IN"
       - "🇺🇸[openproxylist.com] trojan-US-6"
       - "🇺🇸[openproxylist.com] trojan-US-7"
-      - "🇪🇸[openproxylist.com] trojan-ES"
-      - "🇪🇸[openproxylist.com] trojan-ES-1"
-      - "🏳[openproxylist.com] trojan--4"
       - "🇺🇸[openproxylist.com] trojan-US-8"
       - "🇺🇸[openproxylist.com] trojan-US-9"
+      - "🇪🇸[openproxylist.com] trojan-ES"
       - "🇺🇸[openproxylist.com] trojan-US-10"
-      - "🇪🇸[openproxylist.com] trojan-ES-2"
-      - "🇨🇱[openproxylist.com] trojan-CL"
-      - "🇧🇷[openproxylist.com] trojan-BR"
+      - "🇦🇺[openproxylist.com] trojan-AU"
       - "🇺🇸[openproxylist.com] trojan-US-11"
       - "🇺🇸[openproxylist.com] trojan-US-12"
       - "🇺🇸[openproxylist.com] trojan-US-13"
-      - "🏳[openproxylist.com] trojan--5"
       - "🇺🇸[openproxylist.com] trojan-US-14"
       - "🇺🇸[openproxylist.com] trojan-US-15"
       - "🇺🇸[openproxylist.com] trojan-US-16"
-      - "🏳[openproxylist.com] trojan--6"
       - "🇺🇸[openproxylist.com] trojan-US-17"
+      - "🇨🇱[openproxylist.com] trojan-CL"
+      - "🇧🇷[openproxylist.com] trojan-BR"
       - "🇺🇸[openproxylist.com] trojan-US-18"
       - "🇺🇸[openproxylist.com] trojan-US-19"
-      - "🏳[openproxylist.com] trojan--7"
       - "🇺🇸[openproxylist.com] trojan-US-20"
-      - "🏳[openproxylist.com] trojan--8"
-      - "🏳[openproxylist.com] trojan--9"
-      - "🏳[openproxylist.com] trojan--10"
       - "🇺🇸[openproxylist.com] trojan-US-21"
       - "🇺🇸[openproxylist.com] trojan-US-22"
       - "🇺🇸[openproxylist.com] trojan-US-23"
-      - "🇮🇱[openproxylist.com] trojan-IL"
       - "🇺🇸[openproxylist.com] trojan-US-24"
+      - "🇺🇸[openproxylist.com] trojan-US-25"
+      - "🇺🇸[openproxylist.com] trojan-US-26"
+      - "🇺🇸[openproxylist.com] trojan-US-27"
+      - "🇺🇸[openproxylist.com] trojan-US-28"
+      - "🇺🇸[openproxylist.com] trojan-US-29"
+      - "🇺🇸[openproxylist.com] trojan-US-30"
+      - "🇮🇱[openproxylist.com] trojan-IL"
+      - "🇺🇸[openproxylist.com] trojan-US-31"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -2280,141 +2174,137 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇺🇸[openproxylist.com] vless-US"
-      - "🇳🇱[openproxylist.com] vless-NL"
-      - "🇪🇸[openproxylist.com] vless-ES"
       - "🏳[openproxylist.com] vless-"
+      - "🇪🇪[openproxylist.com] vless-EE"
+      - "🇳🇱[openproxylist.com] vless-NL"
+      - "🇹🇷[openproxylist.com] vless-TR"
       - "🇸🇪[openproxylist.com] vless-SE"
       - "🇳🇱[openproxylist.com] vless-NL-1"
-      - "🏳[openproxylist.com] vless--1"
       - "🇳🇱[openproxylist.com] vless-NL-2"
       - "🇩🇪[openproxylist.com] vless-DE"
-      - "🇺🇸[openproxylist.com] vless-US-1"
-      - "🏳[openproxylist.com] vless--2"
+      - "🇫🇮[openproxylist.com] vless-FI"
+      - "🇵🇱[openproxylist.com] vless-PL"
       - "🇩🇪[openproxylist.com] vless-DE-1"
-      - "🏳[openproxylist.com] vless--3"
-      - "🇺🇸[openproxylist.com] vless-US-2"
-      - "🇨🇿[openproxylist.com] vless-CZ"
-      - "🏳[openproxylist.com] vless--4"
-      - "🇺🇸[openproxylist.com] vless-US-3"
-      - "🏳[openproxylist.com] vless--5"
-      - "🇭🇰[openproxylist.com] vless-HK"
-      - "🇺🇸[openproxylist.com] vless-US-4"
-      - "🇸🇪[openproxylist.com] vless-SE-1"
       - "🇩🇪[openproxylist.com] vless-DE-2"
+      - "🇺🇸[openproxylist.com] vless-US"
+      - "🇨🇿[openproxylist.com] vless-CZ"
       - "🇩🇪[openproxylist.com] vless-DE-3"
-      - "🏳[openproxylist.com] vless--6"
-      - "🇮🇩[openproxylist.com] vless-ID"
-      - "🇺🇸[openproxylist.com] vless-US-5"
-      - "🇺🇦[openproxylist.com] vless-UA"
-      - "🏳[openproxylist.com] vless--7"
-      - "🇩🇪[openproxylist.com] vless-DE-4"
-      - "🇺🇸[openproxylist.com] vless-US-6"
+      - "🇺🇸[openproxylist.com] vless-US-1"
+      - "🇭🇰[openproxylist.com] vless-HK"
+      - "🇺🇸[openproxylist.com] vless-US-2"
+      - "🇺🇸[openproxylist.com] vless-US-3"
       - "🇮🇷[openproxylist.com] vless-IR"
-      - "🇮🇷[openproxylist.com] vless-IR-1"
-      - "🇺🇸[openproxylist.com] vless-US-7"
-      - "🇳🇱[openproxylist.com] vless-NL-3"
-      - "🇮🇷[openproxylist.com] vless-IR-2"
-      - "🏳[openproxylist.com] vless--8"
+      - "🇸🇪[openproxylist.com] vless-SE-1"
+      - "🇩🇪[openproxylist.com] vless-DE-4"
       - "🇩🇪[openproxylist.com] vless-DE-5"
-      - "🇺🇸[openproxylist.com] vless-US-8"
-      - "🏳[openproxylist.com] vless--9"
-      - "🇳🇱[openproxylist.com] vless-NL-4"
-      - "🇨🇭[openproxylist.com] vless-CH"
-      - "🇺🇸[openproxylist.com] vless-US-9"
+      - "🇳🇱[openproxylist.com] vless-NL-3"
+      - "🇮🇩[openproxylist.com] vless-ID"
+      - "🇺🇦[openproxylist.com] vless-UA"
       - "🇸🇬[openproxylist.com] vless-SG"
+      - "🇺🇸[openproxylist.com] vless-US-4"
+      - "🇮🇷[openproxylist.com] vless-IR-1"
+      - "🇮🇷[openproxylist.com] vless-IR-2"
+      - "🇳🇱[openproxylist.com] vless-NL-4"
+      - "🇨🇦[openproxylist.com] vless-CA"
+      - "🇮🇷[openproxylist.com] vless-IR-3"
+      - "🇩🇪[openproxylist.com] vless-DE-6"
+      - "🇸🇬[openproxylist.com] vless-SG-1"
+      - "🇺🇸[openproxylist.com] vless-US-5"
+      - "🇮🇳[openproxylist.com] vless-IN"
+      - "🇺🇸[openproxylist.com] vless-US-6"
+      - "🇺🇸[openproxylist.com] vless-US-7"
+      - "🇸🇬[openproxylist.com] vless-SG-2"
       - "🇫🇷[openproxylist.com] vless-FR"
-      - "🇪🇸[openproxylist.com] vless-ES-1"
       - "🇹🇼[openproxylist.com] vless-TW"
-      - "🏳[openproxylist.com] vless--10"
+      - "🇭🇰[openproxylist.com] vless-HK-1"
+      - "🇪🇸[openproxylist.com] vless-ES"
+      - "🇪🇸[openproxylist.com] vless-ES-1"
       - "🇰🇷[openproxylist.com] vless-KR"
+      - "🇺🇸[openproxylist.com] vless-US-8"
       - "🇹🇭[openproxylist.com] vless-TH"
       - "🇳🇱[openproxylist.com] vless-NL-5"
       - "🇷🇺[openproxylist.com] vless-RU"
       - "🇧🇬[openproxylist.com] vless-BG"
-      - "🇭🇰[openproxylist.com] vless-HK-1"
-      - "🇸🇬[openproxylist.com] vless-SG-1"
-      - "🇮🇷[openproxylist.com] vless-IR-3"
+      - "🇮🇱[openproxylist.com] vless-IL"
+      - "🇭🇰[openproxylist.com] vless-HK-2"
+      - "🇸🇬[openproxylist.com] vless-SG-3"
+      - "🇮🇷[openproxylist.com] vless-IR-4"
       - "🇬🇧[openproxylist.com] vless-GB"
       - "🇧🇾[openproxylist.com] vless-BY"
       - "🇳🇱[openproxylist.com] vless-NL-6"
-      - "🇵🇱[openproxylist.com] vless-PL"
+      - "🇵🇱[openproxylist.com] vless-PL-1"
       - "🇵🇪[openproxylist.com] vless-PE"
-      - "🇩🇪[openproxylist.com] vless-DE-6"
       - "🇩🇪[openproxylist.com] vless-DE-7"
+      - "🇩🇪[openproxylist.com] vless-DE-8"
       - "🇮🇹[openproxylist.com] vless-IT"
-      - "🇨🇭[openproxylist.com] vless-CH-1"
+      - "🇨🇭[openproxylist.com] vless-CH"
       - "🇪🇸[openproxylist.com] vless-ES-2"
-      - "🏳[openproxylist.com] vless--11"
-      - "🇮🇹[openproxylist.com] vless-IT-1"
-      - "🇫🇮[openproxylist.com] vless-FI"
-      - "🏳[openproxylist.com] vless--12"
-      - "🇨🇿[openproxylist.com] vless-CZ-1"
-      - "🏳[openproxylist.com] vless--13"
-      - "🇻🇳[openproxylist.com] vless-VN"
-      - "🏳[openproxylist.com] vless--14"
+      - "🇺🇸[openproxylist.com] ss-US"
       - "🇰🇷[openproxylist.com] ss-KR"
       - "🇳🇱[openproxylist.com] ss-NL"
       - "🇩🇪[openproxylist.com] vmess-DE"
       - "🇸🇬[openproxylist.com] vmess-SG"
-      - "🏳[openproxylist.com] vmess-"
+      - "🇰🇷[openproxylist.com] vmess-KR"
       - "🇭🇰[openproxylist.com] vmess-HK"
       - "🇭🇰[openproxylist.com] vmess-HK-1"
-      - "🏳[openproxylist.com] vmess--1"
-      - "🇫🇷[openproxylist.com] vmess-FR"
-      - "🇬🇧[openproxylist.com] vmess-GB"
       - "🇩🇪[openproxylist.com] vmess-DE-1"
-      - "🏳[openproxylist.com] vmess--2"
-      - "🇬🇧[openproxylist.com] trojan-GB"
+      - "🇺🇸[openproxylist.com] vmess-US"
+      - "🇫🇷[openproxylist.com] vmess-FR"
+      - "🇨🇦[openproxylist.com] vmess-CA"
+      - "🇬🇧[openproxylist.com] vmess-GB"
+      - "🇩🇪[openproxylist.com] vmess-DE-2"
+      - "🇳🇱[openproxylist.com] trojan-NL"
+      - "🇩🇪[openproxylist.com] trojan-DE"
+      - "🇺🇸[openproxylist.com] trojan-US"
       - "🏳[openproxylist.com] trojan-"
       - "🇨🇦[openproxylist.com] trojan-CA"
-      - "🇺🇸[openproxylist.com] trojan-US"
-      - "🏳[openproxylist.com] trojan--1"
-      - "🇵🇱[openproxylist.com] trojan-PL"
-      - "🏳[openproxylist.com] trojan--2"
-      - "🇺🇸[openproxylist.com] trojan-US-1"
-      - "🇸🇬[openproxylist.com] trojan-SG"
       - "🇨🇦[openproxylist.com] trojan-CA-1"
+      - "🇺🇸[openproxylist.com] trojan-US-1"
+      - "🇨🇦[openproxylist.com] trojan-CA-2"
+      - "🇩🇪[openproxylist.com] trojan-DE-1"
+      - "🇵🇱[openproxylist.com] trojan-PL"
       - "🇺🇸[openproxylist.com] trojan-US-2"
-      - "🏳[openproxylist.com] trojan--3"
-      - "🇩🇪[openproxylist.com] trojan-DE"
-      - "🇲🇽[openproxylist.com] trojan-MX"
       - "🇺🇸[openproxylist.com] trojan-US-3"
+      - "🇨🇦[openproxylist.com] trojan-CA-3"
       - "🇺🇸[openproxylist.com] trojan-US-4"
+      - "🇸🇬[openproxylist.com] trojan-SG"
+      - "🇨🇦[openproxylist.com] trojan-CA-4"
+      - "🇨🇦[openproxylist.com] trojan-CA-5"
+      - "🇩🇪[openproxylist.com] trojan-DE-2"
       - "🇺🇸[openproxylist.com] trojan-US-5"
-      - "🇦🇺[openproxylist.com] trojan-AU"
+      - "🇲🇽[openproxylist.com] trojan-MX"
+      - "🇮🇳[openproxylist.com] trojan-IN"
       - "🇺🇸[openproxylist.com] trojan-US-6"
       - "🇺🇸[openproxylist.com] trojan-US-7"
-      - "🇪🇸[openproxylist.com] trojan-ES"
-      - "🇪🇸[openproxylist.com] trojan-ES-1"
-      - "🏳[openproxylist.com] trojan--4"
       - "🇺🇸[openproxylist.com] trojan-US-8"
       - "🇺🇸[openproxylist.com] trojan-US-9"
+      - "🇪🇸[openproxylist.com] trojan-ES"
       - "🇺🇸[openproxylist.com] trojan-US-10"
-      - "🇪🇸[openproxylist.com] trojan-ES-2"
-      - "🇨🇱[openproxylist.com] trojan-CL"
-      - "🇧🇷[openproxylist.com] trojan-BR"
+      - "🇦🇺[openproxylist.com] trojan-AU"
       - "🇺🇸[openproxylist.com] trojan-US-11"
       - "🇺🇸[openproxylist.com] trojan-US-12"
       - "🇺🇸[openproxylist.com] trojan-US-13"
-      - "🏳[openproxylist.com] trojan--5"
       - "🇺🇸[openproxylist.com] trojan-US-14"
       - "🇺🇸[openproxylist.com] trojan-US-15"
       - "🇺🇸[openproxylist.com] trojan-US-16"
-      - "🏳[openproxylist.com] trojan--6"
       - "🇺🇸[openproxylist.com] trojan-US-17"
+      - "🇨🇱[openproxylist.com] trojan-CL"
+      - "🇧🇷[openproxylist.com] trojan-BR"
       - "🇺🇸[openproxylist.com] trojan-US-18"
       - "🇺🇸[openproxylist.com] trojan-US-19"
-      - "🏳[openproxylist.com] trojan--7"
       - "🇺🇸[openproxylist.com] trojan-US-20"
-      - "🏳[openproxylist.com] trojan--8"
-      - "🏳[openproxylist.com] trojan--9"
-      - "🏳[openproxylist.com] trojan--10"
       - "🇺🇸[openproxylist.com] trojan-US-21"
       - "🇺🇸[openproxylist.com] trojan-US-22"
       - "🇺🇸[openproxylist.com] trojan-US-23"
-      - "🇮🇱[openproxylist.com] trojan-IL"
       - "🇺🇸[openproxylist.com] trojan-US-24"
+      - "🇺🇸[openproxylist.com] trojan-US-25"
+      - "🇺🇸[openproxylist.com] trojan-US-26"
+      - "🇺🇸[openproxylist.com] trojan-US-27"
+      - "🇺🇸[openproxylist.com] trojan-US-28"
+      - "🇺🇸[openproxylist.com] trojan-US-29"
+      - "🇺🇸[openproxylist.com] trojan-US-30"
+      - "🇮🇱[openproxylist.com] trojan-IL"
+      - "🇺🇸[openproxylist.com] trojan-US-31"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
