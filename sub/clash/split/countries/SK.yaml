@@ -499,6 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.141:2053"
+    type: "vless"
+    server: "89.46.42.141"
+    port: 2053
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
   - name: "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
     type: "vless"
     server: "89.46.42.92"
@@ -534,6 +548,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.141:2053"
       - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -546,6 +561,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.141:2053"
       - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
   - name: "توزیع بار چرخشی ⚖️"
@@ -557,6 +573,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.141:2053"
       - "🇸🇰 🔒 VL-WS-TLS 🇸🇰 SK-89.46.42.92:2053"
       - "🇸🇰 🔒 SS-TCP-NA 🇸🇰 SK-156.146.40.84:1080"
   - name: "المنت 💬"

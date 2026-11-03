@@ -499,7 +499,7 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+  - name: "🇭🇺 🔒 TR-WS-TLS 🇭🇺 HU-185.225.68.232:443"
     type: "trojan"
     server: "185.225.68.232"
     port: 443
@@ -538,7 +538,14 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇭🇺 @DeltaKroneckerGithub"
+  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+    type: "ss"
+    server: "146.70.203.254"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇭🇺 @Tarkshodeh 🇺🇲"
     type: "trojan"
     server: "185.225.68.232"
     port: 443
@@ -551,24 +558,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.calmlunch.com"
-  - name: "🇭🇺 @DeltaKroneckerGithub-1"
-    type: "trojan"
-    server: "38.180.225.247"
-    port: 2053
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.cordweave.com"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-    type: "ss"
-    server: "146.70.203.254"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
   - name: "🇭🇺 @Shh_Proxy-New⁵"
     type: "vless"
     server: "85.155.242.37"
@@ -596,12 +585,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 TR-WS-TLS 🇭🇺 HU-185.225.68.232:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
-      - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 @DeltaKroneckerGithub-1"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -613,12 +601,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 TR-WS-TLS 🇭🇺 HU-185.225.68.232:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
-      - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 @DeltaKroneckerGithub-1"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -629,12 +616,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 TR-WS-TLS 🇭🇺 HU-185.225.68.232:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
-      - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 @DeltaKroneckerGithub-1"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
   - name: "المنت 💬"
     type: "select"
