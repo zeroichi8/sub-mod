@@ -499,17 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-    type: "vless"
-    server: "185.158.133.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime58.workers.dev"
   - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
     type: "vless"
     server: "95.85.89.70"
@@ -533,6 +522,17 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/"
+      headers:
+        Host: "vms.lifetime58.workers.dev"
+  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+    type: "vless"
+    server: "185.158.133.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
       headers:
         Host: "vms.lifetime58.workers.dev"
   - name: "🇳🇱 @v2ray313 کانالمون 🌙"
@@ -660,28 +660,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇳🇱 The Netherlands"
-    type: "trojan"
-    server: "95.85.54.197"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.pleadcourt.org"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇳🇱 The Netherlands-1"
-    type: "trojan"
-    server: "95.85.32.57"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.pleadcourt.org"
-    ws-opts:
-      path: "/assignment"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -696,9 +674,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇳🇱 @v2ray313 کانالمون 🌙"
       - "🇳🇱 @hopev2ray🤎"
       - "🇨🇿 @leviconfigs🪐-8"
@@ -710,8 +688,6 @@ proxy-groups:
       - "🇨🇿 >>@oneclickvpnkeys::DE"
       - "🇫🇮 @DeltaKroneckerGithub"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 2E20DC"
-      - "🇳🇱 The Netherlands"
-      - "🇳🇱 The Netherlands-1"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -722,9 +698,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇳🇱 @v2ray313 کانالمون 🌙"
       - "🇳🇱 @hopev2ray🤎"
       - "🇨🇿 @leviconfigs🪐-8"
@@ -736,8 +712,6 @@ proxy-groups:
       - "🇨🇿 >>@oneclickvpnkeys::DE"
       - "🇫🇮 @DeltaKroneckerGithub"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 2E20DC"
-      - "🇳🇱 The Netherlands"
-      - "🇳🇱 The Netherlands-1"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -747,9 +721,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇳🇱 @v2ray313 کانالمون 🌙"
       - "🇳🇱 @hopev2ray🤎"
       - "🇨🇿 @leviconfigs🪐-8"
@@ -761,8 +735,6 @@ proxy-groups:
       - "🇨🇿 >>@oneclickvpnkeys::DE"
       - "🇫🇮 @DeltaKroneckerGithub"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 2E20DC"
-      - "🇳🇱 The Netherlands"
-      - "🇳🇱 The Netherlands-1"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

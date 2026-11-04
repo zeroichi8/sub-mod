@@ -499,6 +499,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
+    type: "vless"
+    server: "63.141.128.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime42.workers.dev"
   - name: "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
     type: "vless"
     server: "63.141.128.22"
@@ -527,25 +539,6 @@ proxies:
       path: "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
       headers:
         Host: "a.joIn.zEdMoDeOn.oNl."
-  - name: "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-    type: "vless"
-    server: "63.141.128.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime42.workers.dev"
-  - name: "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
-    type: "ss"
-    server: "63.180.254.10"
-    port: 443
-    cipher: "aes-256-cfb"
-    password: "amazonskr05"
-    udp: true
   - name: "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
     type: "vless"
     server: "104.105.69.97"
@@ -559,6 +552,13 @@ proxies:
     reality-opts:
       public-key: "Qr6_9TMQYMCB2hVSYeONcMvxBqIaT0mzPUy8nIivV1g"
       short-id: "b58b"
+  - name: "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
+    type: "ss"
+    server: "63.180.254.10"
+    port: 443
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
+    udp: true
   - name: "🇩🇪 @v2rayng3"
     type: "vless"
     server: "63.187.187.6"
@@ -626,11 +626,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
       - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
+      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
       - "🇩🇪 @v2rayng3"
       - "🇺🇸 >>@oneclickvpnkeys::US"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"
@@ -647,11 +647,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
       - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
+      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
       - "🇩🇪 @v2rayng3"
       - "🇺🇸 >>@oneclickvpnkeys::US"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"
@@ -667,11 +667,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
       - "🇺🇸 🔒 VL-WS-TLS 🇺🇸 US-63.141.128.22:443"
       - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.14:8080"
-      - "🇺🇸 🔒 VL-WS-NA 🇺🇸 US-63.141.128.30:8880"
-      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
       - "🇮🇹 🔒 VL-TCP-RLT 🇮🇹 IT-104.105.69.97:443"
+      - "🇩🇪 🔒 SS-TCP-NA 🇩🇪 DE-63.180.254.10:443"
       - "🇩🇪 @v2rayng3"
       - "🇺🇸 >>@oneclickvpnkeys::US"
       - "🇩🇪 DE 🇩🇪 | @Raydikalx | 23474C"
