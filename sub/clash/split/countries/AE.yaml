@@ -499,19 +499,29 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-147.78.0.186:8443"
+  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.225.195.30:8880"
     type: "vless"
-    server: "147.78.0.186"
-    port: 8443
-    uuid: "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
+    server: "185.225.195.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
     udp: true
-    tls: true
+    tls: false
     network: "ws"
-    servername: "free.cndyw.ggff.net"
-    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime18.workers.dev"
+  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+    type: "vless"
+    server: "185.158.133.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
     ws-opts:
       headers:
-        Host: "free.cndyw.ggff.net"
+        Host: "vms.lifetime58.workers.dev"
   - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-130.185.121.69:443"
     type: "vless"
     server: "130.185.121.69"
@@ -534,6 +544,14 @@ proxies:
       path: "/sync"
       headers:
         Host: "silent-pine-a674.jfadwkglaugul.workers.dev"
+  - name: "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-217.60.183.95:33744"
+    type: "vmess"
+    server: "217.60.183.95"
+    port: 33744
+    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-95.174.68.188:14430"
     type: "vless"
     server: "95.174.68.188"
@@ -544,32 +562,6 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless"
-      headers:
-        Host: "95.174.68.188"
-  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.225.195.30:8880"
-    type: "vless"
-    server: "185.225.195.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime18.workers.dev"
-  - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-    type: "vless"
-    server: "185.158.133.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime58.workers.dev"
   - name: "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
     type: "vless"
     server: "94.140.0.74"
@@ -583,54 +575,25 @@ proxies:
       path: "/"
       headers:
         Host: "aza002.vaslbash.site"
-  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+  - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
     type: "vless"
-    server: "185.158.133.40"
+    server: "185.158.133.30"
     port: 8880
     uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
     udp: true
     tls: false
     network: "ws"
     ws-opts:
+      path: "/"
       headers:
         Host: "vms.lifetime58.workers.dev"
-  - name: "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 403.93ms"
-    type: "vmess"
-    server: "octpus2.gsmonline.ir"
-    port: 8080
-    uuid: "5169cd78-9e9b-4e44-9d1c-b4113d973f02"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 396.64ms"
-    type: "vmess"
-    server: "octpus1.gsmonline.ir"
-    port: 8080
-    uuid: "8cbc421f-25cf-4bfa-840f-c1e30cc38c70"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 372.41ms"
+  - name: "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
     type: "vmess"
     server: "de-d21e56c13c.shamanapp.online"
     port: 33744
     uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
     alterId: 0
     cipher: "auto"
-    udp: true
-  - name: "🇦🇪 https://t.me/ForceRunVPN-🇳🇱-Amsterdam-303ms-DigitalOcean LLC"
-    type: "ss"
-    server: "151.241.19.29"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇦🇪 https://t.me/ForceRunVPN-🇳🇱-Amsterdam-305ms-DigitalOcean LLC"
-    type: "ss"
-    server: "151.241.19.36"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
     type: "vless"
@@ -642,6 +605,29 @@ proxies:
     network: "tcp"
     servername: "ddc-akn.astralweb.tech"
     client-fingerprint: "firefox"
+  - name: "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
+    type: "vless"
+    server: "188.72.103.4"
+    port: 443
+    uuid: "9737cc16-7266-45ce-94d9-6e05a45e0b9c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ru.nnight.cfd"
+    client-fingerprint: "chrome"
+  - name: "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
+    type: "vless"
+    server: "188.72.103.3"
+    port: 443
+    uuid: "02722550-1915-4629-a653-cbe95e594f70"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "cdnapi.streamru15.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
   - name: "🇦🇪 @DeltaKroneckerGithub"
     type: "trojan"
     server: "154.90.55.81"
@@ -651,7 +637,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "154.90.55.81"
-  - name: "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 5.83ms"
+  - name: "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
     type: "trojan"
     server: "31.57.190.34"
     port: 443
@@ -664,21 +650,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.pleadcourt.org"
-  - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-140.225.199.136:8443"
-    type: "vless"
-    server: "140.225.199.136"
-    port: 8443
-    uuid: "6c713691-3ca2-002b-ad25-113d1bed6b03"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "strm.yandex.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "86EUYgrS7mazQ-GsiMnStyHSx9AlG8B_-KgXluNdWXI"
-      short-id: "d3ab13e9c496c399"
-    grpc-opts:
-      grpc-service-name: "google.storage.v2.Storage"
   - name: "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
     type: "vless"
     server: "45.88.13.5"
@@ -693,20 +664,6 @@ proxies:
       public-key: "FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk"
     grpc-opts:
       grpc-service-name: "TunService"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
-    type: "vless"
-    server: "91.132.48.199"
-    port: 443
-    uuid: "0d607d84-0ae0-4b9c-a4f3-1766ab456e02"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "bunny.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "_0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM"
-      short-id: "e7c5f2a9"
   - name: "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
     type: "ss"
     server: "147.78.0.182"
@@ -728,49 +685,75 @@ proxies:
     reality-opts:
       public-key: "JWDpSUaLgiXGXpgZzzxfDnYGvi4MBFcadN6cHZ-He1E"
       short-id: "b8c6965f3596688a"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-157.228.155.238:443"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
     type: "vless"
-    server: "157.228.155.238"
+    server: "91.132.48.199"
     port: 443
-    uuid: "4d852af3-a121-41aa-9aed-4ca40a6f7b4d"
+    uuid: "0d607d84-0ae0-4b9c-a4f3-1766ab456e02"
     udp: true
     tls: true
     network: "tcp"
-    servername: "addons.mozilla.org"
-    client-fingerprint: "randomized"
+    servername: "bunny.net"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I"
-      short-id: "6f76ad09"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.73.247:443"
+      public-key: "_0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM"
+      short-id: "e7c5f2a9"
+  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443-1"
     type: "vless"
-    server: "217.60.73.247"
+    server: "91.132.48.199"
     port: 443
-    uuid: "683f302b-ab0f-4778-a85d-51b49ae669a1"
+    uuid: "0d607d84-0ae0-4b9c-a4f3-1766ab456e02"
     udp: true
     tls: true
     network: "tcp"
-    servername: "dashboard2.uferbuslub.com"
-    client-fingerprint: "qq"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "obxu9ydOCgTBZmYfmBHH_bfP31zMVHvexrPol9PKoSQ"
-      short-id: "1ae19cbe6d819b27"
-  - name: "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.216.151:500"
-    type: "vless"
-    server: "94.183.216.151"
-    port: 500
-    uuid: "cd370c03-93f6-475e-9820-f4aac2a98e0c"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.icloud.com"
+    servername: "bunny.net"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "el5YbcwdLyOeLOWkJATaRmMKzDZ2PPwaXLWt5lYORj0"
-      short-id: "aeb9c783c6278086"
-  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 6.14ms"
+      public-key: "_0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM"
+      short-id: "e7c5f2a9"
+  - name: "🇦🇪 🇦🇪 United Arab Emirates"
+    type: "ss"
+    server: "151.241.19.29"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇦🇪 🇦🇪 United Arab Emirates-1"
+    type: "ss"
+    server: "151.241.19.36"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
+    type: "vless"
+    server: "31.57.190.89"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
+    type: "vless"
+    server: "31.57.190.50"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
     type: "vless"
     server: "31.57.190.15"
     port: 443
@@ -783,7 +766,21 @@ proxies:
       path: "/"
       headers:
         Host: "ccc.010304.xyz"
-  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 7.12ms"
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
+    type: "vless"
+    server: "31.57.190.15"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
     type: "vless"
     server: "31.57.190.15"
     port: 443
@@ -797,7 +794,35 @@ proxies:
       path: "/fp=chrome"
       headers:
         Host: "ccc.010304.xyz"
-  - name: "🇦🇪 AE🇦🇪 | 95.174.68.188-14430 | 229.14ms"
+  - name: "🇦🇪 REALITY|AE🇦🇪 | pengu.persian2xl.ir-500 | 482.16ms"
+    type: "vless"
+    server: "pengu.persian2xl.ir"
+    port: 500
+    uuid: "cd370c03-93f6-475e-9820-f4aac2a98e0c"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.icloud.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "el5YbcwdLyOeLOWkJATaRmMKzDZ2PPwaXLWt5lYORj0"
+      short-id: "aeb9c783c6278086"
+  - name: "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 859.26ms"
+    type: "vless"
+    server: "db01.ssr.ee"
+    port: 443
+    uuid: "9d0a75d2-f747-4afa-b43f-d208af9e8f9a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "itunes.apple.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "3tyvN86mGzMnYhAMX06SJMYSWhG02rqzTr7GjS-OaWI"
+      short-id: "6ba85179e30d4fc2"
+  - name: "🇦🇪 AE🇦🇪 | 95.174.68.188-14430 | 207.52ms"
     type: "vless"
     server: "95.174.68.188"
     port: 14430
@@ -807,6 +832,50 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless"
+      headers:
+        Host: "95.174.68.188"
+  - name: "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 214.27ms"
+    type: "vless"
+    server: "dashboard2.uferbuslub.com"
+    port: 443
+    uuid: "683f302b-ab0f-4778-a85d-51b49ae669a1"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dashboard2.uferbuslub.com"
+    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "obxu9ydOCgTBZmYfmBHH_bfP31zMVHvexrPol9PKoSQ"
+      short-id: "1ae19cbe6d819b27"
+  - name: "🇦🇪 REALITY|AE🇦🇪 | 157.228.155.238-443 | 129.86ms"
+    type: "vless"
+    server: "157.228.155.238"
+    port: 443
+    uuid: "4d852af3-a121-41aa-9aed-4ca40a6f7b4d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "addons.mozilla.org"
+    client-fingerprint: "randomized"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I"
+      short-id: "6f76ad09"
+  - name: "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
+    type: "vless"
+    server: "uae.purchasebot.net"
+    port: 443
+    uuid: "0d607d84-0ae0-4b9c-a4f3-1766ab456e02"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "bunny.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "_0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM"
+      short-id: "e7c5f2a9"
   - name: "🇦🇪 @confiig_hub"
     type: "hysteria2"
     server: "130.49.161.70"
@@ -829,33 +898,6 @@ proxies:
       - "http/1.1"
     ws-opts:
       path: "/vless-ws"
-  - name: "🇦🇪 تو کانال نتورلد نباشید قطع میشن@networld_vpn"
-    type: "vless"
-    server: "188.72.103.3"
-    port: 443
-    uuid: "02722550-1915-4629-a653-cbe95e594f70"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "cdnapi.streamru15.net"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
-  - name: "🇦🇪 🇦🇪 Join+Telegram:@Farah_VPN 🇦🇪"
-    type: "vless"
-    server: "147.78.0.186"
-    port: 2053
-    uuid: "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "free.cndyw.ggff.net"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "pyip=bpb.yousef.isegaro.com"
-      headers:
-        Host: "free.cndyw.ggff.net"
   - name: "🇦🇪 @leviconfigs🪐-6"
     type: "vless"
     server: "130.185.123.32"
@@ -868,20 +910,6 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇦🇪 @tootffarangi🍓-1"
-    type: "vless"
-    server: "by-tls.nerpvpn.net"
-    port: 443
-    uuid: "1ffd1edc-16da-4a9f-a72b-9b5253dfb9cc"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "mediatract.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-    grpc-opts:
-      grpc-service-name: "/grpc"
   - name: "🇦🇪 @appsooner کانال تلگرام 🕊️"
     type: "vless"
     server: "nl1.fluxorvpn.net"
@@ -895,29 +923,6 @@ proxies:
     reality-opts:
       public-key: "JWDpSUaLgiXGXpgZzzxfDnYGvi4MBFcadN6cHZ-He1E"
       short-id: "b8c6965f3596688a"
-  - name: "🇦🇪 🇦🇪 Join+Telegram:@Farah_VPN 🇦🇪-1"
-    type: "vless"
-    server: "95.174.68.188"
-    port: 14430
-    uuid: "965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "95.174.68.188"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "95.174.68.188"
-  - name: "🇦🇪 تو کانال نتورلد نباشید قطع میشن@networld_vpn-1"
-    type: "vless"
-    server: "188.72.103.4"
-    port: 443
-    uuid: "9737cc16-7266-45ce-94d9-6e05a45e0b9c"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "ru.nnight.cfd"
-    client-fingerprint: "chrome"
   - name: "🇦🇪 @Tarkshodeh 🇮🇴"
     type: "vless"
     server: "128.254.186.11"
@@ -944,19 +949,6 @@ proxies:
     reality-opts:
       public-key: "kCKXYcvEQ2cz4d0jBmBjyzbesUZ3AHQBukhqXWPiRlA"
       short-id: "f3deb2"
-  - name: "🇦🇪 YFZ 90 @Outline_Vpn"
-    type: "vless"
-    server: "31.57.190.50"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "ccc.010304.xyz"
   - name: "🇦🇪 [🇲🇪]t.me/v2ray_configs_pools"
     type: "vless"
     server: "31.57.190.89"
@@ -1013,7 +1005,7 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/"
-  - name: "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
+  - name: "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
     type: "vmess"
     server: "dashboard.lunaramarket.top"
     port: 41501
@@ -1021,6 +1013,28 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
+    type: "vmess"
+    server: "octpus2.gsmonline.ir"
+    port: 8080
+    uuid: "08e70d4f-c41e-4907-8205-9a7d3c73028a"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇦🇪 AE 🇦🇪 | @Raydikalx | C9F9A6"
+    type: "vless"
+    server: "147.78.0.186"
+    port: 8443
+    uuid: "04c808e2-0b59-47b0-a54b-32fc7ef1c902"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "free.cndyw.ggff.net"
+    client-fingerprint: "random"
+    ws-opts:
+      path: "pyip=bpb.yousef.isegaro.com"
+      headers:
+        Host: "free.cndyw.ggff.net"
   - name: "🇦🇪 AE 🇦🇪 | @Raydikalx | 1D228E"
     type: "vless"
     server: "84.235.244.108"
@@ -1096,7 +1110,6 @@ proxies:
     udp: true
     tls: false
     network: "ws"
-    client-fingerprint: "firefox"
     ws-opts:
       path: "/"
       headers:
@@ -1123,7 +1136,6 @@ proxies:
     tls: false
     network: "ws"
     servername: "95.174.68.188"
-    client-fingerprint: "unsafe"
     ws-opts:
       path: "/vless"
       headers:
@@ -1171,14 +1183,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇪 DE 🇩🇪 | @Raydikalx | 41AEF9"
-    type: "vmess"
-    server: "217.60.183.95"
-    port: 33744
-    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇦🇪 AE 🇦🇪 | @Raydikalx | E4411A"
     type: "vmess"
     server: "89.31.120.192"
@@ -1195,7 +1199,15 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇪 IR 🇮🇷 | @Raydikalx | B6D422"
+  - name: "🇦🇪 IR 🇮🇷 | @Raydikalx | C84CF6"
+    type: "vmess"
+    server: "dashboard.afrashop.top"
+    port: 5381
+    uuid: "130b0fbf-4f19-44d0-911f-95355e9632e4"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | B6D422"
     type: "vmess"
     server: "dashboard.afrashop.top"
     port: 5381
@@ -1283,6 +1295,14 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇦🇪 TR 🇹🇷 | @Raydikalx | 4E2C0B"
+    type: "vmess"
+    server: "octpus1.gsmonline.ir"
+    port: 8080
+    uuid: "8cbc421f-25cf-4bfa-840f-c1e30cc38c70"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇦🇪 TR 🇹🇷 | @Raydikalx | 030214"
     type: "vmess"
     server: "octpus1.gsmonline.ir"
@@ -1307,11 +1327,11 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇦🇪 IR 🇮🇷 | @Raydikalx | 6C94AE"
+  - name: "🇦🇪 TR 🇹🇷 | @Raydikalx | 40E29A"
     type: "vmess"
-    server: "tun.xelnivo.ir"
-    port: 16097
-    uuid: "243bb526-ced4-4508-b0c3-e6442caadf57"
+    server: "octpus2.gsmonline.ir"
+    port: 8080
+    uuid: "5169cd78-9e9b-4e44-9d1c-b4113d973f02"
     alterId: 0
     cipher: "auto"
     udp: true
@@ -1331,15 +1351,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | FD7085"
-    type: "vmess"
-    server: "tun.xelnivo.ir"
-    port: 2044
-    uuid: "243bb526-ced4-4508-b0c3-e6442caadf57"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇦🇪 IR 🇮🇷 | @Raydikalx | 34EF9C"
+  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | 34EF9C"
     type: "vmess"
     server: "tun.xelnivo.ir"
     port: 2044
@@ -1347,10 +1359,10 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | 869FBD"
+  - name: "🇦🇪 IR 🇮🇷 | @Raydikalx | 720279"
     type: "vmess"
     server: "tun.xelnivo.ir"
-    port: 2056
+    port: 33625
     uuid: "243bb526-ced4-4508-b0c3-e6442caadf57"
     alterId: 0
     cipher: "auto"
@@ -1363,15 +1375,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | E87BDA"
-    type: "vmess"
-    server: "tun.xelnivo.ir"
-    port: 36771
-    uuid: "243bb526-ced4-4508-b0c3-e6442caadf57"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇮🇷 IR 🇮🇷 | @Raydikalx | 27D7CD"
+  - name: "🇦🇪 IR 🇮🇷 | @Raydikalx | 27D7CD"
     type: "vmess"
     server: "tun.xelnivo.ir"
     port: 36771
@@ -1426,51 +1430,52 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-147.78.0.186:8443"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.225.195.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-130.185.121.69:443"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
+      - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-217.60.183.95:33744"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-95.174.68.188:14430"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.225.195.30:8880"
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-      - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 403.93ms"
-      - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 396.64ms"
-      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 372.41ms"
-      - "🇦🇪 https://t.me/ForceRunVPN-🇳🇱-Amsterdam-303ms-DigitalOcean LLC"
-      - "🇦🇪 https://t.me/ForceRunVPN-🇳🇱-Amsterdam-305ms-DigitalOcean LLC"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
+      - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
+      - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
       - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 5.83ms"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-140.225.199.136:8443"
+      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.199.234:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-157.228.155.238:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.73.247:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.216.151:500"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 6.14ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 7.12ms"
-      - "🇦🇪 AE🇦🇪 | 95.174.68.188-14430 | 229.14ms"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443-1"
+      - "🇦🇪 🇦🇪 United Arab Emirates"
+      - "🇦🇪 🇦🇪 United Arab Emirates-1"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | pengu.persian2xl.ir-500 | 482.16ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 859.26ms"
+      - "🇦🇪 AE🇦🇪 | 95.174.68.188-14430 | 207.52ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 214.27ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | 157.228.155.238-443 | 129.86ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 @confiig_hub"
       - "🇦🇪 @Shh_Proxy-New²"
-      - "🇦🇪 تو کانال نتورلد نباشید قطع میشن@networld_vpn"
-      - "🇦🇪 🇦🇪 Join+Telegram:@Farah_VPN 🇦🇪"
       - "🇦🇪 @leviconfigs🪐-6"
-      - "🇦🇪 @tootffarangi🍓-1"
       - "🇦🇪 @appsooner کانال تلگرام 🕊️"
-      - "🇦🇪 🇦🇪 Join+Telegram:@Farah_VPN 🇦🇪-1"
-      - "🇦🇪 تو کانال نتورلد نباشید قطع میشن@networld_vpn-1"
       - "🇦🇪 @Tarkshodeh 🇮🇴"
       - "🇦🇪 @Begoo_VPN ²⁹¹"
-      - "🇦🇪 YFZ 90 @Outline_Vpn"
       - "🇦🇪 [🇲🇪]t.me/v2ray_configs_pools"
       - "🇦🇪 @fastkanfig 1"
       - "🇦🇪 🇦🇪139781 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇦🇪 @Alfred_Config"
       - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
+      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
+      - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
+      - "🇦🇪 AE 🇦🇪 | @Raydikalx | C9F9A6"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | 1D228E"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | A14EFE"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | 134D04"
@@ -1485,10 +1490,10 @@ proxy-groups:
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 7B3BCB"
       - "🇦🇪 FI 🇫🇮 | @Raydikalx | DC0D7D"
       - "🇦🇪 US 🇺🇸 | @Raydikalx | 7223EB"
-      - "🇦🇪 DE 🇩🇪 | @Raydikalx | 41AEF9"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | E4411A"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | 3F8A42"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | B6D422"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | C84CF6"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | B6D422"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | 431AA3"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | D44688"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | F76225"
@@ -1499,18 +1504,17 @@ proxy-groups:
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 18928B"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | C95BCC"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 30012A"
+      - "🇦🇪 TR 🇹🇷 | @Raydikalx | 4E2C0B"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 030214"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 513267"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 8247C7"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 6C94AE"
+      - "🇦🇪 TR 🇹🇷 | @Raydikalx | 40E29A"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | C9C063"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | A3C571"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | FD7085"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 34EF9C"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 869FBD"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 34EF9C"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 720279"
       - "🇮🇷 IR 🇮🇷 | @Raydikalx | 9C15F7"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | E87BDA"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 27D7CD"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 27D7CD"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"
@@ -1525,51 +1529,52 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-147.78.0.186:8443"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.225.195.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-130.185.121.69:443"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
+      - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-217.60.183.95:33744"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-95.174.68.188:14430"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.225.195.30:8880"
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-      - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 403.93ms"
-      - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 396.64ms"
-      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 372.41ms"
-      - "🇦🇪 https://t.me/ForceRunVPN-🇳🇱-Amsterdam-303ms-DigitalOcean LLC"
-      - "🇦🇪 https://t.me/ForceRunVPN-🇳🇱-Amsterdam-305ms-DigitalOcean LLC"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
+      - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
+      - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
       - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 5.83ms"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-140.225.199.136:8443"
+      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.199.234:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-157.228.155.238:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.73.247:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.216.151:500"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 6.14ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 7.12ms"
-      - "🇦🇪 AE🇦🇪 | 95.174.68.188-14430 | 229.14ms"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443-1"
+      - "🇦🇪 🇦🇪 United Arab Emirates"
+      - "🇦🇪 🇦🇪 United Arab Emirates-1"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | pengu.persian2xl.ir-500 | 482.16ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 859.26ms"
+      - "🇦🇪 AE🇦🇪 | 95.174.68.188-14430 | 207.52ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 214.27ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | 157.228.155.238-443 | 129.86ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 @confiig_hub"
       - "🇦🇪 @Shh_Proxy-New²"
-      - "🇦🇪 تو کانال نتورلد نباشید قطع میشن@networld_vpn"
-      - "🇦🇪 🇦🇪 Join+Telegram:@Farah_VPN 🇦🇪"
       - "🇦🇪 @leviconfigs🪐-6"
-      - "🇦🇪 @tootffarangi🍓-1"
       - "🇦🇪 @appsooner کانال تلگرام 🕊️"
-      - "🇦🇪 🇦🇪 Join+Telegram:@Farah_VPN 🇦🇪-1"
-      - "🇦🇪 تو کانال نتورلد نباشید قطع میشن@networld_vpn-1"
       - "🇦🇪 @Tarkshodeh 🇮🇴"
       - "🇦🇪 @Begoo_VPN ²⁹¹"
-      - "🇦🇪 YFZ 90 @Outline_Vpn"
       - "🇦🇪 [🇲🇪]t.me/v2ray_configs_pools"
       - "🇦🇪 @fastkanfig 1"
       - "🇦🇪 🇦🇪139781 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇦🇪 @Alfred_Config"
       - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
+      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
+      - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
+      - "🇦🇪 AE 🇦🇪 | @Raydikalx | C9F9A6"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | 1D228E"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | A14EFE"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | 134D04"
@@ -1584,10 +1589,10 @@ proxy-groups:
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 7B3BCB"
       - "🇦🇪 FI 🇫🇮 | @Raydikalx | DC0D7D"
       - "🇦🇪 US 🇺🇸 | @Raydikalx | 7223EB"
-      - "🇦🇪 DE 🇩🇪 | @Raydikalx | 41AEF9"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | E4411A"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | 3F8A42"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | B6D422"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | C84CF6"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | B6D422"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | 431AA3"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | D44688"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | F76225"
@@ -1598,18 +1603,17 @@ proxy-groups:
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 18928B"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | C95BCC"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 30012A"
+      - "🇦🇪 TR 🇹🇷 | @Raydikalx | 4E2C0B"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 030214"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 513267"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 8247C7"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 6C94AE"
+      - "🇦🇪 TR 🇹🇷 | @Raydikalx | 40E29A"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | C9C063"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | A3C571"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | FD7085"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 34EF9C"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 869FBD"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 34EF9C"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 720279"
       - "🇮🇷 IR 🇮🇷 | @Raydikalx | 9C15F7"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | E87BDA"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 27D7CD"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 27D7CD"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"
@@ -1623,51 +1627,52 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-147.78.0.186:8443"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.225.195.30:8880"
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-130.185.121.69:443"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-94.140.0.100:8880"
+      - "🇦🇪 🔒 VM-WS-NA 🇦🇪 AE-217.60.183.95:33744"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-95.174.68.188:14430"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.225.195.30:8880"
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
-      - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 403.93ms"
-      - "🇦🇪 IR🇮🇷 | snapp.ir-8080 | 396.64ms"
-      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 372.41ms"
-      - "🇦🇪 https://t.me/ForceRunVPN-🇳🇱-Amsterdam-303ms-DigitalOcean LLC"
-      - "🇦🇪 https://t.me/ForceRunVPN-🇳🇱-Amsterdam-305ms-DigitalOcean LLC"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇦🇪 AE🇦🇪 | de-d21e56c13c.shamanapp.online-33744 | 533.91ms"
       - "🇦🇪 🔒 VL-TCP-TLS 🇦🇪 AE-217.60.193.1:443"
+      - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.4:443"
+      - "🇦🇪 🔒 VL-XHTTP-TLS 🇦🇪 AE-188.72.103.3:443"
       - "🇦🇪 @DeltaKroneckerGithub"
-      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 5.83ms"
-      - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-140.225.199.136:8443"
+      - "🇦🇪 RELAY🚩 | www.pleadcourt.org-443 | 22.66ms"
       - "🇦🇪 🔒 VL-GRPC-RLT 🇦🇪 AE-45.88.13.5:8443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
       - "🇦🇪 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
       - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-140.225.199.234:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-157.228.155.238:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.73.247:443"
-      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-94.183.216.151:500"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 6.14ms"
-      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 7.12ms"
-      - "🇦🇪 AE🇦🇪 | 95.174.68.188-14430 | 229.14ms"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443"
+      - "🇦🇪 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.48.199:443-1"
+      - "🇦🇪 🇦🇪 United Arab Emirates"
+      - "🇦🇪 🇦🇪 United Arab Emirates-1"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.71ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 19.56ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 20.14ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 26.41ms"
+      - "🇦🇪 RELAY🚩 | ccc.010304.xyz-443 | 27.68ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | pengu.persian2xl.ir-500 | 482.16ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 859.26ms"
+      - "🇦🇪 AE🇦🇪 | 95.174.68.188-14430 | 207.52ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | dashboard2.uferbuslub.com-443 | 214.27ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | 157.228.155.238-443 | 129.86ms"
+      - "🇦🇪 REALITY|AE🇦🇪 | uae.purchasebot.net-443 | 264.5ms"
       - "🇦🇪 @confiig_hub"
       - "🇦🇪 @Shh_Proxy-New²"
-      - "🇦🇪 تو کانال نتورلد نباشید قطع میشن@networld_vpn"
-      - "🇦🇪 🇦🇪 Join+Telegram:@Farah_VPN 🇦🇪"
       - "🇦🇪 @leviconfigs🪐-6"
-      - "🇦🇪 @tootffarangi🍓-1"
       - "🇦🇪 @appsooner کانال تلگرام 🕊️"
-      - "🇦🇪 🇦🇪 Join+Telegram:@Farah_VPN 🇦🇪-1"
-      - "🇦🇪 تو کانال نتورلد نباشید قطع میشن@networld_vpn-1"
       - "🇦🇪 @Tarkshodeh 🇮🇴"
       - "🇦🇪 @Begoo_VPN ²⁹¹"
-      - "🇦🇪 YFZ 90 @Outline_Vpn"
       - "🇦🇪 [🇲🇪]t.me/v2ray_configs_pools"
       - "🇦🇪 @fastkanfig 1"
       - "🇦🇪 🇦🇪139781 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇦🇪 @Alfred_Config"
       - "🇦🇪 >>@outline_vpn::PL"
-      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
+      - "🇦🇪 🆔fr33c0nfig 🔒 VM-TCP- 🇮🇷 IR down"
+      - "🇦🇪 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX down"
+      - "🇦🇪 AE 🇦🇪 | @Raydikalx | C9F9A6"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | 1D228E"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | A14EFE"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | 134D04"
@@ -1682,10 +1687,10 @@ proxy-groups:
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 7B3BCB"
       - "🇦🇪 FI 🇫🇮 | @Raydikalx | DC0D7D"
       - "🇦🇪 US 🇺🇸 | @Raydikalx | 7223EB"
-      - "🇦🇪 DE 🇩🇪 | @Raydikalx | 41AEF9"
       - "🇦🇪 AE 🇦🇪 | @Raydikalx | E4411A"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | 3F8A42"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | B6D422"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | C84CF6"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | B6D422"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | 431AA3"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | D44688"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | F76225"
@@ -1696,18 +1701,17 @@ proxy-groups:
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 18928B"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | C95BCC"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 30012A"
+      - "🇦🇪 TR 🇹🇷 | @Raydikalx | 4E2C0B"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 030214"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 513267"
       - "🇦🇪 TR 🇹🇷 | @Raydikalx | 8247C7"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 6C94AE"
+      - "🇦🇪 TR 🇹🇷 | @Raydikalx | 40E29A"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | C9C063"
       - "🇦🇪 IR 🇮🇷 | @Raydikalx | A3C571"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | FD7085"
-      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 34EF9C"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 869FBD"
+      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 34EF9C"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 720279"
       - "🇮🇷 IR 🇮🇷 | @Raydikalx | 9C15F7"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | E87BDA"
-      - "🇮🇷 IR 🇮🇷 | @Raydikalx | 27D7CD"
+      - "🇦🇪 IR 🇮🇷 | @Raydikalx | 27D7CD"
       - "🇦🇪 Iran"
       - "🇦🇪 Iran-1"
       - "🇦🇪 Iran-2"

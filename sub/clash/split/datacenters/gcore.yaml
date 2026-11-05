@@ -499,6 +499,17 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+    type: "vless"
+    server: "185.158.133.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime58.workers.dev"
   - name: "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
     type: "vless"
     server: "95.85.89.70"
@@ -524,17 +535,28 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime58.workers.dev"
-  - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+  - name: "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 141ms"
     type: "vless"
-    server: "185.158.133.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    server: "95.85.251.41"
+    port: 8444
+    uuid: "b8a40bad-ca05-4d73-b3cb-1e216976546a"
     udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime58.workers.dev"
+    tls: true
+    network: "tcp"
+    servername: "boloto.shop"
+  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
+    type: "vless"
+    server: "95.85.230.35"
+    port: 443
+    uuid: "bbfd1f68-ec64-452f-8404-9e2bcf1df951"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "de.oblaco.bet"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
   - name: "🇳🇱 @v2ray313 کانالمون 🌙"
     type: "trojan"
     server: "95.85.54.197"
@@ -674,9 +696,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 141ms"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇳🇱 @v2ray313 کانالمون 🌙"
       - "🇳🇱 @hopev2ray🤎"
       - "🇨🇿 @leviconfigs🪐-8"
@@ -698,9 +722,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 141ms"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇳🇱 @v2ray313 کانالمون 🌙"
       - "🇳🇱 @hopev2ray🤎"
       - "🇨🇿 @leviconfigs🪐-8"
@@ -721,9 +747,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
       - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-      - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
+      - "🇫🇮 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 141ms"
+      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
       - "🇳🇱 @v2ray313 کانالمون 🌙"
       - "🇳🇱 @hopev2ray🤎"
       - "🇨🇿 @leviconfigs🪐-8"

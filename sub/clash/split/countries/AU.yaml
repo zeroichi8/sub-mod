@@ -499,32 +499,15 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
-    type: "vless"
-    server: "192.65.217.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime37.workers.dev"
-  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
-    type: "vless"
-    server: "202.166.187.132"
+  - name: "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
+    type: "trojan"
+    server: "162.4.84.247"
     port: 443
-    uuid: "8be20011-59b1-4118-91ed-83e8e6b662cd"
+    password: "bpb-trojan"
     udp: true
     tls: true
     network: "ws"
-    servername: "f.yoptybla.ru"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "f.yoptybla.ru"
+    servername: "vless.herogoing.top"
   - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
     type: "vless"
     server: "123.51.23.113"
@@ -547,11 +530,24 @@ proxies:
     udp: true
     tls: false
     network: "ws"
-    servername: "103.169.142.30"
     ws-opts:
       path: "/"
       headers:
         Host: "vms.lifetime38.workers.dev"
+  - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+    type: "vless"
+    server: "202.166.187.132"
+    port: 443
+    uuid: "8be20011-59b1-4118-91ed-83e8e6b662cd"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "f.yoptybla.ru"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "f.yoptybla.ru"
   - name: "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
     type: "vless"
     server: "152.67.101.72"
@@ -565,15 +561,48 @@ proxies:
     ws-opts:
       headers:
         Host: "cdn8848.776676.xyz"
-  - name: "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
-    type: "trojan"
-    server: "162.4.84.247"
+  - name: "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
+    type: "vless"
+    server: "192.65.217.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime37.workers.dev"
+  - name: "🇦🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 358ms"
+    type: "vless"
+    server: "vl2.serveraa.ir"
     port: 443
-    password: "bpb-trojan"
+    uuid: "d18e433f-0f40-4f71-8055-aea4a0a42af4"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5l4RnloO79fW8U0ROmCmWsjNb9WECNxVDqZeTt9HDEc"
+      short-id: "f64da10a"
+  - name: "🇦🇺 🆔ar14n24b 🔒 VL-WS-N/A 🇦🇺 AU 9ms"
+    type: "vless"
+    server: "103.18.49.100"
+    port: 443
+    uuid: "1a5b24bc-6180-4fa7-922d-ba7ee8a7a2b7"
     udp: true
     tls: true
     network: "ws"
-    servername: "vless.herogoing.top"
+    servername: "support.zoom.us.cyylr.eu.cc"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/id-pusat"
+      headers:
+        Host: "support.zoom.us.cyylr.eu.cc"
   - name: "🇦🇺 @DeltaKroneckerGithub"
     type: "trojan"
     server: "au-2.tr202604.com"
@@ -683,13 +712,6 @@ proxies:
       public-key: "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ"
     grpc-opts:
       grpc-service-name: "QToNrKDvQT5AfnFM"
-  - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
-    type: "ss"
-    server: "95.173.193.201"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
   - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
     type: "ss"
     server: "45.32.246.180"
@@ -697,9 +719,16 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "TqkkHRpZTkjbTBrk"
     udp: true
-  - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-16.178.144.150:20270"
+  - name: "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
+    type: "ss"
+    server: "95.173.193.201"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-13.211.160.133:20270"
     type: "vless"
-    server: "16.178.144.150"
+    server: "13.211.160.133"
     port: 20270
     uuid: "5416ef6f-b8e5-48e9-87e4-3d5649b2e3e0"
     udp: true
@@ -711,25 +740,11 @@ proxies:
     reality-opts:
       public-key: "RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE"
       short-id: "e6a5a4a9115456de"
-  - name: "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
-    type: "vless"
-    server: "51.161.204.242"
-    port: 443
-    uuid: "a14b736b-a92a-48d6-a596-5d31f7378ded"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE"
-      short-id: "d15c17cef9b2e456"
-  - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 204.95ms"
+  - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 189.38ms"
     type: "vless"
     server: "leg.goodmaximum.com"
     port: 443
-    uuid: "e653f585-9924-002d-8d5d-c15c3ab95270"
+    uuid: "62c82c17-c70f-002d-95e4-e52a67a435ef"
     udp: true
     tls: true
     network: "grpc"
@@ -739,36 +754,7 @@ proxies:
       public-key: "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ"
     grpc-opts:
       grpc-service-name: "QToNrKDvQT5AfnFM"
-  - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 188.13ms"
-    type: "vless"
-    server: "leg.goodmaximum.com"
-    port: 443
-    uuid: "e653f585-9924-000f-8d5d-c15c3ab95270"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "cloud.nimhogoa.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ"
-    grpc-opts:
-      grpc-service-name: "QToNrKDvQT5AfnFM"
-  - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 229.45ms"
-    type: "vless"
-    server: "leg.goodmaximum.com"
-    port: 443
-    uuid: "62c82c17-c70f-000f-95e4-e52a67a435ef"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "cloud.nimhogoa.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ"
-      short-id: "99181028b56c8702"
-    grpc-opts:
-      grpc-service-name: "QToNrKDvQT5AfnFM"
-  - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 185.73ms"
+  - name: "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 199.71ms"
     type: "vless"
     server: "leg.goodmaximum.com"
     port: 443
@@ -800,6 +786,30 @@ proxies:
     servername: "multi.TrV2ray.cfd"
     grpc-opts:
       grpc-service-name: "@VPNCUSTOMIZE"
+  - name: "🇦🇺 🇦🇺AU-103.224.212.211-0064"
+    type: "vmess"
+    server: "53.72img.xyz"
+    port: 443
+    uuid: "81d93f62-15a2-4994-adb9-0b5d906aac7e"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇦🇺 🇦🇺AU-103.224.212.211-0062"
+    type: "vmess"
+    server: "9.72img.xyz"
+    port: 443
+    uuid: "81d93f62-15a2-4994-adb9-0b5d906aac7e"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇦🇺 🇦🇺AU-103.224.212.211-0060"
+    type: "vmess"
+    server: "28.72img.xyz"
+    port: 443
+    uuid: "81d93f62-15a2-4994-adb9-0b5d906aac7e"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇦🇺 AU 🇦🇺 | @Raydikalx | 4787DF"
     type: "trojan"
     server: "45.63.30.142"
@@ -849,6 +859,22 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇦🇺 US 🇺🇸 | @Raydikalx | 825375"
+    type: "vmess"
+    server: "p05.rghvf.sbs"
+    port: 12330
+    uuid: "68adffea-4146-4f92-b2f9-955cd634c274"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇦🇺 US 🇺🇸 | @Raydikalx | A96BDD"
+    type: "vmess"
+    server: "p05.rghvf.sbs"
+    port: 1233
+    uuid: "9b6419f8-8120-442e-a48c-6bf52aef0abf"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇦🇺 AU 🇦🇺 | @Raydikalx | 9BDBDA"
     type: "vmess"
     server: "sy2.australiacaregroup.site"
@@ -871,12 +897,14 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
       - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
-      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
+      - "🇦🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 358ms"
+      - "🇦🇺 🆔ar14n24b 🔒 VL-WS-N/A 🇦🇺 AU 9ms"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -889,22 +917,24 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-16.178.144.150:20270"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 204.95ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 188.13ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 229.45ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 185.73ms"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-13.211.160.133:20270"
+      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 189.38ms"
+      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 199.71ms"
       - "🇦🇺 🇦🇺139754 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇦🇺 mci+@vpnsal @vpnsal @vpnsal"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0064"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0062"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0060"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 4787DF"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | FAFA65"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 45BDB9"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 3F6FA0"
       - "🇦🇺 SG 🇸🇬 | @Raydikalx | EF6EEC"
       - "🇦🇺 SG 🇸🇬 | @Raydikalx | 3C9269"
+      - "🇦🇺 US 🇺🇸 | @Raydikalx | 825375"
+      - "🇦🇺 US 🇺🇸 | @Raydikalx | A96BDD"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 9BDBDA"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -916,12 +946,14 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
       - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
-      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
+      - "🇦🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 358ms"
+      - "🇦🇺 🆔ar14n24b 🔒 VL-WS-N/A 🇦🇺 AU 9ms"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -934,22 +966,24 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-16.178.144.150:20270"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 204.95ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 188.13ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 229.45ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 185.73ms"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-13.211.160.133:20270"
+      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 189.38ms"
+      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 199.71ms"
       - "🇦🇺 🇦🇺139754 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇦🇺 mci+@vpnsal @vpnsal @vpnsal"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0064"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0062"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0060"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 4787DF"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | FAFA65"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 45BDB9"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 3F6FA0"
       - "🇦🇺 SG 🇸🇬 | @Raydikalx | EF6EEC"
       - "🇦🇺 SG 🇸🇬 | @Raydikalx | 3C9269"
+      - "🇦🇺 US 🇺🇸 | @Raydikalx | 825375"
+      - "🇦🇺 US 🇺🇸 | @Raydikalx | A96BDD"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 9BDBDA"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -960,12 +994,14 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
-      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
+      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-123.51.23.113:443"
       - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-103.169.142.30:8880"
+      - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-202.166.187.132:443"
       - "🇦🇺 🔒 VL-WS-TLS 🇦🇺 AU-152.67.101.72:23010"
-      - "🇦🇺 🔒 TR-WS-NA 🇦🇺 AU-162.4.84.247:443"
+      - "🇦🇺 🔒 VL-WS-NONE 🇦🇺 AU-192.65.217.30:8880"
+      - "🇦🇺 🆔ar14n24b 🔒 VL-TCP- ❔ XX 358ms"
+      - "🇦🇺 🆔ar14n24b 🔒 VL-WS-N/A 🇦🇺 AU 9ms"
       - "🇦🇺 @DeltaKroneckerGithub"
       - "🇦🇺 @DeltaKroneckerGithub-1"
       - "🇦🇺 @DeltaKroneckerGithub-2"
@@ -978,22 +1014,24 @@ proxy-groups:
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-162.4.84.241:443"
       - "🇦🇺 🔒 TR-TCP-TLS 🇦🇺 AU-103.224.212.211:443"
       - "🇦🇺 🔒 VL-GRPC-RLT 🇦🇺 AU-103.147.152.18:443"
-      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
       - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-45.32.246.180:8388"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-16.178.144.150:20270"
-      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-51.161.204.242:443"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 204.95ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 188.13ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 229.45ms"
-      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 185.73ms"
+      - "🇦🇺 🔒 SS-TCP-NA 🇦🇺 AU-95.173.193.201:1080"
+      - "🇦🇺 🔒 VL-TCP-RLT 🇦🇺 AU-13.211.160.133:20270"
+      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 189.38ms"
+      - "🇦🇺 REALITY|AU🇦🇺 | leg.goodmaximum.com-443 | 199.71ms"
       - "🇦🇺 🇦🇺139754 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇦🇺 mci+@vpnsal @vpnsal @vpnsal"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0064"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0062"
+      - "🇦🇺 🇦🇺AU-103.224.212.211-0060"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 4787DF"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | FAFA65"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 45BDB9"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 3F6FA0"
       - "🇦🇺 SG 🇸🇬 | @Raydikalx | EF6EEC"
       - "🇦🇺 SG 🇸🇬 | @Raydikalx | 3C9269"
+      - "🇦🇺 US 🇺🇸 | @Raydikalx | 825375"
+      - "🇦🇺 US 🇺🇸 | @Raydikalx | A96BDD"
       - "🇦🇺 AU 🇦🇺 | @Raydikalx | 9BDBDA"
   - name: "المنت 💬"
     type: "select"

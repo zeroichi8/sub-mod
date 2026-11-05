@@ -499,18 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇦 🔒 TR-WS-TLS 🇧🇦 BA-185.99.2.175:443"
-    type: "trojan"
-    server: "185.99.2.175"
-    port: 443
-    password: "317b5e7d-e52c-48ed-bcfe-64387b0d2a12"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "joss.gpj.web.id"
-    ws-opts:
-      headers:
-        Host: "joss.gpj.web.id"
   - name: "🇧🇦 BA 🇧🇦 | @Raydikalx | DE6F6A"
     type: "vmess"
     server: "185.99.2.175"
@@ -533,7 +521,6 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇦 🔒 TR-WS-TLS 🇧🇦 BA-185.99.2.175:443"
       - "🇧🇦 BA 🇧🇦 | @Raydikalx | DE6F6A"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -545,7 +532,6 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇦 🔒 TR-WS-TLS 🇧🇦 BA-185.99.2.175:443"
       - "🇧🇦 BA 🇧🇦 | @Raydikalx | DE6F6A"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -556,7 +542,6 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇦 🔒 TR-WS-TLS 🇧🇦 BA-185.99.2.175:443"
       - "🇧🇦 BA 🇧🇦 | @Raydikalx | DE6F6A"
   - name: "المنت 💬"
     type: "select"

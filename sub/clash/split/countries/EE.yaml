@@ -519,10 +519,22 @@ proxies:
     udp: true
     tls: false
     network: "ws"
+    servername: "vms.lifetime59.workers.dev"
     ws-opts:
       path: "/"
       headers:
         Host: "vms.lifetime59.workers.dev"
+  - name: "🇪🇪 🔒 TR-WS-NA 🇪🇪 EE-185.36.141.81:443"
+    type: "trojan"
+    server: "185.36.141.81"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
   - name: "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
     type: "vless"
     server: "45.80.110.50"
@@ -534,6 +546,29 @@ proxies:
     ws-opts:
       headers:
         Host: "vms.lifetime51.workers.dev"
+  - name: "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880-1"
+    type: "vless"
+    server: "185.159.247.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime59.workers.dev"
+  - name: "🇪🇪 🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
+    type: "trojan"
+    server: "23.230.179.152"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.creationlong.org"
+    ws-opts:
+      path: "/assignment"
   - name: "🇪🇪 🔒 VL-WS-TLS 🇪🇪 EE-45.80.108.236:443"
     type: "vless"
     server: "45.80.108.236"
@@ -547,36 +582,6 @@ proxies:
     ws-opts:
       headers:
         Host: "lively-resonance-4e12.electrocellco-cf-059.workers.dev"
-  - name: "🇪🇪 🔒 TR-WS-NA 🇪🇪 EE-185.36.141.81:443"
-    type: "trojan"
-    server: "185.36.141.81"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇪🇪 🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
-    type: "trojan"
-    server: "23.230.179.152"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.creationlong.org"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇪🇪 🔒 VL-TCP-NONE 🇪🇪 EE-13.143.239.32:443"
-    type: "vless"
-    server: "13.143.239.32"
-    port: 443
-    uuid: "9d785de7-9f8f-4779-8591-f98aab3edd6b"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇪🇪 🔒 VL-GRPC-TLS 🇪🇪 EE-13.143.176.83:443"
     type: "vless"
     server: "13.143.176.83"
@@ -589,6 +594,18 @@ proxies:
     client-fingerprint: "firefox"
     grpc-opts:
       grpc-service-name: "grpc"
+  - name: "🇪🇪 🔒 VL-XHTTP-TLS 🇪🇪 EE-31.56.187.35:34451"
+    type: "vless"
+    server: "31.56.187.35"
+    port: 34451
+    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "ee-2e06d85dc0.shamanapp.online"
+    alpn:
+      - "h2"
+      - "http/1.1"
   - name: "🇪🇪 @DeltaKroneckerGithub"
     type: "trojan"
     server: "45.139.194.60"
@@ -665,32 +682,6 @@ proxies:
     udp: true
     tls: true
     network: "tcp"
-  - name: "🇪🇪 🔒 VL-GRPC-RLT 🇪🇪 EE-5.181.202.134:443"
-    type: "vless"
-    server: "5.181.202.134"
-    port: 443
-    uuid: "87939c49-07d0-4bfb-8612-5a0380eddebe"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "cdnjs.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "A6f20n-9CiJL1Rt0rM_uU-gsMqU7QLVybUT-8BecSGY"
-      short-id: "e0df9885e8880774"
-  - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-13.143.239.41:25895"
-    type: "vless"
-    server: "13.143.239.41"
-    port: 25895
-    uuid: "f90b7d43-69e2-4b46-a672-8029bc6796a2"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.samsung.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k"
-      short-id: "a73f0410d728c823"
   - name: "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-132.243.65.161:443"
     type: "vless"
     server: "132.243.65.161"
@@ -719,7 +710,7 @@ proxies:
     reality-opts:
       public-key: "2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8"
       short-id: "2e82d7ac"
-  - name: "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 609.76ms"
+  - name: "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 356.55ms"
     type: "vless"
     server: "ee-2e06d85dc0.shamanapp.online"
     port: 34451
@@ -731,17 +722,19 @@ proxies:
     alpn:
       - "h2"
       - "http/1.1"
-  - name: "🇪🇪 REALITY|EE🇪🇪 | 132.243.65.82-443 | 174.08ms"
+  - name: "🇪🇪 REALITY|EE🇪🇪 | 79.98.37.106-443 | 159.03ms"
     type: "vless"
-    server: "132.243.65.82"
+    server: "79.98.37.106"
     port: 443
-    uuid: "4f35274e-006f-43e7-87be-c8cba4882b0c"
+    uuid: "846cedee-2a52-0001-a0b9-11850ead6a8b"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "player.vimeo.com"
+    network: "tcp"
+    servername: "ee-central.v8x2b.lol"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "UZKrOusu0M0i3gnqDanh2yXXkTibNEjj41Hsvah2XlI"
+      public-key: "USSepsAbvP9LpByHLV2xD2H8dq8GAJ6G0fINEqD4PAw"
   - name: "🇪🇪 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn"
     type: "vless"
     server: "93.89.220.37"
@@ -769,20 +762,7 @@ proxies:
     reality-opts:
       public-key: "lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g"
       short-id: "e88cb983f3c97528"
-  - name: "🇪🇪 11595@proxy_online_net"
-    type: "vless"
-    server: "185.225.205.53"
-    port: 443
-    uuid: "3d526c7f-059c-4e2b-b09a-8569b268935b"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "addons.mozilla.org"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8"
-      short-id: "2e82d7ac"
-  - name: "🇪🇪 11635@proxy_online_net"
+  - name: "🇪🇪 @ConfigV2RayNG"
     type: "vless"
     server: "185.225.205.53"
     port: 443
@@ -858,6 +838,16 @@ proxies:
     reality-opts:
       public-key: "13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ"
       short-id: "7271129440ade8fa"
+  - name: "🇪🇪 [132145]"
+    type: "vless"
+    server: "estproxy3.lockdwn.com"
+    port: 8443
+    uuid: "9d9e3421-5652-4804-85ba-238355b948ab"
+    udp: true
+    tls: true
+    network: "tcp"
+    alpn:
+      - "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
   - name: "🇪🇪 @v2rayng3"
     type: "vless"
     server: "185.155.97.58"
@@ -872,20 +862,6 @@ proxies:
     reality-opts:
       public-key: "A1Qf_rMG4KDfLzfCK-M5R9qW_0uThfeSosQnv6LBL1M"
       short-id: "8433cb66b6c3ab6d"
-  - name: "🇪🇪 @vmess_ir"
-    type: "vless"
-    server: "185.31.242.61"
-    port: 443
-    uuid: "ee18d188-14cc-417e-beb1-70e4add6d023"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "est.nztvpn.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "7mRrVzTchVLWWBru5fCgTvtdkL7lVJ_qRj9HW8Rd8X0"
-      short-id: "0da7e14db353e7d0"
   - name: "🇪🇪 EE 🇪🇪 | @Raydikalx | 5971C2"
     type: "hysteria2"
     server: "217.60.182.79"
@@ -924,26 +900,23 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇪🇪 🇪🇪 | @WhiteDNS | EE19|1.1MB/s|DNSOK|GPT⁺-EE"
-    type: "vless"
-    server: "185.225.205.53"
-    port: 443
-    uuid: "3d526c7f-059c-4e2b-b09a-8569b268935b"
-    udp: true
-    tls: true
-    network: "raw"
-    servername: "addons.mozilla.org"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8"
-      short-id: "2e82d7ac"
   - name: "🇪🇪 France"
     type: "hysteria2"
     server: "141.0.187.15"
     port: 443
     password: "70043bfa-d6fb-4980-b27e-773e9e8b2004"
     sni: "crt.onecloudstream.com"
+  - name: "🇪🇪 🔒 VL-XHTTP-RLT 🇪🇪 EE-132.243.65.82:443"
+    type: "vless"
+    server: "132.243.65.82"
+    port: 443
+    uuid: "4f35274e-006f-43e7-87be-c8cba4882b0c"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "player.vimeo.com"
+    reality-opts:
+      public-key: "UZKrOusu0M0i3gnqDanh2yXXkTibNEjj41Hsvah2XlI"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -960,12 +933,13 @@ proxy-groups:
     proxies:
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.30:8880"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880"
-      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
-      - "🇪🇪 🔒 VL-WS-TLS 🇪🇪 EE-45.80.108.236:443"
       - "🇪🇪 🔒 TR-WS-NA 🇪🇪 EE-185.36.141.81:443"
+      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
+      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880-1"
       - "🇪🇪 🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
-      - "🇪🇪 🔒 VL-TCP-NONE 🇪🇪 EE-13.143.239.32:443"
+      - "🇪🇪 🔒 VL-WS-TLS 🇪🇪 EE-45.80.108.236:443"
       - "🇪🇪 🔒 VL-GRPC-TLS 🇪🇪 EE-13.143.176.83:443"
+      - "🇪🇪 🔒 VL-XHTTP-TLS 🇪🇪 EE-31.56.187.35:34451"
       - "🇪🇪 @DeltaKroneckerGithub"
       - "🇪🇪 @DeltaKroneckerGithub-1"
       - "🇪🇪 @DeltaKroneckerGithub-2"
@@ -975,30 +949,27 @@ proxy-groups:
       - "🇪🇪 @DeltaKroneckerGithub-6"
       - "🇪🇪 @DeltaKroneckerGithub-7"
       - "🇪🇪 @DeltaKroneckerGithub-8"
-      - "🇪🇪 🔒 VL-GRPC-RLT 🇪🇪 EE-5.181.202.134:443"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-13.143.239.41:25895"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-132.243.65.161:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-185.225.205.53:443"
-      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 609.76ms"
-      - "🇪🇪 REALITY|EE🇪🇪 | 132.243.65.82-443 | 174.08ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 356.55ms"
+      - "🇪🇪 REALITY|EE🇪🇪 | 79.98.37.106-443 | 159.03ms"
       - "🇪🇪 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn"
       - "🇪🇪 @v2ray313 کانالمون 🌈"
-      - "🇪🇪 11595@proxy_online_net"
-      - "🇪🇪 11635@proxy_online_net"
+      - "🇪🇪 @ConfigV2RayNG"
       - "🇪🇪 🇪🇪139885 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇪🇪 @Shh_Proxy-New⁸"
       - "🇪🇪 🔥Estonia| @AZARBAYJAB"
       - "🇪🇪 @leviconfigs🪐-14"
       - "🇪🇪 🇩🇪All⁶ | @BigSmoke_Config"
+      - "🇪🇪 [132145]"
       - "🇪🇪 @v2rayng3"
-      - "🇪🇪 @vmess_ir"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 5971C2"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 3743DD"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 3F4820"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 02DEE6"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 915C3F"
-      - "🇪🇪 🇪🇪 | @WhiteDNS | EE19|1.1MB/s|DNSOK|GPT⁺-EE"
       - "🇪🇪 France"
+      - "🇪🇪 🔒 VL-XHTTP-RLT 🇪🇪 EE-132.243.65.82:443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -1011,12 +982,13 @@ proxy-groups:
     proxies:
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.30:8880"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880"
-      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
-      - "🇪🇪 🔒 VL-WS-TLS 🇪🇪 EE-45.80.108.236:443"
       - "🇪🇪 🔒 TR-WS-NA 🇪🇪 EE-185.36.141.81:443"
+      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
+      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880-1"
       - "🇪🇪 🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
-      - "🇪🇪 🔒 VL-TCP-NONE 🇪🇪 EE-13.143.239.32:443"
+      - "🇪🇪 🔒 VL-WS-TLS 🇪🇪 EE-45.80.108.236:443"
       - "🇪🇪 🔒 VL-GRPC-TLS 🇪🇪 EE-13.143.176.83:443"
+      - "🇪🇪 🔒 VL-XHTTP-TLS 🇪🇪 EE-31.56.187.35:34451"
       - "🇪🇪 @DeltaKroneckerGithub"
       - "🇪🇪 @DeltaKroneckerGithub-1"
       - "🇪🇪 @DeltaKroneckerGithub-2"
@@ -1026,30 +998,27 @@ proxy-groups:
       - "🇪🇪 @DeltaKroneckerGithub-6"
       - "🇪🇪 @DeltaKroneckerGithub-7"
       - "🇪🇪 @DeltaKroneckerGithub-8"
-      - "🇪🇪 🔒 VL-GRPC-RLT 🇪🇪 EE-5.181.202.134:443"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-13.143.239.41:25895"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-132.243.65.161:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-185.225.205.53:443"
-      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 609.76ms"
-      - "🇪🇪 REALITY|EE🇪🇪 | 132.243.65.82-443 | 174.08ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 356.55ms"
+      - "🇪🇪 REALITY|EE🇪🇪 | 79.98.37.106-443 | 159.03ms"
       - "🇪🇪 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn"
       - "🇪🇪 @v2ray313 کانالمون 🌈"
-      - "🇪🇪 11595@proxy_online_net"
-      - "🇪🇪 11635@proxy_online_net"
+      - "🇪🇪 @ConfigV2RayNG"
       - "🇪🇪 🇪🇪139885 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇪🇪 @Shh_Proxy-New⁸"
       - "🇪🇪 🔥Estonia| @AZARBAYJAB"
       - "🇪🇪 @leviconfigs🪐-14"
       - "🇪🇪 🇩🇪All⁶ | @BigSmoke_Config"
+      - "🇪🇪 [132145]"
       - "🇪🇪 @v2rayng3"
-      - "🇪🇪 @vmess_ir"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 5971C2"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 3743DD"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 3F4820"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 02DEE6"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 915C3F"
-      - "🇪🇪 🇪🇪 | @WhiteDNS | EE19|1.1MB/s|DNSOK|GPT⁺-EE"
       - "🇪🇪 France"
+      - "🇪🇪 🔒 VL-XHTTP-RLT 🇪🇪 EE-132.243.65.82:443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -1061,12 +1030,13 @@ proxy-groups:
     proxies:
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.30:8880"
       - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880"
-      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
-      - "🇪🇪 🔒 VL-WS-TLS 🇪🇪 EE-45.80.108.236:443"
       - "🇪🇪 🔒 TR-WS-NA 🇪🇪 EE-185.36.141.81:443"
+      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-45.80.110.50:8880"
+      - "🇪🇪 🔒 VL-WS-NONE 🇪🇪 EE-185.159.247.30:8880-1"
       - "🇪🇪 🔒 TR-WS-TLS 🇪🇪 EE-23.230.179.152:443"
-      - "🇪🇪 🔒 VL-TCP-NONE 🇪🇪 EE-13.143.239.32:443"
+      - "🇪🇪 🔒 VL-WS-TLS 🇪🇪 EE-45.80.108.236:443"
       - "🇪🇪 🔒 VL-GRPC-TLS 🇪🇪 EE-13.143.176.83:443"
+      - "🇪🇪 🔒 VL-XHTTP-TLS 🇪🇪 EE-31.56.187.35:34451"
       - "🇪🇪 @DeltaKroneckerGithub"
       - "🇪🇪 @DeltaKroneckerGithub-1"
       - "🇪🇪 @DeltaKroneckerGithub-2"
@@ -1076,30 +1046,27 @@ proxy-groups:
       - "🇪🇪 @DeltaKroneckerGithub-6"
       - "🇪🇪 @DeltaKroneckerGithub-7"
       - "🇪🇪 @DeltaKroneckerGithub-8"
-      - "🇪🇪 🔒 VL-GRPC-RLT 🇪🇪 EE-5.181.202.134:443"
-      - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-13.143.239.41:25895"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-132.243.65.161:443"
       - "🇪🇪 🔒 VL-TCP-RLT 🇪🇪 EE-185.225.205.53:443"
-      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 609.76ms"
-      - "🇪🇪 REALITY|EE🇪🇪 | 132.243.65.82-443 | 174.08ms"
+      - "🇪🇪 EE🇪🇪 | ee-2e06d85dc0.shamanapp.online-34451 | 356.55ms"
+      - "🇪🇪 REALITY|EE🇪🇪 | 79.98.37.106-443 | 159.03ms"
       - "🇪🇪 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn"
       - "🇪🇪 @v2ray313 کانالمون 🌈"
-      - "🇪🇪 11595@proxy_online_net"
-      - "🇪🇪 11635@proxy_online_net"
+      - "🇪🇪 @ConfigV2RayNG"
       - "🇪🇪 🇪🇪139885 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇪🇪 @Shh_Proxy-New⁸"
       - "🇪🇪 🔥Estonia| @AZARBAYJAB"
       - "🇪🇪 @leviconfigs🪐-14"
       - "🇪🇪 🇩🇪All⁶ | @BigSmoke_Config"
+      - "🇪🇪 [132145]"
       - "🇪🇪 @v2rayng3"
-      - "🇪🇪 @vmess_ir"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 5971C2"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 3743DD"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 3F4820"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 02DEE6"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 915C3F"
-      - "🇪🇪 🇪🇪 | @WhiteDNS | EE19|1.1MB/s|DNSOK|GPT⁺-EE"
       - "🇪🇪 France"
+      - "🇪🇪 🔒 VL-XHTTP-RLT 🇪🇪 EE-132.243.65.82:443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

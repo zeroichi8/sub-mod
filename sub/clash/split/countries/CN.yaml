@@ -499,14 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
-    type: "vmess"
-    server: "120.48.133.162"
-    port: 10086
-    uuid: "a8d931b0-6c27-428b-8d86-c20efea3dba7"
-    alterId: 0
-    cipher: "auto"
-    udp: true
   - name: "🇨🇳 🔒 VL-WS-TLS 🇨🇳 CN-103.118.254.37:443"
     type: "vless"
     server: "103.118.254.37"
@@ -521,6 +513,14 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
+    type: "vmess"
+    server: "120.48.133.162"
+    port: 10086
+    uuid: "a8d931b0-6c27-428b-8d86-c20efea3dba7"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇨🇳 014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
     type: "vless"
     server: "us22.sofast.live"
@@ -1837,7 +1837,7 @@ proxies:
     alterId: 64
     cipher: "auto"
     udp: true
-  - name: "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 170.5ms"
+  - name: "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 163.46ms"
     type: "vless"
     server: "122.8.46.9"
     port: 443
@@ -1850,6 +1850,13 @@ proxies:
     reality-opts:
       public-key: "iVDh09Vm2DqZMNQoUdf-LCZ6TqVGb9mLXnClAK2LRj4"
   - name: "🇨🇳 📡电报频道:@clashv8"
+    type: "ss"
+    server: "1.4.8.2"
+    port: 1
+    cipher: "aes-256-gcm"
+    password: "123456"
+    udp: true
+  - name: "🇨🇳 📡电报频道:@clashv8-1"
     type: "ss"
     server: "1.8.3.2"
     port: 5
@@ -1884,6 +1891,14 @@ proxies:
     port: 34602
     uuid: "418048af-a293-4b99-9b0c-98ca3580dd24"
     alterId: 64
+    cipher: "auto"
+    udp: true
+  - name: "🇨🇳 FXxNET"
+    type: "vmess"
+    server: "39.108.113.127"
+    port: 10086
+    uuid: "fde10e39-48bb-4dcf-b3ba-71d711323a54"
+    alterId: 0
     cipher: "auto"
     udp: true
   - name: "🇨🇳 TH 🇹🇭 | @Raydikalx | 2373E1"
@@ -2612,38 +2627,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇨🇳 CN 🇨🇳 | @Raydikalx | 360817"
-    type: "vmess"
-    server: "39.108.113.127"
-    port: 10086
-    uuid: "fde10e39-48bb-4dcf-b3ba-71d711323a54"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇨🇳 SG 🇸🇬 | @Raydikalx | 44F22F"
-    type: "vmess"
-    server: "v30.hdacd.com"
-    port: 30830
-    uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇨🇳 SG 🇸🇬 | @Raydikalx | AD83BD"
-    type: "vmess"
-    server: "v45.hdacd.com"
-    port: 30845
-    uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
-    alterId: 2
-    cipher: "auto"
-    udp: true
-  - name: "🇨🇳 SG 🇸🇬 | @Raydikalx | E69D4E"
-    type: "vmess"
-    server: "v6.hdacd.com"
-    port: 30806
-    uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
-    alterId: 2
-    cipher: "auto"
-    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -2658,8 +2641,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 🔒 VL-WS-TLS 🇨🇳 CN-103.118.254.37:443"
+      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
       - "🇨🇳 @DeltaKroneckerGithub"
       - "🇨🇳 @DeltaKroneckerGithub-1"
@@ -2808,12 +2791,14 @@ proxy-groups:
       - "🇨🇳 @DeltaKroneckerGithub-144"
       - "🇨🇳 🔒 VL-GRPC-RLT 🇨🇳 CN-122.8.47.2:8443"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 170.5ms"
+      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 163.46ms"
       - "🇨🇳 📡电报频道:@clashv8"
+      - "🇨🇳 📡电报频道:@clashv8-1"
       - "🇨🇳 [128220]"
       - "🇨🇳 t.me/ConfigFori  -  Config 88290"
       - "🇨🇳 @Hope_Net-join-us-on-Telegram"
       - "🇨🇳 @Hope_Net-join-us-on-Telegram-1"
+      - "🇨🇳 FXxNET"
       - "🇨🇳 TH 🇹🇭 | @Raydikalx | 2373E1"
       - "🇨🇳 TH 🇹🇭 | @Raydikalx | 84D0BF"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 22E02C"
@@ -2905,10 +2890,6 @@ proxy-groups:
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 8665EC"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 003DED"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | FC1C27"
-      - "🇨🇳 CN 🇨🇳 | @Raydikalx | 360817"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | 44F22F"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | AD83BD"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | E69D4E"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -2919,8 +2900,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 🔒 VL-WS-TLS 🇨🇳 CN-103.118.254.37:443"
+      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
       - "🇨🇳 @DeltaKroneckerGithub"
       - "🇨🇳 @DeltaKroneckerGithub-1"
@@ -3069,12 +3050,14 @@ proxy-groups:
       - "🇨🇳 @DeltaKroneckerGithub-144"
       - "🇨🇳 🔒 VL-GRPC-RLT 🇨🇳 CN-122.8.47.2:8443"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 170.5ms"
+      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 163.46ms"
       - "🇨🇳 📡电报频道:@clashv8"
+      - "🇨🇳 📡电报频道:@clashv8-1"
       - "🇨🇳 [128220]"
       - "🇨🇳 t.me/ConfigFori  -  Config 88290"
       - "🇨🇳 @Hope_Net-join-us-on-Telegram"
       - "🇨🇳 @Hope_Net-join-us-on-Telegram-1"
+      - "🇨🇳 FXxNET"
       - "🇨🇳 TH 🇹🇭 | @Raydikalx | 2373E1"
       - "🇨🇳 TH 🇹🇭 | @Raydikalx | 84D0BF"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 22E02C"
@@ -3166,10 +3149,6 @@ proxy-groups:
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 8665EC"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 003DED"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | FC1C27"
-      - "🇨🇳 CN 🇨🇳 | @Raydikalx | 360817"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | 44F22F"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | AD83BD"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | E69D4E"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -3179,8 +3158,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 🔒 VL-WS-TLS 🇨🇳 CN-103.118.254.37:443"
+      - "🇨🇳 🔒 VM-WS-NA 🇨🇳 CN-120.48.133.162:10086"
       - "🇨🇳 014-🇺🇸 US tcp ✂️@GheychiAmoozesh"
       - "🇨🇳 @DeltaKroneckerGithub"
       - "🇨🇳 @DeltaKroneckerGithub-1"
@@ -3329,12 +3308,14 @@ proxy-groups:
       - "🇨🇳 @DeltaKroneckerGithub-144"
       - "🇨🇳 🔒 VL-GRPC-RLT 🇨🇳 CN-122.8.47.2:8443"
       - "🇨🇳 🔒 VM-TCP-NA 🇨🇳 CN-112.132.215.108:50002"
-      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 170.5ms"
+      - "🇨🇳 REALITY|CN🇨🇳 | 122.8.46.9-443 | 163.46ms"
       - "🇨🇳 📡电报频道:@clashv8"
+      - "🇨🇳 📡电报频道:@clashv8-1"
       - "🇨🇳 [128220]"
       - "🇨🇳 t.me/ConfigFori  -  Config 88290"
       - "🇨🇳 @Hope_Net-join-us-on-Telegram"
       - "🇨🇳 @Hope_Net-join-us-on-Telegram-1"
+      - "🇨🇳 FXxNET"
       - "🇨🇳 TH 🇹🇭 | @Raydikalx | 2373E1"
       - "🇨🇳 TH 🇹🇭 | @Raydikalx | 84D0BF"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 22E02C"
@@ -3426,10 +3407,6 @@ proxy-groups:
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 8665EC"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | 003DED"
       - "🇨🇳 CN 🇨🇳 | @Raydikalx | FC1C27"
-      - "🇨🇳 CN 🇨🇳 | @Raydikalx | 360817"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | 44F22F"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | AD83BD"
-      - "🇨🇳 SG 🇸🇬 | @Raydikalx | E69D4E"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
