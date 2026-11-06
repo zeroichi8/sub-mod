@@ -499,7 +499,66 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇭🇺 @DeltaKroneckerGithub"
+  - name: "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
+    type: "vless"
+    server: "180.149.37.38"
+    port: 8443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+    type: "trojan"
+    server: "185.225.68.232"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
+    type: "vless"
+    server: "38.180.109.174"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+    type: "ss"
+    server: "146.70.203.254"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
+    type: "vless"
+    server: "85.155.246.13"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 276.86ms"
     type: "vless"
     server: "pl-waw.dontblockmepls.com"
     port: 2063
@@ -515,62 +574,16 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
+  - name: "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 462.71ms"
     type: "vless"
-    server: "38.180.109.174"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-    type: "vless"
-    server: "180.149.37.38"
-    port: 8443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇭🇺 🔒 TR-WS-TLS 🇭🇺 HU-185.225.68.232:443"
-    type: "trojan"
-    server: "185.225.68.232"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
-  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-    type: "ss"
-    server: "146.70.203.254"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
-  - name: "🇭🇺 REALITY|NL🇳🇱 | pl-waw.dontblockmepls.com-2063 | 216.17ms"
-    type: "vless"
-    server: "pl-waw.dontblockmepls.com"
+    server: "cz-prg.dontblockmepls.com"
     port: 2063
     uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
     udp: true
     tls: true
     network: "tcp"
     servername: "rusbid.de"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
@@ -613,6 +626,19 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "🇭🇺 🇩🇪02 | ⚡Telegram = t.me/ex_proxies"
+    type: "vless"
+    server: "pl-waw.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -627,15 +653,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 TR-WS-TLS 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 REALITY|NL🇳🇱 | pl-waw.dontblockmepls.com-2063 | 216.17ms"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 276.86ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 462.71ms"
       - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
       - "🇭🇺 ⚡️ @Nap_v2ray 🇨🇿"
+      - "🇭🇺 🇩🇪02 | ⚡Telegram = t.me/ex_proxies"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -646,15 +674,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 TR-WS-TLS 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 REALITY|NL🇳🇱 | pl-waw.dontblockmepls.com-2063 | 216.17ms"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 276.86ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 462.71ms"
       - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
       - "🇭🇺 ⚡️ @Nap_v2ray 🇨🇿"
+      - "🇭🇺 🇩🇪02 | ⚡Telegram = t.me/ex_proxies"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -664,15 +694,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇭🇺 @DeltaKroneckerGithub"
-      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 TR-WS-TLS 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
       - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-      - "🇭🇺 REALITY|NL🇳🇱 | pl-waw.dontblockmepls.com-2063 | 216.17ms"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 276.86ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 462.71ms"
       - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
       - "🇭🇺 ⚡️ @Nap_v2ray 🇨🇿"
+      - "🇭🇺 🇩🇪02 | ⚡Telegram = t.me/ex_proxies"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
