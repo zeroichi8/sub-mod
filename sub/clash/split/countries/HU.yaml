@@ -513,17 +513,6 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
-    type: "trojan"
-    server: "185.225.68.232"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
   - name: "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
     type: "vless"
     server: "38.180.109.174"
@@ -538,13 +527,30 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
-    type: "ss"
-    server: "146.70.203.254"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
+  - name: "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+    type: "trojan"
+    server: "185.225.68.232"
+    port: 443
+    password: "humanity"
     udp: true
+    tls: true
+    network: "ws"
+    servername: "www.calmlunch.com"
+    ws-opts:
+      path: "/assignment"
+  - name: "🇭🇺 🆔vpnbaz 🔒 VL-TCP- ❔ XX 197ms"
+    type: "vless"
+    server: "pl-waw.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
   - name: "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
     type: "vless"
     server: "85.155.246.13"
@@ -555,10 +561,46 @@ proxies:
     network: "tcp"
     servername: "rusbid.de"
     client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 276.86ms"
+  - name: "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.16:2063"
+    type: "vless"
+    server: "85.155.246.16"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+    type: "ss"
+    server: "146.70.203.254"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 170.27ms"
+    type: "vless"
+    server: "pl-waw.dontblockmepls.com"
+    port: 2063
+    uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "rusbid.de"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 142.19ms"
     type: "vless"
     server: "pl-waw.dontblockmepls.com"
     port: 2063
@@ -574,7 +616,7 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 462.71ms"
+  - name: "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 145.69ms"
     type: "vless"
     server: "cz-prg.dontblockmepls.com"
     port: 2063
@@ -613,9 +655,9 @@ proxies:
     reality-opts:
       public-key: "mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg"
       short-id: "f8379ce795f2e5ed"
-  - name: "🇭🇺 ⚡️ @Nap_v2ray 🇨🇿"
+  - name: "🇭🇺 @VPsave"
     type: "vless"
-    server: "cz-prg.dontblockmepls.com"
+    server: "85.155.246.13"
     port: 2063
     uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
     udp: true
@@ -626,9 +668,9 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "🇭🇺 🇩🇪02 | ⚡Telegram = t.me/ex_proxies"
+  - name: "🇭🇺 ⚡️ @Nap_v2ray 🇨🇿"
     type: "vless"
-    server: "pl-waw.dontblockmepls.com"
+    server: "cz-prg.dontblockmepls.com"
     port: 2063
     uuid: "b18d5990-96eb-4587-a386-7f8ef7591e6a"
     udp: true
@@ -654,16 +696,19 @@ proxy-groups:
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
-      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🆔vpnbaz 🔒 VL-TCP- ❔ XX 197ms"
       - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
-      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 276.86ms"
-      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 462.71ms"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.16:2063"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 170.27ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 142.19ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 145.69ms"
       - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
+      - "🇭🇺 @VPsave"
       - "🇭🇺 ⚡️ @Nap_v2ray 🇨🇿"
-      - "🇭🇺 🇩🇪02 | ⚡Telegram = t.me/ex_proxies"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -675,16 +720,19 @@ proxy-groups:
     max-failed-times: 2
     proxies:
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
-      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🆔vpnbaz 🔒 VL-TCP- ❔ XX 197ms"
       - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
-      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 276.86ms"
-      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 462.71ms"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.16:2063"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 170.27ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 142.19ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 145.69ms"
       - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
+      - "🇭🇺 @VPsave"
       - "🇭🇺 ⚡️ @Nap_v2ray 🇨🇿"
-      - "🇭🇺 🇩🇪02 | ⚡Telegram = t.me/ex_proxies"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -695,16 +743,19 @@ proxy-groups:
     lazy: false
     proxies:
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-180.149.37.38:8443"
-      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
       - "🇭🇺 🔒 VL-WS-TLS 🇭🇺 HU-38.180.109.174:443"
-      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 🔒 TR-WS-NA 🇭🇺 HU-185.225.68.232:443"
+      - "🇭🇺 🆔vpnbaz 🔒 VL-TCP- ❔ XX 197ms"
       - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.13:2063"
-      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 276.86ms"
-      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 462.71ms"
+      - "🇭🇺 🔒 VL-TCP-RLT 🇭🇺 HU-85.155.246.16:2063"
+      - "🇭🇺 🔒 SS-TCP-NA 🇭🇺 HU-146.70.203.254:1080"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 170.27ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | pl-waw.dontblockmepls.com-2063 | 142.19ms"
+      - "🇭🇺 REALITY|HU🇭🇺 | cz-prg.dontblockmepls.com-2063 | 145.69ms"
       - "🇭🇺 @Tarkshodeh 🇺🇲"
       - "🇭🇺 @Shh_Proxy-New⁵"
+      - "🇭🇺 @VPsave"
       - "🇭🇺 ⚡️ @Nap_v2ray 🇨🇿"
-      - "🇭🇺 🇩🇪02 | ⚡Telegram = t.me/ex_proxies"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

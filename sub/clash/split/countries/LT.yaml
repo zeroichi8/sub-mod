@@ -499,17 +499,81 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
+  - name: "🇱🇹 @DeltaKroneckerGithub"
+    type: "vless"
+    server: "88.216.66.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime04.workers.dev"
+  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
+    type: "vless"
+    server: "89.116.180.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime09.workers.dev"
+  - name: "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+    type: "vless"
+    server: "88.216.69.253"
+    port: 443
+    uuid: "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "a.cwvps.eu.org"
+    client-fingerprint: "unsafe"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "a.cwvps.eu.org"
+  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.40:8880"
+    type: "vless"
+    server: "89.117.112.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime11.workers.dev"
+  - name: "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-195.181.244.216:443"
     type: "trojan"
-    server: "86.38.214.205"
+    server: "195.181.244.216"
     port: 443
     password: "humanity"
     udp: true
     tls: true
     network: "ws"
-    servername: "www.ignitelimit.com"
+    servername: "www.calmlunch.com"
     ws-opts:
       path: "/assignment"
+      headers:
+        Host: "www.calmlunch.com"
+  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.66.30:8880"
+    type: "vless"
+    server: "88.216.66.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime04.workers.dev"
   - name: "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
     type: "trojan"
     server: "88.216.69.253"
@@ -523,6 +587,34 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.pleadcourt.org"
+  - name: "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443-1"
+    type: "vless"
+    server: "88.216.69.253"
+    port: 443
+    uuid: "5504eaa8-1395-402f-8e0e-75ecd762e627"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "server8.9966338.xyz"
+    client-fingerprint: "unsafe"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/fdtiouasopeiyre0r95y8"
+      headers:
+        Host: "server8.9966338.xyz"
+  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.30:8880"
+    type: "vless"
+    server: "89.116.180.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime09.workers.dev"
   - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.161.50:8880"
     type: "vless"
     server: "89.116.161.50"
@@ -534,26 +626,6 @@ proxies:
     ws-opts:
       headers:
         Host: "vms.lifetime08.workers.dev"
-  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.66.30:8880"
-    type: "vless"
-    server: "88.216.66.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime04.workers.dev"
-  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.4:80"
-    type: "vless"
-    server: "89.117.112.4"
-    port: 80
-    uuid: "424fa201-3f94-479e-b533-d5257cf9a207"
-    udp: true
-    tls: false
-    network: "ws"
   - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.30:8880"
     type: "vless"
     server: "89.117.112.30"
@@ -577,82 +649,14 @@ proxies:
       path: "/"
       headers:
         Host: "vms.lifetime06.workers.dev"
-  - name: "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.119.168.61:443"
+  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.4:80"
     type: "vless"
-    server: "88.119.168.61"
-    port: 443
-    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "cdn8848.776676.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      headers:
-        Host: "cdn8848.776676.xyz"
-  - name: "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443"
-    type: "vless"
-    server: "88.216.69.253"
-    port: 443
-    uuid: "c4edb87e-8544-4fa4-bd1c-b0cda9a34b46"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "a.cwvps.eu.org"
-    client-fingerprint: "unsafe"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "a.cwvps.eu.org"
-  - name: "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-195.181.244.216:443"
-    type: "trojan"
-    server: "195.181.244.216"
-    port: 443
-    password: "humanity"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "www.calmlunch.com"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmlunch.com"
-  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
-    type: "vless"
-    server: "89.116.180.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    server: "89.117.112.4"
+    port: 80
+    uuid: "424fa201-3f94-479e-b533-d5257cf9a207"
     udp: true
     tls: false
     network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime09.workers.dev"
-  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.30:8880"
-    type: "vless"
-    server: "89.116.180.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime09.workers.dev"
-  - name: "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-89.116.180.49:443"
-    type: "trojan"
-    server: "89.116.180.49"
-    port: 443
-    password: "f18d6149-e214-8554-e737-f7523c8b2eea"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "0403.infinityconfig4.workers.dev"
-    ws-opts:
-      path: "/sync"
   - name: "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.144:443"
     type: "vless"
     server: "88.216.69.144"
@@ -667,6 +671,17 @@ proxies:
       path: "/stream/PANEL_ZEUS/4d64f1370eeb/loc-0"
       headers:
         Host: "r5zenrelur2s.pqzdileiu8es.workers.dev"
+  - name: "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-89.116.180.49:443"
+    type: "trojan"
+    server: "89.116.180.49"
+    port: 443
+    password: "f18d6149-e214-8554-e737-f7523c8b2eea"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "0403.infinityconfig4.workers.dev"
+    ws-opts:
+      path: "/sync"
   - name: "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-45.81.58.159:2096"
     type: "vless"
     server: "45.81.58.159"
@@ -681,6 +696,17 @@ proxies:
       path: "/ws?ed=2560"
       headers:
         Host: "newgen14.hozheen.ir"
+  - name: "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
+    type: "trojan"
+    server: "86.38.214.205"
+    port: 443
+    password: "humanity"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
   - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.67.50:8880"
     type: "vless"
     server: "88.216.67.50"
@@ -692,35 +718,20 @@ proxies:
     ws-opts:
       headers:
         Host: "vms.lifetime05.workers.dev"
-  - name: "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443-1"
+  - name: "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.119.168.61:443"
     type: "vless"
-    server: "88.216.69.253"
+    server: "88.119.168.61"
     port: 443
-    uuid: "5504eaa8-1395-402f-8e0e-75ecd762e627"
+    uuid: "d342d11e-d424-4583-b36e-524ab1f0afa4"
     udp: true
     tls: true
     network: "ws"
-    servername: "server8.9966338.xyz"
-    client-fingerprint: "unsafe"
-    alpn:
-      - "http/1.1"
+    servername: "cdn8848.776676.xyz"
+    client-fingerprint: "chrome"
     ws-opts:
-      path: "/fdtiouasopeiyre0r95y8"
       headers:
-        Host: "server8.9966338.xyz"
-  - name: "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.40:8880"
-    type: "vless"
-    server: "89.117.112.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime11.workers.dev"
-  - name: "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 12ms"
+        Host: "cdn8848.776676.xyz"
+  - name: "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms"
     type: "vless"
     server: "88.216.69.253"
     port: 443
@@ -734,7 +745,7 @@ proxies:
       path: "/fp=chrome"
       headers:
         Host: "ccc.010304.xyz"
-  - name: "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 11ms"
+  - name: "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-1"
     type: "vless"
     server: "88.216.69.253"
     port: 443
@@ -748,7 +759,7 @@ proxies:
       path: "/fp"
       headers:
         Host: "ccc.010304.xyz"
-  - name: "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 16ms"
+  - name: "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-2"
     type: "vless"
     server: "88.216.69.253"
     port: 443
@@ -764,7 +775,7 @@ proxies:
       path: "/fiughoieuhti834t90"
       headers:
         Host: "server6.9966338.xyz"
-  - name: "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 21ms"
+  - name: "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-3"
     type: "vless"
     server: "88.216.69.253"
     port: 443
@@ -778,57 +789,23 @@ proxies:
       path: "/ws"
       headers:
         Host: "a.cwvps.eu.org"
-  - name: "🇱🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 16ms"
+  - name: "🇱🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 283ms"
     type: "vless"
-    server: "88.216.69.253"
+    server: "app26.betust.net"
     port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    ws-opts:
-      path: "/fp"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
-    type: "vless"
-    server: "84.32.215.94"
-    port: 443
-    uuid: "c5694dc5-39fd-4a92-8430-3837baa522a3"
+    uuid: "2232d904-8e6a-4202-8240-6efd8aec02e9"
     udp: true
     tls: true
     network: "tcp"
-    servername: "lt.aether-runet.top"
-    client-fingerprint: "firefox"
+    servername: "app26.betust.net"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk"
-      short-id: "4fa44664f6a566d3"
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
-    type: "ss"
-    server: "195.238.126.20"
-    port: 9002
-    cipher: "aes-256-cfb"
-    password: "b8KkNDjEd5QqFyRm"
-    udp: true
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
-    type: "ss"
-    server: "185.237.185.89"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    udp: true
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
-    type: "ss"
-    server: "195.238.126.20"
-    port: 9086
-    cipher: "aes-256-cfb"
-    password: "37Z4TFCYhfxcpc9Q"
-    udp: true
-  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.96:443"
+      public-key: "5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc"
+      short-id: "d44d6d46"
+  - name: "🇱🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 267ms"
     type: "vless"
-    server: "84.32.215.96"
+    server: "app26.betust.net"
     port: 443
     uuid: "2232d904-8e6a-4202-8240-6efd8aec02e9"
     udp: true
@@ -840,45 +817,20 @@ proxies:
     reality-opts:
       public-key: "5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc"
       short-id: "d44d6d46"
-  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.109.20:443"
+  - name: "🇱🇹 🔒 VL-GRPC-TLS 🇱🇹 LT-86.38.214.26:443"
     type: "vless"
-    server: "84.32.109.20"
+    server: "86.38.214.26"
     port: 443
-    uuid: "ee18d188-14cc-417e-beb1-70e4add6d023"
+    uuid: "0f3408b6-5db9-4a9b-9579-e978961d32b4"
     udp: true
     tls: true
-    network: "tcp"
-    servername: "litv.nztvpn.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4"
-      short-id: "0da7e14db353e7d0"
-  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
-    type: "vless"
-    server: "88.216.127.33"
-    port: 443
-    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "lt-modx.nodexphere.net"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
-  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
-    type: "vless"
-    server: "88.216.127.115"
-    port: 443
-    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "lt-modx.nodexphere.net"
-    client-fingerprint: "random"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
+    network: "grpc"
+    servername: "aLi.PinobiN.iR."
+    client-fingerprint: "firefox"
+    alpn:
+      - "http/1.1"
+    grpc-opts:
+      grpc-service-name: "/custom_config?ed=2048"
   - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9011"
     type: "ss"
     server: "195.238.126.20"
@@ -886,6 +838,54 @@ proxies:
     cipher: "aes-256-cfb"
     password: "M3t2ZEQcMGRWBjRa"
     udp: true
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-85.209.231.169:2087"
+    type: "vless"
+    server: "85.209.231.169"
+    port: 2087
+    uuid: "92b79c22-f68b-4713-8b21-52f264cb92f5"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "cdndownloadlink.song69.fun"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "HRmmr0Ii4Tr9jPLwratvLhee3_VWFNK47T8AAo7kzww"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
+    type: "ss"
+    server: "195.238.126.20"
+    port: 9045
+    cipher: "aes-256-cfb"
+    password: "Lp27rqyJq72bZsqX"
+    udp: true
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.42:443"
+    type: "vless"
+    server: "88.216.127.42"
+    port: 443
+    uuid: "2232d904-8e6a-4202-8240-6efd8aec02e9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "app26.betust.net"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc"
+      short-id: "d44d6d46"
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
+    type: "vless"
+    server: "84.32.215.94"
+    port: 443
+    uuid: "c5694dc5-39fd-4a92-8430-3837baa522a3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "lt.aether-runet.top"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk"
+      short-id: "4fa44664f6a566d3"
   - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
     type: "vless"
     server: "5.199.173.116"
@@ -913,19 +913,45 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
     type: "ss"
     server: "195.238.126.20"
-    port: 9068
+    port: 9086
     cipher: "aes-256-cfb"
-    password: "mwgRg9hRq3b4Qnwb"
+    password: "37Z4TFCYhfxcpc9Q"
     udp: true
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+    type: "vless"
+    server: "88.216.127.33"
+    port: 443
+    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "lt-modx.nodexphere.net"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
+    type: "vless"
+    server: "88.216.127.115"
+    port: 443
+    uuid: "6a02a47b-ebbf-4593-8460-558330c04189"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "lt-modx.nodexphere.net"
+    client-fingerprint: "random"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
     type: "ss"
     server: "195.238.126.20"
-    port: 9045
+    port: 9008
     cipher: "aes-256-cfb"
-    password: "Lp27rqyJq72bZsqX"
+    password: "y9VURyNzJWNRYEGQ"
     udp: true
   - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
     type: "vless"
@@ -936,19 +962,60 @@ proxies:
     tls: true
     network: "tcp"
     servername: "lt.aether-runet.top"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk"
       short-id: "4fa44664f6a566d3"
-  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
+  - name: "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.42:443-1"
+    type: "vless"
+    server: "88.216.127.42"
+    port: 443
+    uuid: "2232d904-8e6a-4202-8240-6efd8aec02e9"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "app26.betust.net"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc"
+      short-id: "d44d6d46"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
+    type: "ss"
+    server: "185.237.185.89"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
+    udp: true
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
     type: "ss"
     server: "195.238.126.20"
-    port: 9008
+    port: 9068
     cipher: "aes-256-cfb"
-    password: "y9VURyNzJWNRYEGQ"
+    password: "mwgRg9hRq3b4Qnwb"
     udp: true
-  - name: "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 9.63ms"
+  - name: "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
+    type: "ss"
+    server: "195.238.126.20"
+    port: 9002
+    cipher: "aes-256-cfb"
+    password: "b8KkNDjEd5QqFyRm"
+    udp: true
+  - name: "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.45ms"
+    type: "vless"
+    server: "88.216.69.253"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/fp"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.41ms"
     type: "vless"
     server: "88.216.69.253"
     port: 443
@@ -960,20 +1027,33 @@ proxies:
     ws-opts:
       headers:
         Host: "ccc.010304.xyz"
-  - name: "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 237.88ms"
+  - name: "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.87ms"
     type: "vless"
-    server: "86.38.214.26"
+    server: "88.216.69.253"
     port: 443
-    uuid: "0f3408b6-5db9-4a9b-9579-e978961d32b4"
+    uuid: "d342d11e-d224-4463-b982-532309285094"
     udp: true
     tls: true
-    network: "grpc"
-    servername: "aLi.PinobiN.iR."
-    client-fingerprint: "firefox"
-    alpn:
-      - "http/1.1"
-    grpc-opts:
-      grpc-service-name: "/custom_config?ed=2048"
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    ws-opts:
+      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.33ms"
+    type: "vless"
+    server: "88.216.69.253"
+    port: 443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/fp=chrome"
+      headers:
+        Host: "ccc.010304.xyz"
   - name: "🇱🇹 🩵+@Azarakhsh_Proxy+🩷"
     type: "ss"
     server: "45.87.175.178"
@@ -988,20 +1068,20 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "1RWwXhwfAB5gAEozU4G2Pg"
     udp: true
-  - name: "🇱🇹 11990@proxy_online_net"
+  - name: "🇱🇹 @FXxNET⚡️"
     type: "vless"
-    server: "app26.betust.net"
-    port: 443
-    uuid: "2232d904-8e6a-4202-8240-6efd8aec02e9"
+    server: "lao10.enterquality.online"
+    port: 2443
+    uuid: "664d2284-e0ad-4de4-9752-a0e12a29840e"
     udp: true
     tls: true
     network: "tcp"
-    servername: "app26.betust.net"
+    servername: "lao10.enterquality.online"
     client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+      - "http/1.1"
     flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc"
-      short-id: "d44d6d46"
   - name: "🇱🇹 @Tarkshodeh 🌙"
     type: "vless"
     server: "103.139.51.21"
@@ -1086,6 +1166,19 @@ proxies:
     reality-opts:
       public-key: "zZjrHRzULoXKVccVdPqtrtXLEUPJXwqdE1138vu5x3w"
       short-id: "3e137406"
+  - name: "🇱🇹 @filembad"
+    type: "vless"
+    server: "5.199.174.25"
+    port: 443
+    uuid: "acc50200-7f21-4f90-9cca-0057efcbf042"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "aiartstudios.best"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "DFR6MJcTN1bhukm7KS3IQSBDGPhTiPBwhZ3_brvwSlM"
+      short-id: "db724eb12631c05f"
   - name: "🇱🇹 🇱🇹 | 8"
     type: "vless"
     server: "88.119.176.24"
@@ -1100,72 +1193,6 @@ proxies:
     reality-opts:
       public-key: "W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE"
       short-id: "ff776ff77be48b88"
-  - name: "🇱🇹 🧿42@oneclickvpnkeys"
-    type: "vless"
-    server: "88.216.69.253"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇱🇹 🧿45@oneclickvpnkeys"
-    type: "vless"
-    server: "88.216.69.253"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    ws-opts:
-      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇱🇹 Tel@MARAMBASHI 🇫🇷"
-    type: "vless"
-    server: "88.216.69.253"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    ws-opts:
-      path: "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇱🇹 Telegram 👉🏼 @planB_net  • 06"
-    type: "vless"
-    server: "88.216.69.253"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    ws-opts:
-      path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇱🇹 @hex_proxy ⁴"
-    type: "vless"
-    server: "88.216.69.253"
-    port: 443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    ws-opts:
-      path: "/fp=chromefp=unsafe"
-      headers:
-        Host: "ccc.010304.xyz"
   - name: "🇱🇹 🇩🇪All⁷ | @BigSmoke_Config"
     type: "vless"
     server: "jeod.figmafound.org"
@@ -1207,6 +1234,20 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I"
+  - name: "🇱🇹 Lithuania"
+    type: "vless"
+    server: "88.216.67.54"
+    port: 443
+    uuid: "50414e45-4c5f-5a45-5553-47be357e54da"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "52z4vtewuass.game4090taking.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/stream/PANEL_ZEUS/47be357e54da/loc-0"
+      headers:
+        Host: "52z4vtewuass.game4090taking.workers.dev"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -1221,64 +1262,67 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
-      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.161.50:8880"
+      - "🇱🇹 @DeltaKroneckerGithub"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.40:8880"
+      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-195.181.244.216:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.66.30:8880"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.4:80"
+      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443-1"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.30:8880"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.161.50:8880"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.30:8880"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.69.30:8880"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.119.168.61:443"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443"
-      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-195.181.244.216:443"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.30:8880"
-      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-89.116.180.49:443"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.4:80"
       - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.144:443"
+      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-89.116.180.49:443"
       - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-45.81.58.159:2096"
+      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.67.50:8880"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443-1"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.40:8880"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 12ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 11ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 16ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 21ms"
-      - "🇱🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 16ms"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.96:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.109.20:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.119.168.61:443"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-1"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-2"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-3"
+      - "🇱🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 283ms"
+      - "🇱🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 267ms"
+      - "🇱🇹 🔒 VL-GRPC-TLS 🇱🇹 LT-86.38.214.26:443"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9011"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-85.209.231.169:2087"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.42:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
-      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 9.63ms"
-      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 237.88ms"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.42:443-1"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.45ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.41ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.87ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.33ms"
       - "🇱🇹 🩵+@Azarakhsh_Proxy+🩷"
       - "🇱🇹 🩵+@Azarakhsh_Proxy+🩷-1"
-      - "🇱🇹 11990@proxy_online_net"
+      - "🇱🇹 @FXxNET⚡️"
       - "🇱🇹 @Tarkshodeh 🌙"
       - "🇱🇹 @Tarkshodeh 🌙-1"
       - "🇱🇹 @Tarkshodeh 🌙-2"
       - "🇱🇹 @Tarkshodeh 🌙-3"
       - "🇱🇹 @ICV2RAY"
       - "🇱🇹 🇩🇪All³ | @BigSmoke_Config"
+      - "🇱🇹 @filembad"
       - "🇱🇹 🇱🇹 | 8"
-      - "🇱🇹 🧿42@oneclickvpnkeys"
-      - "🇱🇹 🧿45@oneclickvpnkeys"
-      - "🇱🇹 Tel@MARAMBASHI 🇫🇷"
-      - "🇱🇹 Telegram 👉🏼 @planB_net  • 06"
-      - "🇱🇹 @hex_proxy ⁴"
       - "🇱🇹 🇩🇪All⁷ | @BigSmoke_Config"
       - "🇱🇹 @hopev2ray💚"
       - "🇱🇹 LT 🇱🇹 | @Raydikalx | 7DD71F"
+      - "🇱🇹 Lithuania"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -1289,64 +1333,67 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
-      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.161.50:8880"
+      - "🇱🇹 @DeltaKroneckerGithub"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.40:8880"
+      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-195.181.244.216:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.66.30:8880"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.4:80"
+      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443-1"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.30:8880"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.161.50:8880"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.30:8880"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.69.30:8880"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.119.168.61:443"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443"
-      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-195.181.244.216:443"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.30:8880"
-      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-89.116.180.49:443"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.4:80"
       - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.144:443"
+      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-89.116.180.49:443"
       - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-45.81.58.159:2096"
+      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.67.50:8880"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443-1"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.40:8880"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 12ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 11ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 16ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 21ms"
-      - "🇱🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 16ms"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.96:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.109.20:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.119.168.61:443"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-1"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-2"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-3"
+      - "🇱🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 283ms"
+      - "🇱🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 267ms"
+      - "🇱🇹 🔒 VL-GRPC-TLS 🇱🇹 LT-86.38.214.26:443"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9011"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-85.209.231.169:2087"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.42:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
-      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 9.63ms"
-      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 237.88ms"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.42:443-1"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.45ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.41ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.87ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.33ms"
       - "🇱🇹 🩵+@Azarakhsh_Proxy+🩷"
       - "🇱🇹 🩵+@Azarakhsh_Proxy+🩷-1"
-      - "🇱🇹 11990@proxy_online_net"
+      - "🇱🇹 @FXxNET⚡️"
       - "🇱🇹 @Tarkshodeh 🌙"
       - "🇱🇹 @Tarkshodeh 🌙-1"
       - "🇱🇹 @Tarkshodeh 🌙-2"
       - "🇱🇹 @Tarkshodeh 🌙-3"
       - "🇱🇹 @ICV2RAY"
       - "🇱🇹 🇩🇪All³ | @BigSmoke_Config"
+      - "🇱🇹 @filembad"
       - "🇱🇹 🇱🇹 | 8"
-      - "🇱🇹 🧿42@oneclickvpnkeys"
-      - "🇱🇹 🧿45@oneclickvpnkeys"
-      - "🇱🇹 Tel@MARAMBASHI 🇫🇷"
-      - "🇱🇹 Telegram 👉🏼 @planB_net  • 06"
-      - "🇱🇹 @hex_proxy ⁴"
       - "🇱🇹 🇩🇪All⁷ | @BigSmoke_Config"
       - "🇱🇹 @hopev2ray💚"
       - "🇱🇹 LT 🇱🇹 | @Raydikalx | 7DD71F"
+      - "🇱🇹 Lithuania"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -1356,64 +1403,67 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
-      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.161.50:8880"
+      - "🇱🇹 @DeltaKroneckerGithub"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.40:8880"
+      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-195.181.244.216:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.66.30:8880"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.4:80"
+      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-88.216.69.253:443"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443-1"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.30:8880"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.161.50:8880"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.30:8880"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.69.30:8880"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.119.168.61:443"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443"
-      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-195.181.244.216:443"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.40:8880"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.116.180.30:8880"
-      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-89.116.180.49:443"
+      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.4:80"
       - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.144:443"
+      - "🇱🇹 🔒 TR-WS-NA 🇱🇹 LT-89.116.180.49:443"
       - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-45.81.58.159:2096"
+      - "🇱🇹 🔒 TR-WS-TLS 🇱🇹 LT-86.38.214.205:443"
       - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-88.216.67.50:8880"
-      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.216.69.253:443-1"
-      - "🇱🇹 🔒 VL-WS-NONE 🇱🇹 LT-89.117.112.40:8880"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 12ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 11ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 16ms"
-      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 21ms"
-      - "🇱🇹 🆔v2ray1_ng 🔒 VL-WS-N/A ❔ XX 16ms"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.96:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.109.20:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
+      - "🇱🇹 🔒 VL-WS-TLS 🇱🇹 LT-88.119.168.61:443"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-1"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-2"
+      - "🇱🇹 🆔conectvpn10 🔒 VL-WS-N/A ❔ XX 2ms-3"
+      - "🇱🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 283ms"
+      - "🇱🇹 🆔ar14n24b 🔒 VL-TCP- ❔ XX 267ms"
+      - "🇱🇹 🔒 VL-GRPC-TLS 🇱🇹 LT-86.38.214.26:443"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9011"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-85.209.231.169:2087"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.42:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.173.116:443"
       - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.84:443"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
-      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9045"
-      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9086"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.33:443"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.115:443"
       - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9008"
-      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 9.63ms"
-      - "🇱🇹 RELAY🚩 | aLi.PinobiN.iR.-443 | 237.88ms"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-84.32.215.94:443-1"
+      - "🇱🇹 🔒 VL-TCP-RLT 🇱🇹 LT-88.216.127.42:443-1"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-185.237.185.89:990"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9068"
+      - "🇱🇹 🔒 SS-TCP-NA 🇱🇹 LT-195.238.126.20:9002"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.45ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.41ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.87ms"
+      - "🇱🇹 RELAY🚩 | ccc.010304.xyz-443 | 3.33ms"
       - "🇱🇹 🩵+@Azarakhsh_Proxy+🩷"
       - "🇱🇹 🩵+@Azarakhsh_Proxy+🩷-1"
-      - "🇱🇹 11990@proxy_online_net"
+      - "🇱🇹 @FXxNET⚡️"
       - "🇱🇹 @Tarkshodeh 🌙"
       - "🇱🇹 @Tarkshodeh 🌙-1"
       - "🇱🇹 @Tarkshodeh 🌙-2"
       - "🇱🇹 @Tarkshodeh 🌙-3"
       - "🇱🇹 @ICV2RAY"
       - "🇱🇹 🇩🇪All³ | @BigSmoke_Config"
+      - "🇱🇹 @filembad"
       - "🇱🇹 🇱🇹 | 8"
-      - "🇱🇹 🧿42@oneclickvpnkeys"
-      - "🇱🇹 🧿45@oneclickvpnkeys"
-      - "🇱🇹 Tel@MARAMBASHI 🇫🇷"
-      - "🇱🇹 Telegram 👉🏼 @planB_net  • 06"
-      - "🇱🇹 @hex_proxy ⁴"
       - "🇱🇹 🇩🇪All⁷ | @BigSmoke_Config"
       - "🇱🇹 @hopev2ray💚"
       - "🇱🇹 LT 🇱🇹 | @Raydikalx | 7DD71F"
+      - "🇱🇹 Lithuania"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

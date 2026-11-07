@@ -499,6 +499,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
+    type: "vless"
+    server: "151.101.9.80"
+    port: 80
+    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=1049"
+      headers:
+        Host: "adspeedx23.global.ssl.fastly.net"
   - name: "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
     type: "vless"
     server: "194.71.227.213"
@@ -513,26 +525,6 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-    type: "vless"
-    server: "151.101.9.80"
-    port: 80
-    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/?ed=1049"
-      headers:
-        Host: "adspeedx23.global.ssl.fastly.net"
-  - name: "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
-    type: "vless"
-    server: "188.95.12.226"
-    port: 2095
-    uuid: "681314c5-b3ee-41f1-a959-fa42841f5383"
-    udp: true
-    tls: false
-    network: "httpupgrade"
   - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
     type: "ss"
     server: "185.210.217.94"
@@ -565,6 +557,14 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU"
+  - name: "🇧🇪 [88859] - Telegram : @V2All"
+    type: "vless"
+    server: "cdn2.portalcode.ir"
+    port: 2095
+    uuid: "681314c5-b3ee-41f1-a959-fa42841f5383"
+    udp: true
+    tls: false
+    network: "httpupgrade"
   - name: "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
     type: "vless"
     server: "109.69.218.168"
@@ -585,6 +585,13 @@ proxies:
     uuid: "92a048ec-a160-497e-8069-c2e902626d7a"
     alterId: 0
     cipher: "aes-128-gcm"
+    udp: true
+  - name: "🇧🇪 BE 🇧🇪 | @Raydikalx | 6B6135"
+    type: "ss"
+    server: "38.180.87.217"
+    port: 11943
+    cipher: "aes-128-gcm"
+    password: "fa938a7d397bda0f23e32143542ac0bb"
     udp: true
   - name: "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
     type: "vmess"
@@ -616,14 +623,15 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 [88859] - Telegram : @V2All"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
+      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 6B6135"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
   - name: "خودکار (بهترین پینگ) 🤖"
@@ -636,14 +644,15 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 [88859] - Telegram : @V2All"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
+      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 6B6135"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
   - name: "توزیع بار چرخشی ⚖️"
@@ -655,14 +664,15 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
-      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "🇧🇪 [88859] - Telegram : @V2All"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 A42"
+      - "🇧🇪 BE 🇧🇪 | @Raydikalx | 6B6135"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
   - name: "المنت 💬"
