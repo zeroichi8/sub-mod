@@ -499,13 +499,33 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-130.94.81.180:18415"
-    type: "ss"
-    server: "130.94.81.180"
-    port: 18415
-    cipher: "aes-128-gcm"
-    password: "b667234b8d2e7eb34444857ea3a9b18a"
+  - name: "🇴🇲 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 196ms"
+    type: "vless"
+    server: "vpn.noxtem.cc"
+    port: 2020
+    uuid: "b2ee4a4e-eb20-4bb4-956c-dc0f5187633e"
     udp: true
+    tls: true
+    network: "tcp"
+    servername: "vpn.noxtem.cc"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
+  - name: "🇴🇲 🆔ar14n24b 🔒 VL-TCP- ❔ XX 197ms"
+    type: "vless"
+    server: "vpn.noxtem.cc"
+    port: 443
+    uuid: "b2ee4a4e-eb20-4bb4-956c-dc0f5187633e"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "blog.api.www.cloudflare.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "l688n0i3cg86xE5siG0BO4iSfwdzIqB-PX1M0P8Pk2s"
+      short-id: "1123f4e63ee6b2"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -520,7 +540,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-130.94.81.180:18415"
+      - "🇴🇲 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 196ms"
+      - "🇴🇲 🆔ar14n24b 🔒 VL-TCP- ❔ XX 197ms"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -531,7 +552,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-130.94.81.180:18415"
+      - "🇴🇲 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 196ms"
+      - "🇴🇲 🆔ar14n24b 🔒 VL-TCP- ❔ XX 197ms"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -541,7 +563,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇴🇲 🔒 SS-TCP-NA 🇴🇲 OM-130.94.81.180:18415"
+      - "🇴🇲 🆔ar14n24b 🔒 VL-TCP-N/A ❔ XX 196ms"
+      - "🇴🇲 🆔ar14n24b 🔒 VL-TCP- ❔ XX 197ms"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
