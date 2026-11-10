@@ -499,20 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
-    type: "vless"
-    server: "43.173.1.153"
-    port: 8443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ccc.010304.xyz"
   - name: "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-172.232.236.252:443"
     type: "vless"
     server: "172.232.236.252"
@@ -632,39 +618,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇩 ID 🇮🇩 | @Raydikalx | 179308"
-    type: "vmess"
-    server: "TnmXPIFVwfvyFZvf.v.3dns.vip"
-    port: 443
-    uuid: "b664cc36-4896-454b-bb9c-1377c76176de"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇮🇩 RELAY🚩 | sourceforge.net-443 | 111.58ms"
-    type: "vless"
-    server: "188.119.113.68"
-    port: 443
-    uuid: "a91b85c5-de1a-4ff2-a447-933202708386"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sourceforge.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-  - name: "🇮🇩 🔒 VL-TCP-RLT 🇮🇩 ID-43.157.197.183:443"
-    type: "vless"
-    server: "43.157.197.183"
-    port: 443
-    uuid: "1d08ca28-9c86-43c6-9eff-7d3c13df06a8"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "O_f5yv1Cb3_4Rk2MKYpjnpCEyPNY4_GPUTJYi9usUzc"
-      short-id: "b6343f999147d133"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -679,7 +632,6 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
       - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-172.232.236.252:443"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
@@ -695,9 +647,6 @@ proxy-groups:
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | D215A1"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 3C3C14"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | 179308"
-      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 111.58ms"
-      - "🇮🇩 🔒 VL-TCP-RLT 🇮🇩 ID-43.157.197.183:443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -708,7 +657,6 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
       - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-172.232.236.252:443"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
@@ -724,9 +672,6 @@ proxy-groups:
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | D215A1"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 3C3C14"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | 179308"
-      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 111.58ms"
-      - "🇮🇩 🔒 VL-TCP-RLT 🇮🇩 ID-43.157.197.183:443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -736,7 +681,6 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
       - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-172.232.236.252:443"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
@@ -752,9 +696,6 @@ proxy-groups:
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | D215A1"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 3C3C14"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | 179308"
-      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 111.58ms"
-      - "🇮🇩 🔒 VL-TCP-RLT 🇮🇩 ID-43.157.197.183:443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

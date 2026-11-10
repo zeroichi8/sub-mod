@@ -499,6 +499,14 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇳🇱 🇳🇱NL-109.104.153.43-0239"
+    type: "ssr"
+    server: "109.104.153.43"
+    port: 33336
+    cipher: "chacha20-ietf"
+    password: "dongtaiwang.com"
+    protocol: "auth_chain_a"
+    obfs: "tls1.2_ticket_auth"
   - name: "🇺🇸 🇺🇸US-140.188.73.129-0242"
     type: "ssr"
     server: "ssr2.762988.xyz"
@@ -521,6 +529,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇳🇱 🇳🇱NL-109.104.153.43-0239"
       - "🇺🇸 🇺🇸US-140.188.73.129-0242"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -532,6 +541,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇳🇱 🇳🇱NL-109.104.153.43-0239"
       - "🇺🇸 🇺🇸US-140.188.73.129-0242"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -542,6 +552,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇳🇱 🇳🇱NL-109.104.153.43-0239"
       - "🇺🇸 🇺🇸US-140.188.73.129-0242"
   - name: "المنت 💬"
     type: "select"

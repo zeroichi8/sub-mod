@@ -499,20 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-122.176.216.52:443"
-    type: "vless"
-    server: "122.176.216.52"
-    port: 443
-    uuid: "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "app-6ada5023.deploy.meerasolution.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
-      headers:
-        Host: "app-6ada5023.deploy.meerasolution.com"
   - name: "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-139.84.135.130:443"
     type: "vless"
     server: "139.84.135.130"
@@ -527,6 +513,22 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-122.176.216.52:443"
+    type: "vless"
+    server: "122.176.216.52"
+    port: 443
+    uuid: "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "app-6ada5023.deploy.meerasolution.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+    ws-opts:
+      path: "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+      headers:
+        Host: "app-6ada5023.deploy.meerasolution.com"
   - name: "🇮🇳 🇮🇳 Mumbai, MH, India"
     type: "ss"
     server: "172.105.39.124"
@@ -548,15 +550,6 @@ proxies:
       host: "ylnhh.us.ci"
   - name: "🇮🇳 @DeltaKroneckerGithub-1"
     type: "trojan"
-    server: "185.67.125.119"
-    port: 443
-    password: "3747000103274291200"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "oriented-pug.adder289.quest"
-  - name: "🇮🇳 @DeltaKroneckerGithub-2"
-    type: "trojan"
     server: "65.20.82.177"
     port: 443
     password: "Tg3RnK7Xp8B1"
@@ -564,6 +557,15 @@ proxies:
     tls: true
     network: "tcp"
     servername: "ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com"
+  - name: "🇮🇳 @DeltaKroneckerGithub-2"
+    type: "trojan"
+    server: "64.227.131.19"
+    port: 443
+    password: "21c6c7cb-332b-4a0c-9ad7-dff9c3111442"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "us02web.zoom.us"
   - name: "🇮🇳 @DeltaKroneckerGithub-3"
     type: "trojan"
     server: "185.67.125.147"
@@ -574,24 +576,6 @@ proxies:
     network: "tcp"
   - name: "🇮🇳 @DeltaKroneckerGithub-4"
     type: "trojan"
-    server: "185.67.125.147"
-    port: 443
-    password: "3763495894587285504"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "optimal-owl.goat627.mom"
-  - name: "🇮🇳 @DeltaKroneckerGithub-5"
-    type: "trojan"
-    server: "64.227.131.19"
-    port: 443
-    password: "21c6c7cb-332b-4a0c-9ad7-dff9c3111442"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "us02web.zoom.us"
-  - name: "🇮🇳 @DeltaKroneckerGithub-6"
-    type: "trojan"
     server: "143.110.246.228"
     port: 443
     password: "3bcd9e33-8377-4b32-af33-217158577ff3"
@@ -599,13 +583,51 @@ proxies:
     tls: true
     network: "tcp"
     servername: "kdlsupport.zendesk.com"
-  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN41|3.9MB/s|DNSOK|GPT⁺-IN"
+  - name: "🇮🇳 @DeltaKroneckerGithub-5"
+    type: "trojan"
+    server: "185.67.125.147"
+    port: 443
+    password: "3763495894587285504"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "optimal-owl.goat627.mom"
+  - name: "🇮🇳 🇳🇱 | @WhiteDNS | NL520|3.3MB/s|DNSOK|GPT⁺-IN"
+    type: "socks5"
+    server: "82.180.146.251"
+    port: 10800
+    username: "Og=="
+    password: ""
+  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG181|2.6MB/s|DNSOK|GPT⁺-IN"
+    type: "vless"
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/vless"
+  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN66|1.7MB/s|DNSOK|GPT⁺-IN"
     type: "socks5"
     server: "140.238.243.61"
     port: 1080
     username: "Og=="
     password: ""
-  - name: "🇮🇳 🇮🇳 | @WhiteDNS | IN42|2.0MB/s|DNSOK|GPT⁺-IN"
+  - name: "🇮🇳 🇸🇬 | @WhiteDNS | SG202|806KB/s|DNSOK|GPT⁺-IN"
+    type: "vless"
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    udp: true
+    tls: false
+    network: "ws"
+    servername: "13.140.56.100"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "13.140.56.100"
+  - name: "🇮🇳 India"
     type: "vmess"
     server: "152.67.8.205"
     port: 80
@@ -663,6 +685,20 @@ proxies:
     client-fingerprint: "chrome"
     ws-opts:
       path: "/vless"
+  - name: "🇮🇳 India-1"
+    type: "vless"
+    server: "122.176.216.52"
+    port: 443
+    uuid: "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "app-6ada5023.deploy.meerasolution.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+      headers:
+        Host: "app-6ada5023.deploy.meerasolution.com"
   - name: "🇮🇳 United Kingdom"
     type: "vless"
     server: "in1.japancase.site"
@@ -677,12 +713,6 @@ proxies:
     reality-opts:
       public-key: "lDBwW08dYwPP-7dVxYQ_clzfFwsDHLlclz9K2cEV6DM"
       short-id: "df7b054cfc29800c"
-  - name: "🇮🇳 FR 🇫🇷 | @Raydikalx | 4DB43F"
-    type: "socks5"
-    server: "82.180.146.251"
-    port: 10800
-    username: "Og=="
-    password: ""
   - name: "🇮🇳 IN 🇮🇳 | @Raydikalx | 2FC761"
     type: "ss"
     server: "103.120.178.193"
@@ -707,22 +737,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "in002.zestapp778.com"
-  - name: "🇮🇳 IN 🇮🇳 | @Raydikalx | E43169"
-    type: "vless"
-    server: "122.176.216.52"
-    port: 443
-    uuid: "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "app-6ada5023.deploy.meerasolution.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-    ws-opts:
-      path: "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
-      headers:
-        Host: "app-6ada5023.deploy.meerasolution.com"
   - name: "🇮🇳 FR 🇫🇷 | @Raydikalx | 03F066"
     type: "vless"
     server: "194.61.31.126"
@@ -756,19 +770,6 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
-  - name: "🇮🇳 IT 🇮🇹 | @Raydikalx | 2BC896"
-    type: "vless"
-    server: "13.140.56.100"
-    port: 14430
-    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
-    udp: true
-    tls: false
-    network: "ws"
-    servername: "13.140.56.100"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "13.140.56.100"
   - name: "🇮🇳 IT 🇮🇹 | @Raydikalx | F29707"
     type: "vless"
     server: "13.140.56.100"
@@ -781,16 +782,6 @@ proxies:
       path: "/vless"
       headers:
         Host: "13.140.56.100"
-  - name: "🇮🇳 IT 🇮🇹 | @Raydikalx | 89E794"
-    type: "vless"
-    server: "13.140.56.100"
-    port: 14430
-    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
   - name: "🇮🇳 FR 🇫🇷 | @Raydikalx | 4E07B5"
     type: "vless"
     server: "178.212.35.198"
@@ -858,20 +849,6 @@ proxies:
     servername: "in-full.privateip.net"
     grpc-opts:
       grpc-service-name: "GRPC"
-  - name: "🇮🇳 IN 🇮🇳 | @Raydikalx | FA83EC"
-    type: "vless"
-    server: "107.181.139.144"
-    port: 443
-    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "in1.japancase.site"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "lDBwW08dYwPP-7dVxYQ_clzfFwsDHLlclz9K2cEV6DM"
-      short-id: "df7b054cfc29800c"
   - name: "🇮🇳 IN 🇮🇳 | @Raydikalx | 4313BC"
     type: "vmess"
     server: "139.59.24.215"
@@ -920,6 +897,21 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇮🇳 US🇺🇸 | play.google.com-443 | 11.14ms"
+    type: "vless"
+    server: "49.50.76.194"
+    port: 443
+    uuid: "a2d7890a-5451-4470-9300-a059792924bb"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
+    type: "ss"
+    server: "134.209.147.198"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "f8f7aCzcPKbsF8p3"
+    udp: true
   - name: "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
     type: "vless"
     server: "194.61.31.126"
@@ -947,13 +939,6 @@ proxies:
     reality-opts:
       public-key: "lDBwW08dYwPP-7dVxYQ_clzfFwsDHLlclz9K2cEV6DM"
       short-id: "df7b054cfc29800c"
-  - name: "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
-    type: "ss"
-    server: "134.209.147.198"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "f8f7aCzcPKbsF8p3"
-    udp: true
   - name: "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
     type: "vless"
     server: "148.113.5.44"
@@ -982,8 +967,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-122.176.216.52:443"
       - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-139.84.135.130:443"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-122.176.216.52:443"
       - "🇮🇳 🇮🇳 Mumbai, MH, India"
       - "🇮🇳 @DeltaKroneckerGithub"
       - "🇮🇳 @DeltaKroneckerGithub-1"
@@ -991,41 +976,40 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-3"
       - "🇮🇳 @DeltaKroneckerGithub-4"
       - "🇮🇳 @DeltaKroneckerGithub-5"
-      - "🇮🇳 @DeltaKroneckerGithub-6"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN41|3.9MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN42|2.0MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇳🇱 | @WhiteDNS | NL520|3.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG181|2.6MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN66|1.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG202|806KB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 India"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
       - "🇮🇳 United States-2"
       - "🇮🇳 United States-3"
+      - "🇮🇳 India-1"
       - "🇮🇳 United Kingdom"
-      - "🇮🇳 FR 🇫🇷 | @Raydikalx | 4DB43F"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 2FC761"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 515F34"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 29B220"
-      - "🇮🇳 IN 🇮🇳 | @Raydikalx | E43169"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 03F066"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | D21653"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 52BCB7"
-      - "🇮🇳 IT 🇮🇹 | @Raydikalx | 2BC896"
       - "🇮🇳 IT 🇮🇹 | @Raydikalx | F29707"
-      - "🇮🇳 IT 🇮🇹 | @Raydikalx | 89E794"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 4E07B5"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 5231AC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 3CE32C"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | ABA085"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | C5F7CB"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 307D1D"
-      - "🇮🇳 IN 🇮🇳 | @Raydikalx | FA83EC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 4313BC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | C50011"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | B8B9B1"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 847F8B"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 85A904"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 8ABB35"
+      - "🇮🇳 US🇺🇸 | play.google.com-443 | 11.14ms"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-107.181.139.144:443"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -1037,8 +1021,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-122.176.216.52:443"
       - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-139.84.135.130:443"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-122.176.216.52:443"
       - "🇮🇳 🇮🇳 Mumbai, MH, India"
       - "🇮🇳 @DeltaKroneckerGithub"
       - "🇮🇳 @DeltaKroneckerGithub-1"
@@ -1046,41 +1030,40 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-3"
       - "🇮🇳 @DeltaKroneckerGithub-4"
       - "🇮🇳 @DeltaKroneckerGithub-5"
-      - "🇮🇳 @DeltaKroneckerGithub-6"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN41|3.9MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN42|2.0MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇳🇱 | @WhiteDNS | NL520|3.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG181|2.6MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN66|1.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG202|806KB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 India"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
       - "🇮🇳 United States-2"
       - "🇮🇳 United States-3"
+      - "🇮🇳 India-1"
       - "🇮🇳 United Kingdom"
-      - "🇮🇳 FR 🇫🇷 | @Raydikalx | 4DB43F"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 2FC761"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 515F34"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 29B220"
-      - "🇮🇳 IN 🇮🇳 | @Raydikalx | E43169"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 03F066"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | D21653"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 52BCB7"
-      - "🇮🇳 IT 🇮🇹 | @Raydikalx | 2BC896"
       - "🇮🇳 IT 🇮🇹 | @Raydikalx | F29707"
-      - "🇮🇳 IT 🇮🇹 | @Raydikalx | 89E794"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 4E07B5"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 5231AC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 3CE32C"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | ABA085"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | C5F7CB"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 307D1D"
-      - "🇮🇳 IN 🇮🇳 | @Raydikalx | FA83EC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 4313BC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | C50011"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | B8B9B1"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 847F8B"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 85A904"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 8ABB35"
+      - "🇮🇳 US🇺🇸 | play.google.com-443 | 11.14ms"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-107.181.139.144:443"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -1091,8 +1074,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-122.176.216.52:443"
       - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-139.84.135.130:443"
+      - "🇮🇳 🔒 VL-WS-TLS 🇮🇳 IN-122.176.216.52:443"
       - "🇮🇳 🇮🇳 Mumbai, MH, India"
       - "🇮🇳 @DeltaKroneckerGithub"
       - "🇮🇳 @DeltaKroneckerGithub-1"
@@ -1100,41 +1083,40 @@ proxy-groups:
       - "🇮🇳 @DeltaKroneckerGithub-3"
       - "🇮🇳 @DeltaKroneckerGithub-4"
       - "🇮🇳 @DeltaKroneckerGithub-5"
-      - "🇮🇳 @DeltaKroneckerGithub-6"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN41|3.9MB/s|DNSOK|GPT⁺-IN"
-      - "🇮🇳 🇮🇳 | @WhiteDNS | IN42|2.0MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇳🇱 | @WhiteDNS | NL520|3.3MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG181|2.6MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇮🇳 | @WhiteDNS | IN66|1.7MB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 🇸🇬 | @WhiteDNS | SG202|806KB/s|DNSOK|GPT⁺-IN"
+      - "🇮🇳 India"
       - "🇮🇳 United States"
       - "🇮🇳 United States-1"
       - "🇮🇳 United States-2"
       - "🇮🇳 United States-3"
+      - "🇮🇳 India-1"
       - "🇮🇳 United Kingdom"
-      - "🇮🇳 FR 🇫🇷 | @Raydikalx | 4DB43F"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 2FC761"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 515F34"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 29B220"
-      - "🇮🇳 IN 🇮🇳 | @Raydikalx | E43169"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 03F066"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | D21653"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 52BCB7"
-      - "🇮🇳 IT 🇮🇹 | @Raydikalx | 2BC896"
       - "🇮🇳 IT 🇮🇹 | @Raydikalx | F29707"
-      - "🇮🇳 IT 🇮🇹 | @Raydikalx | 89E794"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 4E07B5"
       - "🇮🇳 FR 🇫🇷 | @Raydikalx | 5231AC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 3CE32C"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | ABA085"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | C5F7CB"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 307D1D"
-      - "🇮🇳 IN 🇮🇳 | @Raydikalx | FA83EC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 4313BC"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | C50011"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | B8B9B1"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 847F8B"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 85A904"
       - "🇮🇳 IN 🇮🇳 | @Raydikalx | 8ABB35"
+      - "🇮🇳 US🇺🇸 | play.google.com-443 | 11.14ms"
+      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-194.61.31.126:2053"
       - "🇮🇳 🔒 VL-TCP-RLT 🇮🇳 IN-107.181.139.144:443"
-      - "🇮🇳 🔒 SS-TCP-NA 🇮🇳 IN-134.209.147.198:990"
       - "🇮🇳 🔒 VL-RAW-RLT 🇮🇳 IN-148.113.5.44:443"
   - name: "المنت 💬"
     type: "select"
