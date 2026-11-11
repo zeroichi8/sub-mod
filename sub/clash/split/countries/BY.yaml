@@ -499,19 +499,16 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
+  - name: "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
     type: "vless"
     server: "178.172.227.124"
-    port: 14430
+    port: 10443
     uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
     udp: true
     tls: false
-    network: "ws"
-    ws-opts:
-      path: "/vless"
-      headers:
-        Host: "178.172.227.124"
-  - name: "🇧🇾 Belarus"
+    network: "tcp"
+    servername: "178.172.227.124"
+  - name: "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.124:10444"
     type: "vless"
     server: "178.172.227.124"
     port: 10444
@@ -525,16 +522,30 @@ proxies:
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
       short-id: "8debcf36f1cc69ff"
+  - name: "🇧🇾 Belarus"
+    type: "vless"
+    server: "178.172.227.228"
+    port: 10444
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
+    udp: true
+    tls: true
+    network: "raw"
+    servername: "ads.x5.ru"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
   - name: "🇧🇾 Belarus-1"
     type: "vless"
-    server: "95.128.71.79"
+    server: "178.172.227.228"
     port: 10444
-    uuid: "8cef7621-c6f0-486e-b51d-59c30c5b0b25"
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
     udp: true
     tls: true
     network: "tcp"
     servername: "ads.x5.ru"
-    client-fingerprint: "safari"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
@@ -553,6 +564,76 @@ proxies:
     reality-opts:
       public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
       short-id: "8debcf36f1cc69ff"
+  - name: "🇧🇾 Belarus-3"
+    type: "vless"
+    server: "95.128.71.79"
+    port: 10444
+    uuid: "8cef7621-c6f0-486e-b51d-59c30c5b0b25"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
+  - name: "🇧🇾 Belarus-4"
+    type: "vless"
+    server: "178.172.227.124"
+    port: 10444
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
+  - name: "🇧🇾 Belarus-5"
+    type: "vless"
+    server: "178.172.227.228"
+    port: 10444
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "edge"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
+  - name: "🇧🇾 Belarus-6"
+    type: "vless"
+    server: "95.128.71.79"
+    port: 10444
+    uuid: "8cef7621-c6f0-486e-b51d-59c30c5b0b25"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
+  - name: "🇧🇾 Belarus-7"
+    type: "vless"
+    server: "178.172.227.124"
+    port: 10444
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ads.x5.ru"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
+      short-id: "8debcf36f1cc69ff"
   - name: "🇧🇾 BY 🇧🇾 | @Raydikalx | 66AEC5"
     type: "vless"
     server: "178.172.227.124"
@@ -563,6 +644,18 @@ proxies:
     network: "ws"
     servername: "178.172.227.124"
     client-fingerprint: "firefox"
+    ws-opts:
+      path: "/vless"
+      headers:
+        Host: "178.172.227.124"
+  - name: "🇧🇾 BY 🇧🇾 | @Raydikalx | 010655"
+    type: "vless"
+    server: "178.172.227.124"
+    port: 14430
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    udp: true
+    tls: false
+    network: "ws"
     ws-opts:
       path: "/vless"
       headers:
@@ -584,29 +677,6 @@ proxies:
     tls: false
     network: "tcp"
     client-fingerprint: "chrome"
-  - name: "🇧🇾 BY 🇧🇾 | @Raydikalx | 5D1C13"
-    type: "vless"
-    server: "178.172.227.124"
-    port: 10443
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
-    udp: true
-    tls: false
-    network: "tcp"
-    servername: "178.172.227.124"
-  - name: "🇧🇾 BY 🇧🇾 | @Raydikalx | 491E30"
-    type: "vless"
-    server: "178.172.227.124"
-    port: 10444
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ads.x5.ru"
-    client-fingerprint: "safari"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo"
-      short-id: "8debcf36f1cc69ff"
   - name: "🇧🇾 BY 🇧🇾 | @Raydikalx | A0F4D9"
     type: "vless"
     server: "95.128.71.79"
@@ -646,7 +716,7 @@ proxies:
       path: "/vless"
       headers:
         Host: "178.172.227.228"
-  - name: "🇧🇾 BY 🇧🇾 | @Raydikalx | 77CE15"
+  - name: "🇧🇾 BY 🇧🇾 | @Raydikalx | 67C9F5"
     type: "vless"
     server: "178.172.227.228"
     port: 14430
@@ -656,8 +726,6 @@ proxies:
     network: "ws"
     ws-opts:
       path: "/vless"
-      headers:
-        Host: "178.172.227.228"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -672,19 +740,24 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
+      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.124:10444"
       - "🇧🇾 Belarus"
       - "🇧🇾 Belarus-1"
       - "🇧🇾 Belarus-2"
+      - "🇧🇾 Belarus-3"
+      - "🇧🇾 Belarus-4"
+      - "🇧🇾 Belarus-5"
+      - "🇧🇾 Belarus-6"
+      - "🇧🇾 Belarus-7"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 66AEC5"
+      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 010655"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | BB53C0"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 001707"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 5D1C13"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 491E30"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | A0F4D9"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 77DC46"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 2466B3"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 77CE15"
+      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 67C9F5"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -695,19 +768,24 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
+      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.124:10444"
       - "🇧🇾 Belarus"
       - "🇧🇾 Belarus-1"
       - "🇧🇾 Belarus-2"
+      - "🇧🇾 Belarus-3"
+      - "🇧🇾 Belarus-4"
+      - "🇧🇾 Belarus-5"
+      - "🇧🇾 Belarus-6"
+      - "🇧🇾 Belarus-7"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 66AEC5"
+      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 010655"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | BB53C0"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 001707"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 5D1C13"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 491E30"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | A0F4D9"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 77DC46"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 2466B3"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 77CE15"
+      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 67C9F5"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -717,19 +795,24 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇾 🔒 VL-WS-NA 🇧🇾 BY-178.172.227.124:14430"
+      - "🇧🇾 🔒 VL-TCP-NA 🇧🇾 BY-178.172.227.124:10443"
+      - "🇧🇾 🔒 VL-TCP-RLT 🇧🇾 BY-178.172.227.124:10444"
       - "🇧🇾 Belarus"
       - "🇧🇾 Belarus-1"
       - "🇧🇾 Belarus-2"
+      - "🇧🇾 Belarus-3"
+      - "🇧🇾 Belarus-4"
+      - "🇧🇾 Belarus-5"
+      - "🇧🇾 Belarus-6"
+      - "🇧🇾 Belarus-7"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 66AEC5"
+      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 010655"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | BB53C0"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 001707"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 5D1C13"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 491E30"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | A0F4D9"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 77DC46"
       - "🇧🇾 BY 🇧🇾 | @Raydikalx | 2466B3"
-      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 77CE15"
+      - "🇧🇾 BY 🇧🇾 | @Raydikalx | 67C9F5"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

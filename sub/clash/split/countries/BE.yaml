@@ -513,18 +513,33 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
-  - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
+  - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+    type: "ss"
+    server: "185.210.217.94"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
     type: "vless"
-    server: "151.101.9.80"
-    port: 80
-    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
+    server: "188.95.12.226"
+    port: 2095
+    uuid: "681314c5-b3ee-41f1-a959-fa42841f5383"
     udp: true
     tls: false
-    network: "ws"
-    ws-opts:
-      path: "/?ed=1049"
-      headers:
-        Host: "adspeedx23.global.ssl.fastly.net"
+    network: "httpupgrade"
+  - name: "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
+    type: "vless"
+    server: "109.69.218.164"
+    port: 443
+    uuid: "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "zealous-vortex.cdn.cachefleet.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
   - name: "🇧🇪 NL 🇳🇱 | @Raydikalx | CC6764"
     type: "vless"
     server: "109.69.218.217"
@@ -574,25 +589,6 @@ proxies:
     alterId: 0
     cipher: "aes-128-gcm"
     udp: true
-  - name: "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 89.02ms"
-    type: "vless"
-    server: "109.69.218.164"
-    port: 443
-    uuid: "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "zealous-vortex.cdn.cachefleet.com"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
-  - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
-    type: "ss"
-    server: "185.210.217.94"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
-    udp: true
   - name: "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
     type: "vless"
     server: "109.69.218.217"
@@ -621,14 +617,14 @@ proxy-groups:
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
+      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 NL 🇳🇱 | @Raydikalx | CC6764"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 7F68DC"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 2066E0"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 89.02ms"
-      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -641,14 +637,14 @@ proxy-groups:
     max-failed-times: 2
     proxies:
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
+      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 NL 🇳🇱 | @Raydikalx | CC6764"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 7F68DC"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 2066E0"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 89.02ms"
-      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -660,14 +656,14 @@ proxy-groups:
     lazy: false
     proxies:
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
-      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
+      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
+      - "🇧🇪 🔒 VL-HTTPUPGRADE-NA 🇧🇪 BE-188.95.12.226:2095"
+      - "🇧🇪 🔒 VL-TCP-RLT 🇧🇪 BE-109.69.218.164:443"
       - "🇧🇪 NL 🇳🇱 | @Raydikalx | CC6764"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 7F68DC"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 2066E0"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 89.02ms"
-      - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
   - name: "المنت 💬"
     type: "select"
