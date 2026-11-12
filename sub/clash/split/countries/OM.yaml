@@ -499,9 +499,9 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇴🇲 🔒 VL-TCP-RLT 🇴🇲 OM-5.21.83.146:443"
+  - name: "🇴🇲 REALITY|OM🇴🇲 | vpn.noxtem.cc-443 | 325.98ms"
     type: "vless"
-    server: "5.21.83.146"
+    server: "vpn.noxtem.cc"
     port: 443
     uuid: "85d4cede-8341-4565-9adc-34eadc344de2"
     udp: true
@@ -513,6 +513,19 @@ proxies:
     reality-opts:
       public-key: "l688n0i3cg86xE5siG0BO4iSfwdzIqB-PX1M0P8Pk2s"
       short-id: "3b"
+  - name: "🇴🇲 OM🇴🇲 | vpn.noxtem.cc-2020 | 286.12ms"
+    type: "vless"
+    server: "vpn.noxtem.cc"
+    port: 2020
+    uuid: "85d4cede-8341-4565-9adc-34eadc344de2"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "vpn.noxtem.cc"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    flow: "xtls-rprx-vision"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -527,7 +540,8 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇴🇲 🔒 VL-TCP-RLT 🇴🇲 OM-5.21.83.146:443"
+      - "🇴🇲 REALITY|OM🇴🇲 | vpn.noxtem.cc-443 | 325.98ms"
+      - "🇴🇲 OM🇴🇲 | vpn.noxtem.cc-2020 | 286.12ms"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -538,7 +552,8 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇴🇲 🔒 VL-TCP-RLT 🇴🇲 OM-5.21.83.146:443"
+      - "🇴🇲 REALITY|OM🇴🇲 | vpn.noxtem.cc-443 | 325.98ms"
+      - "🇴🇲 OM🇴🇲 | vpn.noxtem.cc-2020 | 286.12ms"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -548,7 +563,8 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇴🇲 🔒 VL-TCP-RLT 🇴🇲 OM-5.21.83.146:443"
+      - "🇴🇲 REALITY|OM🇴🇲 | vpn.noxtem.cc-443 | 325.98ms"
+      - "🇴🇲 OM🇴🇲 | vpn.noxtem.cc-2020 | 286.12ms"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
