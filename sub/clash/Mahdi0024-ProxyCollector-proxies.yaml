@@ -499,58 +499,13 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇳🇱 NL 1"
-    type: "vless"
-    server: "152.70.58.201"
+  - name: "🇫🇷 FR 1"
+    type: "ss"
+    server: "13.38.12.246"
     port: 443
-    uuid: "8892e34a-339b-4526-b88d-cf68c516231c"
+    cipher: "aes-256-cfb"
+    password: "amazonskr05"
     udp: true
-    tls: true
-    network: "tcp"
-    servername: "www.nvidia.com"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28"
-      short-id: "52c723e0fad49689"
-  - name: "🇳🇱 NL 2"
-    type: "vless"
-    server: "edge.mediacorphub.org"
-    port: 443
-    uuid: "1653818d-532e-46be-b825-384107fb7c3a"
-    udp: true
-    tls: true
-    network: "grpc"
-    servername: "edge.mediacorphub.org"
-    client-fingerprint: "firefox"
-    grpc-opts:
-      grpc-service-name: "hub.v1.ObjectService"
-  - name: "🇺🇸 US 1"
-    type: "vmess"
-    server: "67.220.95.3"
-    port: 18000
-    uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇭🇰 HK 1"
-    type: "trojan"
-    server: "sclass-c1.catcat321.com"
-    port: 20086
-    password: "d9064589-74af-432a-9390-5d8a9da281bf"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "hk.catxstar.com"
-  - name: "🇨🇦 CA 1"
-    type: "trojan"
-    server: "ca001.zestapp778.com"
-    port: 46977
-    password: "5t6i121em5lkmsmk"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ca001.zestapp778.com"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -565,11 +520,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇳🇱 NL 1"
-      - "🇳🇱 NL 2"
-      - "🇺🇸 US 1"
-      - "🇭🇰 HK 1"
-      - "🇨🇦 CA 1"
+      - "🇫🇷 FR 1"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -580,11 +531,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇳🇱 NL 1"
-      - "🇳🇱 NL 2"
-      - "🇺🇸 US 1"
-      - "🇭🇰 HK 1"
-      - "🇨🇦 CA 1"
+      - "🇫🇷 FR 1"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -594,11 +541,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇳🇱 NL 1"
-      - "🇳🇱 NL 2"
-      - "🇺🇸 US 1"
-      - "🇭🇰 HK 1"
-      - "🇨🇦 CA 1"
+      - "🇫🇷 FR 1"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
