@@ -499,18 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
-    type: "vless"
-    server: "185.158.133.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime58.workers.dev"
   - name: "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
     type: "vless"
     server: "185.158.133.40"
@@ -535,6 +523,36 @@ proxies:
     ws-opts:
       headers:
         Host: "cdn8848.776676.xyz"
+  - name: "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+    type: "vless"
+    server: "185.158.133.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime58.workers.dev"
+  - name: "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
+    type: "vless"
+    server: "92.223.124.62"
+    port: 443
+    uuid: "a4797cd3-9939-4a70-958e-ea6301e871db"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "gcore.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/newgcore"
+      headers:
+        Host: "s-0wuppjbl2e.gcorecdn.net"
   - name: "🇫🇮 @DeltaKroneckerGithub"
     type: "ss"
     server: "95.85.250.78"
@@ -542,7 +560,7 @@ proxies:
     cipher: "none"
     password: "https://t.me/WangCai2🇨🇳"
     udp: true
-  - name: "🇨🇿 🇨🇿 💥Config_jo-186"
+  - name: "🇨🇿 🇨🇿 💥Config_jo-189"
     type: "vless"
     server: "95.85.234.66"
     port: 443
@@ -556,7 +574,7 @@ proxies:
     reality-opts:
       public-key: "MuQH546CBdgYVBzNU_F5fimkbQ0srHxgLKDjl1Wz2Rw"
       short-id: "00000000"
-  - name: "🇨🇿 🇨🇿 💥Config_jo-220"
+  - name: "🇨🇿 🇨🇿 💥Config_jo-201"
     type: "vless"
     server: "95.85.231.3"
     port: 2087
@@ -568,7 +586,7 @@ proxies:
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
       short-id: "3258252d44113e23"
-  - name: "🇨🇿 🇨🇿 💥Config_jo-221"
+  - name: "🇨🇿 🇨🇿 💥Config_jo-202"
     type: "vless"
     server: "guide.blog-forme.ru"
     port: 2087
@@ -593,20 +611,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.pleadcourt.org"
-  - name: "🇨🇿 DE 🇩🇪 | @Raydikalx | CFB102"
-    type: "vless"
-    server: "95.85.234.66"
-    port: 443
-    uuid: "3659f248-1797-4d6e-9982-a308565fec79"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "fl-modx.webedg.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "MuQH546CBdgYVBzNU_F5fimkbQ0srHxgLKDjl1Wz2Rw"
-      short-id: "00000000"
   - name: "🇳🇱 NL 🇳🇱 | @Raydikalx | 005EC7"
     type: "vless"
     server: "95.85.248.50"
@@ -644,6 +648,19 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "summit.blog-forme.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
+      short-id: "3258252d44113e23"
+  - name: "🇨🇿 DE 🇩🇪 | @Raydikalx | ABEA4F"
+    type: "vless"
+    server: "95.85.231.3"
+    port: 2087
+    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "guide.blog-forme.ru"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
@@ -738,7 +755,33 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇫🇮 REALITY|FI🇫🇮 | 95.85.250.72-443 | 168.51ms"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 317.17ms"
+    type: "vless"
+    server: "guide.blog-forme.ru"
+    port: 2087
+    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "guide.blog-forme.ru"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
+      short-id: "3258252d44113e23"
+  - name: "🇨🇿 REALITY|CZ🇨🇿 | 95.85.231.3-2087 | 99.42ms"
+    type: "vless"
+    server: "95.85.231.3"
+    port: 2087
+    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "summit.blog-forme.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
+      short-id: "3258252d44113e23"
+  - name: "🇫🇮 REALITY|FI🇫🇮 | 95.85.250.72-443 | 104.43ms"
     type: "vless"
     server: "95.85.250.72"
     port: 443
@@ -752,20 +795,6 @@ proxies:
     reality-opts:
       public-key: "tqzNNOthkpzu0bg04SU07u4t0eO5XGNeXiTjifSeS2k"
       short-id: "71fcf6101e9803bc"
-  - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.241.135:443"
-    type: "vless"
-    server: "95.85.241.135"
-    port: 443
-    uuid: "50ed9601-ebd4-4ba7-a234-ffe642d351cd"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "media.freepeople2025.cc"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "eX0Jyx00657eiq6MA_zNfcFJBY7IcJ88sAMOP5pKzXA"
-      short-id: "be122b3aae01586d"
   - name: "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
     type: "vless"
     server: "95.85.230.35"
@@ -779,19 +808,20 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0"
-  - name: "🇨🇿 @V2rayNGVPN > کانفیگ رایگان"
+  - name: "🇨🇿 Channel : @Daily_Configs"
     type: "vless"
-    server: "95.85.231.3"
-    port: 2087
-    uuid: "549766c3-fa5f-471e-8031-ffc1f8d5064f"
+    server: "95.85.234.66"
+    port: 443
+    uuid: "3659f248-1797-4d6e-9982-a308565fec79"
     udp: true
     tls: true
-    network: "xhttp"
-    servername: "summit.blog-forme.ru"
+    network: "tcp"
+    servername: "fl-modx.webedg.net"
     client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY"
-      short-id: "3258252d44113e23"
+      public-key: "MuQH546CBdgYVBzNU_F5fimkbQ0srHxgLKDjl1Wz2Rw"
+      short-id: "00000000"
   - name: "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
     type: "vless"
     server: "95.85.231.3"
@@ -819,18 +849,19 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🇨🇿 🇨🇿 💥Config_jo-186"
-      - "🇨🇿 🇨🇿 💥Config_jo-220"
-      - "🇨🇿 🇨🇿 💥Config_jo-221"
+      - "🇨🇿 🇨🇿 💥Config_jo-189"
+      - "🇨🇿 🇨🇿 💥Config_jo-201"
+      - "🇨🇿 🇨🇿 💥Config_jo-202"
       - "🇳🇱 NL 🇳🇱 | @Raydikalx | FD0121"
-      - "🇨🇿 DE 🇩🇪 | @Raydikalx | CFB102"
       - "🇳🇱 NL 🇳🇱 | @Raydikalx | 005EC7"
       - "🇫🇮 FI 🇫🇮 | @Raydikalx | 37E3E5"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 0B4C12"
+      - "🇨🇿 DE 🇩🇪 | @Raydikalx | ABEA4F"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 9FA7F7"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 3579A5"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 2568AA"
@@ -839,10 +870,11 @@ proxy-groups:
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 9232B0"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 1B61FA"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 2E20DC"
-      - "🇫🇮 REALITY|FI🇫🇮 | 95.85.250.72-443 | 168.51ms"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.241.135:443"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 317.17ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.231.3-2087 | 99.42ms"
+      - "🇫🇮 REALITY|FI🇫🇮 | 95.85.250.72-443 | 104.43ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇨🇿 @V2rayNGVPN > کانفیگ رایگان"
+      - "🇨🇿 Channel : @Daily_Configs"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -854,18 +886,19 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🇨🇿 🇨🇿 💥Config_jo-186"
-      - "🇨🇿 🇨🇿 💥Config_jo-220"
-      - "🇨🇿 🇨🇿 💥Config_jo-221"
+      - "🇨🇿 🇨🇿 💥Config_jo-189"
+      - "🇨🇿 🇨🇿 💥Config_jo-201"
+      - "🇨🇿 🇨🇿 💥Config_jo-202"
       - "🇳🇱 NL 🇳🇱 | @Raydikalx | FD0121"
-      - "🇨🇿 DE 🇩🇪 | @Raydikalx | CFB102"
       - "🇳🇱 NL 🇳🇱 | @Raydikalx | 005EC7"
       - "🇫🇮 FI 🇫🇮 | @Raydikalx | 37E3E5"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 0B4C12"
+      - "🇨🇿 DE 🇩🇪 | @Raydikalx | ABEA4F"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 9FA7F7"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 3579A5"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 2568AA"
@@ -874,10 +907,11 @@ proxy-groups:
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 9232B0"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 1B61FA"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 2E20DC"
-      - "🇫🇮 REALITY|FI🇫🇮 | 95.85.250.72-443 | 168.51ms"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.241.135:443"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 317.17ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.231.3-2087 | 99.42ms"
+      - "🇫🇮 REALITY|FI🇫🇮 | 95.85.250.72-443 | 104.43ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇨🇿 @V2rayNGVPN > کانفیگ رایگان"
+      - "🇨🇿 Channel : @Daily_Configs"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -888,18 +922,19 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
       - "🇦🇪 🔒 VL-WS-NONE 🇦🇪 AE-185.158.133.40:8880"
       - "🇪🇸 🔒 VL-WS-TLS 🇪🇸 ES-95.85.89.70:81"
+      - "🇦🇪 🔒 VL-WS-NA 🇦🇪 AE-185.158.133.30:8880"
+      - "🇩🇪 🔒 VL-WS-TLS 🇩🇪 DE-92.223.124.62:443"
       - "🇫🇮 @DeltaKroneckerGithub"
-      - "🇨🇿 🇨🇿 💥Config_jo-186"
-      - "🇨🇿 🇨🇿 💥Config_jo-220"
-      - "🇨🇿 🇨🇿 💥Config_jo-221"
+      - "🇨🇿 🇨🇿 💥Config_jo-189"
+      - "🇨🇿 🇨🇿 💥Config_jo-201"
+      - "🇨🇿 🇨🇿 💥Config_jo-202"
       - "🇳🇱 NL 🇳🇱 | @Raydikalx | FD0121"
-      - "🇨🇿 DE 🇩🇪 | @Raydikalx | CFB102"
       - "🇳🇱 NL 🇳🇱 | @Raydikalx | 005EC7"
       - "🇫🇮 FI 🇫🇮 | @Raydikalx | 37E3E5"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 0B4C12"
+      - "🇨🇿 DE 🇩🇪 | @Raydikalx | ABEA4F"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 9FA7F7"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 3579A5"
       - "🇪🇪 EE 🇪🇪 | @Raydikalx | 2568AA"
@@ -908,10 +943,11 @@ proxy-groups:
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 9232B0"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 1B61FA"
       - "🇨🇿 DE 🇩🇪 | @Raydikalx | 2E20DC"
-      - "🇫🇮 REALITY|FI🇫🇮 | 95.85.250.72-443 | 168.51ms"
-      - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.241.135:443"
+      - "🇨🇿 REALITY|CZ🇨🇿 | guide.blog-forme.ru-2087 | 317.17ms"
+      - "🇨🇿 REALITY|CZ🇨🇿 | 95.85.231.3-2087 | 99.42ms"
+      - "🇫🇮 REALITY|FI🇫🇮 | 95.85.250.72-443 | 104.43ms"
       - "🇨🇿 🔒 VL-TCP-RLT 🇨🇿 CZ-95.85.230.35:443"
-      - "🇨🇿 @V2rayNGVPN > کانفیگ رایگان"
+      - "🇨🇿 Channel : @Daily_Configs"
       - "🇨🇿 🔒 VL-XHTTP-RLT 🇨🇿 CZ-95.85.231.3:2087"
   - name: "المنت 💬"
     type: "select"
