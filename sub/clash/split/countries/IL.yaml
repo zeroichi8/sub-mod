@@ -499,18 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
-    type: "trojan"
-    server: "185.239.48.207"
-    port: 443
-    password: "9b934dc3-e441-4e5c-97d6-681747d4d966"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "joss.gpj.web.id"
-    ws-opts:
-      headers:
-        Host: "joss.gpj.web.id"
   - name: "🇮🇱 🔒 VL-WS-TLS 🇮🇱 IL-192.71.27.237:443"
     type: "vless"
     server: "192.71.27.237"
@@ -525,14 +513,38 @@ proxies:
       path: "/"
       headers:
         Host: "fs.qicai99.com"
-  - name: "🇮🇱 🇮🇱 TA, Israel"
+  - name: "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
+    type: "trojan"
+    server: "185.239.48.207"
+    port: 443
+    password: "9b934dc3-e441-4e5c-97d6-681747d4d966"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "joss.gpj.web.id"
+    ws-opts:
+      headers:
+        Host: "joss.gpj.web.id"
+  - name: "🇮🇱 @DeltaKroneckerGithub"
     type: "ss"
     server: "64.177.66.60"
     port: 8388
     cipher: "aes-256-gcm"
     password: "jfWoSVCVYXRmNBfC"
     udp: true
-  - name: "🇮🇱 Israel"
+  - name: "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+    type: "vless"
+    server: "83.143.106.4"
+    port: 443
+    uuid: "adf1fac3-cf57-ff40-574c-cf514457eb3f"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "res.cdn.office.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo"
+  - name: "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.156:443"
     type: "vless"
     server: "185.95.231.156"
     port: 443
@@ -546,7 +558,7 @@ proxies:
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
-  - name: "🇮🇱 Israel-1"
+  - name: "🇮🇱 🇺🇸 United States | @v2FreeHub"
     type: "vless"
     server: "185.95.231.156"
     port: 443
@@ -560,7 +572,7 @@ proxies:
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
-  - name: "🇮🇱 Israel-2"
+  - name: "🇮🇱 🇺🇸 United States | @v2FreeHub-1"
     type: "vless"
     server: "185.95.231.156"
     port: 443
@@ -574,7 +586,7 @@ proxies:
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
-  - name: "🇮🇱 Israel-3"
+  - name: "🇮🇱 🇺🇸 United States | @v2FreeHub-2"
     type: "vless"
     server: "185.95.231.156"
     port: 443
@@ -588,7 +600,7 @@ proxies:
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
-  - name: "🇮🇱 Israel-4"
+  - name: "🇮🇱 🇮🇱 Israel | @v2FreeHub"
     type: "vless"
     server: "192.71.27.237"
     port: 443
@@ -601,14 +613,14 @@ proxies:
       path: "/fp=chrome"
       headers:
         Host: "fs.qicai99.com"
-  - name: "🇮🇱 Israel-5"
+  - name: "🇮🇱 Israel | @v2FreeHub"
     type: "hysteria2"
     server: "129.159.156.109"
     port: 50160
     password: "f25f19f29ce3fb53a35bf1b35b452a43"
     sni: "www.bing.com"
     skip-cert-verify: true
-  - name: "🇮🇱 Israel-6"
+  - name: "🇮🇱 Israel | @v2FreeHub-1"
     type: "trojan"
     server: "64.176.163.182"
     port: 443
@@ -630,20 +642,6 @@ proxies:
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
-  - name: "🇮🇱 NO 🇳🇴 | @Raydikalx | 38FEC4"
-    type: "vless"
-    server: "no.gacvpn.site"
-    port: 443
-    uuid: "3f5e89d5-591f-4ac9-b071-b05680b573c3"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "no.gacvpn.site"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "mCLTVbcvg_tkaIuGqMVVBV-5d_ftEoLnJHhrCmeLDFk"
-      short-id: "08d12dce"
   - name: "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
     type: "vless"
     server: "212.179.49.187"
@@ -657,33 +655,7 @@ proxies:
     reality-opts:
       public-key: "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI"
       short-id: "00bca5982f82d083"
-  - name: "🇮🇱 DE 🇩🇪 | @Raydikalx | F86979"
-    type: "vless"
-    server: "83.143.106.4"
-    port: 443
-    uuid: "adf1fac3-cf57-ff40-574c-cf514457eb3f"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "res.cdn.office.net"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo"
-  - name: "🇮🇱 IL 🇮🇱 | @Raydikalx | 09F4D1"
-    type: "vless"
-    server: "77.91.69.169"
-    port: 19226
-    uuid: "f0b144bd-4c44-440d-b630-d79ec82cad3a"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk"
-      short-id: "7c"
-  - name: "🇮🇱 @DeltaKroneckerGithub"
+  - name: "🇮🇱 @DeltaKroneckerGithub-1"
     type: "vless"
     server: "185.95.231.156"
     port: 443
@@ -710,22 +682,20 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🔒 VL-WS-TLS 🇮🇱 IL-192.71.27.237:443"
-      - "🇮🇱 🇮🇱 TA, Israel"
-      - "🇮🇱 Israel"
-      - "🇮🇱 Israel-1"
-      - "🇮🇱 Israel-2"
-      - "🇮🇱 Israel-3"
-      - "🇮🇱 Israel-4"
-      - "🇮🇱 Israel-5"
-      - "🇮🇱 Israel-6"
-      - "🇮🇱 US 🇺🇸 | @Raydikalx | DCC4AE"
-      - "🇮🇱 NO 🇳🇴 | @Raydikalx | 38FEC4"
-      - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
-      - "🇮🇱 DE 🇩🇪 | @Raydikalx | F86979"
-      - "🇮🇱 IL 🇮🇱 | @Raydikalx | 09F4D1"
+      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.156:443"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-1"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-2"
+      - "🇮🇱 🇮🇱 Israel | @v2FreeHub"
+      - "🇮🇱 Israel | @v2FreeHub"
+      - "🇮🇱 Israel | @v2FreeHub-1"
+      - "🇮🇱 US 🇺🇸 | @Raydikalx | DCC4AE"
+      - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -736,22 +706,20 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🔒 VL-WS-TLS 🇮🇱 IL-192.71.27.237:443"
-      - "🇮🇱 🇮🇱 TA, Israel"
-      - "🇮🇱 Israel"
-      - "🇮🇱 Israel-1"
-      - "🇮🇱 Israel-2"
-      - "🇮🇱 Israel-3"
-      - "🇮🇱 Israel-4"
-      - "🇮🇱 Israel-5"
-      - "🇮🇱 Israel-6"
-      - "🇮🇱 US 🇺🇸 | @Raydikalx | DCC4AE"
-      - "🇮🇱 NO 🇳🇴 | @Raydikalx | 38FEC4"
-      - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
-      - "🇮🇱 DE 🇩🇪 | @Raydikalx | F86979"
-      - "🇮🇱 IL 🇮🇱 | @Raydikalx | 09F4D1"
+      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.156:443"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-1"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-2"
+      - "🇮🇱 🇮🇱 Israel | @v2FreeHub"
+      - "🇮🇱 Israel | @v2FreeHub"
+      - "🇮🇱 Israel | @v2FreeHub-1"
+      - "🇮🇱 US 🇺🇸 | @Raydikalx | DCC4AE"
+      - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -761,22 +729,20 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 🔒 VL-WS-TLS 🇮🇱 IL-192.71.27.237:443"
-      - "🇮🇱 🇮🇱 TA, Israel"
-      - "🇮🇱 Israel"
-      - "🇮🇱 Israel-1"
-      - "🇮🇱 Israel-2"
-      - "🇮🇱 Israel-3"
-      - "🇮🇱 Israel-4"
-      - "🇮🇱 Israel-5"
-      - "🇮🇱 Israel-6"
-      - "🇮🇱 US 🇺🇸 | @Raydikalx | DCC4AE"
-      - "🇮🇱 NO 🇳🇴 | @Raydikalx | 38FEC4"
-      - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
-      - "🇮🇱 DE 🇩🇪 | @Raydikalx | F86979"
-      - "🇮🇱 IL 🇮🇱 | @Raydikalx | 09F4D1"
+      - "🇮🇱 🔒 TR-WS-TLS 🇮🇱 IL-185.239.48.207:443"
       - "🇮🇱 @DeltaKroneckerGithub"
+      - "🇮🇱 🔒 VL-XHTTP-RLT 🇮🇱 IL-83.143.106.4:443"
+      - "🇮🇱 🔒 VL-TCP-RLT 🇮🇱 IL-185.95.231.156:443"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-1"
+      - "🇮🇱 🇺🇸 United States | @v2FreeHub-2"
+      - "🇮🇱 🇮🇱 Israel | @v2FreeHub"
+      - "🇮🇱 Israel | @v2FreeHub"
+      - "🇮🇱 Israel | @v2FreeHub-1"
+      - "🇮🇱 US 🇺🇸 | @Raydikalx | DCC4AE"
+      - "🇮🇱 IL 🇮🇱 | @Raydikalx | B6A72D"
+      - "🇮🇱 @DeltaKroneckerGithub-1"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
