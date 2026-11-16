@@ -499,13 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
-    type: "ss"
-    server: "37.120.131.62"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
+  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+    type: "vless"
+    server: "193.180.209.136"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
     udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
   - name: "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
     type: "trojan"
     server: "iranserver.com"
@@ -559,6 +566,35 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇩🇰 🔒 VL-TCP-RLT 🇩🇰 DK-92.113.145.102:443"
+    type: "vless"
+    server: "92.113.145.102"
+    port: 443
+    uuid: "2ce990bc-fe98-44c0-9327-a4b15ce0c6ea"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "dl.google.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "Tk8-i0eBXYO5MBPQPfh4ha9ZDJz3JpZAgwte0yqe9gY"
+      short-id: "c5bb1edc40af6b77"
+  - name: "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+    type: "ss"
+    server: "37.120.131.62"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
+  - name: "🇩🇰 🔒 VL-TCP-NONE 🇩🇰 DK-81.27.110.68:44989"
+    type: "vless"
+    server: "81.27.110.68"
+    port: 44989
+    uuid: "05981755-8790-41f1-8aa0-f59c094f8bf4"
+    udp: true
+    tls: false
+    network: "tcp"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -573,13 +609,16 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 9CD47F"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 0CEC33"
+      - "🇩🇰 🔒 VL-TCP-RLT 🇩🇰 DK-92.113.145.102:443"
+      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-TCP-NONE 🇩🇰 DK-81.27.110.68:44989"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -590,13 +629,16 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 9CD47F"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 0CEC33"
+      - "🇩🇰 🔒 VL-TCP-RLT 🇩🇰 DK-92.113.145.102:443"
+      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-TCP-NONE 🇩🇰 DK-81.27.110.68:44989"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -606,13 +648,16 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
       - "🇩🇰 IR 🇮🇷 | @Raydikalx | 82A135"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 9CD47F"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 0CEC33"
+      - "🇩🇰 🔒 VL-TCP-RLT 🇩🇰 DK-92.113.145.102:443"
+      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-TCP-NONE 🇩🇰 DK-81.27.110.68:44989"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

@@ -499,6 +499,36 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
+    type: "vless"
+    server: "43.173.1.153"
+    port: 8443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-147.139.139.151:587"
+    type: "vless"
+    server: "147.139.139.151"
+    port: 587
+    uuid: "26524cce-d514-4014-a426-365fb266a14d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "xy1ej.stream-node-us.danfeng.qzz.io"
+    client-fingerprint: "android"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/danfeng?ed=2560"
+      headers:
+        Host: "xy1ej.stream-node-us.danfeng.qzz.io"
   - name: "🇮🇩 @DeltaKroneckerGithub"
     type: "ss"
     server: "aio.unlimited.biz.id"
@@ -523,13 +553,6 @@ proxies:
     tls: true
     network: "tcp"
     servername: "103.67.79.156"
-  - name: "🇮🇩 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
-    type: "ss"
-    server: "92.112.126.90"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "9tqhMdIrTkgQ46PvhyAtMH"
-    udp: true
   - name: "🇮🇩 🇮🇩 Indonesia | @v2FreeHub"
     type: "vless"
     server: "130.94.95.198"
@@ -557,6 +580,13 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "8C5valhOd8vfwaTXUSZ6Zyb0Ip34lRR5z7P8az"
     udp: true
+  - name: "🇮🇩 ID 🇮🇩 | @Raydikalx | FE15AB"
+    type: "ss"
+    server: "92.112.126.90"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "9tqhMdIrTkgQ46PvhyAtMH"
+    udp: true
   - name: "🇮🇩 ID 🇮🇩 | @Raydikalx | 27BFAA"
     type: "ss"
     server: "switcher-nick-croquet.freesocks.work"
@@ -578,29 +608,6 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
     password: "wwzVn2ZnHfqYa6l8EWh3eY"
     udp: true
-  - name: "🇮🇩 ID 🇮🇩 | @Raydikalx | EBD2F9"
-    type: "vless"
-    server: "43.173.1.153"
-    port: 8443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ccc.010304.xyz"
-  - name: "🇮🇩 ID 🇮🇩 | @Raydikalx | E1822C"
-    type: "vless"
-    server: "130.94.95.198"
-    port: 57353
-    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "in001.zestapp778.com"
   - name: "🇮🇩 ID 🇮🇩 | @Raydikalx | AD9A85"
     type: "vmess"
     server: "130.94.93.63"
@@ -625,6 +632,22 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇭🇰 HK 🇭🇰 | @Raydikalx | C14692"
+    type: "vmess"
+    server: "az-1.linkaa.xyz"
+    port: 53617
+    uuid: "6E571484-4166-4699-8F58-B34A1823691F"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇭🇰 HK 🇭🇰 | @Raydikalx | 53691C"
+    type: "vmess"
+    server: "az-1.linkaa.xyz"
+    port: 55386
+    uuid: "6E571484-4166-4699-8F58-B34A1823691F"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
     type: "vmess"
     server: "CObpeFkyjxNUQCnw.v.3dns.vip"
@@ -633,17 +656,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇩 RELAY🚩 | sourceforge.net-443 | 10.23ms"
-    type: "vless"
-    server: "188.119.113.68"
-    port: 443
-    uuid: "a91b85c5-de1a-4ff2-a447-933202708386"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "sourceforge.net"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -658,23 +670,24 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-147.139.139.151:587"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
-      - "🇮🇩 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
       - "🇮🇩 🇮🇩 Indonesia | @v2FreeHub"
       - "🇮🇩 🇮🇩 Indonesia | @v2FreeHub-1"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 49126A"
+      - "🇮🇩 ID 🇮🇩 | @Raydikalx | FE15AB"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 27BFAA"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 1B5E27"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 6029CD"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | EBD2F9"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | E1822C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | AD9A85"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 821CF7"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 59C99F"
+      - "🇭🇰 HK 🇭🇰 | @Raydikalx | C14692"
+      - "🇭🇰 HK 🇭🇰 | @Raydikalx | 53691C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
-      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 10.23ms"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -685,23 +698,24 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-147.139.139.151:587"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
-      - "🇮🇩 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
       - "🇮🇩 🇮🇩 Indonesia | @v2FreeHub"
       - "🇮🇩 🇮🇩 Indonesia | @v2FreeHub-1"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 49126A"
+      - "🇮🇩 ID 🇮🇩 | @Raydikalx | FE15AB"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 27BFAA"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 1B5E27"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 6029CD"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | EBD2F9"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | E1822C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | AD9A85"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 821CF7"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 59C99F"
+      - "🇭🇰 HK 🇭🇰 | @Raydikalx | C14692"
+      - "🇭🇰 HK 🇭🇰 | @Raydikalx | 53691C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
-      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 10.23ms"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -711,23 +725,24 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-147.139.139.151:587"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
-      - "🇮🇩 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
       - "🇮🇩 🇮🇩 Indonesia | @v2FreeHub"
       - "🇮🇩 🇮🇩 Indonesia | @v2FreeHub-1"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 49126A"
+      - "🇮🇩 ID 🇮🇩 | @Raydikalx | FE15AB"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 27BFAA"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 1B5E27"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 6029CD"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | EBD2F9"
-      - "🇮🇩 ID 🇮🇩 | @Raydikalx | E1822C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | AD9A85"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 821CF7"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 59C99F"
+      - "🇭🇰 HK 🇭🇰 | @Raydikalx | C14692"
+      - "🇭🇰 HK 🇭🇰 | @Raydikalx | 53691C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
-      - "🇮🇩 RELAY🚩 | sourceforge.net-443 | 10.23ms"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
