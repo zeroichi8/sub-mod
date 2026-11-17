@@ -499,14 +499,14 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇲🇽 @DeltaKroneckerGithub"
+  - name: "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
     type: "ss"
     server: "64.177.90.30"
     port: 8388
     cipher: "aes-256-gcm"
     password: "BWyPPTusFKhGgzKh"
     udp: true
-  - name: "🇲🇽 @DeltaKroneckerGithub-1"
+  - name: "🇲🇽 @DeltaKroneckerGithub"
     type: "trojan"
     server: "154.205.152.109"
     port: 443
@@ -515,6 +515,20 @@ proxies:
     tls: true
     network: "tcp"
     servername: "154.205.152.109"
+  - name: "🇲🇽 🇲🇽 | @WhiteDNS | MX10|1.9MB/s|DNSOK|GPT⁺-MX"
+    type: "vless"
+    server: "40.233.23.236"
+    port: 63245
+    uuid: "f1506bf6-7d4c-427f-b053-05e0f1b43a04"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU"
+      short-id: "1f2519bb96e5589c"
   - name: "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
     type: "vless"
     server: "147.78.1.253"
@@ -554,7 +568,7 @@ proxies:
     tls: true
     network: "tcp"
     servername: "connectwithtopemployersandfindidealjobs.com"
-  - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | C06E17"
+  - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | 285F2D"
     type: "trojan"
     server: "149.104.87.125"
     port: 15083
@@ -595,17 +609,6 @@ proxies:
       path: "/vless/"
       headers:
         Host: "ul-mexico1.09vpn.com"
-  - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | 53051F"
-    type: "vless"
-    server: "ul-mexico1.09vpn.com"
-    port: 8443
-    uuid: "a6d20e79-d326-42c1-bc20-f4cecc6dc42d"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "UL-Mexico1.09vpn.com"
-    ws-opts:
-      path: "/vless/"
   - name: "🇲🇽 MX 🇲🇽 | @Raydikalx | E04EFF"
     type: "vless"
     server: "131.196.252.66"
@@ -650,6 +653,19 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.02ms"
+    type: "vless"
+    server: "140.248.180.30"
+    port: 443
+    uuid: "86fdb625-1a7f-4784-99a6-a96b3a80fc6d"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "speedtest.net"
+    ws-opts:
+      path: "/vip1"
+      headers:
+        Host: "hamshahriesfahan.com"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -664,21 +680,22 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
-      - "🇲🇽 @DeltaKroneckerGithub-1"
+      - "🇲🇽 🇲🇽 | @WhiteDNS | MX10|1.9MB/s|DNSOK|GPT⁺-MX"
       - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub-1"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 055C21"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | C06E17"
+      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 285F2D"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 03BF9D"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8AA5EE"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 3DBFFB"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 53051F"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | E04EFF"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 19F2B9"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 63C709"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8D829F"
+      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.02ms"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -689,21 +706,22 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
-      - "🇲🇽 @DeltaKroneckerGithub-1"
+      - "🇲🇽 🇲🇽 | @WhiteDNS | MX10|1.9MB/s|DNSOK|GPT⁺-MX"
       - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub-1"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 055C21"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | C06E17"
+      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 285F2D"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 03BF9D"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8AA5EE"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 3DBFFB"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 53051F"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | E04EFF"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 19F2B9"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 63C709"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8D829F"
+      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.02ms"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -713,21 +731,22 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇲🇽 🇲🇽 Querétaro City, QUE, Mexico"
       - "🇲🇽 @DeltaKroneckerGithub"
-      - "🇲🇽 @DeltaKroneckerGithub-1"
+      - "🇲🇽 🇲🇽 | @WhiteDNS | MX10|1.9MB/s|DNSOK|GPT⁺-MX"
       - "🇲🇽 🇲🇽 Mexico | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub"
       - "🇲🇽 United States | @v2FreeHub-1"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 055C21"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | C06E17"
+      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 285F2D"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 03BF9D"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8AA5EE"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 3DBFFB"
-      - "🇲🇽 MX 🇲🇽 | @Raydikalx | 53051F"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | E04EFF"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 19F2B9"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 63C709"
       - "🇲🇽 MX 🇲🇽 | @Raydikalx | 8D829F"
+      - "🇲🇽 US🇺🇸 | speedtest.net-443 | 2.02ms"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
