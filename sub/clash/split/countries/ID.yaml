@@ -499,10 +499,32 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.40.2:53617"
+  - name: "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.47.189:53617"
     type: "vmess"
-    server: "48.193.40.2"
+    server: "48.193.47.189"
     port: 53617
+    uuid: "6E571484-4166-4699-8F58-B34A1823691F"
+    alterId: 0
+    cipher: "auto"
+    udp: true
+  - name: "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
+    type: "vless"
+    server: "43.173.1.153"
+    port: 8443
+    uuid: "d342d11e-d224-4463-b982-532309285094"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "ccc.010304.xyz"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "ccc.010304.xyz"
+  - name: "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.47.189:55386"
+    type: "vmess"
+    server: "48.193.47.189"
+    port: 55386
     uuid: "6E571484-4166-4699-8F58-B34A1823691F"
     alterId: 0
     cipher: "auto"
@@ -610,6 +632,14 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇮🇩 HK 🇭🇰 | @Raydikalx | 53691C"
+    type: "vmess"
+    server: "az-1.linkaa.xyz"
+    port: 55386
+    uuid: "6E571484-4166-4699-8F58-B34A1823691F"
+    alterId: 0
+    cipher: "auto"
+    udp: true
   - name: "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
     type: "vmess"
     server: "CObpeFkyjxNUQCnw.v.3dns.vip"
@@ -618,20 +648,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇩 RELAY🚩 | ccc.010304.xyz-8443 | 20.86ms"
-    type: "vless"
-    server: "43.173.1.153"
-    port: 8443
-    uuid: "d342d11e-d224-4463-b982-532309285094"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "ccc.010304.xyz"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "ccc.010304.xyz"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -646,7 +662,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.40.2:53617"
+      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.47.189:53617"
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
+      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.47.189:55386"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
@@ -660,8 +678,8 @@ proxy-groups:
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | AD9A85"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 821CF7"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 59C99F"
+      - "🇮🇩 HK 🇭🇰 | @Raydikalx | 53691C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
-      - "🇮🇩 RELAY🚩 | ccc.010304.xyz-8443 | 20.86ms"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -672,7 +690,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.40.2:53617"
+      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.47.189:53617"
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
+      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.47.189:55386"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
@@ -686,8 +706,8 @@ proxy-groups:
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | AD9A85"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 821CF7"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 59C99F"
+      - "🇮🇩 HK 🇭🇰 | @Raydikalx | 53691C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
-      - "🇮🇩 RELAY🚩 | ccc.010304.xyz-8443 | 20.86ms"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -697,7 +717,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.40.2:53617"
+      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.47.189:53617"
+      - "🇮🇩 🔒 VL-WS-TLS 🇮🇩 ID-43.173.1.153:8443"
+      - "🇮🇩 🔒 VM-WS-NA 🇮🇩 ID-48.193.47.189:55386"
       - "🇮🇩 @DeltaKroneckerGithub"
       - "🇮🇩 @DeltaKroneckerGithub-1"
       - "🇮🇩 @DeltaKroneckerGithub-2"
@@ -711,8 +733,8 @@ proxy-groups:
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | AD9A85"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 821CF7"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 59C99F"
+      - "🇮🇩 HK 🇭🇰 | @Raydikalx | 53691C"
       - "🇮🇩 ID 🇮🇩 | @Raydikalx | 58DF62"
-      - "🇮🇩 RELAY🚩 | ccc.010304.xyz-8443 | 20.86ms"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

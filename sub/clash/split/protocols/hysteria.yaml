@@ -499,18 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
-    type: "hysteria"
-    server: "208.87.243.187"
-    port: 15823
-    protocol: "udp"
-    up: "50 Mbps"
-    down: "100 Mbps"
-    auth_str: "dongtaiwang.com"
-    sni: "apple.com"
-    skip-cert-verify: true
-    alpn:
-      - "h3"
   - name: "🇳🇱 🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:49003"
     type: "hysteria"
     server: "51.159.226.1"
@@ -523,18 +511,31 @@ proxies:
     skip-cert-verify: true
     alpn:
       - "h3"
-  - name: "🇺🇸 060-🇺🇸 US tls ✂️@GheychiAmoozesh"
+  - name: "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
     type: "hysteria"
-    server: "198.200.57.142"
-    port: 22335
+    server: "208.87.243.187"
+    port: 15823
     protocol: "udp"
     up: "50 Mbps"
     down: "100 Mbps"
-    auth_str: "github.com/Alvin9999-newpac/fanqiang"
+    auth_str: "dongtaiwang.com"
+    sni: "apple.com"
     skip-cert-verify: true
     alpn:
       - "h3"
-  - name: "🇩🇪 069-🇳🇱 NL tls ✂️@GheychiAmoozesh"
+  - name: "🇺🇸 063-🇺🇸 US tls ✂️@GheychiAmoozesh"
+    type: "hysteria"
+    server: "137.175.82.44"
+    port: 20022
+    protocol: "udp"
+    up: "50 Mbps"
+    down: "100 Mbps"
+    auth_str: "dongtaiwang.com"
+    sni: "bing.com"
+    skip-cert-verify: true
+    alpn:
+      - "h3"
+  - name: "🇩🇪 072-🇳🇱 NL tls ✂️@GheychiAmoozesh"
     type: "hysteria"
     server: "5.83.129.90"
     port: 54177
@@ -546,43 +547,10 @@ proxies:
     skip-cert-verify: true
     alpn:
       - "h3"
-  - name: "🇩🇪 070-🇳🇱 NL tls ✂️@GheychiAmoozesh"
-    type: "hysteria"
-    server: "5.83.129.143"
-    port: 26691
-    protocol: "udp"
-    up: "50 Mbps"
-    down: "100 Mbps"
-    auth_str: "dongtaiwang.com"
-    skip-cert-verify: true
-    alpn:
-      - "h3"
-  - name: "🇫🇷 094-🇫🇷 FR tls ✂️@GheychiAmoozesh"
-    type: "hysteria"
-    server: "62.210.28.175"
-    port: 24667
-    protocol: "udp"
-    up: "50 Mbps"
-    down: "100 Mbps"
-    auth_str: "dongtaiwang.com"
-    skip-cert-verify: true
-    alpn:
-      - "h3"
-  - name: "🇫🇷 095-🇫🇷 FR tls ✂️@GheychiAmoozesh"
+  - name: "🇫🇷 090-🇫🇷 FR tls ✂️@GheychiAmoozesh"
     type: "hysteria"
     server: "62.210.70.191"
     port: 24667
-    protocol: "udp"
-    up: "50 Mbps"
-    down: "100 Mbps"
-    auth_str: "dongtaiwang.com"
-    skip-cert-verify: true
-    alpn:
-      - "h3"
-  - name: "🇫🇷 096-🇫🇷 FR tls ✂️@GheychiAmoozesh"
-    type: "hysteria"
-    server: "163.172.117.163"
-    port: 36699
     protocol: "udp"
     up: "50 Mbps"
     down: "100 Mbps"
@@ -604,14 +572,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
       - "🇳🇱 🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:49003"
-      - "🇺🇸 060-🇺🇸 US tls ✂️@GheychiAmoozesh"
-      - "🇩🇪 069-🇳🇱 NL tls ✂️@GheychiAmoozesh"
-      - "🇩🇪 070-🇳🇱 NL tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 094-🇫🇷 FR tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 095-🇫🇷 FR tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 096-🇫🇷 FR tls ✂️@GheychiAmoozesh"
+      - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
+      - "🇺🇸 063-🇺🇸 US tls ✂️@GheychiAmoozesh"
+      - "🇩🇪 072-🇳🇱 NL tls ✂️@GheychiAmoozesh"
+      - "🇫🇷 090-🇫🇷 FR tls ✂️@GheychiAmoozesh"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -622,14 +587,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
       - "🇳🇱 🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:49003"
-      - "🇺🇸 060-🇺🇸 US tls ✂️@GheychiAmoozesh"
-      - "🇩🇪 069-🇳🇱 NL tls ✂️@GheychiAmoozesh"
-      - "🇩🇪 070-🇳🇱 NL tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 094-🇫🇷 FR tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 095-🇫🇷 FR tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 096-🇫🇷 FR tls ✂️@GheychiAmoozesh"
+      - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
+      - "🇺🇸 063-🇺🇸 US tls ✂️@GheychiAmoozesh"
+      - "🇩🇪 072-🇳🇱 NL tls ✂️@GheychiAmoozesh"
+      - "🇫🇷 090-🇫🇷 FR tls ✂️@GheychiAmoozesh"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -639,14 +601,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
       - "🇳🇱 🔒 HYSTERIA-UDP 🇳🇱 NL-51.159.226.1:49003"
-      - "🇺🇸 060-🇺🇸 US tls ✂️@GheychiAmoozesh"
-      - "🇩🇪 069-🇳🇱 NL tls ✂️@GheychiAmoozesh"
-      - "🇩🇪 070-🇳🇱 NL tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 094-🇫🇷 FR tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 095-🇫🇷 FR tls ✂️@GheychiAmoozesh"
-      - "🇫🇷 096-🇫🇷 FR tls ✂️@GheychiAmoozesh"
+      - "🇺🇸 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:15823"
+      - "🇺🇸 063-🇺🇸 US tls ✂️@GheychiAmoozesh"
+      - "🇩🇪 072-🇳🇱 NL tls ✂️@GheychiAmoozesh"
+      - "🇫🇷 090-🇫🇷 FR tls ✂️@GheychiAmoozesh"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

@@ -499,20 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
-    type: "vless"
-    server: "107.189.2.206"
-    port: 8443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
   - name: "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
     type: "trojan"
     server: "188.42.145.180"
@@ -526,6 +512,51 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.volumeroot.com"
+  - name: "🇱🇺 🇸🇪 | @WhiteDNS | SE33|1.0MB/s|DNSOK|GPT⁺-SE"
+    type: "vless"
+    server: "subgift.gcorecdn.com"
+    port: 443
+    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subgift.gcorecdn.com"
+    client-fingerprint: "chrome"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/t.me-SubGift"
+      headers:
+        Host: "subgift.gcorecdn.com"
+  - name: "🇱🇺 🇸🇪 | @WhiteDNS | SE34|745KB/s|DNSOK|GPT⁺-SE"
+    type: "vless"
+    server: "92.223.84.254"
+    port: 443
+    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subgift.gcorecdn.com"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/t.me-SubGift"
+      headers:
+        Host: "subgift.gcorecdn.com"
+  - name: "🇱🇺 Join: t.me/SubGift-202"
+    type: "vless"
+    server: "subgift.gcorecdn.com"
+    port: 443
+    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subgift.gcorecdn.com"
+    alpn:
+      - "http/1.1"
+    ws-opts:
+      path: "/t.me-SubGift"
+      headers:
+        Host: "subgift.gcorecdn.com"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -540,8 +571,10 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
       - "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🇱🇺 🇸🇪 | @WhiteDNS | SE33|1.0MB/s|DNSOK|GPT⁺-SE"
+      - "🇱🇺 🇸🇪 | @WhiteDNS | SE34|745KB/s|DNSOK|GPT⁺-SE"
+      - "🇱🇺 Join: t.me/SubGift-202"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -552,8 +585,10 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
       - "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🇱🇺 🇸🇪 | @WhiteDNS | SE33|1.0MB/s|DNSOK|GPT⁺-SE"
+      - "🇱🇺 🇸🇪 | @WhiteDNS | SE34|745KB/s|DNSOK|GPT⁺-SE"
+      - "🇱🇺 Join: t.me/SubGift-202"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -563,8 +598,10 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
       - "🇱🇺 🔒 TR-WS-TLS 🇱🇺 LU-188.42.145.180:443"
+      - "🇱🇺 🇸🇪 | @WhiteDNS | SE33|1.0MB/s|DNSOK|GPT⁺-SE"
+      - "🇱🇺 🇸🇪 | @WhiteDNS | SE34|745KB/s|DNSOK|GPT⁺-SE"
+      - "🇱🇺 Join: t.me/SubGift-202"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
