@@ -499,6 +499,19 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "♻️12@oneclickvpnkeys"
+    type: "vless"
+    server: "147.45.47.101"
+    port: 8443
+    uuid: "27f26dee-9cf1-4cca-93f8-9ac23d311408"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "apple.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      short-id: "6ba85179e30d4fc2"
   - name: "🎃95@oneclickvpnkeys"
     type: "vless"
     server: "45.144.112.55"
@@ -518,13 +531,6 @@ proxies:
     port: 8388
     cipher: "aes-256-gcm"
     password: "itzvpn@321"
-    udp: true
-  - name: "@flyv2ray"
-    type: "ss"
-    server: "77.90.10.175"
-    port: 8086
-    cipher: "2022-blake3-aes-256-gcm"
-    password: "f2Nq5YLnyclPaWR8my7/Vdd3ZX8URncXZNly5+HcUSs=:dQ6WYcPpGX5xIxUVPAR8w1A9eY6kEVoKKW3HleJ6o8Y="
     udp: true
   - name: "%F0%9F%87%A6%F0%9F%87%B9AT_10_@Surfboardv2ray"
     type: "vmess"
@@ -548,9 +554,9 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "♻️12@oneclickvpnkeys"
       - "🎃95@oneclickvpnkeys"
       - "🇮🇹 Italy"
-      - "@flyv2ray"
       - "%F0%9F%87%A6%F0%9F%87%B9AT_10_@Surfboardv2ray"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -562,9 +568,9 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "♻️12@oneclickvpnkeys"
       - "🎃95@oneclickvpnkeys"
       - "🇮🇹 Italy"
-      - "@flyv2ray"
       - "%F0%9F%87%A6%F0%9F%87%B9AT_10_@Surfboardv2ray"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -575,9 +581,9 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "♻️12@oneclickvpnkeys"
       - "🎃95@oneclickvpnkeys"
       - "🇮🇹 Italy"
-      - "@flyv2ray"
       - "%F0%9F%87%A6%F0%9F%87%B9AT_10_@Surfboardv2ray"
   - name: "المنت 💬"
     type: "select"
