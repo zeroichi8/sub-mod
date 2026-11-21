@@ -499,6 +499,54 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇧🇿 @V2rayNPVTConfig"
+    type: "vless"
+    server: "45.135.235.255"
+    port: 443
+    uuid: "4dd8d557-dbe3-4c6f-a3ee-168da9a03d1b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "worker3.paneger955.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "worker3.paneger955.workers.dev"
+  - name: "🇧🇿 🇧🇿BZ-🚀@VPNine1"
+    type: "vless"
+    server: "45.135.235.90"
+    port: 443
+    uuid: "cc99c57d-6c93-4031-9153-73f510636533"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "51.baklajann.ru"
+    client-fingerprint: "chrome"
+  - name: "🇧🇿 BZ 🇧🇿 | @Raydikalx | 8BBF8A"
+    type: "vless"
+    server: "45.135.235.90"
+    port: 443
+    uuid: "654ba40a-0522-4fc3-8328-08099482c201"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "51.baklajann.ru"
+    client-fingerprint: "chrome"
+  - name: "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.255:443"
+    type: "vless"
+    server: "45.135.235.255"
+    port: 443
+    uuid: "4dd8d557-dbe3-4c6f-a3ee-168da9a03d1b"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "worker3.paneger955.workers.dev"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "worker3.paneger955.workers.dev"
   - name: "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
     type: "vless"
     server: "45.135.235.30"
@@ -510,29 +558,6 @@ proxies:
     ws-opts:
       headers:
         Host: "vms.lifetime07.workers.dev"
-  - name: "🇧🇿 🇵🇱 | @WhiteDNS | PL65|6.5MB/s|DNSOK|GPT⁺-PL"
-    type: "vless"
-    server: "45.135.235.90"
-    port: 443
-    uuid: "cc99c57d-6c93-4031-9153-73f510636533"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "51.baklajann.ru"
-    client-fingerprint: "chrome"
-  - name: "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
-    type: "vless"
-    server: "45.135.235.90"
-    port: 443
-    uuid: "003ec416-45f0-462a-8030-016fe0a71703"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "51.baklajann.ru"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -547,9 +572,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇧🇿 @V2rayNPVTConfig"
+      - "🇧🇿 🇧🇿BZ-🚀@VPNine1"
+      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 8BBF8A"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.255:443"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
-      - "🇧🇿 🇵🇱 | @WhiteDNS | PL65|6.5MB/s|DNSOK|GPT⁺-PL"
-      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -560,9 +587,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇧🇿 @V2rayNPVTConfig"
+      - "🇧🇿 🇧🇿BZ-🚀@VPNine1"
+      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 8BBF8A"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.255:443"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
-      - "🇧🇿 🇵🇱 | @WhiteDNS | PL65|6.5MB/s|DNSOK|GPT⁺-PL"
-      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -572,9 +601,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇧🇿 @V2rayNPVTConfig"
+      - "🇧🇿 🇧🇿BZ-🚀@VPNine1"
+      - "🇧🇿 BZ 🇧🇿 | @Raydikalx | 8BBF8A"
+      - "🇧🇿 🔒 VL-WS-TLS 🇧🇿 BZ-45.135.235.255:443"
       - "🇧🇿 🔒 VL-WS-NONE 🇧🇿 BZ-45.135.235.30:8880"
-      - "🇧🇿 🇵🇱 | @WhiteDNS | PL65|6.5MB/s|DNSOK|GPT⁺-PL"
-      - "🇧🇿 🔒 VL-XHTTP-TLS 🇧🇿 BZ-45.135.235.90:443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
