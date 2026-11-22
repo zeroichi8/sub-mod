@@ -499,34 +499,27 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-185.213.23.63:990"
+  - name: "🇳🇴 🔒 VL-WS-TLS 🇳🇴 NO-194.32.107.150:443"
+    type: "vless"
+    server: "194.32.107.150"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇳🇴 @FarazV2ray"
     type: "ss"
     server: "185.213.23.63"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
     udp: true
-  - name: "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-89.46.233.148:443"
-    type: "ss"
-    server: "89.46.233.148"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "XeGAcwaviWxXzg87AwvnE6gWbhHHGwwB"
-    udp: true
-  - name: "🇳🇴 REALITY|NO🇳🇴 | 193.243.189.64-443 | 93.58ms"
-    type: "vless"
-    server: "193.243.189.64"
-    port: 443
-    uuid: "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "no1.gofizz.in"
-    client-fingerprint: "ios"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "631qtx5_iiR8HBYdp3duf2SMqdN0URE1AWVb85I_FFg"
-      short-id: "b12c3119d219dc"
   - name: "🇳🇴 @Vpn_Mafia 🇳🇴"
     type: "vless"
     server: "194.110.207.48"
@@ -569,7 +562,7 @@ proxies:
     reality-opts:
       public-key: "mWzXDVWUhjGcuizZHA-rEnRpxv2wgeSZUIuHmQdteiA"
       short-id: "f576da5e05a1d4d2"
-  - name: "🇳🇴 Channel : @Daily_Configs"
+  - name: "🇳🇴 @vpnsal"
     type: "vless"
     server: "193.243.189.64"
     port: 443
@@ -625,20 +618,27 @@ proxies:
     reality-opts:
       public-key: "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY"
       short-id: "fd55b698ee8c3629"
-  - name: "🇳🇴 🔒 VL-WS-TLS 🇳🇴 NO-194.32.107.150:443"
+  - name: "🇳🇴 REALITY|NO🇳🇴 | 193.243.189.64-443 | 150.52ms"
     type: "vless"
-    server: "194.32.107.150"
+    server: "193.243.189.64"
     port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    uuid: "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
     udp: true
     tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
+    network: "tcp"
+    servername: "no1.gofizz.in"
+    client-fingerprint: "ios"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "631qtx5_iiR8HBYdp3duf2SMqdN0URE1AWVb85I_FFg"
+      short-id: "b12c3119d219dc"
+  - name: "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-89.46.233.148:443"
+    type: "ss"
+    server: "89.46.233.148"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "XeGAcwaviWxXzg87AwvnE6gWbhHHGwwB"
+    udp: true
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -653,17 +653,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-185.213.23.63:990"
-      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-89.46.233.148:443"
-      - "🇳🇴 REALITY|NO🇳🇴 | 193.243.189.64-443 | 93.58ms"
+      - "🇳🇴 🔒 VL-WS-TLS 🇳🇴 NO-194.32.107.150:443"
+      - "🇳🇴 @FarazV2ray"
       - "🇳🇴 @Vpn_Mafia 🇳🇴"
       - "🇳🇴 Telegram:@v2rayng3"
       - "🇳🇴 𝗝𝗼𝗶𝗻 ➡️ @configprxy 🔥"
-      - "🇳🇴 Channel : @Daily_Configs"
+      - "🇳🇴 @vpnsal"
       - "🇳🇴 @confiig_hub"
       - "🇳🇴 @Net2ray 🔪"
       - "🇳🇴 @confiig_hub-1"
-      - "🇳🇴 🔒 VL-WS-TLS 🇳🇴 NO-194.32.107.150:443"
+      - "🇳🇴 REALITY|NO🇳🇴 | 193.243.189.64-443 | 150.52ms"
+      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-89.46.233.148:443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -674,17 +674,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-185.213.23.63:990"
-      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-89.46.233.148:443"
-      - "🇳🇴 REALITY|NO🇳🇴 | 193.243.189.64-443 | 93.58ms"
+      - "🇳🇴 🔒 VL-WS-TLS 🇳🇴 NO-194.32.107.150:443"
+      - "🇳🇴 @FarazV2ray"
       - "🇳🇴 @Vpn_Mafia 🇳🇴"
       - "🇳🇴 Telegram:@v2rayng3"
       - "🇳🇴 𝗝𝗼𝗶𝗻 ➡️ @configprxy 🔥"
-      - "🇳🇴 Channel : @Daily_Configs"
+      - "🇳🇴 @vpnsal"
       - "🇳🇴 @confiig_hub"
       - "🇳🇴 @Net2ray 🔪"
       - "🇳🇴 @confiig_hub-1"
-      - "🇳🇴 🔒 VL-WS-TLS 🇳🇴 NO-194.32.107.150:443"
+      - "🇳🇴 REALITY|NO🇳🇴 | 193.243.189.64-443 | 150.52ms"
+      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-89.46.233.148:443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -694,17 +694,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-185.213.23.63:990"
-      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-89.46.233.148:443"
-      - "🇳🇴 REALITY|NO🇳🇴 | 193.243.189.64-443 | 93.58ms"
+      - "🇳🇴 🔒 VL-WS-TLS 🇳🇴 NO-194.32.107.150:443"
+      - "🇳🇴 @FarazV2ray"
       - "🇳🇴 @Vpn_Mafia 🇳🇴"
       - "🇳🇴 Telegram:@v2rayng3"
       - "🇳🇴 𝗝𝗼𝗶𝗻 ➡️ @configprxy 🔥"
-      - "🇳🇴 Channel : @Daily_Configs"
+      - "🇳🇴 @vpnsal"
       - "🇳🇴 @confiig_hub"
       - "🇳🇴 @Net2ray 🔪"
       - "🇳🇴 @confiig_hub-1"
-      - "🇳🇴 🔒 VL-WS-TLS 🇳🇴 NO-194.32.107.150:443"
+      - "🇳🇴 REALITY|NO🇳🇴 | 193.243.189.64-443 | 150.52ms"
+      - "🇳🇴 🔒 SS-TCP-NA 🇳🇴 NO-89.46.233.148:443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

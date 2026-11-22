@@ -499,13 +499,28 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
-    type: "ss"
-    server: "37.120.131.62"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "XF0klw7870vXn3uQIxe19Q"
+  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+    type: "vless"
+    server: "193.180.209.136"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
     udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇩🇰 🔒 VL-TCP-NONE 🇫🇮 FI-87.58.159.20:443"
+    type: "vless"
+    server: "87.58.159.20"
+    port: 443
+    uuid: "2471e7da-5dcd-5da4-983a-3ef758abb17c"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇩🇰 🩵+@Azarakhsh_Proxy+🩷"
     type: "trojan"
     server: "iranserver.com"
@@ -519,34 +534,35 @@ proxies:
       path: "/@Azarakhsh_Proxy?ed=2560"
       headers:
         Host: "tg.cmliussss.us.kg"
-  - name: "🇩🇰 Tel@MARAMBASHI 🇨🇦"
+  - name: "🇩🇰 ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🍓"
     type: "vless"
-    server: "193.181.210.205"
-    port: 443
-    uuid: "8197b9b9-8945-460f-99c9-325ef8a8a7c3"
+    server: "135.136.33.134"
+    port: 8443
+    uuid: "9a597d68-6688-4046-bf24-a5a541e115e0"
     udp: true
     tls: true
     network: "tcp"
-    servername: "dk1.gofizz.in"
+    servername: "www.apple.com"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "arZrNPbhlxNAGMzO_g2Dx3AAV_FEMnFyydbBsyZUCiY"
-      short-id: "54005328cd"
-  - name: "🇩🇰 🔒 VL-TCP-RLT 🇩🇰 DK-217.78.237.118:8443"
+      public-key: "6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU"
+      short-id: "f8d0271b4b5f9efc"
+  - name: "🇩🇰 awlix_ir"
     type: "vless"
-    server: "217.78.237.118"
-    port: 8443
-    uuid: "483c6187-3c8d-436b-8413-536c2c87b70c"
+    server: "87.58.159.20"
+    port: 443
+    uuid: "awlix_ir"
     udp: true
-    tls: true
+    tls: false
     network: "tcp"
-    servername: "gcsp.ch"
-    client-fingerprint: "firefox"
-    flow: "xtls-rprx-vision"
-    reality-opts:
-      public-key: "uWoKxXeFb0l5-mZnpGpoW9lCY4KmOeayGklp2WUNgxA"
-      short-id: "d90cf6b5"
+  - name: "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+    type: "ss"
+    server: "37.120.131.62"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "XF0klw7870vXn3uQIxe19Q"
+    udp: true
   - name: "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
     type: "vmess"
     server: "193.180.208.234"
@@ -571,52 +587,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇩🇰 DK 🇩🇰 | @Raydikalx | 9CD47F"
-    type: "vmess"
-    server: "Fast.jexmuk.ir"
-    port: 15526
-    uuid: "b28bfd04-0b91-4bfb-ab88-4d5c33fd1131"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇩🇰 DK 🇩🇰 | @Raydikalx | 0CEC33"
-    type: "vmess"
-    server: "Fast.jexmuk.ir"
-    port: 16176
-    uuid: "b28bfd04-0b91-4bfb-ab88-4d5c33fd1131"
-    alterId: 0
-    cipher: "auto"
-    udp: true
-  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
-    type: "vless"
-    server: "193.180.209.136"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
-  - name: "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.181.209.210:443"
-    type: "vless"
-    server: "193.181.209.210"
-    port: 443
-    uuid: "80a06811-f74b-4b82-ac99-7e66c2a98e1c"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "clover.filnex.baby"
-    client-fingerprint: "firefox"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/api/de6/stream"
-      headers:
-        Host: "clover.filnex.baby"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -631,17 +601,15 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+      - "🇩🇰 🔒 VL-TCP-NONE 🇫🇮 FI-87.58.159.20:443"
       - "🇩🇰 🩵+@Azarakhsh_Proxy+🩷"
-      - "🇩🇰 Tel@MARAMBASHI 🇨🇦"
-      - "🇩🇰 🔒 VL-TCP-RLT 🇩🇰 DK-217.78.237.118:8443"
+      - "🇩🇰 ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🍓"
+      - "🇩🇰 awlix_ir"
+      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 9CD47F"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 0CEC33"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.181.209.210:443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -652,17 +620,15 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+      - "🇩🇰 🔒 VL-TCP-NONE 🇫🇮 FI-87.58.159.20:443"
       - "🇩🇰 🩵+@Azarakhsh_Proxy+🩷"
-      - "🇩🇰 Tel@MARAMBASHI 🇨🇦"
-      - "🇩🇰 🔒 VL-TCP-RLT 🇩🇰 DK-217.78.237.118:8443"
+      - "🇩🇰 ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🍓"
+      - "🇩🇰 awlix_ir"
+      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 9CD47F"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 0CEC33"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.181.209.210:443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -672,17 +638,15 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
+      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
+      - "🇩🇰 🔒 VL-TCP-NONE 🇫🇮 FI-87.58.159.20:443"
       - "🇩🇰 🩵+@Azarakhsh_Proxy+🩷"
-      - "🇩🇰 Tel@MARAMBASHI 🇨🇦"
-      - "🇩🇰 🔒 VL-TCP-RLT 🇩🇰 DK-217.78.237.118:8443"
+      - "🇩🇰 ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🍓"
+      - "🇩🇰 awlix_ir"
+      - "🇩🇰 🔒 SS-TCP-NA 🇩🇰 DK-37.120.131.62:1080"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 6FD9D7"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 715D42"
       - "🇩🇰 DK 🇩🇰 | @Raydikalx | 5617F5"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 9CD47F"
-      - "🇩🇰 DK 🇩🇰 | @Raydikalx | 0CEC33"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.180.209.136:443"
-      - "🇩🇰 🔒 VL-WS-TLS 🇩🇰 DK-193.181.209.210:443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

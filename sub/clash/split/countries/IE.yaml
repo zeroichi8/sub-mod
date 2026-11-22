@@ -499,28 +499,21 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.238.32.201:443"
-    type: "ss"
-    server: "20.238.32.201"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "FJRApmfuC3F14cFF"
+  - name: "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+    type: "vless"
+    server: "198.55.102.68"
+    port: 2083
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
     udp: true
-  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
-    type: "ss"
-    server: "84.247.48.78"
-    port: 1080
-    cipher: "chacha20-ietf-poly1305"
-    password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
-  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.107.184.151:443"
-    type: "ss"
-    server: "20.107.184.151"
-    port: 443
-    cipher: "chacha20-ietf-poly1305"
-    password: "zziXHDOFXc4qRjoj"
-    udp: true
-  - name: "🇮🇪 @filembad"
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇮🇪 13193@proxy_online_net"
     type: "ss"
     server: "20.223.233.64"
     port: 443
@@ -540,6 +533,13 @@ proxies:
     port: 443
     cipher: "chacha20-ietf-poly1305"
     password: "CNL3mxdfZKiPKizL"
+    udp: true
+  - name: "🇮🇪 13185@proxy_online_net"
+    type: "ss"
+    server: "20.238.32.201"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "FJRApmfuC3F14cFF"
     udp: true
   - name: "🇮🇪 @Shh_Proxy-New³"
     type: "ss"
@@ -646,47 +646,6 @@ proxies:
     cipher: "aes-256-gcm"
     password: "WCuz7yrfZSCQQXSNrtGPz2HT"
     udp: true
-  - name: "🇮🇪 @VPsave"
-    type: "vless"
-    server: "83.141.91.211"
-    port: 8444
-    uuid: "0f2dc4af-951f-4690-922e-07c6e8bab26a"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "fr-41-tapy.wave-inside.online"
-    client-fingerprint: "chrome"
-  - name: "🇮🇪 @VPsave-1"
-    type: "vless"
-    server: "fr-41-tapy.wave-inside.online"
-    port: 8444
-    uuid: "0f2dc4af-951f-4690-922e-07c6e8bab26a"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "fr-41-tapy.wave-inside.online"
-    client-fingerprint: "chrome"
-  - name: "🇮🇪 @VPsave-2"
-    type: "vless"
-    server: "83.141.92.82"
-    port: 25035
-    uuid: "62995b2a-8f82-41f8-ac80-dfdfc1253e76"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "96f799r.ch5.h1clayd.click"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "m7pPQqgE5q8qOjHhn9AjNA9sWhBFQ-gXzyGcZTNihUU"
-      short-id: "eb63581de991f8c8"
-  - name: "🇮🇪 🇮🇪 17@exclavevpn"
-    type: "vless"
-    server: "108.131.170.67"
-    port: 80
-    uuid: "6daa0b95-9210-4f29-be40-8c6db00bc5bb"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇮🇪 🇩🇪All³ | @BigSmoke_Config"
     type: "vless"
     server: "83.141.70.167"
@@ -715,7 +674,36 @@ proxies:
     reality-opts:
       public-key: "kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY"
       short-id: "7a7d19880a9ee786"
-  - name: "🇮🇪 @V2rayNPVTConfig"
+  - name: "🇮🇪 🇮🇪IE-🚀@VPNine1"
+    type: "vless"
+    server: "18.203.220.221"
+    port: 443
+    uuid: "fad6c240-14d0-47ce-9264-21c5f18689c1"
+    udp: true
+    tls: false
+    network: "tcp"
+    flow: "xtls-rprx-vision"
+  - name: "🇮🇪 >>@configV2rayNG::IE"
+    type: "ss"
+    server: "20.107.193.38"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "imq0vLikbOx4THZP"
+    udp: true
+  - name: "🇮🇪 🇮🇪 💥Config_jo-251"
+    type: "vless"
+    server: "83.141.92.168"
+    port: 443
+    uuid: "a7595994-695d-484e-bfcb-e9fbb73cfa39"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "sladovna.russianpiwo.fun"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY"
+      short-id: "7a7d19880a9ee786"
+  - name: "🇮🇪 REALITY|IE🇮🇪 | r3.pythonmakemigreat.wiki-8443 | 228.21ms"
     type: "vless"
     server: "r3.pythonmakemigreat.wiki"
     port: 8443
@@ -724,33 +712,53 @@ proxies:
     tls: true
     network: "xhttp"
     servername: "assets.study.golangwikito.cfd"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI"
-  - name: "🇮🇪 >>@configV2rayNG::IE"
+  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.107.184.151:443"
     type: "ss"
-    server: "20.107.193.38"
+    server: "20.107.184.151"
     port: 443
     cipher: "chacha20-ietf-poly1305"
-    password: "imq0vLikbOx4THZP"
+    password: "zziXHDOFXc4qRjoj"
     udp: true
-  - name: "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-212.80.221.43:3081"
-    type: "vless"
-    server: "212.80.221.43"
-    port: 3081
-    uuid: "90185f98-7a0b-4fa5-b868-86172e22f140"
+  - name: "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+    type: "trojan"
+    server: "146.70.90.198"
+    port: 57452
+    password: "t1k169n5zmvvwn96r9ft"
     udp: true
     tls: true
     network: "tcp"
-    servername: "afflink.microsoft.com"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h2"
-      - "http/1.1"
+    servername: "146.70.90.198"
+  - name: "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
+    type: "ss"
+    server: "84.247.48.78"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "Vr06rU_v1vFPYeXq9zbsAA"
+    udp: true
+  - name: "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.93.80:443"
+    type: "vless"
+    server: "83.141.93.80"
+    port: 443
+    uuid: "37fc45b0-be4d-4920-a0f7-7389e406f5f3"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "newerson.online"
+    client-fingerprint: "firefox"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "5M8dZvtIjvmCHyXhJRtoZXzv7ofTQrsZUDKHfo6QByc"
-      short-id: "18a7a405d1ea5ecc"
+      public-key: "TiKF_6UGMtWhgDiAGLsAtyYwyv-s3HxG6F0P9ltyf1U"
+      short-id: "8888265ef63fba6d"
+  - name: "🇮🇪 IE 🇮🇪 | @Raydikalx | 77182F"
+    type: "ss"
+    server: "20.107.212.150"
+    port: 443
+    cipher: "chacha20-ietf-poly1305"
+    password: "TWbPYvqLo64B4EPJ"
+    udp: true
   - name: "🇮🇪 IE 🇮🇪 | @Raydikalx | 53C508"
     type: "trojan"
     server: "54.74.210.220"
@@ -776,29 +784,18 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
-    type: "trojan"
-    server: "146.70.90.198"
-    port: 57452
-    password: "t1k169n5zmvvwn96r9ft"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "146.70.90.198"
-  - name: "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+  - name: "🇮🇪 🔒 VL-XHTTP-RLT 🇮🇪 IE-83.141.68.0:8443"
     type: "vless"
-    server: "198.55.102.68"
-    port: 2083
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    server: "83.141.68.0"
+    port: 8443
+    uuid: "f8d52ece-fad4-478d-875d-df6eed3befa7"
     udp: true
     tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
+    network: "xhttp"
+    servername: "assets.study.golangwikito.cfd"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -813,12 +810,11 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.238.32.201:443"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.107.184.151:443"
-      - "🇮🇪 @filembad"
+      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 13193@proxy_online_net"
       - "🇮🇪 @V2rayLs | Telegram ✅️"
       - "🇮🇪 @ghand_sheken"
+      - "🇮🇪 13185@proxy_online_net"
       - "🇮🇪 @Shh_Proxy-New³"
       - "🇮🇪 ⚜️𝗝𝗼𝗶𝗻 ➠[Telegram:tik7net_vpn]"
       - "🇮🇪 🇮🇪@Azaranv2ray"
@@ -834,20 +830,21 @@ proxy-groups:
       - "🇮🇪 @V2rayLs | Telegram ✅️-1"
       - "🇮🇪 @confiig_hub"
       - "🇮🇪 [154357]"
-      - "🇮🇪 @VPsave"
-      - "🇮🇪 @VPsave-1"
-      - "🇮🇪 @VPsave-2"
-      - "🇮🇪 🇮🇪 17@exclavevpn"
       - "🇮🇪 🇩🇪All³ | @BigSmoke_Config"
       - "🇮🇪 @B2Hub"
-      - "🇮🇪 @V2rayNPVTConfig"
+      - "🇮🇪 🇮🇪IE-🚀@VPNine1"
       - "🇮🇪 >>@configV2rayNG::IE"
-      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-212.80.221.43:3081"
+      - "🇮🇪 🇮🇪 💥Config_jo-251"
+      - "🇮🇪 REALITY|IE🇮🇪 | r3.pythonmakemigreat.wiki-8443 | 228.21ms"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.107.184.151:443"
+      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
+      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.93.80:443"
+      - "🇮🇪 IE 🇮🇪 | @Raydikalx | 77182F"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | 53C508"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | A3D8DF"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | B7B1B6"
-      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
-      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 🔒 VL-XHTTP-RLT 🇮🇪 IE-83.141.68.0:8443"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -858,12 +855,11 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.238.32.201:443"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.107.184.151:443"
-      - "🇮🇪 @filembad"
+      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 13193@proxy_online_net"
       - "🇮🇪 @V2rayLs | Telegram ✅️"
       - "🇮🇪 @ghand_sheken"
+      - "🇮🇪 13185@proxy_online_net"
       - "🇮🇪 @Shh_Proxy-New³"
       - "🇮🇪 ⚜️𝗝𝗼𝗶𝗻 ➠[Telegram:tik7net_vpn]"
       - "🇮🇪 🇮🇪@Azaranv2ray"
@@ -879,20 +875,21 @@ proxy-groups:
       - "🇮🇪 @V2rayLs | Telegram ✅️-1"
       - "🇮🇪 @confiig_hub"
       - "🇮🇪 [154357]"
-      - "🇮🇪 @VPsave"
-      - "🇮🇪 @VPsave-1"
-      - "🇮🇪 @VPsave-2"
-      - "🇮🇪 🇮🇪 17@exclavevpn"
       - "🇮🇪 🇩🇪All³ | @BigSmoke_Config"
       - "🇮🇪 @B2Hub"
-      - "🇮🇪 @V2rayNPVTConfig"
+      - "🇮🇪 🇮🇪IE-🚀@VPNine1"
       - "🇮🇪 >>@configV2rayNG::IE"
-      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-212.80.221.43:3081"
+      - "🇮🇪 🇮🇪 💥Config_jo-251"
+      - "🇮🇪 REALITY|IE🇮🇪 | r3.pythonmakemigreat.wiki-8443 | 228.21ms"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.107.184.151:443"
+      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
+      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.93.80:443"
+      - "🇮🇪 IE 🇮🇪 | @Raydikalx | 77182F"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | 53C508"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | A3D8DF"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | B7B1B6"
-      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
-      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 🔒 VL-XHTTP-RLT 🇮🇪 IE-83.141.68.0:8443"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -902,12 +899,11 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.238.32.201:443"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
-      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.107.184.151:443"
-      - "🇮🇪 @filembad"
+      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 13193@proxy_online_net"
       - "🇮🇪 @V2rayLs | Telegram ✅️"
       - "🇮🇪 @ghand_sheken"
+      - "🇮🇪 13185@proxy_online_net"
       - "🇮🇪 @Shh_Proxy-New³"
       - "🇮🇪 ⚜️𝗝𝗼𝗶𝗻 ➠[Telegram:tik7net_vpn]"
       - "🇮🇪 🇮🇪@Azaranv2ray"
@@ -923,20 +919,21 @@ proxy-groups:
       - "🇮🇪 @V2rayLs | Telegram ✅️-1"
       - "🇮🇪 @confiig_hub"
       - "🇮🇪 [154357]"
-      - "🇮🇪 @VPsave"
-      - "🇮🇪 @VPsave-1"
-      - "🇮🇪 @VPsave-2"
-      - "🇮🇪 🇮🇪 17@exclavevpn"
       - "🇮🇪 🇩🇪All³ | @BigSmoke_Config"
       - "🇮🇪 @B2Hub"
-      - "🇮🇪 @V2rayNPVTConfig"
+      - "🇮🇪 🇮🇪IE-🚀@VPNine1"
       - "🇮🇪 >>@configV2rayNG::IE"
-      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-212.80.221.43:3081"
+      - "🇮🇪 🇮🇪 💥Config_jo-251"
+      - "🇮🇪 REALITY|IE🇮🇪 | r3.pythonmakemigreat.wiki-8443 | 228.21ms"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-20.107.184.151:443"
+      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
+      - "🇮🇪 🔒 SS-TCP-NA 🇮🇪 IE-84.247.48.78:1080"
+      - "🇮🇪 🔒 VL-TCP-RLT 🇮🇪 IE-83.141.93.80:443"
+      - "🇮🇪 IE 🇮🇪 | @Raydikalx | 77182F"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | 53C508"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | A3D8DF"
       - "🇮🇪 IE 🇮🇪 | @Raydikalx | B7B1B6"
-      - "🇮🇪 🔒 TR-TCP-NA 🇮🇪 IE-146.70.90.198:57452"
-      - "🇮🇪 🔒 VL-WS-TLS 🇮🇪 IE-198.55.102.68:2083"
+      - "🇮🇪 🔒 VL-XHTTP-RLT 🇮🇪 IE-83.141.68.0:8443"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"
