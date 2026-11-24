@@ -499,6 +499,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇲🇰 @v2FreeHub | North Macedonia 🇲🇰"
+    type: "vless"
+    server: "217.60.55.103"
+    port: 443
+    uuid: "e5544327-834c-455a-9db5-2454c788fa17"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "mk1.static-s3.org"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "m904i3ti1GCWnFAkmb67LqEktV0dOZtkkmaG3I14djU"
+      short-id: "c2b6208fdd8c783d"
   - name: "🇲🇰 🔒 SS-TCP-NA 🇲🇰 MK-46.183.185.37:990"
     type: "ss"
     server: "46.183.185.37"
@@ -520,6 +534,7 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇲🇰 @v2FreeHub | North Macedonia 🇲🇰"
       - "🇲🇰 🔒 SS-TCP-NA 🇲🇰 MK-46.183.185.37:990"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
@@ -531,6 +546,7 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇲🇰 @v2FreeHub | North Macedonia 🇲🇰"
       - "🇲🇰 🔒 SS-TCP-NA 🇲🇰 MK-46.183.185.37:990"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
@@ -541,6 +557,7 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇲🇰 @v2FreeHub | North Macedonia 🇲🇰"
       - "🇲🇰 🔒 SS-TCP-NA 🇲🇰 MK-46.183.185.37:990"
   - name: "المنت 💬"
     type: "select"
