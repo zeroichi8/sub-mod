@@ -499,28 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.50:80"
-    type: "vless"
-    server: "202.61.73.50"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-  - name: "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
-    type: "vless"
-    server: "157.151.4.93"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
   - name: "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
     type: "vless"
     server: "202.61.73.205"
@@ -547,6 +525,20 @@ proxies:
       - "h3"
       - "h2"
       - "http/1.1"
+  - name: "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
+    type: "vless"
+    server: "157.151.4.93"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
   - name: "🇧🇷 v2ray_configs_pools | 7"
     type: "trojan"
     server: "216.238.104.154"
@@ -582,7 +574,7 @@ proxies:
     reality-opts:
       public-key: "E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA"
       short-id: "59ccabb0a1483c4b"
-  - name: "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_18_@Surfboardv2ray"
+  - name: "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_12_@Surfboardv2ray"
     type: "vmess"
     server: "103.14.27.207"
     port: 1270
@@ -590,7 +582,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇧🇷 🔵@chillguy_vpn"
+  - name: "🇧🇷 Channel id: @ConfigV2RayNG 🇧🇷"
     type: "vmess"
     server: "103.88.232.55"
     port: 1270
@@ -770,6 +762,19 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
+  - name: "🇧🇷 100-🇧🇷 BR xhttp-reality ✂️@GheychiAmoozesh"
+    type: "vless"
+    server: "157.228.157.19"
+    port: 25813
+    uuid: "cb7ceae2-6f47-4059-8bf0-371b62a0f0ce"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "br.jetstoreapp.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "OgGK9DS-5AAZDgDjHwNWhx_VOQ2OjEUReo-0-f_3Zxc"
+      short-id: "421f11a52c02c80d"
   - name: "🇧🇷 @DeltaKroneckerGithub"
     type: "vless"
     server: "platform113.golnamakcert.top"
@@ -856,15 +861,14 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.50:80"
-      - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
       - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
+      - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
       - "🇧🇷 v2ray_configs_pools | 7"
       - "🇧🇷 [132147]"
       - "🇧🇷 Telegram:@v2rayng3"
-      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_18_@Surfboardv2ray"
-      - "🇧🇷 🔵@chillguy_vpn"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_12_@Surfboardv2ray"
+      - "🇧🇷 Channel id: @ConfigV2RayNG 🇧🇷"
       - "🇧🇷 @Tarkahodeh 🇬🇱"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
@@ -881,6 +885,7 @@ proxy-groups:
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 8148A1"
+      - "🇧🇷 100-🇧🇷 BR xhttp-reality ✂️@GheychiAmoozesh"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
       - "🇧🇷 @DeltaKroneckerGithub-2"
@@ -897,15 +902,14 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.50:80"
-      - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
       - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
+      - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
       - "🇧🇷 v2ray_configs_pools | 7"
       - "🇧🇷 [132147]"
       - "🇧🇷 Telegram:@v2rayng3"
-      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_18_@Surfboardv2ray"
-      - "🇧🇷 🔵@chillguy_vpn"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_12_@Surfboardv2ray"
+      - "🇧🇷 Channel id: @ConfigV2RayNG 🇧🇷"
       - "🇧🇷 @Tarkahodeh 🇬🇱"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
@@ -922,6 +926,7 @@ proxy-groups:
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 8148A1"
+      - "🇧🇷 100-🇧🇷 BR xhttp-reality ✂️@GheychiAmoozesh"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
       - "🇧🇷 @DeltaKroneckerGithub-2"
@@ -937,15 +942,14 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.50:80"
-      - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
       - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
+      - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
       - "🇧🇷 v2ray_configs_pools | 7"
       - "🇧🇷 [132147]"
       - "🇧🇷 Telegram:@v2rayng3"
-      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_18_@Surfboardv2ray"
-      - "🇧🇷 🔵@chillguy_vpn"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_12_@Surfboardv2ray"
+      - "🇧🇷 Channel id: @ConfigV2RayNG 🇧🇷"
       - "🇧🇷 @Tarkahodeh 🇬🇱"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
@@ -962,6 +966,7 @@ proxy-groups:
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 8148A1"
+      - "🇧🇷 100-🇧🇷 BR xhttp-reality ✂️@GheychiAmoozesh"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
       - "🇧🇷 @DeltaKroneckerGithub-2"
