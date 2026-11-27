@@ -499,6 +499,14 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇷🇴 🔒 VL-TCP-NA 🇷🇴 RO-82.152.132.211:8020"
+    type: "vless"
+    server: "82.152.132.211"
+    port: 8020
+    uuid: "8cbfe29a-53b0-40b6-a926-1d0249472e8d"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
     type: "vless"
     server: "103.126.50.196"
@@ -513,6 +521,75 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
+    type: "vless"
+    server: "45.85.118.50"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime55.workers.dev"
+  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
+    type: "vless"
+    server: "95.173.199.85"
+    port: 8443
+    uuid: "394f6981-a782-4779-9a85-e6cf22935d93"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ams1.fromblancwithlove.com"
+    client-fingerprint: "chrome"
+  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
+    type: "vless"
+    server: "95.173.199.118"
+    port: 8443
+    uuid: "394f6981-a782-4779-9a85-e6cf22935d93"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "ams1.fromblancwithlove.com"
+    client-fingerprint: "chrome"
+  - name: "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
+    type: "vless"
+    server: "154.46.31.118"
+    port: 443
+    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "shuma.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "shuma.ccwu.cc"
+  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
+    type: "vless"
+    server: "45.12.30.30"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "vms.lifetime28.workers.dev"
+  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
+    type: "vless"
+    server: "45.12.30.40"
+    port: 8880
+    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      headers:
+        Host: "vms.lifetime28.workers.dev"
   - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
     type: "vless"
     server: "95.173.199.78"
@@ -537,112 +614,6 @@ proxies:
       - "h2"
       - "http/1.1"
     flow: "xtls-rprx-vision"
-  - name: "🇷🇴 🔒 VL-TCP-NA 🇷🇴 RO-82.152.132.211:8020"
-    type: "vless"
-    server: "82.152.132.211"
-    port: 8020
-    uuid: "f489b966-beb3-42e8-927c-132d84b69ffe"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
-    type: "vless"
-    server: "95.173.199.85"
-    port: 8443
-    uuid: "394f6981-a782-4779-9a85-e6cf22935d93"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ams1.fromblancwithlove.com"
-    client-fingerprint: "chrome"
-  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
-    type: "vless"
-    server: "45.85.118.50"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime55.workers.dev"
-  - name: "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-45.85.118.16:2087"
-    type: "vless"
-    server: "45.85.118.16"
-    port: 2087
-    uuid: "38a43f18-b4d9-443f-9ff1-4cf9de3d666e"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "valid22.validbv9501.ir"
-    ws-opts:
-      path: "/eyJqdW5rIjoiS0ZJaGhSaG14Z0NMeCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjE0Ni4xMDMuMTE0LjEzNCJdfQ"
-      headers:
-        Host: "valid22.validbv9501.ir"
-  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
-    type: "vless"
-    server: "45.12.30.40"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      headers:
-        Host: "vms.lifetime28.workers.dev"
-  - name: "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
-    type: "vless"
-    server: "95.173.199.118"
-    port: 8443
-    uuid: "394f6981-a782-4779-9a85-e6cf22935d93"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "ams1.fromblancwithlove.com"
-    client-fingerprint: "chrome"
-  - name: "🇷🇴 🔒 VL-XHTTP-NA 🇷🇴 RO-45.85.119.181:2086"
-    type: "vless"
-    server: "45.85.119.181"
-    port: 2086
-    uuid: "3b715892-8610-4fdc-9086-647b36af5443"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
-    type: "vless"
-    server: "45.12.30.30"
-    port: 8880
-    uuid: "6202b230-417c-4d8e-b624-0f71afa9c75d"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "vms.lifetime28.workers.dev"
-  - name: "🇷🇴 🔒 VL-XHTTP-NA 🇷🇴 RO-45.85.119.114:2086"
-    type: "vless"
-    server: "45.85.119.114"
-    port: 2086
-    uuid: "3b715892-8610-4fdc-9086-647b36af5443"
-    udp: true
-    tls: false
-    network: "xhttp"
-  - name: "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
-    type: "vless"
-    server: "154.46.31.118"
-    port: 443
-    uuid: "c18b978e-1c4e-415c-8bea-07942b563a64"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "shuma.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "shuma.ccwu.cc"
   - name: "🇷🇴 @Selinc"
     type: "ss"
     server: "82.152.132.211"
@@ -671,22 +642,6 @@ proxies:
       path: "/assets/sync-8f3a71"
       headers:
         Host: "82.152.132.74"
-  - name: "🇷🇴 🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪"
-    type: "vless"
-    server: "185.247.224.206"
-    port: 443
-    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "inlay.merlano.monster"
-    client-fingerprint: "chrome"
-    alpn:
-      - "http/1.1"
-    ws-opts:
-      path: "/api/de3/stream"
-      headers:
-        Host: "inlay.merlano.monster"
   - name: "🇷🇴 🇩🇪All⁴ | @BigSmoke_Config"
     type: "vless"
     server: "80.96.108.29"
@@ -726,20 +681,6 @@ proxies:
     reality-opts:
       public-key: "7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s"
       short-id: "247fd6dab1a34a48"
-  - name: "🇷🇴 🇸🇪 Join+Telegram:@Farah_VPN 🇸🇪"
-    type: "vless"
-    server: "185.247.224.206"
-    port: 443
-    uuid: "58e22afd-bf74-4736-984d-63a8ca03d7f0"
-    udp: true
-    tls: true
-    network: "ws"
-    servername: "accessfooter.cleanfoodshop.org"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/media/ws/"
-      headers:
-        Host: "accessfooter.cleanfoodshop.org"
   - name: "🇷🇴 @leviconfigs🪐-24"
     type: "vless"
     server: "103.126.50.203"
@@ -754,14 +695,19 @@ proxies:
     reality-opts:
       public-key: "xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0"
       short-id: "b9f8f9772217538f"
-  - name: "🇳🇱 @Ai_DueT🌐"
+  - name: "🇷🇴 🇷🇴231505 | ⚡️Telegram = t.me/SOSkeyNET"
     type: "vless"
-    server: "cdn7-39.vk-cdnvideo.com"
-    port: 8443
-    uuid: "931729a8-3c20-4841-89a1-f18dc9ce0a6f"
+    server: "46.28.67.55"
+    port: 443
+    uuid: "d1a6a033-fdbd-46a6-a177-3370ba042b9f"
     udp: true
     tls: true
     network: "tcp"
+    servername: "www.cloudflare.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU"
+      short-id: "d06d78e974491b6e"
   - name: "🇷🇴 @hopev2ray❤️🔥"
     type: "vless"
     server: "205.237.110.254"
@@ -862,73 +808,54 @@ proxies:
     tls: true
     network: "tcp"
     servername: "bu2.freeguard.org"
-  - name: "🇷🇴 REALITY|RO🇷🇴 | ro-xh02.tcp-reset-club.net-8443 | 330.6ms"
+  - name: "🇷🇴 REALITY|RO🇷🇴 | de7-166.homelab-cdn.cloud-443 | 234.18ms"
     type: "vless"
-    server: "ro-xh02.tcp-reset-club.net"
-    port: 8443
-    uuid: "4fb82973-a7f1-4fc2-9958-cb21f5162f06"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "s3.netavex.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg"
-      short-id: "e0"
-  - name: "🇷🇴 RO🇷🇴 | cdn4.velmoradigital.store-2443 | 154.94ms"
-    type: "vless"
-    server: "cdn4.velmoradigital.store"
-    port: 2443
-    uuid: "32ea050a-1981-4ed2-b63f-77e0f53c4b65"
-    udp: true
-    tls: true
-    network: "tcp"
-    servername: "cdn4.velmoradigital.store"
-    client-fingerprint: "firefox"
-    alpn:
-      - "h2"
-      - "http/1.1"
-    flow: "xtls-rprx-vision"
-  - name: "🇷🇴 REALITY|RO🇷🇴 | de7-164.homelab-cdn.cloud-443 | 126.71ms"
-    type: "vless"
-    server: "de7-164.homelab-cdn.cloud"
+    server: "de7-166.homelab-cdn.cloud"
     port: 443
     uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
     udp: true
     tls: true
     network: "grpc"
-    servername: "de7-164.homelab-cdn.cloud"
+    servername: "de7-166.homelab-cdn.cloud"
     reality-opts:
       public-key: "-ABl1aWUmg19BGoOGs8DwhPCTj4uUGgdyXZ1xaWh0W4"
       short-id: "376ec5abd2a1b80c"
     grpc-opts:
       grpc-service-name: "grpc"
-  - name: "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-46.28.67.55:443"
+  - name: "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-31.6.1.187:25607"
     type: "vless"
-    server: "46.28.67.55"
-    port: 443
-    uuid: "d1a6a033-fdbd-46a6-a177-3370ba042b9f"
+    server: "31.6.1.187"
+    port: 25607
+    uuid: "c8451b58-6337-4294-ba28-1a33731331a1"
     udp: true
     tls: true
     network: "tcp"
-    servername: "www.cloudflare.com"
+    servername: "store.steampowered.com"
+    client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     reality-opts:
-      public-key: "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU"
-      short-id: "d06d78e974491b6e"
+      public-key: "j5CgrKQgkDV5bC5Y4pB0lGNupDYxklIDgge4HL1X3zE"
+      short-id: "84"
+  - name: "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-205.237.110.254:443"
+    type: "vless"
+    server: "205.237.110.254"
+    port: 443
+    uuid: "e75ad2eb-6c1f-45ce-8023-f5f10875df66"
+    udp: true
+    tls: true
+    network: "tcp"
+    servername: "zsit.eu-cdn294.com"
+    client-fingerprint: "firefox"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "IG6lxrx_xkGOoBuo3DC8sgQoIFmqVgznIr0qOuNO0w4"
+      short-id: "cd2d53510b4df2a8"
   - name: "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-146.70.254.238:1080"
     type: "ss"
     server: "146.70.254.238"
     port: 1080
     cipher: "chacha20-ietf-poly1305"
     password: "Vr06rU_v1vFPYeXq9zbsAA"
-    udp: true
-  - name: "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-82.152.132.211:8044"
-    type: "ss"
-    server: "82.152.132.211"
-    port: 8044
-    cipher: "chacha20-ietf-poly1305"
-    password: "to8otOOuTui5n4LkwFyeYiGSgvC1xTS6"
     udp: true
   - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | 1B770D"
     type: "hysteria2"
@@ -958,35 +885,11 @@ proxies:
     password: "Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s"
     sni: "hopp-netherland-new.dynuddns.net"
     skip-cert-verify: true
-  - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | A67DE3"
-    type: "vless"
-    server: "82.152.132.211"
-    port: 8020
-    uuid: "2ae87145-18c2-4ca7-ac68-21815220cab3"
-    udp: true
-    tls: false
-    network: "tcp"
   - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | 3F6451"
     type: "vless"
     server: "82.152.132.211"
     port: 8020
     uuid: "329472ea-85c0-4f8d-a44c-b2e56745a040"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | 4986CD"
-    type: "vless"
-    server: "82.152.132.211"
-    port: 8020
-    uuid: "5247b7df-5656-4eff-ba37-58e383293474"
-    udp: true
-    tls: false
-    network: "tcp"
-  - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | 0DD0FB"
-    type: "vless"
-    server: "82.152.132.211"
-    port: 8020
-    uuid: "8cbfe29a-53b0-40b6-a926-1d0249472e8d"
     udp: true
     tls: false
     network: "tcp"
@@ -998,6 +901,30 @@ proxies:
     udp: true
     tls: false
     network: "tcp"
+  - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | 4714ED"
+    type: "vless"
+    server: "82.152.132.211"
+    port: 8020
+    uuid: "b6e4df0f-6b26-4a07-8b4c-a2449756b097"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | 2AC548"
+    type: "vless"
+    server: "82.152.132.211"
+    port: 8020
+    uuid: "deca72a9-efe3-4930-9bbd-c0c59aeb98ea"
+    udp: true
+    tls: false
+    network: "tcp"
+  - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | 9F040E"
+    type: "vless"
+    server: "82.152.132.211"
+    port: 8020
+    uuid: "f489b966-beb3-42e8-927c-132d84b69ffe"
+    udp: true
+    tls: false
+    network: "tcp"
   - name: "🇷🇴 RO 🇷🇴 | @Raydikalx | 1CD6CE"
     type: "vmess"
     server: "78.154.103.45"
@@ -1006,15 +933,15 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.166:443"
+  - name: "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.164:443"
     type: "vless"
-    server: "76.164.202.166"
+    server: "76.164.202.164"
     port: 443
     uuid: "0ed9418b-e687-4c2d-8869-7e368c44887e"
     udp: true
     tls: true
     network: "grpc"
-    servername: "de7-166.homelab-cdn.cloud"
+    servername: "de7-164.homelab-cdn.cloud"
     reality-opts:
       public-key: "-ABl1aWUmg19BGoOGs8DwhPCTj4uUGgdyXZ1xaWh0W4"
       short-id: "376ec5abd2a1b80c"
@@ -1042,15 +969,16 @@ proxies:
     type: "vless"
     server: "37.46.196.85"
     port: 8443
-    uuid: "721bacfe-ff09-4e63-a735-686015bc1351"
+    uuid: "4fb82973-a7f1-4fc2-9958-cb21f5162f06"
     udp: true
     tls: true
     network: "xhttp"
     servername: "s3.netavex.com"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg"
       short-id: "e0"
-  - name: "🇷🇴 285-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇴 291-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "46.28.67.55"
     port: 443
@@ -1063,7 +991,7 @@ proxies:
     reality-opts:
       public-key: "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU"
       short-id: "d06d78e974491b6e"
-  - name: "🇷🇴 286-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇴 292-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "46.28.67.55"
     port: 443
@@ -1077,7 +1005,7 @@ proxies:
     reality-opts:
       public-key: "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU"
       short-id: "d06d78e974491b6e"
-  - name: "🇷🇴 288-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+  - name: "🇷🇴 294-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
     type: "vless"
     server: "46.28.67.55"
     port: 443
@@ -1105,29 +1033,24 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇷🇴 🔒 VL-TCP-NA 🇷🇴 RO-82.152.132.211:8020"
       - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-89.41.182.79:2443"
-      - "🇷🇴 🔒 VL-TCP-NA 🇷🇴 RO-82.152.132.211:8020"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-45.85.118.16:2087"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
-      - "🇷🇴 🔒 VL-XHTTP-NA 🇷🇴 RO-45.85.119.181:2086"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
-      - "🇷🇴 🔒 VL-XHTTP-NA 🇷🇴 RO-45.85.119.114:2086"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
       - "🇷🇴 @Selinc"
       - "🇷🇴 🇷🇴139787 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇷🇴 @v2ray313 کانالمون 🐧"
-      - "🇷🇴 🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪"
       - "🇷🇴 🇩🇪All⁴ | @BigSmoke_Config"
       - "🇷🇴 @appsooner کانال تلگرام 🕊️"
       - "🇷🇴 TEL:Father_vpn"
-      - "🇷🇴 🇸🇪 Join+Telegram:@Farah_VPN 🇸🇪"
       - "🇷🇴 @leviconfigs🪐-24"
-      - "🇳🇱 @Ai_DueT🌐"
+      - "🇷🇴 🇷🇴231505 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇷🇴 @hopev2ray❤️🔥"
       - "🇷🇴 @appsooner کانال تلگرام 🕊️-1"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴"
@@ -1137,29 +1060,27 @@ proxy-groups:
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-4"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-5"
       - "🇷🇴 🔒 TR-TCP-TLS 🇷🇴 RO-38.180.35.145:443"
-      - "🇷🇴 REALITY|RO🇷🇴 | ro-xh02.tcp-reset-club.net-8443 | 330.6ms"
-      - "🇷🇴 RO🇷🇴 | cdn4.velmoradigital.store-2443 | 154.94ms"
-      - "🇷🇴 REALITY|RO🇷🇴 | de7-164.homelab-cdn.cloud-443 | 126.71ms"
-      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-46.28.67.55:443"
+      - "🇷🇴 REALITY|RO🇷🇴 | de7-166.homelab-cdn.cloud-443 | 234.18ms"
+      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-31.6.1.187:25607"
+      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-205.237.110.254:443"
       - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-146.70.254.238:1080"
-      - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-82.152.132.211:8044"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 1B770D"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 73C6C6"
       - "🇷🇴 DE 🇩🇪 | @Raydikalx | 3E1DA0"
       - "🇷🇴 DE 🇩🇪 | @Raydikalx | 6510F3"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | A67DE3"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 3F6451"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 4986CD"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 0DD0FB"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 5DAF33"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 4714ED"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 2AC548"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 9F040E"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 1CD6CE"
-      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.166:443"
+      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.164:443"
       - "🇷🇴 @DeltaKroneckerGithub"
       - "🇷🇴 @DeltaKroneckerGithub-1"
       - "🇷🇴 🔒 VL-XHTTP-RLT 🇷🇴 RO-37.46.196.85:8443"
-      - "🇷🇴 285-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 286-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 288-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 291-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 292-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 294-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -1170,29 +1091,24 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇷🇴 🔒 VL-TCP-NA 🇷🇴 RO-82.152.132.211:8020"
       - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-89.41.182.79:2443"
-      - "🇷🇴 🔒 VL-TCP-NA 🇷🇴 RO-82.152.132.211:8020"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-45.85.118.16:2087"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
-      - "🇷🇴 🔒 VL-XHTTP-NA 🇷🇴 RO-45.85.119.181:2086"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
-      - "🇷🇴 🔒 VL-XHTTP-NA 🇷🇴 RO-45.85.119.114:2086"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
       - "🇷🇴 @Selinc"
       - "🇷🇴 🇷🇴139787 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇷🇴 @v2ray313 کانالمون 🐧"
-      - "🇷🇴 🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪"
       - "🇷🇴 🇩🇪All⁴ | @BigSmoke_Config"
       - "🇷🇴 @appsooner کانال تلگرام 🕊️"
       - "🇷🇴 TEL:Father_vpn"
-      - "🇷🇴 🇸🇪 Join+Telegram:@Farah_VPN 🇸🇪"
       - "🇷🇴 @leviconfigs🪐-24"
-      - "🇳🇱 @Ai_DueT🌐"
+      - "🇷🇴 🇷🇴231505 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇷🇴 @hopev2ray❤️🔥"
       - "🇷🇴 @appsooner کانال تلگرام 🕊️-1"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴"
@@ -1202,29 +1118,27 @@ proxy-groups:
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-4"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-5"
       - "🇷🇴 🔒 TR-TCP-TLS 🇷🇴 RO-38.180.35.145:443"
-      - "🇷🇴 REALITY|RO🇷🇴 | ro-xh02.tcp-reset-club.net-8443 | 330.6ms"
-      - "🇷🇴 RO🇷🇴 | cdn4.velmoradigital.store-2443 | 154.94ms"
-      - "🇷🇴 REALITY|RO🇷🇴 | de7-164.homelab-cdn.cloud-443 | 126.71ms"
-      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-46.28.67.55:443"
+      - "🇷🇴 REALITY|RO🇷🇴 | de7-166.homelab-cdn.cloud-443 | 234.18ms"
+      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-31.6.1.187:25607"
+      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-205.237.110.254:443"
       - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-146.70.254.238:1080"
-      - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-82.152.132.211:8044"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 1B770D"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 73C6C6"
       - "🇷🇴 DE 🇩🇪 | @Raydikalx | 3E1DA0"
       - "🇷🇴 DE 🇩🇪 | @Raydikalx | 6510F3"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | A67DE3"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 3F6451"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 4986CD"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 0DD0FB"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 5DAF33"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 4714ED"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 2AC548"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 9F040E"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 1CD6CE"
-      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.166:443"
+      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.164:443"
       - "🇷🇴 @DeltaKroneckerGithub"
       - "🇷🇴 @DeltaKroneckerGithub-1"
       - "🇷🇴 🔒 VL-XHTTP-RLT 🇷🇴 RO-37.46.196.85:8443"
-      - "🇷🇴 285-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 286-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 288-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 291-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 292-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 294-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -1234,29 +1148,24 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇷🇴 🔒 VL-TCP-NA 🇷🇴 RO-82.152.132.211:8020"
       - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-103.126.50.196:8443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
+      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
+      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
+      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.78:8443"
       - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-89.41.182.79:2443"
-      - "🇷🇴 🔒 VL-TCP-NA 🇷🇴 RO-82.152.132.211:8020"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.85:8443"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.85.118.50:8880"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-45.85.118.16:2087"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.40:8880"
-      - "🇷🇴 🔒 VL-TCP-TLS 🇷🇴 RO-95.173.199.118:8443"
-      - "🇷🇴 🔒 VL-XHTTP-NA 🇷🇴 RO-45.85.119.181:2086"
-      - "🇷🇴 🔒 VL-WS-NONE 🇷🇴 RO-45.12.30.30:8880"
-      - "🇷🇴 🔒 VL-XHTTP-NA 🇷🇴 RO-45.85.119.114:2086"
-      - "🇷🇴 🔒 VL-WS-TLS 🇷🇴 RO-154.46.31.118:443"
       - "🇷🇴 @Selinc"
       - "🇷🇴 🇷🇴139787 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇷🇴 @v2ray313 کانالمون 🐧"
-      - "🇷🇴 🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪"
       - "🇷🇴 🇩🇪All⁴ | @BigSmoke_Config"
       - "🇷🇴 @appsooner کانال تلگرام 🕊️"
       - "🇷🇴 TEL:Father_vpn"
-      - "🇷🇴 🇸🇪 Join+Telegram:@Farah_VPN 🇸🇪"
       - "🇷🇴 @leviconfigs🪐-24"
-      - "🇳🇱 @Ai_DueT🌐"
+      - "🇷🇴 🇷🇴231505 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇷🇴 @hopev2ray❤️🔥"
       - "🇷🇴 @appsooner کانال تلگرام 🕊️-1"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴"
@@ -1266,29 +1175,27 @@ proxy-groups:
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-4"
       - "🇷🇴 @v2FreeHub | Romania 🇷🇴-5"
       - "🇷🇴 🔒 TR-TCP-TLS 🇷🇴 RO-38.180.35.145:443"
-      - "🇷🇴 REALITY|RO🇷🇴 | ro-xh02.tcp-reset-club.net-8443 | 330.6ms"
-      - "🇷🇴 RO🇷🇴 | cdn4.velmoradigital.store-2443 | 154.94ms"
-      - "🇷🇴 REALITY|RO🇷🇴 | de7-164.homelab-cdn.cloud-443 | 126.71ms"
-      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-46.28.67.55:443"
+      - "🇷🇴 REALITY|RO🇷🇴 | de7-166.homelab-cdn.cloud-443 | 234.18ms"
+      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-31.6.1.187:25607"
+      - "🇷🇴 🔒 VL-TCP-RLT 🇷🇴 RO-205.237.110.254:443"
       - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-146.70.254.238:1080"
-      - "🇷🇴 🔒 SS-TCP-NA 🇷🇴 RO-82.152.132.211:8044"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 1B770D"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 73C6C6"
       - "🇷🇴 DE 🇩🇪 | @Raydikalx | 3E1DA0"
       - "🇷🇴 DE 🇩🇪 | @Raydikalx | 6510F3"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | A67DE3"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 3F6451"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 4986CD"
-      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 0DD0FB"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 5DAF33"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 4714ED"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 2AC548"
+      - "🇷🇴 RO 🇷🇴 | @Raydikalx | 9F040E"
       - "🇷🇴 RO 🇷🇴 | @Raydikalx | 1CD6CE"
-      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.166:443"
+      - "🇷🇴 🔒 VL-GRPC-RLT 🇷🇴 RO-76.164.202.164:443"
       - "🇷🇴 @DeltaKroneckerGithub"
       - "🇷🇴 @DeltaKroneckerGithub-1"
       - "🇷🇴 🔒 VL-XHTTP-RLT 🇷🇴 RO-37.46.196.85:8443"
-      - "🇷🇴 285-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 286-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
-      - "🇷🇴 288-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 291-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 292-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
+      - "🇷🇴 294-🇷🇴 RO tcp-reality ✂️@GheychiAmoozesh"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

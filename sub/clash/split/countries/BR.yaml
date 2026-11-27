@@ -499,32 +499,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
-  - name: "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
-    type: "vless"
-    server: "202.61.73.205"
-    port: 80
-    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/platform117"
-      headers:
-        Host: "platform117.halalkhor.info"
-  - name: "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
-    type: "vless"
-    server: "185.133.35.86"
-    port: 443
-    uuid: "d795a9ec-5ed0-4309-ba6c-edc09b818669"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "mamafrance.baklajann.ru"
-    client-fingerprint: "chrome"
-    alpn:
-      - "h3"
-      - "h2"
-      - "http/1.1"
   - name: "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
     type: "vless"
     server: "157.151.4.93"
@@ -539,6 +513,18 @@ proxies:
       path: "/"
       headers:
         Host: "shuma.ccwu.cc"
+  - name: "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
+    type: "vless"
+    server: "202.61.73.205"
+    port: 80
+    uuid: "e13cf851-b4fd-413b-8d49-146e6eb8e5d4"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/platform117"
+      headers:
+        Host: "platform117.halalkhor.info"
   - name: "🇧🇷 v2ray_configs_pools | 7"
     type: "trojan"
     server: "216.238.104.154"
@@ -574,7 +560,7 @@ proxies:
     reality-opts:
       public-key: "E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA"
       short-id: "59ccabb0a1483c4b"
-  - name: "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_12_@Surfboardv2ray"
+  - name: "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_23_@Surfboardv2ray"
     type: "vmess"
     server: "103.14.27.207"
     port: 1270
@@ -582,7 +568,7 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇧🇷 Channel id: @ConfigV2RayNG 🇧🇷"
+  - name: "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_22_@Surfboardv2ray"
     type: "vmess"
     server: "103.88.232.55"
     port: 1270
@@ -598,19 +584,33 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
-    type: "ss"
-    server: "185.192.124.188"
-    port: 990
-    cipher: "chacha20-ietf-poly1305"
-    password: "f8f7aCzcPKbsF8p3"
+  - name: "🇧🇷 RELAY🚩 | mamafrance.baklajann.ru-443 | 172.09ms"
+    type: "vless"
+    server: "185.133.35.86"
+    port: 443
+    uuid: "d795a9ec-5ed0-4309-ba6c-edc09b818669"
     udp: true
+    tls: true
+    network: "xhttp"
+    servername: "mamafrance.baklajann.ru"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h3"
+      - "h2"
+      - "http/1.1"
   - name: "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
     type: "ss"
     server: "38.54.57.90"
     port: 990
     cipher: "chacha20-ietf-poly1305"
     password: "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
+    udp: true
+  - name: "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+    type: "ss"
+    server: "185.192.124.188"
+    port: 990
+    cipher: "chacha20-ietf-poly1305"
+    password: "f8f7aCzcPKbsF8p3"
     udp: true
   - name: "🇧🇷 BR 🇧🇷 | @Raydikalx | 1365D5"
     type: "vless"
@@ -762,19 +762,6 @@ proxies:
     alterId: 0
     cipher: "auto"
     udp: true
-  - name: "🇧🇷 100-🇧🇷 BR xhttp-reality ✂️@GheychiAmoozesh"
-    type: "vless"
-    server: "157.228.157.19"
-    port: 25813
-    uuid: "cb7ceae2-6f47-4059-8bf0-371b62a0f0ce"
-    udp: true
-    tls: true
-    network: "xhttp"
-    servername: "br.jetstoreapp.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "OgGK9DS-5AAZDgDjHwNWhx_VOQ2OjEUReo-0-f_3Zxc"
-      short-id: "421f11a52c02c80d"
   - name: "🇧🇷 @DeltaKroneckerGithub"
     type: "vless"
     server: "platform113.golnamakcert.top"
@@ -861,17 +848,17 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
-      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
-      - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
       - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
+      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 v2ray_configs_pools | 7"
       - "🇧🇷 [132147]"
       - "🇧🇷 Telegram:@v2rayng3"
-      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_12_@Surfboardv2ray"
-      - "🇧🇷 Channel id: @ConfigV2RayNG 🇧🇷"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_23_@Surfboardv2ray"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_22_@Surfboardv2ray"
       - "🇧🇷 @Tarkahodeh 🇬🇱"
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 RELAY🚩 | mamafrance.baklajann.ru-443 | 172.09ms"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
+      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 1365D5"
       - "🇧🇷 US 🇺🇸 | @Raydikalx | B10F48"
       - "🇧🇷 US 🇺🇸 | @Raydikalx | 042F6E"
@@ -885,7 +872,6 @@ proxy-groups:
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 8148A1"
-      - "🇧🇷 100-🇧🇷 BR xhttp-reality ✂️@GheychiAmoozesh"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
       - "🇧🇷 @DeltaKroneckerGithub-2"
@@ -902,17 +888,17 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
-      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
-      - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
       - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
+      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 v2ray_configs_pools | 7"
       - "🇧🇷 [132147]"
       - "🇧🇷 Telegram:@v2rayng3"
-      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_12_@Surfboardv2ray"
-      - "🇧🇷 Channel id: @ConfigV2RayNG 🇧🇷"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_23_@Surfboardv2ray"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_22_@Surfboardv2ray"
       - "🇧🇷 @Tarkahodeh 🇬🇱"
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 RELAY🚩 | mamafrance.baklajann.ru-443 | 172.09ms"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
+      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 1365D5"
       - "🇧🇷 US 🇺🇸 | @Raydikalx | B10F48"
       - "🇧🇷 US 🇺🇸 | @Raydikalx | 042F6E"
@@ -926,7 +912,6 @@ proxy-groups:
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 8148A1"
-      - "🇧🇷 100-🇧🇷 BR xhttp-reality ✂️@GheychiAmoozesh"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
       - "🇧🇷 @DeltaKroneckerGithub-2"
@@ -942,17 +927,17 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
-      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
-      - "🇧🇷 🔒 VL-XHTTP-TLS 🇧🇷 BR-185.133.35.86:443"
       - "🇧🇷 🔒 VL-WS-TLS 🇧🇷 BR-157.151.4.93:443"
+      - "🇧🇷 🔒 VL-WS-NA 🇧🇷 BR-202.61.73.205:80"
       - "🇧🇷 v2ray_configs_pools | 7"
       - "🇧🇷 [132147]"
       - "🇧🇷 Telegram:@v2rayng3"
-      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_12_@Surfboardv2ray"
-      - "🇧🇷 Channel id: @ConfigV2RayNG 🇧🇷"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_23_@Surfboardv2ray"
+      - "🇧🇷 %F0%9F%87%A7%F0%9F%87%B7BR_22_@Surfboardv2ray"
       - "🇧🇷 @Tarkahodeh 🇬🇱"
-      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
+      - "🇧🇷 RELAY🚩 | mamafrance.baklajann.ru-443 | 172.09ms"
       - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-38.54.57.90:990"
+      - "🇧🇷 🔒 SS-TCP-NA 🇧🇷 BR-185.192.124.188:990"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 1365D5"
       - "🇧🇷 US 🇺🇸 | @Raydikalx | B10F48"
       - "🇧🇷 US 🇺🇸 | @Raydikalx | 042F6E"
@@ -966,7 +951,6 @@ proxy-groups:
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 63AB9B"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 6F72CC"
       - "🇧🇷 BR 🇧🇷 | @Raydikalx | 8148A1"
-      - "🇧🇷 100-🇧🇷 BR xhttp-reality ✂️@GheychiAmoozesh"
       - "🇧🇷 @DeltaKroneckerGithub"
       - "🇧🇷 @DeltaKroneckerGithub-1"
       - "🇧🇷 @DeltaKroneckerGithub-2"
