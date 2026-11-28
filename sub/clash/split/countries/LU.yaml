@@ -503,16 +503,16 @@ proxies:
     type: "vless"
     server: "92.223.84.254"
     port: 443
-    uuid: "0c96aeeb-b691-48c9-91e2-8b5de4b29e01"
+    uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
     udp: true
     tls: true
     network: "ws"
-    servername: "subgift2.gcorecdn.com"
-    flow: "xtls-rprx-vision"
+    servername: "subgift.gcorecdn.com"
+    client-fingerprint: "firefox"
     ws-opts:
       path: "/t.me-SubGift"
       headers:
-        Host: "subgift2.gcorecdn.com"
+        Host: "subgift.gcorecdn.com"
   - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-107.189.2.206:8443"
     type: "vless"
     server: "107.189.2.206"
@@ -613,20 +613,94 @@ proxies:
       path: "/t.me-SubGift"
       headers:
         Host: "subgift.gcorecdn.com"
+  - name: "🇱🇺 @VPsave"
+    type: "vless"
+    server: "fl2-cdn.gcorecdn.com"
+    port: 443
+    uuid: "a7c34591-cc3c-49fb-a270-6f4ef8e12de3"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dl-wows-gc.wargaming.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
+  - name: "🇱🇺 @VPsave-1"
+    type: "vless"
+    server: "fr-cdn.gcorecdn.com"
+    port: 443
+    uuid: "a7c34591-cc3c-49fb-a270-6f4ef8e12de3"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dl-wows-gc.wargaming.net"
+    client-fingerprint: "chrome"
+    alpn:
+      - "h2"
   - name: "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
     type: "vless"
     server: "92.223.84.254"
+    port: 443
+    uuid: "0c96aeeb-b691-48c9-91e2-8b5de4b29e01"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subgift2.gcorecdn.com"
+    flow: "xtls-rprx-vision"
+    ws-opts:
+      path: "/t.me-SubGift"
+      headers:
+        Host: "subgift2.gcorecdn.com"
+  - name: "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 73.08ms"
+    type: "vless"
+    server: "subgift.gcorecdn.com"
     port: 443
     uuid: "740b2630-b42d-425c-bacd-37e7e30d78f1"
     udp: true
     tls: true
     network: "ws"
     servername: "subgift.gcorecdn.com"
-    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/t.me-SubGift"
+  - name: "🇱🇺 🇺🇸 | @WhiteDNS | US385|4.6MB/s|DNSOK|GPT⁺-US"
+    type: "vless"
+    server: "subgift3.gcorecdn.com"
+    port: 443
+    uuid: "047020df-f518-4b9b-a2d6-8e86f56f8c6e"
+    udp: true
+    tls: true
+    network: "ws"
+    servername: "subgift3.gcorecdn.com"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
     ws-opts:
       path: "/t.me-SubGift"
       headers:
-        Host: "subgift.gcorecdn.com"
+        Host: "subgift3.gcorecdn.com"
+  - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | B2C990"
+    type: "vless"
+    server: "fl2-cdn.gcorecdn.com"
+    port: 443
+    uuid: "a7c34591-cc3c-49fb-a270-6f4ef8e12de3"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dl-wows-gc.wargaming.net"
+    client-fingerprint: "edge"
+    alpn:
+      - "h2"
+  - name: "🇱🇺 LU 🇱🇺 | @Raydikalx | 85F2AF"
+    type: "vless"
+    server: "fr-cdn.gcorecdn.com"
+    port: 443
+    uuid: "a7c34591-cc3c-49fb-a270-6f4ef8e12de3"
+    udp: true
+    tls: true
+    network: "xhttp"
+    servername: "dl-wows-gc.wargaming.net"
+    client-fingerprint: "firefox"
+    alpn:
+      - "h2"
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     type: "select"
@@ -649,7 +723,13 @@ proxy-groups:
       - "🇱🇺 @V2ray_Alpha🌋 1"
       - "🇱🇺 204"
       - "🇱🇺 Join: t.me/SubGift-202"
+      - "🇱🇺 @VPsave"
+      - "🇱🇺 @VPsave-1"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 73.08ms"
+      - "🇱🇺 🇺🇸 | @WhiteDNS | US385|4.6MB/s|DNSOK|GPT⁺-US"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | B2C990"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | 85F2AF"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: "url-test"
     icon: "https://www.svgrepo.com/show/7876/speedometer.svg"
@@ -668,7 +748,13 @@ proxy-groups:
       - "🇱🇺 @V2ray_Alpha🌋 1"
       - "🇱🇺 204"
       - "🇱🇺 Join: t.me/SubGift-202"
+      - "🇱🇺 @VPsave"
+      - "🇱🇺 @VPsave-1"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 73.08ms"
+      - "🇱🇺 🇺🇸 | @WhiteDNS | US385|4.6MB/s|DNSOK|GPT⁺-US"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | B2C990"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | 85F2AF"
   - name: "توزیع بار چرخشی ⚖️"
     type: "load-balance"
     icon: "https://www.svgrepo.com/show/388466/rotating-forward.svg"
@@ -686,7 +772,13 @@ proxy-groups:
       - "🇱🇺 @V2ray_Alpha🌋 1"
       - "🇱🇺 204"
       - "🇱🇺 Join: t.me/SubGift-202"
+      - "🇱🇺 @VPsave"
+      - "🇱🇺 @VPsave-1"
       - "🇱🇺 🔒 VL-WS-TLS 🇱🇺 LU-92.223.84.254:443-1"
+      - "🇱🇺 LU🇱🇺 | subgift.gcorecdn.com-443 | 73.08ms"
+      - "🇱🇺 🇺🇸 | @WhiteDNS | US385|4.6MB/s|DNSOK|GPT⁺-US"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | B2C990"
+      - "🇱🇺 LU 🇱🇺 | @Raydikalx | 85F2AF"
   - name: "المنت 💬"
     type: "select"
     icon: "https://www.svgrepo.com/show/353655/matrix-icon.svg"

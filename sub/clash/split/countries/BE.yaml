@@ -499,6 +499,18 @@ rule-providers:
     interval: 86400
     path: "./ruleset/mihSpotify.yaml"
 proxies:
+  - name: "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
+    type: "vless"
+    server: "151.101.9.80"
+    port: 80
+    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
+    udp: true
+    tls: false
+    network: "ws"
+    ws-opts:
+      path: "/?ed=1049"
+      headers:
+        Host: "adspeedx23.global.ssl.fastly.net"
   - name: "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
     type: "vless"
     server: "194.71.227.213"
@@ -564,7 +576,15 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
-  - name: "🇧🇪 @VPsave"
+  - name: "🇧🇪 A42"
+    type: "vmess"
+    server: "46.183.187.73"
+    port: 443
+    uuid: "92a048ec-a160-497e-8069-c2e902626d7a"
+    alterId: 0
+    cipher: "aes-128-gcm"
+    udp: true
+  - name: "🇧🇪 REALITY|BE🇧🇪 | 94.126.225.138-443 | 149.7ms"
     type: "vless"
     server: "94.126.225.138"
     port: 443
@@ -577,15 +597,19 @@ proxies:
     reality-opts:
       public-key: "pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ"
       short-id: "27350908de933e09"
-  - name: "🇧🇪 A42"
-    type: "vmess"
-    server: "46.183.187.73"
+  - name: "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 152.32ms"
+    type: "vless"
+    server: "109.69.218.164"
     port: 443
-    uuid: "92a048ec-a160-497e-8069-c2e902626d7a"
-    alterId: 0
-    cipher: "aes-128-gcm"
+    uuid: "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03"
     udp: true
-  - name: "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 146.35ms"
+    tls: true
+    network: "tcp"
+    servername: "zealous-vortex.cdn.cachefleet.com"
+    flow: "xtls-rprx-vision"
+    reality-opts:
+      public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
+  - name: "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 151.96ms"
     type: "vless"
     server: "109.69.218.172"
     port: 443
@@ -598,18 +622,6 @@ proxies:
     flow: "xtls-rprx-vision"
     reality-opts:
       public-key: "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
-  - name: "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 38.15ms"
-    type: "vless"
-    server: "151.101.9.80"
-    port: 80
-    uuid: "5a1d2c0c-abfa-4050-918f-bfab3eaee62a"
-    udp: true
-    tls: false
-    network: "ws"
-    ws-opts:
-      path: "/?ed=1049"
-      headers:
-        Host: "adspeedx23.global.ssl.fastly.net"
   - name: "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
     type: "ss"
     server: "185.210.217.94"
@@ -647,15 +659,16 @@ proxy-groups:
     type: "select"
     icon: "https://www.svgrepo.com/show/372331/cursor-hand-click.svg"
     proxies:
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 @v2ray313 کانالمون 🌲"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "🇧🇪 @VPsave"
       - "🇧🇪 A42"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 146.35ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 38.15ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 94.126.225.138-443 | 149.7ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 152.32ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 151.96ms"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
@@ -669,15 +682,16 @@ proxy-groups:
     lazy: false
     max-failed-times: 2
     proxies:
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 @v2ray313 کانالمون 🌲"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "🇧🇪 @VPsave"
       - "🇧🇪 A42"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 146.35ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 38.15ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 94.126.225.138-443 | 149.7ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 152.32ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 151.96ms"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
@@ -690,15 +704,16 @@ proxy-groups:
     timeout: 1500
     lazy: false
     proxies:
+      - "🇧🇪 🔒 VL-WS-NA 🇧🇪 BE-151.101.9.80:80"
       - "🇧🇪 🔒 VL-WS-TLS 🇧🇪 BE-194.71.227.213:443"
       - "🇧🇪 🇧🇪139840 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 🇧🇪139839 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇧🇪 @v2ray313 کانالمون 🌲"
       - "🇧🇪 🇧🇪139755 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "🇧🇪 @VPsave"
       - "🇧🇪 A42"
-      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 146.35ms"
-      - "🇧🇪 US🇺🇸 | adspeedx23.global.ssl.fastly.net-80 | 38.15ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 94.126.225.138-443 | 149.7ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.164-443 | 152.32ms"
+      - "🇧🇪 REALITY|BE🇧🇪 | 109.69.218.172-443 | 151.96ms"
       - "🇧🇪 🔒 SS-TCP-NA 🇧🇪 BE-185.210.217.94:1080"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | F7E8B7"
       - "🇧🇪 BE 🇧🇪 | @Raydikalx | 763E03"
